@@ -3,6 +3,11 @@ export default defineNuxtConfig({
   devtools: { enabled: false },
   modules: ['@nuxtjs/tailwindcss'],
   ssr: true,
+  nitro: {
+    output: {
+      publicDir: 'out',
+    },
+  },
   app: {
     head: {
       charset: 'utf-8',
