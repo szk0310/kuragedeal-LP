@@ -9,32 +9,18 @@
     >
       <!-- Background decoration -->
       <div class="absolute inset-0 opacity-10">
-        <div
-          class="absolute top-10 left-10 w-72 h-72 rounded-full bg-kurage-300 blur-3xl"
-        />
-        <div
-          class="absolute bottom-10 right-10 w-96 h-96 rounded-full bg-cyan-300 blur-3xl"
-        />
+        <div class="absolute top-10 left-10 w-72 h-72 rounded-full bg-kurage-300 blur-3xl" />
+        <div class="absolute bottom-10 right-10 w-96 h-96 rounded-full bg-cyan-300 blur-3xl" />
       </div>
 
       <div class="relative max-w-6xl mx-auto px-4 sm:px-6 py-24 md:py-32">
-        <!-- Trust badge -->
-        <div
-          class="inline-flex items-center gap-2 bg-white/10 border border-white/20 rounded-full px-4 py-2 text-sm mb-8"
-        >
-          🏅 <span>Salesforce認定コンサルティングパートナーが開発</span>
-        </div>
-
         <!-- Main copy -->
         <h1 class="text-4xl md:text-6xl font-black leading-tight mb-6">
-          クラゲでもできる、<br />
-          <span class="text-cyan-300">Slack営業管理。</span>
+          話しかけるだけで、<br />
+          <span class="text-cyan-300">ディールが前に進む。</span>
         </h1>
-        <p class="text-xl md:text-2xl text-kurage-100 font-medium mb-4">
-          チーム全員で月<span class="text-white font-bold">¥9,800</span>。
-        </p>
         <p class="text-lg text-kurage-200 mb-10 max-w-2xl leading-relaxed">
-          Slackで30秒メモするだけ。あとはAIが顧客との関係を温めます。<br />
+          Slackに書いた一言が、自動で記録・分析・コーチングまでつながる。<br />
           1人〜30人の営業チームに最適。導入初日から全員が使えます。
         </p>
 
@@ -55,17 +41,15 @@
         </div>
 
         <!-- ROI banner -->
-        <div
-          class="bg-white/10 border border-white/20 rounded-2xl p-6 max-w-2xl"
-        >
+        <div class="bg-white/10 border border-white/20 rounded-2xl p-6 max-w-2xl">
           <div class="grid grid-cols-3 gap-4 text-center">
             <div>
               <p class="text-3xl font-black text-cyan-300">¥150,000</p>
-              <p class="text-xs text-kurage-200 mt-1">月間CRM事務コスト削減<br/>（5人チーム試算）</p>
+              <p class="text-xs text-kurage-200 mt-1">月間入力作業コスト削減<br/>（5人チーム試算）</p>
             </div>
             <div class="border-x border-white/20">
               <p class="text-3xl font-black text-cyan-300">¥9,800</p>
-              <p class="text-xs text-kurage-200 mt-1">月額利用料<br/>（ユーザー数無制限）</p>
+              <p class="text-xs text-kurage-200 mt-1">月額利用料<br/>（10人チーム）</p>
             </div>
             <div>
               <p class="text-3xl font-black text-orange-400">15x</p>
@@ -84,7 +68,7 @@
         <div class="bg-white rounded-2xl border border-gray-200 p-8 md:p-10">
           <p class="text-sm font-bold text-kurage-600 mb-3">🎯 対象</p>
           <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
-            1人〜30人の営業組織のためのAI-CRM
+            1人〜30人の営業チームのためのAI営業ツール
           </h2>
           <p class="text-gray-600 mb-8 max-w-2xl">
             一人社長のフリーランスから、営業チーム10名規模の成長企業まで。<br />
@@ -99,23 +83,6 @@
             >
               <p class="text-2xl mb-2">{{ p.icon }}</p>
               <p>{{ p.text }}</p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Salesforce partner trust -->
-        <div class="mt-6 bg-kurage-50 border border-kurage-100 rounded-2xl p-8 md:p-10">
-          <div class="flex gap-4 items-start">
-            <span class="text-4xl">🏅</span>
-            <div>
-              <h3 class="text-lg font-bold text-gray-900 mb-2">
-                Salesforce認定コンサルティングパートナーが開発
-              </h3>
-              <p class="text-gray-600 leading-relaxed">
-                数百社のSalesforce導入・運用を支援してきた私たちが、
-                「5〜30人のチームには、もっとシンプルな選択肢があるべきだ」と考えて作りました。<br />
-                Salesforceを知り尽くしたからこそ作れた、<strong>"ちょうどいい" AI-CRM</strong>。
-              </p>
             </div>
           </div>
         </div>
@@ -331,10 +298,27 @@
     </section>
 
     <!-- ============================================================
-         FAQ
+         FAQ（直上にSFパートナーバッジ）
     ============================================================ -->
     <section id="faq" class="bg-gray-50 py-20">
       <div class="max-w-3xl mx-auto px-4 sm:px-6">
+        <!-- SF Partner trust badge -->
+        <div class="bg-kurage-50 border border-kurage-100 rounded-2xl p-8 mb-12">
+          <div class="flex gap-4 items-start">
+            <span class="text-4xl">🏅</span>
+            <div>
+              <h3 class="text-lg font-bold text-gray-900 mb-2">
+                Salesforce認定コンサルティングパートナーが開発
+              </h3>
+              <p class="text-gray-600 leading-relaxed text-sm">
+                数百社のSalesforce導入・運用を支援してきた私たちが、
+                「5〜30人のチームには、もっとシンプルな選択肢があるべきだ」と考えて作りました。<br />
+                Salesforceを知り尽くしたからこそ作れた、<strong>"ちょうどいい" 営業ツール</strong>。
+              </p>
+            </div>
+          </div>
+        </div>
+
         <div class="text-center mb-14">
           <p class="text-sm font-bold text-kurage-600 mb-3">FAQ</p>
           <h2 class="text-3xl md:text-4xl font-black text-gray-900 mb-4">よくある質問</h2>
@@ -401,25 +385,25 @@ const features = [
   {
     icon: '💬',
     title: 'Slackだけで完結',
-    desc: '新しいアプリを覚える必要なし。「田中さんに電話した」とSlackに書くだけでCRM入力完了。チーム全員が毎日使える唯一のCRM。',
+    desc: '新しいアプリを覚える必要なし。「田中さんに電話した」とSlackに書くだけで記録完了。チーム全員が毎日使える。',
   },
   {
-    icon: '🤖',
-    title: 'AIが営業コーチ',
-    desc: 'MEDDPICC方法論に基づく問いかけ型コーチング。案件の状況を自動診断し、毎朝・毎夕ブリーフィングで次のアクションを提案。経験豊富な営業マネージャーの視点を全案件に。',
+    icon: '🧠',
+    title: 'AIが勝手に確率を更新する',
+    desc: 'メールや会話のニュアンスをAIが読み取り、入力ゼロで受注確率が自動アップデートされる。「難しいですね」は断りシグナル、「費用はいくら？」はホットシグナル——人間が気づく前にAIが察知。さらにAIが返信メールの下書きをSlackに届け、ボタン1つで送信できる。',
   },
   {
     icon: '💰',
     title: '圧倒的な低価格',
-    desc: 'Salesforceの1/10以下。ユーザー数課金なし。チーム全員で月¥9,800。導入コストも運用ルール策定も不要。即日使い始められます。',
+    desc: 'Salesforceの1/10以下。ユーザー数課金なし。10人チームで月¥9,800。導入コストも運用ルール策定も不要。即日使い始められます。',
   },
 ]
 
 const benefits = [
   {
     icon: '⏱️',
-    title: 'CRM事務ゼロ → 営業時間を取り戻す',
-    desc: '「Salesforceへの入力に1日30分」は業界の常識。クラゲディールなら、Slackに一言書くだけで自動記録。営業1人あたり月10時間のCRM事務がゼロに。その時間を商談に使えば、1件でも多く受注できます。',
+    title: '入力ゼロ → 営業時間を取り戻す',
+    desc: '「Salesforceへの入力に1日30分」は業界の常識。クラゲディールなら、Slackに一言書くだけで自動記録。営業1人あたり月10時間の入力作業がゼロに。その時間を商談に使えば、1件でも多く受注できます。',
     metric: '📊 試算: 営業5人 × 10時間 × 時給¥3,000 = 月¥150,000の隠れコスト削減',
   },
   {
@@ -449,20 +433,20 @@ const usecases = [
   {
     icon: '🏢',
     title: '社長が営業も兼務する会社',
-    subtitle: '「頭の中のCRMを外に出す」',
+    subtitle: '「頭の中の営業管理を外に出す」',
     problem:
       '社員5人。社長が営業もバックオフィスも全部やってる。クライアント30社の状況は全部社長の頭の中。たまにフォロー忘れて失注。「あの件どうなった？」と聞かれて焦る。',
     solution:
-      '→ 「田中さんに電話した。来月デモ設定」とSlackに書くだけ。社長の頭の中が、検索できるCRMに変わる。出張中でも毎朝ブリーフィングが来るから、抜け漏れゼロ。',
+      '→ 「田中さんに電話した。来月デモ設定」とSlackに書くだけ。社長の頭の中が、検索できるディール管理に変わる。出張中でも毎朝ブリーフィングが来るから、抜け漏れゼロ。',
   },
   {
     icon: '👥',
     title: 'Salesforceを導入したけど誰も使わない会社',
-    subtitle: '「入力が続くCRM」',
+    subtitle: '「ちゃんと続く営業管理」',
     problem:
       '営業3人の人材紹介会社。Salesforce入れたのに、入力率20%。「入力が面倒」「外出先で開けない」「項目が多すぎる」。結局マネージャーが口頭で聞いてExcelにまとめ直す日々。',
     solution:
-      '→ Slackに「鈴木さんとMTGした。要件ヒアリング完了」と書くだけで記録完了。画面を開いて項目を埋める作業がゼロ。だから全員が毎日使える。入力率100%のCRMから、AIがコーチングを生成。',
+      '→ Slackに「鈴木さんとMTGした。要件ヒアリング完了」と書くだけで記録完了。画面を開いて項目を埋める作業がゼロ。だから全員が毎日使える。記録が100%残るから、AIがコーチングを生成。',
   },
   {
     icon: '📈',
@@ -547,13 +531,13 @@ const comparison = [
   },
   {
     label: '導入期間',
-    us: '即日',
-    them: '数週間〜数ヶ月',
+    us: '30分',
+    them: '3〜6ヶ月',
   },
   {
-    label: 'CRM入力方法',
-    us: '「田中さんに電話した」と書くだけ',
-    them: '画面を開いて項目を埋める',
+    label: '入力時間',
+    us: '1行（Slackに書くだけ）',
+    them: '1日30分（画面を開いて項目入力）',
   },
   {
     label: 'AIコーチング',
@@ -561,15 +545,20 @@ const comparison = [
     them: '汎用AI',
   },
   {
-    label: '自律フォローアップ',
-    us: '対応予定',
+    label: '会話センチメント分析',
+    us: '自動（入力ゼロで確率変動）',
+    them: 'なし',
+  },
+  {
+    label: 'AI返信下書き',
+    us: 'あり（Slackで承認→即送信）',
     them: 'なし',
   },
 ]
 
 const faqs = reactive([
   {
-    q: 'Salesforceのパートナーなのに、なぜ別のCRMを作ったのですか？',
+    q: 'Salesforceのパートナーなのに、なぜ別のツールを作ったの？',
     a: '50人以上の営業組織にはSalesforceが最適です。私たちは今もSalesforceの導入支援を行っています。ただ、5〜30人のチームにはSalesforceはオーバースペック。導入コスト・運用負荷・ライセンス費が合わない。お客様に「あなたの会社にはSalesforceより良い選択肢があります」と正直に言えること。それがパートナーの責任だと考えています。',
     open: false,
   },

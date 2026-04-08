@@ -71,7 +71,7 @@
 
           <div>
             <label class="block text-sm font-semibold text-gray-700 mb-2">
-              現在のCRM・営業管理ツール
+              今使っている営業管理ツール
             </label>
             <select
               v-model="form.currentCrm"
@@ -82,7 +82,7 @@
               <option value="salesforce">Salesforce</option>
               <option value="hubspot">HubSpot</option>
               <option value="other_crm">その他のCRM</option>
-              <option value="none">特に使っていない</option>
+              <option value="none">なし</option>
             </select>
           </div>
 
