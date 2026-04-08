@@ -3,9 +3,6 @@ export default defineNuxtConfig({
   devtools: { enabled: false },
   modules: ['@nuxtjs/tailwindcss'],
   ssr: true,
-  nitro: {
-    preset: 'cloudflare-pages',
-  },
   app: {
     head: {
       charset: 'utf-8',
