@@ -1,0 +1,597 @@
+<template>
+  <main class="pt-16">
+    <!-- ============================================================
+         HERO
+    ============================================================ -->
+    <section
+      id="hero"
+      class="relative bg-gradient-to-br from-kurage-900 via-kurage-800 to-kurage-700 text-white overflow-hidden"
+    >
+      <!-- Background decoration -->
+      <div class="absolute inset-0 opacity-10">
+        <div
+          class="absolute top-10 left-10 w-72 h-72 rounded-full bg-kurage-300 blur-3xl"
+        />
+        <div
+          class="absolute bottom-10 right-10 w-96 h-96 rounded-full bg-cyan-300 blur-3xl"
+        />
+      </div>
+
+      <div class="relative max-w-6xl mx-auto px-4 sm:px-6 py-24 md:py-32">
+        <!-- Trust badge -->
+        <div
+          class="inline-flex items-center gap-2 bg-white/10 border border-white/20 rounded-full px-4 py-2 text-sm mb-8"
+        >
+          🏅 <span>Salesforce認定コンサルティングパートナーが開発</span>
+        </div>
+
+        <!-- Main copy -->
+        <h1 class="text-4xl md:text-6xl font-black leading-tight mb-6">
+          クラゲでもできる、<br />
+          <span class="text-cyan-300">Slack営業管理。</span>
+        </h1>
+        <p class="text-xl md:text-2xl text-kurage-100 font-medium mb-4">
+          チーム全員で月<span class="text-white font-bold">¥9,800</span>。
+        </p>
+        <p class="text-lg text-kurage-200 mb-10 max-w-2xl leading-relaxed">
+          Slackで30秒メモするだけ。あとはAIが顧客との関係を温めます。<br />
+          1人〜30人の営業チームに最適。導入初日から全員が使えます。
+        </p>
+
+        <!-- CTAs -->
+        <div class="flex flex-col sm:flex-row gap-4 mb-16">
+          <a
+            href="/contact"
+            class="inline-flex items-center justify-center gap-2 bg-orange-500 hover:bg-orange-400 text-white font-bold px-8 py-4 rounded-xl text-lg transition-colors shadow-lg"
+          >
+            無料で始める →
+          </a>
+          <a
+            href="#features"
+            class="inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 border border-white/30 text-white font-medium px-8 py-4 rounded-xl text-lg transition-colors"
+          >
+            機能を見る
+          </a>
+        </div>
+
+        <!-- ROI banner -->
+        <div
+          class="bg-white/10 border border-white/20 rounded-2xl p-6 max-w-2xl"
+        >
+          <div class="grid grid-cols-3 gap-4 text-center">
+            <div>
+              <p class="text-3xl font-black text-cyan-300">¥150,000</p>
+              <p class="text-xs text-kurage-200 mt-1">月間CRM事務コスト削減<br/>（5人チーム試算）</p>
+            </div>
+            <div class="border-x border-white/20">
+              <p class="text-3xl font-black text-cyan-300">¥9,800</p>
+              <p class="text-xs text-kurage-200 mt-1">月額利用料<br/>（ユーザー数無制限）</p>
+            </div>
+            <div>
+              <p class="text-3xl font-black text-orange-400">15x</p>
+              <p class="text-xs text-kurage-200 mt-1">初月からの<br/>ROI</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         TARGET SEGMENT
+    ============================================================ -->
+    <section class="bg-gray-50 py-16">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6">
+        <div class="bg-white rounded-2xl border border-gray-200 p-8 md:p-10">
+          <p class="text-sm font-bold text-kurage-600 mb-3">🎯 対象</p>
+          <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
+            1人〜30人の営業組織のためのAI-CRM
+          </h2>
+          <p class="text-gray-600 mb-8 max-w-2xl">
+            一人社長のフリーランスから、営業チーム10名規模の成長企業まで。<br />
+            「Salesforceは高すぎるし重すぎる。でもExcelとSlackの管理はもう限界」<br />
+            ——そんな会社のために作りました。
+          </p>
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+            <div
+              v-for="p in personas"
+              :key="p.icon"
+              class="bg-gray-50 rounded-xl p-4 text-sm text-gray-700"
+            >
+              <p class="text-2xl mb-2">{{ p.icon }}</p>
+              <p>{{ p.text }}</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Salesforce partner trust -->
+        <div class="mt-6 bg-kurage-50 border border-kurage-100 rounded-2xl p-8 md:p-10">
+          <div class="flex gap-4 items-start">
+            <span class="text-4xl">🏅</span>
+            <div>
+              <h3 class="text-lg font-bold text-gray-900 mb-2">
+                Salesforce認定コンサルティングパートナーが開発
+              </h3>
+              <p class="text-gray-600 leading-relaxed">
+                数百社のSalesforce導入・運用を支援してきた私たちが、
+                「5〜30人のチームには、もっとシンプルな選択肢があるべきだ」と考えて作りました。<br />
+                Salesforceを知り尽くしたからこそ作れた、<strong>"ちょうどいい" AI-CRM</strong>。
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         FEATURES
+    ============================================================ -->
+    <section id="features" class="py-20">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6">
+        <div class="text-center mb-14">
+          <p class="text-sm font-bold text-kurage-600 mb-3">機能</p>
+          <h2 class="text-3xl md:text-4xl font-black text-gray-900 mb-4">4つの特徴</h2>
+          <p class="text-gray-500">新しいアプリは不要。Slackだけで完結します。</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div
+            v-for="f in features"
+            :key="f.title"
+            class="bg-white rounded-2xl border border-gray-200 p-8 hover:shadow-md transition-shadow"
+          >
+            <p class="text-4xl mb-4">{{ f.icon }}</p>
+            <h3 class="text-xl font-bold text-gray-900 mb-3">{{ f.title }}</h3>
+            <p class="text-gray-600 leading-relaxed">{{ f.desc }}</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         BENEFITS（コスト削減）
+    ============================================================ -->
+    <section id="benefits" class="bg-gray-50 py-20">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6">
+        <div class="text-center mb-14">
+          <p class="text-sm font-bold text-kurage-600 mb-3">導入効果</p>
+          <h2 class="text-3xl md:text-4xl font-black text-gray-900 mb-4">
+            営業コストを、仕組みで下げる
+          </h2>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div
+            v-for="b in benefits"
+            :key="b.title"
+            class="bg-white rounded-2xl border border-gray-200 p-8"
+          >
+            <p class="text-4xl mb-4">{{ b.icon }}</p>
+            <h3 class="text-lg font-bold text-gray-900 mb-3">{{ b.title }}</h3>
+            <p class="text-gray-600 text-sm leading-relaxed mb-4">{{ b.desc }}</p>
+            <div class="bg-kurage-50 border border-kurage-100 rounded-xl p-4 text-sm text-kurage-800 font-medium">
+              {{ b.metric }}
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         USE CASES
+    ============================================================ -->
+    <section id="usecases" class="py-20">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6">
+        <div class="text-center mb-14">
+          <p class="text-sm font-bold text-kurage-600 mb-3">活用シーン</p>
+          <h2 class="text-3xl md:text-4xl font-black text-gray-900 mb-4">
+            こんな会社に、ぴったりです
+          </h2>
+        </div>
+
+        <div class="space-y-6">
+          <div
+            v-for="uc in usecases"
+            :key="uc.title"
+            class="bg-white rounded-2xl border border-gray-200 overflow-hidden"
+          >
+            <div class="p-8 md:flex gap-8 items-start">
+              <div class="text-5xl mb-4 md:mb-0 shrink-0">{{ uc.icon }}</div>
+              <div class="flex-1">
+                <h3 class="text-xl font-bold text-gray-900 mb-1">{{ uc.title }}</h3>
+                <p class="text-sm text-kurage-600 font-medium mb-3">{{ uc.subtitle }}</p>
+                <p class="text-gray-600 text-sm leading-relaxed mb-4">{{ uc.problem }}</p>
+                <div class="bg-kurage-50 border-l-4 border-kurage-500 pl-4 py-3 rounded-r-xl">
+                  <p class="text-gray-800 text-sm leading-relaxed">{{ uc.solution }}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         PRICING
+    ============================================================ -->
+    <section id="pricing" class="bg-gray-50 py-20">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6">
+        <div class="text-center mb-14">
+          <p class="text-sm font-bold text-kurage-600 mb-3">料金</p>
+          <h2 class="text-3xl md:text-4xl font-black text-gray-900 mb-4">
+            シンプルな料金体系
+          </h2>
+          <p class="text-gray-500">ユーザー数課金なし。チーム全員で使えます。</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div
+            v-for="plan in pricing"
+            :key="plan.name"
+            :class="[
+              'rounded-2xl border p-8 flex flex-col',
+              plan.featured
+                ? 'bg-kurage-700 text-white border-kurage-600 shadow-2xl scale-105'
+                : 'bg-white border-gray-200',
+            ]"
+          >
+            <div v-if="plan.featured" class="text-xs font-bold text-cyan-300 mb-3">
+              ★ 最人気
+            </div>
+            <h3
+              :class="['text-2xl font-black mb-1', plan.featured ? 'text-white' : 'text-gray-900']"
+            >
+              {{ plan.name }}
+            </h3>
+            <p :class="['text-4xl font-black mt-2 mb-1', plan.featured ? 'text-cyan-300' : 'text-kurage-700']">
+              {{ plan.price }}
+            </p>
+            <p :class="['text-sm mb-6', plan.featured ? 'text-kurage-200' : 'text-gray-400']">
+              /月（税別）
+            </p>
+            <ul class="space-y-3 flex-1 mb-8">
+              <li
+                v-for="item in plan.features"
+                :key="item.label"
+                class="flex items-start gap-2 text-sm"
+              >
+                <span :class="plan.featured ? 'text-cyan-300' : 'text-kurage-500'">
+                  {{ item.ok ? '✅' : '—' }}
+                </span>
+                <span :class="plan.featured ? 'text-kurage-100' : 'text-gray-600'">
+                  {{ item.label }}
+                </span>
+              </li>
+            </ul>
+            <a
+              href="/contact"
+              :class="[
+                'text-center font-bold py-3 px-6 rounded-xl transition-colors',
+                plan.featured
+                  ? 'bg-orange-500 hover:bg-orange-400 text-white'
+                  : 'bg-kurage-50 hover:bg-kurage-100 text-kurage-700 border border-kurage-200',
+              ]"
+            >
+              {{ plan.cta }}
+            </a>
+          </div>
+        </div>
+
+        <p class="text-center text-sm text-gray-400 mt-8">
+          50人以上の組織・カスタマイズが必要な場合は Enterprise プラン（個別見積もり）をご相談ください。
+        </p>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         COMPARISON
+    ============================================================ -->
+    <section id="comparison" class="py-20">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6">
+        <div class="text-center mb-14">
+          <p class="text-sm font-bold text-kurage-600 mb-3">比較</p>
+          <h2 class="text-3xl md:text-4xl font-black text-gray-900 mb-4">
+            Salesforce + Slackとの違い
+          </h2>
+        </div>
+
+        <div class="bg-white rounded-2xl border border-gray-200 overflow-hidden shadow-sm">
+          <div class="overflow-x-auto">
+            <table class="w-full text-sm">
+              <thead>
+                <tr class="bg-gray-50 border-b border-gray-200">
+                  <th class="text-left px-6 py-4 font-semibold text-gray-600 w-1/3">比較項目</th>
+                  <th class="text-center px-6 py-4">
+                    <span class="inline-flex items-center gap-1 font-bold text-kurage-700">
+                      🪼 クラゲディール
+                    </span>
+                  </th>
+                  <th class="text-center px-6 py-4 font-semibold text-gray-400">
+                    Salesforce + Slack
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr
+                  v-for="(row, i) in comparison"
+                  :key="row.label"
+                  :class="[
+                    'border-b border-gray-100',
+                    i % 2 === 0 ? 'bg-white' : 'bg-gray-50/50',
+                  ]"
+                >
+                  <td class="px-6 py-4 font-medium text-gray-700">{{ row.label }}</td>
+                  <td class="px-6 py-4 text-center text-kurage-700 font-medium">{{ row.us }}</td>
+                  <td class="px-6 py-4 text-center text-gray-400">{{ row.them }}</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         FAQ
+    ============================================================ -->
+    <section id="faq" class="bg-gray-50 py-20">
+      <div class="max-w-3xl mx-auto px-4 sm:px-6">
+        <div class="text-center mb-14">
+          <p class="text-sm font-bold text-kurage-600 mb-3">FAQ</p>
+          <h2 class="text-3xl md:text-4xl font-black text-gray-900 mb-4">よくある質問</h2>
+        </div>
+
+        <div class="space-y-4">
+          <div
+            v-for="faq in faqs"
+            :key="faq.q"
+            class="bg-white rounded-2xl border border-gray-200 overflow-hidden"
+          >
+            <button
+              class="w-full text-left px-6 py-5 flex justify-between items-start gap-4 font-semibold text-gray-900"
+              @click="faq.open = !faq.open"
+            >
+              <span>Q. {{ faq.q }}</span>
+              <span class="text-kurage-500 text-xl shrink-0">{{ faq.open ? '−' : '+' }}</span>
+            </button>
+            <div v-if="faq.open" class="px-6 pb-5 text-gray-600 text-sm leading-relaxed border-t border-gray-100 pt-4">
+              {{ faq.a }}
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         BOTTOM CTA
+    ============================================================ -->
+    <section class="bg-gradient-to-br from-kurage-900 to-kurage-700 text-white py-20">
+      <div class="max-w-3xl mx-auto px-4 sm:px-6 text-center">
+        <p class="text-5xl mb-6">🪼</p>
+        <h2 class="text-3xl md:text-4xl font-black mb-4">
+          今日から、Slackで営業管理を始めよう。
+        </h2>
+        <p class="text-kurage-200 mb-10 text-lg">
+          導入初日から全員が使えます。セットアップは最短30分。
+        </p>
+        <a
+          href="/contact"
+          class="inline-flex items-center gap-2 bg-orange-500 hover:bg-orange-400 text-white font-bold px-10 py-5 rounded-xl text-xl transition-colors shadow-lg"
+        >
+          無料で始める →
+        </a>
+      </div>
+    </section>
+  </main>
+</template>
+
+<script setup lang="ts">
+const personas = [
+  { icon: '🏢', text: '社員5人のIT企業。社長が営業も兼務。商談管理はスプレッドシート' },
+  { icon: '👥', text: '営業3人の人材会社。Salesforceを導入したが誰も入力しない' },
+  { icon: '🚀', text: '10人のスタートアップ。急成長で商談が増え、フォロー漏れが出始めた' },
+  { icon: '🔧', text: '一人社長のコンサル。クライアント20社の関係を頭の中で管理している' },
+]
+
+const features = [
+  {
+    icon: '🎯',
+    title: 'ディールベースでシンプル',
+    desc: 'リード・取引先責任者・商談・活動…Salesforceの複雑な画面遷移は不要。「ディール」1画面に顧客・活動・確率・コーチングが全部まとまる。初日から誰でも使える。',
+  },
+  {
+    icon: '💬',
+    title: 'Slackだけで完結',
+    desc: '新しいアプリを覚える必要なし。「田中さんに電話した」とSlackに書くだけでCRM入力完了。チーム全員が毎日使える唯一のCRM。',
+  },
+  {
+    icon: '🤖',
+    title: 'AIが営業コーチ',
+    desc: 'MEDDPICC方法論に基づく問いかけ型コーチング。案件の状況を自動診断し、毎朝・毎夕ブリーフィングで次のアクションを提案。経験豊富な営業マネージャーの視点を全案件に。',
+  },
+  {
+    icon: '💰',
+    title: '圧倒的な低価格',
+    desc: 'Salesforceの1/10以下。ユーザー数課金なし。チーム全員で月¥9,800。導入コストも運用ルール策定も不要。即日使い始められます。',
+  },
+]
+
+const benefits = [
+  {
+    icon: '⏱️',
+    title: 'CRM事務ゼロ → 営業時間を取り戻す',
+    desc: '「Salesforceへの入力に1日30分」は業界の常識。クラゲディールなら、Slackに一言書くだけで自動記録。営業1人あたり月10時間のCRM事務がゼロに。その時間を商談に使えば、1件でも多く受注できます。',
+    metric: '📊 試算: 営業5人 × 10時間 × 時給¥3,000 = 月¥150,000の隠れコスト削減',
+  },
+  {
+    icon: '🌱',
+    title: '新人がベテラン並みに動ける → 採用コストを抑える',
+    desc: 'AIコーチは、すべてのディールに対して「この案件、次に何をすべきか？」「決裁者に会えていますか？」とMEDDPICC方法論で問いかけます。エキスパート営業マネージャーの判断を、AIが全案件に24時間提供。',
+    metric: '💡 営業マネージャー年収600〜900万円 → AIコーチ年額¥117,600（Standard）',
+  },
+  {
+    icon: '🚨',
+    title: 'フォロー漏れゼロ → 失注を防ぐ',
+    desc: '「あの案件、2週間フォローしてなかった…」クラゲディールは14日放置された案件を自動検出し、毎朝のブリーフィングで警告。夕方にはコーチング質問をプッシュ通知。',
+    metric: '1件の失注を防げれば、年間のクラゲディール利用料は余裕で回収できます',
+  },
+]
+
+const usecases = [
+  {
+    icon: '🚀',
+    title: 'エンジニア創業のスタートアップ',
+    subtitle: '「営業を雇わなくていい」',
+    problem:
+      'プロダクトは強い。でも営業がいない。エンジニア2人で創業。問い合わせは来るけど、フォローが追いつかない。営業を1人雇うと月40万。でもまだそのフェーズじゃない。',
+    solution:
+      '→ クラゲディールなら、問い合わせをSlackにメモするだけでAIが管理。「あの見込み客、1週間放置してますよ」とAIが毎朝教えてくれる。コーチングが「次は決裁者に会いましょう」と具体的に指示。営業スタッフゼロでも、商談を前に進められます。',
+  },
+  {
+    icon: '🏢',
+    title: '社長が営業も兼務する会社',
+    subtitle: '「頭の中のCRMを外に出す」',
+    problem:
+      '社員5人。社長が営業もバックオフィスも全部やってる。クライアント30社の状況は全部社長の頭の中。たまにフォロー忘れて失注。「あの件どうなった？」と聞かれて焦る。',
+    solution:
+      '→ 「田中さんに電話した。来月デモ設定」とSlackに書くだけ。社長の頭の中が、検索できるCRMに変わる。出張中でも毎朝ブリーフィングが来るから、抜け漏れゼロ。',
+  },
+  {
+    icon: '👥',
+    title: 'Salesforceを導入したけど誰も使わない会社',
+    subtitle: '「入力が続くCRM」',
+    problem:
+      '営業3人の人材紹介会社。Salesforce入れたのに、入力率20%。「入力が面倒」「外出先で開けない」「項目が多すぎる」。結局マネージャーが口頭で聞いてExcelにまとめ直す日々。',
+    solution:
+      '→ Slackに「鈴木さんとMTGした。要件ヒアリング完了」と書くだけで記録完了。画面を開いて項目を埋める作業がゼロ。だから全員が毎日使える。入力率100%のCRMから、AIがコーチングを生成。',
+  },
+  {
+    icon: '📈',
+    title: '急成長中の10人チーム',
+    subtitle: '「マネージャーの分身が欲しい」',
+    problem:
+      'SaaS営業10人。商談が月50件を超えて、マネージャーが全案件を見切れない。「あの案件、止まってない？」「競合出てきたの知ってる？」週1の1on1じゃ追いつかない。でもマネージャーをもう1人雇う余裕はない。',
+    solution:
+      '→ AIが全50案件を毎日診断。滞留・危険・クロージング間近を自動仕分け。「この案件14日止まってます。何がブロッカーですか？」マネージャーの問いかけを、AIが24時間×全案件でやってくれる。年収800万のマネージャーの仕事を、月¥9,800で。',
+  },
+  {
+    icon: '🔧',
+    title: 'フリーランス・一人社長',
+    subtitle: '「自分専用のAI営業アシスタント」',
+    problem:
+      'コンサル業。クライアント15社を一人で回している。提案中・契約中・フォロー待ちが混在して、どこから手をつけるかわからない。「今月クローズできそうな案件は？」を即答できない。',
+    solution:
+      '→ Freeプランで十分。毎朝「今日やるべきこと」がSlackに届く。「山田商事、確率70%。クローズ日を確認しましょう」一人でもAIアシスタントがいれば、20社でも回せます。',
+  },
+]
+
+const pricing = [
+  {
+    name: 'Free',
+    price: '¥0',
+    featured: false,
+    cta: '無料で始める',
+    features: [
+      { ok: true, label: 'ユーザー 3名まで' },
+      { ok: true, label: 'AI利用 月100回' },
+      { ok: true, label: 'コーチング機能' },
+      { ok: false, label: '日次ブリーフィング' },
+      { ok: false, label: 'ナーチャリング' },
+      { ok: false, label: '優先サポート' },
+    ],
+  },
+  {
+    name: 'Standard',
+    price: '¥9,800',
+    featured: true,
+    cta: '今すぐ申し込む',
+    features: [
+      { ok: true, label: 'ユーザー 10名まで' },
+      { ok: true, label: 'AI利用 月5,000回' },
+      { ok: true, label: 'コーチング機能' },
+      { ok: true, label: '日次ブリーフィング' },
+      { ok: true, label: 'ナーチャリング' },
+      { ok: false, label: '優先サポート' },
+    ],
+  },
+  {
+    name: 'Premium',
+    price: '¥29,800',
+    featured: false,
+    cta: 'お問い合わせ',
+    features: [
+      { ok: true, label: 'ユーザー 無制限' },
+      { ok: true, label: 'AI利用 無制限' },
+      { ok: true, label: 'コーチング機能' },
+      { ok: true, label: '日次ブリーフィング' },
+      { ok: true, label: 'ナーチャリング' },
+      { ok: true, label: '優先サポート' },
+    ],
+  },
+]
+
+const comparison = [
+  {
+    label: 'データ構造',
+    us: 'ディール1画面に全集約',
+    them: 'リード・取引先責任者・商談・活動が別画面',
+  },
+  {
+    label: '学習コスト',
+    us: 'ゼロ（Slackに話すだけ）',
+    them: 'SF研修 + 運用ルール策定が必要',
+  },
+  {
+    label: '月額（10人チーム）',
+    us: '¥9,800',
+    them: '¥56,000〜470,000',
+  },
+  {
+    label: '導入期間',
+    us: '即日',
+    them: '数週間〜数ヶ月',
+  },
+  {
+    label: 'CRM入力方法',
+    us: '「田中さんに電話した」と書くだけ',
+    them: '画面を開いて項目を埋める',
+  },
+  {
+    label: 'AIコーチング',
+    us: '営業特化（MEDDPICC + 状況診断）',
+    them: '汎用AI',
+  },
+  {
+    label: '自律フォローアップ',
+    us: '対応予定',
+    them: 'なし',
+  },
+]
+
+const faqs = reactive([
+  {
+    q: 'Salesforceのパートナーなのに、なぜ別のCRMを作ったのですか？',
+    a: '50人以上の営業組織にはSalesforceが最適です。私たちは今もSalesforceの導入支援を行っています。ただ、5〜30人のチームにはSalesforceはオーバースペック。導入コスト・運用負荷・ライセンス費が合わない。お客様に「あなたの会社にはSalesforceより良い選択肢があります」と正直に言えること。それがパートナーの責任だと考えています。',
+    open: false,
+  },
+  {
+    q: '将来Salesforceに移行できますか？',
+    a: 'はい。クラゲディールのデータはCSV/Excelでエクスポート可能です。組織が成長してSalesforceが必要になった際には、当社がSF認定パートナーとして移行支援も対応します。「今はクラゲディール、いつかSalesforce」——どちらのフェーズでもお手伝いできます。',
+    open: false,
+  },
+  {
+    q: '30人以上の会社でも使えますか？',
+    a: 'Premiumプラン（¥29,800/月）でユーザー数無制限に対応しています。50人以上の組織でカスタマイズが必要な場合は、Enterpriseプラン（個別見積もり）をご相談ください。',
+    open: false,
+  },
+  {
+    q: '既存のSlackワークスペースに導入できますか？',
+    a: 'はい。既存のSlackワークスペースにクラゲディールのアプリを追加するだけで利用開始できます。新しいワークスペースを作る必要はありません。',
+    open: false,
+  },
+  {
+    q: 'データのセキュリティは大丈夫ですか？',
+    a: 'データはGCP（Google Cloud Platform）上で管理され、通信はSSL/TLSで暗号化されています。顧客データはテナントごとに分離して保管されます。',
+    open: false,
+  },
+])
+</script>
