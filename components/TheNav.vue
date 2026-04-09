@@ -5,7 +5,7 @@
     <nav class="max-w-6xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
       <!-- Logo -->
       <a href="/" class="flex items-center gap-2">
-        <span class="text-2xl">🪼</span>
+        <img src="/kurage-icon.svg" alt="クラゲディール" class="w-8 h-8" />
         <span class="font-bold text-xl text-kurage-700">クラゲディール</span>
       </a>
 
