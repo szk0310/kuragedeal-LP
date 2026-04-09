@@ -14,47 +14,61 @@
       </div>
 
       <div class="relative max-w-6xl mx-auto px-4 sm:px-6 py-24 md:py-32">
-        <!-- Main copy -->
-        <h1 class="text-4xl md:text-6xl font-black leading-tight mb-6">
-          話しかけるだけで、<br />
-          <span class="text-cyan-300">ディールが前に進む。</span>
-        </h1>
-        <p class="text-lg text-kurage-200 mb-10 max-w-2xl leading-relaxed">
-          Slackに書いた一言が、自動で記録・分析・コーチングまでつながる。<br />
-          1人〜30人の営業チームに最適。導入初日から全員が使えます。
-        </p>
+        <div class="flex flex-col md:flex-row items-center gap-12">
+          <!-- Left: copy -->
+          <div class="flex-1">
+            <!-- Main copy -->
+            <h1 class="text-4xl md:text-6xl font-black leading-tight mb-6">
+              話しかけるだけで、<br />
+              <span class="text-cyan-300">ディールが前に進む。</span>
+            </h1>
+            <p class="text-lg text-kurage-200 mb-10 max-w-2xl leading-relaxed">
+              Slackに書いた一言が、自動で記録・分析・コーチングまでつながる。<br />
+              1人〜30人の営業チームに最適。導入初日から全員が使えます。
+            </p>
 
-        <!-- CTAs -->
-        <div class="flex flex-col sm:flex-row gap-4 mb-16">
-          <a
-            href="/contact"
-            class="inline-flex items-center justify-center gap-2 bg-orange-500 hover:bg-orange-400 text-white font-bold px-8 py-4 rounded-xl text-lg transition-colors shadow-lg"
-          >
-            無料で始める →
-          </a>
-          <a
-            href="#features"
-            class="inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 border border-white/30 text-white font-medium px-8 py-4 rounded-xl text-lg transition-colors"
-          >
-            機能を見る
-          </a>
-        </div>
+            <!-- CTAs -->
+            <div class="flex flex-col sm:flex-row gap-4 mb-12">
+              <a
+                href="/contact"
+                class="inline-flex items-center justify-center gap-2 bg-orange-500 hover:bg-orange-400 text-white font-bold px-8 py-4 rounded-xl text-lg transition-colors shadow-lg"
+              >
+                無料で始める →
+              </a>
+              <a
+                href="#features"
+                class="inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 border border-white/30 text-white font-medium px-8 py-4 rounded-xl text-lg transition-colors"
+              >
+                機能を見る
+              </a>
+            </div>
 
-        <!-- ROI banner -->
-        <div class="bg-white/10 border border-white/20 rounded-2xl p-6 max-w-2xl">
-          <div class="grid grid-cols-3 gap-4 text-center">
-            <div>
-              <p class="text-3xl font-black text-cyan-300">¥150,000</p>
-              <p class="text-xs text-kurage-200 mt-1">月間入力作業コスト削減<br/>（5人チーム試算）</p>
+            <!-- ROI banner -->
+            <div class="bg-white/10 border border-white/20 rounded-2xl p-6 max-w-xl">
+              <div class="grid grid-cols-3 gap-4 text-center">
+                <div>
+                  <p class="text-3xl font-black text-cyan-300">¥150,000</p>
+                  <p class="text-xs text-kurage-200 mt-1">月間入力作業コスト削減<br/>（5人チーム試算）</p>
+                </div>
+                <div class="border-x border-white/20">
+                  <p class="text-3xl font-black text-cyan-300">¥9,800</p>
+                  <p class="text-xs text-kurage-200 mt-1">月額利用料<br/>（10人チーム）</p>
+                </div>
+                <div>
+                  <p class="text-3xl font-black text-orange-400">15x</p>
+                  <p class="text-xs text-kurage-200 mt-1">初月からの<br/>ROI</p>
+                </div>
+              </div>
             </div>
-            <div class="border-x border-white/20">
-              <p class="text-3xl font-black text-cyan-300">¥9,800</p>
-              <p class="text-xs text-kurage-200 mt-1">月額利用料<br/>（10人チーム）</p>
-            </div>
-            <div>
-              <p class="text-3xl font-black text-orange-400">15x</p>
-              <p class="text-xs text-kurage-200 mt-1">初月からの<br/>ROI</p>
-            </div>
+          </div>
+
+          <!-- Right: floating kurage icon -->
+          <div class="hidden md:flex flex-shrink-0 items-center justify-center w-72 h-72">
+            <img
+              src="/kurage-icon.svg"
+              alt="クラゲくん"
+              class="w-64 h-64 kurage-float drop-shadow-2xl"
+            />
           </div>
         </div>
       </div>
@@ -584,3 +598,15 @@ const faqs = reactive([
   },
 ])
 </script>
+
+<style scoped>
+@keyframes float {
+  0%   { transform: translateY(0px); }
+  50%  { transform: translateY(-16px); }
+  100% { transform: translateY(0px); }
+}
+
+.kurage-float {
+  animation: float 4s ease-in-out infinite;
+}
+</style>
