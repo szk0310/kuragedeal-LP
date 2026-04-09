@@ -77,9 +77,9 @@
     <!-- ============================================================
          TARGET SEGMENT
     ============================================================ -->
-    <section class="bg-gray-50 py-16">
+    <section class="bg-ocean-sand py-16">
       <div class="max-w-6xl mx-auto px-4 sm:px-6">
-        <div class="bg-white rounded-2xl border border-gray-200 p-8 md:p-10">
+        <div class="bg-white/80 rounded-2xl border border-ocean-tan/30 p-8 md:p-10">
           <p class="text-sm font-bold text-kurage-600 mb-3">🎯 対象</p>
           <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
             1人〜30人の営業チームのためのAI営業ツール
@@ -93,7 +93,7 @@
             <div
               v-for="p in personas"
               :key="p.icon"
-              class="bg-gray-50 rounded-xl p-4 text-sm text-gray-700"
+              class="bg-ocean-sand/60 rounded-xl p-4 text-sm text-gray-700"
             >
               <p class="text-2xl mb-2">{{ p.icon }}</p>
               <p>{{ p.text }}</p>
@@ -129,9 +129,141 @@
     </section>
 
     <!-- ============================================================
+         AI NURTURING
+    ============================================================ -->
+    <section id="nurturing" class="bg-gradient-to-br from-kurage-900 via-kurage-800 to-kurage-700 py-20 text-white">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6">
+        <div class="text-center mb-12">
+          <p class="text-sm font-bold text-cyan-300 mb-3">AIナーチャリング</p>
+          <h2 class="text-3xl md:text-4xl font-black mb-4">
+            AIが、顧客ひとりひとりと<br />
+            <span class="text-cyan-300">1on1で会話する。</span>
+          </h2>
+          <p class="text-kurage-200 max-w-2xl mx-auto">
+            「全員に同じメールを送る」ステップメールとは、まったく違います。<br />
+            Slackを主戦場に、AIが各顧客と個別にコミュニケーションを続けます。
+          </p>
+        </div>
+
+        <!-- Slack Connect フロー図解 -->
+        <div class="mb-12">
+          <p class="text-center text-sm font-bold text-cyan-300 mb-6 uppercase tracking-widest">
+            メールから Slack へ——顧客との距離が縮まる流れ
+          </p>
+          <div class="flex flex-col md:flex-row items-stretch gap-2">
+
+            <!-- Step 1 -->
+            <div class="flex-1 bg-white/10 border border-white/20 rounded-xl px-3 py-4 text-center">
+              <div class="w-7 h-7 rounded-full bg-cyan-400/20 border border-cyan-400/40 text-cyan-300 text-xs font-bold flex items-center justify-center mx-auto mb-2">1</div>
+              <p class="text-2xl mb-2">📧</p>
+              <p class="font-bold text-xs mb-1">AIが個別メール送信</p>
+              <p class="text-kurage-300 text-xs leading-relaxed">顧客の状況を読んだパーソナライズドメール</p>
+            </div>
+
+            <div class="hidden md:flex items-center text-white/30 text-xl px-0.5">→</div>
+
+            <!-- Step 2 -->
+            <div class="flex-1 bg-white/10 border border-white/20 rounded-xl px-3 py-4 text-center">
+              <div class="w-7 h-7 rounded-full bg-cyan-400/20 border border-cyan-400/40 text-cyan-300 text-xs font-bold flex items-center justify-center mx-auto mb-2">2</div>
+              <p class="text-2xl mb-2">🔗</p>
+              <p class="font-bold text-xs mb-1">Slack招待リンクを同封</p>
+              <p class="text-kurage-300 text-xs leading-relaxed">「専用チャンネルでより詳しくお話できます」</p>
+            </div>
+
+            <div class="hidden md:flex items-center text-white/30 text-xl px-0.5">→</div>
+
+            <!-- Step 3: ハイライト -->
+            <div class="flex-1 bg-cyan-400/15 border-2 border-cyan-400/50 rounded-xl px-3 py-4 text-center relative">
+              <div class="absolute -top-3 left-1/2 -translate-x-1/2 bg-cyan-400 text-kurage-900 text-xs font-black px-3 py-0.5 rounded-full whitespace-nowrap">確率 UP ⬆</div>
+              <div class="w-7 h-7 rounded-full bg-cyan-400/30 border border-cyan-400/60 text-cyan-300 text-xs font-bold flex items-center justify-center mx-auto mb-2 mt-1">3</div>
+              <p class="text-2xl mb-2">💬</p>
+              <p class="font-bold text-xs mb-1 text-cyan-200">顧客がチャンネル参加</p>
+              <p class="text-kurage-300 text-xs leading-relaxed">参加した時点でエンゲージメント確率が大きく上昇</p>
+            </div>
+
+            <div class="hidden md:flex items-center text-white/30 text-xl px-0.5">→</div>
+
+            <!-- Step 4 -->
+            <div class="flex-1 bg-white/10 border border-white/20 rounded-xl px-3 py-4 text-center">
+              <div class="w-7 h-7 rounded-full bg-cyan-400/20 border border-cyan-400/40 text-cyan-300 text-xs font-bold flex items-center justify-center mx-auto mb-2">4</div>
+              <p class="text-2xl mb-2">🤖</p>
+              <p class="font-bold text-xs mb-1">AIがSlackで会話継続</p>
+              <p class="text-kurage-300 text-xs leading-relaxed">気軽なSlackでAIが商談を前に進める</p>
+            </div>
+
+            <div class="hidden md:flex items-center text-white/30 text-xl px-0.5">→</div>
+
+            <!-- Step 5 -->
+            <div class="flex-1 bg-white/10 border border-white/20 rounded-xl px-3 py-4 text-center">
+              <div class="w-7 h-7 rounded-full bg-cyan-400/20 border border-cyan-400/40 text-cyan-300 text-xs font-bold flex items-center justify-center mx-auto mb-2">5</div>
+              <p class="text-2xl mb-2">🙋</p>
+              <p class="font-bold text-xs mb-1">人間がいつでも介入</p>
+              <p class="text-kurage-300 text-xs leading-relaxed">同じチャンネルにいるからタイミングよく引き継げる</p>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- 3つの特徴カード -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+          <div class="bg-white/10 border border-white/20 rounded-2xl p-6">
+            <p class="text-3xl mb-4">🤖</p>
+            <h3 class="text-lg font-bold mb-2">AIが個別メッセージを生成</h3>
+            <p class="text-kurage-200 text-sm leading-relaxed">
+              ディールの進捗・過去の会話・顧客の反応をもとに、その人だけへのメッセージをAIが下書き。「田中さんは先週"予算は問題ない"と言っていた」——そのニュアンスまで反映します。
+            </p>
+          </div>
+          <div class="bg-white/10 border border-white/20 rounded-2xl p-6">
+            <p class="text-3xl mb-4">💬</p>
+            <h3 class="text-lg font-bold mb-2">返信をAIが読んで次を判断</h3>
+            <p class="text-kurage-200 text-sm leading-relaxed">
+              顧客から返信が来たら、AIがその内容を分析。「前向き」「要検討」「断り気配」を判定し、次に送るべきメッセージを自動生成。商談の温度に合わせてコミュニケーションが続きます。
+            </p>
+          </div>
+          <div class="bg-white/10 border border-white/20 rounded-2xl p-6">
+            <p class="text-3xl mb-4">✅</p>
+            <h3 class="text-lg font-bold mb-2">Slackで承認→即送信</h3>
+            <p class="text-kurage-200 text-sm leading-relaxed">
+              AIが作ったメッセージはSlackに届きます。内容を確認して「送信」ボタンを押すだけ。修正も可能。人間が判断・承認するから、AIが暴走する心配もありません。
+            </p>
+          </div>
+        </div>
+
+        <!-- メール補足 -->
+        <p class="text-center text-kurage-300 text-sm">
+          ※ Slackチャンネル参加前の初回アプローチはメールで行います。メールのやり取りもAIが対応——返信内容を読んで次のメールを自動生成します。
+        </p>
+
+        <!-- vs ステップメール比較 -->
+        <div class="bg-white/5 border border-white/15 rounded-2xl p-8 mt-10">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+            <div>
+              <p class="text-xs font-bold text-gray-400 mb-4 uppercase tracking-widest">従来のステップメール</p>
+              <ul class="space-y-3 text-sm text-kurage-200">
+                <li class="flex items-start gap-2"><span class="text-red-400 mt-0.5">✗</span> 全員に同じ内容を送信</li>
+                <li class="flex items-start gap-2"><span class="text-red-400 mt-0.5">✗</span> 返信が来ても自動で次のメッセージが送られるだけ</li>
+                <li class="flex items-start gap-2"><span class="text-red-400 mt-0.5">✗</span> 顧客の温度感・状況は無視</li>
+                <li class="flex items-start gap-2"><span class="text-red-400 mt-0.5">✗</span> 「買う気のない人」にも延々と送り続ける</li>
+              </ul>
+            </div>
+            <div>
+              <p class="text-xs font-bold text-cyan-300 mb-4 uppercase tracking-widest">🪼 クラゲディールのAIナーチャリング</p>
+              <ul class="space-y-3 text-sm">
+                <li class="flex items-start gap-2"><span class="text-cyan-300 mt-0.5">✓</span> 顧客ごとに個別メッセージをAIが生成</li>
+                <li class="flex items-start gap-2"><span class="text-cyan-300 mt-0.5">✓</span> 返信内容をAIが読んで次のアクションを決定</li>
+                <li class="flex items-start gap-2"><span class="text-cyan-300 mt-0.5">✓</span> 商談の進捗・過去の会話・センチメントを反映</li>
+                <li class="flex items-start gap-2"><span class="text-cyan-300 mt-0.5">✓</span> 人間はSlackで確認→承認するだけ</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
          BENEFITS（コスト削減）
     ============================================================ -->
-    <section id="benefits" class="bg-gray-50 py-20">
+    <section id="benefits" class="bg-ocean-sage/20 py-20">
       <div class="max-w-6xl mx-auto px-4 sm:px-6">
         <div class="text-center mb-14">
           <p class="text-sm font-bold text-kurage-600 mb-3">導入効果</p>
@@ -194,7 +326,7 @@
     <!-- ============================================================
          PRICING
     ============================================================ -->
-    <section id="pricing" class="bg-gray-50 py-20">
+    <section id="pricing" class="bg-ocean-mist/20 py-20">
       <div class="max-w-6xl mx-auto px-4 sm:px-6">
         <div class="text-center mb-14">
           <p class="text-sm font-bold text-kurage-600 mb-3">料金</p>
@@ -244,7 +376,7 @@
               </li>
             </ul>
             <a
-              href="/contact"
+              :href="plan.checkoutUrl"
               :class="[
                 'text-center font-bold py-3 px-6 rounded-xl transition-colors',
                 plan.featured
@@ -279,7 +411,7 @@
           <div class="overflow-x-auto">
             <table class="w-full text-sm">
               <thead>
-                <tr class="bg-gray-50 border-b border-gray-200">
+                <tr class="bg-ocean-mist/10 border-b border-gray-200">
                   <th class="text-left px-6 py-4 font-semibold text-gray-600 w-1/3">比較項目</th>
                   <th class="text-center px-6 py-4">
                     <span class="inline-flex items-center gap-1 font-bold text-kurage-700">
@@ -297,7 +429,7 @@
                   :key="row.label"
                   :class="[
                     'border-b border-gray-100',
-                    i % 2 === 0 ? 'bg-white' : 'bg-gray-50/50',
+                    i % 2 === 0 ? 'bg-white' : 'bg-ocean-mist/5',
                   ]"
                 >
                   <td class="px-6 py-4 font-medium text-gray-700">{{ row.label }}</td>
@@ -314,7 +446,7 @@
     <!-- ============================================================
          FAQ（直上にSFパートナーバッジ）
     ============================================================ -->
-    <section id="faq" class="bg-gray-50 py-20">
+    <section id="faq" class="bg-ocean-sand/50 py-20">
       <div class="max-w-3xl mx-auto px-4 sm:px-6">
         <!-- SF Partner trust badge -->
         <div class="bg-kurage-50 border border-kurage-100 rounded-2xl p-8 mb-12">
@@ -482,12 +614,15 @@ const usecases = [
   },
 ]
 
+const API_URL = 'https://slacksfa-api-808596335261.asia-northeast1.run.app'
+
 const pricing = [
   {
     name: 'Free',
     price: '¥0',
     featured: false,
     cta: '無料で始める',
+    checkoutUrl: `${API_URL}/slack/install`,
     features: [
       { ok: true, label: 'ユーザー 3名まで' },
       { ok: true, label: 'AI利用 月100回' },
@@ -502,6 +637,7 @@ const pricing = [
     price: '¥9,800',
     featured: true,
     cta: '今すぐ申し込む',
+    checkoutUrl: `${API_URL}/stripe/checkout?plan=standard`,
     features: [
       { ok: true, label: 'ユーザー 10名まで' },
       { ok: true, label: 'AI利用 月5,000回' },
@@ -516,6 +652,7 @@ const pricing = [
     price: '¥29,800',
     featured: false,
     cta: 'お問い合わせ',
+    checkoutUrl: `${API_URL}/stripe/checkout?plan=premium`,
     features: [
       { ok: true, label: 'ユーザー 無制限' },
       { ok: true, label: 'AI利用 無制限' },
@@ -567,6 +704,11 @@ const comparison = [
     label: 'AI返信下書き',
     us: 'あり（Slackで承認→即送信）',
     them: 'なし',
+  },
+  {
+    label: 'AIナーチャリング',
+    us: '顧客ごとに個別生成・返信を読んで継続',
+    them: 'なし（ステップメールのみ）',
   },
 ]
 

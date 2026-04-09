@@ -3,6 +3,16 @@ export default defineNuxtConfig({
   devtools: { enabled: false },
   modules: ['@nuxtjs/tailwindcss'],
   ssr: true,
+  experimental: {
+    payloadExtraction: false,
+  },
+  vite: {
+    server: {
+      fs: {
+        allow: ['..'],
+      },
+    },
+  },
   nitro: {
     output: {
       publicDir: 'out',
