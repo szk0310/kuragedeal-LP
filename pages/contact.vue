@@ -11,7 +11,16 @@
       </div>
 
       <div class="bg-white rounded-2xl border border-gray-200 p-8 shadow-sm">
-        <form @submit.prevent="submit" class="space-y-6">
+
+        <!-- Success state -->
+        <div v-if="submitted" class="flex flex-col items-center justify-center text-center py-12">
+          <p class="text-6xl mb-4">🪼</p>
+          <h2 class="text-2xl font-black text-gray-900 mb-3">送信完了しました！</h2>
+          <p class="text-gray-500 mb-6">1営業日以内にご連絡いたします。</p>
+          <a href="/" class="text-kurage-600 font-medium hover:underline">トップに戻る</a>
+        </div>
+
+        <form v-else @submit.prevent="submit" class="space-y-6">
           <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
             <div>
               <label class="block text-sm font-semibold text-gray-700 mb-2">
@@ -111,16 +120,6 @@
           </p>
         </form>
 
-        <!-- Success state -->
-        <div
-          v-if="submitted"
-          class="absolute inset-0 bg-white rounded-2xl flex flex-col items-center justify-center text-center p-8"
-        >
-          <p class="text-6xl mb-4">🪼</p>
-          <h2 class="text-2xl font-black text-gray-900 mb-3">送信完了しました！</h2>
-          <p class="text-gray-500 mb-6">1営業日以内にご連絡いたします。</p>
-          <a href="/" class="text-kurage-600 font-medium hover:underline">トップに戻る</a>
-        </div>
       </div>
 
       <div class="mt-8 bg-kurage-50 border border-kurage-100 rounded-2xl p-6 text-center">
