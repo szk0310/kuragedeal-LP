@@ -39,11 +39,6 @@
 
       </div>
 
-      <!-- Ocean donation -->
-      <div class="border-t border-white/15 pt-6 mb-4 text-center text-xs text-kurage-300">
-        🌊 売上の一部は、<a href="https://www.nippon-foundation.or.jp" target="_blank" rel="noopener" class="underline hover:text-white transition-colors">日本財団</a>の海洋プロジェクトに寄付されます。
-      </div>
-
       <!-- Bottom row: copyright -->
       <div class="flex flex-col sm:flex-row justify-between items-center gap-3 text-xs text-kurage-200">
         <p>© 2026 クラゲディール. All rights reserved.</p>
