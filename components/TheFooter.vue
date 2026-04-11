@@ -1,18 +1,24 @@
 <template>
-  <footer class="bg-gray-900 text-gray-400 py-12">
+  <footer class="bg-ocean-deep text-kurage-100 py-12">
     <div class="max-w-6xl mx-auto px-4 sm:px-6">
-      <div class="flex flex-col md:flex-row justify-between items-start gap-8 mb-8">
-        <div>
+
+      <!-- Top row: logo + links -->
+      <div class="flex flex-col md:flex-row md:justify-between md:items-start gap-10 mb-10">
+
+        <!-- Brand -->
+        <div class="flex-shrink-0">
           <div class="flex items-center gap-2 mb-3">
-            <img src="/kurage-icon.svg" alt="クラゲディール" class="w-8 h-8" />
+            <img src="/kurage-icon.svg" alt="クラゲディール" class="w-9 h-9" />
             <span class="font-bold text-xl text-white">クラゲディール</span>
           </div>
-          <p class="text-sm max-w-xs leading-relaxed">
+          <p class="text-sm leading-relaxed max-w-xs">
             Slackだけで完結するAI営業CRM。<br />
             1人〜30人の営業チームに最適。
           </p>
         </div>
-        <div class="grid grid-cols-2 gap-8 text-sm">
+
+        <!-- Links -->
+        <div class="grid grid-cols-2 gap-x-16 gap-y-2 text-sm">
           <div>
             <p class="font-semibold text-white mb-3">プロダクト</p>
             <ul class="space-y-2">
@@ -26,17 +32,19 @@
             <p class="font-semibold text-white mb-3">会社</p>
             <ul class="space-y-2">
               <li><a href="/contact" class="hover:text-white transition-colors">お問い合わせ</a></li>
+              <li><a href="/guide" class="hover:text-white transition-colors">使い方ガイド</a></li>
             </ul>
           </div>
         </div>
+
       </div>
 
-      <div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs">
+      <!-- Bottom row: copyright -->
+      <div class="border-t border-white/15 pt-6 flex flex-col sm:flex-row justify-between items-center gap-3 text-xs text-kurage-200">
         <p>© 2026 クラゲディール. All rights reserved.</p>
-        <p>
-          開発元: shiro Inc.
-        </p>
+        <p>開発元: shiro Inc.</p>
       </div>
+
     </div>
   </footer>
 </template>
