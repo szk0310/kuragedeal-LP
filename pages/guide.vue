@@ -2,6 +2,17 @@
   <main class="pt-16 min-h-screen bg-gray-50">
     <div class="max-w-3xl mx-auto px-4 sm:px-6 py-16">
 
+      <!-- インストール完了バナー -->
+      <div v-if="installed" class="bg-green-50 border border-green-200 rounded-2xl p-6 mb-10 text-center">
+        <p class="text-3xl mb-2">🎉</p>
+        <h2 class="text-lg font-black text-green-800 mb-1">Slackへのインストールが完了しました！</h2>
+        <p class="text-sm text-green-700 mb-4">クラゲくんに話しかけてみてください。</p>
+        <a href="slack://open"
+          class="inline-flex items-center gap-2 bg-green-600 hover:bg-green-500 text-white font-bold px-6 py-3 rounded-xl text-sm transition-colors">
+          Slackを開く →
+        </a>
+      </div>
+
       <!-- Header -->
       <div class="text-center mb-14">
         <p class="text-5xl mb-4">🪼</p>
@@ -117,6 +128,9 @@
 
 <script setup lang="ts">
 useHead({ title: 'クイックスタートガイド | クラゲディール' })
+
+const route = useRoute()
+const installed = computed(() => route.query.installed === '1')
 
 const examples = [
   { input: '顧客一覧を見せて', action: '登録済み顧客の一覧を表示' },
