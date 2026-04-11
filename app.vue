@@ -3,5 +3,6 @@
     <TheNav />
     <NuxtPage />
     <TheFooter />
+    <ChatWidget />
   </div>
 </template>
