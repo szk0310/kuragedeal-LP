@@ -514,6 +514,9 @@
         >
           無料で始める →
         </a>
+        <p class="text-kurage-300 text-xs mt-10">
+          🌊 売上の一部は、<a href="https://www.nippon-foundation.or.jp" target="_blank" rel="noopener" class="underline hover:text-white transition-colors">日本財団</a>の海洋プロジェクトに寄付されます。
+        </p>
       </div>
     </section>
   </main>
