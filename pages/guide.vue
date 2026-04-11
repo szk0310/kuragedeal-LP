@@ -27,7 +27,7 @@
           クラゲくんに話しかける
         </h2>
         <div class="bg-white rounded-2xl border border-gray-200 p-6 shadow-sm">
-          <p class="text-sm text-gray-600 mb-4">SlackでクラゲディールAppをDMするか、チャンネルで <code class="bg-gray-100 px-1 rounded">@クラゲディール</code> とメンションしてください。</p>
+          <p class="text-sm text-gray-600 mb-4">SlackでクラゲディールAppにDMするか、チャンネルで <code class="bg-gray-100 px-1 rounded">@クラゲディール</code> とメンションしてください。</p>
           <div class="space-y-3">
             <div class="bg-gray-50 rounded-xl p-4">
               <p class="text-xs text-gray-400 mb-1 font-semibold">まずは顧客を登録</p>
@@ -149,7 +149,7 @@ const commands = [
   { cmd: '/crm-list', title: '顧客・ディール一覧', desc: '登録済みの顧客や商談をSlack上で確認できます。' },
   { cmd: '/deal', title: 'ディール詳細・AI進捗評価', desc: '特定の商談のAI分析とネクストアクション提案を表示します。' },
   { cmd: '/coach', title: 'AIコーチング', desc: 'AIが商談の進め方をヒアリング形式でコーチングします。' },
-  { cmd: '/crm-settings', title: '設定', desc: 'ナーチャリングモードや営業ポリシーの設定ができます。' },
+  { cmd: '/crm-settings', title: 'AI利用状況・設定', desc: '今月のAI利用量・残り予算・プラン情報を確認できます。' },
 ]
 
 const autoFeatures = [
