@@ -15,7 +15,7 @@
 
       <!-- Header -->
       <div class="text-center mb-14">
-        <p class="text-5xl mb-4">🪼</p>
+        <img src="/kurage-icon.svg" alt="クラゲディール" class="w-16 h-16 mx-auto mb-4" />
         <h1 class="text-3xl md:text-4xl font-black text-gray-900 mb-3">クイックスタートガイド</h1>
         <p class="text-gray-500">Slackにインストールしたら、まずこれだけ覚えてください。</p>
       </div>

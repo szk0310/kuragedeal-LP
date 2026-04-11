@@ -2,7 +2,7 @@
   <main class="pt-16 min-h-screen bg-gray-50">
     <div class="max-w-2xl mx-auto px-4 sm:px-6 py-20">
       <div class="text-center mb-12">
-        <p class="text-5xl mb-4">🪼</p>
+        <img src="/kurage-icon.svg" alt="クラゲディール" class="w-16 h-16 mx-auto mb-4" />
         <h1 class="text-3xl md:text-4xl font-black text-gray-900 mb-4">無料で始める</h1>
         <p class="text-gray-500">
           まずはお気軽にご連絡ください。<br />
@@ -14,7 +14,7 @@
 
         <!-- Success state -->
         <div v-if="submitted" class="flex flex-col items-center justify-center text-center py-12">
-          <p class="text-6xl mb-4">🪼</p>
+          <img src="/kurage-icon.svg" alt="クラゲディール" class="w-20 h-20 mx-auto mb-4 kurage-float" />
           <h2 class="text-2xl font-black text-gray-900 mb-3">送信完了しました！</h2>
           <p class="text-gray-500 mb-6">1営業日以内にご連絡いたします。</p>
           <a href="/" class="text-kurage-600 font-medium hover:underline">トップに戻る</a>

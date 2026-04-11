@@ -18,8 +18,8 @@
           <!-- Left: copy -->
           <div class="flex-1">
             <!-- Main copy -->
-            <h1 class="text-4xl md:text-6xl font-black leading-tight mb-6">
-              話しかけるだけで、<br />
+            <h1 class="text-4xl md:text-6xl font-black mb-6">
+              <span class="block mb-4">話しかけるだけで、</span>
               <span class="text-cyan-50">ディールが前に進む。</span>
             </h1>
             <p class="text-lg text-kurage-200 mb-10 max-w-2xl leading-relaxed">
@@ -136,7 +136,7 @@
         <div class="text-center mb-12">
           <p class="text-2xl font-bold text-cyan-300 mb-3">AIナーチャリング</p>
           <h2 class="text-3xl md:text-4xl font-black mb-4">
-            AIが、顧客ひとりひとりと<br />
+            <span class="block mb-4">AIが、顧客ひとりひとりと</span>
             <span class="text-cyan-300">1on1で会話する。</span>
           </h2>
           <p class="text-kurage-200 max-w-2xl mx-auto">
@@ -247,7 +247,10 @@
               </ul>
             </div>
             <div>
-              <p class="text-lg font-bold text-cyan-300 mb-4 uppercase tracking-widest">🪼 クラゲディールのAIナーチャリング</p>
+              <p class="text-lg font-bold text-cyan-300 mb-4 uppercase tracking-widest flex items-center justify-center gap-2">
+                <img src="/kurage-icon.svg" alt="" class="w-6 h-6 inline-block" />
+                クラゲディールのAIナーチャリング
+              </p>
               <ul class="space-y-3 text-sm">
                 <li class="flex items-start gap-2"><span class="text-cyan-300 mt-0.5">✓</span> 顧客ごとに個別メッセージをAIが生成</li>
                 <li class="flex items-start gap-2"><span class="text-cyan-300 mt-0.5">✓</span> 返信内容をAIが読んで次のアクションを決定</li>
@@ -414,8 +417,9 @@
                 <tr class="bg-ocean-mist/10 border-b border-gray-200">
                   <th class="text-left px-6 py-4 font-semibold text-gray-600 w-1/3">比較項目</th>
                   <th class="text-center px-6 py-4">
-                    <span class="inline-flex items-center gap-1 font-bold text-kurage-700">
-                      🪼 クラゲディール
+                    <span class="inline-flex items-center gap-1.5 font-bold text-kurage-700">
+                      <img src="/kurage-icon.svg" alt="" class="w-5 h-5" />
+                      クラゲディール
                     </span>
                   </th>
                   <th class="text-center px-6 py-4 font-semibold text-gray-400">
@@ -498,7 +502,7 @@
     ============================================================ -->
     <section class="bg-gradient-to-br from-kurage-900 to-kurage-700 text-white py-20">
       <div class="max-w-3xl mx-auto px-4 sm:px-6 text-center">
-        <p class="text-5xl mb-6">🪼</p>
+        <img src="/kurage-icon.svg" alt="クラゲディール" class="w-20 h-20 mx-auto mb-6 kurage-float" />
         <h2 class="text-3xl md:text-4xl font-black mb-4">
           今日から、Slackで営業管理を始めよう。
         </h2>

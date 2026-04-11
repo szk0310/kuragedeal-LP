@@ -4,7 +4,7 @@
       <div class="flex flex-col md:flex-row justify-between items-start gap-8 mb-8">
         <div>
           <div class="flex items-center gap-2 mb-3">
-            <span class="text-2xl">🪼</span>
+            <img src="/kurage-icon.svg" alt="クラゲディール" class="w-8 h-8" />
             <span class="font-bold text-xl text-white">クラゲディール</span>
           </div>
           <p class="text-sm max-w-xs leading-relaxed">
@@ -34,8 +34,7 @@
       <div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs">
         <p>© 2026 クラゲディール. All rights reserved.</p>
         <p>
-          開発元: 株式会社シロ —
-          <span class="text-kurage-400">Salesforce認定コンサルティングパートナー</span>
+          開発元: shiro Inc.
         </p>
       </div>
     </div>
