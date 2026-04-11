@@ -148,12 +148,26 @@ const form = reactive({
 const submitting = ref(false)
 const submitted = ref(false)
 
+const API_URL = 'https://slacksfa-api-808596335261.asia-northeast1.run.app'
+
 async function submit() {
   submitting.value = true
-  // TODO: SendGrid 連携（APIキー設定後に実装）
-  // 現時点では Google Forms リダイレクトも可
-  await new Promise(r => setTimeout(r, 1000))
-  submitting.value = false
-  submitted.value = true
+  try {
+    const res = await fetch(`${API_URL}/api/contact`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(form),
+    })
+    if (!res.ok) {
+      const data = await res.json()
+      alert(data.error ?? '送信に失敗しました。時間をおいて再度お試しください。')
+      return
+    }
+    submitted.value = true
+  } catch {
+    alert('通信エラーが発生しました。時間をおいて再度お試しください。')
+  } finally {
+    submitting.value = false
+  }
 }
 </script>
