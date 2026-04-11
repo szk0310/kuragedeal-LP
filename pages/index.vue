@@ -20,7 +20,7 @@
             <!-- Main copy -->
             <h1 class="text-4xl md:text-6xl font-black leading-tight mb-6">
               話しかけるだけで、<br />
-              <span class="text-cyan-300">ディールが前に進む。</span>
+              <span class="text-cyan-50">ディールが前に進む。</span>
             </h1>
             <p class="text-lg text-kurage-200 mb-10 max-w-2xl leading-relaxed">
               Slackに書いた一言が、自動で記録・分析・コーチングまでつながる。<br />
@@ -47,11 +47,11 @@
             <div class="bg-white/10 border border-white/20 rounded-2xl p-6 max-w-xl">
               <div class="grid grid-cols-3 gap-4 text-center">
                 <div>
-                  <p class="text-3xl font-black text-cyan-300">¥150,000</p>
+                  <p class="text-3xl font-black text-cyan-50">△¥150,000</p>
                   <p class="text-xs text-kurage-200 mt-1">月間入力作業コスト削減<br/>（5人チーム試算）</p>
                 </div>
                 <div class="border-x border-white/20">
-                  <p class="text-3xl font-black text-cyan-300">¥9,800</p>
+                  <p class="text-3xl font-black text-cyan-50">¥9,800</p>
                   <p class="text-xs text-kurage-200 mt-1">月額利用料<br/>（10人チーム）</p>
                 </div>
                 <div>
@@ -77,16 +77,16 @@
     <!-- ============================================================
          TARGET SEGMENT
     ============================================================ -->
-    <section class="bg-ocean-sand py-16">
+    <section class="bg-ocean-tan py-16">
       <div class="max-w-6xl mx-auto px-4 sm:px-6">
         <div class="bg-white/80 rounded-2xl border border-ocean-tan/30 p-8 md:p-10">
-          <p class="text-sm font-bold text-kurage-600 mb-3">🎯 対象</p>
+          <p class="text-2xl font-bold text-kurage-600 mb-3">🎯 対象</p>
           <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
             1人〜30人の営業チームのためのAI営業ツール
           </h2>
           <p class="text-gray-600 mb-8 max-w-2xl">
             一人社長のフリーランスから、営業チーム10名規模の成長企業まで。<br />
-            「Salesforceは高すぎるし重すぎる。でもExcelとSlackの管理はもう限界」<br />
+            「大手ベンダーのCRMは高すぎるし重すぎる。でもExcelの管理はもう限界」<br />
             ——そんな会社のために作りました。
           </p>
           <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
@@ -106,12 +106,12 @@
     <!-- ============================================================
          FEATURES
     ============================================================ -->
-    <section id="features" class="py-20">
+    <section id="features" class="bg-ocean-mist py-20">
       <div class="max-w-6xl mx-auto px-4 sm:px-6">
         <div class="text-center mb-14">
-          <p class="text-sm font-bold text-kurage-600 mb-3">機能</p>
+          <p class="text-2xl font-bold text-gray-900 mb-3">機能</p>
           <h2 class="text-3xl md:text-4xl font-black text-gray-900 mb-4">4つの特徴</h2>
-          <p class="text-gray-500">新しいアプリは不要。Slackだけで完結します。</p>
+          <p class="text-white/80">新しいアプリは不要。Slackだけで完結します。</p>
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -134,7 +134,7 @@
     <section id="nurturing" class="bg-gradient-to-br from-kurage-900 via-kurage-800 to-kurage-700 py-20 text-white">
       <div class="max-w-6xl mx-auto px-4 sm:px-6">
         <div class="text-center mb-12">
-          <p class="text-sm font-bold text-cyan-300 mb-3">AIナーチャリング</p>
+          <p class="text-2xl font-bold text-cyan-300 mb-3">AIナーチャリング</p>
           <h2 class="text-3xl md:text-4xl font-black mb-4">
             AIが、顧客ひとりひとりと<br />
             <span class="text-cyan-300">1on1で会話する。</span>
@@ -147,7 +147,7 @@
 
         <!-- Slack Connect フロー図解 -->
         <div class="mb-12">
-          <p class="text-center text-sm font-bold text-cyan-300 mb-6 uppercase tracking-widest">
+          <p class="text-center text-xl font-bold text-cyan-300 mb-6 uppercase tracking-widest">
             メールから Slack へ——顧客との距離が縮まる流れ
           </p>
           <div class="flex flex-col md:flex-row items-stretch gap-2">
@@ -238,7 +238,7 @@
         <div class="bg-white/5 border border-white/15 rounded-2xl p-8 mt-10">
           <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
             <div>
-              <p class="text-xs font-bold text-gray-400 mb-4 uppercase tracking-widest">従来のステップメール</p>
+              <p class="text-lg font-bold text-red-400 mb-4 uppercase tracking-widest">従来のステップメール</p>
               <ul class="space-y-3 text-sm text-kurage-200">
                 <li class="flex items-start gap-2"><span class="text-red-400 mt-0.5">✗</span> 全員に同じ内容を送信</li>
                 <li class="flex items-start gap-2"><span class="text-red-400 mt-0.5">✗</span> 返信が来ても自動で次のメッセージが送られるだけ</li>
@@ -247,7 +247,7 @@
               </ul>
             </div>
             <div>
-              <p class="text-xs font-bold text-cyan-300 mb-4 uppercase tracking-widest">🪼 クラゲディールのAIナーチャリング</p>
+              <p class="text-lg font-bold text-cyan-300 mb-4 uppercase tracking-widest">🪼 クラゲディールのAIナーチャリング</p>
               <ul class="space-y-3 text-sm">
                 <li class="flex items-start gap-2"><span class="text-cyan-300 mt-0.5">✓</span> 顧客ごとに個別メッセージをAIが生成</li>
                 <li class="flex items-start gap-2"><span class="text-cyan-300 mt-0.5">✓</span> 返信内容をAIが読んで次のアクションを決定</li>
@@ -263,10 +263,10 @@
     <!-- ============================================================
          BENEFITS（コスト削減）
     ============================================================ -->
-    <section id="benefits" class="bg-ocean-sage/20 py-20">
+    <section id="benefits" class="bg-ocean-sand/60 py-20">
       <div class="max-w-6xl mx-auto px-4 sm:px-6">
         <div class="text-center mb-14">
-          <p class="text-sm font-bold text-kurage-600 mb-3">導入効果</p>
+          <p class="text-2xl font-bold text-kurage-600 mb-3">導入効果</p>
           <h2 class="text-3xl md:text-4xl font-black text-gray-900 mb-4">
             営業コストを、仕組みで下げる
           </h2>
@@ -292,10 +292,10 @@
     <!-- ============================================================
          USE CASES
     ============================================================ -->
-    <section id="usecases" class="py-20">
+    <section id="usecases" class="bg-ocean-mist/80 py-20">
       <div class="max-w-6xl mx-auto px-4 sm:px-6">
         <div class="text-center mb-14">
-          <p class="text-sm font-bold text-kurage-600 mb-3">活用シーン</p>
+          <p class="text-2xl font-bold text-white mb-3">活用シーン</p>
           <h2 class="text-3xl md:text-4xl font-black text-gray-900 mb-4">
             こんな会社に、ぴったりです
           </h2>
@@ -329,7 +329,7 @@
     <section id="pricing" class="bg-ocean-mist/20 py-20">
       <div class="max-w-6xl mx-auto px-4 sm:px-6">
         <div class="text-center mb-14">
-          <p class="text-sm font-bold text-kurage-600 mb-3">料金</p>
+          <p class="text-2xl font-bold text-kurage-600 mb-3">料金</p>
           <h2 class="text-3xl md:text-4xl font-black text-gray-900 mb-4">
             シンプルな料金体系
           </h2>
@@ -398,12 +398,12 @@
     <!-- ============================================================
          COMPARISON
     ============================================================ -->
-    <section id="comparison" class="py-20">
+    <section id="comparison" class="bg-ocean-mist py-20">
       <div class="max-w-6xl mx-auto px-4 sm:px-6">
         <div class="text-center mb-14">
-          <p class="text-sm font-bold text-kurage-600 mb-3">比較</p>
+          <p class="text-2xl font-bold text-white mb-3">比較</p>
           <h2 class="text-3xl md:text-4xl font-black text-gray-900 mb-4">
-            Salesforce + Slackとの違い
+            CRM + Slackとの違い
           </h2>
         </div>
 
@@ -419,7 +419,7 @@
                     </span>
                   </th>
                   <th class="text-center px-6 py-4 font-semibold text-gray-400">
-                    Salesforce + Slack
+                    CRM + Slack
                   </th>
                 </tr>
               </thead>
@@ -449,6 +449,7 @@
     <section id="faq" class="bg-ocean-sand/50 py-20">
       <div class="max-w-3xl mx-auto px-4 sm:px-6">
         <!-- SF Partner trust badge -->
+         <!-- 
         <div class="bg-kurage-50 border border-kurage-100 rounded-2xl p-8 mb-12">
           <div class="flex gap-4 items-start">
             <span class="text-4xl">🏅</span>
@@ -460,13 +461,14 @@
                 数百社のSalesforce導入・運用を支援してきた私たちが、
                 「5〜30人のチームには、もっとシンプルな選択肢があるべきだ」と考えて作りました。<br />
                 Salesforceを知り尽くしたからこそ作れた、<strong>"ちょうどいい" 営業ツール</strong>。
-              </p>
+              </p>  
             </div>
           </div>
         </div>
+        -->
 
         <div class="text-center mb-14">
-          <p class="text-sm font-bold text-kurage-600 mb-3">FAQ</p>
+          <p class="text-2xl font-bold text-kurage-600 mb-3">FAQ</p>
           <h2 class="text-3xl md:text-4xl font-black text-gray-900 mb-4">よくある質問</h2>
         </div>
 
@@ -673,7 +675,7 @@ const comparison = [
   {
     label: '学習コスト',
     us: 'ゼロ（Slackに話すだけ）',
-    them: 'SF研修 + 運用ルール策定が必要',
+    them: '研修 + 運用ルール策定が必要',
   },
   {
     label: '月額（10人チーム）',
@@ -693,17 +695,17 @@ const comparison = [
   {
     label: 'AIコーチング',
     us: '営業特化（MEDDPICC + 状況診断）',
-    them: '汎用AI',
+    them: 'オプション',
   },
   {
     label: '会話センチメント分析',
     us: '自動（入力ゼロで確率変動）',
-    them: 'なし',
+    them: 'オプション',
   },
   {
     label: 'AI返信下書き',
     us: 'あり（Slackで承認→即送信）',
-    them: 'なし',
+    them: 'オプション',
   },
   {
     label: 'AIナーチャリング',
@@ -714,13 +716,8 @@ const comparison = [
 
 const faqs = reactive([
   {
-    q: 'Salesforceのパートナーなのに、なぜ別のツールを作ったの？',
-    a: '50人以上の営業組織にはSalesforceが最適です。私たちは今もSalesforceの導入支援を行っています。ただ、5〜30人のチームにはSalesforceはオーバースペック。導入コスト・運用負荷・ライセンス費が合わない。お客様に「あなたの会社にはSalesforceより良い選択肢があります」と正直に言えること。それがパートナーの責任だと考えています。',
-    open: false,
-  },
-  {
-    q: '将来Salesforceに移行できますか？',
-    a: 'はい。クラゲディールのデータはCSV/Excelでエクスポート可能です。組織が成長してSalesforceが必要になった際には、当社がSF認定パートナーとして移行支援も対応します。「今はクラゲディール、いつかSalesforce」——どちらのフェーズでもお手伝いできます。',
+    q: '将来、別のCRMに移行できますか？',
+    a: 'はい。クラゲディールのデータはCSV/Excelでエクスポート可能です。組織が成長して部門間の権限設定等の機能が必要になった際には、スムースな移行が可能です。「今はクラゲディール、いつかマルチロールなCRM」——弊社はどちらのフェーズでもお手伝いできます。',
     open: false,
   },
   {
