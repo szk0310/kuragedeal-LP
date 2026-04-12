@@ -30,7 +30,7 @@
 useHead({ title: '特定商取引法に基づく表記 | クラゲディール' })
 
 const rows = [
-  { label: '販売業者', value: '株式会社シロ' },
+  { label: '販売業者', value: '株式会社shiro' },
   { label: '代表者', value: '鈴木隆弥' },
   { label: '所在地', value: '〒102-0071 東京都千代田区富士見1-3-10 CF1310 1F' },
   { label: '電話番号', value: '03-6272-4119<br><span class="text-gray-400 text-xs">（受付時間：平日 10:00〜18:00）</span>' },

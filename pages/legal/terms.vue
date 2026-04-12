@@ -6,7 +6,7 @@
         <h1 class="text-2xl font-bold text-gray-900 mb-2">クラゲディール 利用規約</h1>
         <p class="text-sm text-gray-400 mb-8 not-prose">最終更新：2026年4月13日</p>
 
-        <p>本利用規約（以下「本規約」）は、株式会社シロ（以下「当社」）が提供するクラゲディール（Kurage Deal）（以下「本サービス」）の利用条件を定めるものです。ご利用前に必ずお読みください。</p>
+        <p>本利用規約（以下「本規約」）は、株式会社shiro（以下「当社」）が提供するクラゲディール（Kurage Deal）（以下「本サービス」）の利用条件を定めるものです。ご利用前に必ずお読みください。</p>
 
         <h2>第1条（適用）</h2>
         <p>本規約は、お客様と当社との間の本サービスの利用に関する一切の関係に適用されます。本サービスをご利用いただくことで、本規約に同意したものとみなします。</p>
@@ -98,7 +98,7 @@
         <p>本規約は日本法に準拠します。本規約に関する紛争については、東京簡易裁判所を第一審の専属的合意管轄裁判所とします。</p>
 
         <h2>お問い合わせ</h2>
-        <p>株式会社シロ　サポート窓口<br>
+        <p>株式会社shiro　サポート窓口<br>
         メール：<a href="mailto:support@kuragedeal.ai">support@kuragedeal.ai</a></p>
 
         <div class="not-prose mt-12 pt-8 border-t border-gray-100 text-sm text-gray-400 text-center">
