@@ -11,11 +11,11 @@
 
       <!-- Desktop links -->
       <div class="hidden md:flex items-center gap-6 text-sm font-medium text-gray-600">
-        <a href="#features" class="hover:text-kurage-600 transition-colors">機能</a>
-        <a href="#nurturing" class="hover:text-kurage-600 transition-colors">AIナーチャリング</a>
-        <a href="#pricing" class="hover:text-kurage-600 transition-colors">料金</a>
-        <a href="#comparison" class="hover:text-kurage-600 transition-colors">比較</a>
-        <a href="#faq" class="hover:text-kurage-600 transition-colors">FAQ</a>
+        <a href="/#features" class="hover:text-kurage-600 transition-colors">機能</a>
+        <a href="/#nurturing" class="hover:text-kurage-600 transition-colors">AIナーチャリング</a>
+        <a href="/#pricing" class="hover:text-kurage-600 transition-colors">料金</a>
+        <a href="/#comparison" class="hover:text-kurage-600 transition-colors">比較</a>
+        <a href="/#faq" class="hover:text-kurage-600 transition-colors">FAQ</a>
         <a
           href="/contact"
           class="bg-kurage-600 text-white px-4 py-2 rounded-lg hover:bg-kurage-700 transition-colors"
