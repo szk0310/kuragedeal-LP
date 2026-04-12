@@ -2,12 +2,6 @@
   <div class="min-h-screen bg-gray-50 py-16">
     <div class="max-w-3xl mx-auto px-4 sm:px-6">
 
-      <!-- Legal nav -->
-      <nav class="flex gap-2 mb-6 flex-wrap">
-        <NuxtLink to="/legal/tokusho" class="px-3 py-1.5 bg-white border border-gray-200 text-gray-600 text-xs rounded-full hover:border-kurage-400 hover:text-kurage-600 transition-colors">特定商取引法</NuxtLink>
-        <NuxtLink to="/legal/terms" class="px-3 py-1.5 bg-white border border-gray-200 text-gray-600 text-xs rounded-full hover:border-kurage-400 hover:text-kurage-600 transition-colors">利用規約</NuxtLink>
-        <span class="px-3 py-1.5 bg-kurage-600 text-white text-xs font-semibold rounded-full">プライバシーポリシー</span>
-      </nav>
 
       <div class="bg-white rounded-2xl shadow-sm border border-gray-100 p-8 sm:p-12 prose prose-sm max-w-none">
         <h1 class="text-2xl font-bold text-gray-900 mb-2">プライバシーポリシー</h1>
