@@ -17,7 +17,7 @@
         <a href="/#comparison" class="hover:text-kurage-600 transition-colors">比較</a>
         <a href="/#faq" class="hover:text-kurage-600 transition-colors">FAQ</a>
         <a href="/guide" class="hover:text-kurage-600 transition-colors">使い方ガイド</a>
-        <
+        <a
           href="/contact"
           class="bg-kurage-600 text-white px-4 py-2 rounded-lg hover:bg-kurage-700 transition-colors"
           >無料で始める</a
