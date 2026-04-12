@@ -33,6 +33,9 @@
             <ul class="space-y-2">
               <li><a href="/contact" class="hover:text-white transition-colors">お問い合わせ</a></li>
               <li><a href="/guide" class="hover:text-white transition-colors">使い方ガイド</a></li>
+              <li><a href="/legal/terms" class="hover:text-white transition-colors">利用規約</a></li>
+              <li><a href="/legal/privacy" class="hover:text-white transition-colors">プライバシーポリシー</a></li>
+              <li><a href="/legal/tokusho" class="hover:text-white transition-colors">特定商取引法</a></li>
             </ul>
           </div>
         </div>
