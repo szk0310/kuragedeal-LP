@@ -102,16 +102,37 @@
       </div>
     </Transition>
 
-    <!-- Toggle button -->
-    <button
-      class="w-14 h-14 bg-kurage-700 hover:bg-kurage-600 rounded-full shadow-lg flex items-center justify-center transition-colors kurage-float"
-      @click="toggle"
-    >
-      <img v-if="!open" src="/kurage-icon.svg" alt="チャット" class="w-9 h-9" />
-      <svg v-else class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-      </svg>
-    </button>
+    <!-- Toggle button row -->
+    <div class="flex items-center gap-3">
+      <!-- お問い合わせラベル -->
+      <Transition
+        enter-active-class="transition-all duration-200 ease-out"
+        enter-from-class="opacity-0 translate-x-2"
+        enter-to-class="opacity-100 translate-x-0"
+        leave-active-class="transition-all duration-150 ease-in"
+        leave-from-class="opacity-100 translate-x-0"
+        leave-to-class="opacity-0 translate-x-2"
+      >
+        <button
+          v-if="!open"
+          class="bg-kurage-700 hover:bg-kurage-600 text-white text-sm font-medium px-4 py-2.5 rounded-full shadow-lg transition-colors whitespace-nowrap"
+          @click="toggle"
+        >
+          お問い合わせ →
+        </button>
+      </Transition>
+
+      <!-- クラゲアイコンボタン -->
+      <button
+        class="w-14 h-14 bg-kurage-700 hover:bg-kurage-600 rounded-full shadow-lg flex items-center justify-center transition-colors kurage-float"
+        @click="toggle"
+      >
+        <img v-if="!open" src="/kurage-icon.svg" alt="チャット" class="w-9 h-9" />
+        <svg v-else class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+        </svg>
+      </button>
+    </div>
 
   </div>
 </template>

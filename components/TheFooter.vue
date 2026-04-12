@@ -11,18 +11,10 @@
             <img src="/kurage-icon.svg" alt="クラゲディール" class="w-9 h-9" />
             <span class="font-bold text-xl text-white">クラゲディール</span>
           </div>
-          <p class="text-sm leading-relaxed max-w-xs mb-5">
+          <p class="text-sm leading-relaxed max-w-xs">
             Slackだけで完結するAI営業CRM。<br />
             1人〜30人の営業チームに最適。
           </p>
-          <!-- お問い合わせCTA -->
-          <button
-            class="inline-flex items-center gap-1.5 text-sm text-kurage-200 hover:text-white transition-colors group"
-            onclick="document.querySelector('.kurage-float')?.click()"
-          >
-            お問い合わせ
-            <span class="group-hover:translate-x-0.5 transition-transform">→</span>
-          </button>
         </div>
 
         <!-- Links -->
