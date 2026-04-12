@@ -31,7 +31,7 @@
           <div>
             <p class="font-semibold text-white mb-3">会社</p>
             <ul class="space-y-2">
-              <li><a href="/contact" class="hover:text-white transition-colors">お問い合わせ</a></li>
+              <li><span class="cursor-default">お問い合わせ（右下チャットから）</span></li>
               <li><a href="/guide" class="hover:text-white transition-colors">使い方ガイド</a></li>
               <li><a href="/legal/terms" class="hover:text-white transition-colors">利用規約</a></li>
               <li><a href="/legal/privacy" class="hover:text-white transition-colors">プライバシーポリシー</a></li>
