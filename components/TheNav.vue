@@ -16,6 +16,8 @@
         <a href="/#pricing" class="hover:text-kurage-600 transition-colors">料金</a>
         <a href="/#comparison" class="hover:text-kurage-600 transition-colors">比較</a>
         <a href="/#faq" class="hover:text-kurage-600 transition-colors">FAQ</a>
+        <a href="/guide" class="hover:text-kurage-600 transition-colors">使い方ガイド</a>
+        <a href="/contact" class="hover:text-kurage-600 transition-colors">お問い合わせ</a>
         <a
           href="/contact"
           class="bg-kurage-600 text-white px-4 py-2 rounded-lg hover:bg-kurage-700 transition-colors"
