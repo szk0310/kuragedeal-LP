@@ -11,10 +11,18 @@
             <img src="/kurage-icon.svg" alt="クラゲディール" class="w-9 h-9" />
             <span class="font-bold text-xl text-white">クラゲディール</span>
           </div>
-          <p class="text-sm leading-relaxed max-w-xs">
+          <p class="text-sm leading-relaxed max-w-xs mb-5">
             Slackだけで完結するAI営業CRM。<br />
             1人〜30人の営業チームに最適。
           </p>
+          <!-- お問い合わせCTA -->
+          <button
+            class="inline-flex items-center gap-1.5 text-sm text-kurage-200 hover:text-white transition-colors group"
+            onclick="document.querySelector('.kurage-float')?.click()"
+          >
+            お問い合わせ
+            <span class="group-hover:translate-x-0.5 transition-transform">→</span>
+          </button>
         </div>
 
         <!-- Links -->
@@ -22,16 +30,15 @@
           <div>
             <p class="font-semibold text-white mb-3">プロダクト</p>
             <ul class="space-y-2">
-              <li><a href="#features" class="hover:text-white transition-colors">機能</a></li>
-              <li><a href="#pricing" class="hover:text-white transition-colors">料金</a></li>
-              <li><a href="#comparison" class="hover:text-white transition-colors">比較</a></li>
-              <li><a href="#faq" class="hover:text-white transition-colors">よくある質問</a></li>
+              <li><a href="/#features" class="hover:text-white transition-colors">機能</a></li>
+              <li><a href="/#pricing" class="hover:text-white transition-colors">料金</a></li>
+              <li><a href="/#comparison" class="hover:text-white transition-colors">比較</a></li>
+              <li><a href="/#faq" class="hover:text-white transition-colors">よくある質問</a></li>
             </ul>
           </div>
           <div>
             <p class="font-semibold text-white mb-3">会社</p>
             <ul class="space-y-2">
-              <li><span class="cursor-default">お問い合わせ（右下チャットから）</span></li>
               <li><a href="/guide" class="hover:text-white transition-colors">使い方ガイド</a></li>
               <li><a href="/legal/terms" class="hover:text-white transition-colors">利用規約</a></li>
               <li><a href="/legal/privacy" class="hover:text-white transition-colors">プライバシーポリシー</a></li>
@@ -44,8 +51,7 @@
 
       <!-- Bottom row: copyright -->
       <div class="flex flex-col sm:flex-row justify-between items-center gap-3 text-xs text-kurage-200">
-        <p>© 2026 クラゲディール. All rights reserved.</p>
-        <p>開発元: shiro Inc.</p>
+        <p>© 2026 クラゲディール. All rights reserved. ― 開発元: shiro Inc.</p>
       </div>
 
     </div>
