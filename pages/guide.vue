@@ -124,10 +124,6 @@
               <p class="text-sm text-gray-700">一度ログインすると次回からは自動でサインインされます</p>
             </div>
           </div>
-          <a href="https://app.kuragedeal.ai/login" target="_blank"
-            class="inline-flex items-center gap-2 bg-kurage-600 hover:bg-kurage-500 text-white font-bold px-5 py-2.5 rounded-xl text-sm transition-colors">
-            ダッシュボードを開く →
-          </a>
         </div>
       </section>
 
