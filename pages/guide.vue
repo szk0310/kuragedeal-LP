@@ -16,7 +16,7 @@
       <!-- Header -->
       <div class="text-center mb-14">
         <img src="/kurage-icon.svg" alt="クラゲディール" class="w-16 h-16 mx-auto mb-4" />
-        <h1 class="text-3xl md:text-4xl font-black text-gray-900 mb-3">クイックスタートガイド</h1>
+        <h1 class="text-3xl md:text-4xl font-black text-gray-900 mb-3">使い方ガイド</h1>
         <p class="text-gray-500">Slackにインストールしたら、まずこれだけ覚えてください。</p>
       </div>
 
@@ -105,11 +105,26 @@
       <section class="mb-10">
         <h2 class="text-xl font-black text-gray-800 mb-4 flex items-center gap-2">
           <span class="bg-kurage-500 text-white rounded-full w-7 h-7 flex items-center justify-center text-sm font-bold">5</span>
-          Webダッシュボードも使えます
+          Webダッシュボードにログインする
         </h2>
-        <div class="bg-white rounded-2xl border border-gray-200 p-6 shadow-sm">
-          <p class="text-sm text-gray-600 mb-3">Slackでの会話が自動的にCRMに蓄積されます。全体を俯瞰したい時はWebダッシュボードをご利用ください。</p>
-          <a href="https://app.kuragedeal.ai" target="_blank"
+        <div class="bg-white rounded-2xl border border-gray-200 p-6 shadow-sm space-y-4">
+          <p class="text-sm text-gray-600">Slackの会話が自動でCRMに蓄積されます。全体を俯瞰したい時はWebダッシュボードをご利用ください。</p>
+          <!-- ステップ -->
+          <div class="space-y-3">
+            <div class="flex gap-3 items-start">
+              <span class="bg-kurage-100 text-kurage-700 rounded-full w-6 h-6 flex items-center justify-center text-xs font-bold shrink-0 mt-0.5">1</span>
+              <p class="text-sm text-gray-700">Slackで <code class="bg-gray-100 px-1.5 py-0.5 rounded text-xs">/setting</code> を実行すると、ログインキーがメッセージで届きます</p>
+            </div>
+            <div class="flex gap-3 items-start">
+              <span class="bg-kurage-100 text-kurage-700 rounded-full w-6 h-6 flex items-center justify-center text-xs font-bold shrink-0 mt-0.5">2</span>
+              <p class="text-sm text-gray-700">届いたキーをコピーして、ダッシュボードのログイン画面に貼り付けます</p>
+            </div>
+            <div class="flex gap-3 items-start">
+              <span class="bg-kurage-100 text-kurage-700 rounded-full w-6 h-6 flex items-center justify-center text-xs font-bold shrink-0 mt-0.5">3</span>
+              <p class="text-sm text-gray-700">一度ログインすると次回からは自動でサインインされます</p>
+            </div>
+          </div>
+          <a href="https://app.kuragedeal.ai/login" target="_blank"
             class="inline-flex items-center gap-2 bg-kurage-600 hover:bg-kurage-500 text-white font-bold px-5 py-2.5 rounded-xl text-sm transition-colors">
             ダッシュボードを開く →
           </a>
@@ -127,7 +142,7 @@
 </template>
 
 <script setup lang="ts">
-useHead({ title: 'クイックスタートガイド | クラゲディール' })
+useHead({ title: '使い方ガイド | クラゲディール' })
 
 const route = useRoute()
 const installed = computed(() => route.query.installed === '1')
@@ -146,11 +161,11 @@ const examples = [
 ]
 
 const commands = [
-  { cmd: '/crm-list', title: '顧客・ディール一覧', desc: '登録済みの顧客や商談をSlack上で確認できます。' },
+  { cmd: '/list', title: '顧客・ディール一覧', desc: '登録済みの顧客や商談をSlack上で確認できます。' },
   { cmd: '/deal', title: 'ディール詳細・AI進捗評価', desc: '特定の商談のAI分析とネクストアクション提案を表示します。' },
   { cmd: '/coach', title: 'AIコーチング', desc: 'AIが商談の進め方をヒアリング形式でコーチングします。' },
   { cmd: '/usage', title: 'AI利用状況', desc: '今月のAI利用量・残り予算・プラン情報を確認できます。' },
-  { cmd: '/settings', title: '設定', desc: 'ナーチャリングモードの切替・営業ポリシーの設定ができます。' },
+  { cmd: '/setting', title: '設定', desc: 'ナーチャリングモードの切替・営業ポリシーの設定ができます。' },
 ]
 
 const autoFeatures = [
