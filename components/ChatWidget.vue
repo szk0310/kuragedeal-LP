@@ -71,10 +71,29 @@
             </div>
           </div>
 
-          <!-- Escalated state -->
-          <div v-if="escalated" class="bg-orange-50 border border-orange-200 rounded-xl p-3 text-xs text-orange-700 text-center">
-            担当者に通知しました。1営業日以内にご連絡します。<br />
-            <a href="/contact" class="underline font-semibold mt-1 inline-block">お問い合わせフォームはこちら →</a>
+          <!-- Escalated state: メール収集フォーム -->
+          <div v-if="escalated" class="bg-orange-50 border border-orange-200 rounded-xl p-3 text-xs text-orange-700">
+            <template v-if="!emailSubmitted">
+              <p class="text-center mb-2">担当者より折り返しご連絡します。<br />メールアドレスを教えていただけますか？</p>
+              <form class="flex gap-2" @submit.prevent="submitEmail">
+                <input
+                  v-model="emailInput"
+                  type="email"
+                  placeholder="your@email.com"
+                  class="flex-1 text-xs border border-orange-300 rounded-lg px-2 py-1.5 focus:outline-none focus:ring-1 focus:ring-orange-400 bg-white text-gray-800"
+                />
+                <button
+                  type="submit"
+                  :disabled="!emailInput.trim() || emailSending"
+                  class="bg-orange-500 hover:bg-orange-400 disabled:bg-orange-300 text-white text-xs font-semibold px-3 py-1.5 rounded-lg transition-colors whitespace-nowrap"
+                >
+                  送信
+                </button>
+              </form>
+            </template>
+            <template v-else>
+              <p class="text-center">ありがとうございます！<br />担当者より <span class="font-semibold">{{ emailInput }}</span> 宛にご連絡します🪼</p>
+            </template>
           </div>
         </div>
 
@@ -139,6 +158,9 @@ const open = ref(false)
 const input = ref('')
 const loading = ref(false)
 const escalated = ref(false)
+const emailInput = ref('')
+const emailSubmitted = ref(false)
+const emailSending = ref(false)
 const messagesEl = ref<HTMLElement | null>(null)
 
 const messages = ref<Message[]>([
@@ -180,6 +202,27 @@ async function send() {
     loading.value = false
     await nextTick()
     scrollToBottom()
+  }
+}
+
+async function submitEmail() {
+  const email = emailInput.value.trim()
+  if (!email || emailSending.value) return
+  emailSending.value = true
+  try {
+    await fetch(`${API_URL}/api/chat/contact`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        email,
+        messages: messages.value.map(m => ({ role: m.role, content: m.content })),
+      }),
+    })
+  } catch {
+    // 通知失敗しても UI は完了扱い
+  } finally {
+    emailSending.value = false
+    emailSubmitted.value = true
   }
 }
 
