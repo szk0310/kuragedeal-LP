@@ -102,16 +102,27 @@
       </div>
     </Transition>
 
-    <!-- Toggle button -->
-    <button
-      class="w-14 h-14 bg-kurage-700 hover:bg-kurage-600 rounded-full shadow-lg flex items-center justify-center transition-colors kurage-float"
-      @click="toggle"
-    >
-      <img v-if="!open" src="/kurage-icon.svg" alt="チャット" class="w-9 h-9" />
-      <svg v-else class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-      </svg>
-    </button>
+    <!-- Toggle button row -->
+    <div class="flex items-center gap-3">
+      <!-- お問い合わせラベル（クリック不可） -->
+      <span
+        v-if="!open"
+        class="bg-kurage-700 text-white text-sm font-medium px-4 py-2.5 rounded-full shadow-lg whitespace-nowrap"
+      >
+        お問い合わせ →
+      </span>
+
+      <!-- クラゲアイコンボタン -->
+      <button
+        class="w-14 h-14 bg-kurage-700 hover:bg-kurage-600 rounded-full shadow-lg flex items-center justify-center transition-colors kurage-float"
+        @click="toggle"
+      >
+        <img v-if="!open" src="/kurage-icon.svg" alt="チャット" class="w-9 h-9" />
+        <svg v-else class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+        </svg>
+      </button>
+    </div>
 
   </div>
 </template>
