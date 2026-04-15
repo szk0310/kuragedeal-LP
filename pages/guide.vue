@@ -129,8 +129,7 @@
 
       <!-- Footer CTA -->
       <div class="bg-kurage-50 border border-kurage-100 rounded-2xl p-6 text-center">
-        <p class="text-sm text-gray-600 mb-1">困ったことがあればお気軽に</p>
-        <a href="/contact" class="text-kurage-600 font-semibold hover:underline text-sm">サポートに問い合わせる →</a>
+        <p class="text-sm text-gray-600">困ったことがあればお気軽に画面右下のクラゲくんにお問合せください</p>
       </div>
 
     </div>
