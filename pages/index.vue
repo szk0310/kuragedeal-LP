@@ -22,7 +22,7 @@
               <span class="block mb-4">話しかけるだけで、</span>
               <span class="text-cyan-50">ディールが前に進む。</span>
             </h1>
-            <p class="text-lg text-kurage-200 mb-10 max-w-2xl leading-relaxed">
+            <p class="text-lg text-kurage-100 mb-10 max-w-2xl leading-relaxed">
               Slackに書いた一言が、自動で記録・分析・コーチングまでつながる。<br />
               1人〜30人の営業チームに最適。導入初日から全員が使えます。
             </p>
@@ -30,7 +30,7 @@
             <!-- CTAs -->
             <div class="flex flex-col sm:flex-row gap-4 mb-12">
               <a
-                href="/contact"
+                :href="`${API_URL}/slack/install`"
                 class="inline-flex items-center justify-center gap-2 bg-orange-500 hover:bg-orange-400 text-white font-bold px-8 py-4 rounded-xl text-lg transition-colors shadow-lg"
               >
                 無料で始める →
@@ -77,13 +77,14 @@
     <!-- ============================================================
          TARGET SEGMENT
     ============================================================ -->
-    <section class="bg-ocean-tan py-16">
+    <section class="bg-ocean-steel/75  py-16">
       <div class="max-w-6xl mx-auto px-4 sm:px-6">
-        <div class="bg-white/80 rounded-2xl border border-ocean-tan/30 p-8 md:p-10">
           <p class="text-2xl font-bold text-kurage-600 mb-3">🎯 対象</p>
           <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
             1人〜30人の営業チームのためのAI営業ツール
           </h2>
+        <div class="bg-white/80 rounded-2xl border border-ocean-tan/30 p-8 md:p-10">
+        
           <p class="text-gray-600 mb-8 max-w-2xl">
             一人社長のフリーランスから、営業チーム10名規模の成長企業まで。<br />
             「大手ベンダーのCRMは高すぎるし重すぎる。でもExcelの管理はもう限界」<br />
@@ -93,7 +94,7 @@
             <div
               v-for="p in personas"
               :key="p.icon"
-              class="bg-ocean-sand/60 rounded-xl p-4 text-sm text-gray-700"
+              class="bg-ocean-mist/50 rounded-xl p-4 text-sm text-gray-700"
             >
               <p class="text-2xl mb-2">{{ p.icon }}</p>
               <p>{{ p.text }}</p>
@@ -106,12 +107,12 @@
     <!-- ============================================================
          FEATURES
     ============================================================ -->
-    <section id="features" class="bg-ocean-mist py-20">
+    <section id="features" class="bg-ocean-steel py-20">
       <div class="max-w-6xl mx-auto px-4 sm:px-6">
         <div class="text-center mb-14">
-          <p class="text-2xl font-bold text-gray-900 mb-3">機能</p>
-          <h2 class="text-3xl md:text-4xl font-black text-gray-900 mb-4">4つの特徴</h2>
-          <p class="text-white/80">新しいアプリは不要。Slackだけで完結します。</p>
+          <p class="text-2xl font-bold text-kurage-200 mb-3">機能</p>
+          <h2 class="text-3xl md:text-4xl font-black text-kurage-100 mb-4">4つの特徴</h2>
+          <p class="text-kurage-100 ">新しいアプリは不要。Slackだけで完結します。</p>
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -266,7 +267,7 @@
     <!-- ============================================================
          BENEFITS（コスト削減）
     ============================================================ -->
-    <section id="benefits" class="bg-ocean-sand/60 py-20">
+    <section id="benefits" class="bg-ocean-steel/75  py-20">
       <div class="max-w-6xl mx-auto px-4 sm:px-6">
         <div class="text-center mb-14">
           <p class="text-2xl font-bold text-kurage-600 mb-3">導入効果</p>
@@ -295,7 +296,7 @@
     <!-- ============================================================
          USE CASES
     ============================================================ -->
-    <section id="usecases" class="bg-ocean-mist/80 py-20">
+    <section id="usecases" class="bg-ocean-steel py-20">
       <div class="max-w-6xl mx-auto px-4 sm:px-6">
         <div class="text-center mb-14">
           <p class="text-2xl font-bold text-white mb-3">活用シーン</p>
@@ -329,7 +330,7 @@
     <!-- ============================================================
          PRICING
     ============================================================ -->
-    <section id="pricing" class="bg-ocean-mist/20 py-20">
+    <section id="pricing" class="bg-ocean-deep py-20">
       <div class="max-w-6xl mx-auto px-4 sm:px-6">
         <div class="text-center mb-14">
           <p class="text-2xl font-bold text-kurage-600 mb-3">料金</p>
@@ -401,7 +402,7 @@
     <!-- ============================================================
          COMPARISON
     ============================================================ -->
-    <section id="comparison" class="bg-ocean-mist py-20">
+    <section id="comparison" class="bg-ocean-tan/80 py-20">
       <div class="max-w-6xl mx-auto px-4 sm:px-6">
         <div class="text-center mb-14">
           <p class="text-2xl font-bold text-white mb-3">比較</p>
@@ -450,7 +451,7 @@
     <!-- ============================================================
          FAQ
     ============================================================ -->
-    <section id="faq" class="bg-ocean-sand/50 py-20">
+    <section id="faq" class="bg-ocean-sand py-20">
       <div class="max-w-3xl mx-auto px-4 sm:px-6">
 
         <!-- Trust badge -->
@@ -509,7 +510,7 @@
           導入初日から全員が使えます。セットアップは最短30分。
         </p>
         <a
-          href="/contact"
+          :href="`${API_URL}/slack/install`"
           class="inline-flex items-center gap-2 bg-orange-500 hover:bg-orange-400 text-white font-bold px-10 py-5 rounded-xl text-xl transition-colors shadow-lg"
         >
           無料で始める →
