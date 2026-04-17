@@ -77,15 +77,18 @@
     <!-- ============================================================
          TARGET SEGMENT
     ============================================================ -->
-    <section class="bg-ocean-steel/75  py-16">
-      <div class="max-w-6xl mx-auto px-4 sm:px-6">
-          <p class="text-2xl font-bold text-kurage-600 mb-3">🎯 対象</p>
-          <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
+    <section class="bg-ocean-steel/75 py-16">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6">
+        <div class="text-center mb-14">
+      <p class="text-2xl font-bold text-kurage-900 mb-3　">対象</p>
+          <h2 class="text-2xl md:text-3xl font-bold text-gray-800  mb-4">
             1人〜30人の営業チームのためのAI営業ツール
           </h2>
-        <div class="bg-white/80 rounded-2xl border border-ocean-tan/30 p-8 md:p-10">
-        
-          <p class="text-gray-600 mb-8 max-w-2xl">
+          </div>
+      <div class="max-w-6xl mx-auto px-4 sm:px-6">
+          
+        <div class="bg-white/80 rounded-2xl border border-ocean-tan/30 p-8 md:p-10 text-center">
+          <p class="text-center text-gray-600 mb-8 max-w-2xl mx-auto">
             一人社長のフリーランスから、営業チーム10名規模の成長企業まで。<br />
             「大手ベンダーのCRMは高すぎるし重すぎる。でもExcelの管理はもう限界」<br />
             ——そんな会社のために作りました。
@@ -102,6 +105,7 @@
           </div>
         </div>
       </div>
+      </div>
     </section>
 
     <!-- ============================================================
@@ -110,9 +114,9 @@
     <section id="features" class="bg-ocean-steel py-20">
       <div class="max-w-6xl mx-auto px-4 sm:px-6">
         <div class="text-center mb-14">
-          <p class="text-2xl font-bold text-kurage-200 mb-3">機能</p>
-          <h2 class="text-3xl md:text-4xl font-black text-kurage-100 mb-4">4つの特徴</h2>
-          <p class="text-kurage-100 ">新しいアプリは不要。Slackだけで完結します。</p>
+          <p class="text-2xl font-bold  text-cyan-100 mb-3">機能</p>
+          <h2 class="text-3xl md:text-4xl font-black  text-gray-100 mb-4">4つの特徴</h2>
+          <p class=" text-cyan-100 ">新しいアプリは不要。Slackだけで完結します。</p>
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -135,21 +139,20 @@
     <section id="nurturing" class="bg-gradient-to-br from-kurage-900 via-kurage-800 to-kurage-700 py-20 text-white">
       <div class="max-w-6xl mx-auto px-4 sm:px-6">
         <div class="text-center mb-12">
-          <p class="text-2xl font-bold text-cyan-300 mb-3">AIナーチャリング</p>
+          <p class="text-2xl font-bold text-cyan-100 mb-3">AIナーチャリング</p>
           <h2 class="text-3xl md:text-4xl font-black mb-4">
-            <span class="block mb-4">AIが、顧客ひとりひとりと</span>
-            <span class="text-cyan-300">1on1で会話する。</span>
+            <span class="block text-cyan-0 mb-4">返信が来たら、AIが次の一手を考える。</span>
           </h2>
-          <p class="text-kurage-200 max-w-2xl mx-auto">
-            「全員に同じメールを送る」ステップメールとは、まったく違います。<br />
-            Slackを主戦場に、AIが各顧客と個別にコミュニケーションを続けます。
+          <p class="text-kurage-100 max-w-2xl mx-auto">
+            手動でメールを書く時代は終わりました。<br />
+            顧客からの返信をAIが読んで、次に送るべき文章を自動生成。<br />承認ボタン1つで送信。すべてのやりとりが自動でディールに記録されます。
           </p>
         </div>
 
-        <!-- Slack Connect フロー図解 -->
+        <!-- AIナーチャリング フロー図解 -->
         <div class="mb-12">
-          <p class="text-center text-xl font-bold text-cyan-300 mb-6 uppercase tracking-widest">
-            メールから Slack へ——顧客との距離が縮まる流れ
+          <p class="text-center text-xl font-bold text-cyan-100 mb-9 uppercase tracking-widest">
+            顧客から返信→AIが下書き→Slackで承認→送信
           </p>
           <div class="flex flex-col md:flex-row items-stretch gap-2">
 
@@ -157,8 +160,8 @@
             <div class="flex-1 bg-white/10 border border-white/20 rounded-xl px-3 py-4 text-center">
               <div class="w-7 h-7 rounded-full bg-cyan-400/20 border border-cyan-400/40 text-cyan-300 text-xs font-bold flex items-center justify-center mx-auto mb-2">1</div>
               <p class="text-2xl mb-2">📧</p>
-              <p class="font-bold text-xs mb-1">AIが個別メール送信</p>
-              <p class="text-kurage-300 text-xs leading-relaxed">顧客の状況を読んだパーソナライズドメール</p>
+              <p class="font-bold text-xs mb-1">顧客からメール/問い合わせ</p>
+              <p class="text-kurage-300 text-xs leading-relaxed">フォーム送信・返信・新規連絡を自動検知</p>
             </div>
 
             <div class="hidden md:flex items-center text-white/30 text-xl px-0.5">→</div>
@@ -166,30 +169,30 @@
             <!-- Step 2 -->
             <div class="flex-1 bg-white/10 border border-white/20 rounded-xl px-3 py-4 text-center">
               <div class="w-7 h-7 rounded-full bg-cyan-400/20 border border-cyan-400/40 text-cyan-300 text-xs font-bold flex items-center justify-center mx-auto mb-2">2</div>
-              <p class="text-2xl mb-2">🔗</p>
-              <p class="font-bold text-xs mb-1">Slack招待リンクを同封</p>
-              <p class="text-kurage-300 text-xs leading-relaxed">「専用チャンネルでより詳しくお話できます」</p>
+              <p class="text-2xl mb-2">🧠</p>
+              <p class="font-bold text-xs mb-1">AIが内容を分析・感情判定</p>
+              <p class="text-kurage-300 text-xs leading-relaxed">前向き／要検討／断り気配をAIが判断</p>
             </div>
 
             <div class="hidden md:flex items-center text-white/30 text-xl px-0.5">→</div>
 
-            <!-- Step 3: ハイライト -->
-            <div class="flex-1 bg-cyan-400/15 border-2 border-cyan-400/50 rounded-xl px-3 py-4 text-center relative">
-              <div class="absolute -top-3 left-1/2 -translate-x-1/2 bg-cyan-400 text-kurage-900 text-xs font-black px-3 py-0.5 rounded-full whitespace-nowrap">確率 UP ⬆</div>
-              <div class="w-7 h-7 rounded-full bg-cyan-400/30 border border-cyan-400/60 text-cyan-300 text-xs font-bold flex items-center justify-center mx-auto mb-2 mt-1">3</div>
-              <p class="text-2xl mb-2">💬</p>
-              <p class="font-bold text-xs mb-1 text-cyan-200">顧客がチャンネル参加</p>
-              <p class="text-kurage-300 text-xs leading-relaxed">参加した時点でエンゲージメント確率が大きく上昇</p>
-            </div>
-
-            <div class="hidden md:flex items-center text-white/30 text-xl px-0.5">→</div>
-
-            <!-- Step 4 -->
+            <!-- Step 3 -->
             <div class="flex-1 bg-white/10 border border-white/20 rounded-xl px-3 py-4 text-center">
-              <div class="w-7 h-7 rounded-full bg-cyan-400/20 border border-cyan-400/40 text-cyan-300 text-xs font-bold flex items-center justify-center mx-auto mb-2">4</div>
-              <p class="text-2xl mb-2">🤖</p>
-              <p class="font-bold text-xs mb-1">AIがSlackで会話継続</p>
-              <p class="text-kurage-300 text-xs leading-relaxed">気軽なSlackでAIが商談を前に進める</p>
+              <div class="w-7 h-7 rounded-full bg-cyan-400/20 border border-cyan-400/40 text-cyan-300 text-xs font-bold flex items-center justify-center mx-auto mb-2">3</div>
+              <p class="text-2xl mb-2">🔔</p>
+              <p class="font-bold text-xs mb-1">Slackにアラート通知</p>
+              <p class="text-kurage-300 text-xs leading-relaxed">「前向きな反応です」「温度が下がっています」</p>
+            </div>
+
+            <div class="hidden md:flex items-center text-white/30 text-xl px-0.5">→</div>
+
+            <!-- Step 4: ハイライト -->
+            <div class="flex-1 bg-cyan-400/15 border-2 border-cyan-400/50 rounded-xl px-3 py-4 text-center relative">
+              <div class="absolute -top-3 left-1/2 -translate-x-1/2 bg-cyan-400 text-kurage-900 text-xs font-black px-3 py-0.5 rounded-full whitespace-nowrap">ボタン1つ ✅</div>
+              <div class="w-7 h-7 rounded-full bg-cyan-400/30 border border-cyan-400/60 text-cyan-300 text-xs font-bold flex items-center justify-center mx-auto mb-2 mt-1">4</div>
+              <p class="text-2xl mb-2">✍️</p>
+              <p class="font-bold text-xs mb-1 text-cyan-200">AI返信下書き→承認→即送信</p>
+              <p class="text-kurage-300 text-xs leading-relaxed">内容を確認して承認するだけ。修正も可能</p>
             </div>
 
             <div class="hidden md:flex items-center text-white/30 text-xl px-0.5">→</div>
@@ -197,9 +200,9 @@
             <!-- Step 5 -->
             <div class="flex-1 bg-white/10 border border-white/20 rounded-xl px-3 py-4 text-center">
               <div class="w-7 h-7 rounded-full bg-cyan-400/20 border border-cyan-400/40 text-cyan-300 text-xs font-bold flex items-center justify-center mx-auto mb-2">5</div>
-              <p class="text-2xl mb-2">🙋</p>
-              <p class="font-bold text-xs mb-1">人間がいつでも介入</p>
-              <p class="text-kurage-300 text-xs leading-relaxed">同じチャンネルにいるからタイミングよく引き継げる</p>
+              <p class="text-2xl mb-2">📊</p>
+              <p class="font-bold text-xs mb-1">自動記録・確率更新</p>
+              <p class="text-kurage-300 text-xs leading-relaxed">やりとりがすべてディールに記録。受注確率が自動で動く</p>
             </div>
 
           </div>
@@ -232,7 +235,7 @@
 
         <!-- メール補足 -->
         <p class="text-center text-kurage-300 text-sm">
-          ※ Slackチャンネル参加前の初回アプローチはメールで行います。メールのやり取りもAIが対応——返信内容を読んで次のメールを自動生成します。
+          ※ notify_only（通知のみ）とdraft_reply（AI下書き生成）の2モードから選択できます。いつでも設定変更可能。
         </p>
 
         <!-- vs ステップメール比較 -->
@@ -248,7 +251,7 @@
               </ul>
             </div>
             <div>
-              <p class="text-lg font-bold text-cyan-300 mb-4 uppercase tracking-widest flex items-center justify-center gap-2">
+              <p class="text-lg font-bold text-cyan-300 mb-4 uppercase tracking-widest flex items-center gap-2">
                 <img src="/kurage-icon.svg" alt="" class="w-6 h-6 inline-block" />
                 クラゲディールのAIナーチャリング
               </p>
@@ -270,8 +273,8 @@
     <section id="benefits" class="bg-ocean-steel/75  py-20">
       <div class="max-w-6xl mx-auto px-4 sm:px-6">
         <div class="text-center mb-14">
-          <p class="text-2xl font-bold text-kurage-600 mb-3">導入効果</p>
-          <h2 class="text-3xl md:text-4xl font-black text-gray-900 mb-4">
+          <p class="text-2xl font-bold text-kurage-800 mb-3">導入効果</p>
+          <h2 class="text-3xl md:text-4xl font-black text-cyan-900  mb-4">
             営業コストを、仕組みで下げる
           </h2>
         </div>
@@ -299,8 +302,8 @@
     <section id="usecases" class="bg-ocean-steel py-20">
       <div class="max-w-6xl mx-auto px-4 sm:px-6">
         <div class="text-center mb-14">
-          <p class="text-2xl font-bold text-white mb-3">活用シーン</p>
-          <h2 class="text-3xl md:text-4xl font-black text-gray-900 mb-4">
+          <p class="text-2xl font-bold text-cyan-100 mb-3">活用シーン</p>
+          <h2 class="text-3xl md:text-4xl font-black text-gray-100 mb-4">
             こんな会社に、ぴったりです
           </h2>
         </div>
@@ -333,8 +336,8 @@
     <section id="pricing" class="bg-ocean-deep py-20">
       <div class="max-w-6xl mx-auto px-4 sm:px-6">
         <div class="text-center mb-14">
-          <p class="text-2xl font-bold text-kurage-600 mb-3">料金</p>
-          <h2 class="text-3xl md:text-4xl font-black text-gray-900 mb-4">
+          <p class="text-2xl font-bold text-cyan-100 mb-3">料金</p>
+          <h2 class="text-3xl md:text-4xl font-black text-kurage-100 mb-4">
             シンプルな料金体系
           </h2>
           <p class="text-gray-500">ユーザー数課金なし。チーム全員で使えます。</p>
@@ -402,11 +405,11 @@
     <!-- ============================================================
          COMPARISON
     ============================================================ -->
-    <section id="comparison" class="bg-ocean-tan/80 py-20">
+    <section id="comparison" class="bg-ocean-sand py-20">
       <div class="max-w-6xl mx-auto px-4 sm:px-6">
         <div class="text-center mb-14">
-          <p class="text-2xl font-bold text-white mb-3">比較</p>
-          <h2 class="text-3xl md:text-4xl font-black text-gray-900 mb-4">
+          <p class="text-2xl font-bold text-gray-600 mb-3">比較</p>
+          <h2 class="text-3xl md:text-4xl font-black text-gray-800 mb-4">
             CRM + Slackとの違い
           </h2>
         </div>
@@ -451,29 +454,30 @@
     <!-- ============================================================
          FAQ
     ============================================================ -->
-    <section id="faq" class="bg-ocean-sand py-20">
+    <section id="faq" class="bg-ocean-tan/80 py-20">
       <div class="max-w-3xl mx-auto px-4 sm:px-6">
 
         <!-- Trust badge -->
+         <!--
         <div class="bg-kurage-50 border border-kurage-100 rounded-2xl p-8 mb-12">
           <div class="flex gap-4 items-start">
             <span class="text-4xl">🏅</span>
             <div>
               <h3 class="text-lg font-bold text-gray-900 mb-2">
-                営業CRM導入・運用の専門チームが開発
+                Salesforce 認定パートナーが、自分たちのために作ったツール
               </h3>
               <p class="text-gray-600 leading-relaxed text-sm">
-                数百社の営業組織の課題解決を支援してきた私たちが、
-                「5〜30人のチームには、もっとシンプルな選択肢があるべきだ」と考えて作りました。<br />
-                現場の営業を知り尽くしたからこそ作れた、<strong>"ちょうどいい" 営業ツール</strong>。
+                Salesforce 認定コンサルティングパートナーとして CRM 支援をするなかで気づきました。<br />
+                「5〜30人のチームには、これは重すぎる」と。<br />
+                だから私たち自身が毎日使えるものを、自分たちで作りました。
               </p>
             </div>
           </div>
-        </div>
+        </div>-->
 
         <div class="text-center mb-14">
-          <p class="text-2xl font-bold text-kurage-600 mb-3">FAQ</p>
-          <h2 class="text-3xl md:text-4xl font-black text-gray-900 mb-4">よくある質問</h2>
+          <p class="text-2xl font-bold text-ocean-deep mb-3">FAQ</p>
+          <h2 class="text-3xl md:text-4xl font-black text-gray-700 mb-4">よくある質問</h2>
         </div>
 
         <div class="space-y-4">
@@ -715,9 +719,9 @@ const comparison = [
     them: 'オプション',
   },
   {
-    label: 'AIナーチャリング',
-    us: '顧客ごとに個別生成・返信を読んで継続',
-    them: 'なし（ステップメールのみ）',
+    label: 'AI返信アシスト',
+    us: '返信をAIが読んで下書き生成→Slackで承認→即送信',
+    them: 'なし（手動入力のみ）',
   },
 ]
 

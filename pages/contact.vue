@@ -126,7 +126,7 @@
         <p class="text-sm text-gray-600 mb-1">
           <strong>開発元: 株式会社シロ</strong>
         </p>
-        <p class="text-sm text-kurage-600">AI営業CRMの専門チームが開発・運営</p>
+        <p class="text-sm text-kurage-600">Salesforce 認定コンサルティングパートナー</p>
       </div>
     </div>
   </main>
