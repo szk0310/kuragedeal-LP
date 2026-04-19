@@ -3,11 +3,23 @@
     <div class="max-w-2xl mx-auto px-4 sm:px-6 py-20">
       <div class="text-center mb-12">
         <img src="/kurage-icon.svg" alt="クラゲディール" class="w-16 h-16 mx-auto mb-4" />
-        <h1 class="text-3xl md:text-4xl font-black text-gray-900 mb-4">無料で始める</h1>
-        <p class="text-gray-500">
-          まずはお気軽にご連絡ください。<br />
-          担当者より1営業日以内にご連絡いたします。
-        </p>
+        <h1 class="text-3xl md:text-4xl font-black text-gray-900 mb-6">無料で始める</h1>
+
+        <!-- Flow explanation -->
+        <ol class="inline-flex flex-col gap-2 text-left text-sm text-gray-600 mb-2">
+          <li class="flex items-start gap-3">
+            <span class="flex-shrink-0 w-6 h-6 rounded-full bg-kurage-600 text-white text-xs font-bold flex items-center justify-center mt-0.5">1</span>
+            <span>フォームに情報を入力して送信</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="flex-shrink-0 w-6 h-6 rounded-full bg-kurage-600 text-white text-xs font-bold flex items-center justify-center mt-0.5">2</span>
+            <span>インストールリンクがメールで自動送信されます</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="flex-shrink-0 w-6 h-6 rounded-full bg-kurage-600 text-white text-xs font-bold flex items-center justify-center mt-0.5">3</span>
+            <span>遷移先からSlackにインストールして、すぐに使えます</span>
+          </li>
+        </ol>
       </div>
 
       <div class="bg-white rounded-2xl border border-gray-200 p-8 shadow-sm">
@@ -16,7 +28,7 @@
         <div v-if="submitted" class="flex flex-col items-center justify-center text-center py-12">
           <img src="/kurage-icon.svg" alt="クラゲディール" class="w-20 h-20 mx-auto mb-4 kurage-float" />
           <h2 class="text-2xl font-black text-gray-900 mb-3">送信完了しました！</h2>
-          <p class="text-gray-500 mb-6">1営業日以内にご連絡いたします。</p>
+          <p class="text-gray-500 mb-6">インストールリンクをメールでお送りしました。ご確認ください。</p>
           <a href="/" class="text-kurage-600 font-medium hover:underline">トップに戻る</a>
         </div>
 
@@ -133,7 +145,7 @@
 </template>
 
 <script setup lang="ts">
-useHead({ title: 'お問い合わせ | クラゲディール' })
+useHead({ title: '無料で始める | クラゲディール' })
 
 const form = reactive({
   company: '',

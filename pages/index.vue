@@ -665,7 +665,7 @@ const pricing = [
     price: '¥29,800',
     featured: false,
     cta: 'お問い合わせ',
-    checkoutUrl: '/contact',
+    checkoutUrl: '/free',
     features: [
       { ok: true, label: 'ユーザー 無制限' },
       { ok: true, label: 'AI利用 無制限' },
