@@ -80,7 +80,7 @@
     <section class="bg-ocean-steel/75 py-16">
             <div class="max-w-6xl mx-auto px-4 sm:px-6">
         <div class="text-center mb-14">
-      <p class="text-2xl font-bold text-kurage-900 mb-3　">対象</p>
+      <p class="text-2xl font-bold text-gray-700 mb-3　">対象</p>
           <h2 class="text-2xl md:text-3xl font-bold text-gray-800  mb-4">
             1人〜30人の営業チームのためのAI営業ツール
           </h2>
@@ -337,7 +337,7 @@
       <div class="max-w-6xl mx-auto px-4 sm:px-6">
         <div class="text-center mb-14">
           <p class="text-2xl font-bold text-cyan-100 mb-3">料金</p>
-          <h2 class="text-3xl md:text-4xl font-black text-kurage-100 mb-4">
+          <h2 class="text-3xl md:text-4xl font-black text-kurage-50 mb-4">
             シンプルな料金体系
           </h2>
           <p class="text-gray-500">ユーザー数課金なし。チーム全員で使えます。</p>
@@ -650,7 +650,7 @@ const pricing = [
     price: '¥9,800',
     featured: true,
     cta: '今すぐ申し込む',
-    checkoutUrl: `${API_URL}/stripe/checkout?plan=standard`,
+    checkoutUrl: `${API_URL}/slack/install`,
     features: [
       { ok: true, label: 'ユーザー 10名まで' },
       { ok: true, label: 'AI利用 月5,000回' },
@@ -665,7 +665,7 @@ const pricing = [
     price: '¥29,800',
     featured: false,
     cta: 'お問い合わせ',
-    checkoutUrl: `${API_URL}/stripe/checkout?plan=premium`,
+    checkoutUrl: '/contact',
     features: [
       { ok: true, label: 'ユーザー 無制限' },
       { ok: true, label: 'AI利用 無制限' },
