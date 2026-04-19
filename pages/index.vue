@@ -47,15 +47,17 @@
             <div class="bg-white/10 border border-white/20 rounded-2xl p-4 sm:p-6 max-w-xl">
               <div class="grid grid-cols-3 gap-2 sm:gap-4 text-center">
                 <div>
-                  <p class="text-lg sm:text-2xl md:text-3xl font-black text-cyan-50 leading-tight">△¥150,000</p>
-                  <p class="text-xs text-kurage-200 mt-1">月間入力作業コスト削減<br/>（5人チーム試算）</p>
+                  <p class="text-xl sm:text-2xl md:text-3xl font-black text-cyan-50 leading-tight">
+                    <span class="hidden sm:inline">△</span>¥150,000
+                  </p>
+                  <p class="text-xs sm:text-xs text-kurage-200 mt-1">月間入力作業コスト削減<br/>（5人チーム試算）</p>
                 </div>
                 <div class="border-x border-white/20">
-                  <p class="text-lg sm:text-2xl md:text-3xl font-black text-cyan-50 leading-tight">¥9,800</p>
+                  <p class="text-xl sm:text-2xl md:text-3xl font-black text-cyan-50 leading-tight">¥9,800</p>
                   <p class="text-xs text-kurage-200 mt-1">月額利用料<br/>（10人チーム）</p>
                 </div>
                 <div>
-                  <p class="text-lg sm:text-2xl md:text-3xl font-black text-orange-400 leading-tight">15x</p>
+                  <p class="text-xl sm:text-2xl md:text-3xl font-black text-orange-400 leading-tight">15x</p>
                   <p class="text-xs text-kurage-200 mt-1">初月からの<br/>ROI</p>
                 </div>
               </div>
