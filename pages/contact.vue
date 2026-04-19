@@ -3,7 +3,7 @@
     <div class="max-w-2xl mx-auto px-4 sm:px-6 py-20">
       <div class="text-center mb-12">
         <img src="/kurage-icon.svg" alt="クラゲディール" class="w-16 h-16 mx-auto mb-4" />
-        <h1 class="text-3xl md:text-4xl font-black text-gray-900 mb-4">無料で始める</h1>
+        <h1 class="text-3xl md:text-4xl font-black text-gray-900 mb-4">お問い合わせ</h1>
         <p class="text-gray-500">
           まずはお気軽にご連絡ください。<br />
           担当者より1営業日以内にご連絡いたします。
