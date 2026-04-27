@@ -2,7 +2,7 @@
   <main class="pt-16 min-h-screen bg-gray-50">
     <div class="max-w-2xl mx-auto px-4 sm:px-6 py-20">
       <div class="text-center mb-12">
-        <img src="/kurage-icon.svg" alt="クラゲディール" class="w-16 h-16 mx-auto mb-4" />
+        <img src="/kurage-icon2.svg" alt="クラゲディール" class="w-16 h-16 mx-auto mb-4" />
         <h1 class="text-3xl md:text-4xl font-black text-gray-900 mb-6">無料で始める</h1>
 
         <!-- Flow explanation -->
@@ -26,7 +26,7 @@
 
         <!-- Success state -->
         <div v-if="submitted" class="flex flex-col items-center justify-center text-center py-12">
-          <img src="/kurage-icon.svg" alt="クラゲディール" class="w-20 h-20 mx-auto mb-4 kurage-float" />
+          <img src="/kurage-icon2.svg" alt="クラゲディール" class="w-20 h-20 mx-auto mb-4 kurage-float" />
           <h2 class="text-2xl font-black text-gray-900 mb-3">送信完了しました！</h2>
           <p class="text-gray-500 mb-6">インストールリンクをメールでお送りしました。ご確認ください。</p>
           <a href="/" class="text-kurage-600 font-medium hover:underline">トップに戻る</a>
@@ -119,6 +119,15 @@
             />
           </div>
 
+          <!-- Cloudflare Turnstile（bot対策） -->
+          <div class="flex justify-center">
+            <div
+              class="cf-turnstile"
+              :data-sitekey="turnstileSiteKey"
+              data-callback="onTurnstileSuccess"
+            ></div>
+          </div>
+
           <button
             type="submit"
             :disabled="submitting"
@@ -147,6 +156,9 @@
 <script setup lang="ts">
 useHead({ title: '無料で始める | クラゲディール' })
 
+const runtimeConfig = useRuntimeConfig()
+const turnstileSiteKey = runtimeConfig.public.turnstileSiteKey
+
 const form = reactive({
   company: '',
   name: '',
@@ -162,21 +174,36 @@ const submitted = ref(false)
 const API_URL = 'https://slacksfa-api-808596335261.asia-northeast1.run.app'
 
 async function submit() {
+  // Turnstile トークン取得（widget が hidden input を生成する）
+  const turnstileInput = document.querySelector('input[name="cf-turnstile-response"]') as HTMLInputElement | null
+  const turnstileToken = turnstileInput?.value
+  if (!turnstileToken) {
+    alert('セキュリティチェックを完了してから送信してください。')
+    return
+  }
+
   submitting.value = true
   try {
     const res = await fetch(`${API_URL}/api/contact`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(form),
+      body: JSON.stringify({ ...form, turnstileToken }),
     })
     if (!res.ok) {
       const data = await res.json()
       alert(data.error ?? '送信に失敗しました。時間をおいて再度お試しください。')
+      // 失敗時は Turnstile をリセットしてリトライ可能に
+      if (typeof (window as any).turnstile !== 'undefined') {
+        (window as any).turnstile.reset()
+      }
       return
     }
     submitted.value = true
   } catch {
     alert('通信エラーが発生しました。時間をおいて再度お試しください。')
+    if (typeof (window as any).turnstile !== 'undefined') {
+      (window as any).turnstile.reset()
+    }
   } finally {
     submitting.value = false
   }

@@ -6,6 +6,12 @@ export default defineNuxtConfig({
   experimental: {
     payloadExtraction: false,
   },
+  runtimeConfig: {
+    public: {
+      // Cloudflare Turnstile site key（公開可。HTML埋め込み用）
+      turnstileSiteKey: process.env.NUXT_PUBLIC_TURNSTILE_SITE_KEY ?? '0x4AAAAAADEHhYQdYWLR1h0u',
+    },
+  },
   vite: {
     server: {
       fs: {
@@ -44,6 +50,10 @@ export default defineNuxtConfig({
           rel: 'stylesheet',
           href: 'https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap',
         },
+      ],
+      script: [
+        // Cloudflare Turnstile（問い合わせフォームの bot 対策）
+        { src: 'https://challenges.cloudflare.com/turnstile/v0/api.js', async: true, defer: true },
       ],
     },
   },
