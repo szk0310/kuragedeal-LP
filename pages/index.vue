@@ -67,7 +67,7 @@
           <!-- Right: floating kurage icon -->
           <div class="hidden md:flex flex-shrink-0 items-center justify-center w-72 h-72">
             <img
-              src="/kurage-icon.svg"
+              src="/kurage-on-green.svg"
               alt="クラゲくん"
               class="w-64 h-64 kurage-float drop-shadow-2xl"
             />
@@ -82,8 +82,8 @@
     <section class="bg-ocean-steel/75 py-16">
             <div class="max-w-6xl mx-auto px-4 sm:px-6">
         <div class="text-center mb-14">
-      <p class="text-2xl font-bold text-gray-700 mb-3　">対象</p>
-          <h2 class="text-2xl md:text-3xl font-bold text-gray-800  mb-4">
+      <p class="text-2xl font-bold text-gray-800 mb-3">対象</p>
+          <h2 class="text-2xl md:text-3xl font-bold text-gray-800 mb-4">
             1人〜30人の営業チームのためのAI営業ツール
           </h2>
           </div>
@@ -99,9 +99,8 @@
             <div
               v-for="p in personas"
               :key="p.icon"
-              class="bg-ocean-mist/50 rounded-xl p-4 text-sm text-gray-700"
+              class="bg-ocean-mist/50 rounded-xl p-5 text-base text-gray-700 leading-relaxed"
             >
-              <p class="text-2xl mb-2">{{ p.icon }}</p>
               <p>{{ p.text }}</p>
             </div>
           </div>
@@ -116,8 +115,8 @@
     <section id="features" class="bg-ocean-steel py-20">
       <div class="max-w-6xl mx-auto px-4 sm:px-6">
         <div class="text-center mb-14">
-          <p class="text-2xl font-bold  text-cyan-100 mb-3">機能</p>
-          <h2 class="text-3xl md:text-4xl font-black  text-gray-100 mb-4">4つの特徴</h2>
+          <p class="text-2xl font-bold text-gray-100 mb-3">機能</p>
+          <h2 class="text-3xl md:text-4xl font-black text-gray-100 mb-4">4つの特徴</h2>
           <p class=" text-cyan-100 ">新しいアプリは不要。Slackだけで完結します。</p>
         </div>
 
@@ -141,7 +140,7 @@
     <section id="nurturing" class="bg-gradient-to-br from-kurage-900 via-kurage-800 to-kurage-700 py-20 text-white">
       <div class="max-w-6xl mx-auto px-4 sm:px-6">
         <div class="text-center mb-12">
-          <p class="text-2xl font-bold text-cyan-100 mb-3">AIナーチャリング</p>
+          <p class="text-2xl font-bold text-white mb-3">AIナーチャリング</p>
           <h2 class="text-3xl md:text-4xl font-black mb-4">
             <span class="block text-cyan-0 mb-4">返信が来たら、AIが次の一手を考える。</span>
           </h2>
@@ -159,52 +158,47 @@
           <div class="flex flex-col md:flex-row items-stretch gap-2">
 
             <!-- Step 1 -->
-            <div class="flex-1 bg-white/10 border border-white/20 rounded-xl px-3 py-4 text-center">
-              <div class="w-7 h-7 rounded-full bg-cyan-400/20 border border-cyan-400/40 text-cyan-300 text-xs font-bold flex items-center justify-center mx-auto mb-2">1</div>
-              <p class="text-2xl mb-2">📧</p>
-              <p class="font-bold text-xs mb-1">顧客からメール/問い合わせ</p>
-              <p class="text-kurage-300 text-xs leading-relaxed">フォーム送信・返信・新規連絡を自動検知</p>
+            <div class="flex-1 bg-white/10 border border-white/20 rounded-xl px-3 py-5 text-center">
+              <div class="w-7 h-7 rounded-full bg-cyan-400/20 border border-cyan-400/40 text-cyan-300 text-xs font-bold flex items-center justify-center mx-auto mb-3">1</div>
+              <p class="font-bold text-base mb-2">顧客からメール/問い合わせ</p>
+              <p class="text-kurage-300 text-sm leading-relaxed">フォーム送信・返信・新規連絡を自動検知</p>
             </div>
 
             <div class="hidden md:flex items-center text-white/30 text-xl px-0.5">→</div>
 
             <!-- Step 2 -->
-            <div class="flex-1 bg-white/10 border border-white/20 rounded-xl px-3 py-4 text-center">
-              <div class="w-7 h-7 rounded-full bg-cyan-400/20 border border-cyan-400/40 text-cyan-300 text-xs font-bold flex items-center justify-center mx-auto mb-2">2</div>
-              <p class="text-2xl mb-2">🧠</p>
-              <p class="font-bold text-xs mb-1">AIが内容を分析・感情判定</p>
-              <p class="text-kurage-300 text-xs leading-relaxed">前向き／要検討／断り気配をAIが判断</p>
+            <div class="flex-1 bg-white/10 border border-white/20 rounded-xl px-3 py-5 text-center">
+              <div class="w-7 h-7 rounded-full bg-cyan-400/20 border border-cyan-400/40 text-cyan-300 text-xs font-bold flex items-center justify-center mx-auto mb-3">2</div>
+              <p class="font-bold text-base mb-2">AIが内容を分析・感情判定</p>
+              <p class="text-kurage-300 text-sm leading-relaxed">前向き／要検討／断り気配をAIが判断</p>
             </div>
 
             <div class="hidden md:flex items-center text-white/30 text-xl px-0.5">→</div>
 
             <!-- Step 3 -->
-            <div class="flex-1 bg-white/10 border border-white/20 rounded-xl px-3 py-4 text-center">
-              <div class="w-7 h-7 rounded-full bg-cyan-400/20 border border-cyan-400/40 text-cyan-300 text-xs font-bold flex items-center justify-center mx-auto mb-2">3</div>
-              <p class="text-2xl mb-2">🔔</p>
-              <p class="font-bold text-xs mb-1">Slackにアラート通知</p>
-              <p class="text-kurage-300 text-xs leading-relaxed">「前向きな反応です」「温度が下がっています」</p>
+            <div class="flex-1 bg-white/10 border border-white/20 rounded-xl px-3 py-5 text-center">
+              <div class="w-7 h-7 rounded-full bg-cyan-400/20 border border-cyan-400/40 text-cyan-300 text-xs font-bold flex items-center justify-center mx-auto mb-3">3</div>
+              <p class="font-bold text-base mb-2">Slackにアラート通知</p>
+              <p class="text-kurage-300 text-sm leading-relaxed">「前向きな反応です」「温度が下がっています」</p>
             </div>
 
             <div class="hidden md:flex items-center text-white/30 text-xl px-0.5">→</div>
 
             <!-- Step 4: ハイライト -->
-            <div class="flex-1 bg-cyan-400/15 border-2 border-cyan-400/50 rounded-xl px-3 py-4 text-center relative">
+            <div class="flex-1 bg-cyan-400/15 border-2 border-cyan-400/50 rounded-xl px-3 py-5 text-center relative">
               <div class="absolute -top-3 left-1/2 -translate-x-1/2 bg-cyan-400 text-kurage-900 text-xs font-black px-3 py-0.5 rounded-full whitespace-nowrap">ボタン1つ ✅</div>
-              <div class="w-7 h-7 rounded-full bg-cyan-400/30 border border-cyan-400/60 text-cyan-300 text-xs font-bold flex items-center justify-center mx-auto mb-2 mt-1">4</div>
-              <p class="text-2xl mb-2">✍️</p>
-              <p class="font-bold text-xs mb-1 text-cyan-200">AI返信下書き→承認→即送信</p>
-              <p class="text-kurage-300 text-xs leading-relaxed">内容を確認して承認するだけ。修正も可能</p>
+              <div class="w-7 h-7 rounded-full bg-cyan-400/30 border border-cyan-400/60 text-cyan-300 text-xs font-bold flex items-center justify-center mx-auto mb-3 mt-1">4</div>
+              <p class="font-bold text-base mb-2 text-cyan-200">AI返信下書き→承認→即送信</p>
+              <p class="text-kurage-300 text-sm leading-relaxed">内容を確認して承認するだけ。修正も可能</p>
             </div>
 
             <div class="hidden md:flex items-center text-white/30 text-xl px-0.5">→</div>
 
             <!-- Step 5 -->
-            <div class="flex-1 bg-white/10 border border-white/20 rounded-xl px-3 py-4 text-center">
-              <div class="w-7 h-7 rounded-full bg-cyan-400/20 border border-cyan-400/40 text-cyan-300 text-xs font-bold flex items-center justify-center mx-auto mb-2">5</div>
-              <p class="text-2xl mb-2">📊</p>
-              <p class="font-bold text-xs mb-1">自動記録・確率更新</p>
-              <p class="text-kurage-300 text-xs leading-relaxed">やりとりがすべてディールに記録。受注確率が自動で動く</p>
+            <div class="flex-1 bg-white/10 border border-white/20 rounded-xl px-3 py-5 text-center">
+              <div class="w-7 h-7 rounded-full bg-cyan-400/20 border border-cyan-400/40 text-cyan-300 text-xs font-bold flex items-center justify-center mx-auto mb-3">5</div>
+              <p class="font-bold text-base mb-2">自動記録・確率更新</p>
+              <p class="text-kurage-300 text-sm leading-relaxed">やりとりがすべてディールに記録。受注確率が自動で動く</p>
             </div>
 
           </div>
@@ -215,21 +209,21 @@
           <div class="bg-white/10 border border-white/20 rounded-2xl p-6">
             <p class="text-3xl mb-4">🤖</p>
             <h3 class="text-lg font-bold mb-2">AIが個別メッセージを生成</h3>
-            <p class="text-kurage-200 text-sm leading-relaxed">
+            <p class="text-kurage-200 text-base leading-relaxed">
               ディールの進捗・過去の会話・顧客の反応をもとに、その人だけへのメッセージをAIが下書き。「田中さんは先週"予算は問題ない"と言っていた」——そのニュアンスまで反映します。
             </p>
           </div>
           <div class="bg-white/10 border border-white/20 rounded-2xl p-6">
             <p class="text-3xl mb-4">💬</p>
             <h3 class="text-lg font-bold mb-2">返信をAIが読んで次を判断</h3>
-            <p class="text-kurage-200 text-sm leading-relaxed">
+            <p class="text-kurage-200 text-base leading-relaxed">
               顧客から返信が来たら、AIがその内容を分析。「前向き」「要検討」「断り気配」を判定し、次に送るべきメッセージを自動生成。商談の温度に合わせてコミュニケーションが続きます。
             </p>
           </div>
           <div class="bg-white/10 border border-white/20 rounded-2xl p-6">
             <p class="text-3xl mb-4">✅</p>
             <h3 class="text-lg font-bold mb-2">Slackで承認→即送信</h3>
-            <p class="text-kurage-200 text-sm leading-relaxed">
+            <p class="text-kurage-200 text-base leading-relaxed">
               AIが作ったメッセージはSlackに届きます。内容を確認して「送信」ボタンを押すだけ。修正も可能。人間が判断・承認するから、AIが暴走する心配もありません。
             </p>
           </div>
@@ -254,7 +248,7 @@
             </div>
             <div>
               <p class="text-lg font-bold text-cyan-300 mb-4 uppercase tracking-widest flex items-center gap-2">
-                <img src="/kurage-icon.svg" alt="" class="w-6 h-6 inline-block" />
+                <img src="/kurage-on-green.svg" alt="" class="w-6 h-6 inline-block" />
                 クラゲディールのAIナーチャリング
               </p>
               <ul class="space-y-3 text-sm">
@@ -275,8 +269,8 @@
     <section id="benefits" class="bg-ocean-steel/75  py-20">
       <div class="max-w-6xl mx-auto px-4 sm:px-6">
         <div class="text-center mb-14">
-          <p class="text-2xl font-bold text-kurage-800 mb-3">導入効果</p>
-          <h2 class="text-3xl md:text-4xl font-black text-cyan-900  mb-4">
+          <p class="text-2xl font-bold text-gray-800 mb-3">導入効果</p>
+          <h2 class="text-3xl md:text-4xl font-black text-gray-800 mb-4">
             営業コストを、仕組みで下げる
           </h2>
         </div>
@@ -289,8 +283,8 @@
           >
             <p class="text-4xl mb-4">{{ b.icon }}</p>
             <h3 class="text-lg font-bold text-gray-900 mb-3">{{ b.title }}</h3>
-            <p class="text-gray-600 text-sm leading-relaxed mb-4">{{ b.desc }}</p>
-            <div class="bg-kurage-50 border border-kurage-100 rounded-xl p-4 text-sm text-kurage-800 font-medium">
+            <p class="text-gray-600 text-base leading-relaxed mb-4">{{ b.desc }}</p>
+            <div class="bg-kurage-50 border border-kurage-100 rounded-xl p-4 text-base text-kurage-800 font-medium">
               {{ b.metric }}
             </div>
           </div>
@@ -304,9 +298,9 @@
     <section id="usecases" class="bg-ocean-steel py-20">
       <div class="max-w-6xl mx-auto px-4 sm:px-6">
         <div class="text-center mb-14">
-          <p class="text-2xl font-bold text-cyan-100 mb-3">活用シーン</p>
+          <p class="text-2xl font-bold text-gray-100 mb-3">活用シーン</p>
           <h2 class="text-3xl md:text-4xl font-black text-gray-100 mb-4">
-            こんな会社に、ぴったりです
+            こんな会社にぴったりです
           </h2>
         </div>
 
@@ -320,10 +314,10 @@
               <div class="text-5xl mb-4 md:mb-0 shrink-0">{{ uc.icon }}</div>
               <div class="flex-1">
                 <h3 class="text-xl font-bold text-gray-900 mb-1">{{ uc.title }}</h3>
-                <p class="text-sm text-kurage-600 font-medium mb-3">{{ uc.subtitle }}</p>
-                <p class="text-gray-600 text-sm leading-relaxed mb-4">{{ uc.problem }}</p>
+                <p class="text-base text-kurage-600 font-medium mb-3">{{ uc.subtitle }}</p>
+                <p class="text-gray-600 text-base leading-relaxed mb-4">{{ uc.problem }}</p>
                 <div class="bg-kurage-50 border-l-4 border-kurage-500 pl-4 py-3 rounded-r-xl">
-                  <p class="text-gray-800 text-sm leading-relaxed">{{ uc.solution }}</p>
+                  <p class="text-gray-800 text-base leading-relaxed">{{ uc.solution }}</p>
                 </div>
               </div>
             </div>
@@ -338,11 +332,11 @@
     <section id="pricing" class="bg-ocean-deep py-20">
       <div class="max-w-6xl mx-auto px-4 sm:px-6">
         <div class="text-center mb-14">
-          <p class="text-2xl font-bold text-cyan-100 mb-3">料金</p>
+          <p class="text-2xl font-bold text-kurage-50 mb-3">料金</p>
           <h2 class="text-3xl md:text-4xl font-black text-kurage-50 mb-4">
             シンプルな料金体系
           </h2>
-          <p class="text-gray-500">プラン内ユーザー数の追加費用なし。チーム全員で使えます。</p>
+          <p class="text-kurage-100">プラン内ユーザー数の追加費用なし。チーム全員で使えます。</p>
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -350,31 +344,31 @@
             v-for="plan in pricing"
             :key="plan.name"
             :class="[
-              'rounded-2xl border p-8 flex flex-col',
+              'rounded-2xl border p-8 flex flex-col text-center',
               plan.featured
-                ? 'bg-kurage-700 text-white border-kurage-600 shadow-2xl scale-105'
+                ? 'bg-kurage-700 text-white border-kurage-600 shadow-2xl'
                 : 'bg-white border-gray-200',
             ]"
           >
-            <div v-if="plan.featured" class="text-xs font-bold text-cyan-300 mb-3">
+            <!-- <div v-if="plan.featured" class="text-xs font-bold text-cyan-100 mb-3">
               ★ 最人気
-            </div>
+            </div> -->
             <h3
               :class="['text-2xl font-black mb-1', plan.featured ? 'text-white' : 'text-gray-900']"
             >
               {{ plan.name }}
             </h3>
-            <p :class="['text-4xl font-black mt-2 mb-1', plan.featured ? 'text-cyan-300' : 'text-kurage-700']">
+            <p :class="['text-4xl font-black mt-2 mb-1', plan.featured ? 'text-cyan-0' : 'text-kurage-700']">
               {{ plan.price }}
             </p>
-            <p :class="['text-sm mb-6', plan.featured ? 'text-kurage-200' : 'text-gray-400']">
+            <p :class="['text-sm mb-6', plan.featured ? 'text-cyan-300' : 'text-gray-400']">
               /月（税別）
             </p>
             <ul class="space-y-3 flex-1 mb-8">
               <li
                 v-for="item in plan.features"
                 :key="item.label"
-                class="flex items-start gap-2 text-sm"
+                class="flex items-center gap-2 text-base justify-center"
               >
                 <span :class="plan.featured ? 'text-cyan-300' : 'text-kurage-500'">
                   {{ item.ok ? '✅' : '—' }}
@@ -398,7 +392,7 @@
           </div>
         </div>
 
-        <p class="text-center text-sm text-gray-400 mt-8">
+        <p class="text-center text-sm text-kurage-100 mt-8">
           50人以上の組織・カスタマイズが必要な場合は Enterprise プラン（個別見積もり）をご相談ください。
         </p>
       </div>
@@ -410,7 +404,7 @@
     <section id="comparison" class="bg-ocean-sand py-20">
       <div class="max-w-6xl mx-auto px-4 sm:px-6">
         <div class="text-center mb-14">
-          <p class="text-2xl font-bold text-gray-600 mb-3">比較</p>
+          <p class="text-2xl font-bold text-gray-800 mb-3">比較</p>
           <h2 class="text-3xl md:text-4xl font-black text-gray-800 mb-4">
             CRM + Slackとの違い
           </h2>
@@ -424,7 +418,7 @@
                   <th class="text-left px-6 py-4 font-semibold text-gray-600 w-1/3">比較項目</th>
                   <th class="text-center px-6 py-4">
                     <span class="inline-flex items-center gap-1.5 font-bold text-kurage-700">
-                      <img src="/kurage-icon.svg" alt="" class="w-5 h-5" />
+                      <img src="/kurage-on-white.svg" alt="" class="w-5 h-5" />
                       クラゲディール
                     </span>
                   </th>
@@ -478,7 +472,7 @@
         </div>-->
 
         <div class="text-center mb-14">
-          <p class="text-2xl font-bold text-ocean-deep mb-3">FAQ</p>
+          <p class="text-2xl font-bold text-gray-700 mb-3">FAQ</p>
           <h2 class="text-3xl md:text-4xl font-black text-gray-700 mb-4">よくある質問</h2>
         </div>
 
@@ -508,11 +502,11 @@
     ============================================================ -->
     <section class="bg-gradient-to-br from-kurage-900 to-kurage-700 text-white py-20">
       <div class="max-w-3xl mx-auto px-4 sm:px-6 text-center">
-        <img src="/kurage-icon.svg" alt="クラゲディール" class="w-20 h-20 mx-auto mb-6 kurage-float" />
+        <img src="/kurage-on-green.svg" alt="クラゲディール" class="w-20 h-20 mx-auto mb-6 kurage-float" />
         <h2 class="text-3xl md:text-4xl font-black mb-4">
-          今日から、Slackで営業管理を始めよう。
+          今日から、Slackで始めましょう。
         </h2>
-        <p class="text-kurage-200 mb-10 text-lg">
+        <p class="text-kurage-100 mb-10 text-lg">
           導入初日から全員が使えます。セットアップは最短30分。
         </p>
         <a
@@ -522,7 +516,7 @@
           無料で始める →
         </a>
         <p class="text-kurage-300 text-xs mt-10">
-          🌊 売上の一部は、<a href="https://www.nippon-foundation.or.jp/donation/ocean-project-fund" target="_blank" rel="noopener" class="underline hover:text-white transition-colors">日本財団 海洋プロジェクト基金</a>に寄付されます。
+          売上の一部は、<a href="https://www.nippon-foundation.or.jp/donation/ocean-project-fund" target="_blank" rel="noopener" class="underline hover:text-white transition-colors">日本財団 海洋プロジェクト基金</a>に寄付されます。
         </p>
       </div>
     </section>

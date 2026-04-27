@@ -6,12 +6,12 @@
       <div class="flex flex-col md:flex-row md:justify-between md:items-start gap-10 mb-10">
 
         <!-- Brand -->
-        <div class="flex-shrink-0">
-          <div class="flex items-center gap-2 mb-3">
-            <img src="/kurage-icon.svg" alt="クラゲディール" class="w-9 h-9" />
+        <div class="flex-shrink-0 text-center md:text-left">
+          <div class="flex items-center justify-center md:justify-start gap-2 mb-3">
+            <img src="/kurage-on-green.svg" alt="クラゲディール" class="w-9 h-9" />
             <span class="font-bold text-xl text-white">クラゲディール</span>
           </div>
-          <p class="text-sm leading-relaxed max-w-xs">
+          <p class="text-sm leading-relaxed max-w-xs mx-auto md:mx-0">
             Slackだけで完結するAI営業CRM。<br />
             1人〜30人の営業チームに最適。
           </p>

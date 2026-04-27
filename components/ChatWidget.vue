@@ -18,7 +18,7 @@
         <!-- Header -->
         <div class="bg-kurage-700 px-4 py-3 flex items-center justify-between flex-shrink-0">
           <div class="flex items-center gap-2">
-            <img src="/kurage-icon.svg" alt="" class="w-7 h-7" />
+            <img src="/kurage-on-green.svg" alt="" class="w-7 h-7" />
             <div>
               <p class="text-white font-bold text-sm leading-none">クラゲくん</p>
               <p class="text-kurage-200 text-xs mt-0.5">AIサポート</p>
@@ -43,7 +43,7 @@
           >
             <img
               v-if="msg.role === 'assistant'"
-              src="/kurage-icon.svg"
+              src="/kurage-on-white.svg"
               alt=""
               class="w-6 h-6 flex-shrink-0 mt-1"
             />
@@ -61,7 +61,7 @@
 
           <!-- Loading dots -->
           <div v-if="loading" class="flex gap-2 justify-start">
-            <img src="/kurage-icon.svg" alt="" class="w-6 h-6 flex-shrink-0 mt-1" />
+            <img src="/kurage-on-white.svg" alt="" class="w-6 h-6 flex-shrink-0 mt-1" />
             <div class="bg-white border border-gray-100 shadow-sm rounded-2xl rounded-bl-sm px-4 py-3">
               <span class="flex gap-1">
                 <span class="w-1.5 h-1.5 bg-kurage-400 rounded-full animate-bounce" style="animation-delay:0ms" />
@@ -136,7 +136,7 @@
         class="w-14 h-14 bg-kurage-700 hover:bg-kurage-600 rounded-full shadow-lg flex items-center justify-center transition-colors kurage-float"
         @click="toggle"
       >
-        <img v-if="!open" src="/kurage-icon.svg" alt="チャット" class="w-9 h-9" />
+        <img v-if="!open" src="/kurage-on-green.svg" alt="チャット" class="w-9 h-9" />
         <svg v-else class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
         </svg>
