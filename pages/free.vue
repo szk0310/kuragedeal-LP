@@ -144,10 +144,13 @@
       </div>
 
       <div class="mt-8 bg-kurage-50 border border-kurage-100 rounded-2xl p-6 text-center">
-        <p class="text-sm text-gray-600 mb-1">
-          <strong>開発元: 株式会社シロ</strong>
+        <p class="text-sm text-gray-600 mb-3">
+          <strong>開発元: shiro Inc.</strong>
         </p>
-        <p class="text-sm text-kurage-600">Salesforce 認定コンサルティングパートナー</p>
+        <div class="flex items-center justify-center gap-3">
+          <img src="/sf-partner-logo.png" alt="Salesforce Partner" class="h-10 w-auto" />
+          <p class="text-sm text-kurage-600">Salesforce 認定コンサルティングパートナー</p>
+        </div>
       </div>
     </div>
   </main>
