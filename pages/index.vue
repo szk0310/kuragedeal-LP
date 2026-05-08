@@ -27,21 +27,25 @@
               1人〜30人の営業チームに最適。導入初日から全員が使えます。
             </p>
 
-            <!-- CTAs -->
-            <div class="flex flex-col sm:flex-row gap-4 mb-12">
-              <a
-                :href="`${API_URL}/slack/install`"
+            <!-- CTAs（β 期間中: ウェイトリスト主軸 + β 参加相談を補助 CTA に）-->
+            <div class="flex flex-col sm:flex-row gap-4 mb-4">
+              <button
+                @click="openWaitlistModal"
                 class="inline-flex items-center justify-center gap-2 bg-orange-500 hover:bg-orange-400 text-white font-bold px-8 py-4 rounded-xl text-lg transition-colors shadow-lg"
               >
-                無料で始める →
-              </a>
+                正式版ウェイトリストに登録 →
+              </button>
               <a
-                href="#features"
+                href="/free"
                 class="inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 border border-white/30 text-white font-medium px-8 py-4 rounded-xl text-lg transition-colors"
               >
-                機能を見る
+                β 参加について相談
               </a>
             </div>
+            <p class="text-xs text-kurage-200 mb-12 max-w-xl leading-relaxed">
+              ※ 現在プライベート β 運用中。2026 年秋に正式版ローンチ予定。<br/>
+              ウェイトリスト登録者にはアーリーアダプター 100 社プログラムを 24 時間先行でご案内します。
+            </p>
 
             <!-- ROI banner -->
             <div class="bg-white/10 border border-white/20 rounded-2xl p-4 sm:p-6 max-w-xl">
@@ -504,26 +508,38 @@
       <div class="max-w-3xl mx-auto px-4 sm:px-6 text-center">
         <img src="/kurage-on-green.svg" alt="クラゲディール" class="w-20 h-20 mx-auto mb-6 kurage-float" />
         <h2 class="text-3xl md:text-4xl font-black mb-4">
-          今日から、Slackで始めましょう。
+          2026 年秋、正式版ローンチへ。
         </h2>
-        <p class="text-kurage-100 mb-10 text-lg">
-          導入初日から全員が使えます。セットアップは最短30分。
+        <p class="text-kurage-100 mb-10 text-lg leading-relaxed">
+          現在プライベート β 運用中。ウェイトリストに登録すると、<br/>
+          アーリーアダプター 100 社プログラムを 24 時間先行でご案内します。
         </p>
-        <a
-          :href="`${API_URL}/slack/install`"
+        <button
+          @click="openWaitlistModal"
           class="inline-flex items-center gap-2 bg-orange-500 hover:bg-orange-400 text-white font-bold px-10 py-5 rounded-xl text-xl transition-colors shadow-lg"
         >
-          無料で始める →
-        </a>
+          正式版ウェイトリストに登録 →
+        </button>
         <p class="text-kurage-300 text-xs mt-10">
           売上の一部は、<a href="https://www.nippon-foundation.or.jp/donation/ocean-project-fund" target="_blank" rel="noopener" class="underline hover:text-white transition-colors">日本財団 海洋プロジェクト基金</a>に寄付されます。
         </p>
       </div>
     </section>
+
+    <!-- ウェイトリストモーダル -->
+    <WaitlistModal :open="waitlistOpen" @close="waitlistOpen = false" />
   </main>
 </template>
 
 <script setup lang="ts">
+import { ref } from 'vue'
+
+// ウェイトリストモーダルの開閉状態
+const waitlistOpen = ref(false)
+function openWaitlistModal() {
+  waitlistOpen.value = true
+}
+
 const personas = [
   { icon: '🏢', text: '社員5人のIT企業。社長が営業も兼務。商談管理はスプレッドシート' },
   { icon: '👥', text: '営業3人の人材会社。CRMを導入したが誰も入力しない' },
