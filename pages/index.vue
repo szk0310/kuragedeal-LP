@@ -1,13 +1,12 @@
 <template>
   <main class="pt-16">
     <!-- ============================================================
-         HERO
+         01. ヒーロー
     ============================================================ -->
     <section
       id="hero"
       class="relative bg-gradient-to-br from-kurage-900 via-kurage-800 to-kurage-700 text-white overflow-hidden"
     >
-      <!-- Background decoration -->
       <div class="absolute inset-0 opacity-10">
         <div class="absolute top-10 left-10 w-72 h-72 rounded-full bg-kurage-300 blur-3xl" />
         <div class="absolute bottom-10 right-10 w-96 h-96 rounded-full bg-cyan-300 blur-3xl" />
@@ -15,19 +14,21 @@
 
       <div class="relative max-w-6xl mx-auto px-4 sm:px-6 py-24 md:py-32">
         <div class="flex flex-col md:flex-row items-center gap-12">
-          <!-- Left: copy -->
           <div class="flex-1">
-            <!-- Main copy -->
-            <h1 class="text-4xl md:text-6xl font-black mb-6">
+            <h1 class="text-4xl md:text-6xl font-black mb-6 leading-tight">
               <span class="block mb-4">話しかけるだけで、</span>
               <span class="text-cyan-50">ディールが前に進む。</span>
             </h1>
-            <p class="text-lg text-kurage-100 mb-10 max-w-2xl leading-relaxed">
-              Slackに書いた一言が、自動で記録・分析・コーチングまでつながる。<br />
-              1人〜30人の営業チームに最適。導入初日から全員が使えます。
+            <p class="text-lg text-kurage-100 mb-2 max-w-2xl leading-relaxed">
+              Slackに書いた一言が、自動で記録・分析・コーチングまでつながる。
+            </p>
+            <p class="text-base text-kurage-100 mb-10 max-w-2xl leading-relaxed">
+              1人から10人の営業チームのために、ゼロから設計しました。<br />
+              導入初日から、全員が使えます。<br />
+              <span class="text-sm text-kurage-200">（11人以上は Enterprise プランで対応）</span>
             </p>
 
-            <!-- CTAs（β 期間中: ウェイトリスト主軸 + β 参加相談を補助 CTA に）-->
+            <!-- CTAs（phase0: ウェイトリスト主軸 + β 参加相談）。Day 7 で動的切替に置換予定 -->
             <div class="flex flex-col sm:flex-row gap-4 mb-4">
               <button
                 @click="openWaitlistModal"
@@ -39,36 +40,16 @@
                 href="/free"
                 class="inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 border border-white/30 text-white font-medium px-8 py-4 rounded-xl text-lg transition-colors"
               >
-                β 参加について相談
+                個別にご相談
               </a>
             </div>
-            <p class="text-xs text-kurage-200 mb-12 max-w-xl leading-relaxed">
-              ※ 現在プライベート β 運用中。2026 年秋に正式版ローンチ予定。<br/>
-              ウェイトリスト登録者にはアーリーアダプター 100 社プログラムを 24 時間先行でご案内します。
+            <p class="text-xs text-kurage-200 max-w-xl leading-relaxed">
+              ※ 現在プライベート β 運用中。2026 年 11 月 18 日に正式版ローンチ予定。<br />
+              それまでの 5 ヶ月、先行 100 社の β 参加プログラム（完全無料）を募集中。
+              <a href="/beta-program" class="underline hover:text-white">詳しくはこちら →</a>
             </p>
-
-            <!-- ROI banner -->
-            <div class="bg-white/10 border border-white/20 rounded-2xl p-4 sm:p-6 max-w-xl">
-              <div class="grid grid-cols-3 gap-2 sm:gap-4 text-center">
-                <div>
-                  <p class="text-xl sm:text-2xl md:text-3xl font-black text-cyan-50 leading-tight">
-                    <span class="hidden sm:inline">△</span>¥150,000
-                  </p>
-                  <p class="text-xs sm:text-xs text-kurage-200 mt-1">月間入力作業コスト削減<br/>（5人チーム試算）</p>
-                </div>
-                <div class="border-x border-white/20">
-                  <p class="text-xl sm:text-2xl md:text-3xl font-black text-cyan-50 leading-tight">¥9,800</p>
-                  <p class="text-xs text-kurage-200 mt-1">月額利用料<br/>（10人チーム）</p>
-                </div>
-                <div>
-                  <p class="text-xl sm:text-2xl md:text-3xl font-black text-orange-400 leading-tight">15x</p>
-                  <p class="text-xs text-kurage-200 mt-1">初月からの<br/>ROI</p>
-                </div>
-              </div>
-            </div>
           </div>
 
-          <!-- Right: floating kurage icon -->
           <div class="hidden md:flex flex-shrink-0 items-center justify-center w-72 h-72">
             <img
               src="/kurage-on-green.svg"
@@ -81,447 +62,790 @@
     </section>
 
     <!-- ============================================================
-         TARGET SEGMENT
+         02. ターゲット
     ============================================================ -->
     <section class="bg-ocean-steel/75 py-16">
-            <div class="max-w-6xl mx-auto px-4 sm:px-6">
-        <div class="text-center mb-14">
-      <p class="text-2xl font-bold text-gray-800 mb-3">対象</p>
-          <h2 class="text-2xl md:text-3xl font-bold text-gray-800 mb-4">
-            1人〜30人の営業チームのためのAI営業ツール
-          </h2>
-          </div>
       <div class="max-w-6xl mx-auto px-4 sm:px-6">
-          
-        <div class="bg-white/80 rounded-2xl border border-ocean-tan/30 p-8 md:p-10 text-center">
-          <p class="text-center text-gray-600 mb-8 max-w-2xl mx-auto">
+        <div class="text-center mb-12">
+          <p class="text-2xl font-bold text-gray-800 mb-3">対象</p>
+          <h2 class="text-2xl md:text-3xl font-bold text-gray-800 mb-4">
+            1〜10 人の営業チームのために、ゼロから設計したAIツール
+          </h2>
+          <p class="text-gray-700 max-w-2xl mx-auto leading-relaxed">
             一人社長のフリーランスから、営業チーム10名規模の成長企業まで。<br />
             「大手ベンダーのCRMは高すぎるし重すぎる。でもExcelの管理はもう限界」<br />
-            ——そんな会社のために作りました。
+            ──そんな会社のために作りました。
           </p>
+        </div>
+        <div class="bg-white/80 rounded-2xl border border-ocean-tan/30 p-8 md:p-10">
           <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
             <div
-              v-for="p in personas"
-              :key="p.icon"
+              v-for="(p, i) in personas"
+              :key="i"
               class="bg-ocean-mist/50 rounded-xl p-5 text-base text-gray-700 leading-relaxed"
             >
+              <p class="text-2xl mb-2">{{ p.icon }}</p>
               <p>{{ p.text }}</p>
             </div>
           </div>
         </div>
       </div>
-      </div>
     </section>
 
     <!-- ============================================================
-         FEATURES
+         03. お悩み 1: CRM が続かない
     ============================================================ -->
-    <section id="features" class="bg-ocean-steel py-20">
-      <div class="max-w-6xl mx-auto px-4 sm:px-6">
-        <div class="text-center mb-14">
-          <p class="text-2xl font-bold text-gray-100 mb-3">機能</p>
-          <h2 class="text-3xl md:text-4xl font-black text-gray-100 mb-4">4つの特徴</h2>
-          <p class=" text-cyan-100 ">新しいアプリは不要。Slackだけで完結します。</p>
-        </div>
+    <section id="pain1" class="bg-white py-20">
+      <div class="max-w-3xl mx-auto px-4 sm:px-6">
+        <p class="text-sm font-bold text-orange-500 uppercase tracking-widest mb-3">お悩み 1</p>
+        <h2 class="text-3xl md:text-4xl font-black text-gray-900 mb-10 leading-tight">
+          CRM が、続かない。
+        </h2>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <div
-            v-for="f in features"
-            :key="f.title"
-            class="bg-white rounded-2xl border border-gray-200 p-8 hover:shadow-md transition-shadow"
-          >
-            <p class="text-4xl mb-4">{{ f.icon }}</p>
-            <h3 class="text-xl font-bold text-gray-900 mb-3">{{ f.title }}</h3>
-            <p class="text-gray-600 leading-relaxed">{{ f.desc }}</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ============================================================
-         AI NURTURING
-    ============================================================ -->
-    <section id="nurturing" class="bg-gradient-to-br from-kurage-900 via-kurage-800 to-kurage-700 py-20 text-white">
-      <div class="max-w-6xl mx-auto px-4 sm:px-6">
-        <div class="text-center mb-12">
-          <p class="text-2xl font-bold text-white mb-3">AIナーチャリング</p>
-          <h2 class="text-3xl md:text-4xl font-black mb-4">
-            <span class="block text-cyan-0 mb-4">返信が来たら、AIが次の一手を考える。</span>
-          </h2>
-          <p class="text-kurage-100 max-w-2xl mx-auto">
-            手動でメールを書く時代は終わりました。<br />
-            顧客からの返信をAIが読んで、次に送るべき文章を自動生成。<br />承認ボタン1つで送信。すべてのやりとりが自動でディールに記録されます。
+        <!-- 共感 -->
+        <div class="bg-orange-50 border-l-4 border-orange-400 rounded-r-xl p-6 mb-10">
+          <p class="text-lg text-gray-800 font-bold mb-4 leading-relaxed">
+            「うちは CRM/SFA を入れたんですが、誰も入力しないんですよ」
+          </p>
+          <p class="text-base text-gray-700 leading-relaxed mb-3">
+            入力に 1 日 30 分。<br />
+            営業 5 人 × 月 20 日 × 時給 ¥3,000 = 月 ¥150,000 の隠れコスト。
+          </p>
+          <p class="text-base text-gray-700 leading-relaxed">
+            でも本当の問題はコストじゃなくて、<br />
+            <span class="font-bold text-orange-700">「データが揃わないから、AI を活かせない」</span>ことです。
           </p>
         </div>
 
-        <!-- AIナーチャリング フロー図解 -->
-        <div class="mb-12">
-          <p class="text-center text-xl font-bold text-cyan-100 mb-9 uppercase tracking-widest">
-            顧客から返信→AIが下書き→Slackで承認→送信
+        <!-- 原因 -->
+        <h3 class="text-xl font-bold text-gray-900 mb-6">なぜ続かないのか。答えはふたつ。</h3>
+        <div class="space-y-5 mb-12">
+          <div class="bg-gray-50 rounded-xl p-6">
+            <p class="font-bold text-gray-900 mb-2">① 入力の認知負荷が、高すぎるから。</p>
+            <p class="text-gray-700 leading-relaxed">
+              CRM にログインして、画面を開いて、商談項目を埋めて、保存して、
+              活動記録のページを出して、また入力して……
+              <br />── 営業マンは、もう次のお客様に行きたい。
+            </p>
+          </div>
+          <div class="bg-gray-50 rounded-xl p-6">
+            <p class="font-bold text-gray-900 mb-2">② 入力する人に、何のご褒美もないから。</p>
+            <p class="text-gray-700 leading-relaxed">
+              書いた内容が、自分の営業活動を前に進めるわけではない。<br />
+              ただのコストでしかない。
+            </p>
+          </div>
+        </div>
+
+        <!-- 解決 -->
+        <div class="bg-gradient-to-br from-kurage-50 to-cyan-50 border-2 border-kurage-200 rounded-2xl p-8 mb-10">
+          <p class="text-base font-bold text-kurage-700 mb-4">
+            ★ クラゲディールは、こんなストレスから営業マンを解放します！
           </p>
-          <div class="flex flex-col md:flex-row items-stretch gap-2">
-
-            <!-- Step 1 -->
-            <div class="flex-1 bg-white/10 border border-white/20 rounded-xl px-3 py-5 text-center">
-              <div class="w-7 h-7 rounded-full bg-cyan-400/20 border border-cyan-400/40 text-cyan-300 text-xs font-bold flex items-center justify-center mx-auto mb-3">1</div>
-              <p class="font-bold text-base mb-2">顧客からメール/問い合わせ</p>
-              <p class="text-kurage-300 text-sm leading-relaxed">フォーム送信・返信・新規連絡を自動検知</p>
-            </div>
-
-            <div class="hidden md:flex items-center text-white/30 text-xl px-0.5">→</div>
-
-            <!-- Step 2 -->
-            <div class="flex-1 bg-white/10 border border-white/20 rounded-xl px-3 py-5 text-center">
-              <div class="w-7 h-7 rounded-full bg-cyan-400/20 border border-cyan-400/40 text-cyan-300 text-xs font-bold flex items-center justify-center mx-auto mb-3">2</div>
-              <p class="font-bold text-base mb-2">AIが内容を分析・感情判定</p>
-              <p class="text-kurage-300 text-sm leading-relaxed">前向き／要検討／断り気配をAIが判断</p>
-            </div>
-
-            <div class="hidden md:flex items-center text-white/30 text-xl px-0.5">→</div>
-
-            <!-- Step 3 -->
-            <div class="flex-1 bg-white/10 border border-white/20 rounded-xl px-3 py-5 text-center">
-              <div class="w-7 h-7 rounded-full bg-cyan-400/20 border border-cyan-400/40 text-cyan-300 text-xs font-bold flex items-center justify-center mx-auto mb-3">3</div>
-              <p class="font-bold text-base mb-2">Slackにアラート通知</p>
-              <p class="text-kurage-300 text-sm leading-relaxed">「前向きな反応です」「温度が下がっています」</p>
-            </div>
-
-            <div class="hidden md:flex items-center text-white/30 text-xl px-0.5">→</div>
-
-            <!-- Step 4: ハイライト -->
-            <div class="flex-1 bg-cyan-400/15 border-2 border-cyan-400/50 rounded-xl px-3 py-5 text-center relative">
-              <div class="absolute -top-3 left-1/2 -translate-x-1/2 bg-cyan-400 text-kurage-900 text-xs font-black px-3 py-0.5 rounded-full whitespace-nowrap">ボタン1つ ✅</div>
-              <div class="w-7 h-7 rounded-full bg-cyan-400/30 border border-cyan-400/60 text-cyan-300 text-xs font-bold flex items-center justify-center mx-auto mb-3 mt-1">4</div>
-              <p class="font-bold text-base mb-2 text-cyan-200">AI返信下書き→承認→即送信</p>
-              <p class="text-kurage-300 text-sm leading-relaxed">内容を確認して承認するだけ。修正も可能</p>
-            </div>
-
-            <div class="hidden md:flex items-center text-white/30 text-xl px-0.5">→</div>
-
-            <!-- Step 5 -->
-            <div class="flex-1 bg-white/10 border border-white/20 rounded-xl px-3 py-5 text-center">
-              <div class="w-7 h-7 rounded-full bg-cyan-400/20 border border-cyan-400/40 text-cyan-300 text-xs font-bold flex items-center justify-center mx-auto mb-3">5</div>
-              <p class="font-bold text-base mb-2">自動記録・確率更新</p>
-              <p class="text-kurage-300 text-sm leading-relaxed">やりとりがすべてディールに記録。受注確率が自動で動く</p>
-            </div>
-
-          </div>
+          <p class="text-gray-800 leading-relaxed mb-4">
+            Slack に「田中さんと商談しました。予算 300 万」と<strong>投げる</strong>。<br />
+            それだけで、AI がディールを更新し、受注確率を計算し、<br />
+            明日 AI コーチが「次は決裁者と会う段取りを」と問いかけてくれる。
+          </p>
+          <p class="text-lg font-bold text-kurage-800">
+            認知負荷ゼロ。書くたびに、営業活動が前に進む。<br />
+            ★ これなら、続きます。
+          </p>
         </div>
 
-        <!-- 3つの特徴カード -->
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
-          <div class="bg-white/10 border border-white/20 rounded-2xl p-6">
-            <p class="text-3xl mb-4">🤖</p>
-            <h3 class="text-lg font-bold mb-2">AIが個別メッセージを生成</h3>
-            <p class="text-kurage-200 text-base leading-relaxed">
-              ディールの進捗・過去の会話・顧客の反応をもとに、その人だけへのメッセージをAIが下書き。「田中さんは先週"予算は問題ない"と言っていた」——そのニュアンスまで反映します。
-            </p>
-          </div>
-          <div class="bg-white/10 border border-white/20 rounded-2xl p-6">
-            <p class="text-3xl mb-4">💬</p>
-            <h3 class="text-lg font-bold mb-2">返信をAIが読んで次を判断</h3>
-            <p class="text-kurage-200 text-base leading-relaxed">
-              顧客から返信が来たら、AIがその内容を分析。「前向き」「要検討」「断り気配」を判定し、次に送るべきメッセージを自動生成。商談の温度に合わせてコミュニケーションが続きます。
-            </p>
-          </div>
-          <div class="bg-white/10 border border-white/20 rounded-2xl p-6">
-            <p class="text-3xl mb-4">✅</p>
-            <h3 class="text-lg font-bold mb-2">Slackで承認→即送信</h3>
-            <p class="text-kurage-200 text-base leading-relaxed">
-              AIが作ったメッセージはSlackに届きます。内容を確認して「送信」ボタンを押すだけ。修正も可能。人間が判断・承認するから、AIが暴走する心配もありません。
-            </p>
-          </div>
-        </div>
-
-        <!-- メール補足 -->
-        <p class="text-center text-kurage-300 text-sm">
-          ※ notify_only（通知のみ）とdraft_reply（AI下書き生成）の2モードから選択できます。いつでも設定変更可能。
-        </p>
-
-        <!-- vs ステップメール比較 -->
-        <div class="bg-white/5 border border-white/15 rounded-2xl p-8 mt-10">
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+        <!-- ROI バナー（対比構造） -->
+        <p class="text-center text-sm font-bold text-gray-500 uppercase tracking-widest mb-4">入力の隠れコストが、こう変わります</p>
+        <div class="bg-gradient-to-br from-kurage-900 to-kurage-700 text-white rounded-2xl p-6 md:p-8 mb-10 shadow-lg">
+          <div class="grid grid-cols-3 gap-2 sm:gap-4 text-center">
             <div>
-              <p class="text-lg font-bold text-red-400 mb-4 uppercase tracking-widest">従来のステップメール</p>
-              <ul class="space-y-3 text-sm text-kurage-200">
-                <li class="flex items-start gap-2"><span class="text-red-400 mt-0.5">✗</span> 全員に同じ内容を送信</li>
-                <li class="flex items-start gap-2"><span class="text-red-400 mt-0.5">✗</span> 返信が来ても自動で次のメッセージが送られるだけ</li>
-                <li class="flex items-start gap-2"><span class="text-red-400 mt-0.5">✗</span> 顧客の温度感・状況は無視</li>
-                <li class="flex items-start gap-2"><span class="text-red-400 mt-0.5">✗</span> 「買う気のない人」にも延々と送り続ける</li>
-              </ul>
-            </div>
-            <div>
-              <p class="text-lg font-bold text-cyan-300 mb-4 uppercase tracking-widest flex items-center gap-2">
-                <img src="/kurage-on-green.svg" alt="" class="w-6 h-6 inline-block" />
-                クラゲディールのAIナーチャリング
+              <p class="text-2xl sm:text-3xl md:text-4xl font-black text-cyan-50 leading-tight">
+                <span class="hidden sm:inline">△</span>¥150,000
               </p>
-              <ul class="space-y-3 text-sm">
-                <li class="flex items-start gap-2"><span class="text-cyan-300 mt-0.5">✓</span> 顧客ごとに個別メッセージをAIが生成</li>
-                <li class="flex items-start gap-2"><span class="text-cyan-300 mt-0.5">✓</span> 返信内容をAIが読んで次のアクションを決定</li>
-                <li class="flex items-start gap-2"><span class="text-cyan-300 mt-0.5">✓</span> 商談の進捗・過去の会話・センチメントを反映</li>
-                <li class="flex items-start gap-2"><span class="text-cyan-300 mt-0.5">✓</span> 人間はSlackで確認→承認するだけ</li>
-              </ul>
+              <p class="text-xs text-kurage-200 mt-2">月間入力作業<br />コスト削減<br />（5人チーム試算）</p>
+            </div>
+            <div class="border-x border-white/20">
+              <p class="text-2xl sm:text-3xl md:text-4xl font-black text-cyan-50 leading-tight">¥9,800</p>
+              <p class="text-xs text-kurage-200 mt-2">月額利用料<br />（10人チーム）</p>
+            </div>
+            <div>
+              <p class="text-2xl sm:text-3xl md:text-4xl font-black text-orange-400 leading-tight">15x</p>
+              <p class="text-xs text-kurage-200 mt-2">初月からの<br />ROI</p>
             </div>
           </div>
         </div>
-      </div>
-    </section>
 
-    <!-- ============================================================
-         BENEFITS（コスト削減）
-    ============================================================ -->
-    <section id="benefits" class="bg-ocean-steel/75  py-20">
-      <div class="max-w-6xl mx-auto px-4 sm:px-6">
-        <div class="text-center mb-14">
-          <p class="text-2xl font-bold text-gray-800 mb-3">導入効果</p>
-          <h2 class="text-3xl md:text-4xl font-black text-gray-800 mb-4">
-            営業コストを、仕組みで下げる
-          </h2>
-        </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-          <div
-            v-for="b in benefits"
-            :key="b.title"
-            class="bg-white rounded-2xl border border-gray-200 p-8"
-          >
-            <p class="text-4xl mb-4">{{ b.icon }}</p>
-            <h3 class="text-lg font-bold text-gray-900 mb-3">{{ b.title }}</h3>
-            <p class="text-gray-600 text-base leading-relaxed mb-4">{{ b.desc }}</p>
-            <div class="bg-kurage-50 border border-kurage-100 rounded-xl p-4 text-base text-kurage-800 font-medium">
-              {{ b.metric }}
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ============================================================
-         USE CASES
-    ============================================================ -->
-    <section id="usecases" class="bg-ocean-steel py-20">
-      <div class="max-w-6xl mx-auto px-4 sm:px-6">
-        <div class="text-center mb-14">
-          <p class="text-2xl font-bold text-gray-100 mb-3">活用シーン</p>
-          <h2 class="text-3xl md:text-4xl font-black text-gray-100 mb-4">
-            こんな会社にぴったりです
-          </h2>
-        </div>
-
-        <div class="space-y-6">
-          <div
-            v-for="uc in usecases"
-            :key="uc.title"
-            class="bg-white rounded-2xl border border-gray-200 overflow-hidden"
-          >
-            <div class="p-8 md:flex gap-8 items-start">
-              <div class="text-5xl mb-4 md:mb-0 shrink-0">{{ uc.icon }}</div>
-              <div class="flex-1">
-                <h3 class="text-xl font-bold text-gray-900 mb-1">{{ uc.title }}</h3>
-                <p class="text-base text-kurage-600 font-medium mb-3">{{ uc.subtitle }}</p>
-                <p class="text-gray-600 text-base leading-relaxed mb-4">{{ uc.problem }}</p>
-                <div class="bg-kurage-50 border-l-4 border-kurage-500 pl-4 py-3 rounded-r-xl">
-                  <p class="text-gray-800 text-base leading-relaxed">{{ uc.solution }}</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ============================================================
-         PRICING
-    ============================================================ -->
-    <section id="pricing" class="bg-ocean-deep py-20">
-      <div class="max-w-6xl mx-auto px-4 sm:px-6">
-        <div class="text-center mb-14">
-          <p class="text-2xl font-bold text-kurage-50 mb-3">料金</p>
-          <h2 class="text-3xl md:text-4xl font-black text-kurage-50 mb-4">
-            シンプルな料金体系
-          </h2>
-          <p class="text-kurage-100">プラン内ユーザー数の追加費用なし。チーム全員で使えます。</p>
-        </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-          <div
-            v-for="plan in pricing"
-            :key="plan.name"
-            :class="[
-              'rounded-2xl border p-8 flex flex-col text-center',
-              plan.featured
-                ? 'bg-kurage-700 text-white border-kurage-600 shadow-2xl'
-                : 'bg-white border-gray-200',
-            ]"
-          >
-            <!-- <div v-if="plan.featured" class="text-xs font-bold text-cyan-100 mb-3">
-              ★ 最人気
-            </div> -->
-            <h3
-              :class="['text-2xl font-black mb-1', plan.featured ? 'text-white' : 'text-gray-900']"
-            >
-              {{ plan.name }}
-            </h3>
-            <p :class="['text-4xl font-black mt-2 mb-1', plan.featured ? 'text-cyan-0' : 'text-kurage-700']">
-              {{ plan.price }}
-            </p>
-            <p :class="['text-sm mb-6', plan.featured ? 'text-cyan-300' : 'text-gray-400']">
-              /月（税別）
-            </p>
-            <ul class="space-y-3 flex-1 mb-8">
-              <li
-                v-for="item in plan.features"
-                :key="item.label"
-                class="flex items-center gap-2 text-base justify-center"
-              >
-                <span :class="plan.featured ? 'text-cyan-300' : 'text-kurage-500'">
-                  {{ item.ok ? '✅' : '—' }}
-                </span>
-                <span :class="plan.featured ? 'text-kurage-100' : 'text-gray-600'">
-                  {{ item.label }}
-                </span>
-              </li>
-            </ul>
-            <a
-              :href="plan.checkoutUrl"
-              :class="[
-                'text-center font-bold py-3 px-6 rounded-xl transition-colors',
-                plan.featured
-                  ? 'bg-orange-500 hover:bg-orange-400 text-white'
-                  : 'bg-kurage-50 hover:bg-kurage-100 text-kurage-700 border border-kurage-200',
-              ]"
-            >
-              {{ plan.cta }}
-            </a>
+        <!-- 3 つの特徴チップ -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <div v-for="(c, i) in pain1Chips" :key="i" class="bg-white border border-gray-200 rounded-xl p-5">
+            <p class="text-2xl mb-2">{{ c.icon }}</p>
+            <p class="font-bold text-gray-900 mb-1">{{ c.title }}</p>
+            <p class="text-sm text-gray-600 leading-relaxed">{{ c.desc }}</p>
           </div>
         </div>
 
-        <p class="text-center text-sm text-kurage-100 mt-8">
-          50人以上の組織・カスタマイズが必要な場合は Enterprise プラン（個別見積もり）をご相談ください。
+        <!-- 次セクションへの繋ぎ -->
+        <p class="text-center text-gray-500 mt-12 italic">
+          でも、それだけじゃ足りません。<br />次は「営業の進捗が、見えない」問題です。
         </p>
       </div>
     </section>
 
     <!-- ============================================================
-         COMPARISON
+         04. お悩み 2: 進捗が見えない
     ============================================================ -->
-    <section id="comparison" class="bg-ocean-sand py-20">
-      <div class="max-w-6xl mx-auto px-4 sm:px-6">
-        <div class="text-center mb-14">
-          <p class="text-2xl font-bold text-gray-800 mb-3">比較</p>
-          <h2 class="text-3xl md:text-4xl font-black text-gray-800 mb-4">
-            CRM + Slackとの違い
-          </h2>
+    <section id="pain2" class="bg-ocean-steel/75 py-20">
+      <div class="max-w-3xl mx-auto px-4 sm:px-6">
+        <p class="text-sm font-bold text-orange-500 uppercase tracking-widest mb-3">お悩み 2</p>
+        <h2 class="text-3xl md:text-4xl font-black text-gray-900 mb-10 leading-tight">
+          営業の進捗が、見えない。
+        </h2>
+
+        <!-- 共感 -->
+        <div class="bg-white border-l-4 border-orange-400 rounded-r-xl p-6 mb-10 shadow-sm">
+          <div class="space-y-2 text-lg text-gray-800 font-bold mb-4 leading-relaxed">
+            <p>「あの案件、進んでる？」</p>
+            <p>「先週の田中さんの件、どうなった?」</p>
+            <p>「うちのチーム、いま何件抱えてるんだっけ?」</p>
+          </div>
+          <p class="text-base text-gray-700 leading-relaxed mb-3">
+            毎週、営業マネジャーが部下に聞いて回る、この時間。
+          </p>
+          <p class="text-base text-gray-700 leading-relaxed mb-3">
+            聞かれた部下も、悪いわけじゃない。<br />
+            記憶に頼って、何件もの案件を追いかけているのだから。
+          </p>
+          <p class="text-base text-gray-800 font-bold leading-relaxed">
+            でも、<span class="text-orange-700">この時間こそが「営業の見えない時間」</span>です。
+          </p>
         </div>
 
-        <div class="bg-white rounded-2xl border border-gray-200 overflow-hidden shadow-sm">
-          <div class="overflow-x-auto">
+        <!-- 原因 -->
+        <h3 class="text-xl font-bold text-gray-900 mb-6">なぜ進捗が見えなくなるのか。答えはふたつ。</h3>
+        <div class="space-y-5 mb-12">
+          <div class="bg-white rounded-xl p-6 shadow-sm">
+            <p class="font-bold text-gray-900 mb-2">① 案件数が増えると、人の記憶では追えない。</p>
+            <p class="text-gray-700 leading-relaxed">
+              営業 5 人 × 案件 10 件 = 50 件。<br />
+              各案件に「金額・ステージ・次のアクション・最後の連絡日」がある。<br />
+              ── 人の頭で追える限界を、とっくに超えています。
+            </p>
+          </div>
+          <div class="bg-white rounded-xl p-6 shadow-sm">
+            <p class="font-bold text-gray-900 mb-2">② 動いていない案件は、誰の目にも入らない。</p>
+            <p class="text-gray-700 leading-relaxed">
+              動いている案件は連絡が来るので目立つ。<br />
+              けれど、本当に問題なのは「動いていない案件」の方。<br />
+              「2 週間連絡してない」「気づいたら止まっていた」<br />
+              ── 失注の多くは、こうして生まれます。
+            </p>
+          </div>
+        </div>
+
+        <!-- 解決 -->
+        <div class="bg-gradient-to-br from-white to-kurage-50 border-2 border-kurage-200 rounded-2xl p-8 mb-10 shadow-sm">
+          <p class="text-base font-bold text-kurage-700 mb-6">
+            ★ クラゲディールは、見えないものを、見えるようにします。
+          </p>
+
+          <div class="space-y-6">
+            <div>
+              <p class="font-bold text-gray-900 mb-2">🌅 朝 9 時。今日のフォーカスが、Slack に届く。</p>
+              <p class="text-sm text-gray-700 leading-relaxed pl-5 border-l-2 border-kurage-200">
+                「今日対応すべき案件は 3 件です。<br />
+                ABC 商事 田中様: 提案書送付期日が今日。<br />
+                XYZ 社 山田様: 14 日間動きなし、フォロー推奨。<br />
+                DEF 株式会社 佐藤様: クロージング前の確認を。」
+              </p>
+            </div>
+            <div>
+              <p class="font-bold text-gray-900 mb-2">🌆 夕方 17 時。1 日の振り返りと、明日の予告が届く。</p>
+              <p class="text-sm text-gray-700 leading-relaxed pl-5 border-l-2 border-kurage-200">
+                「今日、3 件のうち 2 件が前進しました。<br />
+                動きのなかった 1 件は、明日朝一で連絡を。<br />
+                ── 退勤前に、明日が整理されます。」
+              </p>
+            </div>
+            <div>
+              <p class="font-bold text-gray-900 mb-2">🧠 顧客との会話で、受注確率が自動で動く。</p>
+              <p class="text-sm text-gray-700 leading-relaxed pl-5 border-l-2 border-kurage-200">
+                「予算は問題ない」と聞けば、AI が確率を上げる。<br />
+                「難しいですね」と返ってくれば、AI が確率を下げる。<br />
+                ── 会話のニュアンスが、リアルタイムで数字に変わります。
+              </p>
+            </div>
+            <div>
+              <p class="font-bold text-gray-900 mb-2">⚠️ 14 日間動きのない案件は、AI が自動検知して警告。</p>
+              <p class="text-sm text-gray-700 leading-relaxed pl-5 border-l-2 border-kurage-200">
+                「忘れ去られる前に、フォローしましょう」と Slack に届く。<br />
+                ── 動いていない案件にこそ、光が当たります。
+              </p>
+            </div>
+          </div>
+
+          <p class="text-base font-bold text-kurage-800 mt-6 leading-relaxed">
+            マネジャーが聞き回らなくても、案件の状況が、立ち上がる。<br />
+            ★ それが、進捗が見える営業チームです。
+          </p>
+        </div>
+
+        <!-- 朝夕の Slack ブリーフィング 2 枚並列モック -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
+          <SlackMessageMock channel-name="#sales-team">
+            <SlackBotLine name="クラゲディール" :bot-badge="true" time="9:00">
+              <p class="font-bold mb-2">🌅 おはようございます！今日のフォーカス</p>
+              <div class="bg-orange-50 border-l-2 border-orange-400 pl-3 py-2 mb-2">
+                <p class="font-semibold">🔥 期日今日</p>
+                <p class="text-xs text-gray-600">ABC商事 田中様（¥3M）— 提案書送付</p>
+              </div>
+              <div class="bg-yellow-50 border-l-2 border-yellow-400 pl-3 py-2 mb-2">
+                <p class="font-semibold">⚠️ 14日停滞</p>
+                <p class="text-xs text-gray-600">XYZ社 山田様 — フォロー推奨</p>
+              </div>
+              <div class="bg-cyan-50 border-l-2 border-cyan-400 pl-3 py-2">
+                <p class="font-semibold">📈 確率上昇</p>
+                <p class="text-xs text-gray-600">DEF佐藤様 60% → 75%</p>
+              </div>
+            </SlackBotLine>
+          </SlackMessageMock>
+
+          <SlackMessageMock channel-name="#sales-team">
+            <SlackBotLine name="クラゲディール" :bot-badge="true" time="17:00">
+              <p class="font-bold mb-2">🌆 1 日お疲れさまでした。今日の振り返り</p>
+              <div class="bg-green-50 border-l-2 border-green-400 pl-3 py-2 mb-2">
+                <p class="font-semibold">📈 進捗</p>
+                <p class="text-xs text-gray-600">3件のうち 2件が前進</p>
+              </div>
+              <div class="bg-yellow-50 border-l-2 border-yellow-400 pl-3 py-2 mb-2">
+                <p class="font-semibold">⚠️ 停滞</p>
+                <p class="text-xs text-gray-600">1件は明日朝一で連絡を</p>
+              </div>
+              <div class="bg-cyan-50 border-l-2 border-cyan-400 pl-3 py-2">
+                <p class="font-semibold">🌟 明日朝一</p>
+                <p class="text-xs text-gray-600">DEF 佐藤様 — クロージング確認</p>
+              </div>
+            </SlackBotLine>
+          </SlackMessageMock>
+        </div>
+        <p class="text-center text-sm text-gray-600 mb-12 italic">毎朝・毎夕、これが Slack に届きます。</p>
+
+        <!-- 3 つの特徴チップ -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <div v-for="(c, i) in pain2Chips" :key="i" class="bg-white border border-gray-200 rounded-xl p-5">
+            <p class="text-2xl mb-2">{{ c.icon }}</p>
+            <p class="font-bold text-gray-900 mb-1">{{ c.title }}</p>
+            <p class="text-sm text-gray-600 leading-relaxed">{{ c.desc }}</p>
+          </div>
+        </div>
+
+        <p class="text-center text-gray-700 mt-12 italic">
+          でも、まだあります。<br />次は「営業マネジャーが、足りない」問題です。
+        </p>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         05. お悩み 3: マネジャーが足りない
+    ============================================================ -->
+    <section id="pain3" class="bg-white py-20">
+      <div class="max-w-3xl mx-auto px-4 sm:px-6">
+        <p class="text-sm font-bold text-orange-500 uppercase tracking-widest mb-3">お悩み 3</p>
+        <h2 class="text-3xl md:text-4xl font-black text-gray-900 mb-10 leading-tight">
+          営業マネジャーが、足りない。
+        </h2>
+
+        <!-- 共感 -->
+        <div class="bg-orange-50 border-l-4 border-orange-400 rounded-r-xl p-6 mb-10">
+          <div class="space-y-2 text-lg text-gray-800 font-bold mb-4 leading-relaxed">
+            <p>「うちの営業マネジャー、本当によくやってくれてる」</p>
+            <p>「でも 1 人で 5 人分のチームを見るのは限界」</p>
+            <p>「もう 1 人雇いたいけど、年収 800 万円……」</p>
+          </div>
+          <p class="text-base text-gray-700 leading-relaxed mb-3">
+            優秀な営業マネジャーは、いつもチームに問いかけています。<br />
+            「あの案件、決裁者と会えてる？」「予算の根拠、確認した？」「競合は把握してる？」
+          </p>
+          <p class="text-base text-gray-700 leading-relaxed mb-3">
+            その問いかけが、若手を育てる。<br />
+            その問いかけが、案件を前に進める。
+          </p>
+          <p class="text-base text-gray-800 font-bold leading-relaxed">
+            でも、マネジャーは 1 人。チームは増えていく。<br />
+            <span class="text-orange-700">★ 全員に同じ質を、毎日届けるのは、無理なのです。</span>
+          </p>
+        </div>
+
+        <!-- 原因 -->
+        <h3 class="text-xl font-bold text-gray-900 mb-6">なぜマネジャーが足りなくなるのか。答えはふたつ。</h3>
+        <div class="space-y-5 mb-12">
+          <div class="bg-gray-50 rounded-xl p-6">
+            <p class="font-bold text-gray-900 mb-2">① 物理的限界 — 1 人で全員を見られない。</p>
+            <p class="text-gray-700 leading-relaxed">
+              案件 50 件、メンバー 5 人。週 1on1 だけで 5 時間。<br />
+              それで案件の細かい状況まで把握できるわけがない。
+            </p>
+          </div>
+          <div class="bg-gray-50 rounded-xl p-6">
+            <p class="font-bold text-gray-900 mb-2">② 属人化 — 営業ノウハウが、マネジャー個人に閉じている。</p>
+            <p class="text-gray-700 leading-relaxed">
+              「決裁者に会う」「予算の根拠を確認する」「競合を把握する」<br />
+              ── これらの判断は、ほとんどがマネジャーの頭の中。<br />
+              メンバーが入れ替わるたびに、伝授しなおしです。
+            </p>
+          </div>
+        </div>
+
+        <!-- 解決 -->
+        <div class="bg-gradient-to-br from-kurage-50 to-cyan-50 border-2 border-kurage-200 rounded-2xl p-8 mb-10">
+          <p class="text-base font-bold text-kurage-700 mb-6">
+            ★ クラゲディールの AI が、マネジャーの分身になります。
+          </p>
+
+          <div class="space-y-6">
+            <div>
+              <p class="font-bold text-gray-900 mb-2">🎓 /coach コマンドで、AI が MEDDPICC で深掘り。</p>
+              <p class="text-sm text-gray-700 leading-relaxed pl-5 border-l-2 border-kurage-200">
+                「ABC 商事の状況は？」と聞くだけ。<br />
+                AI が問い返します:<br />
+                ・決裁者と会えていますか？(Decision Maker)<br />
+                ・予算の根拠は確認済みですか？(Economic Buyer)<br />
+                ・競合は把握していますか？(Competition)<br />
+                ── 全メンバー、全案件に、同じ質の問いかけを。
+              </p>
+            </div>
+            <div>
+              <p class="font-bold text-gray-900 mb-2">📧 顧客への返信メール、AI が下書きを用意。</p>
+              <p class="text-sm text-gray-700 leading-relaxed pl-5 border-l-2 border-kurage-200">
+                返信が来たら、AI が文脈を読んで下書きを生成。<br />
+                Slack で内容を確認、ボタン 1 つで承認 → 自社アドレスから送信。<br />
+                ── マネジャーが添削する時間は、ゼロに。
+              </p>
+            </div>
+            <div>
+              <p class="font-bold text-gray-900 mb-2">🌙 マネジャーが寝ている間も、AI は動く。</p>
+              <p class="text-sm text-gray-700 leading-relaxed pl-5 border-l-2 border-kurage-200">
+                朝のブリーフィング・夕方のコーチングは、マネジャー不在でも届く。<br />
+                出張中・休暇中のメンバーも、自分の時間で AI と対話できる。<br />
+                ── 人間マネジャーの 5 倍の時間、チームに伴走します。
+              </p>
+            </div>
+          </div>
+
+          <div class="mt-6 pt-6 border-t border-kurage-200">
+            <p class="text-sm text-gray-700 leading-relaxed">
+              そして月に 1 度、創業者の鈴木との 30 分のオフィスアワー。<br />
+              AI では届かない「経営の悩み」「業界の動向」は、人間が答えます。
+            </p>
+            <p class="text-xs text-gray-500 mt-2 italic">
+              ※ 月次オフィスアワーは、2026 年 11 月から始まる「β 参加プログラム」の特典です。
+              詳しくは、このページの最後でご案内します。
+            </p>
+          </div>
+
+          <p class="text-base font-bold text-kurage-800 mt-6 leading-relaxed">
+            「マネジャーをもう 1 人雇うか？」<br />
+            ★ その判断の前に、AI マネジャーを試してみてください。
+          </p>
+        </div>
+
+        <!-- /coach Slack mock -->
+        <div class="mb-8 max-w-2xl mx-auto">
+          <SlackMessageMock channel-name="#sales-coach">
+            <SlackBotLine name="あなた" time="14:32">
+              <p>/coach ABC商事</p>
+            </SlackBotLine>
+            <SlackBotLine name="クラゲディール" :bot-badge="true" time="14:32">
+              <p class="font-bold mb-2">🪼 ABC 商事の状況、いくつか確認させてください</p>
+              <ol class="space-y-3 list-decimal list-inside">
+                <li>
+                  <span class="font-semibold">決裁者と会えていますか？</span>
+                  <span class="block text-xs text-gray-500 ml-5">(Decision Maker / Economic Buyer)</span>
+                </li>
+                <li>
+                  <span class="font-semibold">予算 ¥3M の根拠は、お客様からの情報ですか？推測ですか？</span>
+                  <span class="block text-xs text-gray-500 ml-5">(Decision Criteria)</span>
+                </li>
+                <li>
+                  <span class="font-semibold">競合の存在は把握できていますか？</span>
+                  <span class="block text-xs text-gray-500 ml-5">(Competition)</span>
+                </li>
+              </ol>
+              <p class="mt-3 text-xs text-gray-500">気になる項目から、整理していきましょう</p>
+            </SlackBotLine>
+          </SlackMessageMock>
+        </div>
+        <p class="text-center text-sm text-gray-600 mb-12 italic">/coach コマンド一発で、こうした問いかけが届きます。</p>
+
+        <!-- 3 つの特徴チップ -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <div v-for="(c, i) in pain3Chips" :key="i" class="bg-white border border-gray-200 rounded-xl p-5">
+            <p class="text-2xl mb-2">{{ c.icon }}</p>
+            <p class="font-bold text-gray-900 mb-1">{{ c.title }}</p>
+            <p class="text-sm text-gray-600 leading-relaxed">{{ c.desc }}</p>
+          </div>
+        </div>
+
+        <p class="text-center text-gray-500 mt-12 italic">
+          3 つのお悩みを、ご一緒に見てきました。<br />
+          最後に、従来の Slack 連携 CRM ではなく、<br />
+          なぜクラゲディールが選ばれているのか。その理由を整理させてください。
+        </p>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         06. 他のツールとの違い（3 ピラー）
+    ============================================================ -->
+    <section id="comparison" class="bg-ocean-deep py-20 text-white">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6">
+        <p class="text-sm font-bold text-cyan-300 uppercase tracking-widest mb-3 text-center">他のツールとの違い</p>
+        <h2 class="text-3xl md:text-4xl font-black mb-8 text-center leading-tight">
+          1〜10 人の営業チームのために、<br />ゼロから設計した営業 AI です。
+        </h2>
+
+        <div class="bg-white/5 border border-white/10 rounded-2xl p-8 mb-12 text-kurage-100 leading-relaxed">
+          <p class="mb-4">
+            営業ツールには、たくさんの選択肢があります。従来の Slack 連携 CRM もそのひとつ。それぞれ素晴らしい製品です。
+          </p>
+          <p class="mb-4">
+            ただ、1〜10 人の小さな営業チームから見ると、どれも「自分たちのサイズ」には合いません。
+          </p>
+          <p class="text-cyan-200 font-bold">
+            重い。高い。柔軟じゃない。Slack に住んでくれない。
+          </p>
+        </div>
+
+        <!-- 理由 1: 経済性 -->
+        <div class="bg-white/10 rounded-2xl p-6 md:p-8 mb-6">
+          <p class="text-2xl mb-2">💰</p>
+          <h3 class="text-xl md:text-2xl font-black mb-3">理由 1: 経済性 — チームが大きくなっても、月額は変わらない。</h3>
+          <p class="text-kurage-100 leading-relaxed mb-4">
+            従来の Slack 連携 CRM は、多くがユーザー数課金です。チームが 1 人から 10 人に増えれば、月額もリニアに増えていきます。
+          </p>
+          <p class="text-cyan-200 font-bold mb-6">
+            ★ クラゲディールは違います。10 人まで月 ¥9,800、ユーザー数追加課金なし。
+          </p>
+
+          <div class="bg-white/5 border border-white/15 rounded-xl overflow-hidden mb-4">
             <table class="w-full text-sm">
-              <thead>
-                <tr class="bg-ocean-mist/10 border-b border-gray-200">
-                  <th class="text-left px-6 py-4 font-semibold text-gray-600 w-1/3">比較項目</th>
-                  <th class="text-center px-6 py-4">
-                    <span class="inline-flex items-center gap-1.5 font-bold text-kurage-700">
-                      <img src="/kurage-on-white.svg" alt="" class="w-5 h-5" />
-                      クラゲディール
-                    </span>
-                  </th>
-                  <th class="text-center px-6 py-4 font-semibold text-gray-400">
-                    CRM + Slack
-                  </th>
+              <thead class="bg-white/10">
+                <tr>
+                  <th class="text-left px-4 py-3 text-cyan-200">チーム規模</th>
+                  <th class="text-left px-4 py-3 text-cyan-200">クラゲディール</th>
+                  <th class="text-left px-4 py-3 text-cyan-200">従来の Slack 連携 CRM<sup>*</sup></th>
                 </tr>
               </thead>
-              <tbody>
-                <tr
-                  v-for="(row, i) in comparison"
-                  :key="row.label"
-                  :class="[
-                    'border-b border-gray-100',
-                    i % 2 === 0 ? 'bg-white' : 'bg-ocean-mist/5',
-                  ]"
-                >
-                  <td class="px-6 py-4 font-medium text-gray-700">{{ row.label }}</td>
-                  <td class="px-6 py-4 text-center text-kurage-700 font-medium">{{ row.us }}</td>
-                  <td class="px-6 py-4 text-center text-gray-400">{{ row.them }}</td>
-                </tr>
+              <tbody class="divide-y divide-white/10">
+                <tr><td class="px-4 py-3">1 人</td><td class="px-4 py-3 font-bold">¥9,800/月</td><td class="px-4 py-3 text-kurage-300">約 ¥2,250/月</td></tr>
+                <tr><td class="px-4 py-3">5 人</td><td class="px-4 py-3 font-bold">¥9,800/月</td><td class="px-4 py-3 text-kurage-300">約 ¥11,250/月</td></tr>
+                <tr><td class="px-4 py-3">10 人</td><td class="px-4 py-3 font-bold text-cyan-200">¥9,800/月</td><td class="px-4 py-3 text-orange-300">約 ¥22,500/月</td></tr>
               </tbody>
             </table>
           </div>
+          <p class="text-xs text-kurage-300 mb-4">
+            <sup>*</sup> Slack の上位プラン同梱の連携 CRM、1 ユーザーあたり月額 $15 (約 ¥2,250) × チーム人数で算出した目安。
+          </p>
+
+          <p class="text-kurage-100 leading-relaxed mb-3">
+            1 人で使い始めれば、フリーランスでも完全な営業 AI 環境。<br />
+            チームが 10 人に成長しても、月額は変わらず ¥9,800。<br />
+            ── 従来 CRM との差は、月 1.3 万円（年 15.6 万円）に。
+          </p>
+          <p class="text-kurage-100 leading-relaxed mb-3">
+            しかも、Slack の今のプラン（Free / Pro）のまま使えます。プラン乗り換え、不要です。
+          </p>
+          <p class="text-kurage-200 text-sm leading-relaxed mb-4">
+            11 人以上の規模になったら、Enterprise プランで個別対応します。
+          </p>
+          <div class="bg-orange-500/20 border border-orange-400/40 rounded-xl p-4 text-cyan-100 text-sm leading-relaxed">
+            <strong class="text-orange-300">★</strong> さらに、β 参加プログラム（先行 100 社限定）に入れば、<br />
+            <strong class="text-orange-300">5 ヶ月完全無料 + 1 年間半額（¥4,500/月）</strong>。
+          </div>
+        </div>
+
+        <!-- 理由 2: 営業 AI 思考力 -->
+        <div class="bg-white/10 rounded-2xl p-6 md:p-8 mb-6">
+          <p class="text-2xl mb-2">🎓</p>
+          <h3 class="text-xl md:text-2xl font-black mb-3">理由 2: 営業 AI 思考力 — 24 時間動く、AI コーチ。</h3>
+          <p class="text-kurage-100 leading-relaxed mb-4">
+            従来の Slack 連携 CRM は、多くが「データの入れ物」。通知が届く。記録が貯まる。それで終わり。
+          </p>
+          <p class="text-cyan-200 font-bold mb-4">
+            ★ クラゲディールは、営業マネジャーの分身として、AI が 24 時間チームに問いかける。
+          </p>
+          <ul class="space-y-2 text-kurage-100 text-sm leading-relaxed">
+            <li>・自然言語で「田中さんと商談した」と書くだけで、ディール自動更新</li>
+            <li>・MEDDPICC で AI が決裁者・予算・競合を問う</li>
+            <li>・会話のセンチメントで受注確率が動く</li>
+            <li>・14 日停滞案件を自動検知</li>
+            <li>・顧客メールの返信を AI が下書き → Slack 承認 → 自社送信</li>
+            <li>・朝 9 時・夕方 17 時の自動ブリーフィング</li>
+          </ul>
+          <p class="text-kurage-100 leading-relaxed mt-4">
+            従来の Slack 連携 CRM には、この深さは備わっていません。営業に特化した AI を、営業のためだけに鍛えました。
+          </p>
+        </div>
+
+        <!-- 理由 3: 独立性 -->
+        <div class="bg-white/10 rounded-2xl p-6 md:p-8 mb-12">
+          <p class="text-2xl mb-2">🔓</p>
+          <h3 class="text-xl md:text-2xl font-black mb-3">理由 3: 独立性 — データは、あなたのもの。</h3>
+          <p class="text-kurage-100 leading-relaxed mb-4">
+            クラゲディールを使い続けるかどうかは、いつでもあなたが決められます。
+          </p>
+          <p class="text-kurage-100 leading-relaxed mb-4">
+            データは、いつでも CSV / Excel でエクスポート可能。Slack をやめても、Web ダッシュボードからアクセスできます。<br />
+            将来、本格的な大手 CRM に移行する日が来たら、弊社（Salesforce 認定コンサルティングパートナー）が移行を支援します。
+          </p>
+          <p class="text-cyan-200 font-bold leading-relaxed">
+            「逃げ道がある」ことが、一番の信頼の根拠だと、わたしたちは考えています。
+          </p>
+        </div>
+
+        <!-- 締め -->
+        <p class="text-center text-lg md:text-xl text-cyan-100 leading-relaxed">
+          クラゲディールは、1〜10 人の営業チームに最適化された、<br />
+          <strong class="text-cyan-50">唯一の営業 AI</strong> です。<br />
+          <span class="text-base">あなたのチームのサイズに、ぴったり寄り添うために。</span>
+        </p>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         07. 料金（β 特典強調）
+    ============================================================ -->
+    <section id="pricing" class="bg-ocean-sand py-20">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6">
+        <div class="text-center mb-12">
+          <p class="text-2xl font-bold text-gray-800 mb-3">料金</p>
+          <h2 class="text-3xl md:text-4xl font-black text-gray-900 mb-4">シンプルな料金体系</h2>
+          <p class="text-gray-700">ユーザー数課金なし。チーム全員で使えます。</p>
+        </div>
+
+        <!-- 3 プラン -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+          <div
+            v-for="(plan, i) in pricing"
+            :key="i"
+            :class="[
+              'rounded-2xl p-8 bg-white border-2 transition-shadow flex flex-col',
+              plan.featured ? 'border-kurage-500 shadow-lg scale-[1.02]' : 'border-gray-200'
+            ]"
+          >
+            <div v-if="plan.featured" class="inline-block bg-kurage-500 text-white text-xs font-bold px-3 py-1 rounded-full mb-3 w-fit">
+              ★ 最人気
+            </div>
+            <h3 class="text-2xl font-black text-gray-900 mb-2">{{ plan.name }}</h3>
+            <p class="text-3xl font-black text-gray-900 mb-1">{{ plan.price }}</p>
+            <p class="text-sm text-gray-500 mb-6">{{ plan.priceNote }}</p>
+            <ul class="space-y-2 mb-6 flex-1">
+              <li v-for="(f, j) in plan.features" :key="j" class="flex items-start gap-2 text-sm">
+                <span :class="f.ok ? 'text-green-500' : 'text-gray-300'">{{ f.ok ? '✅' : '—' }}</span>
+                <span :class="f.ok ? 'text-gray-700' : 'text-gray-400'">{{ f.label }}</span>
+              </li>
+            </ul>
+            <p class="text-xs text-gray-500 mb-3">{{ plan.startNote }}</p>
+            <a v-if="plan.cta" :href="plan.checkoutUrl" :class="[
+              'block text-center px-5 py-3 rounded-xl font-bold text-sm transition-colors',
+              plan.featured
+                ? 'bg-orange-500 hover:bg-orange-400 text-white'
+                : 'bg-gray-100 hover:bg-gray-200 text-gray-700'
+            ]">{{ plan.cta }}</a>
+          </div>
+        </div>
+        <p class="text-center text-sm text-gray-700 mb-12">
+          ★ クラゲディールは 1〜10 人の営業チームに最適化されています。<br />
+          11 人以上のチームは Enterprise プランで個別にご相談ください。
+        </p>
+
+        <!-- β 参加プログラム特別枠 -->
+        <div class="bg-gradient-to-br from-orange-50 via-orange-100 to-amber-50 border-2 border-orange-400 rounded-2xl p-8 md:p-10 shadow-lg">
+          <div class="text-center mb-6">
+            <div class="inline-block bg-orange-500 text-white text-xs font-bold px-3 py-1 rounded-full mb-3">
+              🪼 100 社限定
+            </div>
+            <h3 class="text-2xl md:text-3xl font-black text-gray-900 mb-2">β 参加プログラム</h3>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+            <div class="bg-white border-2 border-orange-300 rounded-xl p-5 text-center">
+              <p class="text-xs text-gray-500 mb-1">2026/6/9 〜 11/17（5 ヶ月）</p>
+              <p class="text-2xl font-black text-orange-600 mb-1">完全無料</p>
+              <p class="text-xs text-gray-600">Standard 相当の全機能</p>
+            </div>
+            <div class="bg-white border-2 border-cyan-300 rounded-xl p-5 text-center">
+              <p class="text-xs text-gray-500 mb-1">2026/11/18 〜 1 年間</p>
+              <p class="text-2xl font-black text-cyan-600 mb-1">¥4,500/月</p>
+              <p class="text-xs text-gray-600">Standard 通常価格の 50% OFF</p>
+            </div>
+            <div class="bg-white border border-gray-300 rounded-xl p-5 text-center">
+              <p class="text-xs text-gray-500 mb-1">2027/11/18 以降</p>
+              <p class="text-2xl font-black text-gray-700 mb-1">¥9,800/月</p>
+              <p class="text-xs text-gray-600">通常価格・解約自由</p>
+            </div>
+          </div>
+
+          <p class="text-sm text-gray-700 font-bold mb-3">その他特典:</p>
+          <ul class="grid grid-cols-1 md:grid-cols-2 gap-2 text-sm text-gray-700 mb-6">
+            <li>✅ 機能リクエスト優先対応</li>
+            <li>✅ 月次オフィスアワー（鈴木との 30 分・希望者のみ）</li>
+            <li>✅ LP「Pioneers」ロゴ掲載（任意）</li>
+            <li>✅ β 参加者限定 Slack コミュニティ</li>
+          </ul>
+
+          <div class="text-center">
+            <a
+              href="/beta-program"
+              class="inline-block bg-orange-500 hover:bg-orange-400 text-white font-bold px-8 py-4 rounded-xl text-lg shadow-lg transition-colors"
+            >
+              β 参加プログラムに応募する →
+            </a>
+            <div class="text-xs text-gray-600 mt-3 space-y-1">
+              <p>※ 100 社限定・先着順</p>
+              <p>※ 申込時クレジットカード不要</p>
+              <p>※ 11/18 から課金開始（10 月にメールで案内）</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Enterprise 補足 -->
+        <div class="mt-12 bg-white rounded-2xl border border-gray-200 p-8">
+          <h3 class="text-xl font-bold text-gray-900 mb-3">Enterprise プラン について</h3>
+          <p class="text-sm text-gray-700 mb-4 leading-relaxed">
+            11 人以上のチーム・カスタマイズが必要な企業向けに、Enterprise プランをご用意しています。
+          </p>
+          <ul class="space-y-2 text-sm text-gray-700 mb-6">
+            <li>・ユーザー数に応じた個別見積もり</li>
+            <li>・カスタム機能開発のご相談</li>
+            <li>・優先サポート</li>
+            <li>・SSO・セキュリティ要件への対応</li>
+          </ul>
+          <a
+            href="/free"
+            class="inline-block bg-gray-100 hover:bg-gray-200 text-gray-800 font-bold px-6 py-3 rounded-xl text-sm transition-colors"
+          >
+            Enterprise についてご相談 →
+          </a>
+          <p class="text-xs text-gray-500 mt-4 leading-relaxed">
+            ※ クラゲディールは小規模営業チーム向けに最適化された製品です。
+            大規模なエンタープライズ用途では Salesforce 等の選択肢もご検討いただくことをお勧めしています。
+            弊社（Salesforce 認定コンサルティングパートナー）が、最適な選択をご一緒に検討します。
+          </p>
         </div>
       </div>
     </section>
 
     <!-- ============================================================
-         FAQ
+         08. 仲間（β 4 社）
+    ============================================================ -->
+    <section id="pioneers" class="bg-white py-20">
+      <div class="max-w-3xl mx-auto px-4 sm:px-6 text-center">
+        <p class="text-2xl font-bold text-gray-800 mb-3">Pioneers</p>
+        <h2 class="text-3xl md:text-4xl font-black text-gray-900 mb-4">すでに、選んでくださった会社があります。</h2>
+        <p class="text-gray-700 leading-relaxed mb-10">
+          2026 年 5 月、プライベート β を開始しました。<br />
+          最初の仲間は、4 社の経営層でした。
+        </p>
+
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-10">
+          <div v-for="p in pioneers" :key="p.name" class="bg-gray-50 border border-gray-200 rounded-xl p-5 flex flex-col items-center justify-center">
+            <p class="text-3xl mb-2">{{ p.icon }}</p>
+            <p class="font-bold text-gray-900 mb-1">{{ p.name }}</p>
+            <p class="text-xs text-gray-500">{{ p.industry }}</p>
+          </div>
+        </div>
+
+        <p class="text-sm text-gray-600 leading-relaxed">
+          共通するのは、「Slack で営業を回す現場」を持っていること。<br />
+          そしてみなさん、経営層が直接、毎日触ってくださっています。
+        </p>
+        <p class="text-sm text-gray-500 mt-4 italic">
+          正式版ローンチに合わせて、もうすぐ事例公開を予定しています。
+        </p>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         09. FAQ
     ============================================================ -->
     <section id="faq" class="bg-ocean-tan/80 py-20">
       <div class="max-w-3xl mx-auto px-4 sm:px-6">
+        <h2 class="text-3xl md:text-4xl font-black text-gray-900 mb-10 text-center">よくあるご質問</h2>
 
-        <!-- Trust badge -->
-         <!--
-        <div class="bg-kurage-50 border border-kurage-100 rounded-2xl p-8 mb-12">
-          <div class="flex gap-4 items-start">
-            <span class="text-4xl">🏅</span>
-            <div>
-              <h3 class="text-lg font-bold text-gray-900 mb-2">
-                Salesforce 認定パートナーが、自分たちのために作ったツール
-              </h3>
-              <p class="text-gray-600 leading-relaxed text-sm">
-                Salesforce 認定コンサルティングパートナーとして CRM 支援をするなかで気づきました。<br />
-                「5〜30人のチームには、これは重すぎる」と。<br />
-                だから私たち自身が毎日使えるものを、自分たちで作りました。
-              </p>
-            </div>
-          </div>
-        </div>-->
-
-        <div class="text-center mb-14">
-          <p class="text-2xl font-bold text-gray-700 mb-3">FAQ</p>
-          <h2 class="text-3xl md:text-4xl font-black text-gray-700 mb-4">よくある質問</h2>
-        </div>
-
-        <div class="space-y-4">
-          <div
-            v-for="faq in faqs"
-            :key="faq.q"
-            class="bg-white rounded-2xl border border-gray-200 overflow-hidden"
+        <div class="space-y-3">
+          <details
+            v-for="(faq, i) in faqs"
+            :key="i"
+            class="bg-white border border-gray-200 rounded-xl group"
           >
-            <button
-              class="w-full text-left px-6 py-5 flex justify-between items-start gap-4 font-semibold text-gray-900"
-              @click="faq.open = !faq.open"
-            >
-              <span>Q. {{ faq.q }}</span>
-              <span class="text-kurage-500 text-xl shrink-0">{{ faq.open ? '−' : '+' }}</span>
-            </button>
-            <div v-if="faq.open" class="px-6 pb-5 text-gray-600 text-sm leading-relaxed border-t border-gray-100 pt-4">
-              {{ faq.a }}
-            </div>
-          </div>
+            <summary class="font-semibold text-gray-900 cursor-pointer p-5 flex items-center justify-between list-none">
+              <span>{{ faq.q }}</span>
+              <span class="text-gray-400 group-open:rotate-180 transition-transform flex-shrink-0 ml-3">▼</span>
+            </summary>
+            <p class="text-sm text-gray-700 px-5 pb-5 leading-relaxed whitespace-pre-line">{{ faq.a }}</p>
+          </details>
         </div>
       </div>
     </section>
 
     <!-- ============================================================
-         BOTTOM CTA
+         10. 最終 CTA + β 参加プログラム告知
     ============================================================ -->
     <section class="bg-gradient-to-br from-kurage-900 to-kurage-700 text-white py-20">
       <div class="max-w-3xl mx-auto px-4 sm:px-6 text-center">
         <img src="/kurage-on-green.svg" alt="クラゲディール" class="w-20 h-20 mx-auto mb-6 kurage-float" />
-        <h2 class="text-3xl md:text-4xl font-black mb-4">
-          2026 年秋、正式版ローンチへ。
-        </h2>
-        <p class="text-kurage-100 mb-10 text-lg leading-relaxed">
-          現在プライベート β 運用中。ウェイトリストに登録すると、<br/>
-          アーリーアダプター 100 社プログラムを 24 時間先行でご案内します。
+
+        <p class="text-base text-kurage-100 mb-6 leading-relaxed">
+          ここまで読んでくださって、ありがとうございます。
         </p>
-        <button
-          @click="openWaitlistModal"
-          class="inline-flex items-center gap-2 bg-orange-500 hover:bg-orange-400 text-white font-bold px-10 py-5 rounded-xl text-xl transition-colors shadow-lg"
-        >
-          正式版ウェイトリストに登録 →
-        </button>
-        <p class="text-kurage-300 text-xs mt-10">
-          売上の一部は、<a href="https://www.nippon-foundation.or.jp/donation/ocean-project-fund" target="_blank" rel="noopener" class="underline hover:text-white transition-colors">日本財団 海洋プロジェクト基金</a>に寄付されます。
+        <p class="text-base text-kurage-100 mb-10 leading-relaxed">
+          もし、クラゲディールが「自分の営業チームに合いそうだ」と感じていただけたなら、<br />
+          ぜひ、その続きを一緒に書きませんか。
+        </p>
+
+        <div class="bg-white/10 border border-white/20 rounded-2xl p-6 md:p-8 mb-10 text-left">
+          <p class="text-sm text-kurage-100 mb-4 leading-relaxed">
+            2026 年 11 月 18 日、正式版をローンチします。<br />
+            そのとき、最初の 100 社を「β 参加プログラム」として迎えます。
+          </p>
+          <ul class="space-y-2 text-sm text-kurage-50">
+            <li>✅ ピリオド 1（5 ヶ月）の利用は完全無料</li>
+            <li>✅ ピリオド 2 から 1 年間 50% OFF（¥4,500/月）</li>
+            <li>✅ 機能リクエストの優先対応</li>
+            <li>✅ 月次オフィスアワー（鈴木との 30 分）</li>
+            <li>✅ LP・PR 素材へのロゴ掲載（任意）</li>
+            <li>✅ β 参加者限定 Slack コミュニティ</li>
+          </ul>
+        </div>
+
+        <!-- ボトム CTA（phase0 想定） -->
+        <div class="flex flex-col sm:flex-row gap-4 justify-center mb-8">
+          <button
+            @click="openWaitlistModal"
+            class="inline-flex items-center justify-center gap-2 bg-orange-500 hover:bg-orange-400 text-white font-bold px-8 py-4 rounded-xl text-lg transition-colors shadow-lg"
+          >
+            正式版ウェイトリストに登録 →
+          </button>
+          <a
+            href="/beta-program"
+            class="inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 border border-white/30 text-white font-medium px-8 py-4 rounded-xl text-lg transition-colors"
+          >
+            β 参加プログラムを見る
+          </a>
+        </div>
+        <p class="text-xs text-kurage-300 mb-10">
+          ※ 100 社限定・先着順 / ※ 申込時クレジットカード不要
+        </p>
+
+        <p class="text-xs text-kurage-200 mb-3">
+          それまで、note と X で開発状況をお伝えしています。
+        </p>
+        <div class="flex justify-center gap-4 mb-10 text-xs text-kurage-200">
+          <a href="#" class="underline hover:text-white">note</a>
+          <a href="#" class="underline hover:text-white">X</a>
+        </div>
+
+        <p class="text-kurage-300 text-xs">
+          🌊 売上の一部は、<a href="https://www.nippon-foundation.or.jp/donation/ocean-project-fund" target="_blank" rel="noopener" class="underline hover:text-white transition-colors">日本財団 海洋プロジェクト基金</a>に寄付されます。
         </p>
       </div>
     </section>
@@ -534,7 +858,6 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 
-// ウェイトリストモーダルの開閉状態
 const waitlistOpen = ref(false)
 function openWaitlistModal() {
   waitlistOpen.value = true
@@ -543,100 +866,26 @@ function openWaitlistModal() {
 const personas = [
   { icon: '🏢', text: '社員5人のIT企業。社長が営業も兼務。商談管理はスプレッドシート' },
   { icon: '👥', text: '営業3人の人材会社。CRMを導入したが誰も入力しない' },
-  { icon: '🚀', text: '10人のスタートアップ。急成長で商談が増え、フォロー漏れが出始めた' },
+  { icon: '🚀', text: '6人のスタートアップ。急成長で商談が増え、フォロー漏れが出始めた' },
   { icon: '🔧', text: '一人社長のコンサル。クライアント20社の関係を頭の中で管理している' },
 ]
 
-const features = [
-  {
-    icon: '🎯',
-    title: 'ディールベースでシンプル',
-    desc: 'リード・取引先責任者・商談・活動…複雑なCRMの画面遷移は不要。「ディール」1画面に顧客・活動・成約見込み・コーチングが全部まとまる。初日から誰でも使える。',
-  },
-  {
-    icon: '💬',
-    title: 'Slackだけで完結',
-    desc: '新しいアプリを覚える必要なし。「田中さんに電話した」とSlackに書くだけで記録完了。チーム全員が毎日使える。',
-  },
-  {
-    icon: '🧠',
-    title: 'AIが勝手に確率を更新する',
-    desc: 'メールや会話のニュアンスをAIが読み取り、入力ゼロで受注確率が自動アップデートされる。「難しいですね」は断りシグナル、「費用はいくら？」はホットシグナル——人間が気づく前にAIが察知。さらにAIが返信メールの下書きをSlackに届け、ボタン1つで送信できる。',
-  },
-  {
-    icon: '💰',
-    title: '圧倒的な低価格',
-    desc: '大手CRMの1/10以下。プラン内ユーザー数の追加費用なし。10人チームで月¥9,800。導入コストも運用ルール策定も不要。即日使い始められます。',
-  },
+const pain1Chips = [
+  { icon: '🎯', title: 'ディールベース', desc: 'ディール 1 画面に、商談・顧客・活動を集約' },
+  { icon: '💬', title: 'Slack だけで完結', desc: '新しいアプリも研修も、いらない' },
+  { icon: '💰', title: 'Slack をそのまま使う', desc: '今のプランで、強力な営業ツールに' },
 ]
 
-const benefits = [
-  {
-    icon: '⏱️',
-    title: '入力ゼロ → 営業時間を取り戻す',
-    desc: '「CRMへの入力に1日30分」は業界の常識。クラゲディールなら、Slackに一言書くだけで自動記録。営業1人あたり月10時間の入力作業がゼロに。その時間を商談に使えば、1件でも多く受注できます。',
-    metric: '📊 試算: 営業5人 × 10時間 × 時給¥3,000 = 月¥150,000の隠れコスト削減',
-  },
-  {
-    icon: '🌱',
-    title: '新人がベテラン並みに動ける → 採用コストを抑える',
-    desc: 'AIコーチは、すべてのディールに対して「この案件、次に何をすべきか？」「決裁者に会えていますか？」とMEDDPICC方法論で問いかけます。エキスパート営業マネージャーの判断を、AIが全案件に24時間提供。',
-    metric: '💡 営業マネージャー年収600〜900万円 → AIコーチ年額¥117,600（Standard）',
-  },
-  {
-    icon: '🚨',
-    title: 'フォロー漏れゼロ → 失注を防ぐ',
-    desc: '「あの案件、2週間フォローしてなかった…」クラゲディールは14日放置された案件を自動検出し、毎朝のブリーフィングで警告。夕方にはコーチング質問をプッシュ通知。',
-    metric: '1件の失注を防げれば、年間のクラゲディール利用料は余裕で回収できます',
-  },
+const pain2Chips = [
+  { icon: '🌅🌆', title: '朝夕のブリーフィング', desc: '1 日のはじめと終わりに、AI が伴走' },
+  { icon: '🧠', title: 'AI が受注確率を自動更新', desc: '会話のニュアンスで動く数字' },
+  { icon: '⚠️', title: '14 日停滞、自動検知', desc: '忘れ去られる前にアラート' },
 ]
 
-const usecases = [
-  {
-    icon: '🚀',
-    title: 'エンジニア創業のスタートアップ',
-    subtitle: '「営業を雇わなくていい」',
-    problem:
-      'プロダクトは強い。でも営業がいない。エンジニア2人で創業。問い合わせは来るけど、フォローが追いつかない。営業を1人雇うと月40万。でもまだそのフェーズじゃない。',
-    solution:
-      '→ クラゲディールなら、問い合わせをSlackにメモするだけでAIが管理。「あの見込み客、1週間放置してますよ」とAIが毎朝教えてくれる。コーチングが「次は決裁者に会いましょう」と具体的に指示。営業スタッフゼロでも、商談を前に進められます。',
-  },
-  {
-    icon: '🏢',
-    title: '社長が営業も兼務する会社',
-    subtitle: '「頭の中の営業管理を外に出す」',
-    problem:
-      '社員5人。社長が営業もバックオフィスも全部やってる。クライアント30社の状況は全部社長の頭の中。たまにフォロー忘れて失注。「あの件どうなった？」と聞かれて焦る。',
-    solution:
-      '→ 「田中さんに電話した。来月デモ設定」とSlackに書くだけ。社長の頭の中が、検索できるディール管理に変わる。出張中でも毎朝ブリーフィングが来るから、抜け漏れゼロ。',
-  },
-  {
-    icon: '👥',
-    title: 'CRMを導入したけど誰も使わない会社',
-    subtitle: '「ちゃんと続く営業管理」',
-    problem:
-      '営業3人の人材紹介会社。CRM入れたのに、入力率20%。「入力が面倒」「外出先で開けない」「項目が多すぎる」。結局マネージャーが口頭で聞いてExcelにまとめ直す日々。',
-    solution:
-      '→ Slackに「鈴木さんとMTGした。要件ヒアリング完了」と書くだけで記録完了。画面を開いて項目を埋める作業がゼロ。だから全員が毎日使える。記録が100%残るから、AIがコーチングを生成。',
-  },
-  {
-    icon: '📈',
-    title: '急成長中の10人チーム',
-    subtitle: '「マネージャーの分身が欲しい」',
-    problem:
-      'SaaS営業10人。商談が月50件を超えて、マネージャーが全案件を見切れない。「あの案件、止まってない？」「競合出てきたの知ってる？」週1の1on1じゃ追いつかない。でもマネージャーをもう1人雇う余裕はない。',
-    solution:
-      '→ AIが全50案件を毎日診断。滞留・危険・クロージング間近を自動仕分け。「この案件14日止まってます。何がブロッカーですか？」マネージャーの問いかけを、AIが24時間×全案件でやってくれる。年収800万のマネージャーの仕事を、月¥9,800で。',
-  },
-  {
-    icon: '🔧',
-    title: 'フリーランス・一人社長',
-    subtitle: '「自分専用のAI営業アシスタント」',
-    problem:
-      'コンサル業。クライアント15社を一人で回している。提案中・契約中・フォロー待ちが混在して、どこから手をつけるかわからない。「今月クローズできそうな案件は？」を即答できない。',
-    solution:
-      '→ Freeプランで十分。毎朝「今日やるべきこと」がSlackに届く。「山田商事、確率70%。クローズ日を確認しましょう」一人でもAIアシスタントがいれば、20社でも回せます。',
-  },
+const pain3Chips = [
+  { icon: '🎓', title: 'MEDDPICC コーチング', desc: 'AI が全員に質の高い問いかけ' },
+  { icon: '📧', title: 'AI メール下書き', desc: '返信を自動生成、承認するだけ' },
+  { icon: '🌙', title: '24 時間動く', desc: 'マネジャーの不在時間も埋める' },
 ]
 
 const API_URL = 'https://slacksfa-api-808596335261.asia-northeast1.run.app'
@@ -645,12 +894,14 @@ const pricing = [
   {
     name: 'Free',
     price: '¥0',
+    priceNote: '/ 月',
     featured: false,
-    cta: '無料で始める',
-    checkoutUrl: `${API_URL}/slack/install`,
+    cta: '',  // phase0: ボタンは出さない（11/18 開始予定なので）
+    checkoutUrl: '',
+    startNote: '2026/11/18 提供開始',
     features: [
-      { ok: true, label: 'ユーザー 3名まで' },
-      { ok: true, label: 'AI利用 月100回' },
+      { ok: true, label: 'ユーザー 3 名まで' },
+      { ok: true, label: 'AI 利用 月 100 回' },
       { ok: true, label: 'コーチング機能' },
       { ok: false, label: '日次ブリーフィング' },
       { ok: false, label: 'ナーチャリング' },
@@ -660,12 +911,14 @@ const pricing = [
   {
     name: 'Standard',
     price: '¥9,800',
+    priceNote: '/ 月',
     featured: true,
-    cta: '今すぐ申し込む',
-    checkoutUrl: `${API_URL}/slack/install`,
+    cta: 'ウェイトリストに登録',
+    checkoutUrl: '#',  // phase0: ボタンは出すが waitlist モーダルにつなぎたい場合は別途実装
+    startNote: '2026/11/18 提供開始',
     features: [
-      { ok: true, label: 'ユーザー 10名まで' },
-      { ok: true, label: 'AI利用 月5,000回' },
+      { ok: true, label: 'ユーザー 10 名まで' },
+      { ok: true, label: 'AI 利用 月 5,000 回' },
       { ok: true, label: 'コーチング機能' },
       { ok: true, label: '日次ブリーフィング' },
       { ok: true, label: 'ナーチャリング' },
@@ -673,14 +926,16 @@ const pricing = [
     ],
   },
   {
-    name: 'Premium',
-    price: '¥29,800',
+    name: 'Enterprise',
+    price: 'お問い合わせ',
+    priceNote: '個別見積もり',
     featured: false,
-    cta: 'お問い合わせ',
+    cta: 'ご相談',
     checkoutUrl: '/free',
+    startNote: '2026/11/18 提供開始',
     features: [
-      { ok: true, label: 'ユーザー 無制限' },
-      { ok: true, label: 'AI利用 無制限' },
+      { ok: true, label: 'ユーザー 11 名以上' },
+      { ok: true, label: 'AI 利用 個別設定' },
       { ok: true, label: 'コーチング機能' },
       { ok: true, label: '日次ブリーフィング' },
       { ok: true, label: 'ナーチャリング' },
@@ -689,81 +944,51 @@ const pricing = [
   },
 ]
 
-const comparison = [
-  {
-    label: 'データ構造',
-    us: 'ディール1画面に全集約（アプローチ中〜クローズまで）',
-    them: 'リード・取引先責任者・商談・活動が別画面',
-  },
-  {
-    label: '学習コスト',
-    us: 'ゼロ（Slackに話すだけ）',
-    them: '研修 + 運用ルール策定が必要',
-  },
-  {
-    label: '月額（10人チーム）',
-    us: '¥9,800',
-    them: '¥56,000〜470,000',
-  },
-  {
-    label: '導入期間',
-    us: '30分',
-    them: '3〜6ヶ月',
-  },
-  {
-    label: '入力時間',
-    us: '1行（Slackに書くだけ）',
-    them: '1日30分（画面を開いて項目入力）',
-  },
-  {
-    label: 'AIコーチング',
-    us: '営業特化（MEDDPICC + 状況診断）',
-    them: 'オプション',
-  },
-  {
-    label: '会話センチメント分析',
-    us: '自動（入力ゼロで確率変動）',
-    them: 'オプション',
-  },
-  {
-    label: 'AI返信下書き',
-    us: 'あり（Slackで承認→即送信）',
-    them: 'オプション',
-  },
-  {
-    label: 'AI返信アシスト',
-    us: '返信をAIが読んで下書き生成→Slackで承認→即送信',
-    them: 'なし（手動入力のみ）',
-  },
+const pioneers = [
+  { name: 'OPRO',    icon: '📦', industry: '帳票・CRM SaaS' },
+  { name: 'Opti',    icon: '🛒', industry: 'eコマース・D2C' },
+  { name: 'WeLearn', icon: '🎓', industry: '人材・教育' },
+  { name: 'SI Inc',  icon: '🏗', industry: 'SI・受託' },
 ]
 
-const faqs = reactive([
+const faqs = [
   {
-    q: '将来、別のCRMに移行できますか？',
-    a: 'はい。クラゲディールのデータはCSV/Excelでエクスポート可能です。組織が成長して部門間の権限設定等の機能が必要になった際には、スムースな移行が可能です。「今はクラゲディール、いつかマルチロールなCRM」——弊社はどちらのフェーズでもお手伝いできます。',
-    open: false,
+    q: 'β 参加プログラムは本当に 5 ヶ月完全無料ですか？',
+    a: 'はい。クレジットカード入力も不要です。10 月中旬に「11/18 から課金開始」の事前案内をお送りし、そこでクレカ登録をお願いする流れです。',
   },
   {
-    q: '30人以上の会社でも使えますか？',
-    a: 'Premiumプラン（¥29,800/月）でユーザー数無制限に対応しています。50人以上の組織でカスタマイズが必要な場合は、Enterpriseプラン（個別見積もり）をご相談ください。',
-    open: false,
+    q: '100 社が埋まったらどうなりますか？',
+    a: 'ピリオド 1 中の β 参加は 100 社で締め切りますが、ウェイトリストにご登録いただくと、11/18 の正式版開始時に Free / Standard / Enterprise のいずれかをお選びいただけます。',
   },
   {
-    q: '既存のSlackワークスペースに導入できますか？',
-    a: 'はい。既存のSlackワークスペースにクラゲディールのアプリを追加するだけで利用開始できます。新しいワークスペースを作る必要はありません。',
-    open: false,
+    q: '従来の Slack 連携 CRM との違いは？',
+    a: 'クラゲディールは「Slack そのものが営業ツール」として設計されています。従来の Slack 連携 CRM では、別途 CRM の利用契約が必要で、Slack は「通知パイプ」や「lightweight な機能」の役割にとどまります。クラゲディールは MEDDPICC コーチング・センチメント分析・自動メール下書きなど、営業に特化した深い AI 機能を Slack 内で完結して提供します。また、ユーザー数課金がないため、チームが大きくなっても月額が一定です。',
+  },
+  {
+    q: '将来、別の CRM に移行できますか？',
+    a: 'はい。クラゲディールのデータはいつでも CSV / Excel でエクスポート可能です。組織が成長してより大規模な CRM が必要になった際、弊社は Salesforce 認定コンサルティングパートナーとして、移行先の選定からデータマイグレーションまでスムーズに支援します。',
+  },
+  {
+    q: '11 人以上の営業チームでも使えますか？',
+    a: 'クラゲディールは 1〜10 人の小規模営業チームに最適化された製品です。11 人以上のチームは Enterprise プラン（個別見積もり）で対応します。ユーザー数・必要な機能・セキュリティ要件等に応じてご提案します。\n30 人を超える大規模チームでは、Salesforce 等の選択肢もご検討いただくことをお勧めしています。弊社は Salesforce 認定コンサルティングパートナーとして、最適な選択をご一緒に検討します。',
+  },
+  {
+    q: '既存の Slack ワークスペースに導入できますか？',
+    a: 'はい。既存の Slack ワークスペースに「クラゲディールを追加」ボタン 1 つで完了します。新しいワークスペースを作る必要はありません。',
+  },
+  {
+    q: 'Slack を使っていない会社でも使えますか？',
+    a: 'クラゲディールは Slack ワークスペースが前提です。Slack の Free プランでも導入できますので、まず Slack を導入していただくことをお勧めします。',
   },
   {
     q: 'データのセキュリティは大丈夫ですか？',
-    a: 'データはGCP（Google Cloud Platform）上で管理され、通信はSSL/TLSで暗号化されています。顧客データはテナントごとに分離して保管されます。',
-    open: false,
+    a: 'データは Google Cloud Platform 上で管理され、通信は SSL/TLS で暗号化されています。テナントごとに PostgreSQL の Row-Level Security で物理的に分離。お客様の営業データが AI の学習に使用されることはありません。',
   },
   {
-    q: '営業データはAIの学習に使われますか？',
-    a: 'いいえ。お客様の営業データ（顧客情報・商談内容・メール等）はAIのトレーニングには一切使用しません。データはお客様専用の領域に分離して保管されます。',
-    open: false,
+    q: 'AI が提案する受注確率はどのように計算されますか？',
+    a: '商談の活動履歴と会話のセンチメント（前向き / 要検討 / 断り気配）から AI が分析します。「予算は問題ない」のような肯定的な発言は確率を上げ、「難しいですね」のような否定的な発言は下げます。14 日間動きがない場合は時間減衰で自動的に下方修正されます。',
   },
-])
+]
 </script>
 
 <style scoped>
@@ -775,5 +1000,10 @@ const faqs = reactive([
 
 .kurage-float {
   animation: float 4s ease-in-out infinite;
+}
+
+/* details の summary をモダンに */
+details summary::-webkit-details-marker {
+  display: none;
 }
 </style>
