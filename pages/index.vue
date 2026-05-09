@@ -28,20 +28,14 @@
               <span class="text-sm text-kurage-200">（11人以上は Enterprise プランで対応）</span>
             </p>
 
-            <!-- CTAs（phase0: ウェイトリスト主軸 + β 参加相談）。Day 7 で動的切替に置換予定 -->
-            <div class="flex flex-col sm:flex-row gap-4 mb-4">
+            <!-- CTA（phase0: ウェイトリスト主軸）。Day 7 で動的切替に置換予定 -->
+            <div class="mb-4">
               <button
                 @click="openWaitlistModal"
                 class="inline-flex items-center justify-center gap-2 bg-orange-500 hover:bg-orange-400 text-white font-bold px-8 py-4 rounded-xl text-lg transition-colors shadow-lg"
               >
                 正式版ウェイトリストに登録 →
               </button>
-              <a
-                href="/free"
-                class="inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 border border-white/30 text-white font-medium px-8 py-4 rounded-xl text-lg transition-colors"
-              >
-                個別にご相談
-              </a>
             </div>
             <p class="text-xs text-kurage-200 max-w-xl leading-relaxed">
               ※ 現在プライベート β 運用中。2026 年 11 月 18 日に正式版ローンチ予定。<br />
@@ -432,7 +426,7 @@
 
           <div class="mt-6 pt-6 border-t border-kurage-200">
             <p class="text-sm text-gray-700 leading-relaxed">
-              そして月に 1 度、創業者の鈴木との 30 分のオフィスアワー。<br />
+              そして月に 1 度、担当者との 30 分のオフィスアワー。<br />
               AI では届かない「経営の悩み」「業界の動向」は、人間が答えます。
             </p>
             <p class="text-xs text-gray-500 mt-2 italic">
@@ -687,7 +681,7 @@
           <p class="text-sm text-gray-700 font-bold mb-3">その他特典:</p>
           <ul class="grid grid-cols-1 md:grid-cols-2 gap-2 text-sm text-gray-700 mb-6">
             <li>✅ 機能リクエスト優先対応</li>
-            <li>✅ 月次オフィスアワー（鈴木との 30 分・希望者のみ）</li>
+            <li>✅ 月次オフィスアワー（担当者との 30 分・希望者のみ）</li>
             <li>✅ LP「Pioneers」ロゴ掲載（任意）</li>
             <li>✅ β 参加者限定 Slack コミュニティ</li>
           </ul>
@@ -735,8 +729,9 @@
     </section>
 
     <!-- ============================================================
-         08. 仲間（β 4 社）
+         08. 仲間（β 4 社）— 各社の許諾取得まで非表示
     ============================================================ -->
+    <!--
     <section id="pioneers" class="bg-white py-20">
       <div class="max-w-3xl mx-auto px-4 sm:px-6 text-center">
         <p class="text-2xl font-bold text-gray-800 mb-3">Pioneers</p>
@@ -763,6 +758,7 @@
         </p>
       </div>
     </section>
+    -->
 
     <!-- ============================================================
          09. FAQ
@@ -811,7 +807,7 @@
             <li>✅ ピリオド 1（5 ヶ月）の利用は完全無料</li>
             <li>✅ ピリオド 2 から 1 年間 50% OFF（¥4,500/月）</li>
             <li>✅ 機能リクエストの優先対応</li>
-            <li>✅ 月次オフィスアワー（鈴木との 30 分）</li>
+            <li>✅ 月次オフィスアワー（担当者との 30 分）</li>
             <li>✅ LP・PR 素材へのロゴ掲載（任意）</li>
             <li>✅ β 参加者限定 Slack コミュニティ</li>
           </ul>

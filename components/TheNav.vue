@@ -18,17 +18,17 @@
         <a href="/#faq" class="hover:text-kurage-600 transition-colors">FAQ</a>
         <a href="/guide" class="hover:text-kurage-600 transition-colors">使い方ガイド</a>
         <a
-          href="/free"
-          class="bg-kurage-600 text-white px-4 py-2 rounded-lg hover:bg-kurage-700 transition-colors"
-          >無料で始める</a
+          href="/beta-program"
+          class="bg-orange-500 text-white px-4 py-2 rounded-lg hover:bg-orange-400 transition-colors font-bold"
+          >β 参加プログラム</a
         >
       </div>
 
       <!-- Mobile CTA -->
       <a
-        href="/free"
-        class="md:hidden bg-kurage-600 text-white text-sm px-4 py-2 rounded-lg hover:bg-kurage-700 transition-colors"
-        >無料で始める</a
+        href="/beta-program"
+        class="md:hidden bg-orange-500 text-white text-sm px-4 py-2 rounded-lg hover:bg-orange-400 transition-colors font-bold"
+        >β 参加プログラム</a
       >
     </nav>
   </header>

@@ -118,7 +118,7 @@
         <div class="bg-blue-50 border border-blue-200 rounded-2xl p-6 mb-8 text-sm text-gray-700 leading-relaxed">
           <p class="font-semibold text-gray-900 mb-2">先着 100 社限定</p>
           <p class="mb-3">
-            鈴木が応募内容を確認した上で、5 営業日以内に個別にご返信します。
+            担当者が応募内容を確認した上で、5 営業日以内に個別にご返信します。
             応募多数の場合、すべての応募に β 枠をご用意できないことをあらかじめご了承ください。
           </p>
           <p class="font-semibold text-gray-900 mb-1">選抜基準（参考）</p>
@@ -148,7 +148,7 @@
           <h3 class="text-xl font-bold text-gray-900 mb-2">ご応募ありがとうございます！</h3>
           <p class="text-sm text-gray-700 mb-4 leading-relaxed">
             確認メールをお送りしました。<br/>
-            鈴木より 5 営業日以内に個別にご返信いたします。
+            担当者より 5 営業日以内に個別にご返信いたします。
           </p>
           <a href="/" class="inline-block text-kurage-600 hover:underline font-medium">
             トップページに戻る
@@ -352,7 +352,7 @@ const benefits = [
   { icon: '✨', title: 'ピリオド 1 完全無料', desc: '6/9 〜 11/17（5 ヶ月）の利用は完全無料。クレジットカード登録も不要です。' },
   { icon: '💸', title: 'ピリオド 2 から 1 年間 50% OFF', desc: '11/18 〜 月額 ¥4,500（通常 ¥9,800 の半額）が 1 年間継続。' },
   { icon: '🎯', title: '機能リクエスト優先対応', desc: 'β 参加者からのご要望を最優先で実装します。プロダクト方向性に直接関与できます。' },
-  { icon: '☕', title: '月次オフィスアワー', desc: '鈴木との 30 分の 1on1（希望者のみ）。営業 DX の壁打ち相手として。' },
+  { icon: '☕', title: '月次オフィスアワー', desc: '担当者との 30 分の 1on1（希望者のみ）。営業 DX の壁打ち相手として。' },
   { icon: '🪼', title: 'ロゴ掲載・限定コミュニティ', desc: 'LP・PR 素材への露出（任意）+ β 参加者限定 Slack コミュニティ。' },
   { icon: '🚀', title: 'AgentExchange Featured 露出機会', desc: 'Salesforce AgentExchange 公開時の Featured Customer として紹介可能。' },
 ]
@@ -376,7 +376,7 @@ const faqs = [
   },
   {
     q: '応募から承認までの流れは?',
-    a: '1. フォーム送信 → 確認メール自動送付\n2. 鈴木が応募内容を確認（5 営業日以内）\n3. 承認の場合、Slack インストールリンクと共にご返信\n4. 6/9 から β プログラム利用開始'
+    a: '1. フォーム送信 → 確認メール自動送付\n2. 担当者が応募内容を確認（5 営業日以内）\n3. 承認の場合、Slack インストールリンクと共にご返信\n4. 6/9 から β プログラム利用開始'
   },
   {
     q: 'チーム規模が 31 人以上の場合は?',
