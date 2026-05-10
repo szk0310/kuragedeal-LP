@@ -38,8 +38,8 @@
               </button>
             </div>
             <p class="text-xs text-kurage-200 max-w-xl leading-relaxed">
-              ※ 現在プライベート β 運用中。2026 年 11 月 18 日に正式版ローンチ予定。<br />
-              それまでの 5 ヶ月、先行 100 社の β 参加プログラム（完全無料）を募集中。
+              ※ 2026 年 11 月 18 日に正式版ローンチ予定。<br />
+              それまでの間、3 ヶ月の β 試用（完全無料・審査なし・即時アクティベート）を提供中。
               <a href="/beta-program" class="underline hover:text-white">詳しくはこちら →</a>
             </p>
           </div>
@@ -551,8 +551,8 @@
             11 人以上の規模になったら、Enterprise プランで個別対応します。
           </p>
           <div class="bg-orange-500/20 border border-orange-400/40 rounded-xl p-4 text-cyan-100 text-sm leading-relaxed">
-            <strong class="text-orange-300">★</strong> さらに、β 参加プログラム（先行 100 社限定）に入れば、<br />
-            <strong class="text-orange-300">5 ヶ月完全無料 + 1 年間半額（¥4,500/月）</strong>。
+            <strong class="text-orange-300">★</strong> 今なら <strong class="text-orange-300">3 ヶ月完全無料</strong>の β 試用を提供中（審査なし・即時アクティベート）。<br />
+            さらに <strong class="text-orange-300">先行 100 社限定のウェイトリスト</strong>に登録すれば、正式版開始から <strong class="text-orange-300">1 年間半額（¥4,500/月）</strong>で継続できます。
           </div>
         </div>
 
@@ -651,30 +651,57 @@
           11 人以上のチームは Enterprise プランで個別にご相談ください。
         </p>
 
-        <!-- β 参加プログラム特別枠 -->
-        <div class="bg-gradient-to-br from-orange-50 via-orange-100 to-amber-50 border-2 border-orange-400 rounded-2xl p-8 md:p-10 shadow-lg">
+        <!-- β 試用枠（誰でも・3 ヶ月無料）-->
+        <div class="bg-gradient-to-br from-orange-50 via-orange-100 to-amber-50 border-2 border-orange-400 rounded-2xl p-8 md:p-10 shadow-lg mb-6">
           <div class="text-center mb-6">
             <div class="inline-block bg-orange-500 text-white text-xs font-bold px-3 py-1 rounded-full mb-3">
-              🪼 100 社限定
+              🪼 どなたでもご応募可
             </div>
-            <h3 class="text-2xl md:text-3xl font-black text-gray-900 mb-2">β 参加プログラム</h3>
+            <h3 class="text-2xl md:text-3xl font-black text-gray-900 mb-2">β 試用</h3>
+            <p class="text-sm text-gray-600 mt-2">2026 年 6 月 9 日 〜 9 月 8 日（3 ヶ月）</p>
           </div>
 
-          <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
-            <div class="bg-white border-2 border-orange-300 rounded-xl p-5 text-center">
-              <p class="text-xs text-gray-500 mb-1">2026/6/9 〜 11/17（5 ヶ月）</p>
-              <p class="text-2xl font-black text-orange-600 mb-1">完全無料</p>
-              <p class="text-xs text-gray-600">Standard 相当の全機能</p>
+          <div class="bg-white rounded-xl p-6 mb-6 text-center">
+            <p class="text-3xl md:text-4xl font-black text-orange-600 mb-2">完全無料</p>
+            <p class="text-sm text-gray-700">Standard 相当の全機能を、無料で。</p>
+            <p class="text-sm text-gray-700 font-bold mt-3">審査なし・即時アクティベート</p>
+          </div>
+
+          <p class="text-sm text-gray-700 leading-relaxed mb-6 text-center">
+            ※ 試用終了の 14 日前・7 日前・1 日前にメールでお知らせします。<br />
+            3 ヶ月でアプリへのアクセスは停止しますが、ウェイトリスト応募で継続可能です ↓
+          </p>
+
+          <div class="text-center">
+            <a
+              href="/beta-program"
+              class="inline-block bg-orange-500 hover:bg-orange-400 text-white font-bold px-8 py-4 rounded-xl text-lg shadow-lg transition-colors"
+            >
+              3 ヶ月無料で試す（β 版）→
+            </a>
+          </div>
+        </div>
+
+        <!-- ウェイトリスト枠（先行 100 社限定）-->
+        <div class="bg-gradient-to-br from-cyan-50 via-kurage-50 to-blue-50 border-2 border-kurage-400 rounded-2xl p-8 md:p-10 shadow-lg">
+          <div class="text-center mb-6">
+            <div class="inline-block bg-kurage-600 text-white text-xs font-bold px-3 py-1 rounded-full mb-3">
+              💎 先行 100 社限定
             </div>
-            <div class="bg-white border-2 border-cyan-300 rounded-xl p-5 text-center">
-              <p class="text-xs text-gray-500 mb-1">2026/11/18 〜 1 年間</p>
-              <p class="text-2xl font-black text-cyan-600 mb-1">¥4,500/月</p>
-              <p class="text-xs text-gray-600">Standard 通常価格の 50% OFF</p>
+            <h3 class="text-2xl md:text-3xl font-black text-gray-900 mb-2">ウェイトリスト</h3>
+            <p class="text-sm text-gray-600 mt-2">β 試用中・試用前後を問わず、いつでも応募可能</p>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+            <div class="bg-white border-2 border-kurage-300 rounded-xl p-5">
+              <p class="text-xs text-gray-500 mb-1">特典 ①</p>
+              <p class="font-bold text-gray-900 mb-1">β アクセスを 11/17 まで自動延長</p>
+              <p class="text-xs text-gray-600">試用が切れず、正式版まで連続利用可能</p>
             </div>
-            <div class="bg-white border border-gray-300 rounded-xl p-5 text-center">
-              <p class="text-xs text-gray-500 mb-1">2027/11/18 以降</p>
-              <p class="text-2xl font-black text-gray-700 mb-1">¥9,800/月</p>
-              <p class="text-xs text-gray-600">通常価格・解約自由</p>
+            <div class="bg-white border-2 border-cyan-300 rounded-xl p-5">
+              <p class="text-xs text-gray-500 mb-1">特典 ②</p>
+              <p class="font-bold text-cyan-700 mb-1">¥4,500/月（50% OFF）</p>
+              <p class="text-xs text-gray-600">2026/11/18 〜 2027/11/17 の 1 年間</p>
             </div>
           </div>
 
@@ -683,18 +710,18 @@
             <li>✅ 機能リクエスト優先対応</li>
             <li>✅ 月次オフィスアワー（担当者との 30 分・希望者のみ）</li>
             <li>✅ LP「Pioneers」ロゴ掲載（任意）</li>
-            <li>✅ β 参加者限定 Slack コミュニティ</li>
+            <li>✅ ウェイトリスト限定 Slack コミュニティ</li>
           </ul>
 
           <div class="text-center">
             <a
               href="/beta-program"
-              class="inline-block bg-orange-500 hover:bg-orange-400 text-white font-bold px-8 py-4 rounded-xl text-lg shadow-lg transition-colors"
+              class="inline-block bg-kurage-600 hover:bg-kurage-500 text-white font-bold px-8 py-4 rounded-xl text-lg shadow-lg transition-colors"
             >
-              β 参加プログラムに応募する →
+              ウェイトリストに登録する →
             </a>
             <div class="text-xs text-gray-600 mt-3 space-y-1">
-              <p>※ 100 社限定・先着順</p>
+              <p>※ 先行 100 社限定・先着順</p>
               <p>※ 申込時クレジットカード不要</p>
               <p>※ 11/18 から課金開始（10 月にメールで案内）</p>
             </div>
@@ -798,38 +825,42 @@
           ぜひ、その続きを一緒に書きませんか。
         </p>
 
-        <div class="bg-white/10 border border-white/20 rounded-2xl p-6 md:p-8 mb-10 text-left">
-          <p class="text-sm text-kurage-100 mb-4 leading-relaxed">
-            2026 年 11 月 18 日、正式版をローンチします。<br />
-            そのとき、最初の 100 社を「β 参加プログラム」として迎えます。
-          </p>
-          <ul class="space-y-2 text-sm text-kurage-50">
-            <li>✅ ピリオド 1（5 ヶ月）の利用は完全無料</li>
-            <li>✅ ピリオド 2 から 1 年間 50% OFF（¥4,500/月）</li>
-            <li>✅ 機能リクエストの優先対応</li>
-            <li>✅ 月次オフィスアワー（担当者との 30 分）</li>
-            <li>✅ LP・PR 素材へのロゴ掲載（任意）</li>
-            <li>✅ β 参加者限定 Slack コミュニティ</li>
+        <!-- β 試用（誰でも）+ ウェイトリスト（100 社）の 2 段構成 -->
+        <div class="bg-orange-500/15 border border-orange-400/40 rounded-2xl p-6 md:p-8 mb-6 text-left">
+          <p class="text-sm font-bold text-orange-200 mb-3">今すぐ、3 ヶ月無料で試せます。</p>
+          <ul class="space-y-2 text-sm text-kurage-50 mb-5">
+            <li>✅ Slack に追加するだけで、即時アクティベート</li>
+            <li>✅ Standard 全機能を 3 ヶ月、完全無料で</li>
+            <li>✅ クレジットカード入力不要・審査なし</li>
+            <li>✅ 試用終了の 14 日前・7 日前・1 日前にメール通知</li>
           </ul>
-        </div>
-
-        <!-- ボトム CTA（phase0 想定） -->
-        <div class="flex flex-col sm:flex-row gap-4 justify-center mb-8">
-          <button
-            @click="openWaitlistModal"
-            class="inline-flex items-center justify-center gap-2 bg-orange-500 hover:bg-orange-400 text-white font-bold px-8 py-4 rounded-xl text-lg transition-colors shadow-lg"
-          >
-            正式版ウェイトリストに登録 →
-          </button>
           <a
             href="/beta-program"
-            class="inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 border border-white/30 text-white font-medium px-8 py-4 rounded-xl text-lg transition-colors"
+            class="inline-flex items-center justify-center gap-2 bg-orange-500 hover:bg-orange-400 text-white font-bold px-8 py-4 rounded-xl text-lg transition-colors shadow-lg"
           >
-            β 参加プログラムを見る
+            3 ヶ月無料で試す（β 版）→
           </a>
         </div>
+
+        <div class="bg-white/10 border border-white/20 rounded-2xl p-6 md:p-8 mb-8 text-left">
+          <p class="text-sm font-bold text-cyan-200 mb-3">気に入ったら、ウェイトリストへ。先行 100 社限定。</p>
+          <ul class="space-y-2 text-sm text-kurage-50 mb-5">
+            <li>✅ β アクセスを 11/17 まで自動延長</li>
+            <li>✅ 2026/11/18 から 1 年間、月 ¥4,500（50% OFF）</li>
+            <li>✅ 機能リクエスト優先対応</li>
+            <li>✅ 月次オフィスアワー（担当者との 30 分・希望者のみ）</li>
+            <li>✅ Pioneers ロゴ掲載（任意）</li>
+            <li>✅ ウェイトリスト限定 Slack コミュニティ</li>
+          </ul>
+          <button
+            @click="openWaitlistModal"
+            class="inline-flex items-center justify-center gap-2 bg-kurage-500 hover:bg-kurage-400 text-white font-bold px-8 py-4 rounded-xl text-lg transition-colors shadow-lg"
+          >
+            ウェイトリストに登録する →
+          </button>
+        </div>
         <p class="text-xs text-kurage-300 mb-10">
-          ※ 100 社限定・先着順 / ※ 申込時クレジットカード不要
+          ※ ウェイトリストは先行 100 社限定・先着順 / ※ 申込時クレジットカード不要
         </p>
 
         <p class="text-xs text-kurage-200 mb-3">
@@ -949,12 +980,16 @@ const pioneers = [
 
 const faqs = [
   {
-    q: 'β 参加プログラムは本当に 5 ヶ月完全無料ですか？',
-    a: 'はい。クレジットカード入力も不要です。10 月中旬に「11/18 から課金開始」の事前案内をお送りし、そこでクレカ登録をお願いする流れです。',
+    q: 'β 試用は本当に 3 ヶ月完全無料ですか？',
+    a: 'はい。クレジットカード入力も不要、審査もありません。Slack に追加するとその日から 3 ヶ月間、Standard 全機能をご利用いただけます。試用終了の 14 日前・7 日前・1 日前にメールでお知らせし、継続をご希望の場合はウェイトリスト応募をご案内します。',
   },
   {
-    q: '100 社が埋まったらどうなりますか？',
-    a: 'ピリオド 1 中の β 参加は 100 社で締め切りますが、ウェイトリストにご登録いただくと、11/18 の正式版開始時に Free / Standard / Enterprise のいずれかをお選びいただけます。',
+    q: 'β 試用が 3 ヶ月で終了したらどうなりますか？',
+    a: '試用終了日にアプリへのアクセスが停止します。継続をご希望の場合は、試用期間中（または終了前）にウェイトリストにご応募ください。応募いただくと:\n・β アクセスが 2026 年 11 月 17 日まで自動延長\n・2026/11/18 〜 2027/11/17 の 1 年間、月 ¥4,500（半額）で継続可能\n\n※ 試用終了後のデータは 90 日間保持し、その後削除します。\n※ 試用期間中・終了後の保持期間中は、いつでも CSV / Excel でデータをエクスポートいただけます（Settings > データ管理）。',
+  },
+  {
+    q: 'ウェイトリスト 100 社が埋まったらどうなりますか？',
+    a: 'ウェイトリストの「先行 100 社限定」は緊急性を演出するブランディングですが、実態は柔軟に対応する方針です。100 社満員後のご応募についても、原則同条件で受け入れます。お急ぎの場合は「個別にご相談」よりお問い合わせください。',
   },
   {
     q: '従来の Slack 連携 CRM との違いは？',
