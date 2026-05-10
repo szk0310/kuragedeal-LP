@@ -418,8 +418,7 @@ async function submit() {
         contact_name: form.contactName,
         team_size: form.teamSize || null,
         current_crm: form.currentCrm || null,
-        // 役職は motivation 列に（DB スキーマ追加は午後に対応）
-        motivation: form.role || null,
+        applicant_role: form.role || null,
         logo_consent: form.logoConsent,
         community_consent: form.communityConsent,
         source: 'lp_beta_program',
