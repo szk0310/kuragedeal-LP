@@ -28,19 +28,19 @@
               <span class="text-sm text-kurage-200">（11人以上は Enterprise プランで対応）</span>
             </p>
 
-            <!-- CTA（phase1: β 試用 self-serve 主訴求）。Day 7 で動的切替に置換予定 -->
+            <!-- CTA（phase1: β 試用 self-serve 主 CTA 一本のみ）-->
             <div class="mb-4">
               <a
-                href="/beta-program"
+                href="/beta"
                 class="inline-flex items-center justify-center gap-2 bg-orange-500 hover:bg-orange-400 text-white font-bold px-8 py-4 rounded-xl text-lg transition-colors shadow-lg"
               >
                 3 ヶ月無料で試す（β 版）→
               </a>
             </div>
             <p class="text-xs text-kurage-200 max-w-xl leading-relaxed">
-              ※ 2026 年 11 月 18 日に正式版ローンチ予定。<br />
-              それまでの間、3 ヶ月の β 試用（完全無料・審査なし・即時アクティベート）を提供中。
-              <a href="/beta-program" class="underline hover:text-white">詳しくはこちら →</a>
+              ※ 2026 年 11 月 18 日、正式版ローンチ予定。<br />
+              それまで、3 ヶ月の β 試用（Standard 全機能・完全無料・審査なし・即時アクティベート）を
+              どなたでもお試しいただけます。
             </p>
           </div>
 
@@ -103,7 +103,7 @@
           </p>
           <p class="text-base text-gray-700 leading-relaxed mb-3">
             入力に 1 日 30 分。<br />
-            営業 5 人 × 月 20 日 × 時給 ¥3,000 = 月 ¥150,000 の隠れコスト。
+            営業 10 人 × 月 20 日 × 0.5 時間 × 時給 ¥3,000 = 月 ¥300,000 の隠れコスト。
           </p>
           <p class="text-base text-gray-700 leading-relaxed">
             でも本当の問題はコストじゃなくて、<br />
@@ -153,16 +153,16 @@
           <div class="grid grid-cols-3 gap-2 sm:gap-4 text-center">
             <div>
               <p class="text-2xl sm:text-3xl md:text-4xl font-black text-cyan-50 leading-tight">
-                <span class="hidden sm:inline">△</span>¥150,000
+                <span class="hidden sm:inline">△</span>¥300,000
               </p>
-              <p class="text-xs text-kurage-200 mt-2">月間入力作業<br />コスト削減<br />（5人チーム試算）</p>
+              <p class="text-xs text-kurage-200 mt-2">月間入力作業<br />コスト削減<br />（10 人チーム試算）</p>
             </div>
             <div class="border-x border-white/20">
               <p class="text-2xl sm:text-3xl md:text-4xl font-black text-cyan-50 leading-tight">¥9,800</p>
               <p class="text-xs text-kurage-200 mt-2">月額利用料<br />（10人チーム）</p>
             </div>
             <div>
-              <p class="text-2xl sm:text-3xl md:text-4xl font-black text-orange-400 leading-tight">15x</p>
+              <p class="text-2xl sm:text-3xl md:text-4xl font-black text-orange-400 leading-tight">30x</p>
               <p class="text-xs text-kurage-200 mt-2">初月からの<br />ROI</p>
             </div>
           </div>
@@ -514,9 +514,13 @@
           <h3 class="text-xl md:text-2xl font-black mb-3">理由 1: 経済性 — チームが大きくなっても、月額は変わらない。</h3>
           <p class="text-kurage-100 leading-relaxed mb-4">
             従来の Slack 連携 CRM は、多くがユーザー数課金です。チームが 1 人から 10 人に増えれば、月額もリニアに増えていきます。
+            さらに、ほとんどの場合 Slack Pro 以上の有料プランも必要です。
+          </p>
+          <p class="text-cyan-200 font-bold mb-2">
+            ★ クラゲディールは違います。10 人まで月 ¥9,800、ユーザー数追加課金なし。
           </p>
           <p class="text-cyan-200 font-bold mb-6">
-            ★ クラゲディールは違います。10 人まで月 ¥9,800、ユーザー数追加課金なし。
+            ★ しかも、Slack の Free プランでも完全に動作します。
           </p>
 
           <div class="bg-white/5 border border-white/15 rounded-xl overflow-hidden mb-4">
@@ -529,20 +533,20 @@
                 </tr>
               </thead>
               <tbody class="divide-y divide-white/10">
-                <tr><td class="px-4 py-3">1 人</td><td class="px-4 py-3 font-bold">¥9,800/月</td><td class="px-4 py-3 text-kurage-300">約 ¥2,250/月</td></tr>
-                <tr><td class="px-4 py-3">5 人</td><td class="px-4 py-3 font-bold">¥9,800/月</td><td class="px-4 py-3 text-kurage-300">約 ¥11,250/月</td></tr>
-                <tr><td class="px-4 py-3">10 人</td><td class="px-4 py-3 font-bold text-cyan-200">¥9,800/月</td><td class="px-4 py-3 text-orange-300">約 ¥22,500/月</td></tr>
+                <tr><td class="px-4 py-3">1 人</td><td class="px-4 py-3 font-bold">¥0/月（Free）</td><td class="px-4 py-3 text-kurage-300">約 ¥16,000〜¥21,000/月</td></tr>
+                <tr><td class="px-4 py-3">5 人</td><td class="px-4 py-3 font-bold">¥9,800/月</td><td class="px-4 py-3 text-kurage-300">約 ¥80,000〜¥105,000/月</td></tr>
+                <tr><td class="px-4 py-3">10 人</td><td class="px-4 py-3 font-bold text-cyan-200">¥9,800/月</td><td class="px-4 py-3 text-orange-300">約 ¥160,000〜¥210,000/月</td></tr>
               </tbody>
             </table>
           </div>
           <p class="text-xs text-kurage-300 mb-4">
-            <sup>*</sup> Slack の上位プラン同梱の連携 CRM、1 ユーザーあたり月額 $15 (約 ¥2,250) × チーム人数で算出した目安。
+            <sup>*</sup>「従来の Slack 連携 CRM」環境の合計コスト = CRM ライセンス料（1 ユーザー月 ¥15,000〜¥20,000）+ Slack Pro プラン（1 ユーザー月 ¥925）で算出した目安です。
           </p>
 
           <p class="text-kurage-100 leading-relaxed mb-3">
             1 人で使い始めれば、フリーランスでも完全な営業 AI 環境。<br />
             チームが 10 人に成長しても、月額は変わらず ¥9,800。<br />
-            ── 従来 CRM との差は、月 1.3 万円（年 15.6 万円）に。
+            ── 従来環境との差は、月 15〜20 万円（年 180〜240 万円）に。
           </p>
           <p class="text-kurage-100 leading-relaxed mb-3">
             しかも、Slack の今のプラン（Free / Pro）のまま使えます。プラン乗り換え、不要です。
@@ -552,7 +556,7 @@
           </p>
           <div class="bg-orange-500/20 border border-orange-400/40 rounded-xl p-4 text-cyan-100 text-sm leading-relaxed">
             <strong class="text-orange-300">★</strong> 今なら <strong class="text-orange-300">3 ヶ月完全無料</strong>の β 試用を提供中（審査なし・即時アクティベート）。<br />
-            さらに <strong class="text-orange-300">先行 100 社限定のウェイトリスト</strong>に登録すれば、正式版開始から <strong class="text-orange-300">1 年間半額（¥4,500/月）</strong>で継続できます。
+            どなたでも、Slack に追加するだけで即日ご利用いただけます。
           </div>
         </div>
 
@@ -669,7 +673,7 @@
 
           <ul class="text-sm text-gray-700 leading-relaxed mb-6 space-y-1.5">
             <li>✅ 期間中はいつでもご応募可能（6/9 〜 9/8 の間）</li>
-            <li>✅ <strong>9 月 8 日に全 β ユーザー一斉終了</strong>（継続にはウェイトリスト応募を）</li>
+            <li>✅ <strong>9 月 8 日に全 β ユーザー一斉終了</strong>（継続手続きは /beta ページから）</li>
             <li>✅ 9 月 9 日以降は新規 β 応募の受付を終了します</li>
             <li>✅ 試用終了（9/8）の 14 日前・7 日前・1 日前にメールでお知らせ</li>
             <li>✅ データは試用中・終了後 90 日間、いつでも CSV / Excel でエクスポート可能</li>
@@ -677,13 +681,13 @@
 
           <div class="text-center">
             <a
-              href="/beta-program"
+              href="/beta"
               class="inline-block bg-orange-500 hover:bg-orange-400 text-white font-bold px-8 py-4 rounded-xl text-lg shadow-lg transition-colors"
             >
               3 ヶ月無料で試す（β 版）→
             </a>
             <p class="text-xs text-gray-600 mt-3">
-              継続オプション（ウェイトリスト・先行 100 社限定）の詳細も /beta ページでご案内しています。
+              継続オプションの詳細は /beta ページでご案内しています。
             </p>
           </div>
         </div>
@@ -701,7 +705,7 @@
             <li>・SSO・セキュリティ要件への対応</li>
           </ul>
           <a
-            href="/free"
+            href="/contact?subject=enterprise"
             class="inline-block bg-gray-100 hover:bg-gray-200 text-gray-800 font-bold px-6 py-3 rounded-xl text-sm transition-colors"
           >
             Enterprise についてご相談 →
@@ -796,14 +800,11 @@
             <li>✅ データはいつでも CSV / Excel エクスポート可能</li>
           </ul>
           <a
-            href="/beta-program"
+            href="/beta"
             class="inline-flex items-center justify-center gap-2 bg-orange-500 hover:bg-orange-400 text-white font-bold px-8 py-4 rounded-xl text-lg transition-colors shadow-lg"
           >
             3 ヶ月無料で試す（β 版）→
           </a>
-          <p class="text-xs text-kurage-300 mt-4">
-            ※ 継続オプション（ウェイトリスト・先行 100 社限定）は /beta ページでご案内しています。
-          </p>
         </div>
 
         <p class="text-xs text-kurage-200 mb-3">
@@ -860,7 +861,8 @@ const pricing = [
     price: '¥0',
     priceNote: '/ 月',
     featured: false,
-    cta: '',  // phase0: ボタンは出さない（11/18 開始予定なので）
+    // phase1（〜 11/17）はボタンを出さない（11/18 提供開始）
+    cta: '',
     checkoutUrl: '',
     startNote: '2026/11/18 提供開始',
     features: [
@@ -877,8 +879,9 @@ const pricing = [
     price: '¥9,800',
     priceNote: '/ 月',
     featured: true,
-    cta: 'ウェイトリストに登録',
-    checkoutUrl: '#',  // phase0: ボタンは出すが waitlist モーダルにつなぎたい場合は別途実装
+    // phase1（〜 11/17）はボタンを出さない。β 試用は別ボックスで誘導
+    cta: '',
+    checkoutUrl: '',
     startNote: '2026/11/18 提供開始',
     features: [
       { ok: true, label: 'ユーザー 10 名まで' },
@@ -922,11 +925,7 @@ const faqs = [
   },
   {
     q: 'β 試用が 9 月 8 日で終了したらどうなりますか？',
-    a: '9 月 8 日に全 β ユーザーのアプリアクセスが一斉停止します。\n試用期間中・終了後 90 日間は、いつでも CSV / Excel でデータをエクスポートいただけます（Settings > データ管理）。\n継続をご希望の場合は、試用期間中（または終了前）に /beta ページのウェイトリストにご応募ください。応募者は 11 月 17 日まで β アクセスが自動延長され、11 月 18 日からは月 ¥4,500（半額）で 1 年間継続できます。\n※ 試用終了後 90 日経過後、データは削除されます。',
-  },
-  {
-    q: 'ウェイトリスト 100 社が埋まったらどうなりますか？',
-    a: 'ウェイトリストの「先行 100 社限定」は緊急性を演出するブランディングですが、実態は柔軟に対応する方針です。100 社満員後のご応募についても、原則同条件で受け入れます。お急ぎの場合は「個別にご相談」よりお問い合わせください。',
+    a: '試用終了日にアプリへのアクセスが停止します。継続をご希望の場合は、試用期間中（または終了前）に /beta ページから手続きいただけます（月 ¥4,500 の半額プラン or 通常プランへの移行）。\n※ 試用終了後のデータは 90 日間保持し、その後削除します。\n※ 試用期間中・終了後の保持期間中は、いつでも CSV / Excel でデータをエクスポートいただけます（Settings > データ管理）。',
   },
   {
     q: '従来の Slack 連携 CRM との違いは？',

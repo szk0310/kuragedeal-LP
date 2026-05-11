@@ -18,7 +18,7 @@
         <a href="/#faq" class="hover:text-kurage-600 transition-colors">FAQ</a>
         <a href="/guide" class="hover:text-kurage-600 transition-colors">使い方ガイド</a>
         <a
-          href="/beta-program"
+          href="/beta"
           class="bg-orange-500 text-white px-4 py-2 rounded-lg hover:bg-orange-400 transition-colors font-bold"
           >β 参加プログラム</a
         >
@@ -26,7 +26,7 @@
 
       <!-- Mobile CTA -->
       <a
-        href="/beta-program"
+        href="/beta"
         class="md:hidden bg-orange-500 text-white text-sm px-4 py-2 rounded-lg hover:bg-orange-400 transition-colors font-bold"
         >β 参加プログラム</a
       >
