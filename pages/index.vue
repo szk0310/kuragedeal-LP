@@ -720,7 +720,7 @@
     </section>
 
     <!-- ============================================================
-         08. 仲間（β 4 社）— 各社の許諾取得まで非表示
+         08. 仲間（β 5 社）— 各社の許諾取得まで非表示
     ============================================================ -->
     <!--
     <section id="pioneers" class="bg-white py-20">
@@ -729,7 +729,7 @@
         <h2 class="text-3xl md:text-4xl font-black text-gray-900 mb-4">すでに、選んでくださった会社があります。</h2>
         <p class="text-gray-700 leading-relaxed mb-10">
           2026 年 5 月、プライベート β を開始しました。<br />
-          最初の仲間は、4 社の経営層でした。
+          最初の仲間は、5 社の経営層でした。
         </p>
 
         <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-10">
@@ -912,10 +912,11 @@ const pricing = [
 ]
 
 const pioneers = [
-  { name: 'OPRO',    icon: '📦', industry: '帳票・CRM SaaS' },
+  { name: 'OPRO',    icon: '📦', industry: '帳票 SaaS' },
   { name: 'Opti',    icon: '🛒', industry: 'eコマース・D2C' },
   { name: 'WeLearn', icon: '🎓', industry: '人材・教育' },
   { name: 'SI Inc',  icon: '🏗', industry: 'SI・受託' },
+  { name: 'CCC',     icon: '🏬', industry: '大手リテール・新規事業部' },
 ]
 
 const faqs = [
