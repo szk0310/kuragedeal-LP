@@ -407,14 +407,6 @@
               </p>
             </div>
             <div>
-              <p class="font-bold text-gray-900 mb-2">📧 顧客への返信メール、AI が下書きを用意。</p>
-              <p class="text-sm text-gray-700 leading-relaxed pl-5 border-l-2 border-kurage-200">
-                返信が来たら、AI が文脈を読んで下書きを生成。<br />
-                Slack で内容を確認、ボタン 1 つで承認 → 自社アドレスから送信。<br />
-                ── マネジャーが添削する時間は、ゼロに。
-              </p>
-            </div>
-            <div>
               <p class="font-bold text-gray-900 mb-2">🌙 マネジャーが寝ている間も、AI は動く。</p>
               <p class="text-sm text-gray-700 leading-relaxed pl-5 border-l-2 border-kurage-200">
                 朝のブリーフィング・夕方のコーチングは、マネジャー不在でも届く。<br />
@@ -479,7 +471,130 @@
         </div>
 
         <p class="text-center text-gray-500 mt-12 italic">
-          3 つのあるある お悩みを、ご一緒に見てきました。<br />
+          そして、顧客からの返信メール。<br />
+          これも AI が、代筆してくれます ↓
+        </p>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         06. AI 返信支援 — AI が返信を、代筆する
+    ============================================================ -->
+    <section id="reply-assist" class="bg-ocean-sand py-20">
+      <div class="max-w-3xl mx-auto px-4 sm:px-6">
+        <p class="text-sm font-bold text-orange-500 uppercase tracking-widest mb-3">機能スポットライト</p>
+        <h2 class="text-3xl md:text-4xl font-black text-gray-900 mb-4 leading-tight">
+          AI が返信を、代筆する。
+        </h2>
+        <p class="text-lg text-gray-700 font-bold mb-10 leading-relaxed">
+          メール 1 通 10 分の世界を、終わらせる。
+        </p>
+
+        <!-- 共感 -->
+        <div class="bg-white border-l-4 border-orange-400 rounded-r-xl p-6 mb-10">
+          <p class="text-base text-gray-800 leading-relaxed mb-3">
+            営業マネジャーの 1 日で、地味に多いのが、メール返信。
+          </p>
+          <p class="text-base text-gray-700 leading-relaxed mb-3">
+            「予算の根拠は？」「来週月曜は？」「競合は？」<br />
+            ── 毎日 5〜10 通、1 通 5〜10 分。<br />
+            営業マネジャー 1 人で、月 30〜60 時間。
+          </p>
+          <p class="text-base text-gray-700 leading-relaxed mb-4">
+            その時間、本当は若手と話したかった。<br />
+            新規開拓に行きたかった。
+          </p>
+          <p class="text-base text-gray-800 font-bold leading-relaxed">
+            <span class="text-orange-700">★ メール返信は、AI に代筆させましょう。</span>
+          </p>
+        </div>
+
+        <!-- 解決ステップ -->
+        <div class="bg-gradient-to-br from-kurage-50 to-cyan-50 border-2 border-kurage-200 rounded-2xl p-8 mb-10">
+          <p class="text-base font-bold text-kurage-700 mb-6">
+            ★ クラゲディールは、こうします。
+          </p>
+
+          <div class="space-y-5">
+            <div class="flex gap-4">
+              <div class="flex-shrink-0 w-8 h-8 rounded-full bg-kurage-500 text-white font-bold flex items-center justify-center text-sm">1</div>
+              <div>
+                <p class="font-bold text-gray-900 mb-1">顧客から返信が届く</p>
+                <p class="text-sm text-gray-700 leading-relaxed">Gmail / Outlook 等、既存メールはそのまま使用。</p>
+              </div>
+            </div>
+            <div class="flex gap-4">
+              <div class="flex-shrink-0 w-8 h-8 rounded-full bg-kurage-500 text-white font-bold flex items-center justify-center text-sm">2</div>
+              <div>
+                <p class="font-bold text-gray-900 mb-1">AI が文脈を読んで、返信を下書き</p>
+                <p class="text-sm text-gray-700 leading-relaxed">過去のやり取り・商談ステージ・会社の方針を踏まえて生成。</p>
+              </div>
+            </div>
+            <div class="flex gap-4">
+              <div class="flex-shrink-0 w-8 h-8 rounded-full bg-kurage-500 text-white font-bold flex items-center justify-center text-sm">3</div>
+              <div>
+                <p class="font-bold text-gray-900 mb-1">Slack で確認 → ワンクリックで送信</p>
+                <p class="text-sm text-gray-700 leading-relaxed">そのまま送る / 編集する / 送らない、を 3 ボタンで判断。</p>
+              </div>
+            </div>
+            <div class="flex gap-4">
+              <div class="flex-shrink-0 w-8 h-8 rounded-full bg-kurage-500 text-white font-bold flex items-center justify-center text-sm">4</div>
+              <div>
+                <p class="font-bold text-gray-900 mb-1">自社アドレスから送信</p>
+                <p class="text-sm text-gray-700 leading-relaxed">お客様にはいつもどおり営業マネジャー本人からの返信に見えます。</p>
+              </div>
+            </div>
+          </div>
+
+          <p class="text-base font-bold text-kurage-800 mt-6 leading-relaxed">
+            ★ メール 1 通 30 秒の世界。
+          </p>
+        </div>
+
+        <!-- AI 返信支援 Slack mock -->
+        <div class="mb-8 max-w-2xl mx-auto">
+          <SlackMessageMock channel-name="#sales-team">
+            <SlackBotLine name="クラゲディール" :bot-badge="true" time="10:08">
+              <p class="font-bold mb-2">📧 田中様（ABC 商事）より受信</p>
+              <div class="bg-gray-50 rounded-lg p-3 text-sm text-gray-700 leading-relaxed mb-3">
+                ご提案ありがとうございます。<br />
+                予算は問題ありませんが、競合 1 社と比較中で、最終決定は来週月曜になる予定です。<br />
+                追加で資料を頂けますでしょうか？
+              </div>
+
+              <p class="text-xs font-bold text-orange-600 mb-2">✨ AI が返信下書きを生成しました</p>
+              <div class="border border-kurage-200 rounded-lg p-3 text-sm text-gray-800 leading-relaxed bg-white mb-3">
+                田中様<br /><br />
+                ご連絡ありがとうございます。<br />
+                月曜のご決定タイミング、承知いたしました。<br /><br />
+                競合比較のための追加資料として、<br />
+                お客様の事業規模に合わせた ROI 試算を作成しお送りいたします。<br />
+                本日中にご提供できる予定です。<br /><br />
+                田中様のご検討の一助となれば幸いです。<br /><br />
+                株式会社シロ 鈴木
+              </div>
+
+              <div class="flex flex-col sm:flex-row gap-2">
+                <button type="button" class="flex-1 bg-green-500 hover:bg-green-400 text-white text-xs font-bold px-3 py-2 rounded-md transition-colors">✅ そのまま送信</button>
+                <button type="button" class="flex-1 bg-gray-100 hover:bg-gray-200 text-gray-700 text-xs font-bold px-3 py-2 rounded-md transition-colors">✏️ 編集する</button>
+                <button type="button" class="flex-1 bg-gray-100 hover:bg-gray-200 text-gray-700 text-xs font-bold px-3 py-2 rounded-md transition-colors">❌ 送信しない</button>
+              </div>
+            </SlackBotLine>
+          </SlackMessageMock>
+        </div>
+        <p class="text-center text-sm text-gray-600 mb-12 italic">ボタン 1 つで承認 → お客様には鈴木さん本人の社内アドレスから送信。</p>
+
+        <!-- 3 つの特徴チップ -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <div v-for="(c, i) in replyAssistChips" :key="i" class="bg-white border border-gray-200 rounded-xl p-5">
+            <p class="text-2xl mb-2">{{ c.icon }}</p>
+            <p class="font-bold text-gray-900 mb-1">{{ c.title }}</p>
+            <p class="text-sm text-gray-600 leading-relaxed">{{ c.desc }}</p>
+          </div>
+        </div>
+
+        <p class="text-center text-gray-500 mt-12 italic">
+          3 つのあるある お悩みと、その解決策をご一緒に見てきました。<br />
           最後に、従来の Slack 連携 CRM ではなく、<br />
           なぜクラゲディールが選ばれているのか。その理由を整理させてください。
         </p>
@@ -487,7 +602,7 @@
     </section>
 
     <!-- ============================================================
-         06. 他のツールとの違い（3 ピラー）
+         07. 他のツールとの違い（3 ピラー）
     ============================================================ -->
     <section id="comparison" class="bg-ocean-deep py-20 text-white">
       <div class="max-w-4xl mx-auto px-4 sm:px-6">
@@ -609,7 +724,7 @@
     </section>
 
     <!-- ============================================================
-         07. 料金（β 特典強調）
+         08. 料金（β 特典強調）
     ============================================================ -->
     <section id="pricing" class="bg-ocean-sand py-20">
       <div class="max-w-6xl mx-auto px-4 sm:px-6">
@@ -725,7 +840,7 @@
     </section>
 
     <!-- ============================================================
-         08. 仲間（β 4 社）— 各社の許諾取得まで非表示
+         09. 仲間（β 4 社）— 各社の許諾取得まで非表示
     ============================================================ -->
     <!--
     <section id="pioneers" class="bg-white py-20">
@@ -757,7 +872,7 @@
     -->
 
     <!-- ============================================================
-         09. FAQ
+         10. FAQ
     ============================================================ -->
     <section id="faq" class="bg-ocean-tan/80 py-20">
       <div class="max-w-3xl mx-auto px-4 sm:px-6">
@@ -780,7 +895,7 @@
     </section>
 
     <!-- ============================================================
-         10. 最終 CTA + β 参加プログラム告知
+         11. 最終 CTA + β 参加プログラム告知
     ============================================================ -->
     <section class="bg-gradient-to-br from-kurage-900 to-kurage-700 text-white py-20">
       <div class="max-w-3xl mx-auto px-4 sm:px-6 text-center">
@@ -854,8 +969,14 @@ const pain2Chips = [
 
 const pain3Chips = [
   { icon: '🎓', title: 'MEDDPICC コーチング', desc: 'AI が全員に質の高い問いかけ' },
-  { icon: '📧', title: 'AI メール下書き', desc: '返信を自動生成、承認するだけ' },
+  { icon: '🧭', title: '営業ノウハウの形式知化', desc: 'マネジャー個人の判断を、AI に' },
   { icon: '🌙', title: '24 時間動く', desc: 'マネジャーの不在時間も埋める' },
+]
+
+const replyAssistChips = [
+  { icon: '✍️', title: 'AI 代筆', desc: '過去文脈を踏まえた自然な返信' },
+  { icon: '💌', title: '自社送信', desc: 'いつもの社内メールアドレスから' },
+  { icon: '🎚', title: '編集自由', desc: '承認前に必要なら手直し可能' },
 ]
 
 const API_URL = 'https://slacksfa-api-808596335261.asia-northeast1.run.app'
@@ -874,7 +995,7 @@ const pricing = [
       { ok: true, label: 'AI 利用 月 100 回' },
       { ok: true, label: 'コーチング機能' },
       { ok: false, label: '日次ブリーフィング' },
-      { ok: false, label: 'ナーチャリング' },
+      { ok: false, label: 'AI 返信支援' },
       { ok: false, label: '優先サポート' },
     ],
   },
@@ -892,7 +1013,7 @@ const pricing = [
       { ok: true, label: 'AI 利用 月 5,000 回' },
       { ok: true, label: 'コーチング機能' },
       { ok: true, label: '日次ブリーフィング' },
-      { ok: true, label: 'ナーチャリング' },
+      { ok: true, label: 'AI 返信支援' },
       { ok: false, label: '優先サポート' },
     ],
   },
@@ -909,7 +1030,7 @@ const pricing = [
       { ok: true, label: 'AI 利用 個別設定' },
       { ok: true, label: 'コーチング機能' },
       { ok: true, label: '日次ブリーフィング' },
-      { ok: true, label: 'ナーチャリング' },
+      { ok: true, label: 'AI 返信支援' },
       { ok: true, label: '優先サポート' },
     ],
   },

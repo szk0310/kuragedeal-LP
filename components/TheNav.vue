@@ -11,8 +11,8 @@
 
       <!-- Desktop links -->
       <div class="hidden lg:flex items-center gap-6 text-sm font-medium text-gray-600">
-        <a href="/#features" class="hover:text-kurage-600 transition-colors">機能</a>
-        <a href="/#nurturing" class="hover:text-kurage-600 transition-colors">AIナーチャリング</a>
+        <a href="/#pain1" class="hover:text-kurage-600 transition-colors">機能</a>
+        <a href="/#reply-assist" class="hover:text-kurage-600 transition-colors">AI 返信支援</a>
         <a href="/#pricing" class="hover:text-kurage-600 transition-colors">料金</a>
         <a href="/#comparison" class="hover:text-kurage-600 transition-colors">比較</a>
         <a href="/#faq" class="hover:text-kurage-600 transition-colors">FAQ</a>

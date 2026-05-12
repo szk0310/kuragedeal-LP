@@ -160,7 +160,7 @@ const commands = [
   { cmd: '/deal', title: 'ディール詳細・AI進捗評価', desc: '特定の商談のAI分析とネクストアクション提案を表示します。' },
   { cmd: '/coach', title: 'AIコーチング', desc: 'AIが商談の進め方をヒアリング形式でコーチングします。' },
   { cmd: '/usage', title: 'AI利用状況', desc: '今月のAI利用量・残り予算・プラン情報を確認できます。' },
-  { cmd: '/setting', title: '設定', desc: 'ナーチャリングモードの切替・営業ポリシーの設定ができます。' },
+  { cmd: '/setting', title: '設定', desc: 'AI 返信支援モードの切替・営業ポリシーの設定ができます。' },
 ]
 
 const autoFeatures = [
