@@ -91,7 +91,7 @@
     ============================================================ -->
     <section id="pain1" class="bg-white py-20">
       <div class="max-w-3xl mx-auto px-4 sm:px-6">
-        <p class="text-sm font-bold text-orange-500 uppercase tracking-widest mb-3">あるある お悩み 1</p>
+        <p class="text-base md:text-lg font-bold text-orange-500 uppercase tracking-widest mb-3">あるある お悩み 1</p>
         <h2 class="text-3xl md:text-4xl font-black text-gray-900 mb-10 leading-tight">
           CRM が、続かない。
         </h2>
@@ -189,7 +189,7 @@
     ============================================================ -->
     <section id="pain2" class="bg-ocean-steel/75 py-20">
       <div class="max-w-3xl mx-auto px-4 sm:px-6">
-        <p class="text-sm font-bold text-orange-500 uppercase tracking-widest mb-3">あるある お悩み 2</p>
+        <p class="text-base md:text-lg font-bold text-orange-500 uppercase tracking-widest mb-3">あるある お悩み 2</p>
         <h2 class="text-3xl md:text-4xl font-black text-gray-900 mb-10 leading-tight">
           営業の進捗が、見えない。
         </h2>
@@ -342,7 +342,7 @@
     ============================================================ -->
     <section id="pain3" class="bg-white py-20">
       <div class="max-w-3xl mx-auto px-4 sm:px-6">
-        <p class="text-sm font-bold text-orange-500 uppercase tracking-widest mb-3">あるある お悩み 3</p>
+        <p class="text-base md:text-lg font-bold text-orange-500 uppercase tracking-widest mb-3">あるある お悩み 3</p>
         <h2 class="text-3xl md:text-4xl font-black text-gray-900 mb-10 leading-tight">
           営業マネジャーが、足りない。
         </h2>
@@ -482,7 +482,7 @@
     ============================================================ -->
     <section id="reply-assist" class="bg-ocean-sand py-20">
       <div class="max-w-3xl mx-auto px-4 sm:px-6">
-        <p class="text-sm font-bold text-orange-500 uppercase tracking-widest mb-3">機能スポットライト</p>
+        <p class="text-base md:text-lg font-bold text-orange-500 uppercase tracking-widest mb-3">機能スポットライト</p>
         <h2 class="text-3xl md:text-4xl font-black text-gray-900 mb-4 leading-tight">
           AI が返信を、代筆する。
         </h2>
@@ -791,13 +791,15 @@
             <p class="text-sm text-gray-700 font-bold mt-3">審査なし・即時アクティベート</p>
           </div>
 
-          <ul class="text-sm text-gray-700 leading-relaxed mb-6 space-y-1.5">
-            <li>✅ 期間中はいつでもご応募可能（6/9 〜 9/8 の間）</li>
-            <li>✅ <strong>9 月 8 日に全 β ユーザー一斉終了</strong>（継続手続きは /beta ページから）</li>
-            <li>✅ 9 月 9 日以降は新規 β 応募の受付を終了します</li>
-            <li>✅ 試用終了（9/8）の 14 日前・7 日前・1 日前にメールでお知らせ</li>
-            <li>✅ データは試用中・終了後 90 日間、いつでも CSV / Excel でエクスポート可能</li>
-          </ul>
+          <div class="flex justify-center mb-6">
+            <ul class="text-sm text-gray-700 leading-relaxed space-y-1.5 inline-block text-left">
+              <li>✅ 期間中はいつでもご応募可能（6/9 〜 9/8 の間）</li>
+              <li>✅ <strong>9 月 8 日に全 β ユーザー一斉終了</strong>（継続手続きは /beta ページから）</li>
+              <li>✅ 9 月 9 日以降は新規 β 応募の受付を終了します</li>
+              <li>✅ 試用終了（9/8）の 14 日前・7 日前・1 日前にメールでお知らせ</li>
+              <li>✅ データは試用中・終了後 90 日間、いつでも CSV / Excel でエクスポート可能</li>
+            </ul>
+          </div>
 
           <div class="text-center">
             <a
@@ -813,7 +815,7 @@
         </div>
 
         <!-- Enterprise 補足 -->
-        <div class="mt-12 bg-white rounded-2xl border border-gray-200 p-8">
+        <div class="mt-12 bg-gradient-to-br from-kurage-50 via-cyan-50 to-ocean-mist/60 rounded-2xl border border-kurage-200 p-8">
           <h3 class="text-xl font-bold text-gray-900 mb-3">Enterprise プラン について</h3>
           <p class="text-sm text-gray-700 mb-4 leading-relaxed">
             11 人以上のチーム・カスタマイズが必要な企業向けに、Enterprise プランをご用意しています。
@@ -906,25 +908,29 @@
         </p>
         <p class="text-base text-kurage-100 mb-10 leading-relaxed">
           もし、クラゲディールが「自分の営業チームに合いそうだ」と感じていただけたなら、<br />
-          ぜひ、その続きを一緒に書きませんか。
+          ぜひ、その続きをご一緒させてください。
         </p>
 
         <!-- β 試用（self-serve 主訴求を最大化、副 CTA なし） -->
-        <div class="bg-orange-500/15 border border-orange-400/40 rounded-2xl p-6 md:p-8 mb-8 text-left">
-          <p class="text-base font-bold text-orange-200 mb-3">今すぐ、3 ヶ月無料で試せます。</p>
-          <ul class="space-y-2 text-sm text-kurage-50 mb-5">
-            <li>✅ Slack に追加するだけで、即時アクティベート</li>
-            <li>✅ Standard 全機能を 3 ヶ月、完全無料で</li>
-            <li>✅ クレジットカード入力不要・審査なし</li>
-            <li>✅ 試用終了の 14 日前・7 日前・1 日前にメール通知</li>
-            <li>✅ データはいつでも CSV / Excel エクスポート可能</li>
-          </ul>
-          <a
-            href="/beta"
-            class="inline-flex items-center justify-center gap-2 bg-orange-500 hover:bg-orange-400 text-white font-bold px-8 py-4 rounded-xl text-lg transition-colors shadow-lg"
-          >
-            3 ヶ月無料で試す（β 版）→
-          </a>
+        <div class="bg-orange-500/15 border border-orange-400/40 rounded-2xl p-6 md:p-8 mb-8">
+          <p class="text-base font-bold text-orange-200 mb-3 text-center">今すぐ、3 ヶ月無料で試せます。</p>
+          <div class="flex justify-center mb-5">
+            <ul class="space-y-2 text-sm text-kurage-50 inline-block text-left">
+              <li>✅ Slack に追加するだけで、即時アクティベート</li>
+              <li>✅ Standard 全機能を 3 ヶ月、完全無料で</li>
+              <li>✅ クレジットカード入力不要・審査なし</li>
+              <li>✅ 試用終了の 14 日前・7 日前・1 日前にメール通知</li>
+              <li>✅ データはいつでも CSV / Excel エクスポート可能</li>
+            </ul>
+          </div>
+          <div class="text-center">
+            <a
+              href="/beta"
+              class="inline-flex items-center justify-center gap-2 bg-orange-500 hover:bg-orange-400 text-white font-bold px-8 py-4 rounded-xl text-lg transition-colors shadow-lg"
+            >
+              3 ヶ月無料で試す（β 版）→
+            </a>
+          </div>
         </div>
 
         <p class="text-xs text-kurage-200 mb-3">
