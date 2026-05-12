@@ -135,7 +135,7 @@
 
         <!-- 解決 -->
         <div class="bg-gradient-to-br from-kurage-50 to-cyan-50 border-2 border-kurage-200 rounded-2xl p-8 mb-10">
-          <p class="text-base font-bold text-kurage-700 mb-4">
+          <p class="text-lg md:text-xl font-bold text-kurage-700 mb-4 leading-relaxed">
             ★ クラゲディールは、こんなストレスから営業マンを解放します！
           </p>
           <p class="text-gray-800 leading-relaxed mb-4">
@@ -242,7 +242,7 @@
 
         <!-- 解決 -->
         <div class="bg-gradient-to-br from-white to-kurage-50 border-2 border-kurage-200 rounded-2xl p-8 mb-10 shadow-sm">
-          <p class="text-base font-bold text-kurage-700 mb-6">
+          <p class="text-lg md:text-xl font-bold text-kurage-700 mb-6 leading-relaxed">
             ★ クラゲディールは、見えないものを、見えるようにします。
           </p>
 
@@ -398,7 +398,7 @@
 
         <!-- 解決 -->
         <div class="bg-gradient-to-br from-kurage-50 to-cyan-50 border-2 border-kurage-200 rounded-2xl p-8 mb-10">
-          <p class="text-xl md:text-2xl font-bold text-kurage-700 mb-6 leading-relaxed">
+          <p class="text-lg md:text-xl font-bold text-kurage-700 mb-6 leading-relaxed">
             ★ クラゲディールの AI が、マネジャーの分身になります。
           </p>
 
@@ -522,7 +522,7 @@
 
         <!-- 解決ステップ -->
         <div class="bg-gradient-to-br from-kurage-50 to-cyan-50 border-2 border-kurage-200 rounded-2xl p-8 mb-10">
-          <p class="text-base font-bold text-kurage-700 mb-6">
+          <p class="text-lg md:text-xl font-bold text-kurage-700 mb-6 leading-relaxed">
             ★ クラゲディールは、こうします。
           </p>
 
@@ -618,7 +618,7 @@
     <section id="comparison" class="bg-ocean-deep py-20 text-white">
       <div class="max-w-4xl mx-auto px-4 sm:px-6">
         <p class="text-sm font-bold text-cyan-300 uppercase tracking-widest mb-3 text-center">他のツールとの違い</p>
-        <h2 class="text-3xl md:text-4xl font-black mb-8 text-center leading-tight">
+        <h2 class="text-3xl md:text-4xl font-black mb-8 text-center leading-relaxed">
           1〜10 人の営業チームのために、<br />ゼロから設計した営業 AI です。
         </h2>
 
@@ -726,7 +726,7 @@
         </div>
 
         <!-- 締め -->
-        <p class="text-center text-lg md:text-xl text-cyan-100 leading-relaxed">
+        <p class="text-center text-lg md:text-xl text-cyan-100 leading-loose">
           クラゲディールは、1〜10 人の営業チームに最適化された、<br />
           <strong class="text-cyan-50">唯一の営業 AI</strong> です。<br />
           <span class="text-base">あなたのチームのサイズに、ぴったり寄り添うために。</span>
