@@ -12,7 +12,7 @@
         <div class="absolute bottom-10 right-10 w-96 h-96 rounded-full bg-cyan-300 blur-3xl" />
       </div>
 
-      <div class="relative max-w-6xl mx-auto px-4 sm:px-6 py-24 md:py-32">
+      <div class="relative max-w-6xl mx-auto px-4 sm:px-6 md:pl-11 py-24 md:py-32">
         <div class="flex flex-col md:flex-row items-center gap-12">
           <div class="flex-1">
             <h1 class="text-4xl md:text-6xl font-black mb-6 leading-tight">
@@ -44,7 +44,7 @@
             </p>
           </div>
 
-          <div class="hidden md:flex flex-shrink-0 items-center justify-center w-72 h-72">
+          <div class="hidden md:flex flex-shrink-0 items-center justify-center w-72 h-72 md:mr-8">
             <img
               src="/kurage-on-green.svg"
               alt="クラゲくん"
@@ -58,10 +58,9 @@
     <!-- ============================================================
          02. ターゲット
     ============================================================ -->
-    <section class="bg-ocean-steel/75 py-16">
+    <section class="bg-ocean-steel/75 py-12">
       <div class="max-w-6xl mx-auto px-4 sm:px-6">
         <div class="text-center mb-12">
-          <p class="text-2xl font-bold text-gray-800 mb-3">対象</p>
           <h2 class="text-2xl md:text-3xl font-bold text-gray-800 mb-4">
             1〜10 人の営業チームのために、ゼロから設計したAIツール
           </h2>
@@ -399,7 +398,7 @@
 
         <!-- 解決 -->
         <div class="bg-gradient-to-br from-kurage-50 to-cyan-50 border-2 border-kurage-200 rounded-2xl p-8 mb-10">
-          <p class="text-base font-bold text-kurage-700 mb-6">
+          <p class="text-xl md:text-2xl font-bold text-kurage-700 mb-6 leading-relaxed">
             ★ クラゲディールの AI が、マネジャーの分身になります。
           </p>
 
@@ -762,11 +761,12 @@
             <h3 class="text-2xl font-black text-gray-900 mb-2">{{ plan.name }}</h3>
             <p
               :class="[
-                'font-black text-gray-900 mb-1 whitespace-nowrap',
+                'font-black text-gray-900 mb-6 whitespace-nowrap',
                 plan.price.length > 5 ? 'text-xl md:text-2xl' : 'text-3xl',
               ]"
-            >{{ plan.price }}</p>
-            <p class="text-sm text-gray-500 mb-6">{{ plan.priceNote }}</p>
+            >
+              {{ plan.price }}<span v-if="plan.priceNote" class="text-sm text-gray-500 font-normal ml-1">{{ plan.priceNote }}</span>
+            </p>
             <ul class="space-y-2 mb-6 flex-1">
               <li v-for="(f, j) in plan.features" :key="j" class="flex items-start gap-2 text-sm">
                 <span :class="f.ok ? 'text-green-500' : 'text-gray-300'">{{ f.ok ? '✅' : '—' }}</span>
@@ -827,7 +827,7 @@
         </div>
 
         <!-- Enterprise 補足 -->
-        <div class="mt-12 bg-gradient-to-br from-kurage-50 via-cyan-50 to-ocean-mist/60 rounded-2xl border border-kurage-200 p-8">
+        <div class="mt-12 max-w-2xl mx-auto bg-gradient-to-br from-kurage-50 via-cyan-50 to-ocean-mist/60 rounded-2xl border border-kurage-200 p-8">
           <h3 class="text-xl font-bold text-gray-900 mb-3">Enterprise プラン について</h3>
           <p class="text-sm text-gray-700 mb-4 leading-relaxed">
             11 人以上のチーム・カスタマイズが必要な企業向けに、Enterprise プランをご用意しています。
