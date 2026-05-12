@@ -91,7 +91,10 @@
     ============================================================ -->
     <section id="pain1" class="bg-white py-20">
       <div class="max-w-3xl mx-auto px-4 sm:px-6">
-        <p class="text-base md:text-lg font-bold text-orange-500 uppercase tracking-widest mb-3">あるある お悩み 1</p>
+        <div class="flex items-center gap-3 mb-3">
+          <img src="/kurage-cry.svg" alt="" class="w-10 h-10 md:w-12 md:h-12 flex-shrink-0" />
+          <p class="text-base md:text-lg font-bold text-orange-500 uppercase tracking-widest">あるある お悩み 1</p>
+        </div>
         <h2 class="text-3xl md:text-4xl font-black text-gray-900 mb-10 leading-tight">
           CRM が、続かない。
         </h2>
@@ -189,7 +192,10 @@
     ============================================================ -->
     <section id="pain2" class="bg-ocean-steel/75 py-20">
       <div class="max-w-3xl mx-auto px-4 sm:px-6">
-        <p class="text-base md:text-lg font-bold text-orange-500 uppercase tracking-widest mb-3">あるある お悩み 2</p>
+        <div class="flex items-center gap-3 mb-3">
+          <img src="/kurage-anger.svg" alt="" class="w-10 h-10 md:w-12 md:h-12 flex-shrink-0" />
+          <p class="text-base md:text-lg font-bold text-orange-500 uppercase tracking-widest">あるある お悩み 2</p>
+        </div>
         <h2 class="text-3xl md:text-4xl font-black text-gray-900 mb-10 leading-tight">
           営業の進捗が、見えない。
         </h2>
@@ -342,7 +348,10 @@
     ============================================================ -->
     <section id="pain3" class="bg-white py-20">
       <div class="max-w-3xl mx-auto px-4 sm:px-6">
-        <p class="text-base md:text-lg font-bold text-orange-500 uppercase tracking-widest mb-3">あるある お悩み 3</p>
+        <div class="flex items-center gap-3 mb-3">
+          <img src="/kurage-cry.svg" alt="" class="w-10 h-10 md:w-12 md:h-12 flex-shrink-0" />
+          <p class="text-base md:text-lg font-bold text-orange-500 uppercase tracking-widest">あるある お悩み 3</p>
+        </div>
         <h2 class="text-3xl md:text-4xl font-black text-gray-900 mb-10 leading-tight">
           営業マネジャーが、足りない。
         </h2>
@@ -482,7 +491,10 @@
     ============================================================ -->
     <section id="reply-assist" class="bg-ocean-sand py-20">
       <div class="max-w-3xl mx-auto px-4 sm:px-6">
-        <p class="text-base md:text-lg font-bold text-orange-500 uppercase tracking-widest mb-3">機能スポットライト</p>
+        <div class="flex items-center gap-3 mb-3">
+          <img src="/kurage-smile.svg" alt="" class="w-10 h-10 md:w-12 md:h-12 flex-shrink-0" />
+          <p class="text-base md:text-lg font-bold text-orange-500 uppercase tracking-widest">機能スポットライト</p>
+        </div>
         <h2 class="text-3xl md:text-4xl font-black text-gray-900 mb-4 leading-tight">
           AI が返信を、代筆する。
         </h2>
@@ -901,7 +913,7 @@
     ============================================================ -->
     <section class="bg-gradient-to-br from-kurage-900 to-kurage-700 text-white py-20">
       <div class="max-w-3xl mx-auto px-4 sm:px-6 text-center">
-        <img src="/kurage-on-green.svg" alt="クラゲディール" class="w-20 h-20 mx-auto mb-6 kurage-float" />
+        <img src="/kurage-smile.svg" alt="クラゲディール" class="w-20 h-20 mx-auto mb-6 kurage-float" />
 
         <p class="text-base text-kurage-100 mb-6 leading-relaxed">
           ここまで読んでくださって、ありがとうございます。
