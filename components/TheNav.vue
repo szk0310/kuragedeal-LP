@@ -10,7 +10,7 @@
       </a>
 
       <!-- Desktop links -->
-      <div class="hidden md:flex items-center gap-6 text-sm font-medium text-gray-600">
+      <div class="hidden lg:flex items-center gap-6 text-sm font-medium text-gray-600">
         <a href="/#features" class="hover:text-kurage-600 transition-colors">機能</a>
         <a href="/#nurturing" class="hover:text-kurage-600 transition-colors">AIナーチャリング</a>
         <a href="/#pricing" class="hover:text-kurage-600 transition-colors">料金</a>
@@ -27,7 +27,7 @@
       <!-- Mobile CTA -->
       <a
         href="/beta"
-        class="md:hidden bg-orange-500 text-white text-sm px-4 py-2 rounded-lg hover:bg-orange-400 transition-colors font-bold"
+        class="lg:hidden bg-orange-500 text-white text-sm px-4 py-2 rounded-lg hover:bg-orange-400 transition-colors font-bold"
         >β 参加プログラム</a
       >
     </nav>

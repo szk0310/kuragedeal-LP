@@ -67,7 +67,7 @@
           </h2>
           <p class="text-gray-700 max-w-2xl mx-auto leading-relaxed">
             一人社長のフリーランスから、営業チーム10名規模の成長企業まで。<br />
-            「大手ベンダーのCRMは高すぎるし重すぎる。でもExcelの管理はもう限界」<br />
+            「大手ベンダーのCRM/SFAは高すぎるし重すぎる。」<br />
             ──そんな会社のために作りました。
           </p>
         </div>
@@ -87,11 +87,11 @@
     </section>
 
     <!-- ============================================================
-         03. お悩み 1: CRM が続かない
+         03. あるある 1: CRM が続かない
     ============================================================ -->
     <section id="pain1" class="bg-white py-20">
       <div class="max-w-3xl mx-auto px-4 sm:px-6">
-        <p class="text-sm font-bold text-orange-500 uppercase tracking-widest mb-3">お悩み 1</p>
+        <p class="text-sm font-bold text-orange-500 uppercase tracking-widest mb-3">あるある お悩み 1</p>
         <h2 class="text-3xl md:text-4xl font-black text-gray-900 mb-10 leading-tight">
           CRM が、続かない。
         </h2>
@@ -185,11 +185,11 @@
     </section>
 
     <!-- ============================================================
-         04. お悩み 2: 進捗が見えない
+         04. あるある お悩み 2: 進捗が見えない
     ============================================================ -->
     <section id="pain2" class="bg-ocean-steel/75 py-20">
       <div class="max-w-3xl mx-auto px-4 sm:px-6">
-        <p class="text-sm font-bold text-orange-500 uppercase tracking-widest mb-3">お悩み 2</p>
+        <p class="text-sm font-bold text-orange-500 uppercase tracking-widest mb-3">あるある お悩み 2</p>
         <h2 class="text-3xl md:text-4xl font-black text-gray-900 mb-10 leading-tight">
           営業の進捗が、見えない。
         </h2>
@@ -338,11 +338,11 @@
     </section>
 
     <!-- ============================================================
-         05. お悩み 3: マネジャーが足りない
+         05. あるある お悩み 3: マネジャーが足りない
     ============================================================ -->
     <section id="pain3" class="bg-white py-20">
       <div class="max-w-3xl mx-auto px-4 sm:px-6">
-        <p class="text-sm font-bold text-orange-500 uppercase tracking-widest mb-3">お悩み 3</p>
+        <p class="text-sm font-bold text-orange-500 uppercase tracking-widest mb-3">あるある お悩み 3</p>
         <h2 class="text-3xl md:text-4xl font-black text-gray-900 mb-10 leading-tight">
           営業マネジャーが、足りない。
         </h2>
@@ -479,7 +479,7 @@
         </div>
 
         <p class="text-center text-gray-500 mt-12 italic">
-          3 つのお悩みを、ご一緒に見てきました。<br />
+          3 つのあるある お悩みを、ご一緒に見てきました。<br />
           最後に、従来の Slack 連携 CRM ではなく、<br />
           なぜクラゲディールが選ばれているのか。その理由を整理させてください。
         </p>
@@ -633,7 +633,12 @@
               ★ 最人気
             </div>
             <h3 class="text-2xl font-black text-gray-900 mb-2">{{ plan.name }}</h3>
-            <p class="text-3xl font-black text-gray-900 mb-1">{{ plan.price }}</p>
+            <p
+              :class="[
+                'font-black text-gray-900 mb-1 whitespace-nowrap',
+                plan.price.length > 5 ? 'text-xl md:text-2xl' : 'text-3xl',
+              ]"
+            >{{ plan.price }}</p>
             <p class="text-sm text-gray-500 mb-6">{{ plan.priceNote }}</p>
             <ul class="space-y-2 mb-6 flex-1">
               <li v-for="(f, j) in plan.features" :key="j" class="flex items-start gap-2 text-sm">
@@ -720,7 +725,7 @@
     </section>
 
     <!-- ============================================================
-         08. 仲間（β 5 社）— 各社の許諾取得まで非表示
+         08. 仲間（β 4 社）— 各社の許諾取得まで非表示
     ============================================================ -->
     <!--
     <section id="pioneers" class="bg-white py-20">
@@ -729,7 +734,7 @@
         <h2 class="text-3xl md:text-4xl font-black text-gray-900 mb-4">すでに、選んでくださった会社があります。</h2>
         <p class="text-gray-700 leading-relaxed mb-10">
           2026 年 5 月、プライベート β を開始しました。<br />
-          最初の仲間は、5 社の経営層でした。
+          最初の仲間は、4 社の経営層でした。
         </p>
 
         <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-10">
@@ -861,8 +866,7 @@ const pricing = [
     price: '¥0',
     priceNote: '/ 月',
     featured: false,
-    // phase1（〜 11/17）はボタンを出さない（11/18 提供開始）
-    cta: '',
+    cta: '',  // phase0: ボタンは出さない（11/18 開始予定なので）
     checkoutUrl: '',
     startNote: '2026/11/18 提供開始',
     features: [
@@ -912,11 +916,10 @@ const pricing = [
 ]
 
 const pioneers = [
-  { name: 'OPRO',    icon: '📦', industry: '帳票 SaaS' },
+  { name: 'OPRO',    icon: '📦', industry: '帳票・CRM SaaS' },
   { name: 'Opti',    icon: '🛒', industry: 'eコマース・D2C' },
   { name: 'WeLearn', icon: '🎓', industry: '人材・教育' },
   { name: 'SI Inc',  icon: '🏗', industry: 'SI・受託' },
-  { name: 'CCC',     icon: '🏬', industry: '大手リテール・新規事業部' },
 ]
 
 const faqs = [
