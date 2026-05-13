@@ -12,10 +12,10 @@
         <div class="absolute bottom-10 right-10 w-96 h-96 rounded-full bg-cyan-300 blur-3xl" />
       </div>
 
-      <div class="relative max-w-6xl mx-auto px-4 sm:px-6 md:pl-11 py-24 md:py-32">
-        <div class="flex flex-col md:flex-row items-center gap-12">
+      <div class="relative max-w-6xl mx-auto px-4 sm:px-6 lg:pl-11 py-24 md:py-32">
+        <div class="flex flex-col lg:flex-row items-center gap-12">
           <div class="flex-1">
-            <h1 class="text-4xl md:text-6xl font-black mb-6 leading-tight">
+            <h1 class="text-4xl md:text-5xl lg:text-6xl font-black mb-6 leading-tight">
               <span class="block mb-4">話しかけるだけで、</span>
               <span class="text-cyan-50">ディールが前に進む。</span>
             </h1>
@@ -44,7 +44,7 @@
             </p>
           </div>
 
-          <div class="hidden md:flex flex-shrink-0 items-center justify-center w-72 h-72 md:mr-8">
+          <div class="hidden lg:flex flex-shrink-0 items-center justify-center w-72 h-72 lg:mr-8">
             <img
               src="/kurage-on-green.svg"
               alt="クラゲくん"
@@ -619,7 +619,7 @@
       <div class="max-w-4xl mx-auto px-4 sm:px-6">
         <p class="text-sm font-bold text-cyan-300 uppercase tracking-widest mb-3 text-center">他のツールとの違い</p>
         <h2 class="text-3xl md:text-4xl font-black mb-8 text-center leading-relaxed">
-          1〜10 人の営業チームのために、<br />ゼロから設計した営業 AI です。
+          1〜10 人の営業チームのために、<br class="hidden md:inline" />ゼロから設計した営業 AI です。
         </h2>
 
         <div class="bg-white/5 border border-white/10 rounded-2xl p-8 mb-12 text-kurage-100 leading-relaxed">
