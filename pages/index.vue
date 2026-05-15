@@ -64,10 +64,20 @@
           <h2 class="text-2xl md:text-3xl font-bold text-gray-800 mb-4">
             1〜10 人の営業チームのために、ゼロから設計したAIツール
           </h2>
-          <p class="text-gray-700 max-w-2xl mx-auto leading-relaxed">
+          <p class="text-gray-700 max-w-2xl mx-auto leading-relaxed mb-6">
             一人社長のフリーランスから、営業チーム10名規模の成長企業まで。<br />
             「大手ベンダーのCRM/SFAは高すぎるし重すぎる。」<br />
             ──そんな会社のために作りました。
+          </p>
+          <p class="text-gray-700 max-w-2xl mx-auto leading-relaxed mb-4">
+            1〜10 人の営業チームは、大手 CRM の主戦場ではありません。<br />
+            だからこそ、私たちはこのサイズの「現場の手触り」から、<br />
+            ゼロから設計しました。
+          </p>
+          <p class="text-sm text-gray-600 max-w-2xl mx-auto leading-relaxed italic">
+            将来チームが大きく育ったときは、Salesforce 等への移行も<br />
+            弊社（Salesforce 認定コンサルティングパートナー）が支援します。<br />
+            クラゲディールは、あなたのチームの "今" にぴったり寄り添うために。
           </p>
         </div>
         <div class="bg-white/80 rounded-2xl border border-ocean-tan/30 p-8 md:p-10">
@@ -629,8 +639,12 @@
           <p class="mb-4">
             ただ、1〜10 人の小さな営業チームから見ると、どれも「自分たちのサイズ」には合いません。
           </p>
-          <p class="text-cyan-200 font-bold">
+          <p class="text-cyan-200 font-bold mb-6">
             重い。高い。柔軟じゃない。Slack に住んでくれない。
+          </p>
+          <p class="mt-4 pt-4 border-t border-white/10">
+            <span class="text-cyan-200 font-bold">大手 CRM の主戦場（20 人以上の組織）とは、別の場所で。</span><br />
+            1〜10 人専用に、ゼロから組み上げた営業 AI です。
           </p>
         </div>
 
