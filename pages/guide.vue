@@ -20,6 +20,40 @@
         <p class="text-gray-500">Slackにインストールしたら、まずこれだけ覚えてください。</p>
       </div>
 
+      <!-- 最初の 1 週間でやってほしいこと -->
+      <section id="first-week" class="mb-14 scroll-mt-20">
+        <div class="bg-gradient-to-br from-kurage-50 via-cyan-50 to-ocean-mist/40 border-2 border-kurage-200 rounded-2xl p-6 md:p-8">
+          <div class="flex items-center gap-3 mb-4">
+            <span class="text-3xl">🪼</span>
+            <div>
+              <p class="text-xs font-bold text-orange-500 uppercase tracking-widest">クイックスタート</p>
+              <h2 class="text-xl md:text-2xl font-black text-gray-900">最初の 1 週間でやってほしいこと</h2>
+            </div>
+          </div>
+          <p class="text-sm text-gray-600 mb-6 leading-relaxed">
+            クラゲディールの真価は、毎日少しずつ Slack に記録することで現れます。<br />
+            まず 1 週間、下のチェックリストに沿って試してみてください。
+          </p>
+
+          <div class="space-y-5">
+            <div v-for="day in firstWeekPlan" :key="day.label" class="bg-white/70 rounded-xl p-4">
+              <p class="font-bold text-kurage-800 mb-2 text-sm">{{ day.label }} — {{ day.theme }}</p>
+              <ul class="space-y-1.5 text-sm text-gray-700">
+                <li v-for="(task, i) in day.tasks" :key="i" class="flex items-start gap-2">
+                  <span class="text-green-500 mt-0.5 flex-shrink-0">✅</span>
+                  <span>{{ task }}</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <p class="text-xs text-gray-500 mt-6 italic leading-relaxed">
+            ※ 全部やる必要はありません。気になったところからどうぞ。<br />
+            ※ うまくいかない時は画面右下のクラゲくんに話しかけてください。
+          </p>
+        </div>
+      </section>
+
       <!-- Step 1: 最初にやること -->
       <section class="mb-10">
         <h2 class="text-xl font-black text-gray-800 mb-4 flex items-center gap-2">
@@ -168,5 +202,44 @@ const autoFeatures = [
   { icon: '📧', title: 'AIメール下書き', desc: '顧客からのメール受信後、AIが返信案をSlackに届けます。' },
   { icon: '⚠️', title: '停滞検知', desc: '長期間動きのない案件を自動で検知して通知します。' },
   { icon: '📊', title: 'パイプライン分析', desc: 'Webダッシュボードで全体の状況をいつでも確認できます。' },
+]
+
+const firstWeekPlan = [
+  {
+    label: 'Day 1（インストール当日）',
+    theme: 'まずクラゲくんに話しかけてみる',
+    tasks: [
+      'Slack で「@クラゲディール」とメンション or DM して挨拶',
+      '顧客を 1 件登録（例:「田中さんを顧客に追加して。会社は ABC 商事」）',
+      '活動メモを 1 件記録（例:「田中さんと商談しました。予算 300 万」）',
+    ],
+  },
+  {
+    label: 'Day 2-3',
+    theme: 'AI コーチングと Web ダッシュボード',
+    tasks: [
+      'ディールを 1 件登録（例:「ABC 商事で新規ディールを作って」）',
+      '`/coach` コマンドで MEDDPICC 深掘り体験',
+      '`/setting` でログインキーを発行 → Web ダッシュボードにログイン',
+    ],
+  },
+  {
+    label: 'Day 4-5',
+    theme: '朝夕ブリーフィングを受け取る',
+    tasks: [
+      '朝 9:00 の今日のフォーカス通知を確認',
+      '夕 17:00 の振り返り通知を確認',
+      '活動メモを書くたびに受注確率が動くのを体感する',
+    ],
+  },
+  {
+    label: 'Day 6-7',
+    theme: '振り返り + チーム展開',
+    tasks: [
+      '`/list` で 1 週間の記録を振り返る',
+      'チームメンバーを 1 人招待してみる（Slack ワークスペース管理者経由）',
+      '「使ってみて感じたこと」をクラゲくんへフィードバック',
+    ],
+  },
 ]
 </script>
