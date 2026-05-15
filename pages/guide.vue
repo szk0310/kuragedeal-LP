@@ -195,6 +195,7 @@ const commands = [
   { cmd: '/coach', title: 'AIコーチング', desc: 'AIが商談の進め方をヒアリング形式でコーチングします。' },
   { cmd: '/usage', title: 'AI利用状況', desc: '今月のAI利用量・残り予算・プラン情報を確認できます。' },
   { cmd: '/setting', title: '設定', desc: 'AI 返信支援モードの切替・営業ポリシーの設定ができます。' },
+  { cmd: '/feedback', title: 'フィードバック投稿', desc: '使ってみて感じたことを開発チームへ直接送れます。例: `/feedback 朝のブリーフィングが長く感じる` 🪼' },
 ]
 
 const autoFeatures = [
@@ -238,7 +239,7 @@ const firstWeekPlan = [
     tasks: [
       '`/list` で 1 週間の記録を振り返る',
       'チームメンバーを 1 人招待してみる（Slack ワークスペース管理者経由）',
-      '「使ってみて感じたこと」をクラゲくんへフィードバック',
+      '`/feedback 使ってみて感じたこと` を送る（鈴木が直接拝見します 🪼）',
     ],
   },
 ]
