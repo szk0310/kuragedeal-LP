@@ -185,21 +185,45 @@ const route = useRoute()
 const runtimeConfig = useRuntimeConfig()
 const turnstileSiteKey = runtimeConfig.public.turnstileSiteKey
 
-// ?subject=enterprise / general / press / bug でフォーム種別を初期選択
-const initialSubject = (() => {
+const VALID_SUBJECTS = ['enterprise', 'general', 'press', 'bug'] as const
+
+// SSR/prerender 時は route.query が空のため、SSR では暫定で 'enterprise' を初期値にし、
+// クライアントハイドレーション後に onMounted で URL クエリを読み直して上書きする。
+// (Cloudflare Pages の prerender で生成された静的 HTML に query が反映されない問題への対処)
+function pickSubjectFromQuery(): string {
   const q = (route.query.subject as string | undefined)?.toLowerCase()
-  if (q && ['enterprise', 'general', 'press', 'bug'].includes(q)) return q
-  return 'enterprise'  // LP の Enterprise カードからの導線が主用途なのでデフォルト enterprise
-})()
+  if (q && (VALID_SUBJECTS as readonly string[]).includes(q)) return q
+  // LP の Enterprise カードからの導線が主用途なのでデフォルト enterprise
+  return 'enterprise'
+}
 
 const form = reactive({
-  subject: initialSubject,
+  subject: pickSubjectFromQuery(),
   company: '',
   name: '',
   email: '',
   teamSize: '',
   currentCrm: '',
   message: '',
+})
+
+// ハイドレーション後に再評価。SSR 時の HTML には初期値 (enterprise) が入るが、
+// 直後の onMounted で client 側の window.location.search を読み直して反映する。
+onMounted(() => {
+  // route.query を再評価 (この時点でブラウザの URL が解決済み)
+  const fromRoute = pickSubjectFromQuery()
+  if (fromRoute !== form.subject) {
+    form.subject = fromRoute
+    return
+  }
+  // route.query が空の場合 (まれに hydration ミスマッチ等) は window.location から拾う
+  if (typeof window !== 'undefined') {
+    const params = new URLSearchParams(window.location.search)
+    const q = (params.get('subject') || '').toLowerCase()
+    if (q && (VALID_SUBJECTS as readonly string[]).includes(q)) {
+      form.subject = q
+    }
+  }
 })
 
 const isEnterprise = computed(() => form.subject === 'enterprise')
