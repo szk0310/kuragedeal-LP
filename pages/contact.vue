@@ -207,22 +207,23 @@ const form = reactive({
   message: '',
 })
 
-// ハイドレーション後に再評価。SSR 時の HTML には初期値 (enterprise) が入るが、
-// 直後の onMounted で client 側の window.location.search を読み直して反映する。
+// ハイドレーション後に再評価。Nuxt prerender + Cloudflare Pages の組み合わせで
+// route.query が hydration 時点で空のままになることがあるため、window.location.search を
+// 最優先で読み取り、route.query は補助的に使う。
 onMounted(() => {
-  // route.query を再評価 (この時点でブラウザの URL が解決済み)
-  const fromRoute = pickSubjectFromQuery()
-  if (fromRoute !== form.subject) {
-    form.subject = fromRoute
-    return
-  }
-  // route.query が空の場合 (まれに hydration ミスマッチ等) は window.location から拾う
+  // 1. window.location.search を最優先 (確実に URL から取れる)
   if (typeof window !== 'undefined') {
     const params = new URLSearchParams(window.location.search)
     const q = (params.get('subject') || '').toLowerCase()
     if (q && (VALID_SUBJECTS as readonly string[]).includes(q)) {
       form.subject = q
+      return
     }
+  }
+  // 2. fallback: route.query (Vue Router 経由、SPA 内遷移の場合はこちらで取れる)
+  const fromRoute = pickSubjectFromQuery()
+  if (fromRoute !== form.subject) {
+    form.subject = fromRoute
   }
 })
 
