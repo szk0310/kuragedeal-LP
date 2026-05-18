@@ -241,6 +241,10 @@ async function submit() {
         teamSize: form.teamSize,
         currentCrm: form.currentCrm,
         message: enrichedMessage,
+        // subject を明示的に送る → API 側で /free (β 申込み) との分岐に使う。
+        // これにより /contact 経由の Enterprise 相談者に「Slack インストールリンク」が
+        // 誤送信される事故を防ぐ。
+        subject: form.subject,
         turnstileToken,
       }),
     })
