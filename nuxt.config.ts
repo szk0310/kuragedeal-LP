@@ -25,12 +25,10 @@ export default defineNuxtConfig({
     },
   },
   // /beta-program は /beta に統一（旧 URL は 301 で恒久リダイレクト）
-  // /contact は当面 /free（β 申込み + 問い合わせ）にリダイレクト
-  // ※ Enterprise 専用フォーム分離時にここを解除
+  // /contact は 2026-05-18 から専用ページ (Enterprise 相談 + 一般お問い合わせ) に独立
   routeRules: {
     '/beta-program': { redirect: { to: '/beta', statusCode: 301 } },
     '/beta-program/**': { redirect: { to: '/beta', statusCode: 301 } },
-    '/contact': { redirect: { to: '/free', statusCode: 302 } },
   },
   app: {
     head: {

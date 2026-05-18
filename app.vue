@@ -10,6 +10,6 @@
 <script setup lang="ts">
 const route = useRoute()
 // フォームページではフローティング CTA を非表示（送信ボタンとの被り回避）
-const formPaths = ['/beta', '/waitlist', '/free']
+const formPaths = ['/beta', '/waitlist', '/free', '/contact']
 const showChat = computed(() => !formPaths.includes(route.path))
 </script>
