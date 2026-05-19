@@ -179,6 +179,14 @@
 </template>
 
 <script setup lang="ts">
+// /contact は SSR/prerender を無効化し client-only でレンダリング。
+// 理由: 静的 HTML に form.subject の初期値 (enterprise) が焼き付き、
+// hydration 後に subject を書き換えても <h1> や <select> の表示が
+// 古いまま残る hydration mismatch が発生していたため。
+// client-only にすれば初回 setup() が URL クエリ読める状態で実行され
+// 確実に正しい値で描画される。
+definePageMeta({ ssr: false })
+
 useHead({ title: 'お問い合わせ | クラゲディール' })
 
 const route = useRoute()

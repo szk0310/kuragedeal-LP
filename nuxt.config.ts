@@ -26,9 +26,11 @@ export default defineNuxtConfig({
   },
   // /beta-program は /beta に統一（旧 URL は 301 で恒久リダイレクト）
   // /contact は 2026-05-18 から専用ページ (Enterprise 相談 + 一般お問い合わせ) に独立
+  // /contact は ssr: false で client-only に。理由は contact.vue の definePageMeta 参照
   routeRules: {
     '/beta-program': { redirect: { to: '/beta', statusCode: 301 } },
     '/beta-program/**': { redirect: { to: '/beta', statusCode: 301 } },
+    '/contact': { ssr: false },
   },
   app: {
     head: {
