@@ -19,8 +19,17 @@
               <span class="block mb-4">話しかけるだけで、</span>
               <span class="text-cyan-50">ディールが前に進む。</span>
             </h1>
+
+            <!-- クラゲくん コアフレーズ -->
+            <div class="border-l-2 border-cyan-400/60 pl-4 mb-4 max-w-lg">
+              <p class="text-base text-cyan-100 italic leading-relaxed">
+                ぼくには脳がない。記憶もない。<br />
+                でも、きみのことは全部覚えてる。
+              </p>
+            </div>
+
             <p class="text-lg text-kurage-100 mb-2 max-w-2xl leading-relaxed">
-              Slackに書いた一言が、自動で記録・分析・コーチングまでつながる。
+              Slackに書いた一言が、自動で記録・コーチングまでつながる。
             </p>
             <p class="text-base text-kurage-100 mb-10 max-w-2xl leading-relaxed">
               1人から10人の営業チームのために、ゼロから設計しました。<br />
@@ -34,13 +43,11 @@
                 href="/beta"
                 class="inline-flex items-center justify-center gap-2 bg-orange-500 hover:bg-orange-400 text-white font-bold px-8 py-4 rounded-xl text-lg transition-colors shadow-lg"
               >
-                3 ヶ月無料で試す（β 版）→
+                β 版を試す →
               </a>
             </div>
             <p class="text-xs text-kurage-200 max-w-xl leading-relaxed">
-              ※ 2026 年 11 月 18 日、正式版ローンチ予定。<br />
-              それまで、3 ヶ月の β 試用（Standard 全機能・完全無料・審査なし・即時アクティベート）を
-              どなたでもお試しいただけます。
+              ※ 正式版リリース時期は、品質目標を達成した時点で改めてご案内します。
             </p>
           </div>
 
@@ -160,24 +167,34 @@
         </div>
 
         <!-- ROI バナー（対比構造） -->
-        <p class="text-center text-sm font-bold text-gray-500 uppercase tracking-widest mb-4">入力の隠れコストが、こう変わります</p>
-        <div class="bg-gradient-to-br from-kurage-900 to-kurage-700 text-white rounded-2xl p-6 md:p-8 mb-10 shadow-lg">
-          <div class="grid grid-cols-3 gap-2 sm:gap-4 text-center">
-            <div>
-              <p class="text-2xl sm:text-3xl md:text-4xl font-black text-cyan-50 leading-tight">
-                <span class="hidden sm:inline">△</span>¥300,000
-              </p>
-              <p class="text-xs text-kurage-200 mt-2">月間入力作業<br />コスト削減<br />（10 人チーム試算）</p>
-            </div>
-            <div class="border-x border-white/20">
-              <p class="text-2xl sm:text-3xl md:text-4xl font-black text-cyan-50 leading-tight">¥9,800</p>
-              <p class="text-xs text-kurage-200 mt-2">月額利用料<br />（10人チーム）</p>
-            </div>
-            <div>
-              <p class="text-2xl sm:text-3xl md:text-4xl font-black text-orange-400 leading-tight">30x</p>
-              <p class="text-xs text-kurage-200 mt-2">初月からの<br />ROI</p>
-            </div>
-          </div>
+        <p class="text-center text-sm font-bold text-gray-500 uppercase tracking-widest mb-4">チーム規模別の料金比較</p>
+        <div class="bg-gradient-to-br from-kurage-900 to-kurage-700 text-white rounded-2xl p-6 md:p-8 mb-10 shadow-lg overflow-x-auto">
+          <table class="w-full text-sm text-center min-w-[400px]">
+            <thead>
+              <tr class="border-b border-white/20">
+                <th class="pb-3 text-kurage-200 font-normal">チーム規模</th>
+                <th class="pb-3 text-cyan-200 font-bold">クラゲディール</th>
+                <th class="pb-3 text-kurage-200 font-normal text-xs">従来の Slack 連携 CRM</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-white/10">
+              <tr>
+                <td class="py-3 text-kurage-200">1 人</td>
+                <td class="py-3 font-black text-xl text-cyan-50">¥1,980<span class="text-xs font-normal text-kurage-200">/月</span></td>
+                <td class="py-3 text-kurage-300 text-xs">約 ¥16,000〜¥21,000/月</td>
+              </tr>
+              <tr>
+                <td class="py-3 text-kurage-200">3 人</td>
+                <td class="py-3 font-black text-xl text-cyan-50">¥4,980<span class="text-xs font-normal text-kurage-200">/月</span></td>
+                <td class="py-3 text-kurage-300 text-xs">約 ¥48,000〜¥63,000/月</td>
+              </tr>
+              <tr>
+                <td class="py-3 text-kurage-200">10 人</td>
+                <td class="py-3 font-black text-xl text-orange-400">¥9,800<span class="text-xs font-normal text-kurage-200">/月</span></td>
+                <td class="py-3 text-kurage-300 text-xs">約 ¥160,000〜¥210,000/月</td>
+              </tr>
+            </tbody>
+          </table>
         </div>
 
         <!-- 3 つの特徴チップ -->
@@ -275,11 +292,11 @@
               </p>
             </div>
             <div>
-              <p class="font-bold text-gray-900 mb-2">🧠 顧客との会話で、受注確率が自動で動く。</p>
+              <p class="font-bold text-gray-900 mb-2">🧠 MEDDPICC 情報が更新されるたびに、受注確率が動く。</p>
               <p class="text-sm text-gray-700 leading-relaxed pl-5 border-l-2 border-kurage-200">
-                「予算は問題ない」と聞けば、AI が確率を上げる。<br />
-                「難しいですね」と返ってくれば、AI が確率を下げる。<br />
-                ── 会話のニュアンスが、リアルタイムで数字に変わります。
+                決裁者と会えた。予算の根拠を確認した。競合を把握した。<br />
+                ── そのたびに、AI が確率を計算し直します。<br />
+                数字が動くから、今どこにいるかが見える。
               </p>
             </div>
             <div>
@@ -440,7 +457,7 @@
               AI では届かない「経営の悩み」「業界の動向」は、人間が答えます。
             </p>
             <p class="text-xs text-gray-500 mt-2 italic">
-              ※ 月次オフィスアワーは、2026 年 11 月から始まる「β 参加プログラム」の特典です。
+              ※ 月次オフィスアワーは、正式版リリース後に開始予定の特典です。
               詳しくは、このページの最後でご案内します。
             </p>
           </div>
@@ -657,7 +674,7 @@
             さらに、ほとんどの場合 Slack Pro 以上の有料プランも必要です。
           </p>
           <p class="text-cyan-200 font-bold mb-2">
-            ★ クラゲディールは違います。10 人まで月 ¥9,800、ユーザー数追加課金なし。
+            ★ クラゲディールは違います。1 人 ¥1,980、3 人 ¥4,980、10 人 ¥9,800。ユーザー数追加課金なし。
           </p>
           <p class="text-cyan-200 font-bold mb-6">
             ★ しかも、Slack の Free プランでも完全に動作します。
@@ -673,8 +690,8 @@
                 </tr>
               </thead>
               <tbody class="divide-y divide-white/10">
-                <tr><td class="px-4 py-3">1 人</td><td class="px-4 py-3 font-bold">¥0/月（Free）</td><td class="px-4 py-3 text-kurage-300">約 ¥16,000〜¥21,000/月</td></tr>
-                <tr><td class="px-4 py-3">5 人</td><td class="px-4 py-3 font-bold">¥9,800/月</td><td class="px-4 py-3 text-kurage-300">約 ¥80,000〜¥105,000/月</td></tr>
+                <tr><td class="px-4 py-3">1 人</td><td class="px-4 py-3 font-bold text-cyan-200">¥1,980/月</td><td class="px-4 py-3 text-kurage-300">約 ¥16,000〜¥21,000/月</td></tr>
+                <tr><td class="px-4 py-3">3 人</td><td class="px-4 py-3 font-bold">¥4,980/月</td><td class="px-4 py-3 text-kurage-300">約 ¥48,000〜¥63,000/月</td></tr>
                 <tr><td class="px-4 py-3">10 人</td><td class="px-4 py-3 font-bold text-cyan-200">¥9,800/月</td><td class="px-4 py-3 text-orange-300">約 ¥160,000〜¥210,000/月</td></tr>
               </tbody>
             </table>
@@ -684,8 +701,7 @@
           </p>
 
           <p class="text-kurage-100 leading-relaxed mb-3">
-            1 人で使い始めれば、フリーランスでも完全な営業 AI 環境。<br />
-            チームが 10 人に成長しても、月額は変わらず ¥9,800。<br />
+            1 人 ¥1,980 から始めて、チームが 10 人に成長しても月額 ¥9,800。<br />
             ── 従来環境との差は、月 15〜20 万円（年 180〜240 万円）に。
           </p>
           <p class="text-kurage-100 leading-relaxed mb-3">
@@ -695,7 +711,7 @@
             11 人以上の規模になったら、Enterprise プランで個別対応します。
           </p>
           <div class="bg-orange-500/20 border border-orange-400/40 rounded-xl p-4 text-cyan-100 text-sm leading-relaxed">
-            <strong class="text-orange-300">★</strong> 今なら <strong class="text-orange-300">3 ヶ月完全無料</strong>の β 試用を提供中（審査なし・即時アクティベート）。<br />
+            <strong class="text-orange-300">★</strong> 今なら <strong class="text-orange-300">14 日間完全無料</strong>の β 試用を提供中（クレカ不要・審査なし・即時アクティベート）。<br />
             どなたでも、Slack に追加するだけで即日ご利用いただけます。
           </div>
         </div>
@@ -713,7 +729,7 @@
           <ul class="space-y-2 text-kurage-100 text-sm leading-relaxed">
             <li>・自然言語で「田中さんと商談した」と書くだけで、ディール自動更新</li>
             <li>・MEDDPICC で AI が決裁者・予算・競合を問う</li>
-            <li>・会話のセンチメントで受注確率が動く</li>
+            <li>・MEDDPICC 情報の更新で受注確率が自動計算</li>
             <li>・14 日停滞案件を自動検知</li>
             <li>・顧客メールの返信を AI が下書き → Slack 承認 → 自社送信</li>
             <li>・朝 9 時・夕方 17 時の自動ブリーフィング</li>
@@ -749,6 +765,138 @@
     </section>
 
     <!-- ============================================================
+         07.5. 今できること、正直に話します。（クラゲくん語り口）
+    ============================================================ -->
+    <section id="honesty" class="bg-kurage-50/60 py-20">
+      <div class="max-w-3xl mx-auto px-4 sm:px-6">
+        <div class="text-center mb-10">
+          <p class="text-4xl mb-4">🪼</p>
+          <h2 class="text-3xl md:text-4xl font-black text-gray-900 mb-6 leading-tight">
+            今できること、正直に話します。
+          </h2>
+          <!-- クラゲくん リード文 -->
+          <div class="bg-white border-2 border-kurage-200 rounded-2xl p-6 text-left max-w-xl mx-auto shadow-sm">
+            <p class="text-base text-gray-700 leading-relaxed mb-2">
+              ぼくができることは、まだ多くありません。<br />
+              でも、毎日使えるものだけを、ちゃんと動かしています。
+            </p>
+            <p class="text-base text-kurage-700 font-bold">正直に話しますね。</p>
+          </div>
+        </div>
+
+        <!-- 今すぐ使える機能 -->
+        <div class="bg-white border border-kurage-200 rounded-2xl p-6 md:p-8 mb-6 shadow-sm">
+          <div class="flex items-center gap-2 mb-5">
+            <span class="text-green-500 text-lg font-black">✅</span>
+            <h3 class="text-xl font-black text-gray-900">今すぐ使える</h3>
+          </div>
+          <div class="space-y-5">
+            <div class="flex gap-3">
+              <span class="text-xl flex-shrink-0">📝</span>
+              <div>
+                <p class="font-bold text-gray-900 mb-1">Slack で話しかけるだけで記録できます</p>
+                <p class="text-sm text-gray-600 leading-relaxed">「田中さんと商談しました。予算 300 万」と書くだけで、ディールと活動メモが更新されます。フォームはいりません。</p>
+              </div>
+            </div>
+            <div class="flex gap-3">
+              <span class="text-xl flex-shrink-0">🔍</span>
+              <div>
+                <p class="font-bold text-gray-900 mb-1">名前を呼べば、ぼくが調べます</p>
+                <p class="text-sm text-gray-600 leading-relaxed">顧客情報・会社情報・活動履歴・ディール一覧。「田中さんの役職は?」「ABC 商事のディールを見せて」</p>
+              </div>
+            </div>
+            <div class="flex gap-3">
+              <span class="text-xl flex-shrink-0">🌅</span>
+              <div>
+                <p class="font-bold text-gray-900 mb-1">毎朝 9 時と毎夕 17 時に、状況をお届けします</p>
+                <p class="text-sm text-gray-600 leading-relaxed">今日やるべきこと、1 日の振り返り。14 日間動きのない案件は、ぼくが先に知らせます。</p>
+              </div>
+            </div>
+            <div class="flex gap-3">
+              <span class="text-xl flex-shrink-0 font-bold text-kurage-600">/</span>
+              <div>
+                <p class="font-bold text-gray-900 mb-1"><code class="bg-gray-100 text-kurage-700 px-1.5 py-0.5 rounded text-sm">/coach</code> — 案件を一緒に深掘りします</p>
+                <p class="text-sm text-gray-600 leading-relaxed">MEDDPICC で、決裁者・予算・競合を確認します。全員に、同じ質の問いかけを届けます。</p>
+              </div>
+            </div>
+            <div class="flex gap-3">
+              <span class="text-xl flex-shrink-0">✉️</span>
+              <div>
+                <p class="font-bold text-gray-900 mb-1">メールの返信下書きを作ります</p>
+                <p class="text-sm text-gray-600 leading-relaxed">顧客からのメールが届いたら、文脈を読んで返信案を用意します。送るかどうかは、きみが決めてください。</p>
+              </div>
+            </div>
+            <div class="flex gap-3">
+              <span class="text-xl flex-shrink-0">📊</span>
+              <div>
+                <p class="font-bold text-gray-900 mb-1">活動を記録するたびに、受注確率を計算し直します</p>
+                <p class="text-sm text-gray-600 leading-relaxed">MEDDPICC 情報が増えるたびに、数字が動きます。</p>
+              </div>
+            </div>
+            <div class="flex gap-3">
+              <span class="text-xl flex-shrink-0">💬</span>
+              <div>
+                <p class="font-bold text-gray-900 mb-1">気になることは <code class="bg-gray-100 text-kurage-700 px-1.5 py-0.5 rounded text-sm">/kurage</code> で教えてください</p>
+                <p class="text-sm text-gray-600 leading-relaxed">ぼくが覚えておきます。</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 正規版で追加される機能 -->
+        <div class="bg-kurage-900/5 border border-kurage-200 rounded-2xl p-6 md:p-8 mb-8">
+          <div class="flex items-center gap-2 mb-5">
+            <span class="text-xl">🌊</span>
+            <h3 class="text-xl font-black text-gray-700">正規版リリースで追加される予定</h3>
+          </div>
+          <div class="space-y-5">
+            <div class="flex gap-3">
+              <span class="text-xl flex-shrink-0">📈</span>
+              <div>
+                <p class="font-bold text-gray-700 mb-1">アナリティクスダッシュボード</p>
+                <p class="text-sm text-gray-500 leading-relaxed">月別推移・ステージ別件数・活動種別・成約率など。数字で営業を振り返れるようにします。</p>
+              </div>
+            </div>
+            <div class="flex gap-3">
+              <span class="text-xl flex-shrink-0">💌</span>
+              <div>
+                <p class="font-bold text-gray-700 mb-1">メールの感情読み取り（センチメント分析）</p>
+                <p class="text-sm text-gray-500 leading-relaxed">「難しいですね」という返信を、ぼくが読み取って受注確率に反映します。今は /coach での手動更新です。</p>
+              </div>
+            </div>
+            <div class="flex gap-3">
+              <span class="text-xl flex-shrink-0">📝</span>
+              <div>
+                <p class="font-bold text-gray-700 mb-1">グラウンディング型ドラフト生成</p>
+                <p class="text-sm text-gray-500 leading-relaxed">「半年活動のない顧客に AI 動向のメールを書いて」のような指示で、顧客情報と外部知識を組み合わせた下書きを生成します。</p>
+              </div>
+            </div>
+            <div class="flex gap-3">
+              <span class="text-xl flex-shrink-0">📖</span>
+              <div>
+                <p class="font-bold text-gray-700 mb-1">/guide 用語集</p>
+                <p class="text-sm text-gray-500 leading-relaxed">クラゲディールで使う言葉の意味を、いつでも調べられます。</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- クロージング — クラゲくん語り口 -->
+        <div class="bg-white border-2 border-kurage-200 rounded-2xl p-6 text-center shadow-sm">
+          <p class="text-base text-gray-700 leading-relaxed mb-3">
+            まだ完成していないものがあります。<br />
+            でもぼくは、毎日覚えることが増えています。
+          </p>
+          <p class="text-base text-gray-700 leading-relaxed mb-4">
+            きみが使うたびに、ぼくは育ちます。<br />
+            よろしくお願いします。
+          </p>
+          <p class="text-kurage-500 font-bold">— クラゲくん 🪼</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
          08. 料金（β 特典強調）
     ============================================================ -->
     <section id="pricing" class="bg-ocean-sand py-20">
@@ -759,32 +907,35 @@
           <p class="text-gray-700">ユーザー数課金なし。チーム全員で使えます。</p>
         </div>
 
-        <!-- 3 プラン -->
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+        <!-- 4 プラン -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 mb-8">
           <div
             v-for="(plan, i) in pricing"
             :key="i"
             :class="[
-              'rounded-2xl p-8 bg-white border-2 transition-shadow flex flex-col',
-              plan.featured ? 'border-kurage-500 shadow-lg scale-[1.02]' : 'border-gray-200'
+              'rounded-2xl p-6 bg-white border-2 transition-shadow flex flex-col',
+              plan.featured ? 'border-kurage-500 shadow-lg' : 'border-gray-200'
             ]"
           >
             <div v-if="plan.featured" class="inline-block bg-kurage-500 text-white text-xs font-bold px-3 py-1 rounded-full mb-3 w-fit">
               ★ 最人気
             </div>
-            <h3 class="text-2xl font-black text-gray-900 mb-2">{{ plan.name }}</h3>
+            <div v-else-if="plan.badge" class="inline-block bg-cyan-100 text-cyan-700 text-xs font-bold px-3 py-1 rounded-full mb-3 w-fit">
+              {{ plan.badge }}
+            </div>
+            <h3 class="text-xl font-black text-gray-900 mb-2">{{ plan.name }}</h3>
             <p
               :class="[
-                'font-black text-gray-900 mb-6 whitespace-nowrap',
-                plan.price.length > 5 ? 'text-xl md:text-2xl' : 'text-3xl',
+                'font-black text-gray-900 mb-4 whitespace-nowrap',
+                plan.price.length > 5 ? 'text-lg md:text-xl' : 'text-2xl md:text-3xl',
               ]"
             >
               {{ plan.price }}<span v-if="plan.priceNote" class="text-sm text-gray-500 font-normal ml-1">{{ plan.priceNote }}</span>
             </p>
-            <ul class="space-y-2 mb-6 flex-1">
+            <ul class="space-y-2 mb-4 flex-1">
               <li v-for="(f, j) in plan.features" :key="j" class="flex items-start gap-2 text-sm">
-                <span :class="f.ok ? 'text-green-500' : 'text-gray-300'">{{ f.ok ? '✅' : '—' }}</span>
-                <span :class="f.ok ? 'text-gray-700' : 'text-gray-400'">{{ f.label }}</span>
+                <span class="text-green-500">✅</span>
+                <span class="text-gray-700">{{ f.label }}</span>
               </li>
             </ul>
             <p class="text-xs text-gray-500 mb-3">{{ plan.startNote }}</p>
@@ -796,34 +947,38 @@
             ]">{{ plan.cta }}</a>
           </div>
         </div>
-        <p class="text-center text-sm text-gray-700 mb-12">
-          ★ クラゲディールは 1〜10 人の営業チームに最適化されています。<br />
-          11 人以上のチームは Enterprise プランで個別にご相談ください。
-        </p>
 
-        <!-- β 試用枠（どなたでも・3 ヶ月固定）-->
+        <!-- 全プラン共通 注記 -->
+        <div class="bg-kurage-50 border border-kurage-200 rounded-xl p-4 text-center mb-12">
+          <p class="text-sm text-gray-700 font-bold">
+            ★ 全プラン共通: まず 14 日間、すべての機能を無料で試せます。
+          </p>
+          <p class="text-xs text-gray-500 mt-1">
+            クレジットカード入力不要。14 日後に継続するプランを選んでください。
+          </p>
+        </div>
+
+        <!-- β 試用枠 -->
         <div class="bg-gradient-to-br from-orange-50 via-orange-100 to-amber-50 border-2 border-orange-400 rounded-2xl p-8 md:p-10 shadow-lg">
           <div class="text-center mb-6">
             <div class="inline-block bg-orange-500 text-white text-xs font-bold px-3 py-1 rounded-full mb-3">
-              🪼 どなたでも、3 ヶ月完全無料
+              🪼 14 日間、全機能を無料で
             </div>
             <h3 class="text-2xl md:text-3xl font-black text-gray-900 mb-2">β 試用</h3>
-            <p class="text-sm text-gray-600 mt-2">2026 年 6 月 9 日 〜 9 月 8 日（3 ヶ月固定）</p>
           </div>
 
           <div class="bg-white rounded-xl p-6 mb-6 text-center">
-            <p class="text-3xl md:text-4xl font-black text-orange-600 mb-2">完全無料</p>
-            <p class="text-sm text-gray-700">Standard 全機能（月¥9,800 相当）を、無料で。</p>
+            <p class="text-3xl md:text-4xl font-black text-orange-600 mb-2">14 日間無料</p>
+            <p class="text-sm text-gray-700">すべての機能を、クレカ不要で。</p>
             <p class="text-sm text-gray-700 font-bold mt-3">審査なし・即時アクティベート</p>
           </div>
 
           <div class="flex justify-center mb-6">
             <ul class="text-sm text-gray-700 leading-relaxed space-y-1.5 inline-block text-left">
-              <li>✅ 期間中はいつでもご応募可能（6/9 〜 9/8 の間）</li>
-              <li>✅ <strong>9 月 8 日に全 β ユーザー一斉終了</strong>（継続手続きは /beta ページから）</li>
-              <li>✅ 9 月 9 日以降は新規 β 応募の受付を終了します</li>
-              <li>✅ 試用終了（9/8）の 14 日前・7 日前・1 日前にメールでお知らせ</li>
-              <li>✅ データは試用中・終了後 90 日間、いつでも CSV / Excel でエクスポート可能</li>
+              <li>✅ Slack に追加するだけで即時アクティベート</li>
+              <li>✅ クレジットカード入力不要</li>
+              <li>✅ データはいつでも CSV / Excel でエクスポート可能</li>
+              <li class="text-xs text-gray-500">正式版リリース時期は、品質目標を達成した時点で改めてご案内します。</li>
             </ul>
           </div>
 
@@ -832,7 +987,7 @@
               href="/beta"
               class="inline-block bg-orange-500 hover:bg-orange-400 text-white font-bold px-8 py-4 rounded-xl text-lg shadow-lg transition-colors"
             >
-              3 ヶ月無料で試す（β 版）→
+              β 版を試す →
             </a>
             <p class="text-xs text-gray-600 mt-3">
               継続オプションの詳細は /beta ページでご案内しています。
@@ -929,23 +1084,24 @@
       <div class="max-w-3xl mx-auto px-4 sm:px-6 text-center">
         <img src="/kurage-smile.svg" alt="クラゲディール" class="w-20 h-20 mx-auto mb-6 kurage-float" />
 
-        <p class="text-base text-kurage-100 mb-6 leading-relaxed">
-          ここまで読んでくださって、ありがとうございます。
+        <p class="text-base text-kurage-100 mb-3 leading-relaxed">
+          ここまで読んでくれたんですね。<br />
+          ぼく、全部覚えてますよ。
         </p>
         <p class="text-base text-kurage-100 mb-10 leading-relaxed">
-          もし、クラゲディールが「自分の営業チームに合いそうだ」と感じていただけたなら、<br />
-          ぜひ、その続きをご一緒させてください。
+          もし「自分の営業チームに合いそうだ」と思ったなら、<br />
+          14 日間、ぼくを試してみてください。<br />
+          <span class="text-kurage-200 text-sm">きみが使うたびに、ぼくは覚えていきます。</span>
         </p>
 
         <!-- β 試用（self-serve 主訴求を最大化、副 CTA なし） -->
         <div class="bg-orange-500/15 border border-orange-400/40 rounded-2xl p-6 md:p-8 mb-8">
-          <p class="text-base font-bold text-orange-200 mb-3 text-center">今すぐ、3 ヶ月無料で試せます。</p>
+          <p class="text-base font-bold text-orange-200 mb-3 text-center">14 日間、無料で試せます。</p>
           <div class="flex justify-center mb-5">
             <ul class="space-y-2 text-sm text-kurage-50 inline-block text-left">
               <li>✅ Slack に追加するだけで、即時アクティベート</li>
-              <li>✅ Standard 全機能を 3 ヶ月、完全無料で</li>
+              <li>✅ 14 日間、すべての機能を完全無料で</li>
               <li>✅ クレジットカード入力不要・審査なし</li>
-              <li>✅ 試用終了の 14 日前・7 日前・1 日前にメール通知</li>
               <li>✅ データはいつでも CSV / Excel エクスポート可能</li>
             </ul>
           </div>
@@ -954,7 +1110,7 @@
               href="/beta"
               class="inline-flex items-center justify-center gap-2 bg-orange-500 hover:bg-orange-400 text-white font-bold px-8 py-4 rounded-xl text-lg transition-colors shadow-lg"
             >
-              3 ヶ月無料で試す（β 版）→
+              β 版を試す →
             </a>
           </div>
         </div>
@@ -995,7 +1151,7 @@ const pain1Chips = [
 
 const pain2Chips = [
   { icon: '🌅🌆', title: '朝夕のブリーフィング', desc: '1 日のはじめと終わりに、AI が伴走' },
-  { icon: '🧠', title: 'AI が受注確率を自動更新', desc: '会話のニュアンスで動く数字' },
+  { icon: '🧠', title: 'AI が受注確率を自動更新', desc: 'MEDDPICC 情報が増えるたびに計算し直す' },
   { icon: '⚠️', title: '14 日停滞、自動検知', desc: '忘れ去られる前にアラート' },
 ]
 
@@ -1015,20 +1171,32 @@ const API_URL = 'https://slacksfa-api-808596335261.asia-northeast1.run.app'
 
 const pricing = [
   {
-    name: 'Free',
-    price: '¥0',
+    name: 'Personal',
+    price: '¥1,980',
     priceNote: '/ 月',
     featured: false,
-    cta: '',  // phase0: ボタンは出さない（11/18 開始予定なので）
+    cta: '',
     checkoutUrl: '',
-    startNote: '2026/11/18 提供開始',
+    startNote: '14 日間無料トライアル・クレカ不要',
     features: [
-      { ok: true, label: 'ユーザー 3 名まで' },
-      { ok: true, label: 'AI 利用 月 100 回' },
-      { ok: true, label: 'コーチング機能' },
-      { ok: false, label: '日次ブリーフィング' },
-      { ok: false, label: 'AI 返信支援' },
-      { ok: false, label: '優先サポート' },
+      { ok: true, label: '1 名まで' },
+      { ok: true, label: 'AI 月 100 回' },
+      { ok: true, label: '全機能' },
+    ],
+  },
+  {
+    name: 'Trio',
+    price: '¥4,980',
+    priceNote: '/ 月',
+    featured: false,
+    badge: '★ Solo 3名まで',
+    cta: '',
+    checkoutUrl: '',
+    startNote: '14 日間無料トライアル・クレカ不要',
+    features: [
+      { ok: true, label: '3 名まで' },
+      { ok: true, label: 'AI 月 500 回' },
+      { ok: true, label: '全機能' },
     ],
   },
   {
@@ -1036,34 +1204,29 @@ const pricing = [
     price: '¥9,800',
     priceNote: '/ 月',
     featured: true,
-    // phase1（〜 11/17）はボタンを出さない。β 試用は別ボックスで誘導
     cta: '',
     checkoutUrl: '',
-    startNote: '2026/11/18 提供開始',
+    startNote: '14 日間無料トライアル・クレカ不要',
     features: [
-      { ok: true, label: 'ユーザー 10 名まで' },
-      { ok: true, label: 'AI 利用 月 5,000 回' },
-      { ok: true, label: 'コーチング機能' },
-      { ok: true, label: '日次ブリーフィング' },
-      { ok: true, label: 'AI 返信支援' },
-      { ok: false, label: '優先サポート' },
+      { ok: true, label: '10 名まで' },
+      { ok: true, label: 'AI 月 5,000 回' },
+      { ok: true, label: '全機能' },
     ],
   },
   {
     name: 'Enterprise',
     price: 'お問い合わせ',
-    priceNote: '個別見積もり',
+    priceNote: '',
     featured: false,
     cta: 'ご相談',
-    checkoutUrl: '/free',
-    startNote: '2026/11/18 提供開始',
+    checkoutUrl: '/contact?subject=enterprise',
+    startNote: '11 名以上・個別対応',
     features: [
-      { ok: true, label: 'ユーザー 11 名以上' },
-      { ok: true, label: 'AI 利用 個別設定' },
-      { ok: true, label: 'コーチング機能' },
-      { ok: true, label: '日次ブリーフィング' },
-      { ok: true, label: 'AI 返信支援' },
+      { ok: true, label: '11 名以上' },
+      { ok: true, label: 'AI 個別設定' },
+      { ok: true, label: '全機能' },
       { ok: true, label: '優先サポート' },
+      { ok: true, label: 'カスタマイズ対応' },
     ],
   },
 ]
@@ -1077,16 +1240,12 @@ const pioneers = [
 
 const faqs = [
   {
-    q: 'β 試用は本当に 3 ヶ月完全無料ですか？',
-    a: 'はい。クレジットカード入力も不要、審査もありません。\nβ 試用は 2026 年 6 月 9 日（TDX Tokyo 当日）から 9 月 8 日までの 3 ヶ月間、固定期間でご提供します。期間中はどなたでも Slack に追加するだけで Standard 全機能をご利用いただけます。試用終了の 14 日前・7 日前・1 日前にメールでお知らせします。\n継続オプションの詳細は /beta ページでご案内しています。',
-  },
-  {
-    q: 'β 試用が 9 月 8 日で終了したらどうなりますか？',
-    a: '試用終了日にアプリへのアクセスが停止します。継続をご希望の場合は、試用期間中（または終了前）に /beta ページから手続きいただけます（月 ¥4,500 の半額プラン or 通常プランへの移行）。\n※ 試用終了後のデータは 90 日間保持し、その後削除します。\n※ 試用期間中・終了後の保持期間中は、いつでも CSV / Excel でデータをエクスポートいただけます（Settings > データ管理）。',
+    q: 'β 試用は本当に無料ですか？',
+    a: 'はい。クレジットカード入力も不要、審査もありません。\n14 日間、すべての機能を無料でお試しいただけます。Slack に追加するだけで即時アクティベートします。\n正式版リリース時期は、品質目標を達成した時点で改めてご案内します。継続オプションの詳細は /beta ページでご案内しています。',
   },
   {
     q: '従来の Slack 連携 CRM との違いは？',
-    a: 'クラゲディールは「Slack そのものが営業ツール」として設計されています。従来の Slack 連携 CRM では、別途 CRM の利用契約が必要で、Slack は「通知パイプ」や「lightweight な機能」の役割にとどまります。クラゲディールは MEDDPICC コーチング・センチメント分析・自動メール下書きなど、営業に特化した深い AI 機能を Slack 内で完結して提供します。また、ユーザー数課金がないため、チームが大きくなっても月額が一定です。',
+    a: 'クラゲディールは「Slack そのものが営業ツール」として設計されています。従来の Slack 連携 CRM では、別途 CRM の利用契約が必要で、Slack は「通知パイプ」や「lightweight な機能」の役割にとどまります。クラゲディールは MEDDPICC コーチング・自動メール下書きなど、営業に特化した深い AI 機能を Slack 内で完結して提供します。また、ユーザー数課金がないため、チームが大きくなっても月額が一定です。',
   },
   {
     q: '将来、別の CRM に移行できますか？',
@@ -1110,7 +1269,7 @@ const faqs = [
   },
   {
     q: 'AI が提案する受注確率はどのように計算されますか？',
-    a: '商談の活動履歴と会話のセンチメント（前向き / 要検討 / 断り気配）から AI が分析します。「予算は問題ない」のような肯定的な発言は確率を上げ、「難しいですね」のような否定的な発言は下げます。14 日間動きがない場合は時間減衰で自動的に下方修正されます。',
+    a: '活動記録と MEDDPICC 情報（決裁者との接触 / 予算の根拠確認 / 競合の把握など）を AI が分析して更新します。/coach で情報を入力するたびに計算し直されます。14 日間動きがない場合は時間減衰で自動的に下方修正されます。',
   },
 ]
 </script>

@@ -10,10 +10,10 @@
           β 試用プログラム
         </h1>
         <p class="text-lg md:text-xl text-kurage-100 mb-2 leading-relaxed">
-          3 ヶ月、Standard 全機能を<br class="md:hidden" />完全無料で。
+          14 日間、全機能を<br class="md:hidden" />完全無料で。
         </p>
         <p class="text-sm text-kurage-200">
-          審査なし・即時アクティベート / 2026 年 6 月 9 日 〜 9 月 8 日
+          審査なし・即時アクティベート・クレジットカード入力不要
         </p>
       </div>
     </section>
@@ -25,24 +25,24 @@
           ★ 期間と料金
         </h2>
 
-        <!-- β 試用（固定コホート式）-->
+        <!-- β 試用 -->
         <div class="border-2 border-orange-400 bg-orange-50 rounded-2xl p-6 mb-4">
           <div class="flex items-start gap-4">
             <div class="flex-shrink-0 w-10 h-10 rounded-full bg-orange-500 text-white flex items-center justify-center font-bold text-lg">1</div>
             <div class="flex-1">
               <h3 class="text-lg font-bold text-gray-900 mb-1">
-                β 試用（6/9 〜 9/8・3 ヶ月固定）
+                β 試用（14 日間・無料）
               </h3>
-              <p class="text-2xl font-black text-orange-600 mb-2">完全無料</p>
+              <p class="text-2xl font-black text-orange-600 mb-2">14 日間無料</p>
               <p class="text-sm text-gray-700 mb-3">
-                Standard 全機能（月¥9,800 相当）が完全無料。<br />
+                すべての機能が完全無料。<br />
                 クレジットカード入力不要・審査なし・即時アクティベート。
               </p>
               <ul class="text-xs text-gray-700 space-y-1 leading-relaxed">
-                <li>✅ 期間中はいつでもご応募可能（応募 cap なし）</li>
-                <li>✅ <strong>9 月 8 日に全 β ユーザー一斉終了</strong>（継続にはウェイトリスト応募を）</li>
-                <li>✅ 9 月 9 日以降は新規 β 応募の受付を終了します</li>
-                <li>✅ 試用終了（9/8）の 14 日前・7 日前・1 日前にメールで通知</li>
+                <li>✅ Slack に追加するだけで即時アクティベート</li>
+                <li>✅ クレジットカード入力不要</li>
+                <li>✅ データはいつでも CSV / Excel でエクスポート可能</li>
+                <li class="text-gray-500">※ 正式版リリース時期は、品質目標を達成した時点で改めてご案内します。</li>
               </ul>
             </div>
           </div>
@@ -60,30 +60,27 @@
                 継続希望: ウェイトリストに応募
               </h3>
               <p class="text-sm text-gray-700 mb-3">
-                応募可能期間: 2026 年 6 月 9 日 〜 11 月 17 日（β 試用中・前後を問わず、いつでも応募可）
+                β 試用後も使い続けたい方、最初からコミットしたい方はウェイトリストへ。
               </p>
 
               <div class="bg-white rounded-xl p-4 mb-3 border border-cyan-200">
-                <p class="text-xs font-bold text-cyan-700 mb-2">特典 ①: β アクセスを 11/17 まで自動延長</p>
+                <p class="text-xs font-bold text-cyan-700 mb-2">特典 ①: 正式版リリース後も継続利用可能</p>
                 <p class="text-xs text-gray-600 leading-relaxed">
-                  <strong class="text-gray-800">β 経験者が応募した場合のみ</strong>。9/8 の一斉終了を回避し、
-                  正式版（11/18）まで連続利用可能。<br />
-                  β 未経験者が 9/9 以降に応募した場合、β アクセス権は付与されません。
+                  正式版リリース時期は、品質目標を達成した時点で改めてご案内します。
                 </p>
               </div>
 
               <div class="bg-white rounded-xl p-4 mb-3 border border-cyan-200">
-                <p class="text-xs font-bold text-cyan-700 mb-2">特典 ②: 1 年間 ¥4,500/月（50% OFF）</p>
+                <p class="text-xs font-bold text-cyan-700 mb-2">特典 ②: 正式版から 1 年間 50% OFF</p>
                 <p class="text-xs text-gray-600 leading-relaxed">
-                  2026/11/18 〜 2027/11/17 の 1 年間、月 <strong class="text-cyan-700">¥4,500</strong>
-                  （Standard 通常価格 ¥9,800 の半額）。<br />
+                  Standard 通常価格の半額が 1 年間継続。<br />
                   <strong class="text-gray-800">β 経験有無を問わず、全ウェイトリスト応募者に適用</strong>。
                 </p>
               </div>
 
               <p class="text-xs text-gray-600 mt-3">
                 ※ ウェイトリストは先行 100 社限定（branding・実態は柔軟受け入れ）<br />
-                ※ クレジットカード登録は 10 月中旬にメールでご案内します
+                ※ クレジットカード登録は正式版リリース前にメールでご案内します
               </p>
             </div>
           </div>
@@ -92,16 +89,19 @@
         <!-- 矢印 -->
         <div class="text-center text-gray-400 text-2xl my-2">↓</div>
 
-        <!-- 2027/11/18 以降 -->
+        <!-- 正式版以降 -->
         <div class="border border-gray-200 bg-gray-50 rounded-2xl p-6">
           <div class="flex items-start gap-4">
             <div class="flex-shrink-0 w-10 h-10 rounded-full bg-gray-400 text-white flex items-center justify-center font-bold text-lg">3</div>
             <div class="flex-1">
               <h3 class="text-lg font-bold text-gray-900 mb-1">
-                2027/11/18 以降
+                正式版リリース以降
               </h3>
-              <p class="text-xl font-bold text-gray-700 mb-2">月額 ¥9,800（通常価格）</p>
-              <p class="text-sm text-gray-600">解約はいつでも可能です。</p>
+              <p class="text-xl font-bold text-gray-700 mb-2">プランを選んで継続</p>
+              <p class="text-sm text-gray-600">
+                正式版リリース時期は、品質目標を達成した時点で改めてご案内します。<br />
+                解約はいつでも可能です。
+              </p>
             </div>
           </div>
         </div>
@@ -114,10 +114,10 @@
         <div class="bg-white border border-gray-200 rounded-2xl p-6 md:p-8">
           <h3 class="text-lg font-bold text-gray-900 mb-3">📌 試用終了時に何もしないと？</h3>
           <ul class="space-y-2 text-sm text-gray-700">
-            <li>・9/8 にアプリへのアクセスが停止します</li>
+            <li>・試用終了日にアプリへのアクセスが停止します</li>
             <li>・データは <strong>90 日間保持</strong>されます（その期間中はいつでも CSV / Excel でエクスポート可）</li>
             <li>・90 日経過後はデータが削除されます</li>
-            <li>・正式版ローンチ（11/18）時にあらためてご契約いただくことも可能です</li>
+            <li>・正式版リリース時にあらためてご契約いただくことも可能です（リリース時期は別途ご案内）</li>
           </ul>
         </div>
       </div>
@@ -130,7 +130,7 @@
           ウェイトリスト 6 つの特典
         </h2>
         <p class="text-sm text-gray-600 text-center mb-8">
-          先行 100 社限定（branding）/ β 試用中・前後を問わず応募可能
+          先行 100 社限定（branding）/ 試用中・前後を問わず応募可能
         </p>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div v-for="(benefit, i) in benefits" :key="i" class="bg-gray-50 border border-gray-200 rounded-xl p-5">
@@ -346,8 +346,8 @@ const submitted = ref(false)
 const error = ref('')
 
 const benefits = [
-  { icon: '⏰', title: 'β アクセス自動延長', desc: '試用終了後も 11/17 まで連続利用可能。途切れずに正式版へつなげます。' },
-  { icon: '💸', title: '1 年間 50% OFF', desc: '2026/11/18 〜 月額 ¥4,500（通常 ¥9,800 の半額）が 1 年間継続。' },
+  { icon: '⏰', title: '正式版まで継続利用可能', desc: '試用終了後も途切れずに正式版へつなげます。正式版リリース時期は別途ご案内。' },
+  { icon: '💸', title: '正式版から 1 年間 50% OFF', desc: 'Standard 通常価格の半額が 1 年間継続。' },
   { icon: '🎯', title: '機能リクエスト優先対応', desc: 'ウェイトリスト参加者からのご要望を最優先で実装。プロダクト方向性に直接関与できます。' },
   { icon: '☕', title: '月次オフィスアワー', desc: '担当者との 30 分の 1on1（希望者のみ）。営業 DX の壁打ち相手として。' },
   { icon: '🪼', title: 'Pioneers ロゴ掲載', desc: 'LP・PR 素材への露出（任意）。事例公開でブランド露出にも貢献。' },
@@ -365,15 +365,15 @@ const faqs = [
   },
   {
     q: 'β 試用中にウェイトリストに応募すると、どうなりますか？',
-    a: 'β アクセス期限が 2026 年 11 月 17 日まで自動延長されます。9 月 8 日の一斉終了を回避でき、正式版開始まで連続して利用可能です。',
+    a: 'β 試用後も継続利用できる特典が適用されます。正式版リリースまで途切れずにご利用いただけます。リリース時期は品質目標達成後に別途ご案内します。',
   },
   {
-    q: '試用が終了したあと（9/8 以降）、ウェイトリストに応募できますか？',
-    a: 'はい。試用終了後 90 日以内であれば、ウェイトリスト応募で β アクセスを再開し、2026 年 11 月 17 日まで延長できます。データも保持されているため、そのまま続けて利用可能です。',
+    q: '試用が終了したあと、ウェイトリストに応募できますか？',
+    a: 'はい。試用終了後でもウェイトリストへのご応募は受け付けています。データも保持されているため、そのまま続けて利用可能です。',
   },
   {
-    q: '9 月 8 日以降に新しく β 試用を始めたいのですが、できますか？',
-    a: 'β 試用の新規受付は 9 月 8 日で終了します。それ以降にご興味を持っていただいた方は、2026 年 11 月 18 日の正式版ローンチで Free / Standard / Enterprise いずれかをお試しください。\nウェイトリストにご応募いただくと、11 月 18 日から 1 年間 50% OFF（月 ¥4,500）で Standard をご利用いただけます。',
+    q: '正式版のリリース時期はいつですか？',
+    a: '正式版リリース時期は、品質目標を達成した時点で改めてご案内します。日程を確約することは現時点ではしていません。',
   },
   {
     q: 'データのエクスポートはどうやってやりますか？',
@@ -384,8 +384,8 @@ const faqs = [
     a: 'もちろんご応募いただけますが、クラゲディールは 1〜10 人の小規模営業チームに最適化された製品です。31 人を超える場合は Enterprise プランの個別見積もり（カスタマイズ・SSO 対応など）が適切な場合もあります。応募時にその旨ご記入いただければ、その方向でご相談します。',
   },
   {
-    q: '既存 β テスター 5 社との関係は？',
-    a: '2026 年 5 月から運用中の既存 β 5 社（OPRO・Opti・WeLearn・SI Inc・CCC）は「ファウンダー β」として永続特典の特別枠です。新しい β 試用とは別枠で、本ページの応募とは関係なく既存条件で継続利用いただけます。',
+    q: '既存 β テスター各社との関係は？',
+    a: '先行してご利用いただいている企業様は「ファウンダー β」として永続特典の特別枠です。新しい β 試用とは別枠で、本ページの応募とは関係なく既存条件で継続利用いただけます。',
   },
   {
     q: 'データのセキュリティは大丈夫ですか？',
