@@ -92,7 +92,7 @@
               </form>
             </template>
             <template v-else>
-              <p class="text-center">ありがとうございます！<br />担当者より <span class="font-semibold">{{ emailInput }}</span> 宛にご連絡します🪼</p>
+              <p class="text-center">ありがとうございます！<br />担当者より <span class="font-semibold">{{ emailInput }}</span> 宛にご連絡します。</p>
             </template>
           </div>
         </div>
@@ -166,7 +166,7 @@ const messagesEl = ref<HTMLElement | null>(null)
 const messages = ref<Message[]>([
   {
     role: 'assistant',
-    content: 'こんにちは！クラゲくんです🪼 クラゲディールについて何でも聞いてください。',
+    content: 'こんにちは！クラゲくんです。クラゲディールについて何でも聞いてください。',
   },
 ])
 
