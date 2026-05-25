@@ -4,7 +4,7 @@
     <section class="bg-gradient-to-br from-kurage-900 via-kurage-800 to-kurage-700 text-white">
       <div class="max-w-3xl mx-auto px-4 sm:px-6 py-16 md:py-20 text-center">
         <div class="inline-block bg-orange-500 text-white text-xs font-bold px-3 py-1 rounded-full mb-4">
-          🪼 どなたでもご応募可
+          どなたでもご応募可
         </div>
         <h1 class="text-3xl md:text-5xl font-black mb-4">
           β 試用プログラム
@@ -159,7 +159,7 @@
 
         <!-- 応募完了 -->
         <div v-if="submitted" class="bg-green-50 border-2 border-green-400 rounded-2xl p-8 text-center">
-          <p class="text-5xl mb-4">🪼</p>
+          <img src="/kurage-smile.svg" alt="クラゲくん" class="w-16 h-16 mx-auto mb-4" />
           <h3 class="text-xl font-bold text-gray-900 mb-2">ご応募ありがとうございます！</h3>
           <p class="text-sm text-gray-700 mb-4 leading-relaxed">
             確認メールをお送りしました。<br />
@@ -350,7 +350,7 @@ const benefits = [
   { icon: '💸', title: '正式版から 1 年間 50% OFF', desc: 'Standard 通常価格の半額が 1 年間継続。' },
   { icon: '🎯', title: '機能リクエスト優先対応', desc: 'ウェイトリスト参加者からのご要望を最優先で実装。プロダクト方向性に直接関与できます。' },
   { icon: '☕', title: '月次オフィスアワー', desc: '担当者との 30 分の 1on1（希望者のみ）。営業 DX の壁打ち相手として。' },
-  { icon: '🪼', title: 'Pioneers ロゴ掲載', desc: 'LP・PR 素材への露出（任意）。事例公開でブランド露出にも貢献。' },
+  { icon: '🌊', title: 'Pioneers ロゴ掲載', desc: 'LP・PR 素材への露出（任意）。事例公開でブランド露出にも貢献。' },
   { icon: '💬', title: '限定 Slack コミュニティ', desc: 'ウェイトリスト参加者限定の Slack チャンネル。経営層同士の情報交換も可能。' },
 ]
 

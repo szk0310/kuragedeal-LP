@@ -25,7 +25,7 @@
           <img src="/kurage-smile.svg" alt="クラゲディール" class="w-20 h-20 mx-auto mb-4 kurage-float" />
           <h2 class="text-2xl font-black text-gray-900 mb-3">送信完了しました！</h2>
           <p class="text-gray-600 mb-2">
-            お問い合わせありがとうございます🪼
+            お問い合わせありがとうございます
           </p>
           <p class="text-gray-500 mb-6">
             数営業日以内に鈴木より直接ご連絡いたします。

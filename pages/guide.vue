@@ -24,7 +24,7 @@
       <section id="first-week" class="mb-14 scroll-mt-20">
         <div class="bg-gradient-to-br from-kurage-50 via-cyan-50 to-ocean-mist/40 border-2 border-kurage-200 rounded-2xl p-6 md:p-8">
           <div class="flex items-center gap-3 mb-4">
-            <span class="text-3xl">🪼</span>
+            <img src="/kurage-smile.svg" alt="クラゲくん" class="w-8 h-8 flex-shrink-0" />
             <div>
               <p class="text-xs font-bold text-orange-500 uppercase tracking-widest">クイックスタート</p>
               <h2 class="text-xl md:text-2xl font-black text-gray-900">最初の 1 週間でやってほしいこと</h2>
@@ -195,7 +195,7 @@ const commands = [
   { cmd: '/coach', title: 'AIコーチング', desc: 'AIが商談の進め方をヒアリング形式でコーチングします。' },
   { cmd: '/usage', title: 'AI利用状況', desc: '今月のAI利用量・残り予算・プラン情報を確認できます。' },
   { cmd: '/setting', title: '設定', desc: 'AI 返信支援モードの切替・営業ポリシーの設定ができます。' },
-  { cmd: '/kurage', title: 'クラゲくんに話しかける（フィードバック投稿）', desc: '使ってみて感じたことを開発チームへ直接送れます。例: `/kurage 朝のブリーフィングが長く感じる` 🪼' },
+  { cmd: '/kurage', title: 'クラゲくんに話しかける（フィードバック投稿）', desc: '使ってみて感じたことを開発チームへ直接送れます。例: `/kurage 朝のブリーフィングが長く感じる`' },
 ]
 
 const autoFeatures = [
@@ -239,7 +239,7 @@ const firstWeekPlan = [
     tasks: [
       '`/list` で 1 週間の記録を振り返る',
       'チームメンバーを 1 人招待してみる（Slack ワークスペース管理者経由）',
-      '`/kurage 使ってみて感じたこと` を送る（鈴木が直接拝見します 🪼）',
+      '`/kurage 使ってみて感じたこと` を送る（鈴木が直接拝見します）',
     ],
   },
 ]

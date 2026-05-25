@@ -475,7 +475,7 @@
               <p>/coach ABC商事</p>
             </SlackBotLine>
             <SlackBotLine name="クラゲディール" :bot-badge="true" time="14:32">
-              <p class="font-bold mb-2">🪼 ABC 商事の状況、いくつか確認させてください</p>
+              <p class="font-bold mb-2">ABC 商事の状況、いくつか確認させてください</p>
               <ol class="space-y-3 list-decimal list-inside">
                 <li>
                   <span class="font-semibold">決裁者と会えていますか？</span>
@@ -770,7 +770,7 @@
     <section id="honesty" class="bg-kurage-50/60 py-20">
       <div class="max-w-3xl mx-auto px-4 sm:px-6">
         <div class="text-center mb-10">
-          <p class="text-4xl mb-4">🪼</p>
+          <img src="/kurage-smile.svg" alt="クラゲくん" class="w-16 h-16 mx-auto mb-4" />
           <h2 class="text-3xl md:text-4xl font-black text-gray-900 mb-6 leading-tight">
             今できること、正直に話します。
           </h2>
@@ -891,7 +891,7 @@
             きみが使うたびに、ぼくは育ちます。<br />
             よろしくお願いします。
           </p>
-          <p class="text-kurage-500 font-bold">— クラゲくん 🪼</p>
+          <p class="text-kurage-500 font-bold flex items-center justify-end gap-2">— クラゲくん <img src="/kurage-smile.svg" alt="クラゲくん" class="w-6 h-6 inline-block" /></p>
         </div>
       </div>
     </section>
@@ -962,7 +962,7 @@
         <div class="bg-gradient-to-br from-orange-50 via-orange-100 to-amber-50 border-2 border-orange-400 rounded-2xl p-8 md:p-10 shadow-lg">
           <div class="text-center mb-6">
             <div class="inline-block bg-orange-500 text-white text-xs font-bold px-3 py-1 rounded-full mb-3">
-              🪼 14 日間、全機能を無料で
+              14 日間、全機能を無料で
             </div>
             <h3 class="text-2xl md:text-3xl font-black text-gray-900 mb-2">β 試用</h3>
           </div>
