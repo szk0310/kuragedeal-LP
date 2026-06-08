@@ -47,7 +47,7 @@
               </a>
             </div>
             <p class="text-xs text-kurage-200 max-w-xl leading-relaxed">
-              ※ 正式版リリース時期は、品質目標を達成した時点で改めてご案内します。
+              ※ 正式版は 11/18 を目標にしています（品質目標 次第でリスケすることがあります）。
             </p>
           </div>
 
@@ -711,7 +711,7 @@
             11 人以上の規模になったら、Enterprise プランで個別対応します。
           </p>
           <div class="bg-orange-500/20 border border-orange-400/40 rounded-xl p-4 text-cyan-100 text-sm leading-relaxed">
-            <strong class="text-orange-300">★</strong> 今なら <strong class="text-orange-300">14 日間完全無料</strong>の β 試用を提供中（クレカ不要・審査なし・即時アクティベート）。<br />
+            <strong class="text-orange-300">★</strong> 今なら <strong class="text-orange-300">3 ヶ月無料</strong>の β 試用を提供中（〜9/8・クレカ不要・審査なし・即時アクティベート）。<br />
             どなたでも、Slack に追加するだけで即日ご利用いただけます。
           </div>
         </div>
@@ -951,10 +951,10 @@
         <!-- 全プラン共通 注記 -->
         <div class="bg-kurage-50 border border-kurage-200 rounded-xl p-4 text-center mb-12">
           <p class="text-sm text-gray-700 font-bold">
-            ★ 全プラン共通: まず 14 日間、すべての機能を無料で試せます。
+            ★ 上記は正式版（11/18 目標 ※QC 次第でリスケあり）の料金です。正式版では全プラン共通で 14 日間の無料トライアルが付きます。
           </p>
           <p class="text-xs text-gray-500 mt-1">
-            クレジットカード入力不要。14 日後に継続するプランを選んでください。
+            いまは下記のβ版なら、9/8 まで全機能を無料でお使いいただけます（クレジットカード入力不要）。
           </p>
         </div>
 
@@ -962,14 +962,14 @@
         <div class="bg-gradient-to-br from-orange-50 via-orange-100 to-amber-50 border-2 border-orange-400 rounded-2xl p-8 md:p-10 shadow-lg">
           <div class="text-center mb-6">
             <div class="inline-block bg-orange-500 text-white text-xs font-bold px-3 py-1 rounded-full mb-3">
-              14 日間、全機能を無料で
+              3 ヶ月間、全機能を無料で（9/8 まで）
             </div>
             <h3 class="text-2xl md:text-3xl font-black text-gray-900 mb-2">β 試用</h3>
           </div>
 
           <div class="bg-white rounded-xl p-6 mb-6 text-center">
-            <p class="text-3xl md:text-4xl font-black text-orange-600 mb-2">14 日間無料</p>
-            <p class="text-sm text-gray-700">すべての機能を、クレカ不要で。</p>
+            <p class="text-3xl md:text-4xl font-black text-orange-600 mb-2">3 ヶ月無料</p>
+            <p class="text-sm text-gray-700">9/8 まで、すべての機能を、クレカ不要で。</p>
             <p class="text-sm text-gray-700 font-bold mt-3">審査なし・即時アクティベート</p>
           </div>
 
@@ -978,7 +978,7 @@
               <li>✅ Slack に追加するだけで即時アクティベート</li>
               <li>✅ クレジットカード入力不要</li>
               <li>✅ データはいつでも CSV / Excel でエクスポート可能</li>
-              <li class="text-xs text-gray-500">正式版リリース時期は、品質目標を達成した時点で改めてご案内します。</li>
+              <li class="text-xs text-gray-500">正式版は 11/18 を目標にしています（品質目標 次第でリスケすることがあります）。</li>
             </ul>
           </div>
 
@@ -1090,17 +1090,17 @@
         </p>
         <p class="text-base text-kurage-100 mb-10 leading-relaxed">
           もし「自分の営業チームに合いそうだ」と思ったなら、<br />
-          14 日間、ぼくを試してみてください。<br />
+          9/8 まで、3 ヶ月間ぼくを試してみてください。<br />
           <span class="text-kurage-200 text-sm">きみが使うたびに、ぼくは覚えていきます。</span>
         </p>
 
         <!-- β 試用（self-serve 主訴求を最大化、副 CTA なし） -->
         <div class="bg-orange-500/15 border border-orange-400/40 rounded-2xl p-6 md:p-8 mb-8">
-          <p class="text-base font-bold text-orange-200 mb-3 text-center">14 日間、無料で試せます。</p>
+          <p class="text-base font-bold text-orange-200 mb-3 text-center">3 ヶ月間、無料で試せます（9/8 まで）。</p>
           <div class="flex justify-center mb-5">
             <ul class="space-y-2 text-sm text-kurage-50 inline-block text-left">
               <li>✅ Slack に追加するだけで、即時アクティベート</li>
-              <li>✅ 14 日間、すべての機能を完全無料で</li>
+              <li>✅ 9/8 まで、すべての機能を完全無料で</li>
               <li>✅ クレジットカード入力不要・審査なし</li>
               <li>✅ データはいつでも CSV / Excel エクスポート可能</li>
             </ul>
@@ -1241,7 +1241,7 @@ const pioneers = [
 const faqs = [
   {
     q: 'β 試用は本当に無料ですか？',
-    a: 'はい。クレジットカード入力も不要、審査もありません。\n14 日間、すべての機能を無料でお試しいただけます。Slack に追加するだけで即時アクティベートします。\n正式版リリース時期は、品質目標を達成した時点で改めてご案内します。継続オプションの詳細は /beta ページでご案内しています。',
+    a: 'はい。クレジットカード入力も不要、審査もありません。\n3 ヶ月間（9/8 一斉終了）、すべての機能を無料でお試しいただけます。Slack に追加するだけで即時アクティベートします。\n正式版は 11/18 を目標にしています（品質目標 次第でリスケすることがあります）。継続オプションの詳細は /beta ページでご案内しています。',
   },
   {
     q: '従来の Slack 連携 CRM との違いは？',

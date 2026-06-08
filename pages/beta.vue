@@ -10,7 +10,7 @@
           β 試用プログラム
         </h1>
         <p class="text-lg md:text-xl text-kurage-100 mb-2 leading-relaxed">
-          14 日間、全機能を<br class="md:hidden" />完全無料で。
+          3 ヶ月間、全機能を<br class="md:hidden" />完全無料で（9/8 まで）。
         </p>
         <p class="text-sm text-kurage-200">
           審査なし・即時アクティベート・クレジットカード入力不要
@@ -31,9 +31,9 @@
             <div class="flex-shrink-0 w-10 h-10 rounded-full bg-orange-500 text-white flex items-center justify-center font-bold text-lg">1</div>
             <div class="flex-1">
               <h3 class="text-lg font-bold text-gray-900 mb-1">
-                β 試用（14 日間・無料）
+                β 試用（3 ヶ月無料・9/8 まで）
               </h3>
-              <p class="text-2xl font-black text-orange-600 mb-2">14 日間無料</p>
+              <p class="text-2xl font-black text-orange-600 mb-2">3 ヶ月無料</p>
               <p class="text-sm text-gray-700 mb-3">
                 すべての機能が完全無料。<br />
                 クレジットカード入力不要・審査なし・即時アクティベート。
@@ -42,7 +42,7 @@
                 <li>✅ Slack に追加するだけで即時アクティベート</li>
                 <li>✅ クレジットカード入力不要</li>
                 <li>✅ データはいつでも CSV / Excel でエクスポート可能</li>
-                <li class="text-gray-500">※ 正式版リリース時期は、品質目標を達成した時点で改めてご案内します。</li>
+                <li class="text-gray-500">※ 正式版は 11/18 を目標にしています（品質目標 次第でリスケすることがあります）。</li>
               </ul>
             </div>
           </div>
@@ -66,7 +66,7 @@
               <div class="bg-white rounded-xl p-4 mb-3 border border-cyan-200">
                 <p class="text-xs font-bold text-cyan-700 mb-2">特典 ①: 正式版リリース後も継続利用可能</p>
                 <p class="text-xs text-gray-600 leading-relaxed">
-                  正式版リリース時期は、品質目標を達成した時点で改めてご案内します。
+                  β アクセスが 11/17 まで自動延長され、正式版（11/18 目標 ※QC 次第でリスケあり）まで連続して利用できます。
                 </p>
               </div>
 
@@ -99,7 +99,7 @@
               </h3>
               <p class="text-xl font-bold text-gray-700 mb-2">プランを選んで継続</p>
               <p class="text-sm text-gray-600">
-                正式版リリース時期は、品質目標を達成した時点で改めてご案内します。<br />
+                正式版は 11/18 を目標にしています（品質目標 次第でリスケすることがあります）。<br />
                 解約はいつでも可能です。
               </p>
             </div>
@@ -373,7 +373,7 @@ const faqs = [
   },
   {
     q: '正式版のリリース時期はいつですか？',
-    a: '正式版リリース時期は、品質目標を達成した時点で改めてご案内します。日程を確約することは現時点ではしていません。',
+    a: '正式版は 11/18 を目標にしています（品質目標 次第でリスケすることがあります）。あくまで目標日であり、品質状況により前後することがあります。',
   },
   {
     q: 'データのエクスポートはどうやってやりますか？',
