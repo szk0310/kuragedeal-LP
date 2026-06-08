@@ -10,7 +10,7 @@
           β 試用プログラム
         </h1>
         <p class="text-lg md:text-xl text-kurage-100 mb-2 leading-relaxed">
-          3 ヶ月間、全機能を<br class="md:hidden" />完全無料で（9/8 まで）。
+          3 ヶ月間、全機能を<br class="md:hidden" />完全無料で（9/15 まで）。
         </p>
         <p class="text-sm text-kurage-200">
           審査なし・即時アクティベート・クレジットカード入力不要
@@ -31,7 +31,7 @@
             <div class="flex-shrink-0 w-10 h-10 rounded-full bg-orange-500 text-white flex items-center justify-center font-bold text-lg">1</div>
             <div class="flex-1">
               <h3 class="text-lg font-bold text-gray-900 mb-1">
-                β 試用（3 ヶ月無料・9/8 まで）
+                β 試用（3 ヶ月無料・9/15 まで）
               </h3>
               <p class="text-2xl font-black text-orange-600 mb-2">3 ヶ月無料</p>
               <p class="text-sm text-gray-700 mb-3">
@@ -327,7 +327,7 @@ usePageSeo({
   path: '/beta',
   title: 'β 試用プログラム | クラゲディール',
   description:
-    'クラゲディールのβ版を 3 ヶ月無料でお試しいただけます（2026/9/8 まで・クレジットカード不要・審査なし）。9/8 までにウェイトリストへ応募すると正式版（11/18 目標）まで連続利用＋1 年間 50% OFF。',
+    'クラゲディールのβ版を 3 ヶ月無料でお試しいただけます（2026/9/15 まで・クレジットカード不要・審査なし）。9/15 までにウェイトリストへ応募すると正式版（11/18 目標）まで連続利用＋1 年間 50% OFF。',
 })
 
 const runtimeConfig = useRuntimeConfig()

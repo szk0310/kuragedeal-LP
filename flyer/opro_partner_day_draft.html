@@ -1,0 +1,795 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<title>クラゲディール チラシ ドラフト</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap');
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'Noto Sans JP', sans-serif;
+    background: #e5e7eb;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 40px 20px;
+  }
+
+  /* A4 比率 (210mm × 297mm ≈ 595px × 842px @72dpi) */
+  .flyer {
+    width: 595px;
+    min-height: 842px;
+    background: #ffffff;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* ── ヘッダー帯 ───────────────────────── */
+  .header {
+    background: linear-gradient(135deg, #0e7490 0%, #0891b2 60%, #22d3ee 100%);
+    padding: 36px 40px 28px;
+    position: relative;
+  }
+
+  .header-logo-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+
+  .kurage-icon {
+    font-size: 36px;
+    line-height: 1;
+  }
+
+  .logo-text {
+    font-size: 22px;
+    font-weight: 900;
+    color: #fff;
+    letter-spacing: 0.02em;
+  }
+
+  .logo-sub {
+    font-size: 10px;
+    font-weight: 400;
+    color: rgba(255,255,255,0.75);
+    margin-top: 1px;
+  }
+
+  .beta-badge {
+    margin-left: auto;
+    background: #fef08a;
+    color: #713f12;
+    font-size: 10px;
+    font-weight: 700;
+    padding: 4px 10px;
+    border-radius: 99px;
+    white-space: nowrap;
+  }
+
+  .headline {
+    font-size: 28px;
+    font-weight: 900;
+    color: #fff;
+    line-height: 1.35;
+    letter-spacing: -0.01em;
+  }
+
+  .subheadline {
+    margin-top: 8px;
+    font-size: 13px;
+    font-weight: 400;
+    color: rgba(255,255,255,0.85);
+    line-height: 1.6;
+  }
+
+  /* 波形デコレーション */
+  .wave {
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 100%;
+  }
+
+  /* ── HubSpot 比較バー ─────────────────── */
+  .comparison-bar {
+    background: #f0f9ff;
+    border-left: 4px solid #0891b2;
+    margin: 28px 36px 0;
+    padding: 12px 16px;
+    border-radius: 0 8px 8px 0;
+  }
+
+  .comparison-bar p {
+    font-size: 12px;
+    color: #0e7490;
+    line-height: 1.6;
+  }
+
+  .comparison-bar strong {
+    font-weight: 700;
+  }
+
+  /* ── 3 特徴 ────────────────────────────── */
+  .features {
+    margin: 24px 36px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .feature {
+    display: flex;
+    gap: 14px;
+    align-items: flex-start;
+  }
+
+  .feature-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    background: linear-gradient(135deg, #0891b2, #22d3ee);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    flex-shrink: 0;
+    margin-top: 2px;
+  }
+
+  .feature-body h3 {
+    font-size: 14px;
+    font-weight: 700;
+    color: #0f172a;
+    margin-bottom: 3px;
+  }
+
+  .feature-body p {
+    font-size: 12px;
+    color: #475569;
+    line-height: 1.6;
+  }
+
+  /* ── ターゲット ─────────────────────────── */
+  .target-row {
+    margin: 22px 36px 0;
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+
+  .tag {
+    background: #e0f2fe;
+    color: #0369a1;
+    font-size: 11px;
+    font-weight: 700;
+    padding: 5px 12px;
+    border-radius: 99px;
+  }
+
+  /* ── CTA ────────────────────────────────── */
+  .cta {
+    margin: 24px 36px 0;
+    background: linear-gradient(135deg, #0e7490, #0891b2);
+    border-radius: 14px;
+    padding: 20px 24px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .cta-left {
+    flex: 1;
+  }
+
+  .cta-label {
+    font-size: 10px;
+    font-weight: 700;
+    color: rgba(255,255,255,0.7);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-bottom: 4px;
+  }
+
+  .cta-price {
+    font-size: 22px;
+    font-weight: 900;
+    color: #fff;
+    line-height: 1.2;
+  }
+
+  .cta-price span {
+    font-size: 13px;
+    font-weight: 400;
+  }
+
+  .cta-note {
+    margin-top: 4px;
+    font-size: 11px;
+    color: rgba(255,255,255,0.75);
+  }
+
+  .cta-url {
+    font-size: 13px;
+    font-weight: 700;
+    color: #fff;
+    text-align: center;
+  }
+
+  .qr-placeholder {
+    width: 80px;
+    height: 80px;
+    background: #fff;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 9px;
+    color: #94a3b8;
+    text-align: center;
+    line-height: 1.4;
+    flex-shrink: 0;
+  }
+
+  /* ── フッター ────────────────────────────── */
+  .footer {
+    margin-top: auto;
+    padding: 14px 36px;
+    border-top: 1px solid #e2e8f0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .footer-brand {
+    font-size: 10px;
+    color: #94a3b8;
+  }
+
+  .footer-domain {
+    font-size: 11px;
+    font-weight: 700;
+    color: #0891b2;
+  }
+
+  /* ── 裏面 ───────────────────────────────── */
+  .flyer-back {
+    margin-top: 40px;
+    background: #fff;
+  }
+
+  .back-header {
+    background: #C4A882; /* ocean.tan */
+    padding: 22px 36px 18px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .back-header-text {
+    font-size: 15px;
+    font-weight: 700;
+    color: #2D5F70; /* ocean.deep */
+  }
+
+  .back-header-sub {
+    font-size: 11px;
+    color: rgba(45,95,112,0.55);
+    margin-left: auto;
+  }
+
+  /* Slack モックアップ（ライトテーマ・オーシャンカラー） */
+  .slack-mock {
+    margin: 24px 36px 0;
+    background: #F2DEC8; /* ocean.sand */
+    border-radius: 12px;
+    overflow: hidden;
+    font-family: 'Noto Sans JP', sans-serif;
+    border: 1px solid #C4A882; /* ocean.tan */
+  }
+
+  .slack-titlebar {
+    background: #F2DEC8; /* ocean.sand */
+    padding: 8px 16px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    border-bottom: 1px solid #C4A882; /* ocean.tan */
+  }
+
+  .slack-channel {
+    font-size: 11px;
+    font-weight: 700;
+    color: #2D5F70; /* ocean.deep */
+  }
+
+  .slack-channel::before {
+    content: '#';
+    color: #9BB8AF; /* ocean.sage */
+    margin-right: 2px;
+  }
+
+  .slack-dot {
+    width: 7px; height: 7px;
+    border-radius: 50%;
+    background: #9BB8AF; /* ocean.sage */
+    margin-left: auto;
+  }
+
+  .slack-body {
+    padding: 14px 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    background: #fdf8f3;
+  }
+
+  .slack-msg {
+    display: flex;
+    gap: 10px;
+    align-items: flex-start;
+  }
+
+  .slack-avatar {
+    width: 30px;
+    height: 30px;
+    border-radius: 6px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+  }
+
+  .avatar-user { background: #7AAAB8; } /* ocean.mist */
+  .avatar-bot  { background: #4E7F8F; } /* ocean.steel */
+
+  .slack-bubble {
+    flex: 1;
+  }
+
+  .slack-name {
+    font-size: 10px;
+    font-weight: 700;
+    margin-bottom: 2px;
+  }
+
+  .name-user { color: #2D5F70; } /* ocean.deep */
+  .name-bot  { color: #4E7F8F; } /* ocean.steel */
+
+  .slack-time {
+    font-size: 9px;
+    color: #C4A882;
+    margin-left: 6px;
+    font-weight: 400;
+  }
+
+  .slack-text {
+    font-size: 11px;
+    color: #2D5F70;
+    line-height: 1.55;
+  }
+
+  .slack-card {
+    margin-top: 6px;
+    background: #fff;
+    border-left: 3px solid #4E7F8F; /* ocean.steel */
+    border-radius: 0 6px 6px 0;
+    padding: 8px 12px;
+    box-shadow: 0 1px 3px rgba(45,95,112,0.08);
+  }
+
+  .slack-card-title {
+    font-size: 11px;
+    font-weight: 700;
+    color: #2D5F70;
+    margin-bottom: 4px;
+  }
+
+  .slack-card-row {
+    font-size: 10px;
+    color: #4E7F8F;
+    line-height: 1.7;
+  }
+
+  .slack-card-row strong {
+    color: #2D5F70;
+    font-weight: 600;
+  }
+
+  .slack-tag {
+    display: inline-block;
+    background: #e0f2f7;
+    color: #2D5F70;
+    font-size: 9px;
+    font-weight: 700;
+    padding: 2px 7px;
+    border-radius: 4px;
+    margin-right: 4px;
+    margin-top: 4px;
+  }
+
+  /* ステップフロー */
+  .steps {
+    margin: 22px 36px 0;
+    display: flex;
+    gap: 0;
+    align-items: flex-start;
+  }
+
+  .step {
+    flex: 1;
+    text-align: center;
+    position: relative;
+  }
+
+  .step:not(:last-child)::after {
+    content: '→';
+    position: absolute;
+    right: -8px;
+    top: 12px;
+    font-size: 16px;
+    color: #0891b2;
+    font-weight: 700;
+  }
+
+  .step-num {
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    background: #0891b2;
+    color: #fff;
+    font-size: 11px;
+    font-weight: 900;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 6px;
+  }
+
+  .step-label {
+    font-size: 10px;
+    font-weight: 700;
+    color: #0f172a;
+    line-height: 1.4;
+  }
+
+  .step-sub {
+    font-size: 9px;
+    color: #64748b;
+    margin-top: 2px;
+    line-height: 1.4;
+  }
+
+  /* β特典 */
+  .benefits {
+    margin: 20px 36px 0;
+    background: #f0f9ff;
+    border-radius: 10px;
+    padding: 14px 16px;
+  }
+
+  .benefits-title {
+    font-size: 11px;
+    font-weight: 700;
+    color: #0891b2;
+    margin-bottom: 8px;
+  }
+
+  .benefits-list {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .benefit-item {
+    font-size: 11px;
+    color: #0f172a;
+    display: flex;
+    gap: 6px;
+  }
+
+  .benefit-item::before {
+    content: '✓';
+    color: #0891b2;
+    font-weight: 700;
+    flex-shrink: 0;
+  }
+
+  /* 会社情報 */
+  .company {
+    margin: 16px 36px 0;
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+    padding-bottom: 4px;
+  }
+
+  .company-logo {
+    font-size: 28px;
+    line-height: 1;
+    flex-shrink: 0;
+  }
+
+  .company-info h4 {
+    font-size: 12px;
+    font-weight: 700;
+    color: #0f172a;
+    margin-bottom: 3px;
+  }
+
+  .company-info p {
+    font-size: 10px;
+    color: #64748b;
+    line-height: 1.6;
+  }
+
+  .back-footer {
+    margin-top: auto;
+    padding: 12px 36px;
+    border-top: 1px solid #e2e8f0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .back-footer span {
+    font-size: 10px;
+    color: #94a3b8;
+  }
+
+  /* ── 印刷用 ────────────────────────────── */
+  @media print {
+    body { background: none; padding: 0; }
+    .flyer, .flyer-back { width: 210mm; min-height: 297mm; margin: 0; }
+    .flyer-back { margin-top: 0; page-break-before: always; }
+  }
+</style>
+</head>
+<body>
+<div class="flyer">
+
+  <!-- ヘッダー -->
+  <div class="header">
+    <div class="header-logo-row">
+      <span class="kurage-icon">🪼</span>
+      <div>
+        <div class="logo-text">クラゲディール</div>
+        <div class="logo-sub">by 株式会社shiro</div>
+      </div>
+      <div class="beta-badge">β版 3ヶ月 無料</div>
+    </div>
+
+    <div class="headline">
+      Slack を開けば、<br />営業記録が終わっている。
+    </div>
+    <div class="subheadline">
+      入力しなくていい CRM が、Slack の中にいます。
+    </div>
+
+    <!-- 波形SVG -->
+    <svg class="wave" viewBox="0 0 595 32" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0,16 C149,32 447,0 595,16 L595,32 L0,32 Z" fill="#ffffff"/>
+    </svg>
+  </div>
+
+  <!-- HubSpot 比較バー -->
+  <div class="comparison-bar">
+    <p>
+      <strong>他のSlack連携ツールとの違い</strong><br />
+      HubSpotのSlackアプリは「HubSpotからSlackに通知を送る」ツールです。<br />
+      クラゲディールは <strong>Slackそのものが CRM</strong>。切り替え不要、入力不要。
+    </p>
+  </div>
+
+  <!-- 3特徴 -->
+  <div class="features">
+
+    <div class="feature">
+      <div class="feature-icon">💬</div>
+      <div class="feature-body">
+        <h3>話しかけるだけで記録できる</h3>
+        <p>「田中さんと商談しました」と送るだけ。AIが自動で整理してダッシュボードに反映。<br />
+        入力フォームを開く必要はありません。</p>
+      </div>
+    </div>
+
+    <div class="feature">
+      <div class="feature-icon">📊</div>
+      <div class="feature-body">
+        <h3>チーム全員の状況がリアルタイムで見える</h3>
+        <p>受注確率・活動履歴・ネクストアクションをWebダッシュボードで一覧。<br />
+        マネージャーも営業も同じ画面で確認できます。</p>
+      </div>
+    </div>
+
+    <div class="feature">
+      <div class="feature-icon">⚡</div>
+      <div class="feature-body">
+        <h3>設定15分。今日から使える</h3>
+        <p>SlackにAppを追加するだけで即日稼働。<br />
+        データ移行もトレーニングも、複雑な設定も不要です。</p>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- ターゲットタグ -->
+  <div class="target-row">
+    <span class="tag">1〜30名の営業チーム</span>
+    <span class="tag">Slack ヘビーユーザー</span>
+    <span class="tag">SFA 導入を検討中</span>
+    <span class="tag">HubSpot から乗り換えたい</span>
+  </div>
+
+  <!-- CTA -->
+  <div class="cta">
+    <div class="cta-left">
+      <div class="cta-label">β版 特別オファー</div>
+      <div class="cta-price">3ヶ月 無料 <span>で試せます</span></div>
+      <div class="cta-note">QRコードから3分で申し込み完了 · 9月8日まで受付</div>
+      <div style="margin-top:8px;">
+        <span style="font-size:14px;font-weight:700;color:#fff;">kuragedeal.ai/beta</span>
+      </div>
+    </div>
+    <div style="text-align:center;">
+      <div class="qr-placeholder">QR<br/>コード<br/>ここに</div>
+    </div>
+  </div>
+
+  <!-- フッター -->
+  <div class="footer">
+    <span class="footer-brand">株式会社shiro　|　kuragedeal.ai</span>
+    <span class="footer-domain">kuragedeal.ai</span>
+  </div>
+
+</div>
+
+<!-- ════════════════════════════════════════
+     裏面
+════════════════════════════════════════ -->
+<div class="flyer flyer-back">
+
+  <!-- 裏面ヘッダー -->
+  <div class="back-header">
+    <span class="kurage-icon" style="font-size:20px;">🪼</span>
+    <span class="back-header-text">クラゲディール — 使い方と特典</span>
+    <span class="back-header-sub">kuragedeal.ai/beta</span>
+  </div>
+
+  <!-- Slack モックアップ -->
+  <div class="slack-mock">
+    <div class="slack-titlebar">
+      <span class="slack-channel">営業チーム</span>
+      <span style="font-size:10px;color:#868686;margin-left:8px;">クラゲディール が参加しています</span>
+      <span class="slack-dot"></span>
+    </div>
+    <div class="slack-body">
+
+      <!-- ユーザー発言 -->
+      <div class="slack-msg">
+        <div class="slack-avatar avatar-user">🧑</div>
+        <div class="slack-bubble">
+          <div class="slack-name name-user">鈴木 <span class="slack-time">14:23</span></div>
+          <div class="slack-text">田中さんと商談しました。予算は300万円、来月末に決裁予定です。来週デモをやります</div>
+        </div>
+      </div>
+
+      <!-- ボット応答 -->
+      <div class="slack-msg">
+        <div class="slack-avatar avatar-bot">🪼</div>
+        <div class="slack-bubble">
+          <div class="slack-name name-bot">クラゲディール <span class="slack-time">14:23</span></div>
+          <div class="slack-text">✅ 田中麻衣さん（アグリテック株式会社）の活動記録を追加しました</div>
+          <div class="slack-card">
+            <div class="slack-card-row">
+              🤝 MTG 5/28　予算は300万円、来月末に決裁予定です。来週デモをやります<br/>
+              🤝 MTG 5/27　明日ミーティング予定<br/>
+              📞 電話 5/24　Slackにて進捗確認。PoC結果は良好。
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ホットリード通知 -->
+      <div class="slack-msg">
+        <div class="slack-avatar avatar-bot">🪼</div>
+        <div class="slack-bubble">
+          <div class="slack-name name-bot">クラゲディール <span class="slack-time">14:23</span></div>
+          <div class="slack-card" style="background:#fffbeb; border-left-color:#C4A882;">
+            <div class="slack-card-row" style="color:#2D5F70;">
+              🪼 ちょっと動き出してきましたよ。受注確率 <strong>68%</strong>（+12%）<br/>
+              顧客は具体的な予算と決裁時期を持ち、導入への本気度が高い状態です。<br/>
+              <span style="color:#4E7F8F;font-weight:700;">次のひと手:</span> 来週のデモに向けてROI試算を準備しておきましょう。
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ユーザー2 -->
+      <div class="slack-msg">
+        <div class="slack-avatar avatar-user" style="background:#7c3aed;">👩</div>
+        <div class="slack-bubble">
+          <div class="slack-name name-user">佐藤（マネージャー） <span class="slack-time">14:31</span></div>
+          <div class="slack-text">今月の活動数どのくらい？</div>
+        </div>
+      </div>
+
+      <!-- ボット応答2 -->
+      <div class="slack-msg">
+        <div class="slack-avatar avatar-bot">🪼</div>
+        <div class="slack-bubble">
+          <div class="slack-name name-bot">クラゲディール <span class="slack-time">14:31</span></div>
+          <div class="slack-text">今月は全員合わせて <strong style="color:#22d3ee;">47件</strong> の活動がありますよ。</div>
+          <div class="slack-card">
+            <div class="slack-card-row">
+              鈴木 18件　佐藤 15件　山田 14件<br/>
+              <span style="color:#4E7F8F;font-weight:700;font-size:9px;">▲ 先月比 +23%</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ステップフロー -->
+  <div style="margin: 20px 36px 0;">
+    <div style="font-size:11px;font-weight:700;color:#64748b;margin-bottom:12px;text-transform:uppercase;letter-spacing:0.06em;">使い始めるまで 3ステップ</div>
+    <div class="steps">
+      <div class="step">
+        <div class="step-num">1</div>
+        <div class="step-label">フォーム<br/>記入</div>
+        <div class="step-sub">kuragedeal.ai/beta<br/>3分で完了</div>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <div class="step-label">メールの<br/>リンクから<br/>Slack 追加</div>
+        <div class="step-sub">クリック<br/>ひとつ</div>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <div class="step-label">話しかける<br/>だけで<br/>即日稼働</div>
+        <div class="step-sub">設定不要</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- β特典 -->
+  <div class="benefits">
+    <div class="benefits-title">🎁 β版 参加特典（〜2026年9月8日）</div>
+    <div class="benefits-list">
+      <div class="benefit-item">3ヶ月間 完全無料でご利用いただけます</div>
+      <div class="benefit-item">β終了後も優待価格（50% OFF）で継続可能</div>
+      <div class="benefit-item">機能追加・改善への優先フィードバック権</div>
+      <div class="benefit-item">導入時の個別サポート（チャット対応）</div>
+    </div>
+  </div>
+
+  <!-- 会社情報 -->
+  <div class="company">
+    <div class="company-logo">🦑</div>
+    <div class="company-info">
+      <h4>株式会社shiro</h4>
+      <p>
+        デザイン × テクノロジーで、営業の現場を変える。<br/>
+        クラゲディールは自社の営業課題から生まれたプロダクトです。<br/>
+        お問い合わせ：support@kuragedeal.ai
+      </p>
+    </div>
+  </div>
+
+  <!-- 裏面フッター -->
+  <div class="back-footer">
+    <span>© 2026 株式会社shiro　|　kuragedeal.ai</span>
+    <span style="font-weight:700;color:#0891b2;">kuragedeal.ai/beta</span>
+  </div>
+
+</div>
+</body>
+</html>
