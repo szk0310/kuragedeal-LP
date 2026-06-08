@@ -187,7 +187,12 @@
 // 確実に正しい値で描画される。
 definePageMeta({ ssr: false })
 
-useHead({ title: 'お問い合わせ | クラゲディール' })
+usePageSeo({
+  path: '/contact',
+  title: 'お問い合わせ | クラゲディール',
+  description:
+    'クラゲディール（株式会社shiro）へのお問い合わせ。Enterprise のご相談、一般的なご質問、取材のご依頼などを受け付けています。',
+})
 
 const route = useRoute()
 const runtimeConfig = useRuntimeConfig()

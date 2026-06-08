@@ -323,7 +323,12 @@
 <script setup lang="ts">
 import { ref, reactive } from 'vue'
 
-useHead({ title: 'β 試用プログラム | クラゲディール' })
+usePageSeo({
+  path: '/beta',
+  title: 'β 試用プログラム | クラゲディール',
+  description:
+    'クラゲディールのβ版を 3 ヶ月無料でお試しいただけます（2026/9/8 まで・クレジットカード不要・審査なし）。9/8 までにウェイトリストへ応募すると正式版（11/18 目標）まで連続利用＋1 年間 50% OFF。',
+})
 
 const runtimeConfig = useRuntimeConfig()
 const turnstileSiteKey = runtimeConfig.public.turnstileSiteKey
@@ -392,6 +397,21 @@ const faqs = [
     a: 'データは Google Cloud Platform 上で管理され、通信は SSL/TLS で暗号化されています。テナントごとに PostgreSQL の Row-Level Security で物理的に分離。お客様の営業データが AI の学習に使用されることはありません。',
   },
 ]
+
+// FAQPage 構造化データ（表示中の faqs 配列からそのまま生成 → 表示と完全一致）
+const faqLd = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faqs.map((f) => ({
+    '@type': 'Question',
+    name: f.q,
+    acceptedAnswer: { '@type': 'Answer', text: f.a },
+  })),
+}
+
+useHead({
+  script: [{ type: 'application/ld+json', innerHTML: JSON.stringify(faqLd) }],
+})
 
 async function submit() {
   // Turnstile token を取得

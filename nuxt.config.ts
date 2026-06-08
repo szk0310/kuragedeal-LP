@@ -49,7 +49,13 @@ export default defineNuxtConfig({
           content: 'Slackに書くだけでCRM入力完了。AIが営業コーチとして次のアクションを提案。チーム全員で月¥9,800。',
         },
         { property: 'og:type', content: 'website' },
+        { property: 'og:site_name', content: 'クラゲディール' },
+        { property: 'og:locale', content: 'ja_JP' },
+        { property: 'og:image', content: 'https://kuragedeal.ai/og-image.png' },
+        { property: 'og:image:width', content: '1200' },
+        { property: 'og:image:height', content: '630' },
         { name: 'twitter:card', content: 'summary_large_image' },
+        { name: 'twitter:image', content: 'https://kuragedeal.ai/og-image.png' },
       ],
       link: [
         { rel: 'icon', type: 'image/svg+xml', href: '/kurage-on-white.svg' },

@@ -245,7 +245,12 @@
 <script setup lang="ts">
 import { ref, reactive } from 'vue'
 
-useHead({ title: 'ウェイトリスト | クラゲディール' })
+usePageSeo({
+  path: '/waitlist',
+  title: 'ウェイトリスト | クラゲディール',
+  description:
+    'クラゲディールのウェイトリスト。9/8 までに応募すると、βアクセスが 11/17 まで自動延長され正式版（11/18 目標）まで連続利用でき、さらに正式版から 1 年間 50% OFF で継続できます。先行 100 社限定。',
+})
 
 const runtimeConfig = useRuntimeConfig()
 const turnstileSiteKey = runtimeConfig.public.turnstileSiteKey

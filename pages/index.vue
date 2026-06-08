@@ -609,7 +609,7 @@
                 お客様の事業規模に合わせた ROI 試算を作成しお送りいたします。<br />
                 本日中にご提供できる予定です。<br /><br />
                 田中様のご検討の一助となれば幸いです。<br /><br />
-                株式会社シロ 鈴木
+                株式会社shiro 鈴木
               </div>
 
               <div class="flex flex-col sm:flex-row gap-2">
@@ -1272,6 +1272,75 @@ const faqs = [
     a: '活動記録と MEDDPICC 情報（決裁者との接触 / 予算の根拠確認 / 競合の把握など）を AI が分析して更新します。/coach で情報を入力するたびに計算し直されます。14 日間動きがない場合は時間減衰で自動的に下方修正されます。',
   },
 ]
+
+// ── SEO / AIO メタ ───────────────────────────────────────
+usePageSeo({
+  path: '/',
+  title: 'クラゲディール — Slackだけで完結するAI営業CRM',
+  description:
+    'Slack に一言書くだけで CRM 入力が完了。AI が営業コーチとして毎朝ブリーフィングし、受注確率・次のアクション・メール下書きを支援します。1〜10 人の営業チームで月¥9,800。いまならβ版を 3 ヶ月無料（9/8 まで・クレカ不要）。',
+})
+
+// SoftwareApplication 構造化データ（料金は正準モデルに一致。虚偽 rating は入れない）
+const softwareLd = {
+  '@context': 'https://schema.org',
+  '@type': 'SoftwareApplication',
+  name: 'クラゲディール',
+  applicationCategory: 'BusinessApplication',
+  operatingSystem: 'Slack',
+  url: 'https://kuragedeal.ai',
+  description:
+    'Slack に書くだけで CRM 入力が完了する AI 営業 CRM。AI が MEDDPICC コーチング・受注確率の算出・メール下書きを支援する。ユーザー数課金なし。',
+  offers: [
+    {
+      '@type': 'Offer',
+      name: 'β 試用（3 ヶ月無料・2026/9/8 まで）',
+      price: 0,
+      priceCurrency: 'JPY',
+      description: 'β 期間中は全機能を 3 ヶ月無料で利用可能（2026/9/8 一斉終了・クレジットカード不要・審査なし）。',
+    },
+    {
+      '@type': 'Offer',
+      name: 'Personal（正式版・2026/11/18 目標）',
+      price: 1980,
+      priceCurrency: 'JPY',
+      description: '1 名まで。正式版では 14 日間の無料トライアル付き。',
+    },
+    {
+      '@type': 'Offer',
+      name: 'Trio（正式版・2026/11/18 目標）',
+      price: 4980,
+      priceCurrency: 'JPY',
+      description: '3 名まで。正式版では 14 日間の無料トライアル付き。',
+    },
+    {
+      '@type': 'Offer',
+      name: 'Standard（正式版・2026/11/18 目標）',
+      price: 9800,
+      priceCurrency: 'JPY',
+      description: '10 名まで。正式版では 14 日間の無料トライアル付き。',
+    },
+  ],
+  publisher: { '@type': 'Organization', name: '株式会社shiro' },
+}
+
+// FAQPage 構造化データ（表示中の faqs 配列からそのまま生成 → 表示と完全一致）
+const faqLd = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faqs.map((f) => ({
+    '@type': 'Question',
+    name: f.q,
+    acceptedAnswer: { '@type': 'Answer', text: f.a },
+  })),
+}
+
+useHead({
+  script: [
+    { type: 'application/ld+json', innerHTML: JSON.stringify(softwareLd) },
+    { type: 'application/ld+json', innerHTML: JSON.stringify(faqLd) },
+  ],
+})
 </script>
 
 <style scoped>

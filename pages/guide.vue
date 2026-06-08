@@ -171,7 +171,12 @@
 </template>
 
 <script setup lang="ts">
-useHead({ title: '使い方ガイド | クラゲディール' })
+usePageSeo({
+  path: '/guide',
+  title: '使い方ガイド | クラゲディール',
+  description:
+    'クラゲディールの使い方ガイド。Slack に書くだけで CRM 入力、/coach で AI コーチング、受注確率の算出やメール下書きまで。主要コマンドと機能をわかりやすく紹介します。',
+})
 
 const route = useRoute()
 const installed = computed(() => route.query.installed === '1')

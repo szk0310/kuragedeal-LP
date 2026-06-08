@@ -28,7 +28,11 @@
 </template>
 
 <script setup lang="ts">
-useHead({ title: '特定商取引法に基づく表記 | クラゲディール' })
+usePageSeo({
+  path: '/legal/tokusho',
+  title: '特定商取引法に基づく表記 | クラゲディール',
+  description: '特定商取引法に基づく表記（クラゲディール / 株式会社shiro）。',
+})
 
 const rows = [
   { label: '販売業者', value: '株式会社shiro' },

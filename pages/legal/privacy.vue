@@ -107,5 +107,9 @@
 </template>
 
 <script setup lang="ts">
-useHead({ title: 'プライバシーポリシー | クラゲディール' })
+usePageSeo({
+  path: '/legal/privacy',
+  title: 'プライバシーポリシー | クラゲディール',
+  description: 'クラゲディール（株式会社shiro）のプライバシーポリシー。個人情報の取り扱い方針を記載しています。',
+})
 </script>

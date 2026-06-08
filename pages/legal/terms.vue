@@ -113,5 +113,9 @@
 </template>
 
 <script setup lang="ts">
-useHead({ title: '利用規約 | クラゲディール' })
+usePageSeo({
+  path: '/legal/terms',
+  title: '利用規約 | クラゲディール',
+  description: 'クラゲディール（株式会社shiro）の利用規約。サービスのご利用条件を記載しています。',
+})
 </script>

@@ -157,7 +157,12 @@
 </template>
 
 <script setup lang="ts">
-useHead({ title: '無料で始める | クラゲディール' })
+usePageSeo({
+  path: '/free',
+  title: '無料で始める | クラゲディール',
+  description:
+    'クラゲディールを無料で始める。Slack に追加するだけで即時アクティベート、クレジットカード不要・審査なし。いまならβ版を 3 ヶ月無料（9/8 まで）でご利用いただけます。',
+})
 
 const runtimeConfig = useRuntimeConfig()
 const turnstileSiteKey = runtimeConfig.public.turnstileSiteKey
