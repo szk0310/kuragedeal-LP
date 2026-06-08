@@ -348,6 +348,7 @@ const form = reactive({
 
 const submitting = ref(false)
 const submitted = ref(false)
+const conversion = useConversion()
 const error = ref('')
 
 const benefits = [
@@ -454,6 +455,7 @@ async function submit() {
       throw new Error(data.error ?? '応募に失敗しました')
     }
     submitted.value = true
+    conversion.fire('beta')
   } catch (e) {
     error.value = e instanceof Error ? e.message : '応募に失敗しました'
     ;(window as any).turnstile?.reset?.()

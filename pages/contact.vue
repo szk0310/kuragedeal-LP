@@ -244,6 +244,7 @@ const isEnterprise = computed(() => form.subject === 'enterprise')
 
 const submitting = ref(false)
 const submitted = ref(false)
+const conversion = useConversion()
 
 const API_URL = 'https://slacksfa-api-808596335261.asia-northeast1.run.app'
 
@@ -295,6 +296,7 @@ async function submit() {
       return
     }
     submitted.value = true
+    conversion.fire('contact')
   } catch {
     alert('通信エラーが発生しました。時間をおいて再度お試しください。')
     if (typeof (window as any).turnstile !== 'undefined') {

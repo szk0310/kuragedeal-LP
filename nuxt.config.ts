@@ -10,6 +10,13 @@ export default defineNuxtConfig({
     public: {
       // Cloudflare Turnstile site key（公開可。HTML埋め込み用）
       turnstileSiteKey: process.env.NUXT_PUBLIC_TURNSTILE_SITE_KEY ?? '0x4AAAAAADEHhYQdYWLR1h0u',
+      // 計測タグ（未設定なら gtag をロードせず CV も no-op＝無害）
+      gtagGa4: process.env.NUXT_PUBLIC_GTAG_GA4 ?? '',        // 例: G-XXXXXXXX
+      gtagAdsId: process.env.NUXT_PUBLIC_GTAG_ADS_ID ?? '',   // 例: AW-XXXXXXXXX
+      // Google広告コンバージョンラベル（"AW-xxx/labelxxx" の send_to 値）
+      adsLabelBeta: process.env.NUXT_PUBLIC_ADS_LABEL_BETA ?? '',
+      adsLabelWaitlist: process.env.NUXT_PUBLIC_ADS_LABEL_WAITLIST ?? '',
+      adsLabelContact: process.env.NUXT_PUBLIC_ADS_LABEL_CONTACT ?? '',
     },
   },
   vite: {
