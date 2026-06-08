@@ -14,7 +14,7 @@ const formPaths = ['/beta', '/waitlist', '/free', '/contact']
 const showChat = computed(() => !formPaths.includes(route.path))
 
 // Organization 構造化データ（全ページ共通）。AI 検索／ナレッジパネル向け。
-// ※ SNS（X / note / LinkedIn）開設後に sameAs を追記する。
+// ※ SNS の sameAs は開設順に追記（note / LinkedIn は開設後に追加）。
 const organizationLd = {
   '@context': 'https://schema.org',
   '@type': 'Organization',
@@ -24,6 +24,9 @@ const organizationLd = {
   logo: 'https://kuragedeal.ai/kurage-on-white.svg',
   email: 'support@kuragedeal.ai',
   description: 'Slack だけで完結する AI 営業 CRM「クラゲディール」の提供元。株式会社shiro は Salesforce 認定コンサルティングパートナー。',
+  sameAs: [
+    'https://x.com/kuragedeal',
+  ],
 }
 
 useHead({
