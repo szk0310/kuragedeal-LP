@@ -27,6 +27,7 @@ const organizationLd = {
   sameAs: [
     'https://x.com/kuragedeal',
     'https://note.com/kuragedeal',
+    'https://www.linkedin.com/company/101692196',
   ],
 }
 
