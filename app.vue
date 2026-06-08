@@ -26,6 +26,7 @@ const organizationLd = {
   description: 'Slack だけで完結する AI 営業 CRM「クラゲディール」の提供元。株式会社shiro は Salesforce 認定コンサルティングパートナー。',
   sameAs: [
     'https://x.com/kuragedeal',
+    'https://note.com/kuragedeal',
   ],
 }
 
