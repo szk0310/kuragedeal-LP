@@ -16,8 +16,8 @@
         <div class="flex flex-col lg:flex-row items-center gap-12">
           <div class="flex-1">
             <h1 class="text-4xl md:text-5xl lg:text-6xl font-black mb-6 leading-tight">
-              <span class="block mb-4">話しかけるだけで、</span>
-              <span class="text-cyan-50">ディールが前に進む。</span>
+              <span class="block mb-4">Slackに書いた一言が、</span>
+              <span class="text-cyan-50">自動で記録・コーチングまでつながる。</span>
             </h1>
 
             <!-- クラゲくん コアフレーズ -->
