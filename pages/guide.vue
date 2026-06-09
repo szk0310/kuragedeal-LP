@@ -52,7 +52,7 @@
 
         <div class="bg-kurage-50 border border-kurage-200 rounded-xl p-4 mt-4 text-sm text-gray-700 leading-relaxed">
           🔒 <b>プライバシー</b>：<b>DM ＝ あなただけのプライベート</b>（入力もクラゲの回答も他人に見えません）。<b>共有チャンネル ＝ メンバー全員に見えます</b>。各自の機密データは <b>DM のご利用がおすすめ</b>、チームで共有したいときはチャンネルで。<br />
-          <span class="text-gray-500">※ サイドバーにアプリが出ない時は、左の「アプリ」→ クラゲディール を一度開くと定着します。</span>
+          <span class="text-gray-500">※ サイドバーにアプリが出ない時は、Slack 上部の検索窓（Cmd / Ctrl + K）に「クラゲディール」（英字 kuragedeal でも可）と入力して選ぶと、DM が開いて常駐します。</span>
         </div>
       </section>
 
