@@ -24,28 +24,33 @@
       <section id="setup" class="mb-14 scroll-mt-20">
         <h2 class="text-xl font-black text-gray-800 mb-4 flex items-center gap-2">
           <span class="bg-kurage-500 text-white rounded-full w-7 h-7 flex items-center justify-center text-sm font-bold">0</span>
-          導入する（セットアップ）
+          はじめる（かんたん2ステップ）
         </h2>
-        <div class="grid md:grid-cols-3 gap-4">
+        <p class="text-sm text-gray-500 mb-4">まずは<b>自分ひとりで</b>。クラゲに DM して話しかけるだけ。チャンネルは不要です。</p>
+        <div class="grid md:grid-cols-2 gap-4">
           <div class="bg-white rounded-2xl border border-gray-200 p-5 shadow-sm">
             <p class="text-xs font-bold text-orange-500 mb-1">STEP 1</p>
             <h3 class="font-bold text-gray-900 mb-2">Slack に追加</h3>
-            <p class="text-sm text-gray-600 leading-relaxed">管理者が「Slack に追加」からワークスペースにインストール。完了するとクラゲくんから welcome DM が届きます。</p>
+            <p class="text-sm text-gray-600 leading-relaxed">「Slack に追加」からワークスペースにインストール。完了するとクラゲくんから welcome DM が届きます。</p>
           </div>
           <div class="bg-white rounded-2xl border border-gray-200 p-5 shadow-sm">
             <p class="text-xs font-bold text-orange-500 mb-1">STEP 2</p>
-            <h3 class="font-bold text-gray-900 mb-2">使う場所を決める</h3>
-            <p class="text-sm text-gray-600 leading-relaxed"><b>個人で</b>：左サイドバー「アプリ」→ クラゲディール を開いて DM。<br /><b>チームで</b>：営業用チャンネル（例 <code class="bg-gray-100 px-1 rounded">#営業-crm</code>）を作成。</p>
-          </div>
-          <div class="bg-white rounded-2xl border border-gray-200 p-5 shadow-sm">
-            <p class="text-xs font-bold text-orange-500 mb-1">STEP 3</p>
-            <h3 class="font-bold text-gray-900 mb-2">チャンネルに招待</h3>
-            <p class="text-sm text-gray-600 leading-relaxed">チャンネルで <code class="bg-gray-100 px-1 rounded">/invite @クラゲディール</code>（または チャンネル詳細 → インテグレーション → アプリを追加）。あとはメンバーを招待するだけ。</p>
+            <h3 class="font-bold text-gray-900 mb-2">クラゲに DM して話しかける</h3>
+            <p class="text-sm text-gray-600 leading-relaxed">左サイドバー「アプリ」→ <b>クラゲディール</b> を開いて、そのまま自然文で一言。<b>あなただけのプライベート空間</b>です（他の人には見えません）。</p>
           </div>
         </div>
+
+        <!-- オプション: チームで共有 -->
+        <div class="bg-white border border-dashed border-gray-300 rounded-2xl p-5 mt-4">
+          <p class="font-bold text-gray-800 mb-2">💡 オプション：チームでみんなと使いたいとき</p>
+          <p class="text-sm text-gray-600 leading-relaxed">
+            営業用チャンネル（例 <code class="bg-gray-100 px-1 rounded">#営業-crm</code>）を作成 → チャンネルで <code class="bg-gray-100 px-1 rounded">/invite @クラゲディール</code>（または チャンネル詳細 → インテグレーション → アプリを追加）→ メンバーを招待。
+            招待された人は<b>各自の Slack ID でそのまま利用開始</b>（個別インストール不要）。<br />
+            <span class="text-gray-500">※ 共有チャンネルでは、発言とクラゲの回答が<b>メンバー全員に見えます</b>。チームで共有して構わない場合に向いています。</span>
+          </p>
+        </div>
+
         <div class="bg-kurage-50 border border-kurage-200 rounded-xl p-4 mt-4 text-sm text-gray-700 leading-relaxed">
-          🪼 招待されたメンバーは <b>各自の Slack ID でそのまま利用開始</b>（個別インストール不要）。
-          DM でもチャンネルでも、<b>そのまま自然文を打つだけ</b>で記録されます（メンションは任意）。<br />
           🔒 <b>プライバシー</b>：<b>DM ＝ あなただけのプライベート</b>（入力もクラゲの回答も他人に見えません）。<b>共有チャンネル ＝ メンバー全員に見えます</b>。各自の機密データは <b>DM のご利用がおすすめ</b>、チームで共有したいときはチャンネルで。<br />
           <span class="text-gray-500">※ サイドバーにアプリが出ない時は、左の「アプリ」→ クラゲディール を一度開くと定着します。</span>
         </div>
@@ -246,7 +251,7 @@ const firstWeekPlan = [
     label: 'Day 1（インストール当日）',
     theme: 'まずクラゲくんに話しかけてみる',
     tasks: [
-      'Slack で「@クラゲディール」とメンション or DM して挨拶',
+      'クラゲディール App に DM して挨拶（まずは自分ひとりで・プライベート）',
       '顧客を 1 件登録（例:「田中さんを顧客に追加して。会社は ABC 商事」）',
       '活動メモを 1 件記録（例:「田中さんと商談しました。予算 300 万」）',
     ],
