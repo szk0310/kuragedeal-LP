@@ -29,9 +29,9 @@
         <p class="text-sm text-gray-500 mb-4">まずは<b>自分ひとりで</b>。クラゲに DM して話しかけるだけ。チャンネルは不要です。</p>
         <div class="grid md:grid-cols-2 gap-4">
           <div class="bg-white rounded-2xl border border-gray-200 p-5 shadow-sm">
-            <p class="text-xs font-bold text-orange-500 mb-1">STEP 1</p>
+            <p class="text-xs font-bold text-orange-500 mb-1">STEP 1（管理者が1回）</p>
             <h3 class="font-bold text-gray-900 mb-2">Slack に追加</h3>
-            <p class="text-sm text-gray-600 leading-relaxed">「Slack に追加」からワークスペースにインストール。完了するとクラゲくんから welcome DM が届きます。</p>
+            <p class="text-sm text-gray-600 leading-relaxed">β 登録後に届く<b>メールの「Slack に追加」ボタン</b>を押す → Slack の<b>認可画面で「許可」</b>→ ワークスペースにインストール完了。完了するとクラゲくんから welcome DM が届きます。<br /><span class="text-gray-400">※ チームで使う場合、ワークスペースへの追加は管理者が1回だけ。メンバーは個別インストール不要です。</span></p>
           </div>
           <div class="bg-white rounded-2xl border border-gray-200 p-5 shadow-sm">
             <p class="text-xs font-bold text-orange-500 mb-1">STEP 2</p>
