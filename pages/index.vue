@@ -865,6 +865,13 @@
               </div>
             </div>
             <div class="flex gap-3">
+              <span class="text-xl flex-shrink-0">🎯</span>
+              <div>
+                <p class="font-bold text-gray-700 mb-1">会話から商談シグナルを自動メモ</p>
+                <p class="text-sm text-gray-500 leading-relaxed">「見積もりをお願いします」「発注したい」「一度伺えますか」——こうしたやりとりのサインを、ぼくが自動で拾って行動メモに記録。大事な一言を取りこぼしません。</p>
+              </div>
+            </div>
+            <div class="flex gap-3">
               <span class="text-xl flex-shrink-0">📝</span>
               <div>
                 <p class="font-bold text-gray-700 mb-1">グラウンディング型ドラフト生成</p>
