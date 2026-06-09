@@ -20,6 +20,36 @@
         <p class="text-gray-500">Slackにインストールしたら、まずこれだけ覚えてください。</p>
       </div>
 
+      <!-- 導入する（セットアップ） -->
+      <section id="setup" class="mb-14 scroll-mt-20">
+        <h2 class="text-xl font-black text-gray-800 mb-4 flex items-center gap-2">
+          <span class="bg-kurage-500 text-white rounded-full w-7 h-7 flex items-center justify-center text-sm font-bold">0</span>
+          導入する（セットアップ）
+        </h2>
+        <div class="grid md:grid-cols-3 gap-4">
+          <div class="bg-white rounded-2xl border border-gray-200 p-5 shadow-sm">
+            <p class="text-xs font-bold text-orange-500 mb-1">STEP 1</p>
+            <h3 class="font-bold text-gray-900 mb-2">Slack に追加</h3>
+            <p class="text-sm text-gray-600 leading-relaxed">管理者が「Slack に追加」からワークスペースにインストール。完了するとクラゲくんから welcome DM が届きます。</p>
+          </div>
+          <div class="bg-white rounded-2xl border border-gray-200 p-5 shadow-sm">
+            <p class="text-xs font-bold text-orange-500 mb-1">STEP 2</p>
+            <h3 class="font-bold text-gray-900 mb-2">使う場所を決める</h3>
+            <p class="text-sm text-gray-600 leading-relaxed"><b>個人で</b>：左サイドバー「アプリ」→ クラゲディール を開いて DM。<br /><b>チームで</b>：営業用チャンネル（例 <code class="bg-gray-100 px-1 rounded">#営業-crm</code>）を作成。</p>
+          </div>
+          <div class="bg-white rounded-2xl border border-gray-200 p-5 shadow-sm">
+            <p class="text-xs font-bold text-orange-500 mb-1">STEP 3</p>
+            <h3 class="font-bold text-gray-900 mb-2">チャンネルに招待</h3>
+            <p class="text-sm text-gray-600 leading-relaxed">チャンネルで <code class="bg-gray-100 px-1 rounded">/invite @クラゲディール</code>（または チャンネル詳細 → インテグレーション → アプリを追加）。あとはメンバーを招待するだけ。</p>
+          </div>
+        </div>
+        <div class="bg-kurage-50 border border-kurage-200 rounded-xl p-4 mt-4 text-sm text-gray-700 leading-relaxed">
+          🪼 招待されたメンバーは <b>各自の Slack ID でそのまま利用開始</b>（個別インストール不要）。
+          DM でもチャンネルでも、<b>そのまま自然文を打つだけ</b>で記録されます（メンションは任意）。<br />
+          <span class="text-gray-500">※ サイドバーにアプリが出ない時は、左の「アプリ」→ クラゲディール を一度開くと定着します。</span>
+        </div>
+      </section>
+
       <!-- 最初の 1 週間でやってほしいこと -->
       <section id="first-week" class="mb-14 scroll-mt-20">
         <div class="bg-gradient-to-br from-kurage-50 via-cyan-50 to-ocean-mist/40 border-2 border-kurage-200 rounded-2xl p-6 md:p-8">
@@ -61,7 +91,7 @@
           クラゲくんに話しかける
         </h2>
         <div class="bg-white rounded-2xl border border-gray-200 p-6 shadow-sm">
-          <p class="text-sm text-gray-600 mb-4">SlackでクラゲディールAppにDMするか、チャンネルで <code class="bg-gray-100 px-1 rounded">@クラゲディール</code> とメンションしてください。</p>
+          <p class="text-sm text-gray-600 mb-4">Slackでクラゲディール App に DM するか、招待済みチャンネルで<b>そのまま書くだけ</b>（<code class="bg-gray-100 px-1 rounded">@クラゲディール</code> のメンションは任意）。</p>
           <div class="space-y-3">
             <div class="bg-gray-50 rounded-xl p-4">
               <p class="text-xs text-gray-400 mb-1 font-semibold">まずは顧客を登録</p>
