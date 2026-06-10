@@ -651,9 +651,9 @@
 
         <div class="bg-white/5 border border-white/10 rounded-2xl p-8 mb-12 text-kurage-100 leading-relaxed">
           <p class="mb-4 text-lg font-bold text-cyan-100">
-            「かんたんな CRM」なら、もうたくさんあります。<br />
-            クラゲが違うのは、<span class="text-white">書いたメモが、勝手に賢くなる</span>こと。<br />
-            「ABC 商事と商談、競合が一社」とメモすれば、受注確率と次の一手が返ってきます。
+            「ABC 商事と商談、競合が一社」——そうメモするだけで、<span class="text-white">受注確率と次の一手</span>が返ってくる。<br />
+            入力に追われる時間も、ツールを開く手間もいりません。<br />
+            <span class="text-white">空いた時間は、お客様と向き合うことや、あなた自身の暮らしのために。</span>
           </p>
           <p class="mb-4">
             営業ツールには、たくさんの選択肢があります。従来の Slack 連携 CRM もそのひとつ。それぞれ素晴らしい製品です。
