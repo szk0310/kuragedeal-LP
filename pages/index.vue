@@ -646,10 +646,15 @@
       <div class="max-w-4xl mx-auto px-4 sm:px-6">
         <p class="text-sm font-bold text-cyan-300 uppercase tracking-widest mb-3 text-center">他のツールとの違い</p>
         <h2 class="text-3xl md:text-4xl font-black mb-8 text-center leading-relaxed">
-          1〜10 人の営業チームのために、<br class="hidden md:inline" />ゼロから設計した営業 AI です。
+          いちばん軽いメモが、<br class="hidden md:inline" />いちばん賢い営業になる。
         </h2>
 
         <div class="bg-white/5 border border-white/10 rounded-2xl p-8 mb-12 text-kurage-100 leading-relaxed">
+          <p class="mb-4 text-lg font-bold text-cyan-100">
+            「かんたんな CRM」なら、もうたくさんあります。<br />
+            クラゲが違うのは、<span class="text-white">書いたメモが、勝手に賢くなる</span>こと。<br />
+            「ABC 商事と商談、競合が一社」とメモすれば、受注確率と次の一手が返ってきます。
+          </p>
           <p class="mb-4">
             営業ツールには、たくさんの選択肢があります。従来の Slack 連携 CRM もそのひとつ。それぞれ素晴らしい製品です。
           </p>
