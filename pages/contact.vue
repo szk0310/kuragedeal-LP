@@ -242,6 +242,13 @@ onMounted(() => {
 
 const isEnterprise = computed(() => form.subject === 'enterprise')
 
+// Turnstile 成功時にトークンを保持（テンプレの data-callback="onTurnstileSuccess" から呼ばれる）。
+// client-only 描画でも確実に掴むため、コールバック経由を主経路にする。
+const turnstileTokenRef = ref('')
+onMounted(() => {
+  ;(window as any).onTurnstileSuccess = (t: string) => { turnstileTokenRef.value = t || '' }
+})
+
 const submitting = ref(false)
 const submitted = ref(false)
 const conversion = useConversion()
@@ -256,12 +263,18 @@ const SUBJECT_LABEL: Record<string, string> = {
 }
 
 async function submit() {
-  // client-only 描画では Turnstile が注入する hidden input が DOM から取れないことがあるため、
-  // 公式 API turnstile.getResponse()（内部レジストリ参照）を優先。querySelector はフォールバック。
-  const ts = (window as any).turnstile
-  const turnstileToken =
-    (ts && typeof ts.getResponse === 'function' ? ts.getResponse() : '')
-    || (document.querySelector('input[name="cf-turnstile-response"]') as HTMLInputElement | null)?.value
+  // トークン取得：成功コールバックで保持した値を最優先（例外を投げない・client-only でも確実）。
+  // 次に公式 API（未描画時に例外を投げ得るので try/catch）、最後に hidden input。
+  let turnstileToken = turnstileTokenRef.value
+  if (!turnstileToken) {
+    try {
+      const ts = (window as any).turnstile
+      if (ts && typeof ts.getResponse === 'function') turnstileToken = ts.getResponse() || ''
+    } catch { /* getResponse は widget 未描画時に例外を投げることがある */ }
+  }
+  if (!turnstileToken) {
+    turnstileToken = (document.querySelector('input[name="cf-turnstile-response"]') as HTMLInputElement | null)?.value || ''
+  }
   if (!turnstileToken) {
     alert('セキュリティチェックを完了してから送信してください。')
     return
@@ -295,7 +308,7 @@ async function submit() {
       const data = await res.json().catch(() => ({}))
       alert(data.error ?? '送信に失敗しました。時間をおいて再度お試しください。')
       if (typeof (window as any).turnstile !== 'undefined') {
-        (window as any).turnstile.reset()
+        (window as any).turnstile.reset(); turnstileTokenRef.value = ''
       }
       return
     }
@@ -304,7 +317,7 @@ async function submit() {
   } catch {
     alert('通信エラーが発生しました。時間をおいて再度お試しください。')
     if (typeof (window as any).turnstile !== 'undefined') {
-      (window as any).turnstile.reset()
+      (window as any).turnstile.reset(); turnstileTokenRef.value = ''
     }
   } finally {
     submitting.value = false
