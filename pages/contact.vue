@@ -256,8 +256,12 @@ const SUBJECT_LABEL: Record<string, string> = {
 }
 
 async function submit() {
-  const turnstileInput = document.querySelector('input[name="cf-turnstile-response"]') as HTMLInputElement | null
-  const turnstileToken = turnstileInput?.value
+  // client-only 描画では Turnstile が注入する hidden input が DOM から取れないことがあるため、
+  // 公式 API turnstile.getResponse()（内部レジストリ参照）を優先。querySelector はフォールバック。
+  const ts = (window as any).turnstile
+  const turnstileToken =
+    (ts && typeof ts.getResponse === 'function' ? ts.getResponse() : '')
+    || (document.querySelector('input[name="cf-turnstile-response"]') as HTMLInputElement | null)?.value
   if (!turnstileToken) {
     alert('セキュリティチェックを完了してから送信してください。')
     return
