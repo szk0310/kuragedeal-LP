@@ -143,11 +143,7 @@
 
           <!-- Cloudflare Turnstile -->
           <div class="flex justify-center">
-            <div
-              class="cf-turnstile"
-              :data-sitekey="turnstileSiteKey"
-              data-callback="onTurnstileSuccess"
-            ></div>
+            <div ref="turnstileEl"></div>
           </div>
 
           <button
@@ -242,11 +238,29 @@ onMounted(() => {
 
 const isEnterprise = computed(() => form.subject === 'enterprise')
 
-// Turnstile 成功時にトークンを保持（テンプレの data-callback="onTurnstileSuccess" から呼ばれる）。
-// client-only 描画でも確実に掴むため、コールバック経由を主経路にする。
+// Turnstile を明示レンダリング。client-only/SPA では implicit 描画＋文字列コールバックが
+// 不安定だったため、api.js ロード後に turnstile.render() を自前で呼び、直接コールバックで
+// トークンを ref に保持する（確実）。
+const turnstileEl = ref<HTMLElement | null>(null)
 const turnstileTokenRef = ref('')
+let turnstileWidgetId: string | undefined
 onMounted(() => {
-  ;(window as any).onTurnstileSuccess = (t: string) => { turnstileTokenRef.value = t || '' }
+  const render = (): boolean => {
+    const ts = (window as any).turnstile
+    if (turnstileWidgetId !== undefined) return true
+    if (!ts || !turnstileEl.value) return false
+    turnstileWidgetId = ts.render(turnstileEl.value, {
+      sitekey: turnstileSiteKey,
+      callback: (t: string) => { turnstileTokenRef.value = t || '' },
+      'error-callback': () => { turnstileTokenRef.value = '' },
+      'expired-callback': () => { turnstileTokenRef.value = '' },
+    })
+    return true
+  }
+  if (!render()) {
+    const iv = setInterval(() => { if (render()) clearInterval(iv) }, 200)
+    setTimeout(() => clearInterval(iv), 10000)
+  }
 })
 
 const submitting = ref(false)
@@ -263,17 +277,13 @@ const SUBJECT_LABEL: Record<string, string> = {
 }
 
 async function submit() {
-  // トークン取得：成功コールバックで保持した値を最優先（例外を投げない・client-only でも確実）。
-  // 次に公式 API（未描画時に例外を投げ得るので try/catch）、最後に hidden input。
+  // 明示レンダリングのコールバックで保持したトークンを使用。未取得なら公式 API を試す（try/catch）。
   let turnstileToken = turnstileTokenRef.value
   if (!turnstileToken) {
     try {
       const ts = (window as any).turnstile
-      if (ts && typeof ts.getResponse === 'function') turnstileToken = ts.getResponse() || ''
-    } catch { /* getResponse は widget 未描画時に例外を投げることがある */ }
-  }
-  if (!turnstileToken) {
-    turnstileToken = (document.querySelector('input[name="cf-turnstile-response"]') as HTMLInputElement | null)?.value || ''
+      if (ts && typeof ts.getResponse === 'function') turnstileToken = (ts.getResponse(turnstileWidgetId) || '') as string
+    } catch { /* noop */ }
   }
   if (!turnstileToken) {
     alert('セキュリティチェックを完了してから送信してください。')
@@ -308,7 +318,7 @@ async function submit() {
       const data = await res.json().catch(() => ({}))
       alert(data.error ?? '送信に失敗しました。時間をおいて再度お試しください。')
       if (typeof (window as any).turnstile !== 'undefined') {
-        (window as any).turnstile.reset(); turnstileTokenRef.value = ''
+        (window as any).turnstile.reset(turnstileWidgetId); turnstileTokenRef.value = ''
       }
       return
     }
@@ -317,7 +327,7 @@ async function submit() {
   } catch {
     alert('通信エラーが発生しました。時間をおいて再度お試しください。')
     if (typeof (window as any).turnstile !== 'undefined') {
-      (window as any).turnstile.reset(); turnstileTokenRef.value = ''
+      (window as any).turnstile.reset(turnstileWidgetId); turnstileTokenRef.value = ''
     }
   } finally {
     submitting.value = false
