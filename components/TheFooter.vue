@@ -15,6 +15,12 @@
             Slackだけで完結するAI営業CRM。<br />
             1人〜30人の営業チームに最適。
           </p>
+          <div class="flex items-center justify-center md:justify-start gap-4 mt-4">
+            <a href="https://x.com/kuragedeal" target="_blank" rel="noopener noreferrer" aria-label="X" class="hover:text-white transition-colors">
+              <svg viewBox="0 0 24 24" class="w-5 h-5" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            </a>
+            <a href="https://note.com/kuragedeal/" target="_blank" rel="noopener noreferrer" aria-label="note" class="inline-flex items-center px-2 py-0.5 rounded border border-current text-xs font-bold hover:text-white hover:border-white transition-colors">note</a>
+          </div>
         </div>
 
         <!-- Links -->
