@@ -55,6 +55,40 @@
     </section>
 
     <!-- ============================================================
+         01.5. こう使う（速読でも30秒で伝わる）
+    ============================================================ -->
+    <section class="bg-white py-16 md:py-20">
+      <div class="max-w-5xl mx-auto px-4 sm:px-6">
+        <div class="text-center mb-10">
+          <h2 class="text-2xl md:text-3xl font-black text-gray-900 mb-3">クラゲディールは、こう使う。</h2>
+          <p class="text-gray-600 leading-relaxed">むずかしい操作はありません。Slack に、いつもどおり書くだけ。</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+          <div
+            v-for="(s, i) in usageSteps"
+            :key="i"
+            class="bg-ocean-mist/30 rounded-2xl border border-ocean-tan/30 p-6"
+          >
+            <p class="text-sm font-black text-kurage-600 mb-4">{{ s.label }}</p>
+            <div class="flex gap-3 mb-3">
+              <span class="text-2xl flex-shrink-0">👤</span>
+              <p class="text-sm text-gray-800 leading-relaxed"><span class="font-bold">あなた</span><br />{{ s.you }}</p>
+            </div>
+            <div class="flex gap-3 pt-3 border-t border-ocean-tan/40">
+              <span class="text-2xl flex-shrink-0">🪼</span>
+              <p class="text-sm text-gray-800 leading-relaxed"><span class="font-bold text-kurage-700">クラゲ</span><br /><span v-html="s.kurage" /></p>
+            </div>
+          </div>
+        </div>
+
+        <p class="text-center text-base md:text-lg font-bold text-gray-800 mt-10 leading-relaxed">
+          —— 覚えること、ゼロ。いつもの Slack が、そのまま営業ツールになります。
+        </p>
+      </div>
+    </section>
+
+    <!-- ============================================================
          02. ターゲット
     ============================================================ -->
     <section class="bg-ocean-steel/75 py-12">
@@ -905,6 +939,13 @@
 <script setup lang="ts">
 // LP_FULL_COPY 最新版: ウェイトリスト関連 CTA は /beta ページ内のみで提示
 // （メイン LP は β 試用の self-serve 主訴求を最大化、副 CTA なし）
+
+const usageSteps = [
+  { label: '① 記録する', you: '「ABC 商事と商談。予算 500 万、競合は 1 社」と Slack にメモ', kurage: '商談を自動で記録し、<strong>受注確率と次の一手</strong>まで返します' },
+  { label: '② 朝の段取り', you: '朝、いつもどおり Slack を開く', kurage: '「今日やるべき 3 件」「14 日ほったらかしの案件」を<strong>先にお知らせ</strong>' },
+  { label: '③ メール返信', you: 'お客様から返信メールが届く', kurage: '返信文を下書き → <strong>ボタンひとつで、あなたの名前で送信</strong>' },
+  { label: '④ ふりかえり・相談', you: '「ABC 商事、どうなってたっけ？」と聞く', kurage: 'これまでの経緯と、<strong>次にやるべきこと</strong>を即答' },
+]
 
 const personas = [
   { icon: '🏢', text: '社員5人のIT企業。社長が営業も兼務。商談管理はスプレッドシート' },
