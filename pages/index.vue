@@ -493,7 +493,7 @@
           </div>
         </div>
 
-        <p class="text-center text-gray-700 mt-12 italic">
+        <p class="text-center text-gray-800 mt-12 text-lg md:text-xl font-bold leading-relaxed">
           でも、まだあります。<br />次は「営業マネジャーが、足りない」問題です。
         </p>
       </div>
@@ -635,9 +635,9 @@
           </div>
         </div>
 
-        <p class="text-center text-gray-500 mt-12 italic">
+        <p class="text-center text-gray-800 mt-12 text-lg md:text-xl font-bold leading-relaxed">
           そして、顧客からの返信メール。<br />
-          これも AI が、代筆してくれます ↓
+          これも AI が、代筆してくれます。
         </p>
       </div>
     </section>
@@ -761,7 +761,7 @@
           </div>
         </div>
 
-        <p class="text-center text-gray-500 mt-12 italic">
+        <p class="text-center text-gray-800 mt-12 text-lg md:text-xl font-bold leading-relaxed">
           入力の手間も、進捗の見えなさも、マネジャー不足も、メール返信も。<br />
           クラゲディールが、まるごと引き受けます。
         </p>
@@ -856,8 +856,7 @@
         <img src="/kurage-smile.svg" alt="クラゲディール" class="w-20 h-20 mx-auto mb-6 kurage-float" />
 
         <p class="text-base text-kurage-100 mb-3 leading-relaxed">
-          ここまで読んでくれたんですね。<br />
-          ぼく、全部覚えてますよ。
+          ここまで読んでくれて嬉しいです！
         </p>
         <p class="text-base text-kurage-100 mb-10 leading-relaxed">
           もし「自分の営業チームに合いそうだ」と思ったなら、<br />
