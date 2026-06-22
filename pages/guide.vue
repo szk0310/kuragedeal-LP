@@ -20,6 +20,19 @@
         <p class="text-gray-500">Slackにインストールしたら、まずこれだけ覚えてください。</p>
       </div>
 
+      <!-- はじめに：ふつうのCRMと構造が違う -->
+      <div class="mb-14 bg-ocean-deep text-white rounded-2xl p-6 md:p-8">
+        <p class="text-sm font-bold text-cyan-300 mb-2">はじめに</p>
+        <p class="leading-relaxed text-kurage-100">
+          ふつうのCRMは、別の画面を開いて項目を入力するツールです。<br />
+          クラゲディールは、<span class="text-white font-bold">Slackに話しかけるだけ。</span>新しいアプリを開かない、<span class="text-white font-bold">画面遷移も、項目入力もありません。</span><br />
+          通知だけ届く “Slackの出張所” ではなく、<span class="text-white font-bold">Slackそのものが営業ツール</span>です。
+        </p>
+        <p class="text-sm text-cyan-200 mt-3 leading-relaxed">
+          ※ 操作する画面はありません。同僚に報告するみたいに書けばOK。「CRMを操作している」感覚は、いったん忘れてください。
+        </p>
+      </div>
+
       <!-- 導入する（セットアップ） -->
       <section id="setup" class="mb-14 scroll-mt-20">
         <h2 class="text-xl font-black text-gray-800 mb-4 flex items-center gap-2">
@@ -231,12 +244,13 @@ const examples = [
 ]
 
 const commands = [
-  { cmd: '/list', title: '顧客・ディール一覧', desc: '登録済みの顧客や商談をSlack上で確認できます。' },
-  { cmd: '/deal', title: 'ディール詳細・AI進捗評価', desc: '特定の商談のAI分析とネクストアクション提案を表示します。' },
+  { cmd: '/contact', title: '顧客一覧', desc: '登録済みの顧客をSlack上で確認できます。' },
+  { cmd: '/deal', title: 'ディール一覧・検索', desc: '商談の一覧・検索、AI進捗評価とネクストアクション提案。' },
+  { cmd: '/account', title: '会社一覧', desc: '登録済みの会社（取引先）を確認できます。' },
   { cmd: '/coach', title: 'AIコーチング', desc: 'AIが商談の進め方をヒアリング形式でコーチングします。' },
   { cmd: '/usage', title: 'AI利用状況', desc: '今月のAI利用量・残り予算・プラン情報を確認できます。' },
-  { cmd: '/setting', title: '設定', desc: 'AI 返信支援モードの切替・営業ポリシーの設定ができます。' },
-  { cmd: '/kurage', title: 'クラゲくんに話しかける（フィードバック投稿）', desc: '使ってみて感じたことを開発チームへ直接送れます。例: `/kurage 朝のブリーフィングが長く感じる`' },
+  { cmd: '/settings', title: '設定', desc: 'ナーチャリング・営業ポリシーの設定ができます。' },
+  { cmd: '/kurage', title: 'フィードバック投稿', desc: '使ってみて感じたことを開発チームへ直接送れます。例: `/kurage 朝のブリーフィングが長く感じる`' },
 ]
 
 const autoFeatures = [
