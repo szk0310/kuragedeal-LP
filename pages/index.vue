@@ -68,13 +68,9 @@
             「大手ベンダーのCRM/SFAは高すぎるし重すぎる。」<br />
             ──そんな会社のために作りました。
           </p>
-          <p class="text-sm text-gray-600 max-w-2xl mx-auto leading-relaxed italic">
-            将来チームが大きく育ったときは、Salesforce 等への移行も<br />
-            弊社（Salesforce 認定コンサルティングパートナー）が支援します。<br />
-            クラゲディールは、あなたのチームの "今" にぴったり寄り添うために。
-          </p>
         </div>
         <div class="bg-white/80 rounded-2xl border border-ocean-tan/30 p-8 md:p-10">
+          <p class="text-center text-xl md:text-2xl font-black text-gray-900 mb-6">このような会社にピッタリ！</p>
           <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
             <div
               v-for="(p, i) in personas"
@@ -131,11 +127,13 @@
       <div class="max-w-3xl mx-auto px-4 sm:px-6 text-center">
         <p class="text-sm font-bold text-cyan-300 uppercase tracking-widest mb-4">他のツールとの違い</p>
         <h2 class="text-3xl md:text-4xl font-black mb-8 leading-relaxed">
-          いちばん軽いメモが、<br class="hidden md:inline" />いちばん賢い営業になる。
+          <span class="block mb-3">いちばん軽いメモが、</span>
+          <span class="block">いちばん賢い営業になる。</span>
         </h2>
         <p class="text-lg text-kurage-100 max-w-2xl mx-auto leading-relaxed">
           ふつうの CRM は、別の画面を開いて、項目を入力するツールです。<br />
-          クラゲディールは、<span class="text-white font-bold">Slack に話すだけ。</span>新しいアプリを開かない。<span class="text-white font-bold">画面遷移も、項目入力も、ありません。</span><br />
+          クラゲディールは、<span class="text-white font-bold">Slack に話すだけ。</span>新しいアプリを開かない。<br />
+          <span class="text-white font-bold">画面遷移も、項目入力も、ありません。</span><br />
           通知だけ届く “Slack の出張所” ではなく、<span class="text-white font-bold">Slack そのものが営業ツール</span>です。
         </p>
       </div>
@@ -240,30 +238,6 @@
           </div>
         </div>
 
-        <!-- Enterprise 補足 -->
-        <div class="mt-12 max-w-2xl mx-auto bg-gradient-to-br from-kurage-50 via-cyan-50 to-ocean-mist/60 rounded-2xl border border-kurage-200 p-8">
-          <h3 class="text-xl font-bold text-gray-900 mb-3">Enterprise プラン について</h3>
-          <p class="text-sm text-gray-700 mb-4 leading-relaxed">
-            11 人以上のチーム・カスタマイズが必要な企業向けに、Enterprise プランをご用意しています。
-          </p>
-          <ul class="space-y-2 text-sm text-gray-700 mb-6">
-            <li>・ユーザー数に応じた個別見積もり</li>
-            <li>・カスタム機能開発のご相談</li>
-            <li>・優先サポート</li>
-            <li>・SSO・セキュリティ要件への対応</li>
-          </ul>
-          <a
-            href="/contact?subject=enterprise"
-            class="inline-block bg-gray-100 hover:bg-gray-200 text-gray-800 font-bold px-6 py-3 rounded-xl text-sm transition-colors"
-          >
-            Enterprise についてご相談 →
-          </a>
-          <p class="text-xs text-gray-500 mt-4 leading-relaxed">
-            ※ クラゲディールは小規模営業チーム向けに最適化された製品です。
-            大規模なエンタープライズ用途では Salesforce 等の選択肢もご検討いただくことをお勧めしています。
-            弊社（Salesforce 認定コンサルティングパートナー）が、最適な選択をご一緒に検討します。
-          </p>
-        </div>
       </div>
     </section>
 
@@ -372,7 +346,7 @@
         </div>
 
         <!-- 次セクションへの繋ぎ -->
-        <p class="text-center text-gray-500 mt-12 italic">
+        <p class="text-center text-gray-800 mt-12 text-xl md:text-2xl font-black leading-relaxed">
           でも、それだけじゃ足りません。<br />次は「営業の進捗が、見えない」問題です。
         </p>
       </div>
@@ -854,6 +828,31 @@
             </summary>
             <p class="text-sm text-gray-700 px-5 pb-5 leading-relaxed whitespace-pre-line">{{ faq.a }}</p>
           </details>
+        </div>
+
+        <!-- Enterprise 補足（FAQ 下に移設） -->
+        <div class="mt-12 max-w-2xl mx-auto bg-gradient-to-br from-kurage-50 via-cyan-50 to-ocean-mist/60 rounded-2xl border border-kurage-200 p-8">
+          <h3 class="text-xl font-bold text-gray-900 mb-3">Enterprise プラン について</h3>
+          <p class="text-sm text-gray-700 mb-4 leading-relaxed">
+            11 人以上のチーム・カスタマイズが必要な企業向けに、Enterprise プランをご用意しています。
+          </p>
+          <ul class="space-y-2 text-sm text-gray-700 mb-6">
+            <li>・ユーザー数に応じた個別見積もり</li>
+            <li>・カスタム機能開発のご相談</li>
+            <li>・優先サポート</li>
+            <li>・SSO・セキュリティ要件への対応</li>
+          </ul>
+          <a
+            href="/contact?subject=enterprise"
+            class="inline-block bg-gray-100 hover:bg-gray-200 text-gray-800 font-bold px-6 py-3 rounded-xl text-sm transition-colors"
+          >
+            Enterprise についてご相談 →
+          </a>
+          <p class="text-xs text-gray-500 mt-4 leading-relaxed">
+            ※ クラゲディールは小規模営業チーム向けに最適化された製品です。
+            大規模なエンタープライズ用途では Salesforce 等の選択肢もご検討いただくことをお勧めしています。
+            弊社（Salesforce 認定コンサルティングパートナー）が、最適な選択をご一緒に検討します。
+          </p>
         </div>
       </div>
     </section>
