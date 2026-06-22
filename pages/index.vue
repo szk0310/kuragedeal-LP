@@ -103,6 +103,132 @@
     </section>
 
     <!-- ============================================================
+         08. 料金（β 特典強調）
+    ============================================================ -->
+    <section id="pricing" class="bg-ocean-sand py-20">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6">
+        <div class="text-center mb-12">
+          <p class="text-2xl font-bold text-gray-800 mb-3">料金</p>
+          <h2 class="text-3xl md:text-4xl font-black text-gray-900 mb-4">シンプルな料金体系</h2>
+          <p class="text-gray-700">ユーザー数課金なし。チーム全員で使えます。</p>
+        </div>
+
+        <!-- 4 プラン -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 mb-8">
+          <div
+            v-for="(plan, i) in pricing"
+            :key="i"
+            :class="[
+              'rounded-2xl p-6 bg-white border-2 transition-shadow flex flex-col',
+              plan.featured ? 'border-kurage-500 shadow-lg' : 'border-gray-200'
+            ]"
+          >
+            <div v-if="plan.featured" class="inline-block bg-kurage-500 text-white text-xs font-bold px-3 py-1 rounded-full mb-3 w-fit">
+              ★ 最人気
+            </div>
+            <div v-else-if="plan.badge" class="inline-block bg-cyan-100 text-cyan-700 text-xs font-bold px-3 py-1 rounded-full mb-3 w-fit">
+              {{ plan.badge }}
+            </div>
+            <h3 class="text-xl font-black text-gray-900 mb-2">{{ plan.name }}</h3>
+            <p
+              :class="[
+                'font-black text-gray-900 mb-4 whitespace-nowrap',
+                plan.price.length > 5 ? 'text-lg md:text-xl' : 'text-2xl md:text-3xl',
+              ]"
+            >
+              {{ plan.price }}<span v-if="plan.priceNote" class="text-sm text-gray-500 font-normal ml-1">{{ plan.priceNote }}</span>
+            </p>
+            <ul class="space-y-2 mb-4 flex-1">
+              <li v-for="(f, j) in plan.features" :key="j" class="flex items-start gap-2 text-sm">
+                <span class="text-green-500">✅</span>
+                <span class="text-gray-700">{{ f.label }}</span>
+              </li>
+            </ul>
+            <p class="text-xs text-gray-500 mb-3">{{ plan.startNote }}</p>
+            <a v-if="plan.cta" :href="plan.checkoutUrl" :class="[
+              'block text-center px-5 py-3 rounded-xl font-bold text-sm transition-colors',
+              plan.featured
+                ? 'bg-orange-500 hover:bg-orange-400 text-white'
+                : 'bg-gray-100 hover:bg-gray-200 text-gray-700'
+            ]">{{ plan.cta }}</a>
+          </div>
+        </div>
+
+        <!-- 全プラン共通 注記 -->
+        <div class="bg-kurage-50 border border-kurage-200 rounded-xl p-4 text-center mb-12">
+          <p class="text-sm text-gray-700 font-bold">
+            ★ 上記は正式版（11/18 目標 ※QC 次第でリスケあり）の料金です。正式版では全プラン共通で 14 日間の無料トライアルが付きます。
+          </p>
+          <p class="text-xs text-gray-500 mt-1">
+            いまは下記のβ版なら、9/15 まで全機能を無料でお使いいただけます（クレジットカード入力不要）。
+          </p>
+        </div>
+
+        <!-- β 試用枠 -->
+        <div class="bg-gradient-to-br from-orange-50 via-orange-100 to-amber-50 border-2 border-orange-400 rounded-2xl p-8 md:p-10 shadow-lg">
+          <div class="text-center mb-6">
+            <div class="inline-block bg-orange-500 text-white text-xs font-bold px-3 py-1 rounded-full mb-3">
+              3 ヶ月間、全機能を無料で（9/15 まで）
+            </div>
+            <h3 class="text-2xl md:text-3xl font-black text-gray-900 mb-2">β 試用</h3>
+          </div>
+
+          <div class="bg-white rounded-xl p-6 mb-6 text-center">
+            <p class="text-3xl md:text-4xl font-black text-orange-600 mb-2">3 ヶ月無料</p>
+            <p class="text-sm text-gray-700">9/15 まで、すべての機能を、クレカ不要で。</p>
+            <p class="text-sm text-gray-700 font-bold mt-3">審査なし・即時アクティベート</p>
+          </div>
+
+          <div class="flex justify-center mb-6">
+            <ul class="text-sm text-gray-700 leading-relaxed space-y-1.5 inline-block text-left">
+              <li>✅ Slack に追加するだけで即時アクティベート</li>
+              <li>✅ クレジットカード入力不要</li>
+              <li>✅ データはいつでも CSV / Excel でエクスポート可能</li>
+              <li class="text-xs text-gray-500">正式版は 11/18 を目標にしています（品質目標 次第でリスケすることがあります）。</li>
+            </ul>
+          </div>
+
+          <div class="text-center">
+            <a
+              href="/beta"
+              class="inline-block bg-orange-500 hover:bg-orange-400 text-white font-bold px-8 py-4 rounded-xl text-lg shadow-lg transition-colors"
+            >
+              β 版を試す →
+            </a>
+            <p class="text-xs text-gray-600 mt-3">
+              継続オプションの詳細は /beta ページでご案内しています。
+            </p>
+          </div>
+        </div>
+
+        <!-- Enterprise 補足 -->
+        <div class="mt-12 max-w-2xl mx-auto bg-gradient-to-br from-kurage-50 via-cyan-50 to-ocean-mist/60 rounded-2xl border border-kurage-200 p-8">
+          <h3 class="text-xl font-bold text-gray-900 mb-3">Enterprise プラン について</h3>
+          <p class="text-sm text-gray-700 mb-4 leading-relaxed">
+            11 人以上のチーム・カスタマイズが必要な企業向けに、Enterprise プランをご用意しています。
+          </p>
+          <ul class="space-y-2 text-sm text-gray-700 mb-6">
+            <li>・ユーザー数に応じた個別見積もり</li>
+            <li>・カスタム機能開発のご相談</li>
+            <li>・優先サポート</li>
+            <li>・SSO・セキュリティ要件への対応</li>
+          </ul>
+          <a
+            href="/contact?subject=enterprise"
+            class="inline-block bg-gray-100 hover:bg-gray-200 text-gray-800 font-bold px-6 py-3 rounded-xl text-sm transition-colors"
+          >
+            Enterprise についてご相談 →
+          </a>
+          <p class="text-xs text-gray-500 mt-4 leading-relaxed">
+            ※ クラゲディールは小規模営業チーム向けに最適化された製品です。
+            大規模なエンタープライズ用途では Salesforce 等の選択肢もご検討いただくことをお勧めしています。
+            弊社（Salesforce 認定コンサルティングパートナー）が、最適な選択をご一緒に検討します。
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
          03. あるある 1: CRM が続かない
     ============================================================ -->
     <section id="pain1" class="bg-white py-20">
@@ -910,132 +1036,6 @@
             よろしくお願いします。
           </p>
           <p class="text-kurage-500 font-bold flex items-center justify-end gap-2">— クラゲくん <img src="/kurage-smile.svg" alt="クラゲくん" class="w-6 h-6 inline-block" /></p>
-        </div>
-      </div>
-    </section>
-
-    <!-- ============================================================
-         08. 料金（β 特典強調）
-    ============================================================ -->
-    <section id="pricing" class="bg-ocean-sand py-20">
-      <div class="max-w-6xl mx-auto px-4 sm:px-6">
-        <div class="text-center mb-12">
-          <p class="text-2xl font-bold text-gray-800 mb-3">料金</p>
-          <h2 class="text-3xl md:text-4xl font-black text-gray-900 mb-4">シンプルな料金体系</h2>
-          <p class="text-gray-700">ユーザー数課金なし。チーム全員で使えます。</p>
-        </div>
-
-        <!-- 4 プラン -->
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 mb-8">
-          <div
-            v-for="(plan, i) in pricing"
-            :key="i"
-            :class="[
-              'rounded-2xl p-6 bg-white border-2 transition-shadow flex flex-col',
-              plan.featured ? 'border-kurage-500 shadow-lg' : 'border-gray-200'
-            ]"
-          >
-            <div v-if="plan.featured" class="inline-block bg-kurage-500 text-white text-xs font-bold px-3 py-1 rounded-full mb-3 w-fit">
-              ★ 最人気
-            </div>
-            <div v-else-if="plan.badge" class="inline-block bg-cyan-100 text-cyan-700 text-xs font-bold px-3 py-1 rounded-full mb-3 w-fit">
-              {{ plan.badge }}
-            </div>
-            <h3 class="text-xl font-black text-gray-900 mb-2">{{ plan.name }}</h3>
-            <p
-              :class="[
-                'font-black text-gray-900 mb-4 whitespace-nowrap',
-                plan.price.length > 5 ? 'text-lg md:text-xl' : 'text-2xl md:text-3xl',
-              ]"
-            >
-              {{ plan.price }}<span v-if="plan.priceNote" class="text-sm text-gray-500 font-normal ml-1">{{ plan.priceNote }}</span>
-            </p>
-            <ul class="space-y-2 mb-4 flex-1">
-              <li v-for="(f, j) in plan.features" :key="j" class="flex items-start gap-2 text-sm">
-                <span class="text-green-500">✅</span>
-                <span class="text-gray-700">{{ f.label }}</span>
-              </li>
-            </ul>
-            <p class="text-xs text-gray-500 mb-3">{{ plan.startNote }}</p>
-            <a v-if="plan.cta" :href="plan.checkoutUrl" :class="[
-              'block text-center px-5 py-3 rounded-xl font-bold text-sm transition-colors',
-              plan.featured
-                ? 'bg-orange-500 hover:bg-orange-400 text-white'
-                : 'bg-gray-100 hover:bg-gray-200 text-gray-700'
-            ]">{{ plan.cta }}</a>
-          </div>
-        </div>
-
-        <!-- 全プラン共通 注記 -->
-        <div class="bg-kurage-50 border border-kurage-200 rounded-xl p-4 text-center mb-12">
-          <p class="text-sm text-gray-700 font-bold">
-            ★ 上記は正式版（11/18 目標 ※QC 次第でリスケあり）の料金です。正式版では全プラン共通で 14 日間の無料トライアルが付きます。
-          </p>
-          <p class="text-xs text-gray-500 mt-1">
-            いまは下記のβ版なら、9/15 まで全機能を無料でお使いいただけます（クレジットカード入力不要）。
-          </p>
-        </div>
-
-        <!-- β 試用枠 -->
-        <div class="bg-gradient-to-br from-orange-50 via-orange-100 to-amber-50 border-2 border-orange-400 rounded-2xl p-8 md:p-10 shadow-lg">
-          <div class="text-center mb-6">
-            <div class="inline-block bg-orange-500 text-white text-xs font-bold px-3 py-1 rounded-full mb-3">
-              3 ヶ月間、全機能を無料で（9/15 まで）
-            </div>
-            <h3 class="text-2xl md:text-3xl font-black text-gray-900 mb-2">β 試用</h3>
-          </div>
-
-          <div class="bg-white rounded-xl p-6 mb-6 text-center">
-            <p class="text-3xl md:text-4xl font-black text-orange-600 mb-2">3 ヶ月無料</p>
-            <p class="text-sm text-gray-700">9/15 まで、すべての機能を、クレカ不要で。</p>
-            <p class="text-sm text-gray-700 font-bold mt-3">審査なし・即時アクティベート</p>
-          </div>
-
-          <div class="flex justify-center mb-6">
-            <ul class="text-sm text-gray-700 leading-relaxed space-y-1.5 inline-block text-left">
-              <li>✅ Slack に追加するだけで即時アクティベート</li>
-              <li>✅ クレジットカード入力不要</li>
-              <li>✅ データはいつでも CSV / Excel でエクスポート可能</li>
-              <li class="text-xs text-gray-500">正式版は 11/18 を目標にしています（品質目標 次第でリスケすることがあります）。</li>
-            </ul>
-          </div>
-
-          <div class="text-center">
-            <a
-              href="/beta"
-              class="inline-block bg-orange-500 hover:bg-orange-400 text-white font-bold px-8 py-4 rounded-xl text-lg shadow-lg transition-colors"
-            >
-              β 版を試す →
-            </a>
-            <p class="text-xs text-gray-600 mt-3">
-              継続オプションの詳細は /beta ページでご案内しています。
-            </p>
-          </div>
-        </div>
-
-        <!-- Enterprise 補足 -->
-        <div class="mt-12 max-w-2xl mx-auto bg-gradient-to-br from-kurage-50 via-cyan-50 to-ocean-mist/60 rounded-2xl border border-kurage-200 p-8">
-          <h3 class="text-xl font-bold text-gray-900 mb-3">Enterprise プラン について</h3>
-          <p class="text-sm text-gray-700 mb-4 leading-relaxed">
-            11 人以上のチーム・カスタマイズが必要な企業向けに、Enterprise プランをご用意しています。
-          </p>
-          <ul class="space-y-2 text-sm text-gray-700 mb-6">
-            <li>・ユーザー数に応じた個別見積もり</li>
-            <li>・カスタム機能開発のご相談</li>
-            <li>・優先サポート</li>
-            <li>・SSO・セキュリティ要件への対応</li>
-          </ul>
-          <a
-            href="/contact?subject=enterprise"
-            class="inline-block bg-gray-100 hover:bg-gray-200 text-gray-800 font-bold px-6 py-3 rounded-xl text-sm transition-colors"
-          >
-            Enterprise についてご相談 →
-          </a>
-          <p class="text-xs text-gray-500 mt-4 leading-relaxed">
-            ※ クラゲディールは小規模営業チーム向けに最適化された製品です。
-            大規模なエンタープライズ用途では Salesforce 等の選択肢もご検討いただくことをお勧めしています。
-            弊社（Salesforce 認定コンサルティングパートナー）が、最適な選択をご一緒に検討します。
-          </p>
         </div>
       </div>
     </section>
