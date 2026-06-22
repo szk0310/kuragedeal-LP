@@ -649,6 +649,12 @@
           いちばん軽いメモが、<br class="hidden md:inline" />いちばん賢い営業になる。
         </h2>
 
+        <p class="text-center text-lg text-kurage-100 max-w-2xl mx-auto leading-relaxed mb-10">
+          ふつうのCRMは、別の画面を開いて、項目を入力するツールです。<br />
+          クラゲディールは、<span class="text-white font-bold">Slackに話すだけ。</span>新しいアプリを開かない。<span class="text-white font-bold">画面遷移も、項目入力も、ありません。</span><br />
+          通知だけ届く “Slackの出張所” ではなく、<span class="text-white font-bold">Slackそのものが営業ツール</span>です。
+        </p>
+
         <div class="bg-white/5 border border-white/10 rounded-2xl p-8 mb-12 text-kurage-100 leading-relaxed">
           <p class="mb-4 text-lg font-bold text-cyan-100">
             「ABC 商事と商談、競合が一社」——そうメモするだけで、<span class="text-white">受注確率と次の一手</span>が返ってくる。<br />
