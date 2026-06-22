@@ -201,13 +201,44 @@
           </p>
         </div>
 
-        <!-- β 試用枠 -->
+        <!-- 大企業向けCRMとの料金比較 -->
+        <p class="text-center text-sm font-bold text-gray-600 uppercase tracking-widest mb-4">大企業向けCRMとの料金比較</p>
+        <div class="bg-white rounded-2xl border border-gray-200 p-6 md:p-8 mb-12 shadow-sm overflow-x-auto">
+          <table class="w-full text-sm text-center min-w-[400px]">
+            <thead>
+              <tr class="border-b-2 border-gray-200">
+                <th class="pb-3 text-gray-500 font-normal">チーム規模</th>
+                <th class="pb-3 text-kurage-700 font-black">クラゲディール</th>
+                <th class="pb-3 text-gray-500 font-normal text-xs">大企業向けCRM</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-gray-100">
+              <tr>
+                <td class="py-3 text-gray-600 font-bold">1 人</td>
+                <td class="py-3 font-black text-xl text-kurage-600">¥1,980<span class="text-xs font-normal text-gray-400">/月</span></td>
+                <td class="py-3 text-gray-500 text-xs">約 ¥16,000〜¥21,000/月</td>
+              </tr>
+              <tr>
+                <td class="py-3 text-gray-600 font-bold">3 人</td>
+                <td class="py-3 font-black text-xl text-kurage-600">¥4,980<span class="text-xs font-normal text-gray-400">/月</span></td>
+                <td class="py-3 text-gray-500 text-xs">約 ¥48,000〜¥63,000/月</td>
+              </tr>
+              <tr>
+                <td class="py-3 text-gray-600 font-bold">10 人</td>
+                <td class="py-3 font-black text-xl text-orange-500">¥9,800<span class="text-xs font-normal text-gray-400">/月</span></td>
+                <td class="py-3 text-gray-500 text-xs">約 ¥160,000〜¥210,000/月</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- β 参加プログラム枠 -->
         <div class="bg-gradient-to-br from-orange-50 via-orange-100 to-amber-50 border-2 border-orange-400 rounded-2xl p-8 md:p-10 shadow-lg">
           <div class="text-center mb-6">
             <div class="inline-block bg-orange-500 text-white text-xs font-bold px-3 py-1 rounded-full mb-3">
               3 ヶ月間、全機能を無料で（9/15 まで）
             </div>
-            <h3 class="text-2xl md:text-3xl font-black text-gray-900 mb-2">β 試用</h3>
+            <h3 class="text-2xl md:text-3xl font-black text-gray-900 mb-2">β 参加プログラム</h3>
           </div>
 
           <div class="bg-white rounded-xl p-6 mb-6 text-center">
@@ -244,7 +275,7 @@
     <!-- ============================================================
          03. あるある 1: CRM が続かない
     ============================================================ -->
-    <section id="pain1" class="bg-white py-20">
+    <section id="pain1" class="bg-ocean-mist/40 py-20">
       <div class="max-w-3xl mx-auto px-4 sm:px-6">
         <div class="flex items-center gap-3 mb-3">
           <img src="/kurage-cry.svg" alt="" class="w-10 h-10 md:w-12 md:h-12 flex-shrink-0" />
@@ -303,46 +334,6 @@
             認知負荷ゼロ。書くたびに、営業活動が前に進む。<br />
             ★ これなら、続きます。
           </p>
-        </div>
-
-        <!-- ROI バナー（対比構造） -->
-        <p class="text-center text-sm font-bold text-gray-500 uppercase tracking-widest mb-4">チーム規模別の料金比較</p>
-        <div class="bg-gradient-to-br from-kurage-900 to-kurage-700 text-white rounded-2xl p-6 md:p-8 mb-10 shadow-lg overflow-x-auto">
-          <table class="w-full text-sm text-center min-w-[400px]">
-            <thead>
-              <tr class="border-b border-white/20">
-                <th class="pb-3 text-kurage-200 font-normal">チーム規模</th>
-                <th class="pb-3 text-cyan-200 font-bold">クラゲディール</th>
-                <th class="pb-3 text-kurage-200 font-normal text-xs">従来の Slack 連携 CRM</th>
-              </tr>
-            </thead>
-            <tbody class="divide-y divide-white/10">
-              <tr>
-                <td class="py-3 text-kurage-200">1 人</td>
-                <td class="py-3 font-black text-xl text-cyan-50">¥1,980<span class="text-xs font-normal text-kurage-200">/月</span></td>
-                <td class="py-3 text-kurage-300 text-xs">約 ¥16,000〜¥21,000/月</td>
-              </tr>
-              <tr>
-                <td class="py-3 text-kurage-200">3 人</td>
-                <td class="py-3 font-black text-xl text-cyan-50">¥4,980<span class="text-xs font-normal text-kurage-200">/月</span></td>
-                <td class="py-3 text-kurage-300 text-xs">約 ¥48,000〜¥63,000/月</td>
-              </tr>
-              <tr>
-                <td class="py-3 text-kurage-200">10 人</td>
-                <td class="py-3 font-black text-xl text-orange-400">¥9,800<span class="text-xs font-normal text-kurage-200">/月</span></td>
-                <td class="py-3 text-kurage-300 text-xs">約 ¥160,000〜¥210,000/月</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-
-        <!-- 3 つの特徴チップ -->
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-          <div v-for="(c, i) in pain1Chips" :key="i" class="bg-white border border-gray-200 rounded-xl p-5">
-            <p class="text-2xl mb-2">{{ c.icon }}</p>
-            <p class="font-bold text-gray-900 mb-1">{{ c.title }}</p>
-            <p class="text-sm text-gray-600 leading-relaxed">{{ c.desc }}</p>
-          </div>
         </div>
 
         <!-- 次セクションへの繋ぎ -->
@@ -511,7 +502,7 @@
     <!-- ============================================================
          05. あるある お悩み 3: マネジャーが足りない
     ============================================================ -->
-    <section id="pain3" class="bg-white py-20">
+    <section id="pain3" class="bg-ocean-mist/40 py-20">
       <div class="max-w-3xl mx-auto px-4 sm:px-6">
         <div class="flex items-center gap-3 mb-3">
           <img src="/kurage-cry.svg" alt="" class="w-10 h-10 md:w-12 md:h-12 flex-shrink-0" />
@@ -921,12 +912,6 @@ const personas = [
   { icon: '👥', text: '営業3人の人材会社。CRMを導入したが誰も入力しない' },
   { icon: '🚀', text: '6人のスタートアップ。急成長で商談が増え、フォロー漏れが出始めた' },
   { icon: '🔧', text: '一人社長のコンサル。クライアント20社の関係を頭の中で管理している' },
-]
-
-const pain1Chips = [
-  { icon: '🎯', title: 'ディールベース', desc: 'ディール 1 画面に、商談・顧客・活動を集約' },
-  { icon: '💬', title: 'Slack だけで完結', desc: '新しいアプリも研修も、いらない' },
-  { icon: '💰', title: 'Slack をそのまま使う', desc: '今のプランで、強力な営業ツールに' },
 ]
 
 const pain2Chips = [
