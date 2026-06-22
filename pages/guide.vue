@@ -24,12 +24,7 @@
       <div class="mb-14 bg-ocean-deep text-white rounded-2xl p-6 md:p-8">
         <p class="text-sm font-bold text-cyan-300 mb-2">はじめに</p>
         <p class="leading-relaxed text-kurage-100">
-          ふつうのCRMは、別の画面を開いて項目を入力するツールです。<br />
-          クラゲディールは、<span class="text-white font-bold">Slackに話しかけるだけ。</span>新しいアプリを開かない、<span class="text-white font-bold">画面遷移も、項目入力もありません。</span><br />
-          通知だけ届く “Slackの出張所” ではなく、<span class="text-white font-bold">Slackそのものが営業ツール</span>です。
-        </p>
-        <p class="text-sm text-cyan-200 mt-3 leading-relaxed">
-          ※ 操作する画面はありません。同僚に報告するみたいに書けばOK。「CRMを操作している」感覚は、いったん忘れてください。
+          クラゲディールは、<span class="text-white font-bold">Slackに話しかけるだけ。</span>新しいアプリを開かない、<span class="text-white font-bold">画面遷移も、項目入力もありません。</span>なので、操作する画面はありません。同僚に報告するみたいに書けばOK。「CRMを操作している」感覚は、いったん忘れてください。
         </p>
       </div>
 
