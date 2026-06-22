@@ -125,6 +125,23 @@
     </section>
 
     <!-- ============================================================
+         02.5. ブランドタグライン＋設計思想
+    ============================================================ -->
+    <section class="bg-ocean-deep py-20 text-white">
+      <div class="max-w-3xl mx-auto px-4 sm:px-6 text-center">
+        <p class="text-sm font-bold text-cyan-300 uppercase tracking-widest mb-4">他のツールとの違い</p>
+        <h2 class="text-3xl md:text-4xl font-black mb-8 leading-relaxed">
+          いちばん軽いメモが、<br class="hidden md:inline" />いちばん賢い営業になる。
+        </h2>
+        <p class="text-lg text-kurage-100 max-w-2xl mx-auto leading-relaxed">
+          ふつうの CRM は、別の画面を開いて、項目を入力するツールです。<br />
+          クラゲディールは、<span class="text-white font-bold">Slack に話すだけ。</span>新しいアプリを開かない。<span class="text-white font-bold">画面遷移も、項目入力も、ありません。</span><br />
+          通知だけ届く “Slack の出張所” ではなく、<span class="text-white font-bold">Slack そのものが営業ツール</span>です。
+        </p>
+      </div>
+    </section>
+
+    <!-- ============================================================
          08. 料金（β 特典強調）
     ============================================================ -->
     <section id="pricing" class="bg-ocean-sand py-20">
