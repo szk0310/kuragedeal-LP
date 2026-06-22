@@ -20,21 +20,13 @@
               <span class="text-cyan-50">ディールが前に進む。</span>
             </h1>
 
-            <!-- クラゲくん コアフレーズ -->
-            <div class="border-l-2 border-cyan-400/60 pl-4 mb-4 max-w-lg">
-              <p class="text-base text-cyan-100 italic leading-relaxed">
-                ぼくには脳がない。記憶もない。<br />
-                でも、きみのことは全部覚えてる。
-              </p>
-            </div>
-
-            <p class="text-lg text-kurage-100 mb-2 max-w-2xl leading-relaxed">
-              Slackに書いた一言が、自動で記録・コーチングまでつながる。
+            <p class="text-lg text-kurage-100 mb-4 max-w-2xl leading-relaxed">
+              クラゲディールは、Slack にメモるだけ！<br />
+              学習コストがゼロで今日から使える、<br />
+              Slack ネイティブな会話型営業ツールです。
             </p>
-            <p class="text-base text-kurage-100 mb-10 max-w-2xl leading-relaxed">
-              1人から10人の営業チームのために、ゼロから設計しました。<br />
-              導入初日から、全員が使えます。<br />
-              <span class="text-sm text-kurage-200">（11人以上は Enterprise プランで対応）</span>
+            <p class="text-base text-cyan-50 font-bold mb-10 max-w-2xl leading-relaxed">
+              Slack に書いた一言が、自動で記録・コーチングまでつながる！
             </p>
 
             <!-- CTA（phase1: β 試用 self-serve 主 CTA 一本のみ）-->
@@ -76,11 +68,6 @@
             「大手ベンダーのCRM/SFAは高すぎるし重すぎる。」<br />
             ──そんな会社のために作りました。
           </p>
-          <p class="text-gray-700 max-w-2xl mx-auto leading-relaxed mb-4">
-            1〜10 人の営業チームは、大手 CRM の主戦場ではありません。<br />
-            だからこそ、私たちはこのサイズの「現場の手触り」から、<br />
-            ゼロから設計しました。
-          </p>
           <p class="text-sm text-gray-600 max-w-2xl mx-auto leading-relaxed italic">
             将来チームが大きく育ったときは、Salesforce 等への移行も<br />
             弊社（Salesforce 認定コンサルティングパートナー）が支援します。<br />
@@ -97,6 +84,41 @@
               <p class="text-2xl mb-2">{{ p.icon }}</p>
               <p>{{ p.text }}</p>
             </div>
+          </div>
+        </div>
+
+        <!-- 3 つの特徴 -->
+        <div class="mt-10 space-y-5 max-w-3xl mx-auto">
+          <div class="bg-white/85 rounded-2xl border border-ocean-tan/30 p-6 md:p-8">
+            <h3 class="text-xl font-black text-gray-900 mb-3">特徴 1　入力に時間を取られない</h3>
+            <p class="text-gray-700 leading-relaxed mb-3">
+              さまざまな業務を兼任するスモールチームは、時間がいくらあっても足りません。<br />
+              「ABC 商事と商談、競合が一社」——そうメモするだけで、受注確率と次の一手が返ってくる。入力に追われる時間も、ツールを開く手間もいりません。
+            </p>
+            <p class="text-gray-700 leading-relaxed mb-3">
+              さらに、クラゲがビジネスメールの返信を代筆します。あなたは、<a href="#reply-assist" class="text-kurage-600 font-bold underline hover:text-kurage-700">最終確認のボタンを押すだけ</a> でOK。
+            </p>
+            <p class="text-gray-800 font-bold leading-relaxed">
+              空いた時間は、お客様と向き合うことや、あなた自身の暮らしのために。
+            </p>
+          </div>
+
+          <div class="bg-white/85 rounded-2xl border border-ocean-tan/30 p-6 md:p-8">
+            <h3 class="text-xl font-black text-gray-900 mb-3">特徴 2　チームが大きくなっても、月額は変わらない</h3>
+            <p class="text-gray-700 leading-relaxed mb-4">
+              クラゲディールは、シンプルな 3 段階の料金体系。枠内ならユーザー数が増えても月額は変わりません。
+            </p>
+            <div class="bg-orange-50 border border-orange-200 rounded-xl p-4 text-sm text-gray-700 leading-relaxed">
+              <strong class="text-orange-600">★</strong> 今なら <strong class="text-orange-600">3 ヶ月無料</strong>の β 試用を提供中（〜9/15・クレカ不要・審査なし・即時アクティベート）。どなたでも、Slack に追加するだけで即日ご利用いただけます。
+            </div>
+          </div>
+
+          <div class="bg-white/85 rounded-2xl border border-ocean-tan/30 p-6 md:p-8">
+            <h3 class="text-xl font-black text-gray-900 mb-3">特徴 3　専任の営業マンがいなくても、しっかりサポート</h3>
+            <p class="text-gray-700 leading-relaxed">
+              営業の型「MEDDPICC」に基づいて、AI が案件ごとに「決裁者と会えていますか？」「予算の根拠は？」「競合は把握していますか？」と問いかけます。<br />
+              経験豊富なマネジャーがいなくても、チーム全員に同じ質のコーチングが届く。AI が、あなたの営業コーチになります。
+            </p>
           </div>
         </div>
       </div>
@@ -758,285 +780,9 @@
         </div>
 
         <p class="text-center text-gray-500 mt-12 italic">
-          3 つのあるある お悩みと、その解決策をご一緒に見てきました。<br />
-          最後に、従来の Slack 連携 CRM ではなく、<br />
-          なぜクラゲディールが選ばれているのか。その理由を整理させてください。
+          入力の手間も、進捗の見えなさも、マネジャー不足も、メール返信も。<br />
+          クラゲディールが、まるごと引き受けます。
         </p>
-      </div>
-    </section>
-
-    <!-- ============================================================
-         07. 他のツールとの違い（3 ピラー）
-    ============================================================ -->
-    <section id="comparison" class="bg-ocean-deep py-20 text-white">
-      <div class="max-w-4xl mx-auto px-4 sm:px-6">
-        <p class="text-sm font-bold text-cyan-300 uppercase tracking-widest mb-3 text-center">他のツールとの違い</p>
-        <h2 class="text-3xl md:text-4xl font-black mb-8 text-center leading-relaxed">
-          いちばん軽いメモが、<br class="hidden md:inline" />いちばん賢い営業になる。
-        </h2>
-
-        <p class="text-center text-lg text-kurage-100 max-w-2xl mx-auto leading-relaxed mb-10">
-          ふつうのCRMは、別の画面を開いて、項目を入力するツールです。<br />
-          クラゲディールは、<span class="text-white font-bold">Slackに話すだけ。</span>新しいアプリを開かない。<span class="text-white font-bold">画面遷移も、項目入力も、ありません。</span><br />
-          通知だけ届く “Slackの出張所” ではなく、<span class="text-white font-bold">Slackそのものが営業ツール</span>です。
-        </p>
-
-        <div class="bg-white/5 border border-white/10 rounded-2xl p-8 mb-12 text-kurage-100 leading-relaxed">
-          <p class="mb-4 text-lg font-bold text-cyan-100">
-            「ABC 商事と商談、競合が一社」——そうメモするだけで、<span class="text-white">受注確率と次の一手</span>が返ってくる。<br />
-            入力に追われる時間も、ツールを開く手間もいりません。<br />
-            <span class="text-white">空いた時間は、お客様と向き合うことや、あなた自身の暮らしのために。</span>
-          </p>
-          <p class="mb-4">
-            営業ツールには、たくさんの選択肢があります。従来の Slack 連携 CRM もそのひとつ。それぞれ素晴らしい製品です。
-          </p>
-          <p class="mb-4">
-            ただ、1〜10 人の小さな営業チームから見ると、どれも「自分たちのサイズ」には合いません。
-          </p>
-          <p class="text-cyan-200 font-bold mb-6">
-            重い。高い。柔軟じゃない。Slack に住んでくれない。
-          </p>
-          <p class="mt-4 pt-4 border-t border-white/10">
-            <span class="text-cyan-200 font-bold">大手 CRM の主戦場（20 人以上の組織）とは、別の場所で。</span><br />
-            1〜10 人専用に、ゼロから組み上げた営業 AI です。
-          </p>
-        </div>
-
-        <!-- 理由 1: 経済性 -->
-        <div class="bg-white/10 rounded-2xl p-6 md:p-8 mb-6">
-          <p class="text-2xl mb-2">💰</p>
-          <h3 class="text-xl md:text-2xl font-black mb-3">理由 1: 経済性 — チームが大きくなっても、月額は変わらない。</h3>
-          <p class="text-kurage-100 leading-relaxed mb-4">
-            従来の Slack 連携 CRM は、多くがユーザー数課金です。チームが 1 人から 10 人に増えれば、月額もリニアに増えていきます。
-            さらに、ほとんどの場合 Slack Pro 以上の有料プランも必要です。
-          </p>
-          <p class="text-cyan-200 font-bold mb-2">
-            ★ クラゲディールは違います。1 人 ¥1,980、3 人 ¥4,980、10 人 ¥9,800。ユーザー数追加課金なし。
-          </p>
-          <p class="text-cyan-200 font-bold mb-6">
-            ★ しかも、Slack の Free プランでも完全に動作します。
-          </p>
-
-          <div class="bg-white/5 border border-white/15 rounded-xl overflow-hidden mb-4">
-            <table class="w-full text-sm">
-              <thead class="bg-white/10">
-                <tr>
-                  <th class="text-left px-4 py-3 text-cyan-200">チーム規模</th>
-                  <th class="text-left px-4 py-3 text-cyan-200">クラゲディール</th>
-                  <th class="text-left px-4 py-3 text-cyan-200">従来の Slack 連携 CRM<sup>*</sup></th>
-                </tr>
-              </thead>
-              <tbody class="divide-y divide-white/10">
-                <tr><td class="px-4 py-3">1 人</td><td class="px-4 py-3 font-bold text-cyan-200">¥1,980/月</td><td class="px-4 py-3 text-kurage-300">約 ¥16,000〜¥21,000/月</td></tr>
-                <tr><td class="px-4 py-3">3 人</td><td class="px-4 py-3 font-bold">¥4,980/月</td><td class="px-4 py-3 text-kurage-300">約 ¥48,000〜¥63,000/月</td></tr>
-                <tr><td class="px-4 py-3">10 人</td><td class="px-4 py-3 font-bold text-cyan-200">¥9,800/月</td><td class="px-4 py-3 text-orange-300">約 ¥160,000〜¥210,000/月</td></tr>
-              </tbody>
-            </table>
-          </div>
-          <p class="text-xs text-kurage-300 mb-4">
-            <sup>*</sup>「従来の Slack 連携 CRM」環境の合計コスト = CRM ライセンス料（1 ユーザー月 ¥15,000〜¥20,000）+ Slack Pro プラン（1 ユーザー月 ¥925）で算出した目安です。
-          </p>
-
-          <p class="text-kurage-100 leading-relaxed mb-3">
-            1 人 ¥1,980 から始めて、チームが 10 人に成長しても月額 ¥9,800。<br />
-            ── 従来環境との差は、月 15〜20 万円（年 180〜240 万円）に。
-          </p>
-          <p class="text-kurage-100 leading-relaxed mb-3">
-            しかも、Slack の今のプラン（Free / Pro）のまま使えます。プラン乗り換え、不要です。
-          </p>
-          <p class="text-kurage-200 text-sm leading-relaxed mb-4">
-            11 人以上の規模になったら、Enterprise プランで個別対応します。
-          </p>
-          <div class="bg-orange-500/20 border border-orange-400/40 rounded-xl p-4 text-cyan-100 text-sm leading-relaxed">
-            <strong class="text-orange-300">★</strong> 今なら <strong class="text-orange-300">3 ヶ月無料</strong>の β 試用を提供中（〜9/15・クレカ不要・審査なし・即時アクティベート）。<br />
-            どなたでも、Slack に追加するだけで即日ご利用いただけます。
-          </div>
-        </div>
-
-        <!-- 理由 2: 営業 AI 思考力 -->
-        <div class="bg-white/10 rounded-2xl p-6 md:p-8 mb-6">
-          <p class="text-2xl mb-2">🎓</p>
-          <h3 class="text-xl md:text-2xl font-black mb-3">理由 2: 営業 AI 思考力 — 24 時間動く、AI コーチ。</h3>
-          <p class="text-kurage-100 leading-relaxed mb-4">
-            従来の Slack 連携 CRM は、多くが「データの入れ物」。通知が届く。記録が貯まる。それで終わり。
-          </p>
-          <p class="text-cyan-200 font-bold mb-4">
-            ★ クラゲディールは、営業マネジャーの分身として、AI が 24 時間チームに問いかける。
-          </p>
-          <ul class="space-y-2 text-kurage-100 text-sm leading-relaxed">
-            <li>・自然言語で「田中さんと商談した」と書くだけで、ディール自動更新</li>
-            <li>・MEDDPICC で AI が決裁者・予算・競合を問う</li>
-            <li>・MEDDPICC 情報の更新で受注確率が自動計算</li>
-            <li>・14 日停滞案件を自動検知</li>
-            <li>・顧客メールの返信を AI が下書き → Slack 承認 → 自社送信</li>
-            <li>・朝 9 時・夕方 17 時の自動ブリーフィング</li>
-          </ul>
-          <p class="text-kurage-100 leading-relaxed mt-4">
-            従来の Slack 連携 CRM には、この深さは備わっていません。営業に特化した AI を、営業のためだけに鍛えました。
-          </p>
-        </div>
-
-        <!-- 理由 3: 独立性 -->
-        <div class="bg-white/10 rounded-2xl p-6 md:p-8 mb-12">
-          <p class="text-2xl mb-2">🔓</p>
-          <h3 class="text-xl md:text-2xl font-black mb-3">理由 3: 独立性 — データは、あなたのもの。</h3>
-          <p class="text-kurage-100 leading-relaxed mb-4">
-            クラゲディールを使い続けるかどうかは、いつでもあなたが決められます。
-          </p>
-          <p class="text-kurage-100 leading-relaxed mb-4">
-            データは、いつでも CSV / Excel でエクスポート可能。Slack をやめても、Web ダッシュボードからアクセスできます。<br />
-            将来、本格的な大手 CRM に移行する日が来たら、弊社（Salesforce 認定コンサルティングパートナー）が移行を支援します。
-          </p>
-          <p class="text-cyan-200 font-bold leading-relaxed">
-            「逃げ道がある」ことが、一番の信頼の根拠だと、わたしたちは考えています。
-          </p>
-        </div>
-
-        <!-- 締め -->
-        <p class="text-center text-lg md:text-xl text-cyan-100 leading-loose">
-          クラゲディールは、1〜10 人の営業チームに最適化された、<br />
-          <strong class="text-cyan-50">唯一の営業 AI</strong> です。<br />
-          <span class="text-base">あなたのチームのサイズに、ぴったり寄り添うために。</span>
-        </p>
-      </div>
-    </section>
-
-    <!-- ============================================================
-         07.5. 今できること、正直に話します。（クラゲくん語り口）
-    ============================================================ -->
-    <section id="honesty" class="bg-kurage-50/60 py-20">
-      <div class="max-w-3xl mx-auto px-4 sm:px-6">
-        <div class="text-center mb-10">
-          <img src="/kurage-smile.svg" alt="クラゲくん" class="w-16 h-16 mx-auto mb-4" />
-          <h2 class="text-3xl md:text-4xl font-black text-gray-900 mb-6 leading-tight">
-            今できること、正直に話します。
-          </h2>
-          <!-- クラゲくん リード文 -->
-          <div class="bg-white border-2 border-kurage-200 rounded-2xl p-6 text-left max-w-xl mx-auto shadow-sm">
-            <p class="text-base text-gray-700 leading-relaxed mb-2">
-              ぼくができることは、まだ多くありません。<br />
-              でも、毎日使えるものだけを、ちゃんと動かしています。
-            </p>
-            <p class="text-base text-kurage-700 font-bold">正直に話しますね。</p>
-          </div>
-        </div>
-
-        <!-- 今すぐ使える機能 -->
-        <div class="bg-white border border-kurage-200 rounded-2xl p-6 md:p-8 mb-6 shadow-sm">
-          <div class="flex items-center gap-2 mb-5">
-            <span class="text-green-500 text-lg font-black">✅</span>
-            <h3 class="text-xl font-black text-gray-900">今すぐ使える</h3>
-          </div>
-          <div class="space-y-5">
-            <div class="flex gap-3">
-              <span class="text-xl flex-shrink-0">📝</span>
-              <div>
-                <p class="font-bold text-gray-900 mb-1">Slack で話しかけるだけで記録できます</p>
-                <p class="text-sm text-gray-600 leading-relaxed">「田中さんと商談しました。予算 300 万」と書くだけで、ディールと活動メモが更新されます。フォームはいりません。</p>
-              </div>
-            </div>
-            <div class="flex gap-3">
-              <span class="text-xl flex-shrink-0">🔍</span>
-              <div>
-                <p class="font-bold text-gray-900 mb-1">名前を呼べば、ぼくが調べます</p>
-                <p class="text-sm text-gray-600 leading-relaxed">顧客情報・会社情報・活動履歴・ディール一覧。「田中さんの役職は?」「ABC 商事のディールを見せて」</p>
-              </div>
-            </div>
-            <div class="flex gap-3">
-              <span class="text-xl flex-shrink-0">🌅</span>
-              <div>
-                <p class="font-bold text-gray-900 mb-1">毎朝 9 時と毎夕 17 時に、状況をお届けします</p>
-                <p class="text-sm text-gray-600 leading-relaxed">今日やるべきこと、1 日の振り返り。14 日間動きのない案件は、ぼくが先に知らせます。</p>
-              </div>
-            </div>
-            <div class="flex gap-3">
-              <span class="text-xl flex-shrink-0 font-bold text-kurage-600">/</span>
-              <div>
-                <p class="font-bold text-gray-900 mb-1"><code class="bg-gray-100 text-kurage-700 px-1.5 py-0.5 rounded text-sm">/coach</code> — 案件を一緒に深掘りします</p>
-                <p class="text-sm text-gray-600 leading-relaxed">MEDDPICC で、決裁者・予算・競合を確認します。全員に、同じ質の問いかけを届けます。</p>
-              </div>
-            </div>
-            <div class="flex gap-3">
-              <span class="text-xl flex-shrink-0">✉️</span>
-              <div>
-                <p class="font-bold text-gray-900 mb-1">メールの返信下書きを作ります</p>
-                <p class="text-sm text-gray-600 leading-relaxed">顧客からのメールが届いたら、文脈を読んで返信案を用意します。送るかどうかは、きみが決めてください。</p>
-              </div>
-            </div>
-            <div class="flex gap-3">
-              <span class="text-xl flex-shrink-0">📊</span>
-              <div>
-                <p class="font-bold text-gray-900 mb-1">活動を記録するたびに、受注確率を計算し直します</p>
-                <p class="text-sm text-gray-600 leading-relaxed">MEDDPICC 情報が増えるたびに、数字が動きます。</p>
-              </div>
-            </div>
-            <div class="flex gap-3">
-              <span class="text-xl flex-shrink-0">💬</span>
-              <div>
-                <p class="font-bold text-gray-900 mb-1">気になることは <code class="bg-gray-100 text-kurage-700 px-1.5 py-0.5 rounded text-sm">/kurage</code> で教えてください</p>
-                <p class="text-sm text-gray-600 leading-relaxed">ぼくが覚えておきます。</p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- 正規版で追加される機能 -->
-        <div class="bg-kurage-900/5 border border-kurage-200 rounded-2xl p-6 md:p-8 mb-8">
-          <div class="flex items-center gap-2 mb-5">
-            <span class="text-xl">🌊</span>
-            <h3 class="text-xl font-black text-gray-700">正規版リリースで追加される予定</h3>
-          </div>
-          <div class="space-y-5">
-            <div class="flex gap-3">
-              <span class="text-xl flex-shrink-0">📈</span>
-              <div>
-                <p class="font-bold text-gray-700 mb-1">アナリティクスダッシュボード</p>
-                <p class="text-sm text-gray-500 leading-relaxed">月別推移・ステージ別件数・活動種別・成約率など。数字で営業を振り返れるようにします。</p>
-              </div>
-            </div>
-            <div class="flex gap-3">
-              <span class="text-xl flex-shrink-0">💌</span>
-              <div>
-                <p class="font-bold text-gray-700 mb-1">メールの感情読み取り（センチメント分析）</p>
-                <p class="text-sm text-gray-500 leading-relaxed">「難しいですね」という返信を、ぼくが読み取って受注確率に反映します。今は /coach での手動更新です。</p>
-              </div>
-            </div>
-            <div class="flex gap-3">
-              <span class="text-xl flex-shrink-0">🎯</span>
-              <div>
-                <p class="font-bold text-gray-700 mb-1">会話から商談シグナルを自動メモ</p>
-                <p class="text-sm text-gray-500 leading-relaxed">「見積もりをお願いします」「発注したい」「一度伺えますか」——こうしたやりとりのサインを、ぼくが自動で拾って行動メモに記録。大事な一言を取りこぼしません。</p>
-              </div>
-            </div>
-            <div class="flex gap-3">
-              <span class="text-xl flex-shrink-0">📝</span>
-              <div>
-                <p class="font-bold text-gray-700 mb-1">グラウンディング型ドラフト生成</p>
-                <p class="text-sm text-gray-500 leading-relaxed">「半年活動のない顧客に AI 動向のメールを書いて」のような指示で、顧客情報と外部知識を組み合わせた下書きを生成します。</p>
-              </div>
-            </div>
-            <div class="flex gap-3">
-              <span class="text-xl flex-shrink-0">📖</span>
-              <div>
-                <p class="font-bold text-gray-700 mb-1">/guide 用語集</p>
-                <p class="text-sm text-gray-500 leading-relaxed">クラゲディールで使う言葉の意味を、いつでも調べられます。</p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- クロージング — クラゲくん語り口 -->
-        <div class="bg-white border-2 border-kurage-200 rounded-2xl p-6 text-center shadow-sm">
-          <p class="text-base text-gray-700 leading-relaxed mb-3">
-            まだ完成していないものがあります。<br />
-            でもぼくは、毎日覚えることが増えています。
-          </p>
-          <p class="text-base text-gray-700 leading-relaxed mb-4">
-            きみが使うたびに、ぼくは育ちます。<br />
-            よろしくお願いします。
-          </p>
-          <p class="text-kurage-500 font-bold flex items-center justify-end gap-2">— クラゲくん <img src="/kurage-smile.svg" alt="クラゲくん" class="w-6 h-6 inline-block" /></p>
-        </div>
       </div>
     </section>
 
