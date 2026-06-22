@@ -38,7 +38,7 @@
             <p class="font-semibold text-white mb-3">会社</p>
             <ul class="space-y-2">
               <li><a href="/guide" class="hover:text-white transition-colors">使い方ガイド</a></li>
-              <li><a href="/help" class="hover:text-white transition-colors">ヘルプ（全機能）</a></li>
+              <li><a href="/help" class="hover:text-white transition-colors">よくある質問・困ったとき</a></li>
               <li><a href="/legal/terms" class="hover:text-white transition-colors">利用規約</a></li>
               <li><a href="/legal/privacy" class="hover:text-white transition-colors">プライバシーポリシー</a></li>
               <li><a href="/legal/tokusho" class="hover:text-white transition-colors">特定商取引法</a></li>
