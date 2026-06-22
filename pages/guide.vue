@@ -158,12 +158,17 @@
           <span class="bg-kurage-500 text-white rounded-full w-7 h-7 flex items-center justify-center text-sm font-bold">3</span>
           スラッシュコマンド
         </h2>
-        <div class="bg-white rounded-2xl border border-gray-200 p-6 shadow-sm space-y-4">
-          <div v-for="cmd in commands" :key="cmd.cmd" class="flex gap-4 items-start">
-            <code class="bg-kurage-50 text-kurage-700 px-3 py-1 rounded-lg font-mono text-sm whitespace-nowrap">{{ cmd.cmd }}</code>
-            <div>
-              <p class="text-sm font-semibold text-gray-800">{{ cmd.title }}</p>
-              <p class="text-sm text-gray-500">{{ cmd.desc }}</p>
+        <div class="space-y-4">
+          <div v-for="g in commandGroups" :key="g.group" class="bg-white rounded-2xl border border-gray-200 p-6 shadow-sm">
+            <p class="text-xs font-bold text-kurage-600 mb-3">{{ g.group }}</p>
+            <div class="space-y-4">
+              <div v-for="cmd in g.cmds" :key="cmd.cmd" class="flex gap-4 items-start">
+                <code class="bg-kurage-50 text-kurage-700 px-3 py-1 rounded-lg font-mono text-sm whitespace-nowrap">{{ cmd.cmd }}</code>
+                <div>
+                  <p class="text-sm font-semibold text-gray-800">{{ cmd.title }}</p>
+                  <p class="text-sm text-gray-500">{{ cmd.desc }}</p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -243,14 +248,20 @@ const examples = [
   { input: '間違えた。田中さんのメモにして', action: '直前のメモの対象を修正' },
 ]
 
-const commands = [
-  { cmd: '/contact', title: '顧客一覧', desc: '登録済みの顧客をSlack上で確認できます。' },
-  { cmd: '/deal', title: 'ディール一覧・検索', desc: '商談の一覧・検索、AI進捗評価とネクストアクション提案。' },
-  { cmd: '/account', title: '会社一覧', desc: '登録済みの会社（取引先）を確認できます。' },
-  { cmd: '/coach', title: 'AIコーチング', desc: 'AIが商談の進め方をヒアリング形式でコーチングします。' },
-  { cmd: '/usage', title: 'AI利用状況', desc: '今月のAI利用量・残り予算・プラン情報を確認できます。' },
-  { cmd: '/settings', title: '設定', desc: 'ナーチャリング・営業ポリシーの設定ができます。' },
-  { cmd: '/kurage', title: 'フィードバック投稿', desc: '使ってみて感じたことを開発チームへ直接送れます。例: `/kurage 朝のブリーフィングが長く感じる`' },
+const commandGroups = [
+  { group: '情報を見る（一覧）', cmds: [
+    { cmd: '/deal', title: 'ディール一覧・検索', desc: '商談の一覧・検索、AI進捗評価とネクストアクション提案。' },
+    { cmd: '/contact', title: '顧客一覧', desc: '登録済みの顧客をSlack上で確認できます。' },
+    { cmd: '/account', title: '会社一覧', desc: '登録済みの会社（取引先）を確認できます。' },
+  ]},
+  { group: 'AI・確認', cmds: [
+    { cmd: '/coach', title: 'AIコーチング', desc: 'AIが商談の進め方をヒアリング形式でコーチングします。' },
+    { cmd: '/usage', title: 'AI利用状況', desc: '今月のAI利用量・残り予算・プラン情報を確認できます。' },
+  ]},
+  { group: '設定・その他', cmds: [
+    { cmd: '/settings', title: '設定', desc: 'ナーチャリング・営業ポリシーの設定ができます。' },
+    { cmd: '/kurage', title: 'フィードバック投稿', desc: '使ってみて感じたことを開発チームへ直接送れます。例: `/kurage 朝のブリーフィングが長く感じる`' },
+  ]},
 ]
 
 const autoFeatures = [
