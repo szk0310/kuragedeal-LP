@@ -200,6 +200,24 @@
         </div>
       </section>
 
+      <!-- Step 6: /setting でできること -->
+      <section class="mb-10">
+        <h2 class="text-xl font-black text-gray-800 mb-4 flex items-center gap-2">
+          <span class="bg-kurage-500 text-white rounded-full w-7 h-7 flex items-center justify-center text-sm font-bold">6</span>
+          <code class="bg-kurage-50 text-kurage-700 px-2 py-0.5 rounded font-mono text-base">/setting</code> でできること
+        </h2>
+        <div class="bg-white rounded-2xl border border-gray-200 p-6 shadow-sm">
+          <p class="text-sm text-gray-600 mb-4">Slackで <code class="bg-gray-100 px-1.5 py-0.5 rounded text-xs">/setting</code> を実行すると、設定メニューが開きます。おもな項目：</p>
+          <ul class="space-y-3 text-sm">
+            <li class="flex gap-3"><span class="shrink-0">📧</span><span><b class="text-gray-800">AI返信支援</b> — 顧客メールの返信下書きの ON / OFF。</span></li>
+            <li class="flex gap-3"><span class="shrink-0">📋</span><span><b class="text-gray-800">AI営業ポリシー</b> — クラゲの提案トーンを指定（例：「押し売りしない・課題解決型」）。</span></li>
+            <li class="flex gap-3"><span class="shrink-0">✉️</span><span><b class="text-gray-800">送信元メールアドレス</b> — 返信を送るときに使う、あなたのアドレス。</span></li>
+            <li class="flex gap-3"><span class="shrink-0">🌐</span><span><b class="text-gray-800">Webダッシュボード</b> — 個人ログインキーの発行（上の手順）。</span></li>
+            <li class="flex gap-3"><span class="shrink-0">🎓</span><span><b class="text-gray-800">学習モード（サンプルデータ）</b> — <b>「🎓 サンプルを入れる」</b>で【見本】データを投入し、一覧・受注確率・次の一手を<b>すぐ体験</b>できます。<b>「🧹 サンプルを削除」</b>で見本だけ消えます（あなたの実データは残ります）。</span></li>
+          </ul>
+        </div>
+      </section>
+
       <!-- Footer CTA -->
       <div class="bg-kurage-50 border border-kurage-100 rounded-2xl p-6 text-center">
         <p class="text-sm text-gray-600">困ったことがあればお気軽に画面右下のクラゲくんにお問合せください</p>
@@ -244,7 +262,7 @@ const commandGroups = [
     { cmd: '/usage', title: 'AI利用状況', desc: '今月のAI利用量・残り予算・プラン情報を確認できます。' },
   ]},
   { group: '設定・その他', cmds: [
-    { cmd: '/settings', title: '設定', desc: 'ナーチャリング・営業ポリシーの設定ができます。' },
+    { cmd: '/setting', title: '設定', desc: 'AI返信支援・営業ポリシー・ログインキー発行・学習モード（サンプル）などの設定メニュー。' },
     { cmd: '/kurage', title: 'フィードバック投稿', desc: '使ってみて感じたことを開発チームへ直接送れます。例: `/kurage 朝のブリーフィングが長く感じる`' },
   ]},
 ]
