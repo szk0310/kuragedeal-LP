@@ -480,7 +480,7 @@
 
         <!-- 朝夕の Slack ブリーフィング 2 枚並列モック -->
         <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
-          <SlackMessageMock channel-name="#sales-team">
+          <SlackMessageMock channel-name="💬 クラゲディール（DM）">
             <SlackBotLine name="クラゲディール" :bot-badge="true" time="9:00">
               <p class="font-bold mb-2">🌅 おはようございます！今日のフォーカス</p>
               <div class="bg-orange-50 border-l-2 border-orange-400 pl-3 py-2 mb-2">
@@ -498,7 +498,7 @@
             </SlackBotLine>
           </SlackMessageMock>
 
-          <SlackMessageMock channel-name="#sales-team">
+          <SlackMessageMock channel-name="💬 クラゲディール（DM）">
             <SlackBotLine name="クラゲディール" :bot-badge="true" time="17:00">
               <p class="font-bold mb-2">🌆 1 日お疲れさまでした。今日の振り返り</p>
               <div class="bg-green-50 border-l-2 border-green-400 pl-3 py-2 mb-2">
@@ -516,7 +516,7 @@
             </SlackBotLine>
           </SlackMessageMock>
         </div>
-        <p class="text-center text-sm text-gray-600 mb-12 italic">毎朝・毎夕、これが Slack に届きます。</p>
+        <p class="text-center text-sm text-gray-600 mb-12 italic">毎朝・毎夕、あなたの DM に届きます。</p>
 
         <!-- 3 つの特徴チップ -->
         <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
@@ -634,7 +634,7 @@
 
         <!-- /coach Slack mock -->
         <div class="mb-8 max-w-2xl mx-auto">
-          <SlackMessageMock channel-name="#sales-coach">
+          <SlackMessageMock channel-name="💬 クラゲディール（DM）">
             <SlackBotLine name="あなた" time="14:32">
               <p>/coach ABC商事</p>
             </SlackBotLine>
@@ -755,7 +755,7 @@
 
         <!-- AI 返信支援 Slack mock -->
         <div class="mb-8 max-w-2xl mx-auto">
-          <SlackMessageMock channel-name="#sales-team">
+          <SlackMessageMock channel-name="💬 クラゲディール（DM）">
             <SlackBotLine name="クラゲディール" :bot-badge="true" time="10:08">
               <p class="font-bold mb-2">📧 田中様（ABC 商事）より受信</p>
               <div class="bg-gray-50 rounded-lg p-3 text-sm text-gray-700 leading-relaxed mb-3">
@@ -1066,7 +1066,7 @@ const faqs = [
   },
   {
     q: 'インストールしたのに、サイドバーにアプリが出てきません',
-    a: 'Slack 画面上部の検索窓（または Cmd / Ctrl + K）に「クラゲディール」（英字 kuragedeal でも可）と入力し、表示されたアプリを選んでください。クラゲディールとの DM が開き、サイドバーに常駐します。\nあとは、その DM（または招待済みのチャンネル）で自然文を打つだけ。初回のやり取りで welcome DM も届きます。\n反映が遅いときは Slack を再読み込み（Cmd / Ctrl + R）してください。\nなお、ワークスペースへの追加（インストール）は管理者が 1 回行えば完了で、メンバーの個別インストールは不要です。',
+    a: 'Slack 画面上部の検索窓（または Cmd / Ctrl + K）に「クラゲディール」（英字 kuragedeal でも可）と入力し、表示されたアプリを選んでください。クラゲディールとの DM が開き、サイドバーに常駐します。\nあとは、その DM で自然文を打つだけ。初回のやり取りで welcome DM も届きます。\n反映が遅いときは Slack を再読み込み（Cmd / Ctrl + R）してください。\nなお、ワークスペースへの追加（インストール）は管理者が 1 回行えば完了で、メンバーの個別インストールは不要です。',
   },
   {
     q: 'Slack を使っていない会社でも使えますか？',
@@ -1077,8 +1077,8 @@ const faqs = [
     a: 'データは Google Cloud Platform 上で管理され、通信は SSL/TLS で暗号化されています。テナントごとに PostgreSQL の Row-Level Security で物理的に分離。お客様の営業データが AI の学習に使用されることはありません。',
   },
   {
-    q: 'チャンネルで使うと、ほかのメンバーに自分の営業データを見られませんか？',
-    a: '使う場所で選べます。\n・DM（クラゲディール App との個別チャット）で使えば完全プライベートです。あなたの入力もクラゲの回答も、ほかの人には見えません。各自の機密パイプラインはこちらがおすすめです。\n・共有チャンネルで使うと、そのチャンネルのメンバー全員に発言とクラゲの回答が見えます（Slack の仕様）。チームで意図的に共有したい場合に向いています。\nなお、データ自体も担当者ごとに分離されており、一般メンバーは自分が担当するディール・顧客のみ閲覧できます（マネージャーはチーム全体）。',
+    q: '他のメンバーに自分の営業データを見られませんか？',
+    a: 'いいえ。クラゲディールは DM（クラゲディール App との個別チャット）で使う、あなた専用のプライベートな営業アシスタントです。あなたの入力もクラゲの回答も、ほかの人には見えません。\nさらにデータ自体も担当者ごとに分離されており、一般メンバーは自分が担当するディール・顧客のみ閲覧できます（マネージャーはチーム全体）。',
   },
   {
     q: 'AI が提案する受注確率はどのように計算されますか？',

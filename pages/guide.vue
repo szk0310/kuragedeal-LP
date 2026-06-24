@@ -48,18 +48,8 @@
           </div>
         </div>
 
-        <!-- オプション: チームで共有 -->
-        <div class="bg-white border border-dashed border-gray-300 rounded-2xl p-5 mt-4">
-          <p class="font-bold text-gray-800 mb-2">💡 オプション：チームでみんなと使いたいとき</p>
-          <p class="text-sm text-gray-600 leading-relaxed">
-            営業用チャンネル（例 <code class="bg-gray-100 px-1 rounded">#営業-crm</code>）を作成 → チャンネルで <code class="bg-gray-100 px-1 rounded">/invite @クラゲディール</code>（または チャンネル詳細 → インテグレーション → アプリを追加）→ メンバーを招待。
-            招待された人は<b>各自の Slack ID でそのまま利用開始</b>（個別インストール不要）。<br />
-            <span class="text-gray-500">※ 共有チャンネルでは、発言とクラゲの回答が<b>メンバー全員に見えます</b>。チームで共有して構わない場合に向いています。</span>
-          </p>
-        </div>
-
         <div class="bg-kurage-50 border border-kurage-200 rounded-xl p-4 mt-4 text-sm text-gray-700 leading-relaxed">
-          🔒 <b>プライバシー</b>：<b>DM ＝ あなただけのプライベート</b>（入力もクラゲの回答も他人に見えません）。<b>共有チャンネル ＝ メンバー全員に見えます</b>。各自の機密データは <b>DM のご利用がおすすめ</b>、チームで共有したいときはチャンネルで。<br />
+          🔒 <b>プライバシー</b>：クラゲディールは <b>DM（クラゲディール App との個別チャット）</b>で使う、<b>あなただけのプライベート</b>な営業アシスタントです（入力もクラゲの回答も他人に見えません）。データも担当者ごとに分離されています。<br />
           <span class="text-gray-500">※ サイドバーにアプリが出ない時は、Slack 上部の検索窓（Cmd / Ctrl + K）に「クラゲディール」（英字 kuragedeal でも可）と入力して選ぶと、DM が開いて常駐します。</span>
         </div>
       </section>
@@ -105,7 +95,7 @@
           クラゲくんに話しかける
         </h2>
         <div class="bg-white rounded-2xl border border-gray-200 p-6 shadow-sm">
-          <p class="text-sm text-gray-600 mb-4">Slackでクラゲディール App に DM するか、招待済みチャンネルで<b>そのまま書くだけ</b>（<code class="bg-gray-100 px-1 rounded">@クラゲディール</code> のメンションは任意）。</p>
+          <p class="text-sm text-gray-600 mb-4">Slackでクラゲディール App に DM して<b>そのまま書くだけ</b>。</p>
           <div class="space-y-3">
             <div class="bg-gray-50 rounded-xl p-4">
               <p class="text-xs text-gray-400 mb-1 font-semibold">まずは顧客を登録</p>
