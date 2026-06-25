@@ -222,10 +222,40 @@
             <li class="flex gap-3"><span class="shrink-0">📧</span><span><b class="text-gray-800">AI返信支援</b> — 顧客メールの返信下書きの ON / OFF。</span></li>
             <li class="flex gap-3"><span class="shrink-0">📋</span><span><b class="text-gray-800">AI営業ポリシー</b> — クラゲの提案トーンを指定（例：「押し売りしない・課題解決型」）。</span></li>
             <li class="flex gap-3"><span class="shrink-0">✉️</span><span><b class="text-gray-800">送信元メールアドレス</b> — 返信を送るときに使う、あなたのアドレス。</span></li>
+            <li class="flex gap-3"><span class="shrink-0">📨</span><span><b class="text-gray-800">メール連携（顧客メールの取り込み）</b> — あなた専用の取り込みアドレスが表示されます。顧客とのメールをそこへ転送すると、クラゲが内容を評価して活動メモ・受注確率に反映し、返信ドラフトを Slack に届けます（<b>下に詳しい手順</b>）。</span></li>
             <li class="flex gap-3"><span class="shrink-0">🌐</span><span><b class="text-gray-800">Webダッシュボード</b> — 個人ログインキーの発行（上の手順）。</span></li>
             <li class="flex gap-3"><span class="shrink-0">🧭</span><span><b class="text-gray-800">操作モード</b> — <b>ボタンモード</b>（ボタン中心でクラゲが案内・既定）／<b>会話モード</b>（自然文ひとつで軽快）を切り替えられます。</span></li>
             <li class="flex gap-3"><span class="shrink-0">🎓</span><span><b class="text-gray-800">学習モード（サンプルデータ）</b> — <b>「🎓 サンプルを入れる」</b>で【見本】データを投入し、一覧・受注確率・次の一手を<b>すぐ体験</b>できます。<b>「🧹 サンプルを削除」</b>で見本だけ消えます（あなたの実データは残ります）。</span></li>
           </ul>
+        </div>
+      </section>
+
+      <!-- Step 7: メール連携 -->
+      <section class="mb-10">
+        <h2 class="text-xl font-black text-gray-800 mb-4 flex items-center gap-2">
+          <span class="bg-kurage-500 text-white rounded-full w-7 h-7 flex items-center justify-center text-sm font-bold">7</span>
+          📨 顧客メールを取り込む（メール連携）
+        </h2>
+        <div class="bg-white rounded-2xl border border-gray-200 p-6 shadow-sm">
+          <p class="text-sm text-gray-600 mb-4">顧客とのメールを<b>転送するだけ</b>で、クラゲが内容を読んで<b>活動メモ・受注確率に反映</b>し、<b>返信ドラフト</b>を Slack に届けます。やることは次の3つです。</p>
+          <ol class="space-y-4 text-sm">
+            <li class="flex gap-3">
+              <span class="shrink-0 bg-kurage-50 text-kurage-700 rounded-full w-6 h-6 flex items-center justify-center text-xs font-bold">1</span>
+              <span><b class="text-gray-800">取り込みアドレスをコピー</b><br />Slackで <code class="bg-gray-100 px-1.5 py-0.5 rounded text-xs">/setting</code> を開き、<b>下にスクロール</b>して「📨 メール連携」セクションへ。表示される<b>あなた専用のアドレス</b>（<code class="bg-gray-100 px-1.5 py-0.5 rounded text-xs">u…@kuragedeal.ai</code>）をコピーします。<br /><span class="text-gray-400">※ このアドレスはあなた専用です。他の人と共有しないでください。</span></span>
+            </li>
+            <li class="flex gap-3">
+              <span class="shrink-0 bg-kurage-50 text-kurage-700 rounded-full w-6 h-6 flex items-center justify-center text-xs font-bold">2</span>
+              <span><b class="text-gray-800">顧客メールを転送</b><br /><b>Gmail</b>：個別メールを「転送」でそのアドレスへ。特定の顧客を自動で取り込むなら、設定→フィルタで「条件に一致したら転送」も可能です。<br /><b>Outlook</b>：メールを「転送」、または ルールで自動転送。<br /><span class="text-gray-400">※ 手動転送（Gmail / Outlook / Apple メール）にそのまま対応しています。</span></span>
+            </li>
+            <li class="flex gap-3">
+              <span class="shrink-0 bg-kurage-50 text-kurage-700 rounded-full w-6 h-6 flex items-center justify-center text-xs font-bold">3</span>
+              <span><b class="text-gray-800">Slack で返信を承認</b><br />クラゲが <b>返信ドラフト</b>を Slack の DM に届けます。<b>「このまま送信／修正して送信／送らない／自分で対応」</b>から選ぶだけ。承認すると、あなたの<b>送信元アドレスから</b>返信が送られます。</span>
+            </li>
+          </ol>
+          <div class="mt-5 bg-kurage-50 border border-kurage-100 rounded-xl p-4 text-xs text-gray-600 leading-relaxed">
+            <b class="text-gray-800">事前に1つだけ：</b> 返信を送るには、<code class="bg-white px-1.5 py-0.5 rounded">/setting</code> の「✉️ 送信元メールアドレス」であなたのアドレスを設定・認証しておいてください（認証が済むとクラゲがそのアドレスから返信できます）。<br />
+            <b class="text-gray-800">中身の無いメールには返信案を作りません：</b> テスト送信や自動通知など実質的な問い合わせが無いメールは、クラゲが判断して返信ドラフトをスキップします（活動メモには記録されます）。
+          </div>
         </div>
       </section>
 
