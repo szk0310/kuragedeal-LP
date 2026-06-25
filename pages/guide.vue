@@ -34,7 +34,7 @@
         <p class="text-sm text-gray-700 leading-relaxed">
           何をすればいいか迷ったら、DM で <b>「メニュー」</b> と打つか、左サイドバーの <b>クラゲディール →「ホーム」タブ</b>を開いてください。
           <b>「👉 今のおすすめ」</b>（フォローすべき相手・次の一手など）と、<b>ボタンメニュー</b>（顧客を登録／活動をメモ／ディールを登録／状況を見る）が出ます。
-          あとは<b>選ぶだけ</b>。クラゲが 1 ステップずつ案内します（イージーモード）。慣れたら <code class="bg-white px-1 rounded text-xs">/setting</code> でエキスパートに切り替えできます。
+          あとは<b>選ぶだけ</b>。クラゲが 1 ステップずつ案内します（<b>ボタンモード</b>）。慣れたら <code class="bg-white px-1 rounded text-xs">/setting</code> で<b>会話モード</b>（自然文ひとつ）に切り替えできます。
         </p>
       </div>
 
@@ -223,7 +223,7 @@
             <li class="flex gap-3"><span class="shrink-0">📋</span><span><b class="text-gray-800">AI営業ポリシー</b> — クラゲの提案トーンを指定（例：「押し売りしない・課題解決型」）。</span></li>
             <li class="flex gap-3"><span class="shrink-0">✉️</span><span><b class="text-gray-800">送信元メールアドレス</b> — 返信を送るときに使う、あなたのアドレス。</span></li>
             <li class="flex gap-3"><span class="shrink-0">🌐</span><span><b class="text-gray-800">Webダッシュボード</b> — 個人ログインキーの発行（上の手順）。</span></li>
-            <li class="flex gap-3"><span class="shrink-0">🧭</span><span><b class="text-gray-800">操作モード</b> — <b>イージー</b>（ボタン中心でクラゲが案内・初心者向け・既定）／<b>エキスパート</b>（自然文ひとつで軽快）を切り替えられます。</span></li>
+            <li class="flex gap-3"><span class="shrink-0">🧭</span><span><b class="text-gray-800">操作モード</b> — <b>ボタンモード</b>（ボタン中心でクラゲが案内・既定）／<b>会話モード</b>（自然文ひとつで軽快）を切り替えられます。</span></li>
             <li class="flex gap-3"><span class="shrink-0">🎓</span><span><b class="text-gray-800">学習モード（サンプルデータ）</b> — <b>「🎓 サンプルを入れる」</b>で【見本】データを投入し、一覧・受注確率・次の一手を<b>すぐ体験</b>できます。<b>「🧹 サンプルを削除」</b>で見本だけ消えます（あなたの実データは残ります）。</span></li>
           </ul>
         </div>

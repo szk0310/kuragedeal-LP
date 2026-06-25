@@ -89,6 +89,31 @@
     </section>
 
     <!-- ============================================================
+         01.6. 2つのモード（誰でも使える）
+    ============================================================ -->
+    <section class="bg-white py-16 md:py-20 border-t border-gray-100">
+      <div class="max-w-5xl mx-auto px-4 sm:px-6">
+        <div class="text-center mb-10">
+          <h2 class="text-2xl md:text-3xl font-black text-gray-900 mb-3">誰でも使える、2つのモード。</h2>
+          <p class="text-gray-600 leading-relaxed">むずかしければボタン、慣れたら一言。<b>いつでも切り替えられます。</b></p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+          <div class="bg-kurage-50 rounded-2xl border border-kurage-200 p-6 md:p-7">
+            <p class="text-lg font-black text-gray-900 mb-2">🟢 ボタンモード</p>
+            <p class="text-sm text-gray-700 leading-relaxed">クラゲが「次はこれ」と<b>ボタンで案内</b>。タップして選ぶだけ。何をすればいいか迷いません。<br /><span class="text-gray-500">＝はじめての人・営業ツールが苦手な人に。</span></p>
+          </div>
+          <div class="bg-ocean-mist/40 rounded-2xl border border-ocean-tan/30 p-6 md:p-7">
+            <p class="text-lg font-black text-gray-900 mb-2">⚡ 会話モード</p>
+            <p class="text-sm text-gray-700 leading-relaxed">「ABC商事と商談、競合が一社」と<b>一言書くだけ</b>。慣れた人は最速で記録。<br /><span class="text-gray-500">＝サクサク進めたい人に。</span></p>
+          </div>
+        </div>
+        <p class="text-center text-sm text-gray-500 mt-8 leading-relaxed">
+          上達を強制しません。<b>あなたのスタイルで、ずっと使えます。</b>
+        </p>
+      </div>
+    </section>
+
+    <!-- ============================================================
          02. ターゲット
     ============================================================ -->
     <section class="bg-ocean-steel/75 py-12">
