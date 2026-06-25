@@ -245,7 +245,7 @@
             </li>
             <li class="flex gap-3">
               <span class="shrink-0 bg-kurage-50 text-kurage-700 rounded-full w-6 h-6 flex items-center justify-center text-xs font-bold">2</span>
-              <span><b class="text-gray-800">顧客メールを転送</b><br /><b>Gmail / Outlook / Apple メール</b>：取り込みたいメールを「転送」でそのアドレスへ送るだけ。<br /><span class="text-gray-400">※ 条件に合うメールを自動で取り込む「自動転送」にも順次対応していきます。</span></span>
+              <span><b class="text-gray-800">顧客メールを転送</b><br /><b>方法①：手動で転送（かんたん・確実）</b> — 取り込みたいメールを「転送」で上のアドレスへ送るだけ。<br /><b>方法②：特定の顧客を自動で取り込む</b> — Gmail の「メール転送と POP/IMAP」で<b>転送先に上のアドレスを追加</b> → クラゲから届く<b>確認リンクをクリック</b>して有効化 → <b>フィルタ</b>で「その顧客 → 転送」に設定。<br /><span class="text-gray-400">※「受信メールを“すべて”転送」は選ばないでください（顧客以外のメールも入ってしまいます）。フィルタ設定の詳しい手順は、準備中のヘルプページでご案内します。</span></span>
             </li>
             <li class="flex gap-3">
               <span class="shrink-0 bg-kurage-50 text-kurage-700 rounded-full w-6 h-6 flex items-center justify-center text-xs font-bold">3</span>
