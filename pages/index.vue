@@ -746,8 +746,8 @@
             <div class="flex gap-4">
               <div class="flex-shrink-0 w-8 h-8 rounded-full bg-kurage-500 text-white font-bold flex items-center justify-center text-sm">1</div>
               <div>
-                <p class="font-bold text-gray-900 mb-1">顧客から返信が届く</p>
-                <p class="text-sm text-gray-700 leading-relaxed">Gmail / Outlook 等、既存メールはそのまま使用。</p>
+                <p class="font-bold text-gray-900 mb-1">顧客から届いたメールを転送</p>
+                <p class="text-sm text-gray-700 leading-relaxed">顧客から届いたメールを、クラゲの専用アドレスに転送することで返信文をクラゲが考えてくれます。Gmail / Outlook はそのまま使えます。</p>
               </div>
             </div>
             <div class="flex gap-4">
@@ -761,7 +761,7 @@
               <div class="flex-shrink-0 w-8 h-8 rounded-full bg-kurage-500 text-white font-bold flex items-center justify-center text-sm">3</div>
               <div>
                 <p class="font-bold text-gray-900 mb-1">Slack で確認 → ワンクリックで送信</p>
-                <p class="text-sm text-gray-700 leading-relaxed">そのまま送る / 編集する / 送らない、を 3 ボタンで判断。</p>
+                <p class="text-sm text-gray-700 leading-relaxed">そのまま送る / 編集する / 送らない、をボタンで判断。</p>
               </div>
             </div>
             <div class="flex gap-4">

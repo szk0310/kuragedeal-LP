@@ -245,7 +245,7 @@
             </li>
             <li class="flex gap-3">
               <span class="shrink-0 bg-kurage-50 text-kurage-700 rounded-full w-6 h-6 flex items-center justify-center text-xs font-bold">2</span>
-              <span><b class="text-gray-800">顧客メールを転送</b><br /><b>Gmail</b>：個別メールを「転送」でそのアドレスへ。特定の顧客を自動で取り込むなら、設定→フィルタで「条件に一致したら転送」も可能です。<br /><b>Outlook</b>：メールを「転送」、または ルールで自動転送。<br /><span class="text-gray-400">※ 手動転送（Gmail / Outlook / Apple メール）にそのまま対応しています。</span></span>
+              <span><b class="text-gray-800">顧客メールを転送</b><br /><b>Gmail / Outlook / Apple メール</b>：取り込みたいメールを「転送」でそのアドレスへ送るだけ。<br /><span class="text-gray-400">※ 条件に合うメールを自動で取り込む「自動転送」にも順次対応していきます。</span></span>
             </li>
             <li class="flex gap-3">
               <span class="shrink-0 bg-kurage-50 text-kurage-700 rounded-full w-6 h-6 flex items-center justify-center text-xs font-bold">3</span>
