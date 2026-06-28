@@ -159,7 +159,7 @@
               クラゲディールは、シンプルな 3 段階の料金体系。枠内ならユーザー数が増えても月額は変わりません。
             </p>
             <div class="bg-orange-50 border border-orange-200 rounded-xl p-4 text-sm text-gray-700 leading-relaxed">
-              <strong class="text-orange-600">★</strong> 今なら <strong class="text-orange-600">3 ヶ月無料</strong>の β 試用を提供中（〜9/15・クレジットカード不要）。Slack に追加するだけで、その日からご利用いただけます。
+              <strong class="text-orange-600">★</strong> 今なら <strong class="text-orange-600">3 ヶ月無料</strong>の β 試用を提供中（〜10/15・クレジットカード不要）。Slack に追加するだけで、その日からご利用いただけます。
             </div>
           </div>
 
@@ -252,7 +252,7 @@
             ★ 上記は正式版の料金です。正式版では全プラン共通で、14 日間の無料トライアルが付きます。
           </p>
           <p class="text-xs text-gray-500 mt-1">
-            β 参加プログラムに登録すると、9/15 まで全機能を無料でお使いいただけます（クレジットカードの入力は不要です）。
+            β 参加プログラムに登録すると、10/15 まで全機能を無料でお使いいただけます（クレジットカードの入力は不要です）。
           </p>
         </div>
 
@@ -291,14 +291,14 @@
         <div class="bg-gradient-to-br from-orange-50 via-orange-100 to-amber-50 border-2 border-orange-400 rounded-2xl p-8 md:p-10 shadow-lg">
           <div class="text-center mb-6">
             <div class="inline-block bg-orange-500 text-white text-xs font-bold px-3 py-1 rounded-full mb-3">
-              3 ヶ月間、全機能を無料で（9/15 まで）
+              3 ヶ月間、全機能を無料で（10/15 まで）
             </div>
             <h3 class="text-2xl md:text-3xl font-black text-gray-900 mb-2">β 参加プログラム</h3>
           </div>
 
           <div class="bg-white rounded-xl p-6 mb-6 text-center">
             <p class="text-3xl md:text-4xl font-black text-orange-600 mb-2">3 ヶ月無料</p>
-            <p class="text-base text-gray-700">9/15 まで、すべての機能を無料でお試しいただけます。</p>
+            <p class="text-base text-gray-700">10/15 まで、すべての機能を無料でお試しいただけます。</p>
           </div>
 
           <div class="flex justify-center mb-6">
@@ -582,17 +582,17 @@
         </p>
         <p class="text-base text-kurage-100 mb-10 leading-relaxed">
           もし「自分の営業チームに合いそうだ」と思ったなら、<br />
-          9/15 まで、3 ヶ月間ぼくを試してみてください。<br />
+          10/15 まで、3 ヶ月間ぼくを試してみてください。<br />
           <span class="text-kurage-200 text-sm">きみが使うたびに、ぼくは覚えていきます。</span>
         </p>
 
         <!-- β 試用（self-serve 主訴求を最大化、副 CTA なし） -->
         <div class="bg-orange-500/15 border border-orange-400/40 rounded-2xl p-6 md:p-8 mb-8">
-          <p class="text-base font-bold text-orange-200 mb-3 text-center">3 ヶ月間、無料で試せます（9/15 まで）。</p>
+          <p class="text-base font-bold text-orange-200 mb-3 text-center">3 ヶ月間、無料で試せます（10/15 まで）。</p>
           <div class="flex justify-center mb-5">
             <ul class="space-y-2 text-sm text-kurage-50 inline-block text-left">
               <li>✅ Slack に追加するだけで、すぐに使えます</li>
-              <li>✅ 9/15 まで、すべての機能を完全無料で</li>
+              <li>✅ 10/15 まで、すべての機能を完全無料で</li>
               <li>✅ クレジットカードの入力は不要です</li>
               <li>✅ データはいつでも CSV / Excel エクスポート可能</li>
             </ul>
@@ -707,7 +707,7 @@ const pioneers = [
 const faqs = [
   {
     q: 'β 試用は本当に無料ですか？',
-    a: 'はい。クレジットカードの入力は不要です。\n3 ヶ月間（9/15 まで）、すべての機能を無料でお試しいただけます。Slack に追加すれば、すぐにお使いいただけます。\n継続オプションの詳細は /beta ページでご案内しています。',
+    a: 'はい。クレジットカードの入力は不要です。\n3 ヶ月間（10/15 まで）、すべての機能を無料でお試しいただけます。Slack に追加すれば、すぐにお使いいただけます。\n継続オプションの詳細は /beta ページでご案内しています。',
   },
   {
     q: '従来の Slack 連携 CRM との違いは？',
@@ -752,7 +752,7 @@ usePageSeo({
   path: '/',
   title: 'クラゲディール — Slackだけで完結するAI営業CRM',
   description:
-    'Slack に一言書くだけで CRM 入力が完了。AI が営業コーチとして毎朝ブリーフィングし、受注確率・次のアクション・メール下書きを支援します。1〜10 人の営業チームで月¥9,800。いまならβ版を 3 ヶ月無料（9/15 まで・クレカ不要）。',
+    'Slack に一言書くだけで CRM 入力が完了。AI が営業コーチとして毎朝ブリーフィングし、受注確率・次のアクション・メール下書きを支援します。1〜10 人の営業チームで月¥9,800。いまならβ版を 3 ヶ月無料（10/15 まで・クレカ不要）。',
 })
 
 // SoftwareApplication 構造化データ（料金は正準モデルに一致。虚偽 rating は入れない）
@@ -768,10 +768,10 @@ const softwareLd = {
   offers: [
     {
       '@type': 'Offer',
-      name: 'β 試用（3 ヶ月無料・2026/9/15 まで）',
+      name: 'β 試用（3 ヶ月無料・2026/10/15 まで）',
       price: 0,
       priceCurrency: 'JPY',
-      description: 'β 期間中は全機能を 3 ヶ月無料で利用可能（2026/9/15 一斉終了・クレジットカード不要）。',
+      description: 'β 期間中は全機能を 3 ヶ月無料で利用可能（2026/10/15 一斉終了・クレジットカード不要）。',
     },
     {
       '@type': 'Offer',
