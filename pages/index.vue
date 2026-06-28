@@ -16,17 +16,17 @@
         <div class="flex flex-col lg:flex-row items-center gap-12">
           <div class="flex-1">
             <h1 class="text-4xl md:text-5xl lg:text-6xl font-black mb-6 leading-tight">
-              <span class="block mb-4">押すだけ、書くだけ。</span>
-              <span class="text-cyan-50">ディールが、前に進む。</span>
+              <span class="block mb-4">Slack のクラゲくんに、話しかけるだけ。</span>
+              <span class="text-cyan-50">それで、ディールが前に進みます。</span>
             </h1>
 
             <p class="text-lg text-kurage-100 mb-4 max-w-2xl leading-relaxed">
               クラゲディールは、Slack で<b>ボタンを押すだけ</b>。<br />
               操作の学習はゼロ。営業が得意でなくても、<br />
-              今日から続く Slack ネイティブな AI 営業ツールです。
+              今日から始められる Slack ネイティブな AI 営業支援ツールです。
             </p>
             <p class="text-base text-cyan-50 font-bold mb-10 max-w-2xl leading-relaxed">
-              はじめてでも迷わない「ボタンモード」と、慣れたら一言で完結する「会話モード」。あなたに合うほうで、はじめられます。
+              はじめてでも迷わない「ボタンモード」と、慣れたら一言で完結する「会話モード」。どちらのモードでも、入力ストレスゼロの気持ちよさ！
             </p>
 
             <!-- CTA（phase1: β 試用 self-serve 主 CTA 一本のみ）-->
@@ -179,16 +179,17 @@
     ============================================================ -->
     <section class="bg-ocean-deep py-20 text-white">
       <div class="max-w-3xl mx-auto px-4 sm:px-6 text-center">
-        <p class="text-sm font-bold text-cyan-300 uppercase tracking-widest mb-4">他のツールとの違い</p>
+        <p class="text-base md:text-lg font-bold text-cyan-300 uppercase tracking-widest mb-4">他のツールとの違い</p>
         <h2 class="text-3xl md:text-4xl font-black mb-8 leading-relaxed">
           <span class="block mb-3">いちばん軽いメモが、</span>
           <span class="block">いちばん賢い営業になる。</span>
         </h2>
-        <p class="text-lg text-kurage-100 max-w-2xl mx-auto leading-relaxed">
-          ふつうの CRM は、別の画面を開いて、項目を入力するツールです。<br />
-          クラゲディールは、<span class="text-white font-bold">Slack に話すだけ。</span>新しいアプリを開かない。<br />
-          <span class="text-white font-bold">画面遷移も、項目入力も、ありません。</span><br />
-          通知だけ届く “Slack の出張所” ではなく、<span class="text-white font-bold">Slack そのものが営業ツール</span>です。
+        <p class="text-lg md:text-xl text-kurage-100 max-w-2xl mx-auto leading-relaxed">
+          ふつうの CRM は、たくさんの画面を開いて、必要な項目を探して入力します。<br />
+          毎日の作業で、これが地味に手間になります。<br />
+          クラゲディールは、Slack にいるクラゲくんにメモするだけ。<br />
+          それだけで、<span class="text-white font-bold">AI 機能が営業活動を自動でサポートしてくれます。</span><br />
+          余った時間は、あなたのためだけに使ってください。
         </p>
       </div>
     </section>
@@ -251,36 +252,36 @@
             ★ 上記は正式版の料金です。正式版では全プラン共通で、14 日間の無料トライアルが付きます。
           </p>
           <p class="text-xs text-gray-500 mt-1">
-            いまは下記のβ版なら、9/15 まで全機能を無料でお使いいただけます（クレジットカード入力不要）。
+            β 参加プログラムに登録すると、9/15 まで全機能を無料でお使いいただけます（クレジットカードの入力は不要です）。
           </p>
         </div>
 
         <!-- 大企業向けCRMとの料金比較 -->
-        <p class="text-center text-sm font-bold text-gray-600 uppercase tracking-widest mb-4">大企業向けCRMとの料金比較</p>
+        <p class="text-center text-lg md:text-xl font-bold text-gray-600 mb-4">大企業向けCRMとの料金比較</p>
         <div class="bg-white rounded-2xl border border-gray-200 p-6 md:p-8 mb-12 shadow-sm overflow-x-auto">
           <table class="w-full text-sm text-center min-w-[400px]">
             <thead>
               <tr class="border-b-2 border-gray-200">
                 <th class="pb-3 text-gray-500 font-normal">チーム規模</th>
                 <th class="pb-3 text-kurage-700 font-black">クラゲディール</th>
-                <th class="pb-3 text-gray-500 font-normal text-xs">大企業向けCRM</th>
+                <th class="pb-3 text-gray-500 font-normal text-sm">大企業向けCRM</th>
               </tr>
             </thead>
             <tbody class="divide-y divide-gray-100">
               <tr>
                 <td class="py-3 text-gray-600 font-bold">1 人</td>
                 <td class="py-3 font-black text-xl text-kurage-600">¥1,980<span class="text-xs font-normal text-gray-400">/月</span></td>
-                <td class="py-3 text-gray-500 text-xl">約 ¥16,000〜¥21,000/月</td>
+                <td class="py-3 text-gray-500 text-base">約 ¥16,000〜¥21,000/月</td>
               </tr>
               <tr>
                 <td class="py-3 text-gray-600 font-bold">3 人</td>
                 <td class="py-3 font-black text-xl text-kurage-600">¥4,980<span class="text-xs font-normal text-gray-400">/月</span></td>
-                <td class="py-3 text-gray-500 text-xl">約 ¥48,000〜¥63,000/月</td>
+                <td class="py-3 text-gray-500 text-base">約 ¥48,000〜¥63,000/月</td>
               </tr>
               <tr>
                 <td class="py-3 text-gray-600 font-bold">10 人</td>
                 <td class="py-3 font-black text-xl text-orange-500">¥9,800<span class="text-xs font-normal text-gray-400">/月</span></td>
-                <td class="py-3 text-gray-500 text-xl">約 ¥160,000〜¥210,000/月</td>
+                <td class="py-3 text-gray-500 text-base">約 ¥160,000〜¥210,000/月</td>
               </tr>
             </tbody>
           </table>
@@ -297,15 +298,14 @@
 
           <div class="bg-white rounded-xl p-6 mb-6 text-center">
             <p class="text-3xl md:text-4xl font-black text-orange-600 mb-2">3 ヶ月無料</p>
-            <p class="text-sm text-gray-700">9/15 まで、すべての機能を、クレジットカードなしでお使いいただけます。</p>
-            <p class="text-sm text-gray-700 font-bold mt-3">Slack に追加すれば、すぐに使えます。</p>
+            <p class="text-base text-gray-700">9/15 まで、すべての機能を無料でお試しいただけます。</p>
           </div>
 
           <div class="flex justify-center mb-6">
             <ul class="text-sm text-gray-700 leading-relaxed space-y-1.5 inline-block text-left">
-              <li>✅ Slack に追加するだけで、すぐに使えます</li>
-              <li>✅ クレジットカード入力不要</li>
-              <li>✅ データはいつでも CSV / Excel でエクスポート可能</li>
+              <li>✅ Slack に追加するだけで、すぐにお使いいただけます</li>
+              <li>✅ クレジットカードの入力は不要です</li>
+              <li>✅ データはいつでも CSV / Excel でエクスポートできます</li>
             </ul>
           </div>
 
@@ -316,7 +316,7 @@
             >
               β 版を試す →
             </a>
-            <p class="text-xs text-gray-600 mt-3">
+            <p class="text-sm text-gray-600 mt-3">
               継続オプションの詳細は /beta ページでご案内しています。
             </p>
           </div>
@@ -472,7 +472,7 @@
             </SlackBotLine>
           </SlackMessageMock>
         </div>
-        <p class="text-center text-sm text-gray-600 mb-12 italic">ボタン 1 つで承認 → お客様には鈴木さん本人の社内アドレスから送信。</p>
+        <p class="text-center text-base text-gray-600 mb-12 italic">ボタン 1 つで承認すると、お客様には鈴木さん本人の社内アドレスから送信されます。</p>
 
         <!-- 3 つの特徴チップ -->
         <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
@@ -607,17 +607,6 @@
           </div>
         </div>
 
-        <p class="text-xs text-kurage-200 mb-3">
-          それまで、note と X で開発状況をお伝えしています。
-        </p>
-        <div class="flex justify-center gap-4 mb-10 text-xs text-kurage-200">
-          <a href="#" class="underline hover:text-white">note</a>
-          <a href="#" class="underline hover:text-white">X</a>
-        </div>
-
-        <p class="text-kurage-300 text-xs">
-          🌊 売上の一部は、<a href="https://www.nippon-foundation.or.jp/donation/ocean-project-fund" target="_blank" rel="noopener" class="underline hover:text-white transition-colors">日本財団 海洋プロジェクト基金</a>に寄付されます。
-        </p>
       </div>
     </section>
 
