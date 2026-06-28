@@ -39,7 +39,7 @@
                 β アクセスを 2026 年 11 月 17 日まで自動延長
               </h3>
               <p class="text-sm text-gray-700 leading-relaxed mb-2">
-                試用が 10/15 で切れず、正式版（11/18）まで連続利用可能。
+                試用が 10/15 で切れず、正式版（11/18 予定）まで連続して利用できます。
               </p>
               <p class="text-xs text-gray-600 leading-relaxed bg-white rounded p-3 border border-orange-200">
                 <strong class="text-orange-700">★ β 経験者が応募した場合のみ</strong>有効です。
@@ -249,7 +249,7 @@ usePageSeo({
   path: '/waitlist',
   title: 'ウェイトリスト | クラゲディール',
   description:
-    'クラゲディールのウェイトリスト。10/15 までに応募すると、βアクセスが 11/17 まで自動延長され正式版（11/18 目標）まで連続利用でき、さらに正式版から 1 年間 50% OFF で継続できます。先行 100 社限定。',
+    'クラゲディールのウェイトリスト。10/15 までに応募すると、βアクセスが 11/17 まで自動延長され正式版（11/18 予定）まで連続して利用でき、さらに正式版から 1 年間 50% OFF で継続できます。先行 100 社限定。',
 })
 
 const runtimeConfig = useRuntimeConfig()
