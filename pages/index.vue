@@ -55,58 +55,54 @@
     </section>
 
     <!-- ============================================================
-         01.5. こう使う（速読でも30秒で伝わる）
+         01.5 誰でも使える、2つのモード（こう使う統合・ビジュアル）
     ============================================================ -->
     <section class="bg-white py-16 md:py-20">
       <div class="max-w-5xl mx-auto px-4 sm:px-6">
         <div class="text-center mb-10">
-          <h2 class="text-2xl md:text-3xl font-black text-gray-900 mb-3">クラゲディールは、こう使う。</h2>
-          <p class="text-gray-600 leading-relaxed">むずかしい操作はありません。<b>ボタンを押す</b>か、Slack にいつもどおり書くだけ。</p>
-        </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
-          <div
-            v-for="(s, i) in usageSteps"
-            :key="i"
-            class="bg-ocean-mist/30 rounded-2xl border border-ocean-tan/30 p-6"
-          >
-            <p class="text-sm font-black text-kurage-600 mb-4">{{ s.label }}</p>
-            <div class="flex gap-3 mb-3">
-              <span class="text-2xl flex-shrink-0">👤</span>
-              <p class="text-sm text-gray-800 leading-relaxed"><span class="font-bold">あなた</span><br />{{ s.you }}</p>
-            </div>
-            <div class="flex gap-3 pt-3 border-t border-ocean-tan/40">
-              <span class="text-2xl flex-shrink-0">🪼</span>
-              <p class="text-sm text-gray-800 leading-relaxed"><span class="font-bold text-kurage-700">クラゲ</span><br /><span v-html="s.kurage" /></p>
-            </div>
-          </div>
-        </div>
-
-        <p class="text-center text-base md:text-lg font-bold text-gray-800 mt-10 leading-relaxed">
-          —— 覚えること、ゼロ。いつもの Slack が、そのまま営業ツールになります。
-        </p>
-      </div>
-    </section>
-
-    <!-- ============================================================
-         01.6. 2つのモード（誰でも使える）
-    ============================================================ -->
-    <section class="bg-white py-16 md:py-20 border-t border-gray-100">
-      <div class="max-w-5xl mx-auto px-4 sm:px-6">
-        <div class="text-center mb-10">
           <h2 class="text-2xl md:text-3xl font-black text-gray-900 mb-3">誰でも使える、2つのモード。</h2>
-          <p class="text-gray-600 leading-relaxed">むずかしければボタン、慣れたら一言。<b>いつでも切り替えられます。</b></p>
+          <p class="text-gray-600 leading-relaxed">むずかしい操作はありません。<b>ボタンを押す</b>か、<b>いつもどおり書く</b>だけ。いつでも切り替えOK。</p>
         </div>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
-          <div class="bg-kurage-50 rounded-2xl border border-kurage-200 p-6 md:p-7">
-            <p class="text-lg font-black text-gray-900 mb-2">🟢 ボタンモード</p>
-            <p class="text-sm text-gray-700 leading-relaxed">クラゲが「次はこれ」と<b>ボタンで案内</b>。タップして選ぶだけ。何をすればいいか迷いません。<br /><span class="text-gray-500">＝はじめての人・営業ツールが苦手な人に。</span></p>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <!-- ボタンモード（既定） -->
+          <div class="bg-kurage-50 rounded-2xl border border-kurage-200 p-6">
+            <div class="flex items-center gap-2 mb-1">
+              <p class="text-lg font-black text-gray-900">🟢 ボタンモード</p>
+              <span class="text-[10px] font-bold px-1.5 py-0.5 rounded bg-kurage-600 text-white">既定</span>
+            </div>
+            <p class="text-sm text-gray-700 leading-relaxed mb-4">クラゲが「次はこれ」と<b>ボタンで案内</b>。タップして選ぶだけ。何をすればいいか、迷いません。</p>
+            <SlackMessageMock channel-name="💬 クラゲディール（DM）">
+              <SlackBotLine name="クラゲディール" :bot-badge="true" time="9:00">
+                <p class="font-bold mb-2">👉 何をしますか？</p>
+                <div class="flex flex-wrap gap-2">
+                  <span class="inline-block border border-gray-300 bg-white rounded-md px-3 py-1.5 text-xs font-semibold text-gray-800">👤 顧客を登録</span>
+                  <span class="inline-block border border-gray-300 bg-white rounded-md px-3 py-1.5 text-xs font-semibold text-gray-800">📝 活動をメモ</span>
+                  <span class="inline-block border border-gray-300 bg-white rounded-md px-3 py-1.5 text-xs font-semibold text-gray-800">📊 ディールを登録</span>
+                  <span class="inline-block border border-gray-300 bg-white rounded-md px-3 py-1.5 text-xs font-semibold text-gray-800">🎯 次にやること</span>
+                </div>
+              </SlackBotLine>
+            </SlackMessageMock>
+            <p class="text-xs text-gray-500 mt-3">＝ はじめての人・営業ツールが苦手な人に。</p>
           </div>
-          <div class="bg-ocean-mist/40 rounded-2xl border border-ocean-tan/30 p-6 md:p-7">
-            <p class="text-lg font-black text-gray-900 mb-2">⚡ 会話モード</p>
-            <p class="text-sm text-gray-700 leading-relaxed">「ABC商事と商談、競合が一社」と<b>一言書くだけ</b>。慣れた人は最速で記録。<br /><span class="text-gray-500">＝サクサク進めたい人に。</span></p>
+
+          <!-- 会話モード -->
+          <div class="bg-ocean-mist/40 rounded-2xl border border-ocean-tan/30 p-6">
+            <p class="text-lg font-black text-gray-900 mb-1">⚡ 会話モード</p>
+            <p class="text-sm text-gray-700 leading-relaxed mb-4">「ABC商事と商談、競合が一社」と<b>一言書くだけ</b>。慣れた人は、最速で記録。</p>
+            <SlackMessageMock channel-name="💬 クラゲディール（DM）">
+              <SlackBotLine name="あなた" :is-user="true" time="14:30">
+                <p>ABC商事と商談。予算500万、競合は1社</p>
+              </SlackBotLine>
+              <SlackBotLine name="クラゲディール" :bot-badge="true" time="14:30">
+                <p class="font-bold mb-1">✅ 記録しました</p>
+                <p class="text-xs text-gray-600">受注確率 48% → 62% に更新。次の一手は「決裁者との接点づくり」🪼</p>
+              </SlackBotLine>
+            </SlackMessageMock>
+            <p class="text-xs text-gray-500 mt-3">＝ サクサク進めたい人に。</p>
           </div>
         </div>
+
         <p class="text-center text-sm text-gray-500 mt-8 leading-relaxed">
           上達を強制しません。<b>あなたのスタイルで、ずっと使えます。</b>
         </p>
@@ -634,12 +630,6 @@
 // LP_FULL_COPY 最新版: ウェイトリスト関連 CTA は /beta ページ内のみで提示
 // （メイン LP は β 試用の self-serve 主訴求を最大化、副 CTA なし）
 
-const usageSteps = [
-  { label: '① 記録する', you: '「ABC 商事と商談。予算 500 万、競合は 1 社」と Slack にメモ', kurage: '商談を自動で記録し、<strong>受注確率と次の一手</strong>まで返します' },
-  { label: '② 朝の段取り', you: '朝、いつもどおり Slack を開く', kurage: '「今日やるべき 3 件」「14 日ほったらかしの案件」を<strong>先にお知らせ</strong>' },
-  { label: '③ メール返信', you: 'お客様から返信メールが届く', kurage: '返信文を下書き → <strong>ボタンひとつで、あなたの名前で送信</strong>' },
-  { label: '④ ふりかえり・相談', you: '「ABC 商事、どうなってたっけ？」と聞く', kurage: 'これまでの経緯と、<strong>次にやるべきこと</strong>を即答' },
-]
 
 const personas = [
   { icon: '🏢', text: '社員5人のIT企業。社長が営業も兼務。商談管理はスプレッドシート' },
