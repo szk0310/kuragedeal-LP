@@ -80,11 +80,21 @@
               </div>
             </SlackBotLine>
           </SlackMessageMock>
+          <div class="bg-white rounded-xl border border-gray-200 p-4 text-sm">
+            <p class="font-bold text-gray-900 mb-2">ボタンでできること</p>
+            <ul class="space-y-1.5 text-gray-700">
+              <li>👤 <b>顧客を登録</b> — 名前と会社を聞かれるので、ボタンと入力で進めます</li>
+              <li>📝 <b>活動をメモ</b> — 誰の・どんな活動かをボタンで選び、ひとこと添えます</li>
+              <li>📊 <b>ディールを登録</b> — 会社・ステージ・金額を、ボタンと入力で</li>
+              <li>📋 <b>状況を見る</b> — 顧客一覧・会社一覧・ディール一覧をボタンで表示します</li>
+              <li>🎯 <b>次にやること</b> — いまフォローすべき相手を、クラゲくんがおすすめします</li>
+            </ul>
+          </div>
           <p class="text-xs text-gray-500">迷ったら、いつでも <b>「メニュー」</b> と打てば、ここに戻ってこられます。</p>
         </div>
 
         <!-- 会話モード -->
-        <div v-show="guideMode === 'talk'" class="space-y-4">
+        <div v-show="guideMode === 'talk'" class="space-y-5">
           <p class="text-sm text-gray-700 leading-relaxed">ふだんの言葉で、<b>そのまま書くだけ</b>。同僚に報告するみたいに、一言どうぞ。慣れてきたら、こちらが最速です。</p>
           <SlackMessageMock channel-name="💬 クラゲディール（DM）">
             <SlackBotLine name="あなた" :is-user="true" time="14:30"><p>田中さんを顧客に追加して。会社はABC商事</p></SlackBotLine>
@@ -92,6 +102,45 @@
             <SlackBotLine name="あなた" :is-user="true" time="14:31"><p>田中さんと商談しました。予算300万、競合は1社</p></SlackBotLine>
             <SlackBotLine name="クラゲディール" :bot-badge="true" time="14:31"><p>✅ 記録しました。受注確率を更新しました。次にやることも、そっとお知らせします🪼</p></SlackBotLine>
           </SlackMessageMock>
+
+          <div>
+            <p class="font-bold text-gray-900 mb-2 text-sm">こんなふうに書けます</p>
+            <div class="space-y-3">
+              <div class="bg-gray-50 rounded-xl p-4">
+                <p class="text-xs text-gray-400 mb-1 font-semibold">まずは顧客を登録</p>
+                <p class="font-mono text-sm text-gray-800">田中さんを顧客に追加して。会社はABC商事</p>
+              </div>
+              <div class="bg-gray-50 rounded-xl p-4">
+                <p class="text-xs text-gray-400 mb-1 font-semibold">活動メモを記録（最もよく使う）</p>
+                <p class="font-mono text-sm text-gray-800">田中さん、今日オンライン商談しました。予算は300万、来月末までに決める方向で話が進んでいます。</p>
+              </div>
+              <div class="bg-gray-50 rounded-xl p-4">
+                <p class="text-xs text-gray-400 mb-1 font-semibold">メールした記録</p>
+                <p class="font-mono text-sm text-gray-800">田中さんにメールしました。提案書を送付、来週返事をもらう予定。</p>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <p class="font-bold text-gray-900 mb-2 text-sm">よく使うフレーズ一覧</p>
+            <div class="bg-white rounded-2xl border border-gray-200 shadow-sm overflow-hidden">
+              <table class="w-full text-sm">
+                <thead>
+                  <tr class="bg-gray-50 border-b border-gray-200">
+                    <th class="text-left px-5 py-3 font-semibold text-gray-700 w-1/2">Slackで入力</th>
+                    <th class="text-left px-5 py-3 font-semibold text-gray-700">動作</th>
+                  </tr>
+                </thead>
+                <tbody class="divide-y divide-gray-100">
+                  <tr v-for="ex in examples" :key="ex.input">
+                    <td class="px-5 py-3 font-mono text-gray-800">{{ ex.input }}</td>
+                    <td class="px-5 py-3 text-gray-500">{{ ex.action }}</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
           <p class="text-xs text-gray-500">うまく伝わらない時は、もう少しくわしく書くか、<b>「メニュー」</b>でボタンに切り替えられます。</p>
         </div>
       </section>
@@ -156,59 +205,16 @@
         </div>
       </section>
 
-      <!-- Step 1: 最初にやること -->
-      <section class="mb-10">
-        <h2 class="text-xl font-black text-gray-800 mb-4 flex items-center gap-2">
-          <span class="bg-kurage-500 text-white rounded-full w-7 h-7 flex items-center justify-center text-sm font-bold">1</span>
-          クラゲくんに話しかける
-        </h2>
-        <div class="bg-white rounded-2xl border border-gray-200 p-6 shadow-sm">
-          <p class="text-sm text-gray-600 mb-4">Slackでクラゲディール App に DM して<b>そのまま書くだけ</b>。</p>
-          <div class="space-y-3">
-            <div class="bg-gray-50 rounded-xl p-4">
-              <p class="text-xs text-gray-400 mb-1 font-semibold">まずは顧客を登録</p>
-              <p class="font-mono text-sm text-gray-800">田中さんを顧客に追加して。会社はABC商事</p>
-            </div>
-            <div class="bg-gray-50 rounded-xl p-4">
-              <p class="text-xs text-gray-400 mb-1 font-semibold">活動メモを記録（最もよく使う）</p>
-              <p class="font-mono text-sm text-gray-800">田中さん、今日オンライン商談しました。予算は300万、来月末までに決める方向で話が進んでいます。</p>
-            </div>
-            <div class="bg-gray-50 rounded-xl p-4">
-              <p class="text-xs text-gray-400 mb-1 font-semibold">メールした記録</p>
-              <p class="font-mono text-sm text-gray-800">田中さんにメールしました。提案書を送付、来週返事をもらう予定。</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Step 2: よく使うフレーズ -->
-      <section class="mb-10">
-        <h2 class="text-xl font-black text-gray-800 mb-4 flex items-center gap-2">
-          <span class="bg-kurage-500 text-white rounded-full w-7 h-7 flex items-center justify-center text-sm font-bold">2</span>
-          よく使うフレーズ一覧
-        </h2>
-        <div class="bg-white rounded-2xl border border-gray-200 shadow-sm overflow-hidden">
-          <table class="w-full text-sm">
-            <thead>
-              <tr class="bg-gray-50 border-b border-gray-200">
-                <th class="text-left px-5 py-3 font-semibold text-gray-700 w-1/2">Slackで入力</th>
-                <th class="text-left px-5 py-3 font-semibold text-gray-700">動作</th>
-              </tr>
-            </thead>
-            <tbody class="divide-y divide-gray-100">
-              <tr v-for="ex in examples" :key="ex.input">
-                <td class="px-5 py-3 font-mono text-gray-800">{{ ex.input }}</td>
-                <td class="px-5 py-3 text-gray-500">{{ ex.action }}</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </section>
+      <!-- 便利な機能とコマンド（コマンド・設定・メール連携など。両モード共通） -->
+      <div class="border-t border-gray-200 pt-10 mb-8">
+        <h2 class="text-2xl font-black text-gray-900 mb-1">便利な機能とコマンド</h2>
+        <p class="text-sm text-gray-500">コマンドや設定、メール連携など。ボタン・会話どちらのモードでも使えます。</p>
+      </div>
 
       <!-- Step 3: スラッシュコマンド -->
       <section class="mb-10">
         <h2 class="text-xl font-black text-gray-800 mb-4 flex items-center gap-2">
-          <span class="bg-kurage-500 text-white rounded-full w-7 h-7 flex items-center justify-center text-sm font-bold">3</span>
+          <span class="bg-kurage-500 text-white rounded-full w-7 h-7 flex items-center justify-center text-sm font-bold">1</span>
           スラッシュコマンド
         </h2>
         <div class="space-y-4">
@@ -230,7 +236,7 @@
       <!-- Step 4: AIが自動でやること -->
       <section class="mb-10">
         <h2 class="text-xl font-black text-gray-800 mb-4 flex items-center gap-2">
-          <span class="bg-kurage-500 text-white rounded-full w-7 h-7 flex items-center justify-center text-sm font-bold">4</span>
+          <span class="bg-kurage-500 text-white rounded-full w-7 h-7 flex items-center justify-center text-sm font-bold">2</span>
           AIが自動でやること
         </h2>
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -245,7 +251,7 @@
       <!-- Webアプリ -->
       <section class="mb-10">
         <h2 class="text-xl font-black text-gray-800 mb-4 flex items-center gap-2">
-          <span class="bg-kurage-500 text-white rounded-full w-7 h-7 flex items-center justify-center text-sm font-bold">5</span>
+          <span class="bg-kurage-500 text-white rounded-full w-7 h-7 flex items-center justify-center text-sm font-bold">3</span>
           Webダッシュボードにログインする
         </h2>
         <div class="bg-white rounded-2xl border border-gray-200 p-6 shadow-sm space-y-4">
@@ -271,7 +277,7 @@
       <!-- Step 6: /setting でできること -->
       <section class="mb-10">
         <h2 class="text-xl font-black text-gray-800 mb-4 flex items-center gap-2">
-          <span class="bg-kurage-500 text-white rounded-full w-7 h-7 flex items-center justify-center text-sm font-bold">6</span>
+          <span class="bg-kurage-500 text-white rounded-full w-7 h-7 flex items-center justify-center text-sm font-bold">4</span>
           <code class="bg-kurage-50 text-kurage-700 px-2 py-0.5 rounded font-mono text-base">/setting</code> でできること
         </h2>
         <div class="bg-white rounded-2xl border border-gray-200 p-6 shadow-sm">
@@ -291,7 +297,7 @@
       <!-- Step 7: メール連携 -->
       <section class="mb-10">
         <h2 class="text-xl font-black text-gray-800 mb-4 flex items-center gap-2">
-          <span class="bg-kurage-500 text-white rounded-full w-7 h-7 flex items-center justify-center text-sm font-bold">7</span>
+          <span class="bg-kurage-500 text-white rounded-full w-7 h-7 flex items-center justify-center text-sm font-bold">5</span>
           📨 顧客メールを取り込む（メール連携）
         </h2>
         <div class="bg-white rounded-2xl border border-gray-200 p-6 shadow-sm">
