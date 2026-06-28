@@ -38,6 +38,64 @@
         </p>
       </div>
 
+      <!-- モード別の使い方（2タブ：ボタンモード / 会話モード） -->
+      <section id="modes" class="mb-14 scroll-mt-20">
+        <h2 class="text-xl font-black text-gray-800 mb-2 flex items-center gap-2">
+          <span class="bg-kurage-500 text-white rounded-full w-7 h-7 flex items-center justify-center text-sm font-bold">★</span>
+          2つのモードの使い方
+        </h2>
+        <p class="text-sm text-gray-500 mb-4">同じ操作を「ボタン」でも「会話」でも進められます。<b>いつでも切り替えられます</b>（<code class="bg-white px-1 rounded text-xs">/setting</code>）。</p>
+
+        <!-- タブ -->
+        <div class="inline-flex rounded-xl border border-kurage-200 bg-white p-1 mb-5">
+          <button type="button" @click="guideMode = 'button'"
+            :class="guideMode === 'button' ? 'bg-kurage-500 text-white' : 'text-gray-600 hover:text-kurage-700'"
+            class="px-4 py-2 rounded-lg text-sm font-bold transition-colors">🟢 ボタンモードで使う</button>
+          <button type="button" @click="guideMode = 'talk'"
+            :class="guideMode === 'talk' ? 'bg-kurage-500 text-white' : 'text-gray-600 hover:text-kurage-700'"
+            class="px-4 py-2 rounded-lg text-sm font-bold transition-colors">⚡ 会話モードで使う</button>
+        </div>
+
+        <!-- ボタンモード -->
+        <div v-show="guideMode === 'button'" class="space-y-4">
+          <p class="text-sm text-gray-700 leading-relaxed">DM で <b>「メニュー」</b> と打つ（または左サイドバーの<b>ホームタブ</b>）と、ボタンが出てきます。あとは<b>タップするだけ</b>。クラゲくんが 1 ステップずつ案内してくれるので、何をすればいいか迷いません。</p>
+          <SlackMessageMock channel-name="💬 クラゲディール（DM）">
+            <SlackBotLine name="あなた" :is-user="true" time="9:00"><p>メニュー</p></SlackBotLine>
+            <SlackBotLine name="クラゲディール" :bot-badge="true" time="9:00">
+              <p class="font-bold mb-2">👉 何をしますか？</p>
+              <div class="flex flex-wrap gap-2">
+                <span class="inline-block border border-gray-300 bg-white rounded-md px-3 py-1.5 text-xs font-semibold text-gray-800">👤 顧客を登録</span>
+                <span class="inline-block border border-gray-300 bg-white rounded-md px-3 py-1.5 text-xs font-semibold text-gray-800">📝 活動をメモ</span>
+                <span class="inline-block border border-gray-300 bg-white rounded-md px-3 py-1.5 text-xs font-semibold text-gray-800">📊 ディールを登録</span>
+                <span class="inline-block border border-gray-300 bg-white rounded-md px-3 py-1.5 text-xs font-semibold text-gray-800">📋 状況を見る</span>
+              </div>
+            </SlackBotLine>
+            <SlackBotLine name="あなた" :is-user="true" time="9:01"><p>（「📝 活動をメモ」をタップ）</p></SlackBotLine>
+            <SlackBotLine name="クラゲディール" :bot-badge="true" time="9:01">
+              <p class="mb-2">誰についてのメモですか？</p>
+              <div class="flex flex-wrap gap-2">
+                <span class="inline-block border border-gray-300 bg-white rounded-md px-3 py-1.5 text-xs font-semibold text-gray-800">👤 田中さん</span>
+                <span class="inline-block border border-gray-300 bg-white rounded-md px-3 py-1.5 text-xs font-semibold text-gray-800">👤 佐藤さん</span>
+                <span class="inline-block border border-gray-300 bg-white rounded-md px-3 py-1.5 text-xs font-semibold text-gray-800">🔍 顧客を探す</span>
+              </div>
+            </SlackBotLine>
+          </SlackMessageMock>
+          <p class="text-xs text-gray-500">迷ったら、いつでも <b>「メニュー」</b> と打てば、ここに戻ってこられます。</p>
+        </div>
+
+        <!-- 会話モード -->
+        <div v-show="guideMode === 'talk'" class="space-y-4">
+          <p class="text-sm text-gray-700 leading-relaxed">ふだんの言葉で、<b>そのまま書くだけ</b>。同僚に報告するみたいに、一言どうぞ。慣れてきたら、こちらが最速です。</p>
+          <SlackMessageMock channel-name="💬 クラゲディール（DM）">
+            <SlackBotLine name="あなた" :is-user="true" time="14:30"><p>田中さんを顧客に追加して。会社はABC商事</p></SlackBotLine>
+            <SlackBotLine name="クラゲディール" :bot-badge="true" time="14:30"><p>✅ 田中さん（ABC商事）を登録しました。</p></SlackBotLine>
+            <SlackBotLine name="あなた" :is-user="true" time="14:31"><p>田中さんと商談しました。予算300万、競合は1社</p></SlackBotLine>
+            <SlackBotLine name="クラゲディール" :bot-badge="true" time="14:31"><p>✅ 記録しました。受注確率を更新しました。次にやることも、そっとお知らせします🪼</p></SlackBotLine>
+          </SlackMessageMock>
+          <p class="text-xs text-gray-500">うまく伝わらない時は、もう少しくわしく書くか、<b>「メニュー」</b>でボタンに切り替えられます。</p>
+        </div>
+      </section>
+
       <!-- 導入する（セットアップ） -->
       <section id="setup" class="mb-14 scroll-mt-20">
         <h2 class="text-xl font-black text-gray-800 mb-4 flex items-center gap-2">
@@ -276,6 +334,7 @@ usePageSeo({
     'クラゲディールの使い方ガイド。Slack に書くだけで CRM 入力、/coach で AI コーチング、受注確率の算出やメール下書きまで。主要コマンドと機能をわかりやすく紹介します。',
 })
 
+const guideMode = ref<'button' | 'talk'>('button')
 const route = useRoute()
 const installed = computed(() => route.query.installed === '1')
 
