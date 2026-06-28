@@ -1,5 +1,5 @@
 <template>
-  <main class="pt-16 min-h-screen bg-gray-50">
+  <main class="pt-16 min-h-screen bg-ocean-mist/20">
     <div class="max-w-3xl mx-auto px-4 sm:px-6 py-16">
 
       <!-- インストール完了バナー -->
