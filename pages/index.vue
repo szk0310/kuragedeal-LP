@@ -619,7 +619,7 @@
 
 
 const personas = [
-  { icon: '🏢', text: '社員5人のIT企業。社長が営業も兼務。商談管理はスプレッドシート' },
+  { icon: '🏢', text: '社員5人のIT企業。社長が営業も兼務。商談管理はスプレッドシートで回しています' },
   { icon: '👥', text: '営業3人の人材会社。CRMを導入したが誰も入力しない' },
   { icon: '🚀', text: '6人のスタートアップ。急成長で商談が増え、フォロー漏れが出始めた' },
   { icon: '🔧', text: '一人社長のコンサル。クライアント20社の関係を頭の中で管理している' },
@@ -629,8 +629,8 @@ const personas = [
 
 const replyAssistChips = [
   { icon: '✍️', title: 'クラゲくんが代筆', desc: '過去のやり取りを踏まえて、自然に返信します' },
-  { icon: '💌', title: '自社送信', desc: 'いつもの社内メールアドレスから' },
-  { icon: '🎚', title: '編集自由', desc: '承認前に必要なら手直し可能' },
+  { icon: '💌', title: '自社送信', desc: 'いつもの社内アドレスから送れます' },
+  { icon: '🎚', title: '編集自由', desc: '承認の前に、必要なら手直しできます' },
 ]
 
 const API_URL = 'https://slacksfa-api-808596335261.asia-northeast1.run.app'
@@ -643,7 +643,7 @@ const pricing = [
     featured: false,
     cta: '',
     checkoutUrl: '',
-    startNote: '14 日間無料トライアル・クレカ不要',
+    startNote: '14 日間、無料でお試しいただけます',
     features: [
       { ok: true, label: '1 名まで' },
       { ok: true, label: 'AI 月 100 回' },
@@ -658,7 +658,7 @@ const pricing = [
     badge: '★ Solo 3名まで',
     cta: '',
     checkoutUrl: '',
-    startNote: '14 日間無料トライアル・クレカ不要',
+    startNote: '14 日間、無料でお試しいただけます',
     features: [
       { ok: true, label: '3 名まで' },
       { ok: true, label: 'AI 月 500 回' },
@@ -672,7 +672,7 @@ const pricing = [
     featured: true,
     cta: '',
     checkoutUrl: '',
-    startNote: '14 日間無料トライアル・クレカ不要',
+    startNote: '14 日間、無料でお試しいただけます',
     features: [
       { ok: true, label: '10 名まで' },
       { ok: true, label: 'AI 月 5,000 回' },
@@ -686,7 +686,7 @@ const pricing = [
     featured: false,
     cta: 'ご相談',
     checkoutUrl: '/contact?subject=enterprise',
-    startNote: '11 名以上・個別対応',
+    startNote: '11 名以上は個別にご相談ください',
     features: [
       { ok: true, label: '11 名以上' },
       { ok: true, label: 'AI 個別設定' },
