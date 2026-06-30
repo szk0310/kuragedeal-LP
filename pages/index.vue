@@ -187,7 +187,7 @@
           <span class="block mb-3">いちばん軽いメモが、</span>
           <span class="block">いちばん賢い営業になる。</span>
         </h2>
-        <div class="text-xl md:text-2xl text-kurage-100 max-w-2xl mx-auto leading-loose space-y-6">
+        <div class="text-lg md:text-xl text-kurage-100 max-w-2xl mx-auto leading-relaxed space-y-2">
           <p>クラゲディールは、Slack にいるクラゲくんにメモするだけ。</p>
           <p>それだけで、AI 機能が営業活動を自動でサポートしてくれます。</p>
           <p>余った時間は、あなたのためだけに使ってください。</p>
@@ -332,7 +332,7 @@
     <section class="bg-ocean-mist/40 py-16 md:py-20">
       <div class="max-w-3xl mx-auto px-4 sm:px-6 text-center">
         <div class="flex items-center justify-center gap-3 mb-3">
-          <img src="/kurage-cry.png" alt="" class="w-10 h-10 md:w-12 md:h-12" />
+          <img src="/kurage-on-white.png" alt="" class="w-10 h-10 md:w-12 md:h-12" />
           <p class="text-base md:text-lg font-bold text-orange-500 uppercase tracking-widest">あるある お悩み</p>
         </div>
         <h2 class="text-2xl md:text-3xl font-black text-gray-900 mb-4 leading-tight">
@@ -371,7 +371,7 @@
     <section id="reply-assist" class="bg-ocean-sand py-20">
       <div class="max-w-3xl mx-auto px-4 sm:px-6">
         <div class="flex items-center gap-3 mb-3">
-          <img src="/kurage-smile.png" alt="" class="w-10 h-10 md:w-12 md:h-12 flex-shrink-0" />
+          <img src="/kurage-on-white.png" alt="" class="w-10 h-10 md:w-12 md:h-12 flex-shrink-0" />
           <p class="text-base md:text-lg font-bold text-orange-500 uppercase tracking-widest">機能スポットライト</p>
         </div>
         <h2 class="text-3xl md:text-4xl font-black text-gray-900 mb-4 leading-tight">

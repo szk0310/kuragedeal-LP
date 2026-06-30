@@ -264,7 +264,7 @@
       <section id="first-week" class="mb-16 scroll-mt-20">
         <div class="bg-gradient-to-br from-kurage-50 via-cyan-50 to-ocean-mist/40 border-2 border-kurage-200 rounded-2xl p-6 md:p-8">
           <div class="flex items-center gap-3 mb-4">
-            <img src="/kurage-smile.png" alt="クラゲくん" class="w-8 h-8 flex-shrink-0" />
+            <img src="/kurage-on-white.png" alt="クラゲくん" class="w-8 h-8 flex-shrink-0" />
             <div>
               <p class="text-xs font-bold text-orange-500 uppercase tracking-widest">クイックスタート</p>
               <h2 class="text-xl md:text-2xl font-black text-gray-900">最初の 1 週間でやってみること</h2>
