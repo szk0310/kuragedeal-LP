@@ -24,9 +24,9 @@
               学習コストはゼロ。今日から<br />AI 営業を始めませんか？
             </p>
             <p class="text-base text-cyan-50 font-bold mb-4 max-w-2xl leading-relaxed">
-              初めてでも迷わない「ボタンモード」と、話し言葉で操作する「会話モード」。どちらのモードでも、入力ストレスもゼロ！
+              初めてでも迷わない「ボタンモード」と、話し言葉で操作する「会話モード」。どちらのモードでも、入力ストレスゼロ！
             </p>
-            <p class="text-sm text-kurage-100 mb-10 max-w-2xl leading-relaxed">
+            <p class="text-lg text-kurage-100 mb-10 max-w-2xl leading-relaxed">
               クラゲディールは、今日から始められる Slack ネイティブな AI 営業支援ツールです。
             </p>
 
@@ -85,7 +85,7 @@
           </div>
 
           <!-- 会話モード -->
-          <div class="bg-[#399fb0]/10 rounded-2xl border border-[#399fb0]/40 p-6">
+          <div class="bg-ocean-mist/20 rounded-2xl border border-ocean-mist/50 p-6">
             <p class="text-lg font-black text-gray-900 mb-1">⚡ 会話モード</p>
             <p class="text-sm text-gray-700 leading-relaxed mb-4">「ABC商事と商談、競合が一社」と<b>一言書くだけ</b>。最速で記録できます！</p>
             <SlackMessageMock channel-name="💬 クラゲディール（DM）">
@@ -101,7 +101,7 @@
           </div>
         </div>
 
-        <p class="text-center text-sm text-gray-500 mt-8 leading-relaxed">
+        <p class="text-center text-base text-gray-600 mt-8 leading-relaxed">
           どちらのモードも、学習はいりません。入力のストレスもありません。<br />
           あなたのスタイルのまま、クラゲくんと一緒に進めていきましょう。
         </p>
@@ -187,13 +187,11 @@
           <span class="block mb-3">いちばん軽いメモが、</span>
           <span class="block">いちばん賢い営業になる。</span>
         </h2>
-        <p class="text-lg md:text-xl text-kurage-100 max-w-2xl mx-auto leading-loose">
-          ふつうの CRM は、たくさんの画面を開いて、必要な項目を探して<span class="whitespace-nowrap">入力します。</span><br />
-          毎日の作業で、これが地味に手間になります。<br />
-          クラゲディールは、Slack にいるクラゲくんにメモするだけ。<br />
-          それだけで、AI 機能が営業活動を自動でサポートしてくれます。<br />
-          余った時間は、あなたのためだけに使ってください。
-        </p>
+        <div class="text-xl md:text-2xl text-kurage-100 max-w-2xl mx-auto leading-loose space-y-6">
+          <p>クラゲディールは、Slack にいるクラゲくんにメモするだけ。</p>
+          <p>それだけで、AI 機能が営業活動を自動でサポートしてくれます。</p>
+          <p>余った時間は、あなたのためだけに使ってください。</p>
+        </div>
       </div>
     </section>
 
@@ -254,7 +252,7 @@
           <p class="text-sm text-gray-700 font-bold">
             ★ 上記は正式版の料金です。正式版では全プラン共通で、14 日間の無料トライアルが付きます。
           </p>
-          <p class="text-xs text-gray-500 mt-1">
+          <p class="text-sm md:text-base text-gray-600 mt-1">
             β 参加プログラムに登録すると、10/15 まで全機能を無料でお使いいただけます（クレジットカードの入力は不要です）。
           </p>
         </div>
