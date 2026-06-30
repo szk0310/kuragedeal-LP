@@ -428,6 +428,11 @@
         </div>
       </section>
 
+      <!-- Footer CTA -->
+      <div class="bg-kurage-50 border border-kurage-100 rounded-2xl p-6 text-center">
+        <p class="text-sm text-gray-600">わからないことは、<b>画面右下のクラゲくん</b>に聞いてください。使い方をその場でお答えします🪼</p>
+      </div>
+
     </div>
   </main>
 </template>
