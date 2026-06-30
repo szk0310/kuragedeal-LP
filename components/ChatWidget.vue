@@ -1,5 +1,5 @@
 <template>
-  <div class="fixed bottom-6 right-6 z-50 flex flex-col items-end gap-3">
+  <div v-show="visible" class="fixed bottom-6 right-6 z-50 flex flex-col items-end gap-3">
 
     <!-- Chat panel -->
     <Transition
@@ -162,6 +162,21 @@ const emailInput = ref('')
 const emailSubmitted = ref(false)
 const emailSending = ref(false)
 const messagesEl = ref<HTMLElement | null>(null)
+
+// 右下botの表示制御：トップページ('/')ではヒーロー表示中は隠し、スクロールして
+// 「2つのモード」セクションに入ったら出現させる。それ以外のページ（/guide 等）は常時表示。
+const route = useRoute()
+const visible = ref(route.path !== '/')
+function updateVisible() {
+  if (route.path !== '/') { visible.value = true; return }
+  visible.value = window.scrollY > window.innerHeight * 0.6
+  if (!visible.value) open.value = false
+}
+onMounted(() => {
+  updateVisible()
+  window.addEventListener('scroll', updateVisible, { passive: true })
+})
+onBeforeUnmount(() => window.removeEventListener('scroll', updateVisible))
 
 const messages = ref<Message[]>([
   {

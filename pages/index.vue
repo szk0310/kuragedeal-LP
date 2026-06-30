@@ -15,7 +15,7 @@
       <div class="relative max-w-6xl mx-auto px-4 sm:px-6 lg:pl-11 py-24 md:py-32">
         <div class="flex flex-col lg:flex-row items-center gap-12">
           <div class="flex-1">
-            <h1 class="text-3xl md:text-4xl lg:text-5xl font-extrabold mb-6 leading-tight">
+            <h1 class="text-3xl md:text-4xl font-extrabold mb-6 leading-tight">
               <span class="block mb-4">Slack に一言メモるだけ。</span>
               <span class="text-cyan-50">それだけで、ディールが進みます！</span>
             </h1>
@@ -31,13 +31,15 @@
             </p>
 
             <!-- CTA（phase1: β 試用 self-serve 主 CTA 一本のみ）-->
-            <div class="mb-4">
+            <div class="mb-4 flex items-center gap-4">
               <a
                 href="/beta"
                 class="inline-flex items-center justify-center gap-2 bg-orange-500 hover:bg-orange-400 text-white font-bold px-8 py-4 rounded-xl text-lg transition-colors shadow-lg"
               >
                 β 版を試す →
               </a>
+              <!-- モバイル用クラゲ（lg ではヒーロー右の大きいクラゲを表示） -->
+              <img src="/kurage-on-green.png" alt="クラゲくん" class="lg:hidden w-20 h-20 kurage-float flex-shrink-0" />
             </div>
           </div>
 
