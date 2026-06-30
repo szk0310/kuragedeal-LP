@@ -15,7 +15,7 @@
       <div class="relative max-w-6xl mx-auto px-4 sm:px-6 lg:pl-11 py-24 md:py-32">
         <div class="flex flex-col lg:flex-row items-center gap-12">
           <div class="flex-1">
-            <h1 class="text-3xl md:text-4xl font-extrabold mb-6 leading-tight">
+            <h1 class="text-3xl md:text-4xl lg:text-[2.7rem] font-extrabold mb-6 leading-tight">
               <span class="block mb-4">Slack に一言メモるだけ。</span>
               <span class="text-cyan-50">それだけで、ディールが進みます！</span>
             </h1>
