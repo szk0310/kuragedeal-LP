@@ -544,30 +544,6 @@
           </details>
         </div>
 
-        <!-- Enterprise 補足（FAQ 下に移設） -->
-        <div class="mt-12 max-w-2xl mx-auto bg-gradient-to-br from-kurage-50 via-cyan-50 to-ocean-mist/60 rounded-2xl border border-kurage-200 p-8">
-          <h3 class="text-xl font-bold text-gray-900 mb-3">Enterprise プラン について</h3>
-          <p class="text-sm text-gray-700 mb-4 leading-relaxed">
-            11 人以上のチーム・カスタマイズが必要な企業向けに、Enterprise プランをご用意しています。
-          </p>
-          <ul class="space-y-2 text-sm text-gray-700 mb-6">
-            <li>・ユーザー数に応じた個別見積もり</li>
-            <li>・カスタム機能開発のご相談</li>
-            <li>・優先サポート</li>
-            <li>・SSO・セキュリティ要件への対応</li>
-          </ul>
-          <a
-            href="/contact?subject=enterprise"
-            class="inline-block bg-gray-100 hover:bg-gray-200 text-gray-800 font-bold px-6 py-3 rounded-xl text-sm transition-colors"
-          >
-            Enterprise についてご相談 →
-          </a>
-          <p class="text-xs text-gray-500 mt-4 leading-relaxed">
-            ※ クラゲディールは小規模営業チーム向けに最適化された製品です。
-            大規模なエンタープライズ用途では Salesforce 等の選択肢もご検討いただくことをお勧めしています。
-            弊社（Salesforce 認定コンサルティングパートナー）が、最適な選択をご一緒に検討します。
-          </p>
-        </div>
       </div>
     </section>
 
