@@ -17,7 +17,7 @@
           <div class="flex-1">
             <h1 class="text-3xl md:text-4xl lg:text-[2.7rem] font-extrabold mb-6 leading-tight">
               <span class="block mb-4">Slack に一言メモるだけ。</span>
-              <span class="text-cyan-50">それだけで、ディールが進みます！</span>
+              <span class="text-cyan-50">それだけで、営業が進みます！</span>
             </h1>
 
             <p class="text-lg md:text-xl font-bold text-kurage-100 mb-4 max-w-2xl leading-relaxed">
