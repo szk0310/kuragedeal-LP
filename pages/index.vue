@@ -15,18 +15,18 @@
       <div class="relative max-w-6xl mx-auto px-4 sm:px-6 lg:pl-11 py-24 md:py-32">
         <div class="flex flex-col lg:flex-row items-center gap-12">
           <div class="flex-1">
-            <h1 class="text-4xl md:text-5xl lg:text-6xl font-black mb-6 leading-tight">
+            <h1 class="text-3xl md:text-4xl lg:text-5xl font-extrabold mb-6 leading-tight">
               <span class="block mb-4">Slack に一言メモるだけ。</span>
               <span class="text-cyan-50">それだけで、ディールが進みます！</span>
             </h1>
 
-            <p class="text-lg text-kurage-100 mb-4 max-w-2xl leading-relaxed">
+            <p class="text-lg md:text-xl font-bold text-kurage-100 mb-4 max-w-2xl leading-relaxed">
               学習コストはゼロ。今日から<br />AI 営業を始めませんか？
             </p>
-            <p class="text-base text-cyan-50 font-bold mb-4 max-w-2xl leading-relaxed">
+            <p class="text-lg md:text-xl font-bold text-kurage-100 mb-4 max-w-2xl leading-relaxed">
               初めてでも迷わない「ボタンモード」と、話し言葉で操作する「会話モード」。どちらのモードでも、入力ストレスゼロ！
             </p>
-            <p class="text-lg text-kurage-100 mb-10 max-w-2xl leading-relaxed">
+            <p class="text-lg md:text-xl font-bold text-kurage-100 mb-10 max-w-2xl leading-relaxed">
               クラゲディールは、今日から始められる Slack ネイティブな AI 営業支援ツールです。
             </p>
 
@@ -85,7 +85,7 @@
           </div>
 
           <!-- 会話モード -->
-          <div class="bg-ocean-mist/20 rounded-2xl border border-ocean-mist/50 p-6">
+          <div class="bg-[#dbe9ec] rounded-2xl border border-[#7aaab8]/60 p-6">
             <p class="text-lg font-black text-gray-900 mb-1">⚡ 会話モード</p>
             <p class="text-sm text-gray-700 leading-relaxed mb-4">「ABC商事と商談、競合が一社」と<b>一言書くだけ</b>。最速で記録できます！</p>
             <SlackMessageMock channel-name="💬 クラゲディール（DM）">
@@ -169,9 +169,9 @@
               営業の型「MEDDPICC」に基づいて、クラゲくんが案件ごとに「決裁者と会えていますか？」「予算の根拠は？」「競合は把握していますか？」と、やさしく問いかけてくれます。<br />
               経験豊富なマネジャーがいなくても、チーム全員に同じ質のコーチングが届きます。クラゲくんが、あなたの営業コーチになってくれます。
             </p>
-            <p class="text-xs text-gray-400 mt-3 leading-relaxed">
+            <div class="bg-ocean-sand/60 border border-ocean-tan/40 rounded-xl p-4 mt-4 text-xs text-gray-600 leading-relaxed">
               ※ MEDDPICC（メドピック）＝商談の抜け漏れを防ぐ営業フレームワーク。指標(Metrics)・決裁者(Economic Buyer)・選定基準(Decision Criteria)・購買プロセス(Decision Process)・社内手続き(Paper Process)・課題(Identify Pain)・社内推進者(Champion)・競合(Competition)の8要素で案件を見立てます。
-            </p>
+            </div>
           </div>
         </div>
       </div>
@@ -182,7 +182,6 @@
     ============================================================ -->
     <section class="bg-ocean-deep py-20 text-white">
       <div class="max-w-3xl mx-auto px-4 sm:px-6 text-center">
-        <p class="text-base md:text-lg font-bold text-cyan-300 uppercase tracking-widest mb-4">他のツールとの違い</p>
         <h2 class="text-3xl md:text-4xl font-extrabold mb-8 leading-relaxed">
           <span class="block mb-3">いちばん軽いメモが、</span>
           <span class="block">いちばん賢い営業になる。</span>
