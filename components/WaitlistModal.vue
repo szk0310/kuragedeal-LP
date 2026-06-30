@@ -9,7 +9,7 @@
         <div class="bg-white rounded-2xl max-w-lg w-full p-8 max-h-[90vh] overflow-y-auto">
           <!-- 完了状態 -->
           <div v-if="completed" class="text-center py-8">
-            <img src="/kurage-smile.svg" alt="クラゲくん" class="w-16 h-16 mx-auto mb-4" />
+            <img src="/kurage-smile.png" alt="クラゲくん" class="w-16 h-16 mx-auto mb-4" />
             <h4 class="text-xl font-bold text-gray-900 mb-2">ご登録ありがとうございます！</h4>
             <p class="text-sm text-gray-600 leading-relaxed">
               確認メールをお送りしました。<br/>

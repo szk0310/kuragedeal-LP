@@ -15,7 +15,7 @@
 
       <!-- Header -->
       <div class="text-center mb-12">
-        <img src="/kurage-on-white.svg" alt="クラゲディール" class="w-16 h-16 mx-auto mb-4" />
+        <img src="/kurage-on-white.png" alt="クラゲディール" class="w-16 h-16 mx-auto mb-4" />
         <h1 class="text-3xl md:text-4xl font-black text-gray-900 mb-3">使い方ガイド</h1>
         <p class="text-gray-500">インストールから毎日の使い方まで、<b class="text-gray-600">この順番で</b>ご案内します。</p>
       </div>
@@ -63,7 +63,7 @@
               <div class="bg-white rounded-lg border border-gray-200 p-3">
                 <p class="text-[11px] text-gray-400 mb-2">✉️ β 登録の確認メール</p>
                 <span class="inline-flex items-center gap-1.5 bg-[#4A154B] text-white rounded-md px-3 py-2 text-xs font-bold">
-                  <img src="/kurage-on-white.svg" class="w-4 h-4" alt="" /> Slack に追加
+                  <img src="/kurage-on-white.png" class="w-4 h-4" alt="" /> Slack に追加
                 </span>
               </div>
               <p class="text-center text-gray-300 leading-none text-sm">↓</p>
@@ -95,7 +95,7 @@
                 <li class="flex items-center gap-2.5 px-2 py-1.5 rounded-md text-kurage-100/60"><span class="w-4 text-center">📅</span>Google Calendar</li>
                 <li class="flex items-center gap-2.5 px-2 py-1.5 rounded-md text-kurage-100/60"><span class="w-4 text-center">🔵</span>Slack</li>
                 <li class="flex items-center gap-2.5 px-2 py-1.5 rounded-md bg-kurage-500/25 text-white font-bold ring-1 ring-kurage-400/50">
-                  <img src="/kurage-on-white.svg" class="w-5 h-5" alt="" />クラゲディール
+                  <img src="/kurage-on-white.png" class="w-5 h-5" alt="" />クラゲディール
                 </li>
               </ul>
               <p class="text-[11px] text-kurage-200/60 mt-2 px-2">↑ クリックすると DM が開きます</p>
@@ -264,7 +264,7 @@
       <section id="first-week" class="mb-16 scroll-mt-20">
         <div class="bg-gradient-to-br from-kurage-50 via-cyan-50 to-ocean-mist/40 border-2 border-kurage-200 rounded-2xl p-6 md:p-8">
           <div class="flex items-center gap-3 mb-4">
-            <img src="/kurage-smile.svg" alt="クラゲくん" class="w-8 h-8 flex-shrink-0" />
+            <img src="/kurage-smile.png" alt="クラゲくん" class="w-8 h-8 flex-shrink-0" />
             <div>
               <p class="text-xs font-bold text-orange-500 uppercase tracking-widest">クイックスタート</p>
               <h2 class="text-xl md:text-2xl font-black text-gray-900">最初の 1 週間でやってみること</h2>

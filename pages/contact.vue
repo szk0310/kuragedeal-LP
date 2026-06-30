@@ -2,7 +2,7 @@
   <main class="pt-16 min-h-screen bg-gray-50">
     <div class="max-w-2xl mx-auto px-4 sm:px-6 py-20">
       <div class="text-center mb-12">
-        <img src="/kurage-on-white.svg" alt="クラゲディール" class="w-16 h-16 mx-auto mb-4" />
+        <img src="/kurage-on-white.png" alt="クラゲディール" class="w-16 h-16 mx-auto mb-4" />
         <h1 class="text-3xl md:text-4xl font-black text-gray-900 mb-4">
           {{ isEnterprise ? 'Enterprise プラン ご相談' : 'お問い合わせ' }}
         </h1>
@@ -22,7 +22,7 @@
 
         <!-- Success state -->
         <div v-if="submitted" class="flex flex-col items-center justify-center text-center py-12">
-          <img src="/kurage-smile.svg" alt="クラゲディール" class="w-20 h-20 mx-auto mb-4 kurage-float" />
+          <img src="/kurage-smile.png" alt="クラゲディール" class="w-20 h-20 mx-auto mb-4 kurage-float" />
           <h2 class="text-2xl font-black text-gray-900 mb-3">送信完了しました！</h2>
           <p class="text-gray-600 mb-2">
             お問い合わせありがとうございます

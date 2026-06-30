@@ -23,7 +23,7 @@
     <section id="pain1" class="bg-ocean-mist/40 py-20">
       <div class="max-w-3xl mx-auto px-4 sm:px-6">
         <div class="flex items-center gap-3 mb-3">
-          <img src="/kurage-cry.svg" alt="" class="w-10 h-10 md:w-12 md:h-12 flex-shrink-0" />
+          <img src="/kurage-cry.png" alt="" class="w-10 h-10 md:w-12 md:h-12 flex-shrink-0" />
           <p class="text-base md:text-lg font-bold text-orange-500 uppercase tracking-widest">あるある お悩み 1</p>
         </div>
         <h2 class="text-3xl md:text-4xl font-black text-gray-900 mb-10 leading-tight">
@@ -94,7 +94,7 @@
     <section id="pain2" class="bg-ocean-steel/75 py-20">
       <div class="max-w-3xl mx-auto px-4 sm:px-6">
         <div class="flex items-center gap-3 mb-3">
-          <img src="/kurage-anger.svg" alt="" class="w-10 h-10 md:w-12 md:h-12 flex-shrink-0" />
+          <img src="/kurage-anger.png" alt="" class="w-10 h-10 md:w-12 md:h-12 flex-shrink-0" />
           <p class="text-base md:text-lg font-bold text-orange-500 uppercase tracking-widest">あるある お悩み 2</p>
         </div>
         <h2 class="text-3xl md:text-4xl font-black text-gray-900 mb-10 leading-tight">
@@ -250,7 +250,7 @@
     <section id="pain3" class="bg-ocean-mist/40 py-20">
       <div class="max-w-3xl mx-auto px-4 sm:px-6">
         <div class="flex items-center gap-3 mb-3">
-          <img src="/kurage-cry.svg" alt="" class="w-10 h-10 md:w-12 md:h-12 flex-shrink-0" />
+          <img src="/kurage-cry.png" alt="" class="w-10 h-10 md:w-12 md:h-12 flex-shrink-0" />
           <p class="text-base md:text-lg font-bold text-orange-500 uppercase tracking-widest">あるある お悩み 3</p>
         </div>
         <h2 class="text-3xl md:text-4xl font-black text-gray-900 mb-10 leading-tight">

@@ -4,7 +4,7 @@
 
       <!-- header -->
       <div class="text-center mb-10">
-        <img src="/kurage-on-white.svg" alt="クラゲディール" class="w-14 h-14 mx-auto mb-3" />
+        <img src="/kurage-on-white.png" alt="クラゲディール" class="w-14 h-14 mx-auto mb-3" />
         <h1 class="text-3xl md:text-4xl font-black text-gray-900 mb-2">よくある質問・困ったとき</h1>
         <p class="text-gray-500">操作でつまずいたとき・「あれ？」と思ったときに。<br />使い方そのものは <a href="/guide" class="text-kurage-600 underline">使い方ガイド</a> へ。</p>
       </div>

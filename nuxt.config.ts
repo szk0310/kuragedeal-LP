@@ -65,7 +65,7 @@ export default defineNuxtConfig({
         { name: 'twitter:image', content: 'https://kuragedeal.ai/og-image.png' },
       ],
       link: [
-        { rel: 'icon', type: 'image/svg+xml', href: '/kurage-on-white.svg' },
+        { rel: 'icon', type: 'image/png', href: '/kurage-on-white.png' },
         { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
         {
           rel: 'stylesheet',

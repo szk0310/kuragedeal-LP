@@ -2,7 +2,7 @@
   <div class="flex items-start gap-3">
     <!-- アバター -->
     <div class="flex-shrink-0 w-9 h-9 rounded-md bg-kurage-100 flex items-center justify-center overflow-hidden">
-      <img v-if="!isUser" src="/kurage-on-white.svg" alt="bot" class="w-7 h-7" />
+      <img v-if="!isUser" src="/kurage-on-white.png" alt="bot" class="w-7 h-7" />
       <span v-else class="text-base font-bold text-kurage-700">{{ userInitial }}</span>
     </div>
 

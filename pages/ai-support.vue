@@ -3,7 +3,7 @@
     <!-- イントロ -->
     <section class="bg-ocean-deep py-16 md:py-20 text-white">
       <div class="max-w-3xl mx-auto px-4 sm:px-6 text-center">
-        <img src="/kurage-on-green.svg" alt="クラゲくん" class="w-16 h-16 mx-auto mb-4" />
+        <img src="/kurage-on-green.png" alt="クラゲくん" class="w-16 h-16 mx-auto mb-4" />
         <p class="text-cyan-300 font-bold tracking-widest mb-3">クラゲくんのAIサポート</p>
         <h1 class="text-3xl md:text-4xl font-black mb-4 leading-tight">
           あなたが書くだけで、<br />クラゲくんが、ずっと支えてくれます。

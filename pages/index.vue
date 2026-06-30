@@ -16,17 +16,18 @@
         <div class="flex flex-col lg:flex-row items-center gap-12">
           <div class="flex-1">
             <h1 class="text-4xl md:text-5xl lg:text-6xl font-black mb-6 leading-tight">
-              <span class="block mb-4">Slack のクラゲくんに、話しかけるだけ。</span>
-              <span class="text-cyan-50">それで、ディールが前に進みます。</span>
+              <span class="block mb-4">Slack に一言メモるだけ。</span>
+              <span class="text-cyan-50">それだけで、ディールが進みます！</span>
             </h1>
 
             <p class="text-lg text-kurage-100 mb-4 max-w-2xl leading-relaxed">
-              クラゲディールは、Slack で<b>ボタンを押すだけ</b>。<br />
-              操作の学習はゼロ。営業が得意でなくても、<br />
-              今日から始められる Slack ネイティブな AI 営業支援ツールです。
+              学習コストはゼロ。今日から<br />AI 営業を始めませんか？
             </p>
-            <p class="text-base text-cyan-50 font-bold mb-10 max-w-2xl leading-relaxed">
-              はじめてでも迷わない「ボタンモード」と、慣れたら一言で完結する「会話モード」。どちらのモードでも、入力ストレスゼロの気持ちよさ！
+            <p class="text-base text-cyan-50 font-bold mb-4 max-w-2xl leading-relaxed">
+              初めてでも迷わない「ボタンモード」と、話し言葉で操作する「会話モード」。どちらのモードでも、入力ストレスもゼロ！
+            </p>
+            <p class="text-sm text-kurage-100 mb-10 max-w-2xl leading-relaxed">
+              クラゲディールは、今日から始められる Slack ネイティブな AI 営業支援ツールです。
             </p>
 
             <!-- CTA（phase1: β 試用 self-serve 主 CTA 一本のみ）-->
@@ -38,13 +39,11 @@
                 β 版を試す →
               </a>
             </div>
-            <p class="text-xs text-kurage-200 max-w-xl leading-relaxed">
-            </p>
           </div>
 
           <div class="hidden lg:flex flex-shrink-0 items-center justify-center w-72 h-72 lg:mr-8">
             <img
-              src="/kurage-on-green.svg"
+              src="/kurage-on-green.png"
               alt="クラゲくん"
               class="w-64 h-64 kurage-float drop-shadow-2xl"
             />
@@ -86,7 +85,7 @@
           </div>
 
           <!-- 会話モード -->
-          <div class="bg-ocean-mist/40 rounded-2xl border border-ocean-tan/30 p-6">
+          <div class="bg-[#399fb0]/10 rounded-2xl border border-[#399fb0]/40 p-6">
             <p class="text-lg font-black text-gray-900 mb-1">⚡ 会話モード</p>
             <p class="text-sm text-gray-700 leading-relaxed mb-4">「ABC商事と商談、競合が一社」と<b>一言書くだけ</b>。最速で記録できます！</p>
             <SlackMessageMock channel-name="💬 クラゲディール（DM）">
@@ -103,7 +102,8 @@
         </div>
 
         <p class="text-center text-sm text-gray-500 mt-8 leading-relaxed">
-          どちらのモードも、学習はいりません。入力のストレスもありません。<b>あなたのスタイルのまま、クラゲくんと一緒に進めていきましょう。</b>
+          どちらのモードも、学習はいりません。入力のストレスもありません。<br />
+          あなたのスタイルのまま、クラゲくんと一緒に進めていきましょう。
         </p>
       </div>
     </section>
@@ -169,6 +169,9 @@
               営業の型「MEDDPICC」に基づいて、クラゲくんが案件ごとに「決裁者と会えていますか？」「予算の根拠は？」「競合は把握していますか？」と、やさしく問いかけてくれます。<br />
               経験豊富なマネジャーがいなくても、チーム全員に同じ質のコーチングが届きます。クラゲくんが、あなたの営業コーチになってくれます。
             </p>
+            <p class="text-xs text-gray-400 mt-3 leading-relaxed">
+              ※ MEDDPICC（メドピック）＝商談の抜け漏れを防ぐ営業フレームワーク。指標(Metrics)・決裁者(Economic Buyer)・選定基準(Decision Criteria)・購買プロセス(Decision Process)・社内手続き(Paper Process)・課題(Identify Pain)・社内推進者(Champion)・競合(Competition)の8要素で案件を見立てます。
+            </p>
           </div>
         </div>
       </div>
@@ -180,15 +183,15 @@
     <section class="bg-ocean-deep py-20 text-white">
       <div class="max-w-3xl mx-auto px-4 sm:px-6 text-center">
         <p class="text-base md:text-lg font-bold text-cyan-300 uppercase tracking-widest mb-4">他のツールとの違い</p>
-        <h2 class="text-3xl md:text-4xl font-black mb-8 leading-relaxed">
+        <h2 class="text-3xl md:text-4xl font-extrabold mb-8 leading-relaxed">
           <span class="block mb-3">いちばん軽いメモが、</span>
           <span class="block">いちばん賢い営業になる。</span>
         </h2>
-        <p class="text-lg md:text-xl text-kurage-100 max-w-2xl mx-auto leading-relaxed">
-          ふつうの CRM は、たくさんの画面を開いて、必要な項目を探して入力します。<br />
+        <p class="text-lg md:text-xl text-kurage-100 max-w-2xl mx-auto leading-loose">
+          ふつうの CRM は、たくさんの画面を開いて、必要な項目を探して<span class="whitespace-nowrap">入力します。</span><br />
           毎日の作業で、これが地味に手間になります。<br />
           クラゲディールは、Slack にいるクラゲくんにメモするだけ。<br />
-          それだけで、<span class="text-white font-bold">AI 機能が営業活動を自動でサポートしてくれます。</span><br />
+          それだけで、AI 機能が営業活動を自動でサポートしてくれます。<br />
           余った時間は、あなたのためだけに使ってください。
         </p>
       </div>
@@ -331,7 +334,7 @@
     <section class="bg-ocean-mist/40 py-16 md:py-20">
       <div class="max-w-3xl mx-auto px-4 sm:px-6 text-center">
         <div class="flex items-center justify-center gap-3 mb-3">
-          <img src="/kurage-cry.svg" alt="" class="w-10 h-10 md:w-12 md:h-12" />
+          <img src="/kurage-cry.png" alt="" class="w-10 h-10 md:w-12 md:h-12" />
           <p class="text-base md:text-lg font-bold text-orange-500 uppercase tracking-widest">あるある お悩み</p>
         </div>
         <h2 class="text-2xl md:text-3xl font-black text-gray-900 mb-4 leading-tight">
@@ -370,7 +373,7 @@
     <section id="reply-assist" class="bg-ocean-sand py-20">
       <div class="max-w-3xl mx-auto px-4 sm:px-6">
         <div class="flex items-center gap-3 mb-3">
-          <img src="/kurage-smile.svg" alt="" class="w-10 h-10 md:w-12 md:h-12 flex-shrink-0" />
+          <img src="/kurage-smile.png" alt="" class="w-10 h-10 md:w-12 md:h-12 flex-shrink-0" />
           <p class="text-base md:text-lg font-bold text-orange-500 uppercase tracking-widest">機能スポットライト</p>
         </div>
         <h2 class="text-3xl md:text-4xl font-black text-gray-900 mb-4 leading-tight">
@@ -575,7 +578,7 @@
     ============================================================ -->
     <section class="bg-gradient-to-br from-kurage-900 to-kurage-700 text-white py-20">
       <div class="max-w-3xl mx-auto px-4 sm:px-6 text-center">
-        <img src="/kurage-smile.svg" alt="クラゲディール" class="w-20 h-20 mx-auto mb-6 kurage-float" />
+        <img src="/kurage-smile.png" alt="クラゲディール" class="w-20 h-20 mx-auto mb-6 kurage-float" />
 
         <p class="text-base text-kurage-100 mb-3 leading-relaxed">
           ここまで読んでくれて嬉しいです！
@@ -622,7 +625,7 @@ const personas = [
   { icon: '🏢', text: '社員5人のIT企業。社長が営業も兼務。商談管理はスプレッドシートで回しています' },
   { icon: '👥', text: '営業3人の人材会社。CRMを導入したが誰も入力しない' },
   { icon: '🚀', text: '6人のスタートアップ。急成長で商談が増え、フォロー漏れが出始めた' },
-  { icon: '🔧', text: '一人社長のコンサル。クライアント20社の関係を頭の中で管理している' },
+  { icon: '🔧', text: '一人社長の税理士。クライアント20社の関係を頭の中で管理している' },
 ]
 
 

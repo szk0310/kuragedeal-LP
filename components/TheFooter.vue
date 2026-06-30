@@ -8,7 +8,7 @@
         <!-- Brand -->
         <div class="flex-shrink-0 text-center md:text-left">
           <div class="flex items-center justify-center md:justify-start gap-2 mb-3">
-            <img src="/kurage-on-green.svg" alt="クラゲディール" class="w-9 h-9" />
+            <img src="/kurage-on-green.png" alt="クラゲディール" class="w-9 h-9" />
             <span class="font-bold text-xl text-white">クラゲディール</span>
           </div>
           <p class="text-sm leading-relaxed max-w-xs mx-auto md:mx-0">
@@ -30,7 +30,7 @@
             <ul class="space-y-2">
               <li><a href="/#features" class="hover:text-white transition-colors">機能</a></li>
               <li><a href="/#pricing" class="hover:text-white transition-colors">料金</a></li>
-              <li><a href="/#comparison" class="hover:text-white transition-colors">比較</a></li>
+              <li><a href="/ai-support" class="hover:text-white transition-colors">AIサポート</a></li>
               <li><a href="/#faq" class="hover:text-white transition-colors">よくある質問</a></li>
             </ul>
           </div>

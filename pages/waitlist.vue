@@ -97,7 +97,7 @@
 
         <!-- 応募完了 -->
         <div v-if="submitted" class="bg-green-50 border-2 border-green-400 rounded-2xl p-8 text-center">
-          <img src="/kurage-smile.svg" alt="クラゲくん" class="w-16 h-16 mx-auto mb-4" />
+          <img src="/kurage-smile.png" alt="クラゲくん" class="w-16 h-16 mx-auto mb-4" />
           <h3 class="text-xl font-bold text-gray-900 mb-2">ご応募ありがとうございます！</h3>
           <p v-if="trialExtended" class="text-sm text-gray-700 mb-4 leading-relaxed">
             <strong class="text-orange-600">β アクセスを 2026 年 11 月 17 日まで自動延長しました。</strong><br/>
