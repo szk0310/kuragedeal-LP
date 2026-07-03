@@ -73,8 +73,23 @@ export default defineNuxtConfig({
         },
       ],
       script: [
+        // Google Tag Manager（GA4／広告コンバージョンを内包するコンテナ GTM-TVMFWFFG）。
+        // head の可能な限り上位で読み込む（tagPosition:'head'）。
+        {
+          tagPosition: 'head',
+          innerHTML:
+            "(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-TVMFWFFG');",
+        },
         // Cloudflare Turnstile（問い合わせフォームの bot 対策）
         { src: 'https://challenges.cloudflare.com/turnstile/v0/api.js', async: true, defer: true },
+      ],
+      noscript: [
+        // Google Tag Manager (noscript) — <body> 直後（bodyOpen）に配置
+        {
+          tagPosition: 'bodyOpen',
+          innerHTML:
+            '<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TVMFWFFG" height="0" width="0" style="display:none;visibility:hidden"></iframe>',
+        },
       ],
     },
   },
