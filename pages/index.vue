@@ -412,7 +412,7 @@
               <div class="flex-shrink-0 w-8 h-8 rounded-full bg-kurage-500 text-white font-bold flex items-center justify-center text-sm">1</div>
               <div>
                 <p class="font-bold text-gray-900 mb-1">顧客から届いたメールを転送</p>
-                <p class="text-sm text-gray-700 leading-relaxed">顧客から届いたメールを、クラゲの専用アドレスに転送することで返信文をクラゲが考えてくれます。Gmail / Outlook はそのまま使えます。</p>
+                <p class="text-sm text-gray-700 leading-relaxed">顧客から届いたメールを、クラゲの専用アドレスに転送することで返信文をクラゲが考えてくれます。Gmail / Outlook はそのまま使えます。<br><span class="text-gray-500">専用アドレスは Slack の <code class="bg-gray-100 px-1 rounded text-xs">/setting</code> →「📨 メール連携」で確認できます。</span></p>
               </div>
             </div>
             <div class="flex gap-4">

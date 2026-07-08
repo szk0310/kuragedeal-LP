@@ -94,7 +94,7 @@
           顧客とのメールも、クラゲくんが読んでくれます。
         </h2>
         <p class="text-gray-700 leading-relaxed mb-6">
-          顧客とのメールを、あなた専用の取り込みアドレスに転送するだけ。クラゲくんが内容を読んで、活動メモと受注確率に反映し、返信の下書きまで Slack に届けてくれます。メールのやり取りも、自然と営業の記録になっていきます。
+          顧客とのメールを、あなた専用の取り込みアドレスに転送するだけ。クラゲくんが内容を読んで、活動メモと受注確率に反映し、返信の下書きまで Slack に届けてくれます。メールのやり取りも、自然と営業の記録になっていきます。<br><span class="text-gray-500 text-sm">専用アドレスは Slack の <code class="bg-gray-100 px-1 rounded text-xs">/setting</code> →「📨 メール連携」で確認できます。</span>
         </p>
         <p class="text-sm text-gray-600 leading-relaxed">
           設定のしかたは、<a href="/guide" class="text-kurage-600 font-bold underline hover:text-kurage-700">使い方ガイド</a>でご案内しています。
