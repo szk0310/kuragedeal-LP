@@ -249,6 +249,21 @@
           </div>
         </div>
 
+        <!-- 次の一手の並び方（行29: 優先度は手入力させず、期日を主軸に透明化） -->
+        <div class="mt-6 bg-gray-50 rounded-xl p-4 md:p-5">
+          <p class="font-black text-gray-900 mb-2 text-sm">📋 「次の一手」の並び方</p>
+          <p class="text-sm text-gray-700 leading-relaxed mb-3">
+            優先度は手入力しません。ディールごとに決めた<b>次の一手（1行のやること）</b>と<b>期日</b>から、クラゲが自動で並び替えます。<b>なぜその順で出たかは、各行に理由が1行そえられる</b>ので迷いません。
+          </p>
+          <ol class="text-sm text-gray-700 leading-relaxed space-y-1 list-decimal list-inside">
+            <li><b>⏰ 期限切れ</b> — 次の一手の期日が過ぎているもの（最優先）</li>
+            <li><b>📅 今日/明日</b> — 期日が今日・明日のもの</li>
+            <li><b>🔥 重要（期日なし）</b> — 期日は無いが受注確率・金額の期待値が高いもの</li>
+            <li><b>💤 放置候補</b> — 次の一手が決まっておらず、14日以上動きが無いもの（「✍️ 決める」で次の一手を入力できます）</li>
+          </ol>
+          <p class="text-xs text-gray-500 mt-3">DM で「次の一手を教えて」と聞くと、この並びで表示されます。個別のディールを深掘りしたいときは <code class="bg-white px-1 rounded text-xs">/coach</code> のAIコーチングをどうぞ。</p>
+        </div>
+
         <!-- 困ったとき（両モード共通のフォールバック） -->
         <div class="mt-6 bg-kurage-50 border border-kurage-200 rounded-2xl p-5">
           <p class="font-black text-gray-900 mb-1">💡 困ったら、そのままクラゲに聞いてください</p>
