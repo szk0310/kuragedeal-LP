@@ -190,6 +190,11 @@
             ✏️ 顧客名や会社名、金額、メモなどは、クラゲの案内に従って入力するだけでOKです。
           </div>
 
+          <!-- 個人のお客様（地図実装・N4） -->
+          <div class="bg-gray-50 rounded-xl p-4 text-sm text-gray-700 leading-relaxed">
+            👤 個人のお客様（個人事業主・フリーランス等）は、「会社」欄にお名前を入れればOKです。
+          </div>
+
           <!-- 行き止まりゼロ -->
           <div class="bg-gray-50 rounded-xl p-4 text-sm text-gray-700 leading-relaxed">
             🔁 どの画面にも次に押せるボタンがあるので、<b>行き止まりになりません</b>。最初に戻りたいときは <b>「メニュー」</b> と打てば、いつでもメニューが出ます。
