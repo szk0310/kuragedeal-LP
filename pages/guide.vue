@@ -280,6 +280,70 @@
         </div>
       </section>
 
+      <!-- 言葉の役割（β向け用語ガイドの常設化・2026-07-31） -->
+      <section id="glossary" class="mb-16 scroll-mt-20">
+        <h2 class="text-xl font-black text-gray-800 mb-2 flex items-center gap-2">
+          <span>🗺️</span> 言葉の役割
+        </h2>
+        <p class="text-sm text-gray-500 mb-5 leading-relaxed">
+          メモ・状況・タスク・受注予定日——役割をはっきり分けています。迷ったらここへ。
+        </p>
+
+        <div class="bg-white rounded-2xl border border-gray-200 shadow-sm overflow-hidden mb-5">
+          <table class="w-full text-sm">
+            <thead>
+              <tr class="bg-gray-50 border-b border-gray-200">
+                <th class="text-left px-5 py-3 font-semibold text-gray-700 whitespace-nowrap">言葉</th>
+                <th class="text-left px-5 py-3 font-semibold text-gray-700">何を表すか</th>
+                <th class="text-left px-5 py-3 font-semibold text-gray-700 whitespace-nowrap">いつのこと</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-gray-100">
+              <tr>
+                <td class="px-5 py-3 font-bold text-gray-800 whitespace-nowrap">活動メモ</td>
+                <td class="px-5 py-3 text-gray-600">お客様とのやり取りの<b>記録</b>（「〇〇社と打ち合わせ」）</td>
+                <td class="px-5 py-3 text-gray-500 whitespace-nowrap">過去</td>
+              </tr>
+              <tr>
+                <td class="px-5 py-3 font-bold text-gray-800 whitespace-nowrap">予定ノート</td>
+                <td class="px-5 py-3 text-gray-600">「〇〇する<b>予定</b>」という先の約束</td>
+                <td class="px-5 py-3 text-gray-500 whitespace-nowrap">未来</td>
+              </tr>
+              <tr>
+                <td class="px-5 py-3 font-bold text-gray-800 whitespace-nowrap">状況（ステージ）</td>
+                <td class="px-5 py-3 text-gray-600">ディールの<b>進み具合</b>（アプローチ中→進行中→停滞中→受注／失注）</td>
+                <td class="px-5 py-3 text-gray-500 whitespace-nowrap">今</td>
+              </tr>
+              <tr>
+                <td class="px-5 py-3 font-bold text-gray-800 whitespace-nowrap">次の一手</td>
+                <td class="px-5 py-3 text-gray-600">そのディールで<b>次にやること</b>（1行＋任意の期日）</td>
+                <td class="px-5 py-3 text-gray-500 whitespace-nowrap">直近</td>
+              </tr>
+              <tr>
+                <td class="px-5 py-3 font-bold text-gray-800 whitespace-nowrap">受注予定日</td>
+                <td class="px-5 py-3 text-gray-600"><b>受注しそうな日</b>（売上の見通し用）※画面では「クローズ予定」と表示</td>
+                <td class="px-5 py-3 text-gray-500 whitespace-nowrap">見込み</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="space-y-3">
+          <div class="bg-gray-50 rounded-xl p-4 text-sm text-gray-700 leading-relaxed">
+            📋 <b>やること（todo）は「次の一手」に入れる</b>：「タスク」「todo」「やることリスト」と話しかければ次の一手の一覧が開きます。1ディール＝次の一手1つ。「次の一手を教えて」で、期日の近い順→重要→放置候補の順に、<b>なぜ出ているかの理由つき</b>で並びます。
+          </div>
+          <div class="bg-gray-50 rounded-xl p-4 text-sm text-gray-700 leading-relaxed">
+            📅 <b>2つの日付は別物</b>：「<b>次アクションの期日</b>（いつ次の一手をやるか）」と「<b>受注予定日／クローズ予定</b>（いつ受注しそうか）」。まぎらわしい裸の「期日」表示はやめました。
+          </div>
+          <div class="bg-gray-50 rounded-xl p-4 text-sm text-gray-700 leading-relaxed">
+            👤 <b>個人のお客様</b>：個人事業主・フリーランスは「会社」欄にお名前を入れればOK。検索は人・会社を横断するので迷子になりません。
+          </div>
+          <div class="bg-gray-50 rounded-xl p-4 text-sm text-gray-700 leading-relaxed">
+            🔁 <b>勝手に動かしません</b>：14日以上動いていない案件は「次の一手」に💤放置候補として拾い、「放置にしますか？」と確認します。ステータスをクラゲが勝手に変えることはありません。
+          </div>
+        </div>
+      </section>
+
       <!-- クイックスタート：最初の1週間 -->
       <section id="first-week" class="mb-16 scroll-mt-20">
         <div class="bg-gradient-to-br from-kurage-50 via-cyan-50 to-ocean-mist/40 border-2 border-kurage-200 rounded-2xl p-6 md:p-8">
