@@ -99,12 +99,8 @@
         <div v-if="submitted" class="bg-green-50 border-2 border-green-400 rounded-2xl p-8 text-center">
           <img src="/kurage-smile.png" alt="クラゲくん" class="w-16 h-16 mx-auto mb-4" />
           <h3 class="text-xl font-bold text-gray-900 mb-2">ご応募ありがとうございます！</h3>
-          <p v-if="trialExtended" class="text-sm text-gray-700 mb-4 leading-relaxed">
-            <strong class="text-orange-600">β アクセスを 2026 年 11 月 17 日まで自動延長しました。</strong><br/>
-            10 月中旬にクレジットカード登録のご案内をメールでお送りします。
-          </p>
-          <p v-else class="text-sm text-gray-700 mb-4 leading-relaxed">
-            確認メールをお送りしました。<br/>
+          <p class="text-sm text-gray-700 mb-4 leading-relaxed">
+            確認メールをお送りしました。β 試用中の方には、アクセス延長のご案内メールも別途お送りします（メール内のリンクをクリックすると 11 月 17 日まで延長されます）。<br/>
             10 月中旬にクレジットカード登録のご案内をメールでお送りします。
           </p>
           <a href="/" class="inline-block text-kurage-600 hover:underline font-medium">
@@ -268,7 +264,6 @@ const form = reactive({
 
 const submitting = ref(false)
 const submitted = ref(false)
-const trialExtended = ref(false)
 const conversion = useConversion()
 const error = ref('')
 
@@ -337,8 +332,8 @@ async function submit() {
       const data = await res.json().catch(() => ({}))
       throw new Error(data.error ?? '応募に失敗しました')
     }
-    const data = await res.json().catch(() => ({}))
-    trialExtended.value = !!data.trial_extended
+    // W4/B-2 (2026-09-01・S-3): API側で200固定・同一ボディに統一済み（列挙不能化）。
+    // trial_extended は旧API互換のため残っているだけの固定falseキーなので、もう参照しない。
     submitted.value = true
     conversion.fire('waitlist')
   } catch (e) {
