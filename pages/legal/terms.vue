@@ -5,7 +5,7 @@
 
       <div class="bg-white rounded-2xl shadow-sm border border-gray-100 p-8 sm:p-12 prose prose-sm max-w-none">
         <h1 class="text-2xl font-bold text-gray-900 mb-2">クラゲディール 利用規約</h1>
-        <p class="text-sm text-gray-400 mb-8 not-prose">最終更新：2026年4月13日</p>
+        <p class="text-sm text-gray-400 mb-8 not-prose">最終更新：2026年9月29日</p>
 
         <p>本利用規約（以下「本規約」）は、株式会社shiro（以下「当社」）が提供するクラゲディール（Kurage Deal）（以下「本サービス」）の利用条件を定めるものです。ご利用前に必ずお読みください。</p>
 
@@ -43,7 +43,7 @@
         <ol>
           <li>プランのアップグレード・ダウングレードは、Webダッシュボードの「設定」画面から行えます。変更は即時反映され、差額は即時精算されます。</li>
           <li>解約は、Webダッシュボードの「設定」画面にある「解約する」ボタン、またはサポート（support@kuragedeal.ai）へのご連絡により行えます。解約後も現在の請求期間終了日までサービスをご利用いただけます。</li>
-          <li>解約後もデータは90日間保持されます。保持期間中は、いつでも CSV / Excel 形式でデータをエクスポートいただけます（Settings &gt; データ管理）。90日経過後に自動削除されます。</li>
+          <li>解約後もデータは30日間保持されます。保持期間中は、いつでも CSV / Excel 形式でデータをエクスポートいただけます（Settings &gt; データ管理）。30日経過後に自動削除されます。</li>
           <li>一度支払われた料金は返金いたしません。</li>
         </ol>
 

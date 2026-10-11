@@ -320,6 +320,11 @@
                 <td class="px-5 py-3 text-gray-500 whitespace-nowrap">直近</td>
               </tr>
               <tr>
+                <td class="px-5 py-3 font-bold text-gray-800 whitespace-nowrap">今やること</td>
+                <td class="px-5 py-3 text-gray-600"><b>次の一手</b>のうち、期日が近いものや未設定のものを並べた<b>一覧</b></td>
+                <td class="px-5 py-3 text-gray-500 whitespace-nowrap">今</td>
+              </tr>
+              <tr>
                 <td class="px-5 py-3 font-bold text-gray-800 whitespace-nowrap">受注予定日</td>
                 <td class="px-5 py-3 text-gray-600"><b>受注しそうな日</b>（売上の見通し用）※画面では「クローズ予定」と表示</td>
                 <td class="px-5 py-3 text-gray-500 whitespace-nowrap">見込み</td>
