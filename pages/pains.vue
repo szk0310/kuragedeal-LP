@@ -71,7 +71,7 @@
             ★ クラゲディールは、こんなストレスから営業マンを解放します！
           </p>
           <p class="text-gray-800 leading-relaxed mb-4">
-            Slack に「田中さんと面談しました。予算 300 万」と<strong>投げる</strong>。<br />
+            Slack の<strong>［📝 活動をメモ］から書く</strong>。「田中さんと面談しました。予算 300 万」。<br />
             それだけで、AI がディールを更新し、ディール確度を計算し、<br />
             明日 AI コーチが「次は決裁者と会う段取りを」と問いかけてくれる。
           </p>
@@ -381,7 +381,7 @@
         </h2>
         <p class="text-white/85 leading-relaxed mb-8">
           そして顧客からの返信メールも、AI が下書きします。<br />
-          ボタンを押すだけ・話しかけるだけ。クラゲディールを見てみてください。
+          ボタンを押すだけ。クラゲディールを見てみてください。
         </p>
         <div class="flex flex-col sm:flex-row gap-3 justify-center">
           <a href="/" class="inline-flex items-center justify-center gap-2 bg-white text-kurage-700 font-bold px-7 py-3.5 rounded-xl hover:bg-gray-100 transition-colors">

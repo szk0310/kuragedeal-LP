@@ -44,8 +44,7 @@
             <h2 class="p-mv__catch">Slack に一言メモるだけ。<br />それだけで、<em>営業が進みます！</em></h2>
             <p class="p-mv__read">
               学習コスト、入力ストレス、どちらもゼロ。<br />
-              次にやることは<mark>ボタン</mark>で迷わず、<br />
-              よく使う操作は<mark>ひとこと</mark>でも開けます。<br />
+              ボタンで簡単操作。<br />
               今日から始められる<br />
               Slack があれば、特別なアプリはいりません。
             </p>
@@ -59,12 +58,11 @@
           <section class="p-mode" id="mode">
             <div class="c-sec-ttl">
               <p class="c-sec-ttl__en" lang="en">How it works</p>
-              <h2 class="c-sec-ttl__ja">ボタンを押すだけ。<br />慣れたら、ひとことで。</h2>
+              <h2 class="c-sec-ttl__ja">ボタンを押すだけ。<br />迷わず進める。</h2>
             </div>
             <p class="c-lead">
               むずかしい操作は一切ありません。<br />
-              次にやることがボタンで並ぶので迷いません。<br />
-              よく使う操作は、決まったひとことでも開けます。
+              次にやることがボタンで並ぶので迷いません。
             </p>
             <div class="p-mode__list">
               <article class="p-mode__item">
@@ -73,14 +71,6 @@
                   <h3 class="p-mode__ttl"><img src="/lp/img/icon-mode-btn.svg" alt="ボタン" />ボタンで進める</h3>
                   <p class="p-mode__text">クラゲディールが「次はこれ」と<br />ボタンで案内。タップして選ぶだけ。<br />何をすればいいか、迷いません。</p>
                   <img class="p-mode__img" src="/lp/img/mode-btn.png" alt="ボタン操作の画面" />
-                </div>
-              </article>
-              <article class="p-mode__item p-mode__item--chat">
-                <p class="p-mode__target"><span class="c-bubble">よく使う操作は、ひとことでも。</span></p>
-                <div class="p-mode__card">
-                  <h3 class="p-mode__ttl"><img src="/lp/img/icon-mode-chat.svg" alt="ひとこと" />ひとことでも開ける</h3>
-                  <p class="p-mode__text">「今やること」「メモ一覧」<br />「○○さんを教えて」など、<br />決まったひとことを打つだけで、<br />ボタンと同じ画面が開きます。</p>
-                  <img class="p-mode__img" src="/lp/img/mode-chat.png" alt="公式フレーズを打った画面" />
                 </div>
               </article>
             </div>
@@ -231,7 +221,7 @@
             <div class="p-price__common">
               <p class="p-price__common-ttl">全プラン共通の「全機能」</p>
               <ul class="c-check-list c-check-list--yellow">
-                <li>Slack の DM でメモ・顧客・ディールの登録（ボタンで、よく使う操作はひとことでも）</li>
+                <li>Slack の DM でメモ・顧客・ディールの登録（ボタンで）</li>
                 <li>毎朝のブリーフィングと「今やること」</li>
                 <li>ディール確度と次の一手の自動提案、MEDDPICC コーチング</li>
                 <li>メールの取り込みと返信の下書き</li>
@@ -543,7 +533,7 @@ usePageSeo({
   path: '/',
   title: 'クラゲディール — Slackだけで完結するAI営業CRM',
   description:
-    'Slack に一言書くだけで CRM 入力が完了。AI が営業コーチとして毎朝ブリーフィングし、ディール確度・次の一手・メール下書きを支援します。ひとりから小さな営業チームまで。PERSONAL ¥2,980/月〜。14日間無料でお試しいただけます。',
+    'Slack のボタンで、営業の記録が完了。AI が営業コーチとして毎朝ブリーフィングし、ディール確度・次の一手・メール下書きを支援します。ひとりから小さな営業チームまで。PERSONAL ¥2,980/月〜。14日間無料でお試しいただけます。',
 })
 
 const softwareLd = {
@@ -554,7 +544,7 @@ const softwareLd = {
   operatingSystem: 'Slack',
   url: 'https://kuragedeal.ai',
   description:
-    'Slack に書くだけで CRM 入力が完了する AI 営業 CRM。AI が MEDDPICC コーチング・ディール確度の算出・メール下書きを支援する。',
+    'Slack のボタンで、営業の記録が完了する AI 営業 CRM。AI が MEDDPICC コーチング・ディール確度の算出・メール下書きを支援する。',
   offers: [
     { '@type': 'Offer', name: 'PERSONAL', price: 2980, priceCurrency: 'JPY', description: '1名まで。14日間の無料トライアル付き。' },
     { '@type': 'Offer', name: 'TRIO', price: 5980, priceCurrency: 'JPY', description: '3名まで（4名目から1名ごとに+¥2,000、7名まで）。14日間の無料トライアル付き。' },
