@@ -100,7 +100,7 @@ withDefaults(defineProps<{
   mainId: undefined,
 })
 
-const installUrl = 'https://slacksfa-api-808596335261.asia-northeast1.run.app/slack/install'
+const installUrl = 'https://api.kuragedeal.ai/slack/install'
 
 const navOpen = ref(false)
 const scrollerRef = ref<HTMLElement | null>(null)

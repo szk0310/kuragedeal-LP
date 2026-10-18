@@ -402,7 +402,7 @@
 // このページ専有セクション用のtop.cssだけを読み込む。
 import '~/assets/css/lp/top.css'
 
-const installUrl = 'https://slacksfa-api-808596335261.asia-northeast1.run.app/slack/install'
+const installUrl = 'https://api.kuragedeal.ai/slack/install'
 
 // 計測: 「14日間無料で試す」クリックをコンバージョンとして記録（UTM はインストールURLに引き継がない）。
 const { fire } = useConversion()

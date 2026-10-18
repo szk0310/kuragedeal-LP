@@ -14,7 +14,7 @@
         </template>
         <template v-else>
           ご質問・ご要望は下記フォームからお気軽にどうぞ。<br />
-          14 日間無料トライアルは <a href="https://slacksfa-api-808596335261.asia-northeast1.run.app/slack/install" style="color: var(--color-accent3); text-decoration: underline;">Slack に追加</a> するだけで、今すぐ始められます。
+          14 日間無料トライアルは <a href="https://api.kuragedeal.ai/slack/install" style="color: var(--color-accent3); text-decoration: underline;">Slack に追加</a> するだけで、今すぐ始められます。
         </template>
       </p>
 

@@ -104,7 +104,7 @@
 // LP mock刷新・下層ページ統一指示書・タスク2（option A・3ページ目）。
 import '~/assets/css/lp/ai-support.css'
 
-const installUrl = 'https://slacksfa-api-808596335261.asia-northeast1.run.app/slack/install'
+const installUrl = 'https://api.kuragedeal.ai/slack/install'
 
 const { fire } = useConversion()
 function onTrialClick() {
