@@ -1,35 +1,17 @@
 <template>
   <div>
-    <TheNav v-if="!usesLpFrame" />
     <NuxtPage />
-    <TheFooter v-if="!usesLpFrame" />
-    <ChatWidget v-if="showChat" />
   </div>
 </template>
 
 <script setup lang="ts">
-const route = useRoute()
-// 新デザイン（test_kurage_261009b）へ移植済みのページは、自前のヘッダー／ナビ／フッター
-// （components/LpFrame.vue）を内包している。共通の TheNav/TheFooter を重ねて二重表示しない。
-// LP mock刷新・下層ページ統一指示書・タスク2: 下層ページを1ページずつ LpFrame 化するたび、
-// この配列にパスを足す（全ページ移行が済んだらこの分岐ごと削除する）。
-//
-// 2026-10-19・オッパ指摘（不具合）: 本番では /pains から /pains/ へ308リダイレクトされ、
-// route.path が末尾スラッシュ付きになる。lpFramePagesとの完全一致（includes）だけだと
-// 本番環境でこの判定が外れ、古いTheNav/TheFooterがLpFrame自前のヘッダー／フッターに
-// 重なって二重表示される（ローカルのプレビューだけでは気づけない）。ルートでない限り
-// 末尾スラッシュを落としてから比較する。
-function stripTrailingSlash(path: string): string {
-  return path !== '/' && path.endsWith('/') ? path.slice(0, -1) : path
-}
-const lpFramePages = ['/', '/pains', '/guide', '/ai-support', '/manual', '/help', '/contact', '/legal/terms', '/legal/privacy', '/legal/tokusho']
-const normalizedPath = computed(() => stripTrailingSlash(route.path))
-const usesLpFrame = computed(() => lpFramePages.includes(normalizedPath.value))
-// フォームページ・LpFrame採用ページでは、フローティング CTA（ChatWidget）を非表示
-// （送信ボタンとの被り回避／新デザインの固定フレームと競合するため）。
-// /beta /waitlist /free はβ終了に伴い廃止・routeRules で / に 301 済みのため配列から除去
-const formPaths = ['/contact']
-const showChat = computed(() => !formPaths.includes(normalizedPath.value) && !usesLpFrame.value)
+// LP mock刷新・下層ページ統一指示書・タスク2（2026-10-19完了）: 全ページ
+// （トップ＋下層9ページ）がLpFrame.vue（自前のヘッダー／ナビ／フッター）に
+// 移行済みのため、共通のTheNav/TheFooterとの出し分け分岐・ChatWidgetは
+// 削除した（新デザインの固定フレームと常に競合するため、ChatWidgetは
+// タスク2着手以降すでに全ページで非表示の状態になっていた）。
+// ChatWidget自体を今後どう扱うか（完全撤去／別の形で復活）は未決定のため、
+// コンポーネント本体（components/ChatWidget.vue）はそのまま残してある。
 
 // Organization 構造化データ（全ページ共通）。AI 検索／ナレッジパネル向け。
 // ※ SNS の sameAs は開設順に追記（note / LinkedIn は開設後に追加）。
