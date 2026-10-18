@@ -26,7 +26,10 @@
           <p class="p-contact__success-ttl">送信完了しました！</p>
           <p class="p-contact__success-text">
             お問い合わせありがとうございます<br />
-            数営業日以内に鈴木より直接ご連絡いたします。
+            <!-- E-231【不具合】: 11人以上のご相談以外（一般/取材/不具合報告）でも
+                 一律「鈴木より」と個人名を出していた。種別に応じて出し分ける。 -->
+            <template v-if="isEnterprise">数営業日以内に鈴木より直接ご連絡いたします。</template>
+            <template v-else>数営業日以内に担当者より直接ご連絡いたします。</template>
           </p>
           <a href="/" class="p-contact__success-link">トップに戻る</a>
         </div>
@@ -153,14 +156,16 @@ const turnstileSiteKey = runtimeConfig.public.turnstileSiteKey
 
 const VALID_SUBJECTS = ['enterprise', 'general', 'press', 'bug'] as const
 
-// SSR/prerender 時は route.query が空のため、SSR では暫定で 'enterprise' を初期値にし、
+// SSR/prerender 時は route.query が空のため、SSR では暫定で 'general' を初期値にし、
 // クライアントハイドレーション後に onMounted で URL クエリを読み直して上書きする。
 // (Cloudflare Pages の prerender で生成された静的 HTML に query が反映されない問題への対処)
 function pickSubjectFromQuery(): string {
   const q = (route.query.subject as string | undefined)?.toLowerCase()
   if (q && (VALID_SUBJECTS as readonly string[]).includes(q)) return q
-  // LP の「11 人以上のご相談」カードからの導線が主用途なのでデフォルト enterprise
-  return 'enterprise'
+  // E-231【不具合】: ?subject= を付けずに普通に開いたとき（サイト内にリンクが無く、
+  // 直打ち/外部リンク経由が主）は「お問い合わせ」の見出しになるべきなのに、
+  // 以前はここが 'enterprise' 固定だったため「11人以上のご相談」が誤って出ていた。
+  return 'general'
 }
 
 const form = reactive({
