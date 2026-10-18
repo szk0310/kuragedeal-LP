@@ -136,43 +136,65 @@
           <!-- 具体例：活動メモが完了するまで -->
           <p class="text-sm font-bold text-gray-900">たとえば「活動をメモ」する流れ</p>
           <SlackMessageMock channel-name="💬 クラゲディール（DM）">
+            <SlackBotLine name="あなた" :is-user="true" time="9:00"><p class="text-gray-400">メニュー</p></SlackBotLine>
             <SlackBotLine name="クラゲディール" :bot-badge="true" time="9:00">
-              <p class="font-bold mb-2">👉 何をしますか？</p>
-              <div class="flex flex-wrap gap-2">
-                <span class="inline-block border border-gray-300 bg-white rounded-md px-3 py-1.5 text-xs font-semibold text-gray-800">👤 顧客を登録</span>
-                <span class="inline-block border-2 border-kurage-400 bg-kurage-50 rounded-md px-3 py-1.5 text-xs font-bold text-kurage-800">📝 活動をメモ</span>
-                <span class="inline-block border border-gray-300 bg-white rounded-md px-3 py-1.5 text-xs font-semibold text-gray-800">📊 ディールを登録</span>
-                <span class="inline-block border border-gray-300 bg-white rounded-md px-3 py-1.5 text-xs font-semibold text-gray-800">📋 状況を見る</span>
+              <p class="font-bold mb-2">メニュー　やりたいことを選んでください</p>
+              <div class="flex flex-col gap-2">
+                <span class="block w-full text-center border border-gray-300 bg-white rounded-lg px-4 py-2.5 text-sm font-semibold text-gray-800">👤 顧客を登録</span>
+                <span class="block w-full text-center border-2 border-kurage-400 bg-kurage-50 rounded-lg px-4 py-2.5 text-sm font-bold text-kurage-800">📝 活動をメモ</span>
+                <span class="block w-full text-center border border-gray-300 bg-white rounded-lg px-4 py-2.5 text-sm font-semibold text-gray-800">📊 ディールを登録</span>
+                <span class="block w-full text-center border border-gray-300 bg-white rounded-lg px-4 py-2.5 text-sm font-semibold text-gray-800">🎯 今やること</span>
               </div>
             </SlackBotLine>
             <SlackBotLine name="あなた" :is-user="true" time="9:00"><p class="text-gray-400">（「📝 活動をメモ」を押す）</p></SlackBotLine>
             <SlackBotLine name="クラゲディール" :bot-badge="true" time="9:00">
-              <p class="mb-2">誰についてのメモですか？</p>
-              <div class="flex flex-wrap gap-2">
-                <span class="inline-block border-2 border-kurage-400 bg-kurage-50 rounded-md px-3 py-1.5 text-xs font-bold text-kurage-800">👤 田中さん</span>
-                <span class="inline-block border border-gray-300 bg-white rounded-md px-3 py-1.5 text-xs font-semibold text-gray-800">👤 佐藤さん</span>
-                <span class="inline-block border border-gray-300 bg-white rounded-md px-3 py-1.5 text-xs font-semibold text-gray-800">🔍 顧客を探す</span>
+              <p class="font-bold mb-2">📝 活動をメモ　誰についてのメモですか？（最近やりとりした順）</p>
+              <div class="flex flex-col gap-2">
+                <span class="block w-full text-center border-2 border-kurage-400 bg-kurage-50 rounded-lg px-4 py-2.5 text-sm font-bold text-kurage-800">👤 田中一郎</span>
+                <span class="block w-full text-center border border-gray-300 bg-white rounded-lg px-4 py-2.5 text-sm font-semibold text-gray-800">👤 佐藤花子</span>
+                <span class="block w-full text-center border border-gray-300 bg-white rounded-lg px-4 py-2.5 text-sm font-semibold text-gray-800">🔍 顧客を探す</span>
+                <span class="block w-full text-center border border-gray-300 bg-white rounded-lg px-4 py-2.5 text-sm font-semibold text-gray-800">✖ やめる</span>
               </div>
             </SlackBotLine>
-            <SlackBotLine name="あなた" :is-user="true" time="9:00"><p class="text-gray-400">（「👤 田中さん」を押す）</p></SlackBotLine>
+            <SlackBotLine name="あなた" :is-user="true" time="9:00"><p class="text-gray-400">（「👤 田中一郎」を押す）</p></SlackBotLine>
             <SlackBotLine name="クラゲディール" :bot-badge="true" time="9:00">
-              <p class="mb-2">どんな活動でしたか？</p>
-              <div class="flex flex-wrap gap-2">
-                <span class="inline-block border border-gray-300 bg-white rounded-md px-3 py-1.5 text-xs font-semibold text-gray-800">📞 電話</span>
-                <span class="inline-block border-2 border-kurage-400 bg-kurage-50 rounded-md px-3 py-1.5 text-xs font-bold text-kurage-800">🤝 打ち合わせ</span>
-                <span class="inline-block border border-gray-300 bg-white rounded-md px-3 py-1.5 text-xs font-semibold text-gray-800">✉️ メール</span>
+              <p class="font-bold mb-2">どんな活動ですか？</p>
+              <div class="flex flex-col gap-2">
+                <span class="block w-full text-center border border-gray-300 bg-white rounded-lg px-4 py-2.5 text-sm font-semibold text-gray-800">📞 電話</span>
+                <span class="block w-full text-center border-2 border-kurage-400 bg-kurage-50 rounded-lg px-4 py-2.5 text-sm font-bold text-kurage-800">🤝 打ち合わせ</span>
+                <span class="block w-full text-center border border-gray-300 bg-white rounded-lg px-4 py-2.5 text-sm font-semibold text-gray-800">📧 メール</span>
+                <span class="block w-full text-center border border-gray-300 bg-white rounded-lg px-4 py-2.5 text-sm font-semibold text-gray-800">🏢 訪問</span>
+                <span class="block w-full text-center border border-gray-300 bg-white rounded-lg px-4 py-2.5 text-sm font-semibold text-gray-800">📝 メモ</span>
               </div>
             </SlackBotLine>
             <SlackBotLine name="あなた" :is-user="true" time="9:01"><p class="text-gray-400">（「🤝 打ち合わせ」を押す）</p></SlackBotLine>
             <SlackBotLine name="クラゲディール" :bot-badge="true" time="9:01">
-              <p>最後に、ひとことメモを入力してください。<span class="text-gray-400">（例：予算300万、来月判断）</span></p>
+              <p class="mb-2">内容を書いてください（短くてOK）</p>
+              <div class="flex flex-col gap-2">
+                <span class="block w-full text-center border border-gray-300 bg-white rounded-lg px-4 py-2.5 text-sm font-semibold text-gray-800">スキップ</span>
+              </div>
             </SlackBotLine>
-            <SlackBotLine name="あなた" :is-user="true" time="9:01"><p>予算300万、競合は1社。来月末に判断</p></SlackBotLine>
+            <SlackBotLine name="あなた" :is-user="true" time="9:01"><p>打ち合わせ。来週までに見積もりを出す。先方は役員会で検討</p></SlackBotLine>
             <SlackBotLine name="クラゲディール" :bot-badge="true" time="9:01">
-              <p>✅ 田中さんの打ち合わせメモを記録しました。ディール確度も更新しました🪼</p>
+              <p class="mb-2">この内容で記録しますか？<br><b>田中一郎さん</b> / 打ち合わせ<br>「打ち合わせ。来週までに見積もりを出す。先方は役員会で検討」</p>
+              <div class="flex flex-col gap-2">
+                <span class="block w-full text-center border-2 border-kurage-400 bg-kurage-50 rounded-lg px-4 py-2.5 text-sm font-bold text-kurage-800">✅ これで登録</span>
+                <span class="block w-full text-center border border-gray-300 bg-white rounded-lg px-4 py-2.5 text-sm font-semibold text-gray-800">⟲ 最初から</span>
+              </div>
+            </SlackBotLine>
+            <SlackBotLine name="あなた" :is-user="true" time="9:01"><p class="text-gray-400">（「✅ これで登録」を押す）</p></SlackBotLine>
+            <SlackBotLine name="クラゲディール" :bot-badge="true" time="9:01">
+              <p>✅ 田中一郎さん（株式会社サンプル商事）の活動を記録しました（「打ち合わせ。来週までに見積もりを出す…」）🪼</p>
+            </SlackBotLine>
+            <SlackBotLine name="クラゲディール" :bot-badge="true" time="9:01">
+              <p class="font-bold mb-1">👉 今やること</p>
+              <p>📝 メモから拾ったやること<br>・見積もりを出す（来週までに）　田中一郎さん（株式会社サンプル商事）</p>
+              <div class="flex flex-col gap-2 mt-2">
+                <span class="block w-full text-center border border-gray-300 bg-white rounded-lg px-4 py-2.5 text-sm font-semibold text-gray-800">✅ 済んだ</span>
+              </div>
             </SlackBotLine>
           </SlackMessageMock>
-          <p class="text-xs text-gray-500"><b>ボタンを押す → 次のボタンが出る</b>をくり返し、最後にひとことだけ入力すれば完了。案内に沿うだけで記録できます。</p>
+          <p class="text-xs text-gray-500"><b>ボタンを押す → 次のボタンが出る</b>をくり返し、最後にひとことだけ入力すれば完了。案内に沿うだけで記録できて、書いた内容からやることまで拾ってくれます。</p>
 
           <!-- 入力について -->
           <div class="bg-gray-50 rounded-xl p-4 text-sm text-gray-700 leading-relaxed">
