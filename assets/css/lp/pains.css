@@ -1,0 +1,237 @@
+@charset "UTF-8";
+/*=============================================================
+  pains.css（/pains ページ固有）
+  寸法は calc(N * var(--u)) = デザイン（750px 幅）上の N px
+  トップページの .p-issue（3つのお悩み・簡易版）を、1テーマずつ
+  掘り下げて見せる詳細ページ。配色・余白のリズムは top.css に合わせる。
+=============================================================*/
+
+main section[id] {
+	scroll-margin-top: calc(120 * var(--u));
+}
+
+/*=============================================================
+  HERO
+=============================================================*/
+.p-pains-hero {
+	padding: calc(100 * var(--u)) calc(50 * var(--u)) calc(120 * var(--u));
+	background: var(--color-light-orange);
+}
+.p-pains-hero__back {
+	margin-top: calc(50 * var(--u));
+	text-align: center;
+}
+.p-pains-hero__back a {
+	font-size: calc(26 * var(--u));
+	text-decoration: underline;
+}
+
+/*=============================================================
+  BLOCK（お悩み1件分）
+=============================================================*/
+.p-pains__block {
+	padding: calc(120 * var(--u)) calc(50 * var(--u));
+	background: var(--color-white);
+}
+.p-pains__block--alt {
+	background: var(--color-light-orange);
+}
+.p-pains__fig {
+	width: calc(150 * var(--u));
+	margin: 0 auto calc(20 * var(--u));
+}
+.p-pains__label {
+	color: var(--color-accent3);
+	font-family: var(--font-en);
+	font-size: calc(26 * var(--u));
+	font-weight: 700;
+	line-height: calc(40 * var(--u));
+	letter-spacing: 0.1em;
+	text-align: center;
+	text-transform: uppercase;
+}
+.p-pains__ttl {
+	margin-top: calc(12 * var(--u));
+	font-size: calc(46 * var(--u));
+	font-weight: 900;
+	line-height: calc(68 * var(--u));
+	text-align: center;
+}
+
+/* 共感の声（吹き出し風） */
+.p-pains__voice {
+	margin-top: calc(60 * var(--u));
+	padding: calc(40 * var(--u)) calc(36 * var(--u));
+	border-left: calc(8 * var(--u)) solid var(--color-accent3);
+	border-radius: 0 calc(20 * var(--u)) calc(20 * var(--u)) 0;
+	background: var(--color-light-orange);
+}
+.p-pains__block--alt .p-pains__voice {
+	background: var(--color-white);
+}
+.p-pains__voice-quote {
+	font-size: calc(32 * var(--u));
+	font-weight: 700;
+	line-height: calc(50 * var(--u));
+}
+.p-pains__voice-quote + .p-pains__voice-text {
+	margin-top: calc(24 * var(--u));
+}
+.p-pains__voice-text {
+	font-size: calc(28 * var(--u));
+	line-height: calc(48 * var(--u));
+}
+.p-pains__voice-text + .p-pains__voice-text {
+	margin-top: calc(18 * var(--u));
+}
+.p-pains__voice-text strong {
+	color: var(--color-accent3);
+	font-weight: 700;
+}
+
+/* なぜ〜のか */
+.p-pains__sub {
+	margin-top: calc(70 * var(--u));
+	font-size: calc(32 * var(--u));
+	font-weight: 700;
+	line-height: calc(50 * var(--u));
+}
+.p-pains__causes {
+	margin-top: calc(36 * var(--u));
+}
+.p-pains__cause {
+	padding: calc(34 * var(--u)) calc(36 * var(--u));
+	border-radius: calc(20 * var(--u));
+	background: var(--color-light-gray);
+}
+.p-pains__block--alt .p-pains__cause {
+	background: var(--color-white);
+}
+.p-pains__cause + .p-pains__cause {
+	margin-top: calc(24 * var(--u));
+}
+.p-pains__cause-ttl {
+	font-size: calc(28 * var(--u));
+	font-weight: 700;
+	line-height: calc(44 * var(--u));
+}
+.p-pains__cause-text {
+	margin-top: calc(10 * var(--u));
+	font-size: calc(26 * var(--u));
+	line-height: calc(44 * var(--u));
+}
+
+/* 解決（クラゲディールはこう解く） */
+.p-pains__solution {
+	margin-top: calc(70 * var(--u));
+	padding-bottom: calc(44 * var(--u));
+	border-radius: calc(30 * var(--u));
+	background: var(--color-white);
+	box-shadow: 0 0 0 calc(2 * var(--u)) var(--color-accent3) inset;
+}
+.p-pains__solution-head {
+	padding: calc(28 * var(--u)) calc(36 * var(--u));
+	border-radius: calc(28 * var(--u)) calc(28 * var(--u)) 0 0;
+	background: var(--color-accent3);
+	color: var(--color-white);
+	font-size: calc(30 * var(--u));
+	font-weight: 700;
+	line-height: calc(46 * var(--u));
+}
+.p-pains__solution-body {
+	margin-top: calc(34 * var(--u));
+	padding: 0 calc(36 * var(--u));
+	font-size: calc(27 * var(--u));
+	line-height: calc(46 * var(--u));
+}
+.p-pains__solution-body p + p {
+	margin-top: calc(24 * var(--u));
+}
+.p-pains__solution-strong {
+	color: var(--color-accent3);
+	font-size: calc(30 * var(--u));
+	font-weight: 700;
+	line-height: calc(48 * var(--u));
+}
+.p-pains__solution-item + .p-pains__solution-item {
+	margin-top: calc(32 * var(--u));
+}
+.p-pains__solution-item-ttl {
+	font-weight: 700;
+}
+.p-pains__solution-item-text {
+	margin-top: calc(10 * var(--u));
+	padding-left: calc(20 * var(--u));
+	font-size: calc(24 * var(--u));
+	line-height: calc(42 * var(--u));
+	border-left: calc(4 * var(--u)) solid var(--color-light-orange);
+}
+
+/* Slack モック・注記 */
+.p-pains__mock {
+	margin-top: calc(60 * var(--u));
+}
+.p-pains__mock-note {
+	margin-top: calc(24 * var(--u));
+	color: var(--color-gray-text);
+	font-size: calc(24 * var(--u));
+	line-height: calc(40 * var(--u));
+	text-align: center;
+}
+
+/* 3つの特徴チップ */
+.p-pains__chips {
+	display: flex;
+	flex-direction: column;
+	gap: calc(20 * var(--u));
+	margin-top: calc(50 * var(--u));
+}
+.p-pains__chip {
+	padding: calc(28 * var(--u)) calc(32 * var(--u));
+	border-radius: calc(20 * var(--u));
+	background: var(--color-light-gray);
+}
+.p-pains__block--alt .p-pains__chip {
+	background: var(--color-white);
+}
+.p-pains__chip-icon {
+	font-size: calc(40 * var(--u));
+	line-height: 1;
+}
+.p-pains__chip-ttl {
+	margin-top: calc(12 * var(--u));
+	font-size: calc(26 * var(--u));
+	font-weight: 700;
+	line-height: calc(40 * var(--u));
+}
+.p-pains__chip-text {
+	margin-top: calc(6 * var(--u));
+	font-size: calc(24 * var(--u));
+	line-height: calc(40 * var(--u));
+}
+
+/* 次のお悩みへの繋ぎ */
+.p-pains__next {
+	margin-top: calc(80 * var(--u));
+	font-size: calc(34 * var(--u));
+	font-weight: 900;
+	line-height: calc(52 * var(--u));
+	text-align: center;
+}
+
+@media (min-width: 768px) {
+	.p-pains__causes {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: calc(24 * var(--u));
+	}
+	.p-pains__cause + .p-pains__cause {
+		margin-top: 0;
+	}
+	.p-pains__chips {
+		flex-direction: row;
+	}
+	.p-pains__chip {
+		flex: 1;
+	}
+}

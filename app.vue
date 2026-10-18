@@ -1,22 +1,25 @@
 <template>
   <div>
-    <TheNav v-if="!isTopPage" />
+    <TheNav v-if="!usesLpFrame" />
     <NuxtPage />
-    <TheFooter v-if="!isTopPage" />
+    <TheFooter v-if="!usesLpFrame" />
     <ChatWidget v-if="showChat" />
   </div>
 </template>
 
 <script setup lang="ts">
 const route = useRoute()
-// トップ（/）は test_kurage_261009b の新デザインを移植し、自前のヘッダー／ナビ／フッターを
-// 内包している（pages/index.vue）。共通の TheNav/TheFooter を重ねて二重表示しない。
-const isTopPage = computed(() => route.path === '/')
-// フォームページ・トップでは、フローティング CTA（ChatWidget）を非表示
-// （送信ボタンとの被り回避／トップは新デザインの固定フレームと競合するため）。
+// 新デザイン（test_kurage_261009b）へ移植済みのページは、自前のヘッダー／ナビ／フッター
+// （components/LpFrame.vue）を内包している。共通の TheNav/TheFooter を重ねて二重表示しない。
+// LP mock刷新・下層ページ統一指示書・タスク2: 下層ページを1ページずつ LpFrame 化するたび、
+// この配列にパスを足す（全ページ移行が済んだらこの分岐ごと削除する）。
+const lpFramePages = ['/', '/pains']
+const usesLpFrame = computed(() => lpFramePages.includes(route.path))
+// フォームページ・LpFrame採用ページでは、フローティング CTA（ChatWidget）を非表示
+// （送信ボタンとの被り回避／新デザインの固定フレームと競合するため）。
 // /beta /waitlist /free はβ終了に伴い廃止・routeRules で / に 301 済みのため配列から除去
 const formPaths = ['/contact']
-const showChat = computed(() => !formPaths.includes(route.path) && !isTopPage.value)
+const showChat = computed(() => !formPaths.includes(route.path) && !usesLpFrame.value)
 
 // Organization 構造化データ（全ページ共通）。AI 検索／ナレッジパネル向け。
 // ※ SNS の sameAs は開設順に追記（note / LinkedIn は開設後に追加）。
