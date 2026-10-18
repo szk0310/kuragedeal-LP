@@ -466,6 +466,118 @@
 }
 
 /*=============================================================
+  card（下層の解説・マニュアル系ページ共通）
+=============================================================*/
+.c-card {
+	padding: calc(32 * var(--u)) calc(30 * var(--u));
+	border-radius: calc(24 * var(--u));
+	background: var(--color-white);
+	box-shadow: 0 calc(4 * var(--u)) calc(20 * var(--u)) rgba(0, 0, 0, 0.06);
+}
+.c-card--flat {
+	background: var(--color-light-gray);
+	box-shadow: none;
+}
+.c-card--accent {
+	background: var(--color-white);
+	box-shadow: none;
+	border: calc(2 * var(--u)) solid var(--color-accent3);
+}
+
+/*=============================================================
+  step（番号付き見出し・手順）
+=============================================================*/
+.c-step {
+	display: flex;
+	align-items: flex-start;
+	gap: calc(20 * var(--u));
+}
+.c-step__num {
+	flex-shrink: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: calc(56 * var(--u));
+	height: calc(56 * var(--u));
+	border-radius: 50%;
+	background: var(--color-accent3);
+	color: var(--color-white);
+	font-weight: 700;
+	font-size: calc(26 * var(--u));
+	line-height: 1;
+}
+.c-step__body {
+	flex: 1;
+	padding-top: calc(6 * var(--u));
+}
+.c-step__ttl {
+	font-weight: 700;
+	font-size: calc(28 * var(--u));
+	line-height: calc(42 * var(--u));
+}
+.c-step__text {
+	margin-top: calc(10 * var(--u));
+	font-size: calc(25 * var(--u));
+	line-height: calc(42 * var(--u));
+	color: var(--color-text);
+}
+
+/*=============================================================
+  info box（アイコン＋説明。tone: 既定=グレー / accent / success）
+=============================================================*/
+.c-info {
+	display: flex;
+	gap: calc(16 * var(--u));
+	padding: calc(24 * var(--u)) calc(26 * var(--u));
+	border-radius: calc(18 * var(--u));
+	background: var(--color-light-gray);
+	font-size: calc(25 * var(--u));
+	line-height: calc(42 * var(--u));
+	text-align: left;
+}
+.c-info--accent {
+	background: var(--color-light-orange);
+	border: calc(2 * var(--u)) solid var(--color-accent3);
+}
+.c-info--success {
+	background: #eafaf0;
+	border: calc(2 * var(--u)) solid #34c267;
+}
+.c-info__icon {
+	flex-shrink: 0;
+	font-size: calc(32 * var(--u));
+	line-height: calc(42 * var(--u));
+}
+
+/*=============================================================
+  doc table（用語・ひとこと対応表などの参照テーブル）
+=============================================================*/
+.c-doc-table-wrap {
+	border-radius: calc(24 * var(--u));
+	overflow: hidden;
+	border: calc(2 * var(--u)) solid var(--color-gray);
+	background: var(--color-white);
+}
+.c-doc-table {
+	width: 100%;
+	border-collapse: collapse;
+	font-size: calc(23 * var(--u));
+}
+.c-doc-table th {
+	padding: calc(18 * var(--u)) calc(20 * var(--u));
+	background: var(--color-light-gray);
+	font-weight: 700;
+	text-align: left;
+	white-space: nowrap;
+}
+.c-doc-table td {
+	padding: calc(18 * var(--u)) calc(20 * var(--u));
+	border-top: calc(2 * var(--u)) solid var(--color-gray);
+	text-align: left;
+	vertical-align: top;
+}
+
+/*=============================================================
   check list
 =============================================================*/
 .c-check-list {

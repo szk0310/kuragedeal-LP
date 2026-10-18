@@ -1,0 +1,411 @@
+@charset "UTF-8";
+/*=============================================================
+  guide.css（/guide ページ固有）
+  寸法は calc(N * var(--u)) = デザイン（750px 幅）上の N px
+  共通カード／手順番号／情報ボックス／参照テーブルは common.css の
+  .c-card/.c-step/.c-info/.c-doc-table を使う。ここはこのページだけの
+  レイアウト（ヘッダー・概要3マス・流れ図・サイドバーモック等）。
+=============================================================*/
+
+main section[id] {
+	scroll-margin-top: calc(120 * var(--u));
+}
+
+.p-guide {
+	padding: calc(70 * var(--u)) calc(50 * var(--u)) calc(100 * var(--u));
+}
+.p-guide__section + .p-guide__section {
+	margin-top: calc(110 * var(--u));
+}
+
+/* ヘッダー（ロゴ・タイトル・リード） */
+.p-guide__head {
+	text-align: center;
+}
+.p-guide__head-icon {
+	width: calc(90 * var(--u));
+	margin: 0 auto calc(20 * var(--u));
+}
+.p-guide__head-ttl {
+	font-size: calc(46 * var(--u));
+	font-weight: 900;
+	line-height: calc(64 * var(--u));
+}
+.p-guide__head-lead {
+	margin-top: calc(16 * var(--u));
+	font-size: calc(26 * var(--u));
+	line-height: calc(44 * var(--u));
+	color: var(--color-gray-text);
+}
+.p-guide__head-lead strong {
+	color: var(--color-text);
+	font-weight: 700;
+}
+
+/* インストール完了バナー */
+.p-guide__banner {
+	margin-bottom: calc(60 * var(--u));
+	text-align: center;
+}
+.p-guide__banner-icon {
+	font-size: calc(56 * var(--u));
+	line-height: 1;
+	margin-bottom: calc(12 * var(--u));
+}
+.p-guide__banner .c-btn {
+	margin-top: calc(28 * var(--u));
+	width: auto;
+	display: inline-flex;
+	padding: 0 calc(40 * var(--u));
+}
+
+/* 3ステップの全体像（①②③の小さなマス） */
+.p-guide__overview {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: calc(16 * var(--u));
+	margin: calc(60 * var(--u)) 0;
+}
+.p-guide__overview-cell {
+	padding: calc(24 * var(--u)) calc(12 * var(--u));
+	text-align: center;
+}
+.p-guide__overview-num {
+	font-size: calc(36 * var(--u));
+	line-height: calc(48 * var(--u));
+}
+.p-guide__overview-label {
+	margin-top: calc(6 * var(--u));
+	font-size: calc(21 * var(--u));
+	font-weight: 700;
+	line-height: calc(32 * var(--u));
+}
+
+/* セクション見出し（大きな番号つき） */
+.p-guide__section-ttl {
+	display: flex;
+	align-items: center;
+	gap: calc(18 * var(--u));
+	font-size: calc(34 * var(--u));
+	font-weight: 900;
+	line-height: calc(48 * var(--u));
+}
+.p-guide__section-ttl .c-step__num {
+	width: calc(50 * var(--u));
+	height: calc(50 * var(--u));
+	font-size: calc(24 * var(--u));
+}
+.p-guide__section-lead {
+	margin-top: calc(14 * var(--u));
+	font-size: calc(25 * var(--u));
+	line-height: calc(44 * var(--u));
+	color: var(--color-gray-text);
+}
+.p-guide__section-lead strong {
+	color: var(--color-text);
+	font-weight: 700;
+}
+
+.p-guide__cards {
+	display: flex;
+	flex-direction: column;
+	gap: calc(24 * var(--u));
+	margin-top: calc(40 * var(--u));
+}
+
+/* ステップカード内の「文章＋ビジュアル」 */
+.p-guide__step-grid {
+	display: grid;
+	gap: calc(28 * var(--u));
+	margin-top: calc(24 * var(--u));
+}
+@media (min-width: 768px) {
+	.p-guide__step-grid--2col {
+		grid-template-columns: 1fr 1fr;
+		align-items: center;
+	}
+}
+
+/* 流れ図（LP → 認可 → 完了のような縦積みモック） */
+.p-guide__flow {
+	padding: calc(22 * var(--u));
+	border-radius: calc(20 * var(--u));
+	background: var(--color-light-gray);
+}
+.p-guide__flow-box {
+	padding: calc(18 * var(--u)) calc(20 * var(--u));
+	border-radius: calc(14 * var(--u));
+	background: var(--color-white);
+	border: calc(2 * var(--u)) solid var(--color-gray);
+}
+.p-guide__flow-box + .p-guide__flow-arrow,
+.p-guide__flow-arrow + .p-guide__flow-box {
+	margin-top: calc(8 * var(--u));
+}
+.p-guide__flow-label {
+	font-size: calc(20 * var(--u));
+	color: var(--color-gray-text);
+	margin-bottom: calc(10 * var(--u));
+}
+.p-guide__flow-arrow {
+	text-align: center;
+	color: #c9c9c9;
+	line-height: 1;
+	font-size: calc(24 * var(--u));
+}
+.p-guide__flow-done {
+	padding: calc(18 * var(--u)) calc(20 * var(--u));
+	border-radius: calc(14 * var(--u));
+	background: #eafaf0;
+	border: calc(2 * var(--u)) solid #34c267;
+	color: #1b7a3e;
+	font-weight: 700;
+	font-size: calc(23 * var(--u));
+}
+.p-guide__flow-chip {
+	display: inline-flex;
+	align-items: center;
+	gap: calc(10 * var(--u));
+	padding: calc(14 * var(--u)) calc(22 * var(--u));
+	border-radius: calc(10 * var(--u));
+	background: var(--color-accent3);
+	color: var(--color-white);
+	font-weight: 700;
+	font-size: calc(23 * var(--u));
+}
+.p-guide__flow-chip img {
+	width: calc(28 * var(--u));
+	flex-shrink: 0;
+}
+.p-guide__flow-chip--success {
+	background: #34c267;
+}
+
+/* Slackサイドバーのモック（濃色・ブランド固有の見え方のため独自配色） */
+.p-guide__sidebar-mock {
+	padding: calc(18 * var(--u));
+	border-radius: calc(18 * var(--u));
+	background: #1a2b4a;
+}
+.p-guide__sidebar-mock-label {
+	padding: 0 calc(8 * var(--u));
+	margin-bottom: calc(10 * var(--u));
+	font-size: calc(21 * var(--u));
+	font-weight: 700;
+	color: rgba(255, 255, 255, 0.5);
+}
+.p-guide__sidebar-mock-item {
+	display: flex;
+	align-items: center;
+	gap: calc(12 * var(--u));
+	padding: calc(10 * var(--u)) calc(10 * var(--u));
+	border-radius: calc(8 * var(--u));
+	font-size: calc(24 * var(--u));
+	color: rgba(255, 255, 255, 0.45);
+}
+.p-guide__sidebar-mock-item--active {
+	background: rgba(255, 123, 19, 0.25);
+	color: var(--color-white);
+	font-weight: 700;
+	box-shadow: inset 0 0 0 calc(2 * var(--u)) rgba(255, 123, 19, 0.5);
+}
+.p-guide__sidebar-mock-item img {
+	width: calc(28 * var(--u));
+	flex-shrink: 0;
+}
+.p-guide__sidebar-mock-item span {
+	width: calc(24 * var(--u));
+	flex-shrink: 0;
+	text-align: center;
+}
+.p-guide__sidebar-mock-note {
+	margin-top: calc(10 * var(--u));
+	padding: 0 calc(8 * var(--u));
+	font-size: calc(20 * var(--u));
+	color: rgba(255, 255, 255, 0.4);
+}
+
+.p-guide__caption {
+	margin-top: calc(14 * var(--u));
+	font-size: calc(22 * var(--u));
+	line-height: calc(38 * var(--u));
+	color: var(--color-gray-text);
+}
+
+/* よく使うひとこと・最初の1週間 リード下のミニ注記 */
+.p-guide__note-strip {
+	margin-bottom: calc(40 * var(--u));
+	padding: calc(18 * var(--u)) calc(22 * var(--u));
+	border-radius: calc(14 * var(--u));
+	background: rgba(255, 255, 255, 0.6);
+	font-size: calc(21 * var(--u));
+	line-height: calc(36 * var(--u));
+	color: var(--color-gray-text);
+}
+.p-guide__note-strip a {
+	color: var(--color-accent3);
+	font-weight: 700;
+	text-decoration: underline;
+}
+
+/* クイックスタート：Day別プラン */
+.p-guide__day + .p-guide__day {
+	margin-top: calc(44 * var(--u));
+}
+.p-guide__day-label {
+	font-weight: 700;
+	font-size: calc(25 * var(--u));
+	line-height: calc(40 * var(--u));
+	color: var(--color-accent3);
+	margin-bottom: calc(14 * var(--u));
+}
+.p-guide__day .c-check-list {
+	display: flex;
+	flex-direction: column;
+	gap: calc(12 * var(--u));
+}
+.p-guide__day .c-check-list li {
+	padding: calc(18 * var(--u)) calc(20 * var(--u)) calc(18 * var(--u)) calc(60 * var(--u));
+	border-radius: calc(14 * var(--u));
+	background: var(--color-white);
+}
+.p-guide__day .c-check-list li::before {
+	left: calc(20 * var(--u));
+	top: calc(18 * var(--u));
+}
+.p-guide__quickstart-note {
+	margin-top: calc(40 * var(--u));
+	font-size: calc(21 * var(--u));
+	line-height: calc(38 * var(--u));
+	color: var(--color-gray-text);
+	font-style: italic;
+}
+
+/* 便利な機能とコマンド：区切り見出し */
+.p-guide__divider {
+	padding-top: calc(70 * var(--u));
+	margin-top: calc(70 * var(--u));
+	border-top: calc(2 * var(--u)) solid var(--color-gray);
+}
+.p-guide__divider-ttl {
+	font-size: calc(40 * var(--u));
+	font-weight: 900;
+	line-height: calc(56 * var(--u));
+}
+.p-guide__divider-lead {
+	margin-top: calc(8 * var(--u));
+	font-size: calc(23 * var(--u));
+	line-height: calc(38 * var(--u));
+	color: var(--color-gray-text);
+}
+
+.p-guide__sub-ttl {
+	display: flex;
+	align-items: center;
+	gap: calc(12 * var(--u));
+	font-size: calc(30 * var(--u));
+	font-weight: 900;
+	line-height: calc(44 * var(--u));
+	margin-bottom: calc(10 * var(--u));
+}
+.p-guide__sub-lead {
+	margin-bottom: calc(24 * var(--u));
+	font-size: calc(23 * var(--u));
+	line-height: calc(38 * var(--u));
+	color: var(--color-gray-text);
+}
+.p-guide__sub-lead a {
+	color: var(--color-accent3);
+	font-weight: 700;
+	text-decoration: underline;
+}
+.p-guide__sub-lead code,
+.p-guide__section-lead code,
+.p-guide__step-grid code,
+.c-step__text code,
+.c-info code {
+	padding: calc(2 * var(--u)) calc(8 * var(--u));
+	border-radius: calc(6 * var(--u));
+	background: var(--color-light-gray);
+	font-size: 0.9em;
+}
+
+/* コマンドグループ・1行（コード＋タイトル＋説明） */
+.p-guide__cmd-group + .p-guide__cmd-group {
+	margin-top: calc(24 * var(--u));
+}
+.p-guide__cmd-group-label {
+	font-size: calc(21 * var(--u));
+	font-weight: 700;
+	color: var(--color-accent3);
+	margin-bottom: calc(18 * var(--u));
+}
+.p-guide__cmd-row {
+	display: flex;
+	gap: calc(20 * var(--u));
+	align-items: flex-start;
+}
+.p-guide__cmd-row + .p-guide__cmd-row {
+	margin-top: calc(22 * var(--u));
+}
+.p-guide__cmd-code {
+	flex-shrink: 0;
+	padding: calc(8 * var(--u)) calc(16 * var(--u));
+	border-radius: calc(10 * var(--u));
+	background: var(--color-light-orange);
+	color: var(--color-accent3);
+	font-weight: 700;
+	font-size: calc(23 * var(--u));
+	white-space: nowrap;
+}
+.p-guide__cmd-ttl {
+	font-weight: 700;
+	font-size: calc(25 * var(--u));
+	line-height: calc(38 * var(--u));
+}
+.p-guide__cmd-desc {
+	margin-top: calc(4 * var(--u));
+	font-size: calc(22 * var(--u));
+	line-height: calc(36 * var(--u));
+	color: var(--color-gray-text);
+}
+
+/* アイコン＋見出し＋説明のカードグリッド（/setting・AI自動機能） */
+.p-guide__feature-grid {
+	display: grid;
+	grid-template-columns: 1fr;
+	gap: calc(20 * var(--u));
+	margin-top: calc(30 * var(--u));
+}
+@media (min-width: 768px) {
+	.p-guide__feature-grid {
+		grid-template-columns: 1fr 1fr;
+	}
+}
+.p-guide__feature-card {
+	display: flex;
+	gap: calc(16 * var(--u));
+}
+.p-guide__feature-icon {
+	flex-shrink: 0;
+	font-size: calc(32 * var(--u));
+	line-height: calc(40 * var(--u));
+}
+.p-guide__feature-ttl {
+	font-weight: 700;
+	font-size: calc(24 * var(--u));
+	line-height: calc(38 * var(--u));
+}
+.p-guide__feature-desc {
+	margin-top: calc(4 * var(--u));
+	font-size: calc(22 * var(--u));
+	line-height: calc(36 * var(--u));
+	color: var(--color-gray-text);
+}
+
+.p-guide__footer-note {
+	margin-top: calc(70 * var(--u));
+	text-align: center;
+	font-size: calc(24 * var(--u));
+	line-height: calc(42 * var(--u));
+}
