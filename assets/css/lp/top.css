@@ -115,6 +115,9 @@ main section[id] {
 	width: 100%;
 	margin-top: calc(50 * var(--u));
 }
+.p-mode__mock {
+	margin-top: calc(50 * var(--u));
+}
 .p-mode__list + .c-lead {
 	margin-top: calc(50 * var(--u));
 }

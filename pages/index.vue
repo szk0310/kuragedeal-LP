@@ -31,7 +31,19 @@
                 <div class="p-mode__card">
                   <h3 class="p-mode__ttl"><img src="/lp/img/icon-mode-btn.svg" alt="ボタン" />ボタンで進める</h3>
                   <p class="p-mode__text">クラゲディールが「次はこれ」と<br />ボタンで案内。タップして選ぶだけ。<br />何をすればいいか、迷いません。</p>
-                  <img class="p-mode__img" src="/lp/img/mode-btn.png" alt="ボタン操作の画面" />
+                  <div class="p-mode__mock">
+                    <SlackMessageMock channel-name="💬 クラゲディール（DM）">
+                      <SlackBotLine name="クラゲディール" :bot-badge="true" time="9:00">
+                        <p class="font-bold mb-2">メニュー　やりたいことを選んでください</p>
+                        <div class="flex flex-col gap-2">
+                          <span class="block w-full text-center border border-gray-300 bg-white rounded-lg px-4 py-2.5 text-sm font-semibold text-gray-800">👤 顧客を登録</span>
+                          <span class="block w-full text-center border-2 border-kurage-400 bg-kurage-50 rounded-lg px-4 py-2.5 text-sm font-bold text-kurage-800">📝 活動をメモ</span>
+                          <span class="block w-full text-center border border-gray-300 bg-white rounded-lg px-4 py-2.5 text-sm font-semibold text-gray-800">📊 ディールを登録</span>
+                          <span class="block w-full text-center border border-gray-300 bg-white rounded-lg px-4 py-2.5 text-sm font-semibold text-gray-800">🎯 今やること</span>
+                        </div>
+                      </SlackBotLine>
+                    </SlackMessageMock>
+                  </div>
                 </div>
               </article>
             </div>
