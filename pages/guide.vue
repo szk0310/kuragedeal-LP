@@ -431,6 +431,7 @@
         <p class="p-guide__sub-ttl">🔒 プライバシーとデータの扱い</p>
         <div class="c-card">
           <p class="c-step__text" style="margin-top:0;">クラゲディールは <strong>DM（クラゲディール App との個別チャット）</strong>で使う、<strong>あなただけのプライベート</strong>な営業アシスタントです。入力もクラゲの回答も<strong>他の人には見えません</strong>。データも担当者ごとに分離されています。</p>
+          <p class="c-step__text">クラゲディールとの<strong>1対1のDM</strong>で使います。チャンネルや、<strong>3人以上のグループDM</strong>では使えません（クラゲは返事をしません）。チャンネルに書いたことは、<strong>そのチャンネルの全員に見えます</strong>。</p>
         </div>
       </section>
 
