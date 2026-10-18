@@ -10,8 +10,9 @@
 // 移行済みのため、共通のTheNav/TheFooterとの出し分け分岐・ChatWidgetは
 // 削除した（新デザインの固定フレームと常に競合するため、ChatWidgetは
 // タスク2着手以降すでに全ページで非表示の状態になっていた）。
-// ChatWidget自体を今後どう扱うか（完全撤去／別の形で復活）は未決定のため、
-// コンポーネント本体（components/ChatWidget.vue）はそのまま残してある。
+// 鈴木さん判断（2026-10-19）: LPのチャットはDMでの質問とは別配線で答えに
+// ずれが出るため撤去を確定。components/ChatWidget.vue本体も削除済み
+// （slackSFA側のLPチャット受け口ルートも併せて無効化）。
 
 // Organization 構造化データ（全ページ共通）。AI 検索／ナレッジパネル向け。
 // ※ SNS の sameAs は開設順に追記（note / LinkedIn は開設後に追加）。
