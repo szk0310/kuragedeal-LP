@@ -13,7 +13,7 @@
           </div>
           <p class="text-sm leading-relaxed max-w-xs mx-auto md:mx-0">
             Slackだけで完結するAI営業CRM。<br />
-            1人〜30人の営業チームに最適。
+            ひとりから、小さな営業チームまで。
           </p>
           <div class="flex items-center justify-center md:justify-start gap-4 mt-4">
             <a href="https://x.com/kuragedeal" target="_blank" rel="noopener noreferrer" aria-label="X" class="hover:text-white transition-colors">
@@ -52,7 +52,7 @@
 
       <!-- Bottom row: dev status + 寄付 + copyright -->
       <div class="border-t border-white/10 pt-6 space-y-2 text-xs text-kurage-200 text-center md:text-left">
-        <p>開発の状況は、<a href="https://note.com/kuragedeal/" target="_blank" rel="noopener" class="underline hover:text-white">note</a> と <a href="https://x.com/kuragedeal" target="_blank" rel="noopener" class="underline hover:text-white">X</a> で発信しています。</p>
+        <p>最新情報は <a href="https://note.com/kuragedeal/" target="_blank" rel="noopener" class="underline hover:text-white">note</a> と <a href="https://x.com/kuragedeal" target="_blank" rel="noopener" class="underline hover:text-white">X</a> でお知らせしています。</p>
         <p class="text-kurage-300">🌊 売上の一部は、<a href="https://www.nippon-foundation.or.jp/donation/ocean-project-fund" target="_blank" rel="noopener" class="underline hover:text-white transition-colors">日本財団 海洋プロジェクト基金</a>に寄付されます。</p>
         <p>© 2026 クラゲディール. All rights reserved. ― 開発元: shiro Inc.</p>
       </div>
