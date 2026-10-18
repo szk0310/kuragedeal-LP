@@ -1,0 +1,243 @@
+@charset "UTF-8";
+/* CSS Document */
+
+/*=============================================================
+  変更点（kuragedeal-lp への移植時）: 元デザインは html/body を直接
+  リセットしていたが、Nuxt の SPA ナビゲーションでは他ページへ移動しても
+  読み込み済みの CSS が残り続け、サイト全体の見た目を壊してしまう。
+  そのため html/body・要素セレクタへの素のリセットをすべて .lp-page
+  （index.vue のルート要素）配下に閉じ込める。
+=============================================================*/
+
+/*=============================================================
+  variables
+=============================================================*/
+.lp-page {
+	/* color */
+	--color-text: #262626;
+	--color-black2: #2a2a2a;
+	--color-white: #fff;
+	--color-yellow: #ffe03d;
+	--color-primary: #ffbf03;
+	--color-accent: #f66e02;
+	--color-accent2: #fb7e1b;
+	--color-accent3: #ff7b13;
+	--color-light-orange: #fff5e1;
+	--color-light-gray: #f5f5f5;
+	--color-gray: #efefef;
+	--color-gray-text: #747474;
+	--color-line: #747474;
+
+	/* font */
+	--font-jp: 'Noto Sans JP', sans-serif;
+	--font-en: 'Poppins', 'Noto Sans JP', sans-serif;
+
+	/* layout
+	   中央カラムは PC(768px〜) で 400px 固定。
+	   カラム内の要素は --u で指定する（デザイン幅 750px 基準）。
+	   例）デザイン上 28px → calc(28 * var(--u)) */
+	--col-width: 400px;
+	--u: calc(100vw / 750);
+}
+@media (min-width: 768px) {
+	.lp-page {
+		--u: calc(var(--col-width) / 750);
+	}
+}
+
+/*=============================================================
+  reset（.lp-page 配下のみ）
+=============================================================*/
+.lp-page {
+	width: 100%;
+	height: auto;
+	margin: 0;
+	padding: 0;
+	font-size: 16px;
+	scroll-behavior: smooth;
+	color: var(--color-text);
+	background: var(--color-light-orange);
+	-webkit-text-size-adjust: 100%;
+	text-size-adjust: 100%;
+	font-family: var(--font-jp);
+	font-optical-sizing: auto;
+	font-weight: 500;
+	font-style: normal;
+	line-height: 1.8;
+	text-align: left;
+	position: relative;
+}
+
+.lp-page dl,
+.lp-page dt,
+.lp-page dd,
+.lp-page ul,
+.lp-page ol,
+.lp-page li,
+.lp-page h1,
+.lp-page h2,
+.lp-page h3,
+.lp-page h4,
+.lp-page h5,
+.lp-page h6,
+.lp-page pre,
+.lp-page form,
+.lp-page input,
+.lp-page p,
+.lp-page blockquote,
+.lp-page fieldset,
+.lp-page div,
+.lp-page section {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+.lp-page,
+.lp-page *,
+.lp-page *::before,
+.lp-page *::after {
+	box-sizing: border-box;
+}
+.lp-page h1,
+.lp-page h2,
+.lp-page h3,
+.lp-page h4,
+.lp-page h5,
+.lp-page h6 {
+	font-weight: normal;
+}
+.lp-page ul li,
+.lp-page ol li {
+	list-style: none;
+}
+.lp-page table {
+	margin: 0;
+	padding: 0;
+	font-size: 100%;
+}
+.lp-page caption {
+	text-align: left;
+}
+.lp-page table,
+.lp-page pre,
+.lp-page code,
+.lp-page select,
+.lp-page textarea,
+.lp-page kbd,
+.lp-page var,
+.lp-page ins,
+.lp-page del,
+.lp-page samp {
+	font-size: 100%;
+}
+.lp-page address,
+.lp-page cite,
+.lp-page dfn,
+.lp-page em,
+.lp-page strong,
+.lp-page var,
+.lp-page th,
+.lp-page ins,
+.lp-page del,
+.lp-page samp {
+	font-weight: normal;
+	font-style: normal;
+}
+.lp-page img {
+	max-width: 100%;
+	height: auto;
+	vertical-align: middle;
+}
+.lp-page a,
+.lp-page a:visited {
+	color: var(--color-text);
+	text-decoration: none;
+	box-sizing: border-box;
+}
+.lp-page a:hover {
+	text-decoration: none;
+}
+.lp-page a:link {
+	transition: all 0.3s ease-out;
+}
+
+.lp-page .is-imghover {
+	opacity: 1;
+	transition: 0.3s ease-in-out;
+}
+
+@media (min-width: 1024px) {
+	.lp-page .is-imghover:hover {
+		opacity: 0.7;
+	}
+}
+
+.lp-page hr.separation {
+	display: none;
+}
+.lp-page fieldset {
+	border: none;
+}
+.lp-page button {
+	cursor: pointer;
+	font: inherit;
+	color: inherit;
+}
+.lp-page header,
+.lp-page section,
+.lp-page nav,
+.lp-page aside,
+.lp-page footer,
+.lp-page article,
+.lp-page main {
+	display: block;
+}
+
+/* ------------
+  common Style
+--------------- */
+.lp-page .pc {
+	display: block !important;
+}
+.lp-page .pc-inline {
+	display: inline-block !important;
+}
+.lp-page .sp {
+	display: none !important;
+}
+.lp-page .sp-inline {
+	display: none !important;
+}
+@media (max-width: 767px) {
+	.lp-page .pc {
+		display: none !important;
+	}
+	.lp-page .pc-inline {
+		display: none !important;
+	}
+	.lp-page .sp {
+		display: block !important;
+	}
+	.lp-page .sp-inline {
+		display: inline-block !important;
+	}
+}
+
+.lp-page .u-visually-hidden {
+	position: absolute !important;
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+	padding: 0;
+	overflow: hidden;
+	clip: rect(0 0 0 0);
+	white-space: nowrap;
+	border: 0;
+}
+
+/*--- PCで電話リンク無効 ---*/
+@media (min-width: 1024px) {
+	.lp-page a[href^='tel:'] {
+		pointer-events: none;
+	}
+}

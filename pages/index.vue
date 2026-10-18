@@ -1,728 +1,538 @@
 <template>
-  <main class="pt-16">
-    <!-- ============================================================
-         01. ヒーロー
-    ============================================================ -->
-    <section
-      id="hero"
-      class="relative bg-gradient-to-br from-kurage-900 via-kurage-800 to-kurage-700 text-white overflow-hidden"
-    >
-      <div class="absolute inset-0 opacity-10">
-        <div class="absolute top-10 left-10 w-72 h-72 rounded-full bg-kurage-300 blur-3xl" />
-        <div class="absolute bottom-10 right-10 w-96 h-96 rounded-full bg-cyan-300 blur-3xl" />
-      </div>
+  <div class="lp-page">
+    <!-- PC 背景装飾 -->
+    <div class="l-pc-bg" aria-hidden="true"></div>
+    <div class="l-pc-side" aria-hidden="true">
+      <img class="l-pc-side__ttl" src="/lp/img/pc-ttl.svg" alt="クラゲディール" />
+      <p class="l-pc-side__catch">Slackネイティブな<br />AI営業支援ツール</p>
+    </div>
 
-      <div class="relative max-w-6xl mx-auto px-4 sm:px-6 lg:pl-11 py-24 md:py-32">
-        <div class="flex flex-col lg:flex-row items-center gap-12">
-          <div class="flex-1">
-            <h1 class="text-3xl md:text-4xl lg:text-[2.7rem] font-extrabold mb-6 leading-tight">
-              <span class="block mb-4">Slack に一言メモるだけ。</span>
-              <span class="text-cyan-50">それだけで、営業が進みます！</span>
-            </h1>
-
-            <p class="text-lg md:text-xl font-bold text-kurage-100 mb-4 max-w-2xl leading-relaxed">
-              学習コストはゼロ。今日から<br />AI 営業を始めませんか？
-            </p>
-            <p class="text-lg md:text-xl font-bold text-kurage-100 mb-4 max-w-2xl leading-relaxed">
-              初めてでも迷わない「ボタンモード」と、話し言葉で操作する「会話モード」。どちらのモードでも、入力ストレスゼロ！
-            </p>
-            <p class="text-lg md:text-xl font-bold text-kurage-100 mb-10 max-w-2xl leading-relaxed">
-              クラゲディールは、今日から始められる Slack ネイティブな AI 営業支援ツールです。
-            </p>
-
-            <!-- CTA（phase1: β 試用 self-serve 主 CTA 一本のみ）-->
-            <div class="mb-4 flex items-center gap-4">
-              <a
-                href="/beta"
-                class="inline-flex items-center justify-center gap-2 bg-orange-500 hover:bg-orange-400 text-white font-bold px-8 py-4 rounded-xl text-lg transition-colors shadow-lg"
-              >
-                β 版を試す →
-              </a>
-              <!-- モバイル用クラゲ（lg ではヒーロー右の大きいクラゲを表示） -->
-              <img src="/kurage-on-green.png" alt="クラゲくん" class="lg:hidden w-20 h-20 kurage-float flex-shrink-0" />
-            </div>
-          </div>
-
-          <div class="hidden lg:flex flex-shrink-0 items-center justify-center w-72 h-72 lg:mr-8">
-            <img
-              src="/kurage-on-green.png"
-              alt="クラゲくん"
-              class="w-64 h-64 kurage-float drop-shadow-2xl"
-            />
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ============================================================
-         01.5 誰でも使える、2つのモード（こう使う統合・ビジュアル）
-    ============================================================ -->
-    <section class="bg-ocean-sand py-16 md:py-20">
-      <div class="max-w-5xl mx-auto px-4 sm:px-6">
-        <div class="text-center mb-10">
-          <h2 class="text-2xl md:text-3xl font-black text-gray-900 mb-3">誰でも使える、2つのモード。</h2>
-          <p class="text-gray-600 leading-relaxed">むずかしい操作は一切ありません。<b>ボタンを押す</b>か、<b>自然言語で話す</b>か。2つのモードは、いつでも切り替えができます。</p>
-        </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <!-- ボタンモード（既定） -->
-          <div class="bg-kurage-50 rounded-2xl border border-kurage-200 p-6">
-            <div class="flex items-center gap-2 mb-1">
-              <p class="text-lg font-black text-gray-900">🟢 ボタンモード</p>
-              <span class="text-[10px] font-bold px-1.5 py-0.5 rounded bg-kurage-600 text-white">既定</span>
-            </div>
-            <p class="text-sm text-gray-700 leading-relaxed mb-4">クラゲが「次はこれ」と<b>ボタンで案内</b>。タップして選ぶだけ。何をすればいいか、迷いません。</p>
-            <SlackMessageMock channel-name="💬 クラゲディール（DM）">
-              <SlackBotLine name="クラゲディール" :bot-badge="true" time="9:00">
-                <p class="font-bold mb-2">👉 何をしますか？</p>
-                <div class="flex flex-wrap gap-2">
-                  <span class="inline-block border border-gray-300 bg-white rounded-md px-3 py-1.5 text-xs font-semibold text-gray-800">👤 顧客を登録</span>
-                  <span class="inline-block border border-gray-300 bg-white rounded-md px-3 py-1.5 text-xs font-semibold text-gray-800">📝 活動をメモ</span>
-                  <span class="inline-block border border-gray-300 bg-white rounded-md px-3 py-1.5 text-xs font-semibold text-gray-800">📊 ディールを登録</span>
-                  <span class="inline-block border border-gray-300 bg-white rounded-md px-3 py-1.5 text-xs font-semibold text-gray-800">🎯 次にやること</span>
-                </div>
-              </SlackBotLine>
-            </SlackMessageMock>
-            <p class="text-xs text-gray-500 mt-3">＝ はじめての人・営業ツールが苦手な人に。</p>
-          </div>
-
-          <!-- 会話モード -->
-          <div class="bg-[#dbe9ec] rounded-2xl border border-[#7aaab8]/60 p-6">
-            <p class="text-lg font-black text-gray-900 mb-1">⚡ 会話モード</p>
-            <p class="text-sm text-gray-700 leading-relaxed mb-4">「ABC商事と商談、競合が一社」と<b>一言書くだけ</b>。最速で記録できます！</p>
-            <SlackMessageMock channel-name="💬 クラゲディール（DM）">
-              <SlackBotLine name="あなた" :is-user="true" time="14:30">
-                <p>ABC商事と商談。予算500万、競合は1社</p>
-              </SlackBotLine>
-              <SlackBotLine name="クラゲディール" :bot-badge="true" time="14:30">
-                <p class="font-bold mb-1">✅ 記録しました</p>
-                <p class="text-xs text-gray-600">受注確率を自動で更新しました（48% → 62%）。次にやることも、そっとお知らせします🪼</p>
-              </SlackBotLine>
-            </SlackMessageMock>
-            <p class="text-xs text-gray-500 mt-3">＝ サクサク進めたい人に。</p>
-          </div>
-        </div>
-
-        <p class="text-center text-base text-gray-600 mt-8 leading-relaxed">
-          どちらのモードも、学習はいりません。入力のストレスもありません。<br />
-          あなたのスタイルのまま、クラゲくんと一緒に進めていきましょう。
-        </p>
-      </div>
-    </section>
-
-    <!-- ============================================================
-         02. ターゲット
-    ============================================================ -->
-    <section class="bg-ocean-steel/75 py-12">
-      <div class="max-w-6xl mx-auto px-4 sm:px-6">
-        <div class="text-center mb-12">
-          <h2 class="text-2xl md:text-3xl font-bold text-gray-800 mb-4">
-            1〜10 人の営業チームのために、ゼロから設計したAIツール
-          </h2>
-          <p class="text-gray-700 max-w-2xl mx-auto leading-relaxed mb-6">
-            一人社長のフリーランスから、営業チーム10名規模の成長企業まで。<br />
-            「大手ベンダーのCRM/SFAは高すぎるし重すぎる。」<br />
-            ──そんな会社のために作りました。
-          </p>
-        </div>
-        <div class="bg-white/80 rounded-2xl border border-ocean-tan/30 p-8 md:p-10">
-          <p class="text-center text-xl md:text-2xl font-black text-gray-900 mb-6">このような会社にピッタリ！</p>
-          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-            <div
-              v-for="(p, i) in personas"
-              :key="i"
-              class="bg-ocean-mist/50 rounded-xl p-5 text-base text-gray-700 leading-relaxed"
-            >
-              <p class="text-2xl mb-2">{{ p.icon }}</p>
-              <p>{{ p.text }}</p>
-            </div>
-          </div>
-        </div>
-
-        <!-- 3 つの特徴 -->
-        <div class="mt-10 space-y-5 max-w-3xl mx-auto">
-          <div class="bg-white/85 rounded-2xl border border-ocean-tan/30 p-6 md:p-8">
-            <h3 class="text-xl font-black text-gray-900 mb-3">特徴 1　入力に時間を取られない</h3>
-            <p class="text-gray-700 leading-relaxed mb-3">
-              さまざまな業務を兼任するスモールチームは、時間がいくらあっても足りません。<br />
-              「ABC 商事と商談、競合が一社」——そうメモするだけで、受注確率も、次にやることも返ってきます。入力に追われる時間も、ツールを開く手間もいりません。
-            </p>
-            <p class="text-gray-700 leading-relaxed mb-3">
-              さらに、クラゲがビジネスメールの返信を代筆します。あなたは、<a href="#reply-assist" class="text-kurage-600 font-bold underline hover:text-kurage-700">最終確認のボタンを押すだけ</a> でOK。
-            </p>
-            <p class="text-gray-800 font-bold leading-relaxed">
-              空いた時間は、お客様と向き合うことや、あなた自身の暮らしのために。
-            </p>
-          </div>
-
-          <div class="bg-white/85 rounded-2xl border border-ocean-tan/30 p-6 md:p-8">
-            <h3 class="text-xl font-black text-gray-900 mb-3">特徴 2　チームが大きくなっても、月額は変わらない</h3>
-            <p class="text-gray-700 leading-relaxed mb-4">
-              クラゲディールは、シンプルな 3 段階の料金体系。枠内ならユーザー数が増えても月額は変わりません。
-            </p>
-            <div class="bg-orange-50 border border-orange-200 rounded-xl p-4 text-sm text-gray-700 leading-relaxed">
-              <strong class="text-orange-600">★</strong> 今なら <strong class="text-orange-600">4 ヶ月無料</strong>の β 試用を提供中（〜10/15・クレジットカード不要）。Slack に追加するだけで、その日からご利用いただけます。
-            </div>
-          </div>
-
-          <div class="bg-white/85 rounded-2xl border border-ocean-tan/30 p-6 md:p-8">
-            <h3 class="text-xl font-black text-gray-900 mb-3">特徴 3　専任の営業マンがいなくても、しっかりサポート</h3>
-            <p class="text-gray-700 leading-relaxed">
-              営業の型「MEDDPICC」に基づいて、クラゲくんが案件ごとに「決裁者と会えていますか？」「予算の根拠は？」「競合は把握していますか？」と、やさしく問いかけてくれます。<br />
-              経験豊富なマネジャーがいなくても、チーム全員に同じ質のコーチングが届きます。クラゲくんが、あなたの営業コーチになってくれます。
-            </p>
-            <div class="bg-ocean-sand/60 border border-ocean-tan/40 rounded-xl p-4 mt-4 text-xs text-gray-600 leading-relaxed">
-              ※ MEDDPICC（メドピック）＝商談の抜け漏れを防ぐ営業フレームワーク。指標(Metrics)・決裁者(Economic Buyer)・選定基準(Decision Criteria)・購買プロセス(Decision Process)・社内手続き(Paper Process)・課題(Identify Pain)・社内推進者(Champion)・競合(Competition)の8要素で案件を見立てます。
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ============================================================
-         02.5. ブランドタグライン＋設計思想
-    ============================================================ -->
-    <section class="bg-ocean-deep py-20 text-white">
-      <div class="max-w-3xl mx-auto px-4 sm:px-6 text-center">
-        <h2 class="text-3xl md:text-4xl font-extrabold mb-8 leading-relaxed">
-          <span class="block mb-3">いちばん軽いメモが、</span>
-          <span class="block">いちばん賢い営業になる。</span>
-        </h2>
-        <div class="text-lg md:text-xl text-kurage-100 max-w-2xl mx-auto leading-relaxed space-y-2">
-          <p>クラゲディールは、Slack にいるクラゲくんにメモするだけ。</p>
-          <p>それだけで、AI 機能が営業活動を自動でサポートしてくれます。</p>
-          <p>余った時間は、あなたのためだけに使ってください。</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- ============================================================
-         08. 料金（β 特典強調）
-    ============================================================ -->
-    <section id="pricing" class="bg-ocean-sand py-20">
-      <div class="max-w-6xl mx-auto px-4 sm:px-6">
-        <div class="text-center mb-12">
-          <p class="text-2xl font-bold text-gray-800 mb-3">料金</p>
-          <h2 class="text-3xl md:text-4xl font-black text-gray-900 mb-4">シンプルな料金体系</h2>
-          <p class="text-gray-700">ユーザー数課金なし。チーム全員で使えます。</p>
-        </div>
-
-        <!-- 4 プラン -->
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 mb-8">
-          <div
-            v-for="(plan, i) in pricing"
-            :key="i"
-            :class="[
-              'rounded-2xl p-6 bg-white border-2 transition-shadow flex flex-col',
-              plan.featured ? 'border-kurage-500 shadow-lg' : 'border-gray-200'
-            ]"
+    <div class="l-main">
+      <div class="l-main__inner" ref="scrollerRef">
+        <header class="l-header">
+          <h1 class="l-header__logo">
+            <a href="#top"><img src="/lp/img/logo.svg" alt="クラゲディール" /></a>
+          </h1>
+          <button
+            class="l-header__menu"
+            type="button"
+            aria-controls="js-nav"
+            :aria-expanded="navOpen"
+            @click="navOpen = !navOpen"
           >
-            <div v-if="plan.featured" class="inline-block bg-kurage-500 text-white text-xs font-bold px-3 py-1 rounded-full mb-3 w-fit">
-              ★ 最人気
-            </div>
-            <div v-else-if="plan.badge" class="inline-block bg-cyan-100 text-cyan-700 text-xs font-bold px-3 py-1 rounded-full mb-3 w-fit">
-              {{ plan.badge }}
-            </div>
-            <h3 class="text-xl font-black text-gray-900 mb-2">{{ plan.name }}</h3>
-            <p
-              :class="[
-                'font-black text-gray-900 mb-4 whitespace-nowrap',
-                plan.price.length > 5 ? 'text-lg md:text-xl' : 'text-2xl md:text-3xl',
-              ]"
-            >
-              {{ plan.price }}<span v-if="plan.priceNote" class="text-sm text-gray-500 font-normal ml-1">{{ plan.priceNote }}</span>
+            <span></span><span></span><span></span>
+            <span class="u-visually-hidden">{{ navOpen ? 'メニューを閉じる' : 'メニューを開く' }}</span>
+          </button>
+        </header>
+
+        <!-- ハンバーガーメニュー -->
+        <nav class="l-nav" :class="{ 'is-open': navOpen }" id="js-nav" aria-label="メインメニュー">
+          <ul class="c-link-list l-nav__list">
+            <li><a href="#price" @click="navOpen = false">料金</a></li>
+            <li><a href="#feature" @click="navOpen = false">AIサポート</a></li>
+            <li><a href="#issue" @click="navOpen = false">お悩み解消</a></li>
+            <li><a href="#faq" @click="navOpen = false">FAQ</a></li>
+            <li><a href="/guide" @click="navOpen = false">使い方ガイド</a></li>
+          </ul>
+          <a class="c-btn" :href="installUrl" @click="onTrialClick">14日間無料で試す</a>
+        </nav>
+
+        <main id="top">
+          <!-- MV -->
+          <section class="p-mv">
+            <h2 class="p-mv__catch">Slack に一言メモるだけ。<br />それだけで、<em>営業が進みます！</em></h2>
+            <p class="p-mv__read">
+              学習コスト、入力ストレス、どちらもゼロ。<br />
+              次にやることは<mark>ボタン</mark>で迷わず、<br />
+              よく使う操作は<mark>ひとこと</mark>でも開けます。<br />
+              今日から始められる<br />
+              Slack があれば、特別なアプリはいりません。
             </p>
-            <ul class="space-y-2 mb-4 flex-1">
-              <li v-for="(f, j) in plan.features" :key="j" class="flex items-start gap-2 text-sm">
-                <span class="text-green-500">✅</span>
-                <span class="text-gray-700">{{ f.label }}</span>
+            <div class="p-mv__image">
+              <img src="/lp/img/mv-image.png" alt="Slackで働くチームとクラゲくん" />
+            </div>
+            <a class="c-btn p-mv__btn" :href="installUrl" @click="onTrialClick">14日間無料で試す</a>
+          </section>
+
+          <!-- MODE -->
+          <section class="p-mode" id="mode">
+            <div class="c-sec-ttl">
+              <p class="c-sec-ttl__en" lang="en">How it works</p>
+              <h2 class="c-sec-ttl__ja">ボタンを押すだけ。<br />慣れたら、ひとことで。</h2>
+            </div>
+            <p class="c-lead">
+              むずかしい操作は一切ありません。<br />
+              次にやることがボタンで並ぶので迷いません。<br />
+              よく使う操作は、決まったひとことでも開けます。
+            </p>
+            <div class="p-mode__list">
+              <article class="p-mode__item">
+                <p class="p-mode__target"><span class="c-bubble">まずはボタンで迷わず進める。</span></p>
+                <div class="p-mode__card">
+                  <h3 class="p-mode__ttl"><img src="/lp/img/icon-mode-btn.svg" alt="ボタン" />ボタンで進める</h3>
+                  <p class="p-mode__text">クラゲディールが「次はこれ」と<br />ボタンで案内。タップして選ぶだけ。<br />何をすればいいか、迷いません。</p>
+                  <img class="p-mode__img" src="/lp/img/mode-btn.png" alt="ボタン操作の画面" />
+                </div>
+              </article>
+              <article class="p-mode__item p-mode__item--chat">
+                <p class="p-mode__target"><span class="c-bubble">よく使う操作は、ひとことでも。</span></p>
+                <div class="p-mode__card">
+                  <h3 class="p-mode__ttl"><img src="/lp/img/icon-mode-chat.svg" alt="ひとこと" />ひとことでも開ける</h3>
+                  <p class="p-mode__text">「今やること」「メモ一覧」<br />「○○さんを教えて」など、<br />決まったひとことを打つだけで、<br />ボタンと同じ画面が開きます。</p>
+                  <img class="p-mode__img" src="/lp/img/mode-chat.png" alt="公式フレーズを打った画面" />
+                </div>
+              </article>
+            </div>
+            <p class="c-lead">
+              メモも、ボタン［📝 活動をメモ］から書くだけ。<br />
+              「田中さんと打ち合わせ。来週までに見積もりを出す」と書けば、<br />
+              クラゲくんが「見積もりを出す」を拾って、<br />
+              そのまま「今やること」に並びます。
+            </p>
+          </section>
+
+          <!-- FOR SMALL TEAMS -->
+          <section class="p-teams c-arc" id="teams">
+            <div class="c-sec-ttl">
+              <p class="c-sec-ttl__en" lang="en">For small teams</p>
+              <h2 class="c-sec-ttl__ja">ひとりから、小さな営業チームまで<br />ゼロから設計したAIツール</h2>
+            </div>
+            <p class="c-lead">
+              1人社長のフリーランスから、<br />
+              営業チーム10名規模の成長企業まで。<br />
+              「大手ベンダーのCRM/SFAは<br />
+              高すぎるし重すぎる。」<br />
+              そんな会社のために作りました。
+            </p>
+            <h3 class="p-teams__ribbon">このような会社にピッタリ！</h3>
+            <ul class="p-teams__list">
+              <li>
+                <div class="p-teams__img"><img src="/lp/img/team01.png" alt="忙しく働く社長" /></div>
+                <p>社員5人のIT企業。<br />社長が営業も兼務。<br />ディール管理はスプレッドシートで<br />回しています</p>
+              </li>
+              <li>
+                <div class="p-teams__img"><img src="/lp/img/team02.png" alt="データを確認する営業担当" /></div>
+                <p>営業3人の人材会社。<br />CRMを導入したが誰も入力しない</p>
+              </li>
+              <li>
+                <div class="p-teams__img"><img src="/lp/img/team03.png" alt="やることに追われる人" /></div>
+                <p>6人のスタートアップ。<br />急成長でディールが増え、<br />フォロー漏れが出始めた</p>
+              </li>
+              <li>
+                <div class="p-teams__img"><img src="/lp/img/team04.png" alt="税理士" /></div>
+                <p>一人社長の税理士。<br />クライアント20社の関係を<br />頭の中で管理している</p>
               </li>
             </ul>
-            <p class="text-xs text-gray-500 mb-3">{{ plan.startNote }}</p>
-            <a v-if="plan.cta" :href="plan.checkoutUrl" :class="[
-              'block text-center px-5 py-3 rounded-xl font-bold text-sm transition-colors',
-              plan.featured
-                ? 'bg-orange-500 hover:bg-orange-400 text-white'
-                : 'bg-gray-100 hover:bg-gray-200 text-gray-700'
-            ]">{{ plan.cta }}</a>
-          </div>
-        </div>
+          </section>
 
-        <!-- 全プラン共通 注記 -->
-        <div class="bg-kurage-50 border border-kurage-200 rounded-xl p-4 text-center mb-12">
-          <p class="text-sm text-gray-700 font-bold">
-            ★ 上記は正式版の料金です。正式版では全プラン共通で、14 日間の無料トライアルが付きます。
-          </p>
-          <p class="text-sm md:text-base text-gray-600 mt-1">
-            β 参加プログラムに登録すると、10/15 まで全機能を無料でお使いいただけます（クレジットカードの入力は不要です）。
-          </p>
-        </div>
-
-        <!-- 大企業向けCRMとの料金比較 -->
-        <p class="text-center text-lg md:text-xl font-bold text-gray-600 mb-4">大企業向けCRMとの料金比較</p>
-        <div class="bg-white rounded-2xl border border-gray-200 p-6 md:p-8 mb-12 shadow-sm overflow-x-auto">
-          <table class="w-full text-sm text-center min-w-[400px]">
-            <thead>
-              <tr class="border-b-2 border-gray-200">
-                <th class="pb-3 text-gray-500 font-normal">チーム規模</th>
-                <th class="pb-3 text-kurage-700 font-black">クラゲディール</th>
-                <th class="pb-3 text-gray-500 font-normal text-sm">大企業向けCRM</th>
-              </tr>
-            </thead>
-            <tbody class="divide-y divide-gray-100">
-              <tr>
-                <td class="py-3 text-gray-600 font-bold">1 人</td>
-                <td class="py-3 font-black text-xl text-kurage-600">¥1,980<span class="text-xs font-normal text-gray-400">/月</span></td>
-                <td class="py-3 text-gray-500 text-base">約 ¥16,000〜¥21,000/月</td>
-              </tr>
-              <tr>
-                <td class="py-3 text-gray-600 font-bold">3 人</td>
-                <td class="py-3 font-black text-xl text-kurage-600">¥4,980<span class="text-xs font-normal text-gray-400">/月</span></td>
-                <td class="py-3 text-gray-500 text-base">約 ¥48,000〜¥63,000/月</td>
-              </tr>
-              <tr>
-                <td class="py-3 text-gray-600 font-bold">10 人</td>
-                <td class="py-3 font-black text-xl text-orange-500">¥9,800<span class="text-xs font-normal text-gray-400">/月</span></td>
-                <td class="py-3 text-gray-500 text-base">約 ¥160,000〜¥210,000/月</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-
-        <!-- β 参加プログラム枠 -->
-        <div class="bg-gradient-to-br from-orange-50 via-orange-100 to-amber-50 border-2 border-orange-400 rounded-2xl p-8 md:p-10 shadow-lg">
-          <div class="text-center mb-6">
-            <div class="inline-block bg-orange-500 text-white text-xs font-bold px-3 py-1 rounded-full mb-3">
-              4 ヶ月間、全機能を無料で（10/15 まで）
+          <!-- BENEFITS -->
+          <section class="p-benefits c-arc" id="benefits">
+            <div class="c-sec-ttl">
+              <p class="c-sec-ttl__en" lang="en">Benefits</p>
+              <h2 class="c-sec-ttl__ja">クラゲディールが選ばれる<br />3つの理由</h2>
             </div>
-            <h3 class="text-2xl md:text-3xl font-black text-gray-900 mb-2">β 参加プログラム</h3>
-          </div>
+            <div class="p-benefits__list">
+              <article class="p-benefits__item">
+                <p class="p-benefits__num" aria-hidden="true"><span class="p-benefits__num-big">01</span><span class="p-benefits__num-label">Features</span></p>
+                <div class="p-benefits__card">
+                  <img class="p-benefits__img" src="/lp/img/benefit01.png" alt="クラゲくんがメールを代筆" />
+                  <h3 class="p-benefits__ttl">入力に時間を取られない</h3>
+                  <p class="p-benefits__text">
+                    忙しいスモールチームの、面倒な作業をもっとシンプルに。「ABC商事とディール、競合が一社」とメモするだけで、ディール確度や次の一手を自動で提案。さらに、ビジネスメールの返信もクラゲディールが代筆します。あなたは、最終確認するだけ。空いた時間を、お客様や自分のために使えます。
+                  </p>
+                </div>
+              </article>
+              <article class="p-benefits__item p-benefits__item--reverse">
+                <p class="p-benefits__num" aria-hidden="true"><span class="p-benefits__num-big">02</span><span class="p-benefits__num-label">Features</span></p>
+                <div class="p-benefits__card">
+                  <img class="p-benefits__img" src="/lp/img/benefit02.png" alt="チームで協力する様子" />
+                  <h3 class="p-benefits__ttl">ひとりなら月¥2,980、<br />3人のチームでも¥5,980</h3>
+                  <p class="p-benefits__text">クラゲディールは、シンプルな 3 段階の料金体系。人数に合わせて、ぴったりのプランを選べます。</p>
+                  <p class="p-benefits__box p-benefits__box--accent">
+                    まずは<strong>14日間無料</strong>でお試しいただけます<br />（クレジットカード不要）。<br />Slack に追加するだけで、その日からご利用いただけます。
+                  </p>
+                </div>
+              </article>
+              <article class="p-benefits__item">
+                <p class="p-benefits__num" aria-hidden="true"><span class="p-benefits__num-big">03</span><span class="p-benefits__num-label">Features</span></p>
+                <div class="p-benefits__card">
+                  <img class="p-benefits__img" src="/lp/img/benefit03.png" alt="クラゲくんのAIサポート" />
+                  <h3 class="p-benefits__ttl">専任の営業マンがいなくても、<br />しっかりサポート</h3>
+                  <p class="p-benefits__text">
+                    営業の型「MEDDPICC」に基づいて、クラゲくんが案件ごとに「決裁者と会えていますか？」「予算の根拠は？」「競合は把握していますか？」と、やさしく問いかけてくれます。経験豊富なマネジャーがいなくても、チーム全員に同じ質のコーチングが届きます。クラゲくんが、あなたの営業コーチになってくれます。
+                  </p>
+                  <p class="p-benefits__box p-benefits__box--note">
+                    ※ MEDDPICC（メドピック）＝ディールの抜け漏れを防ぐ営業フレームワーク。指標(Metrics)・決裁者(Economic Buyer)・選定基準(Decision Criteria)・購買プロセス(Decision
+                    Process)・社内手続き(Paper Process)・課題(Identify Pain)・社内推進者(Champion)・競合(Competition)の8要素で案件を見立てます。
+                  </p>
+                </div>
+              </article>
+            </div>
+          </section>
 
-          <div class="bg-white rounded-xl p-6 mb-6 text-center">
-            <p class="text-3xl md:text-4xl font-black text-orange-600 mb-2">4 ヶ月無料</p>
-            <p class="text-base text-gray-700">10/15 まで、すべての機能を無料でお試しいただけます。</p>
-          </div>
-
-          <div class="flex justify-center mb-6">
-            <ul class="text-sm text-gray-700 leading-relaxed space-y-1.5 inline-block text-left">
-              <li>✅ Slack に追加するだけで、すぐにお使いいただけます</li>
-              <li>✅ クレジットカードの入力は不要です</li>
-              <li>✅ データはいつでも CSV / Excel でエクスポートできます</li>
-            </ul>
-          </div>
-
-          <div class="text-center">
-            <a
-              href="/beta"
-              class="inline-block bg-orange-500 hover:bg-orange-400 text-white font-bold px-8 py-4 rounded-xl text-lg shadow-lg transition-colors"
-            >
-              β 版を試す →
-            </a>
-            <p class="text-sm text-gray-600 mt-3">
-              継続オプションの詳細は /beta ページでご案内しています。
+          <!-- CTA（キャッチコピー） -->
+          <section class="c-cta c-pixel" id="trial">
+            <img class="c-cta__illust" src="/lp/img/kurage.svg" alt="クラゲくん" />
+            <h2 class="c-cta__ttl">いちばん軽いメモが、<br />いちばん賢い営業になる。</h2>
+            <p class="c-cta__text">クラゲディールは、Slack にメモするだけで<br />AI機能が営業活動を自動でサポート！<br />余った時間はあなたのために使ってください。</p>
+            <p class="c-cta__catch">
+              <span class="c-bubble c-bubble--orange">まずは14日間、<strong>すべての機能を無料</strong>で</span>
             </p>
-          </div>
-        </div>
+            <a class="c-btn c-cta__btn" :href="installUrl" @click="onTrialClick">14日間無料で試す</a>
+          </section>
 
-      </div>
-    </section>
+          <!-- PRICE -->
+          <section class="p-price" id="price">
+            <div class="c-sec-ttl">
+              <p class="c-sec-ttl__en" lang="en">Price</p>
+              <h2 class="c-sec-ttl__ja">シンプルな料金体系</h2>
+            </div>
+            <p class="c-lead">どのプランも、最初の14日間は無料で<br />すべての機能をお試しいただけます。<br />無料期間中は人数の制限もありません。</p>
+            <div class="p-price__list">
+              <article class="p-price__plan">
+                <h3 class="p-price__name" lang="en">Personal</h3>
+                <p class="p-price__catch">まずはあなた1人から。</p>
+                <p class="p-price__amount"><span lang="en">¥2,980</span>/ 月</p>
+                <p class="p-price__amount-annual">年額 ¥29,800</p>
+                <ul class="c-check-list c-check-list--yellow p-price__features">
+                  <li>1名まで</li>
+                  <li>全機能</li>
+                </ul>
+                <p class="p-price__target">個人事業主、フリーランス、一人親方、1人営業窓口、営業担当1名で試したい会社</p>
+              </article>
+              <article class="p-price__plan p-price__plan--popular">
+                <h3 class="p-price__name" lang="en">Trio</h3>
+                <p class="p-price__badge">おすすめ</p>
+                <img class="p-price__kurage" src="/lp/img/kurage.svg" alt="クラゲくん" />
+                <p class="p-price__catch">営業チーム本格スタート</p>
+                <p class="p-price__amount"><span lang="en">¥5,980</span>/ 月</p>
+                <p class="p-price__amount-sub">4人目から1人ごとに ¥2,000</p>
+                <p class="p-price__amount-annual">年額 ¥59,800（追加1人ごとに ¥20,000）</p>
+                <ul class="c-check-list c-check-list--yellow p-price__features">
+                  <li>3名（7名まで追加可）</li>
+                  <li>全機能</li>
+                </ul>
+                <p class="p-price__target">中小企業、小さな営業チーム</p>
+                <p class="p-price__note-small">マネージャーはチーム全員のディールを見られます。メンバーは自分の担当だけ。部下の進み具合を、聞いて回らずに把握できます。</p>
+              </article>
+              <article class="p-price__plan">
+                <h3 class="p-price__name" lang="en">Team</h3>
+                <p class="p-price__catch">チーム全員で使う</p>
+                <p class="p-price__amount"><span lang="en">¥14,980</span>/ 月</p>
+                <p class="p-price__amount-annual">年額 ¥149,800</p>
+                <ul class="c-check-list c-check-list--yellow p-price__features">
+                  <li>10名まで</li>
+                  <li>全機能</li>
+                </ul>
+                <p class="p-price__target">8〜10人の営業チーム</p>
+              </article>
+            </div>
+            <div class="p-price__common">
+              <p class="p-price__common-ttl">全プラン共通の「全機能」</p>
+              <ul class="c-check-list c-check-list--yellow">
+                <li>Slack の DM でメモ・顧客・ディールの登録（ボタンでも、文章でも）</li>
+                <li>毎朝のブリーフィングと「今やること」</li>
+                <li>ディール確度と次の一手の自動提案、MEDDPICC コーチング</li>
+                <li>メールの取り込みと返信の下書き</li>
+                <li>Web ダッシュボードと CSV の書き出し</li>
+              </ul>
+            </div>
+            <div class="p-price__note">
+              <ul>
+                <li>11名以上のチームはお問い合わせください。</li>
+                <li>価格はすべて税別です。決済時に消費税10%が加わります。</li>
+                <li>年額は10か月分の料金です（2か月分お得）。</li>
+                <li>人数は、その月にクラゲを使った人（メッセージ・ボタン・コマンド）で数えます。朝のブリーフィングを受け取っただけの人は数えません。</li>
+                <li>TRIO の追加分（4〜7人目）は、使った月の分を翌月にご請求します。追加料金が発生する人は、管理者が許可してから使えるようになります。</li>
+                <li>無料期間のあとに有料プランへ申し込まない場合、利用は停止されます（自動で課金はされません）。</li>
+                <li>解約は Web の設定画面か Slack の /setting からいつでもできます。契約期間の終わりまで使えます。</li>
+              </ul>
+            </div>
+          </section>
 
-    <!-- ============================================================
-         03. あるある お悩み（詳しくは /pains へ）
-    ============================================================ -->
-    <section class="bg-ocean-mist/40 py-16 md:py-20">
-      <div class="max-w-3xl mx-auto px-4 sm:px-6 text-center">
-        <div class="flex items-center justify-center gap-3 mb-3">
-          <img src="/kurage-on-white.png" alt="" class="w-10 h-10 md:w-12 md:h-12" />
-          <p class="text-base md:text-lg font-bold text-orange-500 uppercase tracking-widest">あるある お悩み</p>
-        </div>
-        <h2 class="text-2xl md:text-3xl font-black text-gray-900 mb-4 leading-tight">
-          3 つの「お悩み」を、クラゲディールが解消します。
-        </h2>
-        <p class="text-gray-700 leading-relaxed mb-8">
-          CRM が続かない／進捗が見えない／マネジャーが足りない——<br class="hidden md:block" />
-          多くの営業チームがぶつかる 3 つの壁を、クラゲディールは Slack の中で解きます。
-        </p>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8 text-left">
-          <div class="bg-white border border-gray-200 rounded-xl p-5">
-            <p class="text-2xl mb-2">😩</p>
-            <p class="font-bold text-gray-900 mb-1">CRM が続かない</p>
-            <p class="text-sm text-gray-600 leading-relaxed">入力が面倒で、誰も書かない。データが揃わず AI も活かせない。</p>
-          </div>
-          <div class="bg-white border border-gray-200 rounded-xl p-5">
-            <p class="text-2xl mb-2">🌫️</p>
-            <p class="font-bold text-gray-900 mb-1">進捗が見えない</p>
-            <p class="text-sm text-gray-600 leading-relaxed">「あの案件どうなった？」と聞いて回る。止まった案件が失注に。</p>
-          </div>
-          <div class="bg-white border border-gray-200 rounded-xl p-5">
-            <p class="text-2xl mb-2">🧑‍💼</p>
-            <p class="font-bold text-gray-900 mb-1">マネジャーが足りない</p>
-            <p class="text-sm text-gray-600 leading-relaxed">1 人で全員は見られない。良い問いかけを全員に毎日は無理。</p>
-          </div>
-        </div>
-        <a href="/pains" class="inline-flex items-center gap-2 bg-kurage-600 hover:bg-kurage-500 text-white font-bold px-7 py-3.5 rounded-xl transition-colors">
-          3 つのお悩みと解決を詳しく見る →
-        </a>
-      </div>
-    </section>
-
-    <!-- ============================================================
-         06. メール返信支援 — クラゲくんが代筆
-    ============================================================ -->
-    <section id="reply-assist" class="bg-ocean-sand py-20">
-      <div class="max-w-3xl mx-auto px-4 sm:px-6">
-        <div class="flex items-center gap-3 mb-3">
-          <img src="/kurage-on-white.png" alt="" class="w-10 h-10 md:w-12 md:h-12 flex-shrink-0" />
-          <p class="text-base md:text-lg font-bold text-orange-500 uppercase tracking-widest">機能スポットライト</p>
-        </div>
-        <h2 class="text-3xl md:text-4xl font-black text-gray-900 mb-4 leading-tight">
-          クラゲくんが、返信を代筆します！
-        </h2>
-        <p class="text-lg text-gray-700 font-bold mb-10 leading-relaxed">
-          メール 1 通 10 分の世界を、終わらせる。
-        </p>
-
-        <!-- 共感 -->
-        <div class="bg-white border-l-4 border-orange-400 rounded-r-xl p-6 mb-10">
-          <p class="text-base text-gray-800 leading-relaxed mb-3">
-            営業マネジャーの 1 日で、地味に多いのが、メール返信。
-          </p>
-          <p class="text-base text-gray-700 leading-relaxed mb-3">
-            「予算の根拠は？」「来週月曜は？」「競合は？」<br />
-            ── 毎日 5〜10 通、1 通 5〜10 分。<br />
-            営業マネジャー 1 人で、月 30〜60 時間。
-          </p>
-          <p class="text-base text-gray-700 leading-relaxed mb-4">
-            その時間、本当は若手と話したかった。<br />
-            新規開拓に行きたかった。
-          </p>
-          <p class="text-base text-gray-800 font-bold leading-relaxed">
-            <span class="text-orange-700">★ メール返信は、クラゲくんにおまかせください。</span>
-          </p>
-        </div>
-
-        <!-- 解決ステップ -->
-        <div class="bg-gradient-to-br from-kurage-50 to-cyan-50 border-2 border-kurage-200 rounded-2xl p-8 mb-10">
-          <p class="text-lg md:text-xl font-bold text-kurage-700 mb-6 leading-relaxed">
-            ★ クラゲディールは、こうします。
-          </p>
-
-          <div class="space-y-5">
-            <div class="flex gap-4">
-              <div class="flex-shrink-0 w-8 h-8 rounded-full bg-kurage-500 text-white font-bold flex items-center justify-center text-sm">1</div>
-              <div>
-                <p class="font-bold text-gray-900 mb-1">顧客から届いたメールを転送</p>
-                <p class="text-sm text-gray-700 leading-relaxed">顧客から届いたメールを、クラゲの専用アドレスに転送することで返信文をクラゲが考えてくれます。Gmail / Outlook はそのまま使えます。<br><span class="text-gray-500">専用アドレスは Slack の <code class="bg-gray-100 px-1 rounded text-xs">/setting</code> →「📨 メール連携」で確認できます。</span></p>
+          <!-- COMPARE -->
+          <section class="p-compare" id="compare">
+            <div class="c-sec-ttl">
+              <p class="c-sec-ttl__en" lang="en">Compare</p>
+              <h2 class="c-sec-ttl__ja">大企業向けCRMとの料金比較</h2>
+            </div>
+            <div class="p-compare__table">
+              <div class="p-compare__group">
+                <h3 class="p-compare__name">クラゲディール</h3>
+                <table>
+                  <thead>
+                    <tr>
+                      <th scope="col">人数</th>
+                      <th scope="col">料金</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th scope="row">1人</th>
+                      <td><em>¥2,980</em>/月</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">3人</th>
+                      <td><em>¥5,980</em>/月</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="p-compare__group p-compare__group--other">
+                <h3 class="p-compare__name">大手企業向けCRM</h3>
+                <table>
+                  <thead>
+                    <tr>
+                      <th scope="col">人数</th>
+                      <th scope="col">料金</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th scope="row">1人</th>
+                      <td>約 ¥16,000〜¥21,000/月</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">3人</th>
+                      <td>約 ¥48,000〜¥63,000/月</td>
+                    </tr>
+                  </tbody>
+                </table>
               </div>
             </div>
-            <div class="flex gap-4">
-              <div class="flex-shrink-0 w-8 h-8 rounded-full bg-kurage-500 text-white font-bold flex items-center justify-center text-sm">2</div>
-              <div>
-                <p class="font-bold text-gray-900 mb-1">クラゲくんが文脈を読んで、返信を下書きします</p>
-                <p class="text-sm text-gray-700 leading-relaxed">過去のやり取り・商談ステージ・会社の方針を踏まえて生成。</p>
-              </div>
-            </div>
-            <div class="flex gap-4">
-              <div class="flex-shrink-0 w-8 h-8 rounded-full bg-kurage-500 text-white font-bold flex items-center justify-center text-sm">3</div>
-              <div>
-                <p class="font-bold text-gray-900 mb-1">Slack で確認 → ワンクリックで送信</p>
-                <p class="text-sm text-gray-700 leading-relaxed">そのまま送る / 編集する / 送らない、をボタンで判断。</p>
-              </div>
-            </div>
-            <div class="flex gap-4">
-              <div class="flex-shrink-0 w-8 h-8 rounded-full bg-kurage-500 text-white font-bold flex items-center justify-center text-sm">4</div>
-              <div>
-                <p class="font-bold text-gray-900 mb-1">自社アドレスから送信</p>
-                <p class="text-sm text-gray-700 leading-relaxed">お客様にはいつもどおり営業マネジャー本人からの返信に見えます。</p>
-              </div>
-            </div>
-          </div>
+          </section>
 
-          <p class="text-base font-bold text-kurage-800 mt-6 leading-relaxed">
-            ★ メール 1 通 30 秒の世界。
-          </p>
-        </div>
-
-        <!-- AI 返信支援 Slack mock -->
-        <div class="mb-8 max-w-2xl mx-auto">
-          <SlackMessageMock channel-name="💬 クラゲディール（DM）">
-            <SlackBotLine name="クラゲディール" :bot-badge="true" time="10:08">
-              <p class="font-bold mb-2">📧 田中様（ABC 商事）より受信</p>
-              <div class="bg-gray-50 rounded-lg p-3 text-sm text-gray-700 leading-relaxed mb-3">
-                ご提案ありがとうございます。<br />
-                予算は問題ありませんが、競合 1 社と比較中で、最終決定は来週月曜になる予定です。<br />
-                追加で資料を頂けますでしょうか？
-              </div>
-
-              <p class="text-xs font-bold text-orange-600 mb-2">✨ クラゲくんが返信の下書きを用意しました</p>
-              <div class="border border-kurage-200 rounded-lg p-3 text-sm text-gray-800 leading-relaxed bg-white mb-3">
-                田中様<br /><br />
-                ご連絡ありがとうございます。<br />
-                月曜のご決定タイミング、承知いたしました。<br /><br />
-                競合比較のための追加資料として、<br />
-                お客様の事業規模に合わせた ROI 試算を作成しお送りいたします。<br />
-                本日中にご提供できる予定です。<br /><br />
-                田中様のご検討の一助となれば幸いです。<br /><br />
-                株式会社shiro 鈴木
-              </div>
-
-              <div class="flex flex-col sm:flex-row gap-2">
-                <button type="button" class="flex-1 bg-green-500 hover:bg-green-400 text-white text-xs font-bold px-3 py-2 rounded-md transition-colors">✅ そのまま送信</button>
-                <button type="button" class="flex-1 bg-gray-100 hover:bg-gray-200 text-gray-700 text-xs font-bold px-3 py-2 rounded-md transition-colors">✏️ 編集する</button>
-                <button type="button" class="flex-1 bg-gray-100 hover:bg-gray-200 text-gray-700 text-xs font-bold px-3 py-2 rounded-md transition-colors">❌ 送信しない</button>
-              </div>
-            </SlackBotLine>
-          </SlackMessageMock>
-        </div>
-        <p class="text-center text-base text-gray-600 mb-12 italic">ボタン 1 つで承認すると、お客様には鈴木さん本人の社内アドレスから送信されます。</p>
-
-        <!-- 3 つの特徴チップ -->
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-          <div v-for="(c, i) in replyAssistChips" :key="i" class="bg-white border border-gray-200 rounded-xl p-5">
-            <p class="text-2xl mb-2">{{ c.icon }}</p>
-            <p class="font-bold text-gray-900 mb-1">{{ c.title }}</p>
-            <p class="text-sm text-gray-600 leading-relaxed">{{ c.desc }}</p>
-          </div>
-        </div>
-
-        <p class="text-center text-gray-800 mt-12 text-lg md:text-xl font-bold leading-relaxed">
-          入力の手間も、進捗の見えなさも、マネジャー不足も、メール返信も。<br />
-          クラゲディールが、まるごと引き受けます。
-        </p>
-      </div>
-    </section>
-
-    <!-- ============================================================
-         09. 仲間（β 4 社）— 各社の許諾取得まで非表示
-    ============================================================ -->
-    <!--
-    <section id="pioneers" class="bg-white py-20">
-      <div class="max-w-3xl mx-auto px-4 sm:px-6 text-center">
-        <p class="text-2xl font-bold text-gray-800 mb-3">Pioneers</p>
-        <h2 class="text-3xl md:text-4xl font-black text-gray-900 mb-4">すでに、選んでくださった会社があります。</h2>
-        <p class="text-gray-700 leading-relaxed mb-10">
-          2026 年 5 月、プライベート β を開始しました。<br />
-          最初の仲間は、4 社の経営層でした。
-        </p>
-
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-10">
-          <div v-for="p in pioneers" :key="p.name" class="bg-gray-50 border border-gray-200 rounded-xl p-5 flex flex-col items-center justify-center">
-            <p class="text-3xl mb-2">{{ p.icon }}</p>
-            <p class="font-bold text-gray-900 mb-1">{{ p.name }}</p>
-            <p class="text-xs text-gray-500">{{ p.industry }}</p>
-          </div>
-        </div>
-
-        <p class="text-sm text-gray-600 leading-relaxed">
-          共通するのは、「Slack で営業を回す現場」を持っていること。<br />
-          そしてみなさん、経営層が直接、毎日触ってくださっています。
-        </p>
-        <p class="text-sm text-gray-500 mt-4 italic">
-          正式版ローンチに合わせて、もうすぐ事例公開を予定しています。
-        </p>
-      </div>
-    </section>
-    -->
-
-    <!-- ============================================================
-         10. FAQ
-    ============================================================ -->
-    <section id="faq" class="bg-ocean-tan/80 py-20">
-      <div class="max-w-3xl mx-auto px-4 sm:px-6">
-        <h2 class="text-3xl md:text-4xl font-black text-gray-900 mb-10 text-center">よくあるご質問</h2>
-
-        <div class="space-y-3">
-          <details
-            v-for="(faq, i) in faqs"
-            :key="i"
-            class="bg-white border border-gray-200 rounded-xl group"
-          >
-            <summary class="font-semibold text-gray-900 cursor-pointer p-5 flex items-center justify-between list-none">
-              <span>{{ faq.q }}</span>
-              <span class="text-gray-400 group-open:rotate-180 transition-transform flex-shrink-0 ml-3">▼</span>
-            </summary>
-            <p class="text-sm text-gray-700 px-5 pb-5 leading-relaxed whitespace-pre-line">{{ faq.a }}</p>
-          </details>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- ============================================================
-         11. 最終 CTA + β 参加プログラム告知
-    ============================================================ -->
-    <section class="bg-gradient-to-br from-kurage-900 to-kurage-700 text-white py-20">
-      <div class="max-w-3xl mx-auto px-4 sm:px-6 text-center">
-        <img src="/kurage-smile.png" alt="クラゲディール" class="w-20 h-20 mx-auto mb-6 kurage-float" />
-
-        <p class="text-base text-kurage-100 mb-3 leading-relaxed">
-          ここまで読んでくれて嬉しいです！
-        </p>
-        <p class="text-base text-kurage-100 mb-10 leading-relaxed">
-          もし「自分の営業チームに合いそうだ」と思ったなら、<br />
-          10/15 まで、4 ヶ月間ぼくを試してみてください。<br />
-          <span class="text-kurage-200 text-sm">きみが使うたびに、ぼくは覚えていきます。</span>
-        </p>
-
-        <!-- β 試用（self-serve 主訴求を最大化、副 CTA なし） -->
-        <div class="bg-orange-500/15 border border-orange-400/40 rounded-2xl p-6 md:p-8 mb-8">
-          <p class="text-base font-bold text-orange-200 mb-3 text-center">4 ヶ月間、無料で試せます（10/15 まで）。</p>
-          <div class="flex justify-center mb-5">
-            <ul class="space-y-2 text-sm text-kurage-50 inline-block text-left">
-              <li>✅ Slack に追加するだけで、すぐに使えます</li>
-              <li>✅ 10/15 まで、すべての機能を完全無料で</li>
-              <li>✅ クレジットカードの入力は不要です</li>
-              <li>✅ データはいつでも CSV / Excel エクスポート可能</li>
+          <!-- CTA（14日間無料で試す） -->
+          <section class="c-cta c-pixel">
+            <img class="c-cta__illust" src="/lp/img/kurage.svg" alt="クラゲくん" />
+            <h2 class="c-cta__ttl">14日間無料で試す</h2>
+            <ul class="c-check-list c-cta__list">
+              <li>Slack に追加するだけ</li>
+              <li>無料期間中はクレジットカード不要</li>
+              <li>データはいつでも CSV で書き出せる</li>
             </ul>
-          </div>
-          <div class="text-center">
-            <a
-              href="/beta"
-              class="inline-flex items-center justify-center gap-2 bg-orange-500 hover:bg-orange-400 text-white font-bold px-8 py-4 rounded-xl text-lg transition-colors shadow-lg"
-            >
-              β 版を試す →
-            </a>
-          </div>
-        </div>
+            <a class="c-btn c-cta__btn" :href="installUrl" @click="onTrialClick">14日間無料で試す</a>
+          </section>
 
+          <!-- ISSUE -->
+          <section class="p-issue" id="issue">
+            <div class="c-sec-ttl">
+              <p class="c-sec-ttl__en" lang="en">Issue</p>
+              <h2 class="c-sec-ttl__ja">3 つのお悩みを<br />クラゲディールが解消</h2>
+            </div>
+            <p class="c-lead">多くの営業チームがぶつかる 3 つの壁を<br />クラゲディールは Slack の中で解決します。</p>
+            <ol class="p-issue__list">
+              <li class="p-issue__item">
+                <div class="p-issue__fig">
+                  <span class="p-issue__num" aria-hidden="true">01</span>
+                  <img src="/lp/img/issue01.png" alt="入力に悩む人" />
+                </div>
+                <div class="p-issue__body">
+                  <h3 class="p-issue__ttl">CRM が続かない</h3>
+                  <p class="p-issue__text p-issue__text--sm">入力が面倒で、誰も書かない。<br />データが揃わずAIも活かせない。</p>
+                </div>
+              </li>
+              <li class="p-issue__item p-issue__item--reverse">
+                <div class="p-issue__fig">
+                  <span class="p-issue__num" aria-hidden="true">02</span>
+                  <img src="/lp/img/issue02.png" alt="進捗を確認する人" />
+                </div>
+                <div class="p-issue__body">
+                  <h3 class="p-issue__ttl">進捗が見えない</h3>
+                  <p class="p-issue__text">「あの案件どうなった？」と<br />聞いて回る。<br />止まった案件が失注に。</p>
+                </div>
+              </li>
+              <li class="p-issue__item">
+                <div class="p-issue__fig">
+                  <span class="p-issue__num" aria-hidden="true">03</span>
+                  <img src="/lp/img/issue03.png" alt="手が回らないマネジャー" />
+                </div>
+                <div class="p-issue__body">
+                  <h3 class="p-issue__ttl">マネジャーが足りない</h3>
+                  <p class="p-issue__text">1 人で全員は見られない。<br />良い問いかけを全員に<br />毎日は無理。</p>
+                </div>
+              </li>
+            </ol>
+            <a class="c-btn p-issue__btn" href="#feature">詳しく見る</a>
+          </section>
+
+          <!-- FEATURE SPOTLIGHT -->
+          <section class="p-feature c-arc" id="feature">
+            <div class="c-sec-ttl">
+              <p class="c-sec-ttl__en" lang="en">Feature spotlight</p>
+              <h2 class="c-sec-ttl__ja">クラゲディールが返信を代筆</h2>
+            </div>
+            <p class="c-lead">
+              営業マネジャーにとって、<br />
+              意外と時間を取られるのがメール返信。<br />
+              クラゲディールなら返信業務の<br />
+              負担を軽くします。
+            </p>
+            <div class="p-feature__problem">
+              <p>毎日5〜10通、1通5〜10分。<br />メール返信だけで、月30〜60時間。<br />その時間を、若手との対話や<br />新規開拓に使えたら…。</p>
+              <img class="p-feature__man" src="/lp/img/feature-man.png" alt="疲れた様子の人" />
+            </div>
+            <div class="p-feature__solution">
+              <h3 class="p-feature__head">クラゲディールならこうします！</h3>
+              <ol class="p-feature__steps">
+                <li>
+                  <h4>顧客から届いたメールを転送</h4>
+                  <p>
+                    顧客から届いたメールを、クラゲディール専用アドレスに転送することで返信文をクラゲディールが考えます。<br />Gmail / Outlook はそのまま使えます。専用アドレスは Slack の /setting →「📨
+                    メール連携」で確認できます。
+                  </p>
+                </li>
+                <li>
+                  <h4>クラゲディールが文脈を読んで、<br />返信を下書きします</h4>
+                  <p>過去のやり取り・ディールのステージ・会社の方針を踏まえて生成。</p>
+                </li>
+                <li>
+                  <h4>Slackで確認ワンクリックで送信</h4>
+                  <p>そのまま送る / 編集する / 送らない、をボタンで判断。</p>
+                </li>
+                <li>
+                  <h4>自社アドレスから送信</h4>
+                  <p>お客様にはいつもどおり営業マネジャー本人からの返信に見えます。</p>
+                </li>
+              </ol>
+              <p class="p-feature__result"><span>メール1通30秒の世界！</span></p>
+            </div>
+          </section>
+
+          <!-- FAQ -->
+          <section class="p-faq" id="faq">
+            <div class="c-sec-ttl">
+              <p class="c-sec-ttl__en" lang="en">FAQ</p>
+              <h2 class="c-sec-ttl__ja">よくあるご質問</h2>
+            </div>
+            <div class="p-faq__list">
+              <details v-for="faq in faqs" :key="faq.q" class="p-faq__item">
+                <summary>{{ faq.q }}</summary>
+                <div class="p-faq__answer">
+                  <p>{{ faq.a }}</p>
+                </div>
+              </details>
+            </div>
+          </section>
+
+          <!-- CTA（14日間無料で試す） -->
+          <section class="c-cta c-pixel c-pixel--top-only">
+            <img class="c-cta__illust" src="/lp/img/kurage.svg" alt="クラゲくん" />
+            <h2 class="c-cta__ttl">14日間無料で試す</h2>
+            <ul class="c-check-list c-cta__list">
+              <li>Slack に追加するだけ</li>
+              <li>無料期間中はクレジットカード不要</li>
+              <li>データはいつでも CSV で書き出せる</li>
+            </ul>
+            <a class="c-btn c-cta__btn" :href="installUrl" @click="onTrialClick">14日間無料で試す</a>
+          </section>
+        </main>
+
+        <footer class="l-footer">
+          <div class="l-footer__inner">
+            <div class="l-footer__head">
+              <p class="l-footer__logo"><img src="/lp/img/logo-text.svg" alt="クラゲディール" /></p>
+              <ul class="l-footer__sns">
+                <li>
+                  <a class="l-footer__x" href="https://x.com/kuragedeal" target="_blank" rel="noopener"><img src="/lp/img/icon-x.svg" alt="X" /></a>
+                </li>
+                <li><a class="l-footer__note" href="https://note.com/kuragedeal/" target="_blank" rel="noopener" lang="en">note</a></li>
+              </ul>
+            </div>
+            <p class="l-footer__tagline">Slackだけで完結するAI営業CRM。<br />ひとりから、小さな営業チームまで。</p>
+            <p class="l-footer__require">※ご利用には Slack が必要です（無料プラン可）</p>
+            <nav class="l-footer__nav" aria-label="フッターメニュー">
+              <ul class="c-link-list">
+                <li><a href="#price">料金</a></li>
+                <li><a href="#feature">AIサポート</a></li>
+                <li><a href="#issue">お悩み解消</a></li>
+                <li><a href="#faq">FAQ</a></li>
+                <li><a href="/guide">使い方ガイド</a></li>
+                <li><a href="/manual">マニュアル</a></li>
+              </ul>
+            </nav>
+            <ul class="l-footer__sub">
+              <li><a href="/legal/terms">利用規約</a></li>
+              <li><a href="/legal/privacy">プライバシーポリシー</a></li>
+              <li><a href="/legal/tokusho">特定商取引法</a></li>
+            </ul>
+            <div class="l-footer__info">
+              <p>
+                開発の状況は、<a href="https://note.com/kuragedeal/" target="_blank" rel="noopener">note</a> と
+                <a href="https://x.com/kuragedeal" target="_blank" rel="noopener">X</a> で発信しています。
+              </p>
+              <p><small>©2026クラゲディール. All rights reserved. ― 開発元：株式会社shiro</small></p>
+            </div>
+          </div>
+        </footer>
       </div>
-    </section>
-
-  </main>
+    </div>
+  </div>
 </template>
 
 <script setup lang="ts">
-// LP_FULL_COPY 最新版: ウェイトリスト関連 CTA は /beta ページ内のみで提示
-// （メイン LP は β 試用の self-serve 主訴求を最大化、副 CTA なし）
+// 新デザイン（test_kurage_261009b・a62bd1c）の移植。文言は正本（LP改訂案とマニュアル構成）に合わせている。
+// CSS は .lp-page 配下にのみ効くようスコープ済み（html/body への素のリセットは
+// Nuxt の SPA ナビゲーションで他ページに残ってしまうため、.lp-page 限定に書き換えてある）。
+import '~/assets/css/lp/base.css'
+import '~/assets/css/lp/common.css'
+import '~/assets/css/lp/top.css'
 
+const installUrl = 'https://slacksfa-api-808596335261.asia-northeast1.run.app/slack/install'
 
-const personas = [
-  { icon: '🏢', text: '社員5人のIT企業。社長が営業も兼務。商談管理はスプレッドシートで回しています' },
-  { icon: '👥', text: '営業3人の人材会社。CRMを導入したが誰も入力しない' },
-  { icon: '🚀', text: '6人のスタートアップ。急成長で商談が増え、フォロー漏れが出始めた' },
-  { icon: '🔧', text: '一人社長の税理士。クライアント20社の関係を頭の中で管理している' },
-]
+const navOpen = ref(false)
+const scrollerRef = ref<HTMLElement | null>(null)
 
+function onKeydown(e: KeyboardEvent) {
+  if (e.key === 'Escape') navOpen.value = false
+}
 
+// 768px〜: 枠の外でホイールしても中央カラムをスクロール（元デザインの common.js 相当）
+function onWheel(e: WheelEvent) {
+  if (!window.matchMedia('(min-width: 768px)').matches) return
+  const scroller = scrollerRef.value
+  if (!scroller) return
+  const target = e.target as Node
+  if (scroller.contains(target)) return
+  scroller.scrollBy({ top: e.deltaY, left: 0 })
+}
 
-const replyAssistChips = [
-  { icon: '✍️', title: 'クラゲくんが代筆', desc: '過去のやり取りを踏まえて、自然に返信します' },
-  { icon: '💌', title: '自社送信', desc: 'いつもの社内アドレスから送れます' },
-  { icon: '🎚', title: '編集自由', desc: '承認の前に、必要なら手直しできます' },
-]
+onMounted(() => {
+  document.addEventListener('keydown', onKeydown)
+  window.addEventListener('wheel', onWheel, { passive: true })
+})
+onUnmounted(() => {
+  document.removeEventListener('keydown', onKeydown)
+  window.removeEventListener('wheel', onWheel)
+})
 
-const API_URL = 'https://slacksfa-api-808596335261.asia-northeast1.run.app'
-
-const pricing = [
-  {
-    name: 'Personal',
-    price: '¥1,980',
-    priceNote: '/ 月',
-    featured: false,
-    cta: '',
-    checkoutUrl: '',
-    startNote: '14 日間、無料でお試しいただけます',
-    features: [
-      { ok: true, label: '1 名まで' },
-      { ok: true, label: 'AI 月 100 回' },
-      { ok: true, label: '全機能' },
-    ],
-  },
-  {
-    name: 'Trio',
-    price: '¥4,980',
-    priceNote: '/ 月',
-    featured: false,
-    badge: '★ Solo 3名まで',
-    cta: '',
-    checkoutUrl: '',
-    startNote: '14 日間、無料でお試しいただけます',
-    features: [
-      { ok: true, label: '3 名まで' },
-      { ok: true, label: 'AI 月 500 回' },
-      { ok: true, label: '全機能' },
-    ],
-  },
-  {
-    name: 'Standard',
-    price: '¥9,800',
-    priceNote: '/ 月',
-    featured: true,
-    cta: '',
-    checkoutUrl: '',
-    startNote: '14 日間、無料でお試しいただけます',
-    features: [
-      { ok: true, label: '10 名まで' },
-      { ok: true, label: 'AI 月 5,000 回' },
-      { ok: true, label: '全機能' },
-    ],
-  },
-  {
-    name: 'Enterprise',
-    price: 'お問い合わせ',
-    priceNote: '',
-    featured: false,
-    cta: 'ご相談',
-    checkoutUrl: '/contact?subject=enterprise',
-    startNote: '11 名以上は個別にご相談ください',
-    features: [
-      { ok: true, label: '11 名以上' },
-      { ok: true, label: 'AI 個別設定' },
-      { ok: true, label: '全機能' },
-      { ok: true, label: '優先サポート' },
-      { ok: true, label: 'カスタマイズ対応' },
-    ],
-  },
-]
-
-const pioneers = [
-  { name: 'OPRO',    icon: '📦', industry: '帳票・CRM SaaS' },
-  { name: 'Opti',    icon: '🛒', industry: 'eコマース・D2C' },
-  { name: 'WeLearn', icon: '🎓', industry: '人材・教育' },
-  { name: 'SI Inc',  icon: '🏗', industry: 'SI・受託' },
-]
+// 計測: 「14日間無料で試す」クリックをコンバージョンとして記録（UTM はインストールURLに引き継がない）。
+const { fire } = useConversion()
+function onTrialClick() {
+  fire('trial')
+}
 
 const faqs = [
-  {
-    q: 'β 試用は本当に無料ですか？',
-    a: 'はい。クレジットカードの入力は不要です。\n4 ヶ月間（10/15 まで）、すべての機能を無料でお試しいただけます。Slack に追加すれば、すぐにお使いいただけます。\n継続オプションの詳細は /beta ページでご案内しています。',
-  },
-  {
-    q: '従来の Slack 連携 CRM との違いは？',
-    a: 'クラゲディールは「Slack そのものが営業ツール」として設計されています。従来の Slack 連携 CRM では、別途 CRM の利用契約が必要で、Slack は「通知パイプ」や「lightweight な機能」の役割にとどまります。クラゲディールは MEDDPICC コーチング・自動メール下書きなど、営業に特化した深い AI 機能を Slack 内で完結して提供します。また、ユーザー数課金がないため、チームが大きくなっても月額が一定です。',
-  },
-  {
-    q: '将来、別の CRM に移行できますか？',
-    a: 'はい。クラゲディールのデータはいつでも CSV / Excel でエクスポート可能です。組織が成長してより大規模な CRM が必要になった際、弊社は Salesforce 認定コンサルティングパートナーとして、移行先の選定からデータマイグレーションまでスムーズに支援します。',
-  },
-  {
-    q: '11 人以上の営業チームでも使えますか？',
-    a: 'クラゲディールは 1〜10 人の小規模営業チームに最適化された製品です。11 人以上のチームは Enterprise プラン（個別見積もり）で対応します。ユーザー数・必要な機能・セキュリティ要件等に応じてご提案します。\n30 人を超える大規模チームでは、Salesforce 等の選択肢もご検討いただくことをお勧めしています。弊社は Salesforce 認定コンサルティングパートナーとして、最適な選択をご一緒に検討します。',
-  },
-  {
-    q: '既存の Slack ワークスペースに導入できますか？',
-    a: 'はい。既存の Slack ワークスペースに「クラゲディールを追加」ボタン 1 つで完了します。新しいワークスペースを作る必要はありません。',
-  },
-  {
-    q: 'インストールしたのに、サイドバーにアプリが出てきません',
-    a: 'Slack 画面上部の検索窓（または Cmd / Ctrl + K）に「クラゲディール」（英字 kuragedeal でも可）と入力し、表示されたアプリを選んでください。クラゲディールとの DM が開き、サイドバーに常駐します。\nあとは、その DM で自然文を打つだけ。初回のやり取りで welcome DM も届きます。\n反映が遅いときは Slack を再読み込み（Cmd / Ctrl + R）してください。\nなお、ワークスペースへの追加（インストール）は管理者が 1 回行えば完了で、メンバーの個別インストールは不要です。',
-  },
-  {
-    q: 'Slack を使っていない会社でも使えますか？',
-    a: 'クラゲディールは Slack ワークスペースが前提です。Slack の Free プランでも導入できますので、まず Slack を導入していただくことをお勧めします。',
-  },
-  {
-    q: 'データのセキュリティは大丈夫ですか？',
-    a: 'データは Google Cloud Platform 上で管理され、通信は SSL/TLS で暗号化されています。テナントごとに PostgreSQL の Row-Level Security で物理的に分離。お客様の営業データが AI の学習に使用されることはありません。',
-  },
-  {
-    q: '他のメンバーに自分の営業データを見られませんか？',
-    a: 'いいえ。クラゲディールは DM（クラゲディール App との個別チャット）で使う、あなた専用のプライベートな営業アシスタントです。あなたの入力もクラゲの回答も、ほかの人には見えません。\nさらにデータ自体も担当者ごとに分離されており、一般メンバーは自分が担当するディール・顧客のみ閲覧できます（マネージャーはチーム全体）。',
-  },
-  {
-    q: 'AI が提案する受注確率はどのように計算されますか？',
-    a: '活動記録と MEDDPICC 情報（決裁者との接触 / 予算の根拠確認 / 競合の把握など）を AI が分析して更新します。/coach で情報を入力するたびに計算し直されます。14 日間動きがない場合は時間減衰で自動的に下方修正されます。',
-  },
+  { q: '無料期間はどうなっていますか？', a: 'Slack に追加した日から14日間、すべての機能を無料で使えます。クレジットカードの入力は不要です。無料期間は1つのワークスペースにつき1回です。' },
+  { q: '従来のSlack連携CRMとの違いは？', a: 'クラゲディールは「Slack そのものが営業ツール」として設計されています。従来の Slack 連携 CRM では、別途 CRM の利用契約が必要で、Slack は「通知パイプ」や「lightweightな機能」の役割にとどまります。クラゲディールは MEDDPICC コーチング・自動メール下書きなど、営業に特化した深い AI 機能を Slack 内で完結して提供します。' },
+  { q: '将来、別の CRM に移行できますか？', a: 'はい。クラゲディールのデータはいつでも CSV / Excel でエクスポート可能です。組織が成長してより大規模な CRM が必要になった際、弊社は Salesforce 認定コンサルティングパートナーとして、移行先の選定からデータマイグレーションまでスムーズに支援します。' },
+  { q: '何人まで使えますか？', a: 'TRIO は3人から1人ずつ追加でき（1人 月¥2,000・7人まで）、8〜10人なら TEAM がお得です。11人以上はお問い合わせください。30 人を超える大規模チームでは、Salesforce 等の選択肢もご検討いただくことをお勧めしています。弊社は Salesforce 認定コンサルティングパートナーとして、最適な選択をご一緒に検討します。' },
+  { q: '既存のSlackワークスペースに導入できますか？', a: 'はい。既存の Slack ワークスペースに「クラゲディールを追加」ボタン 1 つで完了します。新しいワークスペースを作る必要はありません。' },
+  { q: 'インストールしたのに、サイドバーにアプリが出てきません', a: 'Slack 画面上部の検索窓（または Cmd / Ctrl + K）に「クラゲディール」（英字 kuragedeal でも可）と入力し、表示されたアプリを選んでください。クラゲディールとの DM が開き、サイドバーに常駐します。あとは、その DM で自然文を打つだけ。初回のやり取りで welcome DM も届きます。反映が遅いときは Slack を再読み込み（Cmd / Ctrl + R）してください。なお、ワークスペースへの追加（インストール）は管理者が 1 回行えば完了で、メンバーの個別インストールは不要です。' },
+  { q: 'Slackを使っていない会社でも使えますか？', a: 'クラゲディールは Slack ワークスペースが前提です。Slack の Free プランでも導入できますので、まず Slack を導入していただくことをお勧めします。' },
+  { q: 'データのセキュリティは大丈夫ですか？', a: 'データは Google Cloud Platform 上で管理され、通信は SSL/TLS で暗号化されています。データベースの Row-Level Security で会社ごとに分離。お客様の営業データが AI の学習に使用されることはありません。' },
+  { q: '他のメンバーに自分の営業データを見られませんか？', a: 'いいえ。クラゲディールは DM（クラゲディール App との個別チャット）で使う、あなた専用のプライベートな営業アシスタントです。あなたの入力もクラゲの回答も、ほかの人には見えません。さらにデータ自体も担当者ごとに分離されており、一般メンバーは自分が担当するディール・顧客のみ閲覧できます（マネージャーはチーム全体）。設定や契約の変更は管理者だけが行えます。' },
+  { q: 'AI が提案するディール確度はどのように計算されますか？', a: '活動記録と MEDDPICC 情報（決裁者との接触 / 予算の根拠確認 / 競合の把握など）を AI が分析して更新します。/coach で情報を入力するたびに計算し直されます。最後の活動から日がたつほど、少しずつ下方修正されます。' },
+  { q: '解約はどうすればよいですか？', a: 'Web の設定画面の「解約する」か、Slack の /setting の「解約する」からいつでもできます（管理者のみ）。契約期間の終わりまで今のまま使え、その後利用が停止します。データは解約後30日間保管し、その間に再開すればそのまま引き継げます。年額を含め、途中解約の返金はありません。' },
+  { q: '無料期間が終わったらどうなりますか？', a: '自動で課金されることはありません。有料プランに申し込まなければ利用が停止します。停止中も管理者は設定画面から申し込め、データの CSV 書き出しもできます。' },
+  { q: '使い方が分からないときは？', a: 'Slack のクラゲディールに「使い方を教えて」と聞けば、その場で答えます。' },
+  { q: 'メモからやることを拾うとは？', a: '書いたメモの中から、あなたがこれからやること（「見積もりを出す」「資料を送る」など）をクラゲくんが拾い、「今やること」と顧客・ディールの詳細に並べます。相手がやることや、もう済んだことは拾いません。済んだら［✅ 済んだ］を押すだけです。' },
+  { q: '今使っている顧客リストを移せますか？', a: '管理者が CSV ファイルで会社・顧客・ディールをまとめて取り込めます。見本の CSV をダウンロードして、その形に合わせてください。「担当者メール」の列にメンバーのメールアドレスを入れると、その人の担当になります。' },
+  { q: '使い方を覚えられるか不安です', a: '使い始めの14日間は、毎朝のブリーフィングに「はじめかた」が届きます。迷ったら「使い方を教えて」と聞けば、クラゲくんがその場で答えます。' },
+  { q: '人数はどう数えますか？', a: 'その月にクラゲを使った人（メッセージを送った・ボタンを押した・コマンドを使った人）を数えます。朝のブリーフィングを受け取っただけの人は数えません。' },
+  { q: 'メンバーを増やすとどうなりますか？', a: 'プランの人数の範囲内なら、新しい人はすぐに使えます。超える人は、管理者が許可すると使えるようになります。許可するときに追加料金が表示されるので、知らないうちに料金が増えることはありません。' },
+  { q: '追加分はいつ請求されますか？', a: '使った月の分を、翌月の請求に加えます。月の途中から使い始めても日割りにはせず、1人分として数えます。' },
+  { q: '無料期間中は何人で試せますか？', a: '人数の制限はありません。チーム全員でお試しください。' },
 ]
 
 // ── SEO / AIO メタ ───────────────────────────────────────
@@ -730,10 +540,9 @@ usePageSeo({
   path: '/',
   title: 'クラゲディール — Slackだけで完結するAI営業CRM',
   description:
-    'Slack に一言書くだけで CRM 入力が完了。AI が営業コーチとして毎朝ブリーフィングし、受注確率・次のアクション・メール下書きを支援します。1〜10 人の営業チームで月¥9,800。いまならβ版を 4 ヶ月無料（10/15 まで・クレカ不要）。',
+    'Slack に一言書くだけで CRM 入力が完了。AI が営業コーチとして毎朝ブリーフィングし、ディール確度・次の一手・メール下書きを支援します。ひとりから小さな営業チームまで。PERSONAL ¥2,980/月〜。14日間無料でお試しいただけます。',
 })
 
-// SoftwareApplication 構造化データ（料金は正準モデルに一致。虚偽 rating は入れない）
 const softwareLd = {
   '@context': 'https://schema.org',
   '@type': 'SoftwareApplication',
@@ -742,41 +551,15 @@ const softwareLd = {
   operatingSystem: 'Slack',
   url: 'https://kuragedeal.ai',
   description:
-    'Slack に書くだけで CRM 入力が完了する AI 営業 CRM。AI が MEDDPICC コーチング・受注確率の算出・メール下書きを支援する。ユーザー数課金なし。',
+    'Slack に書くだけで CRM 入力が完了する AI 営業 CRM。AI が MEDDPICC コーチング・ディール確度の算出・メール下書きを支援する。',
   offers: [
-    {
-      '@type': 'Offer',
-      name: 'β 試用（4 ヶ月無料・2026/10/15 まで）',
-      price: 0,
-      priceCurrency: 'JPY',
-      description: 'β 期間中は全機能を 4 ヶ月無料で利用可能（2026/10/15 一斉終了・クレジットカード不要）。',
-    },
-    {
-      '@type': 'Offer',
-      name: 'Personal（正式版）',
-      price: 1980,
-      priceCurrency: 'JPY',
-      description: '1 名まで。正式版では 14 日間の無料トライアル付き。',
-    },
-    {
-      '@type': 'Offer',
-      name: 'Trio（正式版）',
-      price: 4980,
-      priceCurrency: 'JPY',
-      description: '3 名まで。正式版では 14 日間の無料トライアル付き。',
-    },
-    {
-      '@type': 'Offer',
-      name: 'Standard（正式版）',
-      price: 9800,
-      priceCurrency: 'JPY',
-      description: '10 名まで。正式版では 14 日間の無料トライアル付き。',
-    },
+    { '@type': 'Offer', name: 'PERSONAL', price: 2980, priceCurrency: 'JPY', description: '1名まで。14日間の無料トライアル付き。' },
+    { '@type': 'Offer', name: 'TRIO', price: 5980, priceCurrency: 'JPY', description: '3名まで（4名目から1名ごとに+¥2,000、7名まで）。14日間の無料トライアル付き。' },
+    { '@type': 'Offer', name: 'TEAM', price: 14980, priceCurrency: 'JPY', description: '10名まで。14日間の無料トライアル付き。' },
   ],
   publisher: { '@type': 'Organization', name: '株式会社shiro' },
 }
 
-// FAQPage 構造化データ（表示中の faqs 配列からそのまま生成 → 表示と完全一致）
 const faqLd = {
   '@context': 'https://schema.org',
   '@type': 'FAQPage',
@@ -794,20 +577,3 @@ useHead({
   ],
 })
 </script>
-
-<style scoped>
-@keyframes float {
-  0%   { transform: translateY(0px); }
-  50%  { transform: translateY(-16px); }
-  100% { transform: translateY(0px); }
-}
-
-.kurage-float {
-  animation: float 4s ease-in-out infinite;
-}
-
-/* details の summary をモダンに */
-details summary::-webkit-details-marker {
-  display: none;
-}
-</style>

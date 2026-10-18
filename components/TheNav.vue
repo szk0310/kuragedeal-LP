@@ -16,18 +16,19 @@
         <a href="/pains" class="hover:text-kurage-600 transition-colors">お悩み解消</a>
         <a href="/#faq" class="hover:text-kurage-600 transition-colors">FAQ</a>
         <a href="/guide" class="hover:text-kurage-600 transition-colors">使い方ガイド</a>
+        <a href="/manual" class="hover:text-kurage-600 transition-colors">マニュアル</a>
         <a
-          href="/beta"
+          href="https://slacksfa-api-808596335261.asia-northeast1.run.app/slack/install"
           class="bg-orange-500 text-white px-4 py-2 rounded-lg hover:bg-orange-400 transition-colors font-bold"
-          >β 参加プログラム</a
+          >14日間無料で試す</a
         >
       </div>
 
       <!-- Mobile CTA -->
       <a
-        href="/beta"
+        href="https://slacksfa-api-808596335261.asia-northeast1.run.app/slack/install"
         class="lg:hidden bg-orange-500 text-white text-sm px-4 py-2 rounded-lg hover:bg-orange-400 transition-colors font-bold"
-        >β 参加プログラム</a
+        >14日間無料で試す</a
       >
     </nav>
   </header>

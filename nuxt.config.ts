@@ -14,8 +14,8 @@ export default defineNuxtConfig({
       gtagGa4: process.env.NUXT_PUBLIC_GTAG_GA4 ?? '',        // 例: G-XXXXXXXX
       gtagAdsId: process.env.NUXT_PUBLIC_GTAG_ADS_ID ?? '',   // 例: AW-XXXXXXXXX
       // Google広告コンバージョンラベル（"AW-xxx/labelxxx" の send_to 値）
-      adsLabelBeta: process.env.NUXT_PUBLIC_ADS_LABEL_BETA ?? '',
-      adsLabelWaitlist: process.env.NUXT_PUBLIC_ADS_LABEL_WAITLIST ?? '',
+      // β終了に伴いadsLabelBeta/adsLabelWaitlistは廃止。トップの「14日間無料で試す」はadsLabelTrial。
+      adsLabelTrial: process.env.NUXT_PUBLIC_ADS_LABEL_TRIAL ?? '',
       adsLabelContact: process.env.NUXT_PUBLIC_ADS_LABEL_CONTACT ?? '',
     },
   },
@@ -32,12 +32,21 @@ export default defineNuxtConfig({
     },
   },
   // /beta-program は /beta に統一（旧 URL は 301 で恒久リダイレクト）
-  // /contact は 2026-05-18 から専用ページ (Enterprise 相談 + 一般お問い合わせ) に独立
+  // /contact は 2026-05-18 から専用ページ (11人以上の相談 + 一般お問い合わせ) に独立
   // /contact は ssr: false で client-only に。理由は contact.vue の definePageMeta 参照
+  // β プログラム終了(2026-10)に伴い /beta /free /waitlist /waitlist-confirmed は廃止 → トップへ 301 で恒久リダイレクト
   routeRules: {
     '/beta-program': { redirect: { to: '/beta', statusCode: 301 } },
     '/beta-program/**': { redirect: { to: '/beta', statusCode: 301 } },
     '/contact': { ssr: false },
+    '/beta': { redirect: { to: '/', statusCode: 301 } },
+    '/beta/**': { redirect: { to: '/', statusCode: 301 } },
+    '/free': { redirect: { to: '/', statusCode: 301 } },
+    '/free/**': { redirect: { to: '/', statusCode: 301 } },
+    '/waitlist': { redirect: { to: '/', statusCode: 301 } },
+    '/waitlist/**': { redirect: { to: '/', statusCode: 301 } },
+    '/waitlist-confirmed': { redirect: { to: '/', statusCode: 301 } },
+    '/waitlist-confirmed/**': { redirect: { to: '/', statusCode: 301 } },
   },
   app: {
     head: {
@@ -48,12 +57,12 @@ export default defineNuxtConfig({
         {
           name: 'description',
           content:
-            'クラゲでもできる、Slack営業管理。チーム全員で月¥9,800。Slackに一言書くだけでCRM入力完了。AIが営業コーチとして毎朝ブリーフィング。1人〜30人の営業チームに最適。',
+            'Slackに一言書くだけでCRM入力完了。AIが営業コーチとして毎朝ブリーフィング。ひとりから、小さな営業チームまで。PERSONAL 月¥2,980〜。14日間無料でお試しいただけます。',
         },
         { property: 'og:title', content: 'クラゲディール — Slackだけで完結するAI営業CRM' },
         {
           property: 'og:description',
-          content: 'Slackに書くだけでCRM入力完了。AIが営業コーチとして次のアクションを提案。チーム全員で月¥9,800。',
+          content: 'Slackに書くだけでCRM入力完了。AIが営業コーチとしてディール確度・次の一手を提案。PERSONAL 月¥2,980〜、14日間無料。',
         },
         { property: 'og:type', content: 'website' },
         { property: 'og:site_name', content: 'クラゲディール' },

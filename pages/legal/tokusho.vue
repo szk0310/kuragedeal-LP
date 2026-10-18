@@ -41,12 +41,13 @@ const rows = [
   { label: '電話番号', value: '03-6272-4119<br><span class="text-gray-400 text-xs">（受付時間：平日 10:00〜18:00）</span>' },
   { label: 'メール', value: '<a href="mailto:support@kuragedeal.ai" class="text-kurage-600 underline">support@kuragedeal.ai</a>' },
   { label: 'サービス名', value: 'クラゲディール（Kurage Deal）' },
-  { label: '販売価格', value: 'Free プラン：¥0/月<br>Standard プラン：¥9,800/月（税込）<br>Premium プラン：¥29,800/月（税込）' },
+  { label: '販売価格', value: 'PERSONAL：月額¥2,980／年額¥29,800（1名まで）<br>TRIO：月額¥5,980／年額¥59,800（3名まで。4名目以降は1名ごとに月額+¥2,000／年額+¥20,000、7名まで）<br>TEAM：月額¥14,980／年額¥149,800（10名まで）<br>11名以上はお問い合わせください。<br><span class="text-gray-400 text-xs">上記はすべて税別です。決済時に消費税10%が加わります。年額は10か月分の料金です。</span>' },
   { label: '必要費用', value: 'インターネット接続費用・通信費用はお客様負担となります' },
-  { label: '支払方法', value: 'クレジットカード（Visa・Mastercard・American Express・JCB）' },
-  { label: '支払時期', value: '月次自動更新（契約日を起算日として毎月同日に自動課金）' },
+  { label: '支払方法', value: 'クレジットカード（Stripeによる決済。Visa・Mastercard・American Express・JCB）' },
+  { label: '支払時期', value: '各プランの基本料金（基本人数分）は前払いで、契約日を起算日として月額プランは毎月、年額プランは1年分を一括して自動課金します。基本人数を超える人数分の追加料金は、利用した月の翌月に後払いでご請求します。' },
   { label: '提供時期', value: '決済完了後、即時ご利用可能' },
-  { label: 'キャンセル', value: 'サービスの性質上、提供済み期間分の返金はいたしかねます。解約はマイページまたは <a href="mailto:support@kuragedeal.ai" class="text-kurage-600 underline">support@kuragedeal.ai</a> へのご連絡により、次回請求日の前日までに手続きいただくことで翌月以降の課金が停止します。' },
+  { label: '無料お試し', value: 'Slackへの追加日から14日間、すべての機能を無料でお試しいただけます（人数の制限なし・クレジットカード入力不要）。無料期間中に自動で課金されることはありません。無料期間の終了時までに有料プランのお申し込みがない場合、ご利用は停止します。' },
+  { label: 'キャンセル', value: 'Webの設定画面またはSlackの「/setting」から、管理者権限を持つユーザーがいつでも解約できます。解約後も、その時点の契約期間の末日まで本サービスをご利用いただけます。契約期間の途中で解約した場合でも、日割り計算その他の方法による返金は行いません（年額プランを含みます）。' },
   { label: '動作環境', value: '最新バージョンの Chrome・Firefox・Safari・Edge 推奨。Slack アカウント（無料プラン以上）が必要です。' },
 ]
 </script>

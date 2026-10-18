@@ -51,7 +51,7 @@
           <div class="bg-gray-50 rounded-xl p-6">
             <p class="font-bold text-gray-900 mb-2">① 入力の認知負荷が、高すぎるから。</p>
             <p class="text-gray-700 leading-relaxed">
-              CRM にログインして、画面を開いて、商談項目を埋めて、保存して、
+              CRM にログインして、画面を開いて、ディール項目を埋めて、保存して、
               活動記録のページを出して、また入力して……
               <br />── 営業マンは、もう次のお客様に行きたい。
             </p>
@@ -71,8 +71,8 @@
             ★ クラゲディールは、こんなストレスから営業マンを解放します！
           </p>
           <p class="text-gray-800 leading-relaxed mb-4">
-            Slack に「田中さんと商談しました。予算 300 万」と<strong>投げる</strong>。<br />
-            それだけで、AI がディールを更新し、受注確率を計算し、<br />
+            Slack に「田中さんと面談しました。予算 300 万」と<strong>投げる</strong>。<br />
+            それだけで、AI がディールを更新し、ディール確度を計算し、<br />
             明日 AI コーチが「次は決裁者と会う段取りを」と問いかけてくれる。
           </p>
           <p class="text-lg font-bold text-kurage-800">
@@ -167,7 +167,7 @@
               </p>
             </div>
             <div>
-              <p class="font-bold text-gray-900 mb-2">🧠 MEDDPICC 情報が更新されるたびに、受注確率が動く。</p>
+              <p class="font-bold text-gray-900 mb-2">🧠 MEDDPICC 情報が更新されるたびに、ディール確度が動く。</p>
               <p class="text-sm text-gray-700 leading-relaxed pl-5 border-l-2 border-kurage-200">
                 決裁者と会えた。予算の根拠を確認した。競合を把握した。<br />
                 ── そのたびに、AI が確率を計算し直します。<br />
@@ -397,8 +397,8 @@
           <a href="/" class="inline-flex items-center justify-center gap-2 bg-white text-kurage-700 font-bold px-7 py-3.5 rounded-xl hover:bg-gray-100 transition-colors">
             ← クラゲディールを見る
           </a>
-          <a href="/free" class="inline-flex items-center justify-center gap-2 bg-kurage-500 text-white font-bold px-7 py-3.5 rounded-xl hover:bg-kurage-400 transition-colors ring-1 ring-white/30">
-            β を無料で試す →
+          <a href="https://slacksfa-api-808596335261.asia-northeast1.run.app/slack/install" class="inline-flex items-center justify-center gap-2 bg-kurage-500 text-white font-bold px-7 py-3.5 rounded-xl hover:bg-kurage-400 transition-colors ring-1 ring-white/30">
+            14日間無料で試す →
           </a>
         </div>
       </div>
@@ -409,7 +409,7 @@
 <script setup lang="ts">
 const pain2Chips = [
   { icon: '🌅🌆', title: '朝夕のブリーフィング', desc: '1 日のはじめと終わりに、AI が伴走' },
-  { icon: '🧠', title: 'AI が受注確率を自動更新', desc: 'MEDDPICC 情報が増えるたびに計算し直す' },
+  { icon: '🧠', title: 'AI がディール確度を自動更新', desc: 'MEDDPICC 情報が増えるたびに計算し直す' },
   { icon: '⚠️', title: '14 日停滞、自動検知', desc: '忘れ去られる前にアラート' },
 ]
 const pain3Chips = [

@@ -1,0 +1,16 @@
+<svg preserveAspectRatio="none" overflow="visible" style="display: block;" width="31" height="33.5" viewBox="0 0 31 33.5" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Group">
+<g id="Group_2">
+<path id="Line" d="M25.5 20V32" stroke-width="3" stroke-linecap="round" stroke="#FF7B13"/>
+<path id="Line_2" d="M15.5 20L15.5 32" stroke-width="3" stroke-linecap="round" stroke="#FF7B13"/>
+<path id="Line_3" d="M6 20L6 32" stroke-width="3" stroke-linecap="round" stroke="#FF7B13"/>
+</g>
+<g id="Ellipse">
+<path d="M31 8C31 12.4183 24.0604 16 15.5 16C6.93959 16 0 12.4183 0 8C0 3.58172 6.93959 0 15.5 0C24.0604 0 31 3.58172 31 8Z" fill="#FF7B13"/>
+<mask id="stroke0_2_1493" fill="white">
+<path d="M31 8C31 12.4183 24.0604 16 15.5 16C6.93959 16 0 12.4183 0 8C0 3.58172 6.93959 0 15.5 0C24.0604 0 31 3.58172 31 8Z"/>
+</mask>
+<path d="M31 8C31 12.4183 24.0604 16 15.5 16C6.93959 16 0 12.4183 0 8C0 3.58172 6.93959 0 15.5 0C24.0604 0 31 3.58172 31 8Z" stroke-width="2" stroke="#FF7B13" mask="url(#stroke0_2_1493)"/>
+</g>
+</g>
+</svg>

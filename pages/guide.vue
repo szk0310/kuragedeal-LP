@@ -4,9 +4,10 @@
 
       <!-- インストール完了バナー -->
       <div v-if="installed" class="bg-green-50 border border-green-200 rounded-2xl p-6 mb-10 text-center">
-        <p class="text-3xl mb-2">🎉</p>
-        <h2 class="text-lg font-black text-green-800 mb-1">Slackへのインストールが完了しました！</h2>
-        <p class="text-sm text-green-700 mb-4">このページの順番どおりに、クラゲくんに話しかけてみてください。</p>
+        <p class="text-3xl mb-2">✅</p>
+        <p class="text-sm text-green-800 leading-relaxed mb-4">
+          クラゲディールを Slack に追加しました。次は、左のサイドバーの「アプリ」からクラゲディールを開いて［📋 メニュー］を押してください（見つからなければ Slack 上部の検索で「クラゲ」）。
+        </p>
         <a href="slack://open"
           class="inline-flex items-center gap-2 bg-green-600 hover:bg-green-500 text-white font-bold px-6 py-3 rounded-xl text-sm transition-colors">
           Slackを開く →
@@ -32,7 +33,7 @@
         </div>
         <div class="bg-white rounded-xl border border-gray-200 p-4">
           <p class="text-2xl mb-1">③</p>
-          <p class="text-xs font-bold text-gray-800 leading-snug">慣れたら<br />会話で速く</p>
+          <p class="text-xs font-bold text-gray-800 leading-snug">慣れたら<br />ひとことで速く</p>
         </div>
       </div>
 
@@ -55,13 +56,13 @@
           </div>
           <div class="grid md:grid-cols-2 gap-5 items-center">
             <div>
-              <p class="text-sm text-gray-600 leading-relaxed">β 登録後に届く<b>メールの「Slack に追加」ボタン</b>を押す → Slack の<b>認可画面で「許可」</b>→ インストール完了。完了すると、クラゲくんから welcome の DM が届きます。</p>
+              <p class="text-sm text-gray-600 leading-relaxed">LP の<b>［14日間無料で試す］ボタン</b>から<b>「Slack に追加」</b>を押す → Slack の<b>認可画面で「許可」</b>→ インストール完了。完了すると、クラゲくんから welcome の DM が届きます。</p>
               <p class="text-xs text-gray-400 mt-2">※ チームで使う場合も、ワークスペースへの追加は管理者が1回だけ。メンバーの個別インストールは不要です。</p>
             </div>
-            <!-- 流れの見え方（メール → 認可 → 完了） -->
+            <!-- 流れの見え方（LP → 認可 → 完了） -->
             <div class="bg-gray-50 rounded-xl p-4 space-y-1.5">
               <div class="bg-white rounded-lg border border-gray-200 p-3">
-                <p class="text-[11px] text-gray-400 mb-2">✉️ β 登録の確認メール</p>
+                <p class="text-[11px] text-gray-400 mb-2">🌐 クラゲディールの LP</p>
                 <span class="inline-flex items-center gap-1.5 bg-[#4A154B] text-white rounded-md px-3 py-2 text-xs font-bold">
                   <img src="/kurage-on-white.png" class="w-4 h-4" alt="" /> Slack に追加
                 </span>
@@ -115,29 +116,17 @@
         </div>
       </section>
 
-      <!-- ②③ 2つのモードの使い方 -->
+      <!-- ② クラゲを使う -->
       <section id="modes" class="mb-16 scroll-mt-20">
         <h2 class="text-xl font-black text-gray-800 mb-2 flex items-center gap-2">
           <span class="bg-kurage-500 text-white rounded-full w-7 h-7 flex items-center justify-center text-sm font-bold">2</span>
           クラゲを使う
         </h2>
         <p class="text-sm text-gray-500 mb-5 leading-relaxed">
-          使い方は2つあります。最初は<b>迷わない「ボタンモード」</b>（既定）から。慣れてきたら、自然文ひとつで進む<b>「会話モード」</b>が最速です。
-          <b>いつでも設定で切り替えられます</b>。設定は、<code class="bg-white px-1 rounded text-xs">/setting</code> と<b>チャット入力欄に入力して送信</b>すると開きます。
+          基本は<b>ボタンを押していくだけ</b>。クラゲが毎回、次に押せるボタンを案内します。慣れてきたら、決まった<b>ひとこと（公式フレーズ）</b>を打つと、同じ画面にショートカットできます。
         </p>
 
-        <!-- タブ -->
-        <div class="inline-flex rounded-xl border border-kurage-200 bg-white p-1 mb-5">
-          <button type="button" @click="guideMode = 'button'"
-            :class="guideMode === 'button' ? 'bg-kurage-500 text-white' : 'text-gray-600 hover:text-kurage-700'"
-            class="px-4 py-2 rounded-lg text-sm font-bold transition-colors">🟢 ボタンモード（既定）</button>
-          <button type="button" @click="guideMode = 'talk'"
-            :class="guideMode === 'talk' ? 'bg-kurage-500 text-white' : 'text-gray-600 hover:text-kurage-700'"
-            class="px-4 py-2 rounded-lg text-sm font-bold transition-colors">💬 会話モード（慣れたら）</button>
-        </div>
-
-        <!-- ボタンモード -->
-        <div v-show="guideMode === 'button'" class="space-y-5">
+        <div class="space-y-5">
           <!-- どう動くか -->
           <div class="bg-white rounded-xl border border-gray-200 p-4 text-sm text-gray-700 leading-relaxed">
             <p class="font-bold text-gray-900 mb-1">画面に出ているボタンを押していくだけ</p>
@@ -170,17 +159,17 @@
               <p class="mb-2">どんな活動でしたか？</p>
               <div class="flex flex-wrap gap-2">
                 <span class="inline-block border border-gray-300 bg-white rounded-md px-3 py-1.5 text-xs font-semibold text-gray-800">📞 電話</span>
-                <span class="inline-block border-2 border-kurage-400 bg-kurage-50 rounded-md px-3 py-1.5 text-xs font-bold text-kurage-800">🤝 商談</span>
+                <span class="inline-block border-2 border-kurage-400 bg-kurage-50 rounded-md px-3 py-1.5 text-xs font-bold text-kurage-800">🤝 ディール</span>
                 <span class="inline-block border border-gray-300 bg-white rounded-md px-3 py-1.5 text-xs font-semibold text-gray-800">✉️ メール</span>
               </div>
             </SlackBotLine>
-            <SlackBotLine name="あなた" :is-user="true" time="9:01"><p class="text-gray-400">（「🤝 商談」を押す）</p></SlackBotLine>
+            <SlackBotLine name="あなた" :is-user="true" time="9:01"><p class="text-gray-400">（「🤝 ディール」を押す）</p></SlackBotLine>
             <SlackBotLine name="クラゲディール" :bot-badge="true" time="9:01">
               <p>最後に、ひとことメモを入力してください。<span class="text-gray-400">（例：予算300万、来月判断）</span></p>
             </SlackBotLine>
             <SlackBotLine name="あなた" :is-user="true" time="9:01"><p>予算300万、競合は1社。来月末に判断</p></SlackBotLine>
             <SlackBotLine name="クラゲディール" :bot-badge="true" time="9:01">
-              <p>✅ 田中さんの商談メモを記録しました。受注確率も更新しました🪼</p>
+              <p>✅ 田中さんのディールメモを記録しました。ディール確度も更新しました🪼</p>
             </SlackBotLine>
           </SlackMessageMock>
           <p class="text-xs text-gray-500"><b>ボタンを押す → 次のボタンが出る</b>をくり返し、最後にひとことだけ入力すれば完了。データ構造を知らなくても、案内に沿うだけで記録できます。</p>
@@ -190,9 +179,9 @@
             ✏️ 顧客名や会社名、金額、メモなどは、クラゲの案内に従って入力するだけでOKです。
           </div>
 
-          <!-- 個人のお客様（地図実装・N4） -->
+          <!-- 個人のお客様 -->
           <div class="bg-gray-50 rounded-xl p-4 text-sm text-gray-700 leading-relaxed">
-            👤 個人のお客様（個人事業主・フリーランス等）は、「会社」欄にお名前を入れればOKです。
+            👤 個人のお客様（個人事業主・フリーランス等）は、<b>会社なしで登録</b>できます。一覧には「個人のお客様」と表示されます。
           </div>
 
           <!-- 行き止まりゼロ -->
@@ -201,56 +190,27 @@
           </div>
         </div>
 
-        <!-- 会話モード -->
-        <div v-show="guideMode === 'talk'" class="space-y-5">
-          <div class="bg-white rounded-xl border border-gray-200 p-4 text-sm text-gray-700 leading-relaxed">
-            <p class="font-bold text-gray-900 mb-1">ふだんの言葉で、そのまま書くだけ</p>
-            同僚に報告するみたいに、一言どうぞ。慣れてきたら、こちらが最速です。切り替えは <code class="bg-gray-100 px-1 rounded text-xs">/setting</code> →「操作モード」から。
-          </div>
-
-          <SlackMessageMock channel-name="💬 クラゲディール（DM）">
-            <SlackBotLine name="あなた" :is-user="true" time="14:30"><p>田中さんを顧客に追加して。会社はABC商事</p></SlackBotLine>
-            <SlackBotLine name="クラゲディール" :bot-badge="true" time="14:30"><p>✅ 田中さん（ABC商事）を登録しました。</p></SlackBotLine>
-            <SlackBotLine name="あなた" :is-user="true" time="14:31"><p>田中さんと商談しました。予算300万、競合は1社</p></SlackBotLine>
-            <SlackBotLine name="クラゲディール" :bot-badge="true" time="14:31"><p>✅ 記録しました。受注確率を更新しました。次にやることも、そっとお知らせします🪼</p></SlackBotLine>
-          </SlackMessageMock>
-
-          <div>
-            <p class="font-bold text-gray-900 mb-2 text-sm">こんなふうに書けます</p>
-            <div class="space-y-3">
-              <div class="bg-gray-50 rounded-xl p-4">
-                <p class="text-xs text-gray-400 mb-1 font-semibold">まずは顧客を登録</p>
-                <p class="font-mono text-sm text-gray-800">田中さんを顧客に追加して。会社はABC商事</p>
-              </div>
-              <div class="bg-gray-50 rounded-xl p-4">
-                <p class="text-xs text-gray-400 mb-1 font-semibold">活動メモを記録（最もよく使う）</p>
-                <p class="font-mono text-sm text-gray-800">田中さん、今日オンライン商談しました。予算は300万、来月末までに決める方向で話が進んでいます。</p>
-              </div>
-              <div class="bg-gray-50 rounded-xl p-4">
-                <p class="text-xs text-gray-400 mb-1 font-semibold">メールした記録</p>
-                <p class="font-mono text-sm text-gray-800">田中さんにメールしました。提案書を送付、来週返事をもらう予定。</p>
-              </div>
-            </div>
-          </div>
-
-          <div>
-            <p class="font-bold text-gray-900 mb-2 text-sm">よく使うフレーズ一覧</p>
-            <div class="bg-white rounded-2xl border border-gray-200 shadow-sm overflow-hidden">
-              <table class="w-full text-sm">
-                <thead>
-                  <tr class="bg-gray-50 border-b border-gray-200">
-                    <th class="text-left px-5 py-3 font-semibold text-gray-700 w-1/2">Slackで入力</th>
-                    <th class="text-left px-5 py-3 font-semibold text-gray-700">動作</th>
-                  </tr>
-                </thead>
-                <tbody class="divide-y divide-gray-100">
-                  <tr v-for="ex in examples" :key="ex.input">
-                    <td class="px-5 py-3 font-mono text-gray-800">{{ ex.input }}</td>
-                    <td class="px-5 py-3 text-gray-500">{{ ex.action }}</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
+        <!-- よく使うひとこと（公式フレーズ・ボタンのショートカット） -->
+        <div class="mt-6">
+          <p class="font-bold text-gray-900 mb-2 text-sm">⚡ よく使うひとこと（ボタンのショートカット）</p>
+          <p class="text-sm text-gray-500 mb-3 leading-relaxed">
+            決まった言葉を打つと、ボタンを押さずに同じ画面へ一気にジャンプできます。覚えておくと速いのはこの4つだけです。
+          </p>
+          <div class="bg-white rounded-2xl border border-gray-200 shadow-sm overflow-hidden">
+            <table class="w-full text-sm">
+              <thead>
+                <tr class="bg-gray-50 border-b border-gray-200">
+                  <th class="text-left px-5 py-3 font-semibold text-gray-700 w-1/2">Slackで入力</th>
+                  <th class="text-left px-5 py-3 font-semibold text-gray-700">開く画面</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-gray-100">
+                <tr v-for="ex in quickPhrases" :key="ex.input">
+                  <td class="px-5 py-3 font-mono text-gray-800">{{ ex.input }}</td>
+                  <td class="px-5 py-3 text-gray-500">{{ ex.action }}</td>
+                </tr>
+              </tbody>
+            </table>
           </div>
         </div>
 
@@ -263,24 +223,25 @@
           <ol class="text-sm text-gray-700 leading-relaxed space-y-1 list-decimal list-inside">
             <li><b>⏰ 期限切れ</b> — 次の一手の期日が過ぎているもの（最優先）</li>
             <li><b>📅 今日/明日</b> — 期日が今日・明日のもの</li>
-            <li><b>🔥 重要（期日なし）</b> — 期日は無いが受注確率・金額の期待値が高いもの</li>
-            <li><b>💤 放置候補</b> — 次の一手が決まっておらず、14日以上動きが無いもの（「✍️ 決める」で次の一手を入力できます）</li>
+            <li><b>🔥 重要（期日なし）</b> — 期日は無いがディール確度・金額の期待値が高いもの</li>
+            <li><b>💤 放置候補</b> — 次の一手がまだ決まっていないもの（最後の活動が古い順）（「✍️ 決める」で次の一手を入力できます）</li>
+            <li><b>＋ メモから拾ったやること</b> — メモに書いた内容をAIが読み取り、見つかったやることをリストの最後に追加します</li>
           </ol>
           <p class="text-xs text-gray-500 mt-3">DM で「次の一手を教えて」と聞くと、この並びで表示されます。個別のディールを深掘りしたいときは <code class="bg-white px-1 rounded text-xs">/coach</code> のAIコーチングをどうぞ。</p>
         </div>
 
-        <!-- 困ったとき（両モード共通のフォールバック） -->
+        <!-- 困ったとき -->
         <div class="mt-6 bg-kurage-50 border border-kurage-200 rounded-2xl p-5">
           <p class="font-black text-gray-900 mb-1">💡 困ったら、そのままクラゲに聞いてください</p>
           <p class="text-sm text-gray-700 leading-relaxed">
-            どちらのモードでも、迷ったら<b>ふつうの言葉で聞く</b>のがいちばん確実です。
+            ボタンに迷ったら、そのままクラゲに聞いてください（<b>「使い方を教えて」</b>など）。
             「次なにすればいい？」と聞けば<b>いまのおすすめ</b>を、「田中さんって誰だっけ？」と聞けば<b>その場で調べて</b>答えてくれます。
             案件を深掘りしたいときは <code class="bg-white px-1 rounded text-xs">/coach</code> でコーチングも受けられます。
           </p>
         </div>
       </section>
 
-      <!-- 言葉の役割（β向け用語ガイドの常設化・2026-07-31） -->
+      <!-- 言葉の役割（用語ガイドの常設化・2026-07-31） -->
       <section id="glossary" class="mb-16 scroll-mt-20">
         <h2 class="text-xl font-black text-gray-800 mb-2 flex items-center gap-2">
           <span>🗺️</span> 言葉の役割
@@ -335,16 +296,16 @@
 
         <div class="space-y-3">
           <div class="bg-gray-50 rounded-xl p-4 text-sm text-gray-700 leading-relaxed">
-            📋 <b>やること（todo）は「次の一手」に入れる</b>：「タスク」「todo」「やることリスト」と話しかければ次の一手の一覧が開きます。1ディール＝次の一手1つ。「次の一手を教えて」で、期日の近い順→重要→放置候補の順に、<b>なぜ出ているかの理由つき</b>で並びます。
+            📋 <b>大きな一手は「次の一手」（ディールに1つ）、細かいやることはメモに書けばクラゲが拾う</b>：「タスク」「todo」「やることリスト」と話しかければ次の一手の一覧が開きます。「次の一手を教えて」で、期日の近い順→重要→放置候補→メモから拾ったやることの順に、<b>なぜ出ているかの理由つき</b>で並びます。
           </div>
           <div class="bg-gray-50 rounded-xl p-4 text-sm text-gray-700 leading-relaxed">
             📅 <b>2つの日付は別物</b>：「<b>次アクションの期日</b>（いつ次の一手をやるか）」と「<b>受注予定日／クローズ予定</b>（いつ受注しそうか）」。まぎらわしい裸の「期日」表示はやめました。
           </div>
           <div class="bg-gray-50 rounded-xl p-4 text-sm text-gray-700 leading-relaxed">
-            👤 <b>個人のお客様</b>：個人事業主・フリーランスは「会社」欄にお名前を入れればOK。検索は人・会社を横断するので迷子になりません。
+            👤 <b>個人のお客様</b>：個人のお客様は会社なしで登録でき、「個人のお客様」と表示されます。検索は人・会社を横断するので迷子になりません。
           </div>
           <div class="bg-gray-50 rounded-xl p-4 text-sm text-gray-700 leading-relaxed">
-            🔁 <b>勝手に動かしません</b>：14日以上動いていない案件は「次の一手」に💤放置候補として拾い、「放置にしますか？」と確認します。ステータスをクラゲが勝手に変えることはありません。
+            🔁 <b>勝手に動かしません</b>：次の一手が決まっていない案件は「次の一手」に💤放置候補として拾い、「放置にしますか？」と確認します。ステータスをクラゲが勝手に変えることはありません。
           </div>
         </div>
       </section>
@@ -364,7 +325,7 @@
             まず 1 週間、下の流れに沿って試してみてください。<b>すべてボタンで進められます</b>（迷ったら DM で「メニュー」と打つだけ）。
           </p>
           <p class="text-xs text-gray-500 mb-6 bg-white/60 rounded-lg px-3 py-2">
-            🔰 はじめての方は、先に <a href="#setup" class="text-kurage-700 font-bold underline">① インストール</a> と <a href="#modes" class="text-kurage-700 font-bold underline">② ボタンモードの使い方</a> に目を通すとスムーズです。慣れてきたら、自然文ひとつで進む<b>会話モード</b>も試してみてください。
+            🔰 はじめての方は、先に <a href="#setup" class="text-kurage-700 font-bold underline">① インストール</a> と <a href="#modes" class="text-kurage-700 font-bold underline">② ボタンの使い方</a> に目を通すとスムーズです。慣れてきたら「よく使うひとこと」のショートカットも試してみてください。
           </p>
 
           <div class="space-y-6">
@@ -386,10 +347,10 @@
         </div>
       </section>
 
-      <!-- 便利な機能とコマンド（リファレンス：両モード共通） -->
+      <!-- 便利な機能とコマンド（リファレンス） -->
       <div class="border-t border-gray-200 pt-10 mb-8">
         <h2 class="text-2xl font-black text-gray-900 mb-1">便利な機能とコマンド</h2>
-        <p class="text-sm text-gray-500">ここからはマニュアルです。コマンド・自動機能・設定・メール連携機能などは、ボタン・会話どちらのモードでもお使いいただけます。</p>
+        <p class="text-sm text-gray-500">ここからはマニュアルです。コマンド・自動機能・設定・メール連携機能などは、いつでもお使いいただけます。</p>
       </div>
 
       <!-- スラッシュコマンド -->
@@ -423,7 +384,7 @@
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
           <div class="bg-white rounded-2xl border border-gray-200 p-5 shadow-sm flex gap-3">
             <span class="shrink-0 text-xl leading-none">🧭</span>
-            <p class="text-sm text-gray-700 leading-relaxed"><b class="text-gray-800">操作モード</b> — <b>ボタンモード</b>（既定・ボタン中心でクラゲが案内）／<b>会話モード</b>（自然文ひとつで軽快）を切り替えられます。</p>
+            <p class="text-sm text-gray-700 leading-relaxed"><b class="text-gray-800">よく使うひとこと</b> — 「メニュー」「今やること」など、ボタンと同じ画面を開くショートカットの一覧。</p>
           </div>
           <div class="bg-white rounded-2xl border border-gray-200 p-5 shadow-sm flex gap-3">
             <span class="shrink-0 text-xl leading-none">📧</span>
@@ -447,7 +408,7 @@
           </div>
           <div class="bg-white rounded-2xl border border-gray-200 p-5 shadow-sm flex gap-3 sm:col-span-2">
             <span class="shrink-0 text-xl leading-none">🎓</span>
-            <p class="text-sm text-gray-700 leading-relaxed"><b class="text-gray-800">学習モード（サンプルデータ）</b> — はじめは<b>サンプルデータが入った状態</b>で、一覧・受注確率・次の一手を<b>すぐ体験</b>できます。<b>「🧹 サンプルを削除」</b>でサンプルデータだけ片づけられます（あなたの実データは残ります）。もう一度試したいときは<b>「🎓 サンプルを入れる」</b>で戻せます。</p>
+            <p class="text-sm text-gray-700 leading-relaxed"><b class="text-gray-800">サンプルデータ</b> — はじめは<b>サンプルデータが入った状態</b>で、一覧・ディール確度・次の一手を<b>すぐ体験</b>できます。準備ができたら<b>「🧹 サンプルを削除」</b>で片づけて、自分のデータの記録を始めてください。これは<b>一方通行の切り替え</b>です。削除してサンプルを卒業すると、サンプルと実データが同時に入っている状態には戻せません。</p>
           </div>
         </div>
       </section>
@@ -488,7 +449,7 @@
       <!-- メール連携 -->
       <section class="mb-10">
         <h3 class="text-lg font-black text-gray-800 mb-4 flex items-center gap-2">📨 顧客メールを取り込む（メール連携）</h3>
-        <p class="text-sm text-gray-500 mb-4">顧客とのメールを<b>転送するだけ</b>で、クラゲが内容を読んで<b>活動メモ・受注確率に反映</b>し、<b>返信ドラフト</b>を Slack に届けます。やることは次の3つです。</p>
+        <p class="text-sm text-gray-500 mb-4">顧客とのメールを<b>転送するだけ</b>で、クラゲが内容を読んで<b>活動メモ・ディール確度に反映</b>し、<b>返信ドラフト</b>を Slack に届けます。やることは次の3つです。</p>
         <div class="grid gap-3">
           <div class="bg-white rounded-2xl border border-gray-200 p-5 shadow-sm flex gap-4 items-start">
             <span class="shrink-0 bg-kurage-500 text-white rounded-full w-8 h-8 flex items-center justify-center text-sm font-bold">1</span>
@@ -531,54 +492,46 @@ usePageSeo({
   path: '/guide',
   title: '使い方ガイド | クラゲディール',
   description:
-    'クラゲディールの使い方ガイド。インストールから、ボタンモード／会話モードの使い方、最初の1週間の進め方、コマンドやメール連携まで、順番にわかりやすく紹介します。',
+    'クラゲディールの使い方ガイド。インストールから、ボタンの使い方、よく使うひとこと、最初の1週間の進め方、コマンドやメール連携まで、順番にわかりやすく紹介します。',
 })
 
-const guideMode = ref<'button' | 'talk'>('button')
 const route = useRoute()
 const installed = computed(() => route.query.installed === '1')
 
-const examples = [
-  { input: '顧客一覧を見せて', action: '登録済み顧客の一覧を表示' },
-  { input: '田中さんを顧客に追加して。会社はABC商事', action: '新規顧客を登録' },
-  { input: '田中さんを検索して', action: '顧客情報を表示' },
-  { input: '田中さんの電話番号は？', action: '電話番号を表示' },
-  { input: '田中さんにメールしました。〇〇の件で返事待ち。', action: 'メール活動をメモに記録' },
-  { input: '田中さんと商談しました。〇〇の件、来月判断とのこと。', action: '商談活動をメモに記録' },
-  { input: '田中さんに電話しました。〇〇を確認、来週再度連絡予定。', action: '電話活動をメモに記録' },
-  { input: '今日のパイプラインを見せて', action: '進行中ディール一覧を表示' },
-  { input: 'ABC商事で新規ディールを作って', action: '新規ディールを登録' },
-  { input: '間違えた。田中さんのメモにして', action: '直前のメモの対象を修正' },
+const quickPhrases = [
+  { input: 'メニュー', action: 'メインメニューを開く' },
+  { input: '今やること', action: '次の一手の一覧を開く' },
+  { input: 'メモ一覧', action: '最近の活動メモの一覧を開く' },
+  { input: 'ABC商事を受注に', action: 'そのディールを「受注」ステージに変更' },
 ]
 
 const commandGroups = [
   { group: '情報を見る（一覧）', cmds: [
-    { cmd: '/deal', title: 'ディール一覧・検索', desc: '商談の一覧・検索、AI進捗評価とネクストアクション提案。' },
+    { cmd: '/deal', title: 'ディール一覧・検索', desc: 'ディールの一覧・検索、AI進捗評価とネクストアクション提案。' },
     { cmd: '/contact', title: '顧客一覧', desc: '登録済みの顧客をSlack上で確認できます。' },
     { cmd: '/account', title: '会社一覧', desc: '登録済みの会社（取引先）を確認できます。' },
   ]},
   { group: 'AI・確認', cmds: [
-    { cmd: '/coach', title: 'AIコーチング', desc: 'AIが商談の進め方をヒアリング形式でコーチングします。' },
+    { cmd: '/coach', title: 'AIコーチング', desc: 'AIがディールの進め方をヒアリング形式でコーチングします。' },
     { cmd: '/usage', title: 'AI利用状況', desc: '今月のAI利用量・残り予算・プラン情報を確認できます。' },
   ]},
   { group: '設定・その他', cmds: [
-    { cmd: '/setting', title: '設定', desc: '操作モード・AI返信支援・営業ポリシー・ログインキー発行・学習モード（サンプル）などの設定メニュー。' },
+    { cmd: '/setting', title: '設定', desc: 'AI返信支援・営業ポリシー・ログインキー発行・サンプルデータなどの設定メニュー。' },
     { cmd: '/kurage', title: 'フィードバック投稿', desc: '使ってみて感じたことを開発チームへ直接送れます。例: `/kurage 朝のブリーフィングが長く感じる`' },
   ]},
 ]
 
 const autoFeatures = [
-  { icon: '🧠', title: '受注確率の自動更新', desc: 'メモするたびに、AIが営業の型（MEDDPICC）に沿って受注確率を計算し直します。' },
-  { icon: '⚠️', title: '停滞検知', desc: '14日うごきのない案件は確率がそっと下がり、長期停滞も自動で通知。見落としに気づけます。' },
+  { icon: '🧠', title: 'ディール確度の自動更新', desc: 'メモするたびに、AIが営業の型（MEDDPICC）に沿ってディール確度を計算し直します。' },
+  { icon: '⚠️', title: '停滞検知', desc: '14日うごきのない案件は確度がそっと下がり、長期停滞も自動で通知。見落としに気づけます。' },
   { icon: '🎓', title: 'AIコーチング', desc: '「ABC商事はどう？」や /coach で、MEDDPICCに沿ってクラゲがやさしく問いかけます。' },
   { icon: '✉️', title: 'メール返信の代筆', desc: '顧客からの返信に下書きを用意。Slackでボタンを押すと、あなた本人のアドレスから送信されます。' },
-  { icon: '📨', title: 'メール連携', desc: '顧客メールを転送すると、内容を読んで活動メモ・受注確率に反映し、返信下書きまで届けます。' },
+  { icon: '📨', title: 'メール連携', desc: '顧客メールを転送すると、内容を読んで活動メモ・ディール確度に反映し、返信下書きまで届けます。' },
   { icon: '☀️', title: '朝夕ブリーフィング', desc: '毎朝9時に「今日のフォーカス」、夕方17時に振り返りを、クラゲからお届けします。' },
   { icon: '📊', title: 'パイプライン分析', desc: 'Webダッシュボードで、チーム全体の状況をいつでも俯瞰できます。' },
 ]
 
-// 最初の1週間は「初心者＝ボタンモード」のパス。会話モードは別パスなので混ぜない。
-// Day1 はサンプル（見本）でクラゲの動きを体験 → Day2 以降で自分のデータを入れる流れ。
+// 最初の1週間はボタン中心のパス。Day1 はサンプル（見本）でクラゲの動きを体験 → Day2 以降で自分のデータを入れる流れ。
 const firstWeekPlan = [
   {
     label: 'Day 1（インストール当日）',
@@ -586,7 +539,7 @@ const firstWeekPlan = [
     tasks: [
       'サイドバーの「クラゲディール」を開く',
       '最初から入っているサンプルデータで「📋 状況を見る」を押し、顧客・会社・ディールの一覧を眺める',
-      '「🎯 次にやること」を押して、受注確率やおすすめの出かたを体験する',
+      '「🎯 次にやること」を押して、ディール確度やおすすめの出かたを体験する',
     ],
   },
   {
@@ -595,24 +548,24 @@ const firstWeekPlan = [
     tasks: [
       'メニュー →「👤 顧客を登録」で、自分の顧客を 1 件登録',
       'メニュー →「📊 ディールを登録」で、その顧客の案件を 1 件つくる',
-      'メニュー →「📝 活動をメモ」でその案件にメモ → AI が案件の受注確率に反映するのを見る',
+      'メニュー →「📝 活動をメモ」でその案件にメモ → AI が案件のディール確度に反映するのを見る',
     ],
   },
   {
     label: 'Day 4-5',
     theme: 'AI コーチングと朝夕ブリーフィング',
     tasks: [
-      '`/coach` で AI コーチングを体験（コマンドはどちらのモードでも使えます）',
+      '`/coach` で AI コーチングを体験',
       '朝 9:00「今日のフォーカス」／夕 17:00 の振り返り通知を受け取る',
       '`/setting` でログインキーを発行 → Web ダッシュボードにログイン',
     ],
   },
   {
     label: 'Day 6-7',
-    theme: '片づけ + チーム展開',
+    theme: 'サンプルを卒業 + チーム展開',
     tasks: [
       'メニュー →「📋 状況を見る」で、いまの顧客・会社・ディールの状況を見渡す',
-      '`/setting` →「🧹 サンプルを削除」でサンプルデータを片づける（自分のデータは残ります）',
+      '`/setting` →「🧹 サンプルを削除」でサンプルを卒業し、自分のデータの記録を本格的に始める（サンプルと実データは同時に併存せず、削除後は元に戻せません）',
       '同僚を 1 人さそう：その人が Slack で「クラゲ」を検索して「クラゲディール」を開くだけ（個別インストールは不要。開いた人それぞれに専用の DM ができます）',
     ],
   },

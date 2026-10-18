@@ -9,27 +9,27 @@
           あなたが書くだけで、<br />クラゲくんが、ずっと支えてくれます。
         </h1>
         <p class="text-white/80 leading-relaxed">
-          Slack にメモするだけで、受注確率の更新も、次の一手の提案も、メールの下書きも、クラゲくんが裏でやってくれます。<br class="hidden md:block" />
+          Slack にメモするだけで、ディール確度の更新も、次の一手の提案も、メールの下書きも、クラゲくんが裏でやってくれます。<br class="hidden md:block" />
           ここでは、クラゲくんがあなたのためにしてくれることを紹介します。
         </p>
         <a href="/" class="inline-block mt-6 text-sm text-cyan-200 underline hover:text-white">← クラゲディール トップへ</a>
       </div>
     </section>
 
-    <!-- ① 受注確率の自動更新 -->
+    <!-- ① ディール確度の自動更新 -->
     <section class="bg-ocean-mist/30 py-16">
       <div class="max-w-3xl mx-auto px-4 sm:px-6">
-        <p class="text-base md:text-lg font-bold text-kurage-600 mb-2">🧠 受注確率の自動更新</p>
+        <p class="text-base md:text-lg font-bold text-kurage-600 mb-2">🧠 ディール確度の自動更新</p>
         <h2 class="text-2xl md:text-3xl font-black text-gray-900 mb-4 leading-tight">
-          メモするたびに、確率が動きます。
+          メモするたびに、確度が動きます。
         </h2>
         <p class="text-gray-700 leading-relaxed mb-6">
-          「決裁者と会えた」「予算の根拠を確認できた」「競合が分かった」——そんな一言を書くだけで、クラゲくんが営業の型（MEDDPICC）に沿って受注確率を計算し直してくれます。数字が動くから、その案件が今どこにいるのかが、ひと目で分かります。14 日間うごきがない案件は、時間とともに確率がそっと下がるので、見落としにも気づけます。
+          「決裁者と会えた」「予算の根拠を確認できた」「競合が分かった」——そんな一言を書くだけで、クラゲくんが営業の型（MEDDPICC）に沿ってディール確度を計算し直してくれます。数字が動くから、その案件が今どこにいるのかが、ひと目で分かります。14 日間うごきがない案件は、時間とともに確度がそっと下がるので、見落としにも気づけます。
         </p>
         <SlackMessageMock channel-name="💬 クラゲディール（DM）">
           <SlackBotLine name="あなた" :is-user="true" time="11:20"><p>ABC商事、決裁者の部長と面談できました</p></SlackBotLine>
           <SlackBotLine name="クラゲディール" :bot-badge="true" time="11:20">
-            <p>✅ 記録しました。決裁者との接触を確認できたので、受注確率を 48% → 66% に更新しました🪼</p>
+            <p>✅ 記録しました。決裁者との接触を確認できたので、ディール確度を 48% → 66% に更新しました🪼</p>
           </SlackBotLine>
         </SlackMessageMock>
       </div>
@@ -68,7 +68,7 @@
           返信は、クラゲくんが下書きしてくれます。
         </h2>
         <p class="text-gray-700 leading-relaxed mb-6">
-          顧客からの返信に、クラゲくんが過去のやり取りや商談ステージを踏まえて、返信の下書きを用意してくれます。あなたは Slack で内容を確認して、ボタンを 1 つ押すだけ。お客様には、いつもどおりあなた本人のアドレスから届きます。メール 1 通に 10 分かけていた時間が、ぐっと短くなります。
+          顧客からの返信に、クラゲくんが過去のやり取りやディールのステージを踏まえて、返信の下書きを用意してくれます。あなたは Slack で内容を確認して、ボタンを 1 つ押すだけ。お客様には、いつもどおりあなた本人のアドレスから届きます。メール 1 通に 10 分かけていた時間が、ぐっと短くなります。
         </p>
         <SlackMessageMock channel-name="💬 クラゲディール（DM）">
           <SlackBotLine name="クラゲディール" :bot-badge="true" time="16:10">
@@ -94,7 +94,7 @@
           顧客とのメールも、クラゲくんが読んでくれます。
         </h2>
         <p class="text-gray-700 leading-relaxed mb-6">
-          顧客とのメールを、あなた専用の取り込みアドレスに転送するだけ。クラゲくんが内容を読んで、活動メモと受注確率に反映し、返信の下書きまで Slack に届けてくれます。メールのやり取りも、自然と営業の記録になっていきます。<br><span class="text-gray-500 text-sm">専用アドレスは Slack の <code class="bg-gray-100 px-1 rounded text-xs">/setting</code> →「📨 メール連携」で確認できます。</span>
+          顧客とのメールを、あなた専用の取り込みアドレスに転送するだけ。クラゲくんが内容を読んで、活動メモとディール確度に反映し、返信の下書きまで Slack に届けてくれます。メールのやり取りも、自然と営業の記録になっていきます。<br><span class="text-gray-500 text-sm">専用アドレスは Slack の <code class="bg-gray-100 px-1 rounded text-xs">/setting</code> →「📨 メール連携」で確認できます。</span>
         </p>
         <p class="text-sm text-gray-600 leading-relaxed">
           設定のしかたは、<a href="/guide" class="text-kurage-600 font-bold underline hover:text-kurage-700">使い方ガイド</a>でご案内しています。
@@ -109,14 +109,14 @@
           あなたは書くだけ。あとは、クラゲくんにおまかせください。
         </h2>
         <p class="text-white/85 leading-relaxed mb-8">
-          受注確率も、コーチングも、メールも。クラゲくんが、あなたの営業をそっと支えます。
+          ディール確度も、コーチングも、メールも。クラゲくんが、あなたの営業をそっと支えます。
         </p>
         <div class="flex flex-col sm:flex-row gap-3 justify-center">
           <a href="/" class="inline-flex items-center justify-center gap-2 bg-white text-kurage-700 font-bold px-7 py-3.5 rounded-xl hover:bg-gray-100 transition-colors">
             ← クラゲディールを見る
           </a>
-          <a href="/free" class="inline-flex items-center justify-center gap-2 bg-kurage-500 text-white font-bold px-7 py-3.5 rounded-xl hover:bg-kurage-400 transition-colors ring-1 ring-white/30">
-            β を無料で試す →
+          <a href="https://slacksfa-api-808596335261.asia-northeast1.run.app/slack/install" class="inline-flex items-center justify-center gap-2 bg-kurage-500 text-white font-bold px-7 py-3.5 rounded-xl hover:bg-kurage-400 transition-colors ring-1 ring-white/30">
+            14日間無料で試す →
           </a>
         </div>
       </div>
@@ -129,6 +129,6 @@ usePageSeo({
   path: '/ai-support',
   title: 'クラゲくんのAIサポート | クラゲディール',
   description:
-    'クラゲディールのAIサポート機能。Slack にメモするだけで、受注確率の自動更新・MEDDPICC コーチング・メール返信の代筆・顧客メールの取り込みを、クラゲくんがまとめて支えます。',
+    'クラゲディールのAIサポート機能。Slack にメモするだけで、ディール確度の自動更新・MEDDPICC コーチング・メール返信の代筆・顧客メールの取り込みを、クラゲくんがまとめて支えます。',
 })
 </script>

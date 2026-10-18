@@ -4,7 +4,7 @@
       <div class="text-center mb-12">
         <img src="/kurage-on-white.png" alt="クラゲディール" class="w-16 h-16 mx-auto mb-4" />
         <h1 class="text-3xl md:text-4xl font-black text-gray-900 mb-4">
-          {{ isEnterprise ? 'Enterprise プラン ご相談' : 'お問い合わせ' }}
+          {{ isEnterprise ? '11 人以上のご相談' : 'お問い合わせ' }}
         </h1>
         <p class="text-sm text-gray-600 leading-relaxed">
           <template v-if="isEnterprise">
@@ -13,7 +13,7 @@
           </template>
           <template v-else>
             ご質問・ご要望は下記フォームからお気軽にどうぞ。<br />
-            β 試用のお申し込みは <a href="/beta" class="text-kurage-600 underline">/beta</a> から。
+            14 日間無料トライアルは <a href="https://slacksfa-api-808596335261.asia-northeast1.run.app/slack/install" class="text-kurage-600 underline">Slack に追加</a> するだけで、今すぐ始められます。
           </template>
         </p>
       </div>
@@ -43,7 +43,7 @@
               v-model="form.subject"
               class="w-full border border-gray-300 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-kurage-400 focus:border-transparent bg-white"
             >
-              <option value="enterprise">Enterprise プラン ご相談（11 人以上）</option>
+              <option value="enterprise">11 人以上のご相談</option>
               <option value="general">一般的なお問い合わせ</option>
               <option value="press">取材・PR・パートナーシップ</option>
               <option value="bug">不具合報告</option>
@@ -187,7 +187,7 @@ usePageSeo({
   path: '/contact',
   title: 'お問い合わせ | クラゲディール',
   description:
-    'クラゲディール（株式会社shiro）へのお問い合わせ。Enterprise のご相談、一般的なご質問、取材のご依頼などを受け付けています。',
+    'クラゲディール（株式会社shiro）へのお問い合わせ。11 人以上のご相談、一般的なご質問、取材のご依頼などを受け付けています。',
 })
 
 const route = useRoute()
@@ -202,7 +202,7 @@ const VALID_SUBJECTS = ['enterprise', 'general', 'press', 'bug'] as const
 function pickSubjectFromQuery(): string {
   const q = (route.query.subject as string | undefined)?.toLowerCase()
   if (q && (VALID_SUBJECTS as readonly string[]).includes(q)) return q
-  // LP の Enterprise カードからの導線が主用途なのでデフォルト enterprise
+  // LP の「11 人以上のご相談」カードからの導線が主用途なのでデフォルト enterprise
   return 'enterprise'
 }
 
@@ -270,7 +270,7 @@ const conversion = useConversion()
 const API_URL = 'https://slacksfa-api-808596335261.asia-northeast1.run.app'
 
 const SUBJECT_LABEL: Record<string, string> = {
-  enterprise: 'Enterprise プラン相談',
+  enterprise: '11人以上のご相談',
   general: '一般お問い合わせ',
   press: '取材・PR・パートナーシップ',
   bug: '不具合報告',
@@ -307,8 +307,8 @@ async function submit() {
         teamSize: form.teamSize,
         currentCrm: form.currentCrm,
         message: enrichedMessage,
-        // subject を明示的に送る → API 側で /free (β 申込み) との分岐に使う。
-        // これにより /contact 経由の Enterprise 相談者に「Slack インストールリンク」が
+        // subject を明示的に送る → API 側で一般のお問い合わせとの分岐に使う。
+        // これにより /contact 経由の 11 人以上のご相談者に「Slack インストールリンク」が
         // 誤送信される事故を防ぐ。
         subject: form.subject,
         turnstileToken,
