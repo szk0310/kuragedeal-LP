@@ -1,48 +1,41 @@
 <template>
-  <main class="pt-16 min-h-screen bg-gray-50">
-    <div class="max-w-2xl mx-auto px-4 sm:px-6 py-20">
-      <div class="text-center mb-12">
-        <img src="/kurage-on-white.png" alt="クラゲディール" class="w-16 h-16 mx-auto mb-4" />
-        <h1 class="text-3xl md:text-4xl font-black text-gray-900 mb-4">
+  <LpFrame main-id="contact">
+    <div class="p-contact">
+      <div class="c-sec-ttl">
+        <img src="/kurage-on-white.png" alt="クラゲディール" class="p-contact__head-icon" />
+        <h1 class="c-sec-ttl__ja">
           {{ isEnterprise ? '11 人以上のご相談' : 'お問い合わせ' }}
         </h1>
-        <p class="text-sm text-gray-600 leading-relaxed">
-          <template v-if="isEnterprise">
-            11 人以上のチーム・カスタマイズが必要な企業向けの個別ご相談窓口です。<br />
-            数営業日以内に鈴木より直接ご連絡いたします。
-          </template>
-          <template v-else>
-            ご質問・ご要望は下記フォームからお気軽にどうぞ。<br />
-            14 日間無料トライアルは <a href="https://slacksfa-api-808596335261.asia-northeast1.run.app/slack/install" class="text-kurage-600 underline">Slack に追加</a> するだけで、今すぐ始められます。
-          </template>
-        </p>
       </div>
+      <p class="c-lead" style="margin-top: calc(24 * var(--u));">
+        <template v-if="isEnterprise">
+          11 人以上のチーム・カスタマイズが必要な企業向けの個別ご相談窓口です。<br />
+          数営業日以内に鈴木より直接ご連絡いたします。
+        </template>
+        <template v-else>
+          ご質問・ご要望は下記フォームからお気軽にどうぞ。<br />
+          14 日間無料トライアルは <a href="https://slacksfa-api-808596335261.asia-northeast1.run.app/slack/install" style="color: var(--color-accent3); text-decoration: underline;">Slack に追加</a> するだけで、今すぐ始められます。
+        </template>
+      </p>
 
-      <div class="bg-white rounded-2xl border border-gray-200 p-8 shadow-sm">
+      <div class="c-card" style="margin-top: calc(50 * var(--u));">
 
         <!-- Success state -->
-        <div v-if="submitted" class="flex flex-col items-center justify-center text-center py-12">
-          <img src="/kurage-smile.png" alt="クラゲディール" class="w-20 h-20 mx-auto mb-4 kurage-float" />
-          <h2 class="text-2xl font-black text-gray-900 mb-3">送信完了しました！</h2>
-          <p class="text-gray-600 mb-2">
-            お問い合わせありがとうございます
-          </p>
-          <p class="text-gray-500 mb-6">
+        <div v-if="submitted" class="p-contact__success">
+          <img src="/kurage-smile.png" alt="クラゲディール" class="p-contact__success-icon kurage-float" />
+          <p class="p-contact__success-ttl">送信完了しました！</p>
+          <p class="p-contact__success-text">
+            お問い合わせありがとうございます<br />
             数営業日以内に鈴木より直接ご連絡いたします。
           </p>
-          <a href="/" class="text-kurage-600 font-medium hover:underline">トップに戻る</a>
+          <a href="/" class="p-contact__success-link">トップに戻る</a>
         </div>
 
-        <form v-else @submit.prevent="submit" class="space-y-6">
+        <form v-else @submit.prevent="submit">
           <!-- お問い合わせ種別 -->
-          <div>
-            <label class="block text-sm font-semibold text-gray-700 mb-2">
-              お問い合わせ種別
-            </label>
-            <select
-              v-model="form.subject"
-              class="w-full border border-gray-300 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-kurage-400 focus:border-transparent bg-white"
-            >
+          <div class="c-form-group">
+            <label class="c-form-label">お問い合わせ種別</label>
+            <select v-model="form.subject" class="c-form-input">
               <option value="enterprise">11 人以上のご相談</option>
               <option value="general">一般的なお問い合わせ</option>
               <option value="press">取材・PR・パートナーシップ</option>
@@ -50,54 +43,25 @@
             </select>
           </div>
 
-          <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+          <div class="c-form-row c-form-row--2" style="margin-bottom: calc(36 * var(--u));">
             <div>
-              <label class="block text-sm font-semibold text-gray-700 mb-2">
-                会社名 <span class="text-red-500">*</span>
-              </label>
-              <input
-                v-model="form.company"
-                type="text"
-                required
-                placeholder="株式会社〇〇"
-                class="w-full border border-gray-300 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-kurage-400 focus:border-transparent"
-              />
+              <label class="c-form-label">会社名 <span class="c-form-required">*</span></label>
+              <input v-model="form.company" type="text" required placeholder="株式会社〇〇" class="c-form-input" />
             </div>
             <div>
-              <label class="block text-sm font-semibold text-gray-700 mb-2">
-                お名前 <span class="text-red-500">*</span>
-              </label>
-              <input
-                v-model="form.name"
-                type="text"
-                required
-                placeholder="山田 太郎"
-                class="w-full border border-gray-300 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-kurage-400 focus:border-transparent"
-              />
+              <label class="c-form-label">お名前 <span class="c-form-required">*</span></label>
+              <input v-model="form.name" type="text" required placeholder="山田 太郎" class="c-form-input" />
             </div>
           </div>
 
-          <div>
-            <label class="block text-sm font-semibold text-gray-700 mb-2">
-              メールアドレス <span class="text-red-500">*</span>
-            </label>
-            <input
-              v-model="form.email"
-              type="email"
-              required
-              placeholder="taro@example.com"
-              class="w-full border border-gray-300 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-kurage-400 focus:border-transparent"
-            />
+          <div class="c-form-group">
+            <label class="c-form-label">メールアドレス <span class="c-form-required">*</span></label>
+            <input v-model="form.email" type="email" required placeholder="taro@example.com" class="c-form-input" />
           </div>
 
-          <div>
-            <label class="block text-sm font-semibold text-gray-700 mb-2">
-              営業チームの人数
-            </label>
-            <select
-              v-model="form.teamSize"
-              class="w-full border border-gray-300 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-kurage-400 focus:border-transparent bg-white"
-            >
+          <div class="c-form-group">
+            <label class="c-form-label">営業チームの人数</label>
+            <select v-model="form.teamSize" class="c-form-input">
               <option value="">選択してください</option>
               <option value="1">1人（一人社長・フリーランス）</option>
               <option value="2-5">2〜5人</option>
@@ -107,14 +71,9 @@
             </select>
           </div>
 
-          <div>
-            <label class="block text-sm font-semibold text-gray-700 mb-2">
-              現在使用中の CRM / SFA
-            </label>
-            <select
-              v-model="form.currentCrm"
-              class="w-full border border-gray-300 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-kurage-400 focus:border-transparent bg-white"
-            >
+          <div class="c-form-group">
+            <label class="c-form-label">現在使用中の CRM / SFA</label>
+            <select v-model="form.currentCrm" class="c-form-input">
               <option value="">選択してください</option>
               <option value="excel">Excel / スプレッドシート</option>
               <option value="salesforce">Salesforce</option>
@@ -124,11 +83,11 @@
             </select>
           </div>
 
-          <div>
-            <label class="block text-sm font-semibold text-gray-700 mb-2">
+          <div class="c-form-group">
+            <label class="c-form-label">
               ご要望・ご質問
-              <span v-if="isEnterprise" class="text-red-500">*</span>
-              <span v-else class="text-gray-400 text-xs">（任意）</span>
+              <span v-if="isEnterprise" class="c-form-required">*</span>
+              <span v-else class="c-form-optional">（任意）</span>
             </label>
             <textarea
               v-model="form.message"
@@ -137,44 +96,42 @@
               :placeholder="isEnterprise
                 ? 'ご検討中の利用人数、必要なカスタマイズ、セキュリティ要件、現在の課題など、できるだけ詳しくお書きください'
                 : '具体的なご要望・ご質問内容'"
-              class="w-full border border-gray-300 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-kurage-400 focus:border-transparent resize-none"
+              class="c-form-input"
             />
           </div>
 
           <!-- Cloudflare Turnstile -->
-          <div class="flex justify-center">
+          <div style="display:flex; justify-content:center; margin-bottom: calc(36 * var(--u));">
             <div ref="turnstileEl"></div>
           </div>
 
-          <button
-            type="submit"
-            :disabled="submitting"
-            class="w-full bg-orange-500 hover:bg-orange-400 disabled:bg-gray-300 text-white font-bold py-4 rounded-xl text-lg transition-colors"
-          >
+          <button type="submit" :disabled="submitting" class="c-form-submit">
             {{ submitting ? '送信中…' : '送信する →' }}
           </button>
 
-          <p class="text-xs text-gray-400 text-center">
+          <p class="c-form-note">
             送信することで、プライバシーポリシーに同意したものとみなします。
           </p>
         </form>
 
       </div>
 
-      <div class="mt-8 bg-kurage-50 border border-kurage-100 rounded-2xl p-6 text-center">
-        <p class="text-sm text-gray-600 mb-3">
-          <strong>開発元：株式会社shiro</strong>
-        </p>
-        <div class="flex items-center justify-center gap-3">
-          <img src="/sf-partner-logo.png" alt="Salesforce Partner" class="h-10 w-auto" />
-          <p class="text-sm text-kurage-600">Salesforce 認定コンサルティングパートナー</p>
+      <div class="p-contact__dev-box">
+        <p><strong>開発元：株式会社shiro</strong></p>
+        <div style="display:flex; align-items:center; justify-content:center; gap: calc(14 * var(--u));">
+          <img src="/sf-partner-logo.png" alt="Salesforce Partner" />
+          <p style="margin:0; color: var(--color-accent3);">Salesforce 認定コンサルティングパートナー</p>
         </div>
       </div>
     </div>
-  </main>
+  </LpFrame>
 </template>
 
 <script setup lang="ts">
+// LP mock刷新・下層ページ統一指示書・タスク2（option A・6ページ目）。
+// フォーム部品はこのページだけで使うためcontact.css（新規）に閉じた。
+import '~/assets/css/lp/contact.css'
+
 // /contact は SSR/prerender を無効化し client-only でレンダリング。
 // 理由: 静的 HTML に form.subject の初期値 (enterprise) が焼き付き、
 // hydration 後に subject を書き換えても <h1> や <select> の表示が
