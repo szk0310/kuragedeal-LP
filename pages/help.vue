@@ -1,47 +1,50 @@
 <template>
-  <main class="bg-gray-50 min-h-screen">
-    <div class="max-w-3xl mx-auto px-4 sm:px-6 py-12 md:py-16">
+  <LpFrame main-id="help">
+    <div class="p-guide">
 
       <!-- header -->
-      <div class="text-center mb-10">
-        <img src="/kurage-on-white.png" alt="クラゲディール" class="w-14 h-14 mx-auto mb-3" />
-        <h1 class="text-3xl md:text-4xl font-black text-gray-900 mb-2">よくある質問・困ったとき</h1>
-        <p class="text-gray-500">操作でつまずいたとき・「あれ？」と思ったときに。<br />使い方そのものは <a href="/guide" class="text-kurage-600 underline">使い方ガイド</a> へ。</p>
+      <div class="p-guide__head">
+        <img src="/kurage-on-white.png" alt="クラゲディール" class="p-guide__head-icon" />
+        <h1 class="p-guide__head-ttl">よくある質問・困ったとき</h1>
+        <p class="p-guide__head-lead">操作でつまずいたとき・「あれ？」と思ったときに。<br />使い方そのものは <NuxtLink to="/guide"><strong>使い方ガイド</strong></NuxtLink> へ。</p>
       </div>
 
       <!-- FAQ -->
-      <div class="space-y-3 mb-10">
-        <details v-for="q in faqs" :key="q.q" class="bg-white rounded-2xl border border-gray-200 p-5 shadow-sm">
-          <summary class="font-bold text-gray-900 cursor-pointer">{{ q.q }}</summary>
-          <p class="text-sm text-gray-700 mt-3 leading-relaxed whitespace-pre-line" v-html="q.a"></p>
+      <div class="p-guide__faq-list" style="margin: calc(60 * var(--u)) 0;">
+        <details v-for="q in faqs" :key="q.q" class="p-guide__faq">
+          <summary>{{ q.q }}</summary>
+          <p v-html="q.a"></p>
         </details>
       </div>
 
       <!-- コマンド早見表 -->
-      <section class="mb-10">
-        <h2 class="text-lg font-black text-gray-800 mb-3">コマンド早見表</h2>
-        <div class="bg-white rounded-2xl border border-gray-200 p-5 shadow-sm space-y-4">
-          <div v-for="g in commandGroups" :key="g.group">
-            <p class="text-xs font-bold text-kurage-600 mb-2">{{ g.group }}</p>
-            <div class="space-y-2">
-              <div v-for="c in g.cmds" :key="c.cmd" class="flex gap-3 items-start">
-                <code class="bg-kurage-50 text-kurage-700 px-2.5 py-1 rounded font-mono text-sm whitespace-nowrap">{{ c.cmd }}</code>
-                <p class="text-sm text-gray-700">{{ c.desc }}</p>
-              </div>
+      <section class="p-guide__section">
+        <p class="p-guide__sub-ttl" style="margin-bottom: calc(24 * var(--u));">コマンド早見表</p>
+        <div class="c-card">
+          <div class="p-guide__cmd-group" v-for="(g, i) in commandGroups" :key="g.group" :style="i > 0 ? 'margin-top: calc(24 * var(--u));' : ''">
+            <p class="p-guide__cmd-group-label">{{ g.group }}</p>
+            <div v-for="c in g.cmds" :key="c.cmd" class="p-guide__cmd-row">
+              <code class="p-guide__cmd-code">{{ c.cmd }}</code>
+              <p class="p-guide__cmd-desc" style="margin-top:0;">{{ c.desc }}</p>
             </div>
           </div>
-          <p class="text-xs text-gray-400 pt-1">※ クラゲディールは DM（個別チャット）でお使いください。</p>
+          <p class="p-guide__caption" style="margin-top: calc(24 * var(--u));">※ クラゲディールは DM（個別チャット）でお使いください。</p>
         </div>
       </section>
 
-      <p class="text-center text-sm text-gray-400">
-        解決しないときは <code class="bg-gray-100 px-2 py-0.5 rounded">/kurage 〇〇が分かりにくい</code> で開発チームに直接届きます🪼
+      <p class="p-guide__footer-note">
+        解決しないときは <code>/kurage 〇〇が分かりにくい</code> で開発チームに直接届きます🪼
       </p>
     </div>
-  </main>
+  </LpFrame>
 </template>
 
 <script setup lang="ts">
+// LP mock刷新・下層ページ統一指示書・タスク2（option A・5ページ目）。
+// guide.vue/manual.vueと同じ部品（guide.css）を再利用。FAQアコーディオンだけ
+// このページ固有のためguide.cssに.p-guide__faq系として追加した。
+import '~/assets/css/lp/guide.css'
+
 usePageSeo({
   path: '/help',
   title: 'よくある質問・困ったとき | クラゲディール',

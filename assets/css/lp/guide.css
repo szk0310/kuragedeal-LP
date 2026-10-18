@@ -485,3 +485,50 @@ main section[id] {
 	background: var(--color-light-gray);
 	font-size: 0.85em;
 }
+
+/*=============================================================
+  FAQアコーディオン（help.vue）
+=============================================================*/
+.p-guide__faq-list {
+	display: flex;
+	flex-direction: column;
+	gap: calc(18 * var(--u));
+}
+.p-guide__faq {
+	padding: calc(28 * var(--u)) calc(30 * var(--u));
+	border-radius: calc(24 * var(--u));
+	background: var(--color-white);
+	box-shadow: 0 calc(4 * var(--u)) calc(20 * var(--u)) rgba(0, 0, 0, 0.06);
+}
+.p-guide__faq summary {
+	font-weight: 700;
+	font-size: calc(26 * var(--u));
+	line-height: calc(40 * var(--u));
+	cursor: pointer;
+	list-style: none;
+}
+.p-guide__faq summary::-webkit-details-marker {
+	display: none;
+}
+.p-guide__faq summary::before {
+	content: '▶';
+	display: inline-block;
+	margin-right: calc(16 * var(--u));
+	color: var(--color-accent3);
+	font-size: calc(18 * var(--u));
+	transition: rotate 0.2s ease;
+}
+.p-guide__faq[open] summary::before {
+	rotate: 90deg;
+}
+.p-guide__faq p {
+	margin-top: calc(18 * var(--u));
+	font-size: calc(24 * var(--u));
+	line-height: calc(42 * var(--u));
+}
+.p-guide__faq p code {
+	padding: calc(2 * var(--u)) calc(8 * var(--u));
+	border-radius: calc(6 * var(--u));
+	background: var(--color-light-gray);
+	font-size: 0.85em;
+}
