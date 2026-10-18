@@ -17,7 +17,7 @@
         </ul>
         <p><strong>本サービス利用により自動取得する情報:</strong></p>
         <ul>
-          <li>Slack ユーザー ID・ワークスペース ID・表示名・プロフィールのメールアドレスその他のプロフィール情報（OAuth連携時）</li>
+          <li>Slack ユーザー ID・ワークスペース ID・表示名・プロフィールのメールアドレスその他のプロフィール情報（Slack への追加時）</li>
           <li>本サービスへの入力データ（顧客・ディール・活動ログ等）</li>
           <li>お客様が本サービス所定の取り込みアドレスに転送した顧客とのメール（メール連携機能をご利用の場合。本文は活動記録・返信文の下書き作成に利用します）</li>
           <li>アクセスログ・利用状況データ</li>
@@ -49,7 +49,7 @@
             <tr><td>Anthropic</td><td>AI処理（Claude）</td></tr>
             <tr><td>Stripe</td><td>決済処理</td></tr>
             <tr><td>Slack Technologies</td><td>Slack連携</td></tr>
-            <tr><td>Google Cloud</td><td>インフラ（Cloud Run・Cloud SQL）</td></tr>
+            <tr><td>Google Cloud</td><td>サーバー・データの保管</td></tr>
             <tr><td>Twilio SendGrid</td><td>メール送信</td></tr>
           </tbody>
         </table>
@@ -65,7 +65,7 @@
         <ol>
           <li>データはGoogle Cloud（東京リージョン）に保管します。</li>
           <li>通信はTLS暗号化により保護されます。</li>
-          <li>データベースへのアクセスはテナントごとに分離されています（Row Level Security）。</li>
+          <li>データは会社（ワークスペース）ごとに分けて管理し、ほかの会社からは見えません。</li>
         </ol>
 
         <h2>7. データの保持期間</h2>
