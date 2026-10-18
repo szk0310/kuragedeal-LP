@@ -28,8 +28,8 @@
           <div>
             <p class="font-semibold text-white mb-3">プロダクト</p>
             <ul class="space-y-2">
-              <li><a href="/#features" class="hover:text-white transition-colors">機能</a></li>
-              <li><a href="/#pricing" class="hover:text-white transition-colors">料金</a></li>
+              <li><a href="/#benefits" class="hover:text-white transition-colors">機能</a></li>
+              <li><a href="/#price" class="hover:text-white transition-colors">料金</a></li>
               <li><a href="/ai-support" class="hover:text-white transition-colors">AIサポート</a></li>
               <li><a href="/pains" class="hover:text-white transition-colors">お悩み解消</a></li>
               <li><a href="/#faq" class="hover:text-white transition-colors">よくある質問</a></li>

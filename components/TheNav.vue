@@ -11,7 +11,7 @@
 
       <!-- Desktop links -->
       <div class="hidden lg:flex items-center gap-6 text-sm font-medium text-gray-600">
-        <a href="/#pricing" class="hover:text-kurage-600 transition-colors">料金</a>
+        <a href="/#price" class="hover:text-kurage-600 transition-colors">料金</a>
         <a href="/ai-support" class="hover:text-kurage-600 transition-colors">AIサポート</a>
         <a href="/pains" class="hover:text-kurage-600 transition-colors">お悩み解消</a>
         <a href="/#faq" class="hover:text-kurage-600 transition-colors">FAQ</a>
