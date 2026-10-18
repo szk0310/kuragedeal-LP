@@ -7,6 +7,18 @@
   読み込み済みの CSS が残り続け、サイト全体の見た目を壊してしまう。
   そのため html/body・要素セレクタへの素のリセットをすべて .lp-page
   （index.vue のルート要素）配下に閉じ込める。
+
+  2026-10-19・鈴木さん指摘（見た目が test 版と違う）で判明した不具合の修正:
+  上の「.lp-page 配下に閉じ込める」対応で `.lp-page header` のような
+  クラス+要素セレクタ（詳細度 0,1,1）になり、common.css/top.css 側の
+  `.l-header` や `.p-mv` のような単一クラスセレクタ（詳細度 0,1,0）より
+  詳細度が高くなってしまっていた。結果、リセット側の display:block や
+  margin/padding:0 がコンポーネント側のdisplay:flexや余白指定を上書きし、
+  ヘッダーのflexレイアウト崩れ・本文の余白消失・見出しのfont-weight消失
+  （900→継承で実質400）などが本番で発生していた。
+  :where(.lp-page) にすることで「.lp-page 配下に限定する」スコープ効果は
+  保ったまま、詳細度への寄与をゼロにし、移植前（素の要素セレクタ）と
+  同じ力関係に戻す。
 =============================================================*/
 
 /*=============================================================
@@ -68,26 +80,26 @@
 	position: relative;
 }
 
-.lp-page dl,
-.lp-page dt,
-.lp-page dd,
-.lp-page ul,
-.lp-page ol,
-.lp-page li,
-.lp-page h1,
-.lp-page h2,
-.lp-page h3,
-.lp-page h4,
-.lp-page h5,
-.lp-page h6,
-.lp-page pre,
-.lp-page form,
-.lp-page input,
-.lp-page p,
-.lp-page blockquote,
-.lp-page fieldset,
-.lp-page div,
-.lp-page section {
+:where(.lp-page) dl,
+:where(.lp-page) dt,
+:where(.lp-page) dd,
+:where(.lp-page) ul,
+:where(.lp-page) ol,
+:where(.lp-page) li,
+:where(.lp-page) h1,
+:where(.lp-page) h2,
+:where(.lp-page) h3,
+:where(.lp-page) h4,
+:where(.lp-page) h5,
+:where(.lp-page) h6,
+:where(.lp-page) pre,
+:where(.lp-page) form,
+:where(.lp-page) input,
+:where(.lp-page) p,
+:where(.lp-page) blockquote,
+:where(.lp-page) fieldset,
+:where(.lp-page) div,
+:where(.lp-page) section {
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
@@ -98,66 +110,66 @@
 .lp-page *::after {
 	box-sizing: border-box;
 }
-.lp-page h1,
-.lp-page h2,
-.lp-page h3,
-.lp-page h4,
-.lp-page h5,
-.lp-page h6 {
+:where(.lp-page) h1,
+:where(.lp-page) h2,
+:where(.lp-page) h3,
+:where(.lp-page) h4,
+:where(.lp-page) h5,
+:where(.lp-page) h6 {
 	font-weight: normal;
 }
-.lp-page ul li,
-.lp-page ol li {
+:where(.lp-page) ul li,
+:where(.lp-page) ol li {
 	list-style: none;
 }
-.lp-page table {
+:where(.lp-page) table {
 	margin: 0;
 	padding: 0;
 	font-size: 100%;
 }
-.lp-page caption {
+:where(.lp-page) caption {
 	text-align: left;
 }
-.lp-page table,
-.lp-page pre,
-.lp-page code,
-.lp-page select,
-.lp-page textarea,
-.lp-page kbd,
-.lp-page var,
-.lp-page ins,
-.lp-page del,
-.lp-page samp {
+:where(.lp-page) table,
+:where(.lp-page) pre,
+:where(.lp-page) code,
+:where(.lp-page) select,
+:where(.lp-page) textarea,
+:where(.lp-page) kbd,
+:where(.lp-page) var,
+:where(.lp-page) ins,
+:where(.lp-page) del,
+:where(.lp-page) samp {
 	font-size: 100%;
 }
-.lp-page address,
-.lp-page cite,
-.lp-page dfn,
-.lp-page em,
-.lp-page strong,
-.lp-page var,
-.lp-page th,
-.lp-page ins,
-.lp-page del,
-.lp-page samp {
+:where(.lp-page) address,
+:where(.lp-page) cite,
+:where(.lp-page) dfn,
+:where(.lp-page) em,
+:where(.lp-page) strong,
+:where(.lp-page) var,
+:where(.lp-page) th,
+:where(.lp-page) ins,
+:where(.lp-page) del,
+:where(.lp-page) samp {
 	font-weight: normal;
 	font-style: normal;
 }
-.lp-page img {
+:where(.lp-page) img {
 	max-width: 100%;
 	height: auto;
 	vertical-align: middle;
 }
-.lp-page a,
-.lp-page a:visited {
+:where(.lp-page) a,
+:where(.lp-page) a:visited {
 	color: var(--color-text);
 	text-decoration: none;
 	box-sizing: border-box;
 }
-.lp-page a:hover {
+:where(.lp-page) a:hover {
 	text-decoration: none;
 }
-.lp-page a:link {
+:where(.lp-page) a:link {
 	transition: all 0.3s ease-out;
 }
 
@@ -172,24 +184,24 @@
 	}
 }
 
-.lp-page hr.separation {
+:where(.lp-page) hr.separation {
 	display: none;
 }
-.lp-page fieldset {
+:where(.lp-page) fieldset {
 	border: none;
 }
-.lp-page button {
+:where(.lp-page) button {
 	cursor: pointer;
 	font: inherit;
 	color: inherit;
 }
-.lp-page header,
-.lp-page section,
-.lp-page nav,
-.lp-page aside,
-.lp-page footer,
-.lp-page article,
-.lp-page main {
+:where(.lp-page) header,
+:where(.lp-page) section,
+:where(.lp-page) nav,
+:where(.lp-page) aside,
+:where(.lp-page) footer,
+:where(.lp-page) article,
+:where(.lp-page) main {
 	display: block;
 }
 
