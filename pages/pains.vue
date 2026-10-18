@@ -49,7 +49,7 @@
         <h3 class="text-xl font-bold text-gray-900 mb-6">なぜ続かないのか。答えはふたつ。</h3>
         <div class="space-y-5 mb-12">
           <div class="bg-gray-50 rounded-xl p-6">
-            <p class="font-bold text-gray-900 mb-2">① 入力の認知負荷が、高すぎるから。</p>
+            <p class="font-bold text-gray-900 mb-2">① 入力の手間が、高すぎるから。</p>
             <p class="text-gray-700 leading-relaxed">
               CRM にログインして、画面を開いて、ディール項目を埋めて、保存して、
               活動記録のページを出して、また入力して……
@@ -76,7 +76,7 @@
             明日 AI コーチが「次は決裁者と会う段取りを」と問いかけてくれる。
           </p>
           <p class="text-lg font-bold text-kurage-800">
-            認知負荷ゼロ。書くたびに、営業活動が前に進む。<br />
+            入力の手間ゼロ。書くたびに、営業活動が前に進む。<br />
             ★ これなら、続きます。
           </p>
         </div>
@@ -127,7 +127,7 @@
             <p class="font-bold text-gray-900 mb-2">① 案件数が増えると、人の記憶では追えない。</p>
             <p class="text-gray-700 leading-relaxed">
               営業 5 人 × 案件 10 件 = 50 件。<br />
-              各案件に「金額・ステージ・次のアクション・最後の連絡日」がある。<br />
+              各案件に「金額・ステージ・次の一手・最後の連絡日」がある。<br />
               ── 人の頭で追える限界を、とっくに超えています。
             </p>
           </div>
@@ -170,7 +170,7 @@
               <p class="font-bold text-gray-900 mb-2">🧠 MEDDPICC 情報が更新されるたびに、ディール確度が動く。</p>
               <p class="text-sm text-gray-700 leading-relaxed pl-5 border-l-2 border-kurage-200">
                 決裁者と会えた。予算の根拠を確認した。競合を把握した。<br />
-                ── そのたびに、AI が確率を計算し直します。<br />
+                ── そのたびに、クラゲくんがディール確度を見立て直します。<br />
                 数字が動くから、今どこにいるかが見える。
               </p>
             </div>
@@ -203,7 +203,7 @@
                 <p class="text-xs text-gray-600">XYZ社 山田様 — フォロー推奨</p>
               </div>
               <div class="bg-cyan-50 border-l-2 border-cyan-400 pl-3 py-2">
-                <p class="font-semibold">📈 確率上昇</p>
+                <p class="font-semibold">📈 確度アップ</p>
                 <p class="text-xs text-gray-600">DEF佐藤様 60% → 75%</p>
               </div>
             </SlackBotLine>
@@ -310,8 +310,8 @@
               <p class="text-sm text-gray-700 leading-relaxed pl-5 border-l-2 border-kurage-200">
                 「ABC 商事の状況は？」と聞くだけ。<br />
                 AI が問い返します:<br />
-                ・決裁者と会えていますか？(Decision Maker)<br />
-                ・予算の根拠は確認済みですか？(Economic Buyer)<br />
+                ・決裁者と会えていますか？(Economic Buyer)<br />
+                ・予算の根拠は確認済みですか？(Metrics)<br />
                 ・競合は把握していますか？(Competition)<br />
                 ── 全メンバー、全案件に、同じ質の問いかけを。
               </p>
@@ -321,19 +321,9 @@
               <p class="text-sm text-gray-700 leading-relaxed pl-5 border-l-2 border-kurage-200">
                 朝のブリーフィング・夕方のコーチングは、マネジャー不在でも届く。<br />
                 出張中・休暇中のメンバーも、自分の時間で AI と対話できる。<br />
-                ── 人間マネジャーの 5 倍の時間、チームに伴走します。
+                ── マネジャーがいない時間も、チームに寄りそいます。
               </p>
             </div>
-          </div>
-
-          <div class="mt-6 pt-6 border-t border-kurage-200">
-            <p class="text-sm text-gray-700 leading-relaxed">
-              そして月に 1 度、担当者との 30 分のオフィスアワー。<br />
-              AI では届かない「経営の悩み」「業界の動向」は、人間が答えます。
-            </p>
-            <p class="text-xs text-gray-500 mt-2 italic">
-              ※ 月次オフィスアワーは、正式版リリース後に開始予定の特典です。
-            </p>
           </div>
 
           <p class="text-base font-bold text-kurage-800 mt-6 leading-relaxed">
@@ -353,11 +343,11 @@
               <ol class="space-y-3 list-decimal list-inside">
                 <li>
                   <span class="font-semibold">決裁者と会えていますか？</span>
-                  <span class="block text-xs text-gray-500 ml-5">(Decision Maker / Economic Buyer)</span>
+                  <span class="block text-xs text-gray-500 ml-5">(Economic Buyer)</span>
                 </li>
                 <li>
                   <span class="font-semibold">予算 ¥3M の根拠は、お客様からの情報ですか？推測ですか？</span>
-                  <span class="block text-xs text-gray-500 ml-5">(Decision Criteria)</span>
+                  <span class="block text-xs text-gray-500 ml-5">(Metrics)</span>
                 </li>
                 <li>
                   <span class="font-semibold">競合の存在は把握できていますか？</span>
@@ -414,8 +404,8 @@ const pain2Chips = [
 ]
 const pain3Chips = [
   { icon: '🎓', title: 'MEDDPICC コーチング', desc: 'AI が全員に質の高い問いかけ' },
-  { icon: '🧭', title: '営業ノウハウの形式知化', desc: 'マネジャー個人の判断を、AI に' },
-  { icon: '🌙', title: '24 時間動く', desc: 'マネジャーの不在時間も埋める' },
+  { icon: '🧭', title: '営業のコツを、チーム全員のものに', desc: 'マネジャー個人の判断を、AI に' },
+  { icon: '🌙', title: 'いつでも相談できる', desc: 'マネジャーの不在時間も埋める' },
 ]
 
 usePageSeo({
