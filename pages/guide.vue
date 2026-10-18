@@ -56,13 +56,13 @@
           </div>
           <div class="grid md:grid-cols-2 gap-5 items-center">
             <div>
-              <p class="text-sm text-gray-600 leading-relaxed">LP の<b>［14日間無料で試す］ボタン</b>から<b>「Slack に追加」</b>を押す → Slack の<b>認可画面で「許可」</b>→ インストール完了。完了すると、クラゲくんから welcome の DM が届きます。</p>
+              <p class="text-sm text-gray-600 leading-relaxed">このサイトの<b>［14日間無料で試す］ボタン</b>から<b>「Slack に追加」</b>を押す → Slack の<b>認可画面で「許可」</b>→ インストール完了。完了すると、クラゲくんからあいさつの DM が届きます。</p>
               <p class="text-xs text-gray-400 mt-2">※ チームで使う場合も、ワークスペースへの追加は管理者が1回だけ。メンバーの個別インストールは不要です。</p>
             </div>
             <!-- 流れの見え方（LP → 認可 → 完了） -->
             <div class="bg-gray-50 rounded-xl p-4 space-y-1.5">
               <div class="bg-white rounded-lg border border-gray-200 p-3">
-                <p class="text-[11px] text-gray-400 mb-2">🌐 クラゲディールの LP</p>
+                <p class="text-[11px] text-gray-400 mb-2">🌐 このサイト</p>
                 <span class="inline-flex items-center gap-1.5 bg-[#4A154B] text-white rounded-md px-3 py-2 text-xs font-bold">
                   <img src="/kurage-on-white.png" class="w-4 h-4" alt="" /> Slack に追加
                 </span>
@@ -73,7 +73,7 @@
                 <span class="inline-block bg-green-600 text-white rounded-md px-3 py-2 text-xs font-bold">許可する</span>
               </div>
               <p class="text-center text-gray-300 leading-none text-sm">↓</p>
-              <div class="bg-green-50 border border-green-200 rounded-lg p-3 text-xs text-green-800 font-bold">🎉 インストール完了・welcome DM が届く</div>
+              <div class="bg-green-50 border border-green-200 rounded-lg p-3 text-xs text-green-800 font-bold">🎉 インストール完了・あいさつの DM が届く</div>
             </div>
           </div>
         </div>
@@ -218,16 +218,16 @@
         <div class="mt-6 bg-gray-50 rounded-xl p-4 md:p-5">
           <p class="font-black text-gray-900 mb-2 text-sm">📋 「次の一手」の並び方</p>
           <p class="text-sm text-gray-700 leading-relaxed mb-3">
-            優先度は手入力しません。ディールごとに決めた<b>次の一手（1行のやること）</b>と<b>期日</b>から、クラゲが自動で並び替えます。<b>なぜその順で出たかは、各行に理由が1行そえられる</b>ので迷いません。
+            次の一手と期日から、クラゲが自動で並べます。<b>なぜその順で出たかは、各行に理由が1行そえられる</b>ので迷いません。
           </p>
           <ol class="text-sm text-gray-700 leading-relaxed space-y-1 list-decimal list-inside">
             <li><b>⏰ 期限切れ</b> — 次の一手の期日が過ぎているもの（最優先）</li>
             <li><b>📅 今日/明日</b> — 期日が今日・明日のもの</li>
-            <li><b>🔥 重要（期日なし）</b> — 期日は無いがディール確度・金額の期待値が高いもの</li>
-            <li><b>💤 放置候補</b> — 次の一手がまだ決まっていないもの（最後の活動が古い順）（「✍️ 決める」で次の一手を入力できます）</li>
+            <li><b>🔥 重要（期日なし）</b> — 期日は無いが、ディール確度×金額の大きい順のもの</li>
+            <li><b>✍️ 次の一手がまだないもの</b> — クラゲのおすすめから［これにする］、または［✍️ 自分で書く］で決められます</li>
             <li><b>＋ メモから拾ったやること</b> — メモに書いた内容をAIが読み取り、見つかったやることをリストの最後に追加します</li>
           </ol>
-          <p class="text-xs text-gray-500 mt-3">DM で「次の一手を教えて」と聞くと、この並びで表示されます。個別のディールを深掘りしたいときは <code class="bg-white px-1 rounded text-xs">/coach</code> のAIコーチングをどうぞ。</p>
+          <p class="text-xs text-gray-500 mt-3">DM で「今やること」と打つと、この順で表示されます。個別のディールを深掘りしたいときは <code class="bg-white px-1 rounded text-xs">/coach</code> のAIコーチングをどうぞ。</p>
         </div>
 
         <!-- 困ったとき -->
@@ -247,7 +247,7 @@
           <span>🗺️</span> 言葉の役割
         </h2>
         <p class="text-sm text-gray-500 mb-5 leading-relaxed">
-          メモ・状況・タスク・受注予定日——役割をはっきり分けています。迷ったらここへ。
+          メモ・予定・ステージ・次の一手・クローズ予定——役割をはっきり分けています。迷ったらここへ。
         </p>
 
         <div class="bg-white rounded-2xl border border-gray-200 shadow-sm overflow-hidden mb-5">
@@ -266,7 +266,7 @@
                 <td class="px-5 py-3 text-gray-500 whitespace-nowrap">過去</td>
               </tr>
               <tr>
-                <td class="px-5 py-3 font-bold text-gray-800 whitespace-nowrap">予定ノート</td>
+                <td class="px-5 py-3 font-bold text-gray-800 whitespace-nowrap">予定</td>
                 <td class="px-5 py-3 text-gray-600">「〇〇する<b>予定</b>」という先の約束</td>
                 <td class="px-5 py-3 text-gray-500 whitespace-nowrap">未来</td>
               </tr>
@@ -286,8 +286,8 @@
                 <td class="px-5 py-3 text-gray-500 whitespace-nowrap">今</td>
               </tr>
               <tr>
-                <td class="px-5 py-3 font-bold text-gray-800 whitespace-nowrap">受注予定日</td>
-                <td class="px-5 py-3 text-gray-600"><b>受注しそうな日</b>（売上の見通し用）※画面では「クローズ予定」と表示</td>
+                <td class="px-5 py-3 font-bold text-gray-800 whitespace-nowrap">クローズ予定</td>
+                <td class="px-5 py-3 text-gray-600"><b>受注しそうな日</b>（売上の見通し用）</td>
                 <td class="px-5 py-3 text-gray-500 whitespace-nowrap">見込み</td>
               </tr>
             </tbody>
@@ -296,7 +296,7 @@
 
         <div class="space-y-3">
           <div class="bg-gray-50 rounded-xl p-4 text-sm text-gray-700 leading-relaxed">
-            📋 <b>大きな一手は「次の一手」（ディールに1つ）、細かいやることはメモに書けばクラゲが拾う</b>：「タスク」「todo」「やることリスト」と話しかければ次の一手の一覧が開きます。「次の一手を教えて」で、期日の近い順→重要→放置候補→メモから拾ったやることの順に、<b>なぜ出ているかの理由つき</b>で並びます。
+            📋 細かいやることはメモに書けばクラゲが拾います。「今やること」で、期日の近い順に理由つきで並びます。
           </div>
           <div class="bg-gray-50 rounded-xl p-4 text-sm text-gray-700 leading-relaxed">
             📅 <b>日付は2種類あります</b>：「<b>次の一手の期日</b>」は、次の一手をいつやるか。「<b>クローズ予定日</b>」は、いつ受注しそうか（売上の見通しに使います）。
@@ -305,7 +305,7 @@
             👤 <b>個人のお客様</b>：個人のお客様は会社なしで登録でき、「個人のお客様」と表示されます。検索は人・会社を横断するので迷子になりません。
           </div>
           <div class="bg-gray-50 rounded-xl p-4 text-sm text-gray-700 leading-relaxed">
-            🔁 <b>勝手に動かしません</b>：次の一手が決まっていない案件は「次の一手」に💤放置候補として拾い、「放置にしますか？」と確認します。ステータスをクラゲが勝手に変えることはありません。
+            🔁 <b>勝手に動かしません</b>：動きの止まったディールは「停滞にしますか？」と確認します。ステージをクラゲが勝手に変えることはありません。
           </div>
         </div>
       </section>
@@ -392,7 +392,7 @@
           </div>
           <div class="bg-white rounded-2xl border border-gray-200 p-5 shadow-sm flex gap-3">
             <span class="shrink-0 text-xl leading-none">📋</span>
-            <p class="text-sm text-gray-700 leading-relaxed"><b class="text-gray-800">AI営業ポリシー</b> — クラゲの提案トーンを指定（例：「押し売りしない・課題解決型」）。</p>
+            <p class="text-sm text-gray-700 leading-relaxed"><b class="text-gray-800">営業方針</b> — クラゲの提案トーンを指定（例：「押し売りしない・課題解決型」）。</p>
           </div>
           <div class="bg-white rounded-2xl border border-gray-200 p-5 shadow-sm flex gap-3">
             <span class="shrink-0 text-xl leading-none">✉️</span>
@@ -408,7 +408,7 @@
           </div>
           <div class="bg-white rounded-2xl border border-gray-200 p-5 shadow-sm flex gap-3 sm:col-span-2">
             <span class="shrink-0 text-xl leading-none">🎓</span>
-            <p class="text-sm text-gray-700 leading-relaxed"><b class="text-gray-800">サンプルデータ</b> — はじめは<b>サンプルデータが入った状態</b>で、一覧・ディール確度・次の一手を<b>すぐ体験</b>できます。準備ができたら<b>「🧹 サンプルを削除」</b>で片づけて、自分のデータの記録を始めてください。これは<b>一方通行の切り替え</b>です。削除してサンプルを卒業すると、サンプルと実データが同時に入っている状態には戻せません。</p>
+            <p class="text-sm text-gray-700 leading-relaxed"><b class="text-gray-800">サンプルデータ</b> — はじめは<b>サンプルデータが入った状態</b>で、一覧・ディール確度・次の一手を<b>すぐ体験</b>できます。準備ができたら<b>「🧹 サンプルを削除」</b>で片づけてください。ご自身のデータを登録すると、サンプルは自動で片づきます。削除したサンプルは元に戻せません。</p>
           </div>
         </div>
       </section>
@@ -449,7 +449,7 @@
       <!-- メール連携 -->
       <section class="mb-10">
         <h3 class="text-lg font-black text-gray-800 mb-4 flex items-center gap-2">📨 顧客メールを取り込む（メール連携）</h3>
-        <p class="text-sm text-gray-500 mb-4">顧客とのメールを<b>転送するだけ</b>で、クラゲが内容を読んで<b>活動メモ・ディール確度に反映</b>し、<b>返信ドラフト</b>を Slack に届けます。やることは次の3つです。</p>
+        <p class="text-sm text-gray-500 mb-4">顧客とのメールを<b>転送するだけ</b>で、クラゲが内容を読んで<b>活動メモ・ディール確度に反映</b>し、<b>返信の下書き</b>を Slack に届けます。やることは次の3つです。</p>
         <div class="grid gap-3">
           <div class="bg-white rounded-2xl border border-gray-200 p-5 shadow-sm flex gap-4 items-start">
             <span class="shrink-0 bg-kurage-500 text-white rounded-full w-8 h-8 flex items-center justify-center text-sm font-bold">1</span>
@@ -457,16 +457,16 @@
           </div>
           <div class="bg-white rounded-2xl border border-gray-200 p-5 shadow-sm flex gap-4 items-start">
             <span class="shrink-0 bg-kurage-500 text-white rounded-full w-8 h-8 flex items-center justify-center text-sm font-bold">2</span>
-            <p class="text-sm text-gray-700 leading-relaxed"><b class="text-gray-800">顧客メールを転送</b><br /><b>方法①：手動で転送（かんたん・確実）</b> — 取り込みたいメールを「転送」で上のアドレスへ送るだけ。<br /><b>方法②：特定の顧客を自動で取り込む</b> — Gmail の「メール転送と POP/IMAP」で<b>転送先に上のアドレスを追加</b> → クラゲから届く<b>確認リンクをクリック</b>して有効化 → <b>フィルタ</b>で「その顧客 → 転送」に設定。<br /><span class="text-gray-400">※「受信メールを“すべて”転送」は選ばないでください（顧客以外のメールも入ってしまいます）。フィルタ設定の詳しい手順は、準備中のヘルプページでご案内します。</span></p>
+            <p class="text-sm text-gray-700 leading-relaxed"><b class="text-gray-800">顧客メールを転送</b><br /><b>方法①：手動で転送（かんたん）</b> — 取り込みたいメールを「転送」で上のアドレスへ送るだけ。<br /><b>方法②：特定の顧客を自動で取り込む</b> — Gmail の「メール転送と POP/IMAP」で<b>転送先に上のアドレスを追加</b> → クラゲから届く<b>確認リンクをクリック</b>して有効化 → <b>フィルタ</b>で「その顧客 → 転送」に設定。<br /><span class="text-gray-400">※「受信メールを“すべて”転送」は選ばないでください（顧客以外のメールも入ってしまいます）。</span></p>
           </div>
           <div class="bg-white rounded-2xl border border-gray-200 p-5 shadow-sm flex gap-4 items-start">
             <span class="shrink-0 bg-kurage-500 text-white rounded-full w-8 h-8 flex items-center justify-center text-sm font-bold">3</span>
-            <p class="text-sm text-gray-700 leading-relaxed"><b class="text-gray-800">Slack で返信を承認</b><br />クラゲが <b>返信ドラフト</b>を Slack の DM に届けます。<b>「このまま送信／修正して送信／送らない／自分で対応」</b>から選ぶだけ。承認すると、あなたの<b>送信元アドレスから</b>返信が送られます。</p>
+            <p class="text-sm text-gray-700 leading-relaxed"><b class="text-gray-800">Slack で返信を承認</b><br />クラゲが <b>返信の下書き</b>を Slack の DM に届けます。<b>「このまま送信／修正して送信／送らない／自分で対応」</b>から選ぶだけ。承認すると、あなたの<b>送信元アドレスから</b>返信が送られます。</p>
           </div>
         </div>
         <div class="mt-4 bg-kurage-50 border border-kurage-100 rounded-xl p-4 text-xs text-gray-600 leading-relaxed">
-          <b class="text-gray-800">事前に1つだけ：</b> 返信を送るには、<code class="bg-white px-1.5 py-0.5 rounded">/setting</code> の「✉️ 送信元メールアドレス」であなたのアドレスを設定・認証しておいてください（認証が済むとクラゲがそのアドレスから返信できます）。<br />
-          <b class="text-gray-800">中身の無いメールには返信案を作りません：</b> テスト送信や自動通知など実質的な問い合わせが無いメールは、クラゲが判断して返信ドラフトをスキップします（活動メモには記録されます）。
+          <b class="text-gray-800">事前に1つだけ：</b> 送信元のメールアドレスは、管理者が <code class="bg-white px-1.5 py-0.5 rounded">/setting</code> の「送信元メール」で設定します。<br />
+          <b class="text-gray-800">中身の無いメールには返信案を作りません：</b> テスト送信や自動通知など実質的な問い合わせが無いメールは、返信の下書きは作りません（活動メモには記録されます）。
         </div>
       </section>
 
@@ -508,20 +508,20 @@ const quickPhrases = [
   { input: '〇〇の次の一手', action: 'そのディールの次の一手を見る' },
   { input: '〇〇さんを教えて／株式会社〇〇を教えて', action: '詳しく見る（一覧から選んでもOK）' },
   { input: '株式会社〇〇を登録', action: '会社を登録' },
-  { input: '〇〇を受注に／〇〇を失注に', action: 'ディールのフェーズを受注・失注にする' },
-  { input: 'ステージを変えたい', action: 'フェーズを変える' },
+  { input: '〇〇を受注に／〇〇を失注に', action: 'ディールのステージを受注・失注にする' },
+  { input: 'ステージを変えたい', action: 'ステージを変える' },
   { input: 'コマンドを教えて', action: '操作の一覧を見る' },
 ]
 
 const commandGroups = [
   { group: '情報を見る（一覧）', cmds: [
-    { cmd: '/deal', title: 'ディール一覧・検索', desc: 'ディールの一覧・検索、AI進捗評価とネクストアクション提案。' },
+    { cmd: '/deal', title: 'ディール一覧・検索', desc: 'ディールの一覧と検索。進み具合の見立てと、次の一手のおすすめも出ます。' },
     { cmd: '/contact', title: '顧客一覧', desc: '登録済みの顧客をSlack上で確認できます。' },
     { cmd: '/account', title: '会社一覧', desc: '登録済みの会社（取引先）を確認できます。' },
   ]},
   { group: 'AI・確認', cmds: [
     { cmd: '/coach', title: 'AIコーチング', desc: 'AIがディールの進め方をヒアリング形式でコーチングします。' },
-    { cmd: '/usage', title: 'AI利用状況', desc: '今月のAI利用量・残り予算・プラン情報を確認できます。' },
+    { cmd: '/usage', title: 'AI利用状況', desc: '今月の AI の利用状況とプランを確認できます。' },
   ]},
   { group: '設定・その他', cmds: [
     { cmd: '/setting', title: '設定', desc: 'AI返信支援・営業ポリシー・ログインキー発行・サンプルデータなどの設定メニュー。' },
@@ -547,7 +547,7 @@ const firstWeekPlan = [
     tasks: [
       'サイドバーの「クラゲディール」を開く',
       '最初から入っているサンプルデータで「📋 状況を見る」を押し、顧客・会社・ディールの一覧を眺める',
-      '「🎯 次にやること」を押して、ディール確度やおすすめの出かたを体験する',
+      '「🎯 今やること」を押して、ディール確度やおすすめの出かたを体験する',
     ],
   },
   {
@@ -570,10 +570,10 @@ const firstWeekPlan = [
   },
   {
     label: 'Day 6-7',
-    theme: 'サンプルを卒業 + チーム展開',
+    theme: 'サンプルを片づけて、チームに広げる',
     tasks: [
       'メニュー →「📋 状況を見る」で、いまの顧客・会社・ディールの状況を見渡す',
-      '`/setting` →「🧹 サンプルを削除」でサンプルを卒業し、自分のデータの記録を本格的に始める（サンプルと実データは同時に併存せず、削除後は元に戻せません）',
+      '`/setting` →「🧹 サンプルを削除」で片づけて、自分のデータの記録を本格的に始める（削除したサンプルは元に戻せません）',
       '同僚を 1 人さそう：その人が Slack で「クラゲ」を検索して「クラゲディール」を開くだけ（個別インストールは不要。開いた人それぞれに専用の DM ができます）',
     ],
   },
