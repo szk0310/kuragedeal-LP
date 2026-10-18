@@ -75,10 +75,11 @@
             <p class="font-bold mb-1">📧 田中様への返信を下書きしました</p>
             <p class="text-xs text-gray-600 mb-2">件名: Re: お見積りについて</p>
             <p class="text-sm text-gray-700">いつもお世話になっております。ご検討いただき、ありがとうございます。料金プランの詳細は、担当より改めてご案内いたします……</p>
-            <div class="flex flex-wrap gap-2 mt-3">
-              <span class="inline-block border border-green-300 bg-green-50 rounded-md px-3 py-1.5 text-xs font-semibold text-green-800">👍 このまま送信</span>
-              <span class="inline-block border border-gray-300 bg-white rounded-md px-3 py-1.5 text-xs font-semibold text-gray-800">✍️ 修正して送信</span>
-              <span class="inline-block border border-gray-300 bg-white rounded-md px-3 py-1.5 text-xs font-semibold text-gray-800">📞 自分で対応</span>
+            <div class="flex flex-col gap-2 mt-3">
+              <span class="block w-full text-center border-2 border-green-400 bg-green-50 rounded-lg px-4 py-2.5 text-sm font-bold text-green-800">👍 このまま送信</span>
+              <span class="block w-full text-center border border-gray-300 bg-white rounded-lg px-4 py-2.5 text-sm font-semibold text-gray-800">✍️ 修正して送信</span>
+              <span class="block w-full text-center border border-gray-300 bg-white rounded-lg px-4 py-2.5 text-sm font-semibold text-gray-800">❌ 送らない</span>
+              <span class="block w-full text-center border border-gray-300 bg-white rounded-lg px-4 py-2.5 text-sm font-semibold text-gray-800">📞 自分で対応</span>
             </div>
           </SlackBotLine>
         </SlackMessageMock>
