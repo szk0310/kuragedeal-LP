@@ -603,7 +603,7 @@
 
           <div class="bg-white rounded-2xl border border-gray-200 p-5 shadow-sm mb-5">
             <h3 class="font-bold text-gray-900 mb-3">公式フレーズ一覧（TIPS）</h3>
-            <p class="text-sm text-gray-600 leading-relaxed mb-4">ボタンと同じ画面を、ひとことで開ける近道です。この言い方だけが、確実に通じます。「〇〇」には名前や会社名を入れます。</p>
+            <p class="text-sm text-gray-600 leading-relaxed mb-4">ボタンと同じ画面を、ひとことで開ける近道です。「〇〇」には名前や会社名を入れます。</p>
             <div class="overflow-x-auto -mx-5">
               <table class="w-full text-sm min-w-[560px]">
                 <thead>

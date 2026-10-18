@@ -172,7 +172,7 @@
               <p>✅ 田中さんの打ち合わせメモを記録しました。ディール確度も更新しました🪼</p>
             </SlackBotLine>
           </SlackMessageMock>
-          <p class="text-xs text-gray-500"><b>ボタンを押す → 次のボタンが出る</b>をくり返し、最後にひとことだけ入力すれば完了。データ構造を知らなくても、案内に沿うだけで記録できます。</p>
+          <p class="text-xs text-gray-500"><b>ボタンを押す → 次のボタンが出る</b>をくり返し、最後にひとことだけ入力すれば完了。案内に沿うだけで記録できます。</p>
 
           <!-- 入力について -->
           <div class="bg-gray-50 rounded-xl p-4 text-sm text-gray-700 leading-relaxed">
@@ -194,7 +194,7 @@
         <div class="mt-6">
           <p class="font-bold text-gray-900 mb-2 text-sm">⚡ よく使うひとこと（ボタンのショートカット）</p>
           <p class="text-sm text-gray-500 mb-3 leading-relaxed">
-            決まった言葉を打つと、ボタンを押さずに同じ画面へ一気にジャンプできます。この言い方だけが、確実に通じます。
+            決まった言葉を打つと、ボタンを押さずに同じ画面へ一気にジャンプできます。
           </p>
           <div class="bg-white rounded-2xl border border-gray-200 shadow-sm overflow-hidden">
             <table class="w-full text-sm">
@@ -234,8 +234,8 @@
         <div class="mt-6 bg-kurage-50 border border-kurage-200 rounded-2xl p-5">
           <p class="font-black text-gray-900 mb-1">💡 困ったら、そのままクラゲに聞いてください</p>
           <p class="text-sm text-gray-700 leading-relaxed">
-            ボタンに迷ったら、そのままクラゲに聞いてください（<b>「使い方を教えて」</b>など）。
-            「次なにすればいい？」と聞けば<b>いまのおすすめ</b>を、「田中さんって誰だっけ？」と聞けば<b>その場で調べて</b>答えてくれます。
+            わからないことは、そのままクラゲに聞いてください。<b>具体的に聞く</b>と、その場で答えます（例：<b>「メモの消し方は？」</b>「予定が出ないのはなぜ？」）。
+            操作は<b>［📋 メニュー］</b>から。<b>「使い方を教えて」</b>と送ると、メニューとコマンドの一覧が出ます。
             案件を深掘りしたいときは <code class="bg-white px-1 rounded text-xs">/coach</code> でコーチングも受けられます。
           </p>
         </div>
