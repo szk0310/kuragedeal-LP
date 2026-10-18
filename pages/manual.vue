@@ -49,7 +49,7 @@
             <div class="bg-white rounded-2xl border border-gray-200 p-5 shadow-sm">
               <h3 class="font-bold text-gray-900 mb-3">インストール</h3>
               <ol class="list-decimal list-inside space-y-2 text-sm text-gray-700 leading-relaxed">
-                <li>LP の［14日間無料で試す］から、Slack の認可画面を開きます。</li>
+                <li>このサイトの［14日間無料で試す］から、Slack の確認画面を開きます。</li>
                 <li>［許可する］を押すと完了です。ワークスペースへの追加は、管理者が1回行えば十分です。メンバーが個別にインストールする必要はありません。</li>
                 <li>追加した日から14日間は無料ですべての機能を使えます（クレジットカードは不要）。</li>
               </ol>
@@ -77,7 +77,7 @@
               <h3 class="font-bold text-gray-900 mb-3">見本データ</h3>
               <ul class="list-disc list-inside space-y-2 text-sm text-gray-700 leading-relaxed">
                 <li>はじめは「【サンプル】」付きの見本データが入っているので、一覧や「今やること」をすぐに試せます。</li>
-                <li>一通り試したら <code class="bg-gray-100 px-1.5 py-0.5 rounded text-xs">/setting</code> の［🧹 サンプルを削除］で片づけ、本番のデータを入れていきます。実データを登録すると、見本は自動で片づきます。見本と実データが同じ画面に混ざることはありません。</li>
+                <li>一通り試したら <code class="bg-gray-100 px-1.5 py-0.5 rounded text-xs">/setting</code> の［🧹 サンプルを削除］で片づけ、ご自身のデータを入れていきます。ご自身のデータを登録すると、見本は自動で片づきます。見本とご自身のデータが同じ画面に混ざることはありません。</li>
               </ul>
             </div>
 
@@ -112,7 +112,7 @@
                 <tr><td class="px-5 py-3 font-bold text-gray-800 whitespace-nowrap">ディール</td><td class="px-5 py-3 text-gray-600">受注を目指す案件。1つの会社、1人の顧客に、いくつでも持てます</td></tr>
                 <tr><td class="px-5 py-3 font-bold text-gray-800 whitespace-nowrap">メモ（活動メモ）</td><td class="px-5 py-3 text-gray-600">お客様とのやり取りの記録（打ち合わせ・訪問・電話・メールなど）</td></tr>
                 <tr><td class="px-5 py-3 font-bold text-gray-800 whitespace-nowrap">予定</td><td class="px-5 py-3 text-gray-600">「〇月〇日に〇〇する」という先の約束。朝のブリーフィングでお知らせします</td></tr>
-                <tr><td class="px-5 py-3 font-bold text-gray-800 whitespace-nowrap">次の一手</td><td class="px-5 py-3 text-gray-600">そのディールで、次に必ずやること。あなたが決める「案件の旗」（1ディールに1つ）</td></tr>
+                <tr><td class="px-5 py-3 font-bold text-gray-800 whitespace-nowrap">次の一手</td><td class="px-5 py-3 text-gray-600">そのディールで、次にやること。あなたが決める「案件の旗」（1ディールに1つ）</td></tr>
                 <tr><td class="px-5 py-3 font-bold text-gray-800 whitespace-nowrap">クラゲくんのおすすめ</td><td class="px-5 py-3 text-gray-600">次の一手がまだないときにクラゲくんが出す「候補」。［これにする］で旗になります</td></tr>
                 <tr><td class="px-5 py-3 font-bold text-gray-800 whitespace-nowrap">メモから拾ったやること</td><td class="px-5 py-3 text-gray-600">メモに書いた「〜する」をクラゲくんが拾った「付箋」（いくつでも）</td></tr>
                 <tr><td class="px-5 py-3 font-bold text-gray-800 whitespace-nowrap">今やること</td><td class="px-5 py-3 text-gray-600">旗（次の一手）と付箋（やること）のうち、今取りかかるものを並べた一覧</td></tr>
@@ -125,7 +125,7 @@
 
           <div class="bg-white rounded-2xl border border-gray-200 p-5 shadow-sm">
             <h3 class="font-bold text-gray-900 mb-3">「旗」と「付箋」：やることの3つの形</h3>
-            <p class="text-sm text-gray-700 leading-relaxed mb-4">「タスク」の入力欄はありません。やることは、次の3つの形で自然にたまっていきます。</p>
+            <p class="text-sm text-gray-700 leading-relaxed mb-4">やることを一つずつ入力する必要はありません。やることは、次の3つの形で自然にたまっていきます。</p>
             <div class="overflow-x-auto">
               <table class="w-full text-sm min-w-[560px]">
                 <thead>
@@ -262,7 +262,7 @@
           <div class="bg-white rounded-2xl border border-gray-200 p-5 shadow-sm">
             <ul class="list-disc list-inside space-y-2.5 text-sm text-gray-700 leading-relaxed">
               <li><b>ディール確度：</b> メモややり取りの内容をもとに、営業の型（MEDDPICC：決裁者・予算の根拠・競合など）でクラゲくんが自動で見立てます。最後の活動から日がたつほど、少しずつ下がります。</li>
-              <li>フェーズをクラゲくんが勝手に変えることはありません。動きの止まったディールは「停滞にしますか？」と確認します。</li>
+              <li>ステージをクラゲくんが勝手に変えることはありません。動きの止まったディールは「停滞にしますか？」と確認します。</li>
             </ul>
           </div>
         </section>
@@ -319,7 +319,7 @@
             <div class="bg-white rounded-2xl border border-gray-200 p-5 shadow-sm">
               <h3 class="font-bold text-gray-900 mb-3">朝のブリーフィング（毎朝9時・DM）</h3>
               <ul class="list-disc list-inside space-y-2.5 text-sm text-gray-700 leading-relaxed">
-                <li>パイプラインの合計と、目標に対する充足率</li>
+                <li>進行中のディールの合計金額と、月の目標に対する割合</li>
                 <li>クローズ間近（ディール確度70%以上）</li>
                 <li>要アクション（ディール確度50%未満）と、それぞれの次の一手のおすすめ</li>
                 <li>損切り候補：長く動きのないディール（活動がないものは作成日から数えます）。［継続］か［このディールを失注に］を選べます</li>
@@ -435,7 +435,7 @@
               <h3 class="font-bold text-gray-900 mb-3">画面</h3>
               <ul class="list-disc list-inside space-y-2.5 text-sm text-gray-700 leading-relaxed">
                 <li><b>ダッシュボード：</b> AI 推奨アクション（［詳細→］でディール詳細へ）、最近の活動、月別のディール内訳（直近12か月）、AI メール下書きの状況など。</li>
-                <li><b>顧客・会社・ディールの一覧と詳細：</b> 編集、削除（🗑）、ディール名の変更（✏️）。フェーズの変更は Slack で行います。</li>
+                <li><b>顧客・会社・ディールの一覧と詳細：</b> 編集、削除（🗑）、ディール名の変更（✏️）。ステージの変更は Slack で行います。</li>
                 <li><b>CSV の書き出し（管理者）：</b> 顧客・ディール・メモを書き出せます。個人のお客様の会社名は空欄になります。</li>
               </ul>
             </div>
@@ -443,7 +443,7 @@
             <div class="bg-white rounded-2xl border border-gray-200 p-5 shadow-sm">
               <h3 class="font-bold text-gray-900 mb-3">データの取り込み（管理者）</h3>
               <ul class="list-disc list-inside space-y-2.5 text-sm text-gray-700 leading-relaxed">
-                <li>CSV（Excel で保存したものも可）で、会社・見込み客・取引先責任者・ディールをまとめて取り込めます。画面から見本の CSV をダウンロードできます。</li>
+                <li>CSV（Excel で保存したものも可）で、会社・顧客・ディール（Salesforce などから書き出した CSV も使えます）をまとめて取り込めます。画面から見本の CSV をダウンロードできます。</li>
                 <li>「担当者メール」の列にメンバーの Slack のプロフィールに登録したメールアドレスを入れると、その人の担当になります。空欄や一致しないときは、取り込んだ管理者の担当になり、結果画面に表示されます。</li>
                 <li>取り込む前に「新規 N 件／すでにあるもの M 件」を確認できます。途中でエラーがあれば、取り込みは丸ごと取り消されます。</li>
                 <li>1回に取り込めるのは、種類ごとに1,000行までです。</li>
@@ -482,7 +482,7 @@
             <ul class="list-disc list-inside space-y-2.5 text-sm text-gray-700 leading-relaxed">
               <li><b>DM はあなただけ：</b> クラゲくんとの DM のやり取りは、他の人には見えません。</li>
               <li><b>DM で使う：</b> クラゲディールは DM で使うものです。チャンネルに追加して使う使い方はサポートしていません（チャンネルに書いたことはそのチャンネルの全員に見えます）。</li>
-              <li><b>会社ごとの分離：</b> データはワークスペース（会社）ごとにデータベースの段階で分けられていて、他の会社からは見えません。お客様の営業データが AI の学習に使われることはありません。</li>
+              <li><b>会社ごとの分離：</b> データは会社（ワークスペース）ごとに分けて保管され、他の会社からは見えません。お客様の営業データが AI の学習に使われることはありません。</li>
               <li><b>同僚を誘う：</b> その人が Slack で「クラゲ」を検索して開きます。プランの人数の範囲内ならすぐに使え、管理者に通知が届きます。人数を超える人は、管理者が許可するまで保留になります（無料期間中は人数に関係なくすぐに使えます）。</li>
             </ul>
           </div>
@@ -623,7 +623,7 @@
                   <tr><td class="px-5 py-2.5 font-bold text-gray-800 whitespace-nowrap">詳しく見る</td><td class="px-5 py-2.5 text-gray-600">「〇〇さんを教えて」「株式会社〇〇を教えて」</td><td class="px-5 py-2.5 text-gray-500">一覧から選ぶ</td></tr>
                   <tr><td class="px-5 py-2.5 font-bold text-gray-800 whitespace-nowrap">会社を登録</td><td class="px-5 py-2.5 text-gray-600">「株式会社〇〇を登録」</td><td class="px-5 py-2.5 text-gray-500">―</td></tr>
                   <tr><td class="px-5 py-2.5 font-bold text-gray-800 whitespace-nowrap">受注・失注</td><td class="px-5 py-2.5 text-gray-600">「〇〇を受注に」「〇〇を失注に」</td><td class="px-5 py-2.5 text-gray-500">―</td></tr>
-                  <tr><td class="px-5 py-2.5 font-bold text-gray-800 whitespace-nowrap">フェーズを変える</td><td class="px-5 py-2.5 text-gray-600">「ステージを変えたい」</td><td class="px-5 py-2.5 text-gray-500">―</td></tr>
+                  <tr><td class="px-5 py-2.5 font-bold text-gray-800 whitespace-nowrap">ステージを変える</td><td class="px-5 py-2.5 text-gray-600">「ステージを変えたい」</td><td class="px-5 py-2.5 text-gray-500">―</td></tr>
                   <tr><td class="px-5 py-2.5 font-bold text-gray-800 whitespace-nowrap">操作の一覧</td><td class="px-5 py-2.5 text-gray-600">「コマンドを教えて」</td><td class="px-5 py-2.5 text-gray-500">―</td></tr>
                 </tbody>
               </table>
