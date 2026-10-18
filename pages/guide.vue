@@ -159,17 +159,17 @@
               <p class="mb-2">どんな活動でしたか？</p>
               <div class="flex flex-wrap gap-2">
                 <span class="inline-block border border-gray-300 bg-white rounded-md px-3 py-1.5 text-xs font-semibold text-gray-800">📞 電話</span>
-                <span class="inline-block border-2 border-kurage-400 bg-kurage-50 rounded-md px-3 py-1.5 text-xs font-bold text-kurage-800">🤝 ディール</span>
+                <span class="inline-block border-2 border-kurage-400 bg-kurage-50 rounded-md px-3 py-1.5 text-xs font-bold text-kurage-800">🤝 打ち合わせ</span>
                 <span class="inline-block border border-gray-300 bg-white rounded-md px-3 py-1.5 text-xs font-semibold text-gray-800">✉️ メール</span>
               </div>
             </SlackBotLine>
-            <SlackBotLine name="あなた" :is-user="true" time="9:01"><p class="text-gray-400">（「🤝 ディール」を押す）</p></SlackBotLine>
+            <SlackBotLine name="あなた" :is-user="true" time="9:01"><p class="text-gray-400">（「🤝 打ち合わせ」を押す）</p></SlackBotLine>
             <SlackBotLine name="クラゲディール" :bot-badge="true" time="9:01">
               <p>最後に、ひとことメモを入力してください。<span class="text-gray-400">（例：予算300万、来月判断）</span></p>
             </SlackBotLine>
             <SlackBotLine name="あなた" :is-user="true" time="9:01"><p>予算300万、競合は1社。来月末に判断</p></SlackBotLine>
             <SlackBotLine name="クラゲディール" :bot-badge="true" time="9:01">
-              <p>✅ 田中さんのディールメモを記録しました。ディール確度も更新しました🪼</p>
+              <p>✅ 田中さんの打ち合わせメモを記録しました。ディール確度も更新しました🪼</p>
             </SlackBotLine>
           </SlackMessageMock>
           <p class="text-xs text-gray-500"><b>ボタンを押す → 次のボタンが出る</b>をくり返し、最後にひとことだけ入力すれば完了。データ構造を知らなくても、案内に沿うだけで記録できます。</p>
@@ -194,14 +194,14 @@
         <div class="mt-6">
           <p class="font-bold text-gray-900 mb-2 text-sm">⚡ よく使うひとこと（ボタンのショートカット）</p>
           <p class="text-sm text-gray-500 mb-3 leading-relaxed">
-            決まった言葉を打つと、ボタンを押さずに同じ画面へ一気にジャンプできます。覚えておくと速いのはこの4つだけです。
+            決まった言葉を打つと、ボタンを押さずに同じ画面へ一気にジャンプできます。この言い方だけが、確実に通じます。
           </p>
           <div class="bg-white rounded-2xl border border-gray-200 shadow-sm overflow-hidden">
             <table class="w-full text-sm">
               <thead>
                 <tr class="bg-gray-50 border-b border-gray-200">
                   <th class="text-left px-5 py-3 font-semibold text-gray-700 w-1/2">Slackで入力</th>
-                  <th class="text-left px-5 py-3 font-semibold text-gray-700">開く画面</th>
+                  <th class="text-left px-5 py-3 font-semibold text-gray-700">動作</th>
                 </tr>
               </thead>
               <tbody class="divide-y divide-gray-100">
@@ -498,11 +498,19 @@ usePageSeo({
 const route = useRoute()
 const installed = computed(() => route.query.installed === '1')
 
+// マニュアル12章「公式フレーズ一覧」を正本にする（内容はそちらと揃える）。
 const quickPhrases = [
-  { input: 'メニュー', action: 'メインメニューを開く' },
+  { input: 'メニュー', action: 'メインメニューを出す' },
   { input: '今やること', action: '次の一手の一覧を開く' },
-  { input: 'メモ一覧', action: '最近の活動メモの一覧を開く' },
-  { input: 'ABC商事を受注に', action: 'そのディールを「受注」ステージに変更' },
+  { input: 'メモ一覧／最近のメモ／先週の活動を見せて／〇〇さんのメモ見せて', action: 'メモを見る' },
+  { input: '予定一覧', action: '予定を見る' },
+  { input: '〇〇のディール一覧／進行中のディール／停滞中のディール', action: 'ディールを見る' },
+  { input: '〇〇の次の一手', action: 'そのディールの次の一手を見る' },
+  { input: '〇〇さんを教えて／株式会社〇〇を教えて', action: '詳しく見る（一覧から選んでもOK）' },
+  { input: '株式会社〇〇を登録', action: '会社を登録' },
+  { input: '〇〇を受注に／〇〇を失注に', action: 'ディールのフェーズを受注・失注にする' },
+  { input: 'ステージを変えたい', action: 'フェーズを変える' },
+  { input: 'コマンドを教えて', action: '操作の一覧を見る' },
 ]
 
 const commandGroups = [

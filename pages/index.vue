@@ -29,10 +29,11 @@
         <nav class="l-nav" :class="{ 'is-open': navOpen }" id="js-nav" aria-label="メインメニュー">
           <ul class="c-link-list l-nav__list">
             <li><a href="#price" @click="navOpen = false">料金</a></li>
-            <li><a href="#feature" @click="navOpen = false">AIサポート</a></li>
-            <li><a href="#issue" @click="navOpen = false">お悩み解消</a></li>
             <li><a href="#faq" @click="navOpen = false">FAQ</a></li>
             <li><a href="/guide" @click="navOpen = false">使い方ガイド</a></li>
+            <li><a href="/pains" @click="navOpen = false">お悩み解消</a></li>
+            <li><a href="/ai-support" @click="navOpen = false">AIサポート</a></li>
+            <li><a href="/manual" @click="navOpen = false">マニュアル</a></li>
           </ul>
           <a class="c-btn" :href="installUrl" @click="onTrialClick">14日間無料で試す</a>
         </nav>
@@ -354,7 +355,7 @@
                 </div>
               </li>
             </ol>
-            <a class="c-btn p-issue__btn" href="#feature">詳しく見る</a>
+            <a class="c-btn p-issue__btn" href="/pains">詳しく見る</a>
           </section>
 
           <!-- FEATURE SPOTLIGHT -->
@@ -397,6 +398,7 @@
                 </li>
               </ol>
               <p class="p-feature__result"><span>メール1通30秒の世界！</span></p>
+              <a class="c-btn p-feature__btn" href="/ai-support">詳しく見る</a>
             </div>
           </section>
 
@@ -445,10 +447,10 @@
             <nav class="l-footer__nav" aria-label="フッターメニュー">
               <ul class="c-link-list">
                 <li><a href="#price">料金</a></li>
-                <li><a href="#feature">AIサポート</a></li>
-                <li><a href="#issue">お悩み解消</a></li>
                 <li><a href="#faq">FAQ</a></li>
                 <li><a href="/guide">使い方ガイド</a></li>
+                <li><a href="/pains">お悩み解消</a></li>
+                <li><a href="/ai-support">AIサポート</a></li>
                 <li><a href="/manual">マニュアル</a></li>
               </ul>
             </nav>

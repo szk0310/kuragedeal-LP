@@ -694,6 +694,9 @@ main section[id] {
 	line-height: calc(50 * var(--u));
 	background: linear-gradient(transparent calc(39 * var(--u)), var(--color-yellow) calc(39 * var(--u)) calc(49 * var(--u)), transparent calc(49 * var(--u)));
 }
+.p-feature__btn {
+	margin-top: calc(61 * var(--u));
+}
 
 /*=============================================================
   FAQ
