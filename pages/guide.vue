@@ -113,7 +113,7 @@
       <section id="modes" class="p-guide__section">
         <h2 class="p-guide__section-ttl"><span class="c-step__num">2</span>クラゲを使う</h2>
         <p class="p-guide__section-lead">
-          基本は<strong>ボタンを押していくだけ</strong>。クラゲが毎回、次に押せるボタンを案内します。慣れてきたら、決まった<strong>ひとこと（公式フレーズ）</strong>を打つと、同じ画面にショートカットできます。
+          基本は<strong>ボタンを押していくだけ</strong>。クラゲが毎回、次に押せるボタンを案内します。慣れてきたら、よく使うひとこと（TIPS）でも同じ画面を開けます（マニュアル12章）。
         </p>
 
         <div class="p-guide__cards">
@@ -196,7 +196,7 @@
           <div class="c-info"><span class="c-info__icon">🔁</span><p>どの画面にも次に押せるボタンがあるので、<strong>行き止まりになりません</strong>。最初に戻りたいときは <strong>「メニュー」</strong> と打てば、いつでもメニューが出ます。</p></div>
         </div>
 
-        <!-- よく使うひとこと（公式フレーズ・ボタンのショートカット） -->
+        <!-- よく使うひとこと（ボタンのショートカット） -->
         <div style="margin-top: calc(60 * var(--u));">
           <p class="p-guide__sub-ttl">⚡ よく使うひとこと（ボタンのショートカット）</p>
           <p class="p-guide__sub-lead">決まった言葉を打つと、ボタンを押さずに同じ画面へ一気にジャンプできます。</p>
@@ -460,7 +460,7 @@ usePageSeo({
 const route = useRoute()
 const installed = computed(() => route.query.installed === '1')
 
-// マニュアル12章「公式フレーズ一覧」を正本にする（内容はそちらと揃える）。
+// マニュアル12章「よく使うひとこと一覧」を正本にする（内容はそちらと揃える）。
 const quickPhrases = [
   { input: 'メニュー', action: 'メインメニューを出す' },
   { input: '今やること', action: '次の一手の一覧を開く' },

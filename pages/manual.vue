@@ -8,7 +8,7 @@
         <h1 class="p-guide__head-ttl">クラゲディール マニュアル</h1>
         <p class="p-guide__head-lead">
           クラゲディールの機能を、章ごとに引けるようにまとめたマニュアルです。<br />
-          操作はすべてボタンで進められます。よく使う操作は、決まったひとこと（公式フレーズ）を打つだけでも呼び出せるので、各章に TIPS として添えています。初めての方は
+          操作はすべてボタンで進められます。慣れた方向けの近道（よく使うひとこと）は、12章に TIPS としてまとめています。初めての方は
           <NuxtLink to="/guide"><strong>「使い方ガイド」</strong></NuxtLink>
           からどうぞ。
         </p>
@@ -29,7 +29,7 @@
           <li><a href="#ch9"><span class="p-guide__toc-num">9</span>Webダッシュボードと取り込み</a></li>
           <li><a href="#ch10"><span class="p-guide__toc-num">10</span>チームと権限</a></li>
           <li><a href="#ch11"><span class="p-guide__toc-num">11</span>設定と契約</a></li>
-          <li><a href="#ch12"><span class="p-guide__toc-num">12</span>困ったときと公式フレーズ一覧</a></li>
+          <li><a href="#ch12"><span class="p-guide__toc-num">12</span>困ったときと、よく使うひとこと（TIPS）</a></li>
         </ol>
       </nav>
 
@@ -61,8 +61,8 @@
             <p class="p-guide__cmd-ttl" style="margin-bottom: calc(14 * var(--u));">ボタンで進める</p>
             <ul class="p-guide__list">
               <li>［📋 メニュー］を押すと、やりたいことがボタンで並びます。ボタンを押していけば、名前やメモの内容など必要なところだけ入力して完了します。何をすればよいか、迷いません。</li>
-              <li><strong>TIPS（公式フレーズ）：</strong> 「メニュー」「今やること」「メモ一覧」など、決まったひとことを打つと、ボタンと同じ画面が開きます。慣れてきたら便利な近道です（<a href="#ch12">12章</a>に一覧）。</li>
-              <li>メニューの下には、日替わりで公式フレーズをひとつ紹介しています。</li>
+              <li><strong>TIPS（よく使うひとこと）：</strong> 「メニュー」「今やること」「メモ一覧」など、決まったひとことを打つと、ボタンと同じ画面が開きます。慣れてきたら便利な近道です（<a href="#ch12">12章</a>に一覧）。</li>
+              <li>メニューの下には、日替わりで、よく使うひとことをひとつ紹介しています。</li>
             </ul>
           </div>
 
@@ -147,13 +147,13 @@
 
         <div class="c-doc-table-wrap" style="margin-top: calc(40 * var(--u));">
           <table class="c-doc-table">
-            <thead><tr><th>やりたいこと</th><th>ボタン</th><th>TIPS（公式フレーズ）</th></tr></thead>
+            <thead><tr><th>やりたいこと</th><th>ボタン</th></tr></thead>
             <tbody>
-              <tr><td style="font-weight:700;">顧客を登録</td><td>［👤 顧客を登録］</td><td style="color: var(--color-gray-text);">―</td></tr>
-              <tr><td style="font-weight:700;">詳しく見る</td><td>一覧から選ぶ</td><td style="color: var(--color-gray-text);">「〇〇さんを教えて」「株式会社〇〇を教えて」</td></tr>
-              <tr><td style="font-weight:700;">一覧を見る</td><td>［👤 顧客一覧］［🏢 会社一覧］</td><td style="color: var(--color-gray-text);">―</td></tr>
-              <tr><td style="font-weight:700;">メール・電話・役職などを変える</td><td>詳細の［✏️ 編集］</td><td style="color: var(--color-gray-text);">―</td></tr>
-              <tr><td style="font-weight:700;">削除する</td><td>Web の一覧の［🗑］</td><td style="color: var(--color-gray-text);">―</td></tr>
+              <tr><td style="font-weight:700;">顧客を登録</td><td>［👤 顧客を登録］</td></tr>
+              <tr><td style="font-weight:700;">詳しく見る</td><td>一覧から選ぶ</td></tr>
+              <tr><td style="font-weight:700;">一覧を見る</td><td>［👤 顧客一覧］［🏢 会社一覧］</td></tr>
+              <tr><td style="font-weight:700;">メール・電話・役職などを変える</td><td>詳細の［✏️ 編集］</td></tr>
+              <tr><td style="font-weight:700;">削除する</td><td>Web の一覧の［🗑］</td></tr>
             </tbody>
           </table>
         </div>
@@ -175,13 +175,13 @@
 
         <div class="c-doc-table-wrap" style="margin-top: calc(40 * var(--u));">
           <table class="c-doc-table">
-            <thead><tr><th>やりたいこと</th><th>ボタン</th><th>TIPS（公式フレーズ）</th></tr></thead>
+            <thead><tr><th>やりたいこと</th><th>ボタン</th></tr></thead>
             <tbody>
-              <tr><td style="font-weight:700;">ディールを作る</td><td>［📊 ディールを登録］（ディール名とステージを選べる。名前を省くと「〇〇の案件」）</td><td style="color: var(--color-gray-text);">―</td></tr>
-              <tr><td style="font-weight:700;">受注・失注にする</td><td>［📊 ディール一覧］→ 詳細 →［ステージを変える］</td><td style="color: var(--color-gray-text);">「〇〇を受注に」「〇〇を失注に」</td></tr>
-              <tr><td style="font-weight:700;">そのほかのステージにする</td><td>［📊 ディール一覧］→ 詳細 →［ステージを変える］</td><td style="color: var(--color-gray-text);">「ステージを変えたい」</td></tr>
-              <tr><td style="font-weight:700;">一覧を見る</td><td>［📊 ディール一覧］</td><td style="color: var(--color-gray-text);">「〇〇のディール一覧」「進行中のディール」「停滞中のディール」</td></tr>
-              <tr><td style="font-weight:700;">ディール名を変える</td><td>Web のディール詳細の✏️</td><td style="color: var(--color-gray-text);">―</td></tr>
+              <tr><td style="font-weight:700;">ディールを作る</td><td>［📊 ディールを登録］（ディール名とステージを選べる。名前を省くと「〇〇の案件」）</td></tr>
+              <tr><td style="font-weight:700;">受注・失注にする</td><td>［📊 ディール一覧］→ 詳細 →［ステージを変える］</td></tr>
+              <tr><td style="font-weight:700;">そのほかのステージにする</td><td>［📊 ディール一覧］→ 詳細 →［ステージを変える］</td></tr>
+              <tr><td style="font-weight:700;">一覧を見る</td><td>［📊 ディール一覧］</td></tr>
+              <tr><td style="font-weight:700;">ディール名を変える</td><td>Web のディール詳細の✏️</td></tr>
             </tbody>
           </table>
         </div>
@@ -222,7 +222,7 @@
             <ul class="p-guide__list">
               <li>［📝 活動をメモ］→ 顧客を選ぶ → 種類（🤝 打ち合わせ／🏢 訪問／📞 電話／📧 メール／📝 メモ）→ 内容を入力。内容は「予算は500万くらい。来週までに見積もりを出す」のように、ふつうに書けば大丈夫です。</li>
               <li>ディール詳細・顧客詳細の［📝 メモする］から書くと、そのディール・顧客に紐付いたメモになります。</li>
-              <li><strong>見返す：</strong> ［📝 メモ一覧］。自分が書いたメモが10件ずつ出ます。TIPS：「メモ一覧」「最近のメモ」「先週の活動を見せて」（今週・今月・先月も可）「〇〇さんのメモ見せて」。</li>
+              <li><strong>見返す：</strong> ［📝 メモ一覧］。自分が書いたメモが10件ずつ出ます。</li>
               <li><strong>消す：</strong> メモ一覧の［🗑 削除］。消せるのは自分が書いたメモです。AI がまとめたメモや、取り込んだメールから作られたメモは消せません。</li>
             </ul>
           </div>
@@ -232,7 +232,7 @@
             <ul class="p-guide__list">
               <li>ディール詳細・顧客詳細の［📅 予定を追加］、または「次の一手」を表示したときの［📅 予定を入れる］から入れます。</li>
               <li>メモの内容に「来週火曜にMTG予定」のように先のことを書いた場合も、予定として記録されます。</li>
-              <li>予定は朝のブリーフィングでお知らせします。一覧は［📅 予定一覧］（TIPS：「予定一覧」）。</li>
+              <li>予定は朝のブリーフィングでお知らせします。一覧は［📅 予定一覧］。</li>
             </ul>
           </div>
 
@@ -268,7 +268,7 @@
 
           <div class="c-card">
             <p class="p-guide__cmd-ttl" style="margin-bottom: calc(10 * var(--u));">今やること</p>
-            <p class="c-step__text" style="margin-top:0; margin-bottom: calc(18 * var(--u));">［🎯 今やること］（TIPS：「今やること」）で、自分が担当する進行中のディールを次の順に並べます（各区分最大5件）。</p>
+            <p class="c-step__text" style="margin-top:0; margin-bottom: calc(18 * var(--u));">［🎯 今やること］で、自分が担当する進行中のディールを次の順に並べます（各区分最大5件）。</p>
             <ol class="p-guide__list p-guide__list--num" style="margin-bottom: calc(18 * var(--u));">
               <li>次の一手の期日を過ぎたもの</li>
               <li>期日が今日・明日のもの</li>
@@ -287,7 +287,7 @@
 
         <div class="c-card" style="margin-top: calc(40 * var(--u));">
           <ul class="p-guide__list">
-            <li>ディール詳細や「今やること」から、そのディールの次の一手と、動かすためのヒントを開けます（TIPS：「〇〇の次の一手」）。カードから［📅 予定を入れる］［📝 メモする］［📋 詳しく見る（全体評価）］［完了］を選べます。</li>
+            <li>ディール詳細や「今やること」から、そのディールの次の一手と、動かすためのヒントを開けます。カードから［📅 予定を入れる］［📝 メモする］［📋 詳しく見る（全体評価）］［完了］を選べます。</li>
             <li>「詳しく見る」では、MEDDPICC の要素ごとの状況と、クラゲくんからの問いかけ（「決裁者と会えていますか？」など）が出ます。</li>
             <li><code>/coach</code> でも、優先度の高いディールのコーチングを受けられます。</li>
             <li><strong>次の一手を決めるのはあなたです。</strong> クラゲくんはおすすめを出すだけで、［これにする］を押すか［✍️ 自分で書く］で書いて初めて次の一手になります。</li>
@@ -487,15 +487,15 @@
         </div>
       </section>
 
-      <!-- 12. 困ったときと公式フレーズ一覧 -->
+      <!-- 12. 困ったときと、よく使うひとこと（TIPS） -->
       <section id="ch12" class="p-guide__section">
-        <h2 class="p-guide__section-ttl"><span class="c-step__num">12</span>困ったときと公式フレーズ一覧</h2>
+        <h2 class="p-guide__section-ttl"><span class="c-step__num">12</span>困ったときと、よく使うひとこと（TIPS）</h2>
 
         <div class="c-card" style="margin-top: calc(40 * var(--u));">
           <p class="p-guide__cmd-ttl" style="margin-bottom: calc(14 * var(--u));">困ったとき</p>
           <ul class="p-guide__list">
-            <li><strong>迷ったら：</strong> ［📋 メニュー］からボタンで進めてください。ひとことで呼び出せるのは、下の公式フレーズです。使い方が分からないときは「使い方を教えて」と聞けば、クラゲくんがその場で答えます。</li>
-            <li><strong>手続きの途中で別のことをしたい：</strong> 途中で公式フレーズを打つと「終わってから打ってください」と案内します。今の手続きを終えてからどうぞ。</li>
+            <li><strong>迷ったら：</strong> ［📋 メニュー］からボタンで進めてください。ひとことで呼び出せるのは、下の「よく使うひとこと」です。使い方が分からないときは「使い方を教えて」と聞けば、クラゲくんがその場で答えます。</li>
+            <li><strong>手続きの途中で別のことをしたい：</strong> 途中でひとことを打つと「終わってから打ってください」と案内します。今の手続きを終えてからどうぞ。</li>
             <li><strong>メモしたのに出ない：</strong> メモは、内容によって出る場所が変わります。（1）「来週火曜にMTG予定」のように先の約束を書いたメモは「予定」になり、［📅 予定一覧］と朝のブリーフィングに出ます。（2）「見積もりを出す」のようなやることは、1〜2分後に「今やること」の「📝 メモから拾ったやること」に出ます。（3）メモそのものは［📝 メモ一覧］と、顧客・ディールの詳細で見られます。どこにも見当たらないときは、担当の紐付けを確認してください。</li>
             <li><strong>画像を送った：</strong> 画像やファイルはまだ読めません。</li>
             <li><strong>要望を伝えたい：</strong> <code>/kurage</code> で開発チームに届きます。</li>
@@ -503,7 +503,7 @@
         </div>
 
         <div class="c-card" style="margin-top: calc(28 * var(--u));">
-          <p class="p-guide__cmd-ttl" style="margin-bottom: calc(10 * var(--u));">公式フレーズ一覧（TIPS）</p>
+          <p class="p-guide__cmd-ttl" style="margin-bottom: calc(10 * var(--u));">よく使うひとこと一覧（TIPS）</p>
           <p class="c-step__text" style="margin-top:0; margin-bottom: calc(24 * var(--u));">ボタンと同じ画面を、ひとことで開ける近道です。「〇〇」には名前や会社名を入れます。</p>
           <div class="c-doc-table-wrap" style="overflow-x:auto;">
             <table class="c-doc-table" style="min-width: 640px;">
@@ -561,6 +561,6 @@ usePageSeo({
   path: '/manual',
   title: 'マニュアル | クラゲディール',
   description:
-    'クラゲディールの機能を章ごとに引けるマニュアル。言葉の役割、顧客・会社・ディールの操作、メモとやること、コーチング、メール連携、Webダッシュボード、チームと権限、設定と契約、公式フレーズ一覧まで。',
+    'クラゲディールの機能を章ごとに引けるマニュアル。言葉の役割、顧客・会社・ディールの操作、メモとやること、コーチング、メール連携、Webダッシュボード、チームと権限、設定と契約、よく使うひとこと一覧まで。',
 })
 </script>
