@@ -75,7 +75,7 @@
                 最新情報は <a href="https://note.com/kuragedeal/" target="_blank" rel="noopener">note</a> と
                 <a href="https://x.com/kuragedeal" target="_blank" rel="noopener">X</a> でお知らせしています。
               </p>
-              <p><small>©2026クラゲディール. All rights reserved. ― 開発元：株式会社shiro</small></p>
+              <p><small>©2026 クラゲディール ― 開発元：株式会社shiro</small></p>
             </div>
           </div>
         </footer>
