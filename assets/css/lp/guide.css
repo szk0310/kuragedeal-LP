@@ -409,3 +409,79 @@ main section[id] {
 	font-size: calc(24 * var(--u));
 	line-height: calc(42 * var(--u));
 }
+
+/*=============================================================
+  目次（manual.vueでも再利用。マニュアル系ページ共通の章番号付きナビ）
+=============================================================*/
+.p-guide__toc-label {
+	font-size: calc(20 * var(--u));
+	font-weight: 700;
+	color: var(--color-gray-text);
+	letter-spacing: 0.08em;
+	text-transform: uppercase;
+	margin-bottom: calc(14 * var(--u));
+}
+.p-guide__toc-list {
+	display: grid;
+	grid-template-columns: 1fr;
+	gap: calc(4 * var(--u));
+}
+@media (min-width: 768px) {
+	.p-guide__toc-list {
+		grid-template-columns: 1fr 1fr;
+	}
+}
+.p-guide__toc-list a {
+	display: flex;
+	gap: calc(10 * var(--u));
+	padding: calc(6 * var(--u)) 0;
+	font-size: calc(23 * var(--u));
+	line-height: calc(36 * var(--u));
+}
+.p-guide__toc-list a:hover {
+	color: var(--color-accent3);
+}
+.p-guide__toc-num {
+	flex-shrink: 0;
+	width: calc(30 * var(--u));
+	color: var(--color-gray-text);
+}
+
+/*=============================================================
+  解説リスト（箇条書き・番号付き。manual.vueの説明文中心）
+=============================================================*/
+.p-guide__list {
+	display: flex;
+	flex-direction: column;
+	gap: calc(14 * var(--u));
+	font-size: calc(25 * var(--u));
+	line-height: calc(42 * var(--u));
+}
+.p-guide__list li {
+	position: relative;
+	padding-left: calc(28 * var(--u));
+}
+.p-guide__list li::before {
+	content: '・';
+	position: absolute;
+	left: 0;
+}
+.p-guide__list--num {
+	counter-reset: guide-list;
+}
+.p-guide__list--num li {
+	padding-left: calc(40 * var(--u));
+}
+.p-guide__list--num li::before {
+	content: counter(guide-list) '.';
+	counter-increment: guide-list;
+	font-weight: 700;
+	color: var(--color-accent3);
+}
+.p-guide__list code,
+.p-guide__cmd-ttl code {
+	padding: calc(2 * var(--u)) calc(8 * var(--u));
+	border-radius: calc(6 * var(--u));
+	background: var(--color-light-gray);
+	font-size: 0.85em;
+}
