@@ -1,31 +1,27 @@
 <template>
-  <main class="pt-16 min-h-screen">
+  <LpFrame main-id="ai-support">
     <!-- イントロ -->
-    <section class="bg-ocean-deep py-16 md:py-20 text-white">
-      <div class="max-w-3xl mx-auto px-4 sm:px-6 text-center">
-        <img src="/kurage-on-green.png" alt="クラゲくん" class="w-16 h-16 mx-auto mb-4" />
-        <p class="text-cyan-300 font-bold tracking-widest mb-3">クラゲくんのAIサポート</p>
-        <h1 class="text-3xl md:text-4xl font-black mb-4 leading-tight">
-          あなたが書くだけで、<br />クラゲくんが、ずっと支えてくれます。
-        </h1>
-        <p class="text-white/80 leading-relaxed">
-          Slack にメモするだけで、ディール確度の更新も、次の一手の提案も、メールの下書きも、クラゲくんが裏でやってくれます。<br class="hidden md:block" />
-          ここでは、クラゲくんがあなたのためにしてくれることを紹介します。
-        </p>
-        <a href="/" class="inline-block mt-6 text-sm text-cyan-200 underline hover:text-white">← クラゲディール トップへ</a>
+    <section class="p-ai-hero">
+      <img src="/kurage-on-white.png" alt="クラゲくん" class="p-ai-hero__icon" />
+      <div class="c-sec-ttl">
+        <p class="c-sec-ttl__en" lang="en">AI Support</p>
+        <h1 class="c-sec-ttl__ja">あなたが書くだけで、<br />クラゲくんが、ずっと支えてくれます。</h1>
       </div>
+      <p class="c-lead" style="margin-top: calc(30 * var(--u));">
+        Slack にメモするだけで、ディール確度の更新も、次の一手の提案も、メールの下書きも、クラゲくんが裏でやってくれます。<br />
+        ここでは、クラゲくんがあなたのためにしてくれることを紹介します。
+      </p>
+      <p class="p-ai-hero__back"><a href="/">← クラゲディール トップへ</a></p>
     </section>
 
     <!-- ① ディール確度の自動更新 -->
-    <section class="bg-ocean-mist/30 py-16">
-      <div class="max-w-3xl mx-auto px-4 sm:px-6">
-        <p class="text-base md:text-lg font-bold text-kurage-600 mb-2">🧠 ディール確度の自動更新</p>
-        <h2 class="text-2xl md:text-3xl font-black text-gray-900 mb-4 leading-tight">
-          メモするたびに、確度が動きます。
-        </h2>
-        <p class="text-gray-700 leading-relaxed mb-6">
-          「決裁者と会えた」「予算の根拠を確認できた」「競合が分かった」——そんな一言を書くだけで、クラゲくんが営業の型（MEDDPICC）に沿ってディール確度を計算し直してくれます。数字が動くから、その案件が今どこにいるのかが、ひと目で分かります。14 日間うごきがない案件は、時間とともに確度がそっと下がるので、見落としにも気づけます。
-        </p>
+    <section class="p-ai__block">
+      <p class="p-ai__label">🧠 ディール確度の自動更新</p>
+      <h2 class="p-ai__ttl">メモするたびに、確度が動きます。</h2>
+      <p class="p-ai__text">
+        「決裁者と会えた」「予算の根拠を確認できた」「競合が分かった」——そんな一言を書くだけで、クラゲくんが営業の型（MEDDPICC）に沿ってディール確度を計算し直してくれます。数字が動くから、その案件が今どこにいるのかが、ひと目で分かります。14 日間うごきがない案件は、時間とともに確度がそっと下がるので、見落としにも気づけます。
+      </p>
+      <div class="p-ai__mock">
         <SlackMessageMock channel-name="💬 クラゲディール（DM）">
           <SlackBotLine name="あなた" :is-user="true" time="11:20"><p>ABC商事、決裁者の部長と面談できました</p></SlackBotLine>
           <SlackBotLine name="クラゲディール" :bot-badge="true" time="11:20">
@@ -36,15 +32,13 @@
     </section>
 
     <!-- ② MEDDPICC コーチング -->
-    <section class="bg-white py-16">
-      <div class="max-w-3xl mx-auto px-4 sm:px-6">
-        <p class="text-base md:text-lg font-bold text-kurage-600 mb-2">🎓 AIコーチング</p>
-        <h2 class="text-2xl md:text-3xl font-black text-gray-900 mb-4 leading-tight">
-          クラゲくんが、あなたの営業コーチになってくれます。
-        </h2>
-        <p class="text-gray-700 leading-relaxed mb-6">
-          「ABC商事はどう？」と聞くだけで、クラゲくんが営業の型（MEDDPICC）に沿って、やさしく問いかけてくれます。決裁者には会えているか、予算の根拠は確認できているか、競合は把握できているか——。経験豊富なマネジャーがいなくても、チーム全員が、同じ質の問いかけを受け取れます。
-        </p>
+    <section class="p-ai__block p-ai__block--alt">
+      <p class="p-ai__label">🎓 AIコーチング</p>
+      <h2 class="p-ai__ttl">クラゲくんが、あなたの営業コーチになってくれます。</h2>
+      <p class="p-ai__text">
+        「ABC商事はどう？」と聞くだけで、クラゲくんが営業の型（MEDDPICC）に沿って、やさしく問いかけてくれます。決裁者には会えているか、予算の根拠は確認できているか、競合は把握できているか——。経験豊富なマネジャーがいなくても、チーム全員が、同じ質の問いかけを受け取れます。
+      </p>
+      <div class="p-ai__mock">
         <SlackMessageMock channel-name="💬 クラゲディール（DM）">
           <SlackBotLine name="あなた" :is-user="true" time="14:32"><p>/coach ABC商事</p></SlackBotLine>
           <SlackBotLine name="クラゲディール" :bot-badge="true" time="14:32">
@@ -61,15 +55,13 @@
     </section>
 
     <!-- ③ メール返信の代筆 -->
-    <section class="bg-ocean-sand py-16">
-      <div class="max-w-3xl mx-auto px-4 sm:px-6">
-        <p class="text-base md:text-lg font-bold text-kurage-600 mb-2">✉️ メール返信の代筆</p>
-        <h2 class="text-2xl md:text-3xl font-black text-gray-900 mb-4 leading-tight">
-          返信は、クラゲくんが下書きしてくれます。
-        </h2>
-        <p class="text-gray-700 leading-relaxed mb-6">
-          顧客からの返信に、クラゲくんが過去のやり取りやディールのステージを踏まえて、返信の下書きを用意してくれます。あなたは Slack で内容を確認して、ボタンを 1 つ押すだけ。お客様には、いつもどおりあなた本人のアドレスから届きます。メール 1 通に 10 分かけていた時間が、ぐっと短くなります。
-        </p>
+    <section class="p-ai__block">
+      <p class="p-ai__label">✉️ メール返信の代筆</p>
+      <h2 class="p-ai__ttl">返信は、クラゲくんが下書きしてくれます。</h2>
+      <p class="p-ai__text">
+        顧客からの返信に、クラゲくんが過去のやり取りやディールのステージを踏まえて、返信の下書きを用意してくれます。あなたは Slack で内容を確認して、ボタンを 1 つ押すだけ。お客様には、いつもどおりあなた本人のアドレスから届きます。メール 1 通に 10 分かけていた時間が、ぐっと短くなります。
+      </p>
+      <div class="p-ai__mock">
         <SlackMessageMock channel-name="💬 クラゲディール（DM）">
           <SlackBotLine name="クラゲディール" :bot-badge="true" time="16:10">
             <p class="font-bold mb-1">📧 田中様への返信を下書きしました</p>
@@ -83,49 +75,42 @@
             </div>
           </SlackBotLine>
         </SlackMessageMock>
-        <p class="text-xs text-gray-500 mt-3">ボタン 1 つで承認すると、あなた本人のアドレスから送信されます。</p>
       </div>
+      <p class="p-ai__caption">ボタン 1 つで承認すると、あなた本人のアドレスから送信されます。</p>
     </section>
 
     <!-- ④ メール連携（顧客メールの取り込み） -->
-    <section class="bg-white py-16">
-      <div class="max-w-3xl mx-auto px-4 sm:px-6">
-        <p class="text-base md:text-lg font-bold text-kurage-600 mb-2">📨 メール連携</p>
-        <h2 class="text-2xl md:text-3xl font-black text-gray-900 mb-4 leading-tight">
-          顧客とのメールも、クラゲくんが読んでくれます。
-        </h2>
-        <p class="text-gray-700 leading-relaxed mb-6">
-          顧客とのメールを、あなた専用の取り込みアドレスに転送するだけ。クラゲくんが内容を読んで、活動メモとディール確度に反映し、返信の下書きまで Slack に届けてくれます。メールのやり取りも、自然と営業の記録になっていきます。<br><span class="text-gray-500 text-sm">専用アドレスは Slack の <code class="bg-gray-100 px-1 rounded text-xs">/setting</code> →「📨 メール連携」で確認できます。</span>
-        </p>
-        <p class="text-sm text-gray-600 leading-relaxed">
-          設定のしかたは、<a href="/guide" class="text-kurage-600 font-bold underline hover:text-kurage-700">使い方ガイド</a>でご案内しています。
-        </p>
-      </div>
+    <section class="p-ai__block p-ai__block--alt">
+      <p class="p-ai__label">📨 メール連携</p>
+      <h2 class="p-ai__ttl">顧客とのメールも、クラゲくんが読んでくれます。</h2>
+      <p class="p-ai__text">
+        顧客とのメールを、あなた専用の取り込みアドレスに転送するだけ。クラゲくんが内容を読んで、活動メモとディール確度に反映し、返信の下書きまで Slack に届けてくれます。メールのやり取りも、自然と営業の記録になっていきます。<br />
+        専用アドレスは Slack の <code>/setting</code> →「📨 メール連携」で確認できます。
+      </p>
+      <p class="p-ai__link-note">設定のしかたは、<a href="/guide">使い方ガイド</a>でご案内しています。</p>
     </section>
 
     <!-- クロージング CTA -->
-    <section class="bg-gradient-to-br from-kurage-900 to-kurage-700 text-white py-20">
-      <div class="max-w-2xl mx-auto px-4 sm:px-6 text-center">
-        <h2 class="text-2xl md:text-3xl font-black mb-4 leading-relaxed">
-          あなたは書くだけ。あとは、クラゲくんにおまかせください。
-        </h2>
-        <p class="text-white/85 leading-relaxed mb-8">
-          ディール確度も、コーチングも、メールも。クラゲくんが、あなたの営業をそっと支えます。
-        </p>
-        <div class="flex flex-col sm:flex-row gap-3 justify-center">
-          <a href="/" class="inline-flex items-center justify-center gap-2 bg-white text-kurage-700 font-bold px-7 py-3.5 rounded-xl hover:bg-gray-100 transition-colors">
-            ← クラゲディールを見る
-          </a>
-          <a href="https://slacksfa-api-808596335261.asia-northeast1.run.app/slack/install" class="inline-flex items-center justify-center gap-2 bg-kurage-500 text-white font-bold px-7 py-3.5 rounded-xl hover:bg-kurage-400 transition-colors ring-1 ring-white/30">
-            14日間無料で試す →
-          </a>
-        </div>
-      </div>
+    <section class="c-cta c-pixel c-pixel--top-only">
+      <img class="c-cta__illust" src="/lp/img/kurage.svg" alt="クラゲくん" />
+      <h2 class="c-cta__ttl">あなたは書くだけ。<br />あとは、クラゲくんにおまかせください。</h2>
+      <p class="c-cta__text">ディール確度も、コーチングも、メールも。クラゲくんが、あなたの営業をそっと支えます。</p>
+      <a class="c-btn c-cta__btn" :href="installUrl" @click="onTrialClick">14日間無料で試す</a>
     </section>
-  </main>
+  </LpFrame>
 </template>
 
 <script setup lang="ts">
+// LP mock刷新・下層ページ統一指示書・タスク2（option A・3ページ目）。
+import '~/assets/css/lp/ai-support.css'
+
+const installUrl = 'https://slacksfa-api-808596335261.asia-northeast1.run.app/slack/install'
+
+const { fire } = useConversion()
+function onTrialClick() {
+  fire('trial')
+}
+
 usePageSeo({
   path: '/ai-support',
   title: 'クラゲくんのAIサポート | クラゲディール',

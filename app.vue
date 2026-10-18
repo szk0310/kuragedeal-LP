@@ -22,7 +22,7 @@ const route = useRoute()
 function stripTrailingSlash(path: string): string {
   return path !== '/' && path.endsWith('/') ? path.slice(0, -1) : path
 }
-const lpFramePages = ['/', '/pains', '/guide']
+const lpFramePages = ['/', '/pains', '/guide', '/ai-support']
 const normalizedPath = computed(() => stripTrailingSlash(route.path))
 const usesLpFrame = computed(() => lpFramePages.includes(normalizedPath.value))
 // フォームページ・LpFrame採用ページでは、フローティング CTA（ChatWidget）を非表示

@@ -1,0 +1,79 @@
+@charset "UTF-8";
+/*=============================================================
+  ai-support.css（/ai-support ページ固有）
+  寸法は calc(N * var(--u)) = デザイン（750px 幅）上の N px
+  pains.cssと同じ配色・余白のリズム（お悩み3件の構造）を、機能紹介4件用に
+  より単純な形（ラベル＋見出し＋本文＋Slackモック）で踏襲する。
+=============================================================*/
+
+main section[id] {
+	scroll-margin-top: calc(120 * var(--u));
+}
+
+.p-ai-hero {
+	padding: calc(100 * var(--u)) calc(50 * var(--u)) calc(120 * var(--u));
+	background: var(--color-light-orange);
+	text-align: center;
+}
+.p-ai-hero__icon {
+	width: calc(120 * var(--u));
+	margin: 0 auto calc(20 * var(--u));
+}
+.p-ai-hero__back {
+	margin-top: calc(50 * var(--u));
+}
+.p-ai-hero__back a {
+	font-size: calc(26 * var(--u));
+	text-decoration: underline;
+}
+
+.p-ai__block {
+	padding: calc(110 * var(--u)) calc(50 * var(--u));
+	background: var(--color-white);
+}
+.p-ai__block--alt {
+	background: var(--color-light-orange);
+}
+.p-ai__label {
+	color: var(--color-accent3);
+	font-weight: 700;
+	font-size: calc(26 * var(--u));
+	line-height: calc(40 * var(--u));
+}
+.p-ai__ttl {
+	margin-top: calc(10 * var(--u));
+	font-size: calc(38 * var(--u));
+	font-weight: 900;
+	line-height: calc(54 * var(--u));
+}
+.p-ai__text {
+	margin-top: calc(24 * var(--u));
+	font-size: calc(26 * var(--u));
+	line-height: calc(46 * var(--u));
+}
+.p-ai__text code {
+	padding: calc(2 * var(--u)) calc(8 * var(--u));
+	border-radius: calc(6 * var(--u));
+	background: var(--color-light-gray);
+	font-size: 0.85em;
+}
+.p-ai__mock {
+	margin-top: calc(40 * var(--u));
+}
+.p-ai__caption {
+	margin-top: calc(18 * var(--u));
+	font-size: calc(22 * var(--u));
+	line-height: calc(38 * var(--u));
+	color: var(--color-gray-text);
+}
+.p-ai__link-note {
+	margin-top: calc(18 * var(--u));
+	font-size: calc(24 * var(--u));
+	line-height: calc(42 * var(--u));
+	color: var(--color-gray-text);
+}
+.p-ai__link-note a {
+	color: var(--color-accent3);
+	font-weight: 700;
+	text-decoration: underline;
+}
