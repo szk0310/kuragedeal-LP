@@ -1,33 +1,32 @@
 <template>
-  <div class="min-h-screen bg-gray-50 py-16">
-    <div class="max-w-3xl mx-auto px-4 sm:px-6">
+  <LpFrame main-id="tokusho">
+    <div class="p-legal">
+      <h1 class="p-legal__ttl">特定商取引法に基づく表記</h1>
+      <p class="p-legal__meta">最終更新：2026年4月13日</p>
 
-
-      <div class="bg-white rounded-2xl shadow-sm border border-gray-100 p-8 sm:p-12">
-        <h1 class="text-2xl font-bold text-gray-900 mb-2">特定商取引法に基づく表記</h1>
-        <p class="text-sm text-gray-400 mb-8">最終更新：2026年4月13日</p>
-
-        <div class="overflow-x-auto">
-          <table class="w-full text-sm">
-            <tbody class="divide-y divide-gray-100">
-              <tr v-for="row in rows" :key="row.label" class="align-top">
-                <th class="py-4 pr-6 text-left font-semibold text-gray-700 whitespace-nowrap w-40">{{ row.label }}</th>
-                <td class="py-4 text-gray-600 leading-relaxed" v-html="row.value" />
-              </tr>
-            </tbody>
-          </table>
-        </div>
-
-        <div class="mt-12 pt-8 border-t border-gray-100 text-sm text-gray-400 text-center">
-          <NuxtLink to="/" class="hover:text-kurage-600 transition-colors">← トップページに戻る</NuxtLink>
-        </div>
+      <div class="c-doc-table-wrap">
+        <table class="c-doc-table">
+          <tbody>
+            <tr v-for="row in rows" :key="row.label">
+              <th style="width: calc(180 * var(--u)); vertical-align: top;">{{ row.label }}</th>
+              <td style="vertical-align: top;" v-html="row.value" />
+            </tr>
+          </tbody>
+        </table>
       </div>
 
+      <div class="p-legal__back">
+        <NuxtLink to="/">← トップページに戻る</NuxtLink>
+      </div>
     </div>
-  </div>
+  </LpFrame>
 </template>
 
 <script setup lang="ts">
+// LP mock刷新・下層ページ統一指示書・タスク2（option A・最後の3ページ）。
+// 本文（各行の内容）は一切変更していない。
+import '~/assets/css/lp/legal.css'
+
 usePageSeo({
   path: '/legal/tokusho',
   title: '特定商取引法に基づく表記 | クラゲディール',

@@ -1,12 +1,10 @@
 <template>
-  <div class="min-h-screen bg-gray-50 py-16">
-    <div class="max-w-3xl mx-auto px-4 sm:px-6">
+  <LpFrame main-id="privacy">
+    <div class="p-legal">
+      <h1 class="p-legal__ttl">プライバシーポリシー</h1>
+      <p class="p-legal__meta">最終更新：2026年4月13日</p>
 
-
-      <div class="bg-white rounded-2xl shadow-sm border border-gray-100 p-8 sm:p-12 prose prose-sm max-w-none">
-        <h1 class="text-2xl font-bold text-gray-900 mb-2">プライバシーポリシー</h1>
-        <p class="text-sm text-gray-400 mb-8 not-prose">最終更新：2026年4月13日</p>
-
+      <div class="c-legal">
         <p>株式会社shiro（以下「当社」）は、クラゲディール（以下「本サービス」）において取得する個人情報の取り扱いについて、以下のとおり定めます。</p>
 
         <h2>1. 取得する情報</h2>
@@ -98,16 +96,20 @@
         メール：<a href="mailto:support@kuragedeal.ai">support@kuragedeal.ai</a><br>
         住所：〒102-0071 東京都千代田区富士見1-3-10 CF1310 1F</p>
 
-        <div class="not-prose mt-12 pt-8 border-t border-gray-100 text-sm text-gray-400 text-center">
-          <NuxtLink to="/" class="hover:text-kurage-600 transition-colors">← トップページに戻る</NuxtLink>
-        </div>
       </div>
 
+      <div class="p-legal__back">
+        <NuxtLink to="/">← トップページに戻る</NuxtLink>
+      </div>
     </div>
-  </div>
+  </LpFrame>
 </template>
 
 <script setup lang="ts">
+// LP mock刷新・下層ページ統一指示書・タスク2（option A・最後の3ページ）。
+// 本文は一切変更していない。prose相当のタイポグラフィはlegal.cssへ。
+import '~/assets/css/lp/legal.css'
+
 usePageSeo({
   path: '/legal/privacy',
   title: 'プライバシーポリシー | クラゲディール',

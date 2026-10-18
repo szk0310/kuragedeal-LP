@@ -1,11 +1,10 @@
 <template>
-  <div class="min-h-screen bg-gray-50 py-16">
-    <div class="max-w-3xl mx-auto px-4 sm:px-6">
+  <LpFrame main-id="terms">
+    <div class="p-legal">
+      <h1 class="p-legal__ttl">クラゲディール 利用規約</h1>
+      <p class="p-legal__meta">最終更新：2026年9月29日</p>
 
-      <div class="bg-white rounded-2xl shadow-sm border border-gray-100 p-8 sm:p-12 prose prose-sm max-w-none">
-        <h1 class="text-2xl font-bold text-gray-900 mb-2">クラゲディール 利用規約</h1>
-        <p class="text-sm text-gray-400 mb-8 not-prose">最終更新：2026年9月29日</p>
-
+      <div class="c-legal">
         <p>株式会社shiro（以下「当社」といいます。）は、当社が提供する「クラゲディール」（以下「本サービス」といいます。）について、以下のとおり利用規約（以下「本規約」といいます。）を定めます。</p>
 
         <h2>第1条（目的・適用）</h2>
@@ -384,16 +383,20 @@
         <p>本規約は、2026年10月28日から施行します。</p>
         <p>株式会社shiro　〒102-0071 東京都千代田区富士見1-3-10 CF1310 1F</p>
 
-        <div class="not-prose mt-12 pt-8 border-t border-gray-100 text-sm text-gray-400 text-center">
-          <NuxtLink to="/" class="hover:text-kurage-600 transition-colors">← トップページに戻る</NuxtLink>
-        </div>
       </div>
 
+      <div class="p-legal__back">
+        <NuxtLink to="/">← トップページに戻る</NuxtLink>
+      </div>
     </div>
-  </div>
+  </LpFrame>
 </template>
 
 <script setup lang="ts">
+// LP mock刷新・下層ページ統一指示書・タスク2（option A・最後の3ページ）。
+// 本文（条文）は一切変更していない。prose相当のタイポグラフィはlegal.cssへ。
+import '~/assets/css/lp/legal.css'
+
 usePageSeo({
   path: '/legal/terms',
   title: '利用規約 | クラゲディール',
