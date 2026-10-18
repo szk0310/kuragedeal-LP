@@ -193,36 +193,36 @@
         <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
           <SlackMessageMock channel-name="💬 クラゲディール（DM）">
             <SlackBotLine name="クラゲディール" :bot-badge="true" time="9:00">
-              <p class="font-bold mb-2">🌅 おはようございます！今日のフォーカス</p>
+              <p class="font-bold mb-2">☀️ 今日のブリーフィング</p>
               <div class="bg-orange-50 border-l-2 border-orange-400 pl-3 py-2 mb-2">
-                <p class="font-semibold">🔥 期日今日</p>
-                <p class="text-xs text-gray-600">ABC商事 田中様（¥3M）— 提案書送付</p>
+                <p class="font-semibold">🔥 クローズ間近（ディール確度70%以上）</p>
+                <p class="text-xs text-gray-600">ABC商事／田中様の提案　¥3M — ディール確度 72%</p>
               </div>
               <div class="bg-yellow-50 border-l-2 border-yellow-400 pl-3 py-2 mb-2">
-                <p class="font-semibold">⚠️ 14日停滞</p>
-                <p class="text-xs text-gray-600">XYZ社 山田様 — フォロー推奨</p>
+                <p class="font-semibold">🚨 見直し候補（しばらく動きがないディール）</p>
+                <p class="text-xs text-gray-600">XYZ社／山田様の案件 — 16日 連絡なし／ディール確度 25%</p>
               </div>
               <div class="bg-cyan-50 border-l-2 border-cyan-400 pl-3 py-2">
-                <p class="font-semibold">📈 確度アップ</p>
-                <p class="text-xs text-gray-600">DEF佐藤様 60% → 75%</p>
+                <p class="font-semibold">📈 ディール確度アップ</p>
+                <p class="text-xs text-gray-600">DEF社／佐藤様の案件　60% → 75%</p>
               </div>
             </SlackBotLine>
           </SlackMessageMock>
 
           <SlackMessageMock channel-name="💬 クラゲディール（DM）">
             <SlackBotLine name="クラゲディール" :bot-badge="true" time="17:00">
-              <p class="font-bold mb-2">🌆 1 日お疲れさまでした。今日の振り返り</p>
+              <p class="font-bold mb-2">🌆 今日の振り返り・明日への引き継ぎ</p>
               <div class="bg-green-50 border-l-2 border-green-400 pl-3 py-2 mb-2">
-                <p class="font-semibold">📈 進捗</p>
-                <p class="text-xs text-gray-600">3件のうち 2件が前進</p>
+                <p class="font-semibold">📈 今日の進捗</p>
+                <p class="text-xs text-gray-600">3件のうち 2件でディール確度が前進</p>
               </div>
               <div class="bg-yellow-50 border-l-2 border-yellow-400 pl-3 py-2 mb-2">
-                <p class="font-semibold">⚠️ 停滞</p>
-                <p class="text-xs text-gray-600">1件は明日朝一で連絡を</p>
+                <p class="font-semibold">🎯 次の一手</p>
+                <p class="text-xs text-gray-600">XYZ社／山田様 — 明日朝一で連絡を</p>
               </div>
               <div class="bg-cyan-50 border-l-2 border-cyan-400 pl-3 py-2">
-                <p class="font-semibold">🌟 明日朝一</p>
-                <p class="text-xs text-gray-600">DEF 佐藤様 — クロージング確認</p>
+                <p class="font-semibold">🌟 明日の重点</p>
+                <p class="text-xs text-gray-600">DEF社／佐藤様 — クロージング確認</p>
               </div>
             </SlackBotLine>
           </SlackMessageMock>
