@@ -8,7 +8,7 @@
         <!-- Brand -->
         <div class="flex-shrink-0 text-center md:text-left">
           <div class="flex items-center justify-center md:justify-start gap-2 mb-3">
-            <img src="/kurage-on-green.png" alt="クラゲディール" class="w-9 h-9" />
+            <img :src="KURAGE_ICON" alt="クラゲディール" class="w-9 h-9" />
             <span class="font-bold text-xl text-white">クラゲディール</span>
           </div>
           <p class="text-sm leading-relaxed max-w-xs mx-auto md:mx-0">
@@ -60,3 +60,6 @@
     </div>
   </footer>
 </template>
+
+<script setup lang="ts">
+</script>

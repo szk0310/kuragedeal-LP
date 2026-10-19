@@ -136,7 +136,7 @@
 
           <!-- CTA（キャッチコピー） -->
           <section class="c-cta c-pixel" id="trial">
-            <img class="c-cta__illust" src="/lp/img/kurage.svg" alt="クラゲくん" />
+            <img class="c-cta__illust" :src="KURAGE_ICON" alt="クラゲくん" />
             <h2 class="c-cta__ttl">いちばん軽いメモが、<br />いちばん賢い営業になる。</h2>
             <p class="c-cta__text">クラゲディールは、Slack にメモするだけで<br />AI機能が営業活動を自動でサポート！<br />余った時間はあなたのために使ってください。</p>
             <p class="c-cta__catch">
@@ -167,7 +167,7 @@
               <article class="p-price__plan p-price__plan--popular">
                 <h3 class="p-price__name" lang="en">Trio</h3>
                 <p class="p-price__badge">おすすめ</p>
-                <img class="p-price__kurage" src="/lp/img/kurage.svg" alt="クラゲくん" />
+                <img class="p-price__kurage" :src="KURAGE_ICON" alt="クラゲくん" />
                 <p class="p-price__catch">営業チーム本格スタート</p>
                 <p class="p-price__amount"><span lang="en">¥5,980</span>/ 月</p>
                 <p class="p-price__amount-sub">4人目から1人ごとに ¥2,000</p>
@@ -269,7 +269,7 @@
 
           <!-- CTA（14日間無料で試す） -->
           <section class="c-cta c-pixel">
-            <img class="c-cta__illust" src="/lp/img/kurage.svg" alt="クラゲくん" />
+            <img class="c-cta__illust" :src="KURAGE_ICON" alt="クラゲくん" />
             <h2 class="c-cta__ttl">14日間無料で試す</h2>
             <ul class="c-check-list c-cta__list">
               <li>Slack に追加するだけ</li>
@@ -383,7 +383,7 @@
 
           <!-- CTA（14日間無料で試す） -->
           <section class="c-cta c-pixel c-pixel--top-only">
-            <img class="c-cta__illust" src="/lp/img/kurage.svg" alt="クラゲくん" />
+            <img class="c-cta__illust" :src="KURAGE_ICON" alt="クラゲくん" />
             <h2 class="c-cta__ttl">14日間無料で試す</h2>
             <ul class="c-check-list c-cta__list">
               <li>Slack に追加するだけ</li>

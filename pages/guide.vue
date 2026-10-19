@@ -13,7 +13,7 @@
 
       <!-- Header -->
       <div class="p-guide__head">
-        <img src="/kurage-on-white.png" alt="クラゲディール" class="p-guide__head-icon" />
+        <img :src="KURAGE_ICON" alt="クラゲディール" class="p-guide__head-icon" />
         <h1 class="p-guide__head-ttl">使い方ガイド</h1>
         <p class="p-guide__head-lead">インストールから毎日の使い方まで、<strong>この順番で</strong>ご案内します。</p>
       </div>
@@ -59,7 +59,7 @@
                 <div class="p-guide__flow-box">
                   <p class="p-guide__flow-label">🌐 このサイト</p>
                   <span class="p-guide__flow-chip">
-                    <img src="/kurage-on-white.png" alt="" /> Slack に追加
+                    <img :src="KURAGE_ICON" alt="" /> Slack に追加
                   </span>
                 </div>
                 <p class="p-guide__flow-arrow">↓</p>
@@ -88,7 +88,7 @@
                 <div class="p-guide__sidebar-mock-item"><span>📅</span>Google Calendar</div>
                 <div class="p-guide__sidebar-mock-item"><span>🔵</span>Slack</div>
                 <div class="p-guide__sidebar-mock-item p-guide__sidebar-mock-item--active">
-                  <img src="/kurage-on-white.png" alt="" />クラゲディール
+                  <img :src="KURAGE_ICON" alt="" />クラゲディール
                 </div>
                 <p class="p-guide__sidebar-mock-note">↑ クリックすると DM が開きます</p>
               </div>
@@ -297,7 +297,7 @@
       <section id="first-week" class="p-guide__section">
         <div class="c-card--accent">
           <div class="c-step">
-            <img src="/kurage-on-white.png" alt="クラゲくん" style="width: calc(50 * var(--u)); flex-shrink:0;" />
+            <img :src="KURAGE_ICON" alt="クラゲくん" style="width: calc(50 * var(--u)); flex-shrink:0;" />
             <div>
               <p class="p-guide__cmd-group-label">クイックスタート</p>
               <p class="c-step__ttl" style="font-size: calc(32 * var(--u));">最初の 1 週間でやってみること</p>

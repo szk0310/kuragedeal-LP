@@ -4,7 +4,7 @@
 
       <!-- header -->
       <div class="p-guide__head">
-        <img src="/kurage-on-white.png" alt="クラゲディール" class="p-guide__head-icon" />
+        <img :src="KURAGE_ICON" alt="クラゲディール" class="p-guide__head-icon" />
         <h1 class="p-guide__head-ttl">よくある質問・困ったとき</h1>
         <p class="p-guide__head-lead">操作でつまずいたとき・「あれ？」と思ったときに。<br />使い方そのものは <NuxtLink to="/guide"><strong>使い方ガイド</strong></NuxtLink> へ。</p>
       </div>

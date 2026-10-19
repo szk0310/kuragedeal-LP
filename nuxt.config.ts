@@ -1,3 +1,5 @@
+import { KURAGE_ICON } from './composables/useBranding'
+
 export default defineNuxtConfig({
   compatibilityDate: '2024-11-01',
   devtools: { enabled: false },
@@ -74,7 +76,7 @@ export default defineNuxtConfig({
         { name: 'twitter:image', content: 'https://kuragedeal.ai/og-image.png' },
       ],
       link: [
-        { rel: 'icon', type: 'image/png', href: '/kurage-on-white.png' },
+        { rel: 'icon', type: 'image/svg+xml', href: KURAGE_ICON },
         { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
         {
           rel: 'stylesheet',

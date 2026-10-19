@@ -317,7 +317,7 @@
 
     <!-- クロージング CTA -->
     <section class="c-cta c-pixel c-pixel--top-only">
-      <img class="c-cta__illust" src="/lp/img/kurage.svg" alt="クラゲくん" />
+      <img class="c-cta__illust" :src="KURAGE_ICON" alt="クラゲくん" />
       <h2 class="c-cta__ttl">3 つのお悩みを、<br />Slack の中で。</h2>
       <p class="c-cta__text">
         そして顧客からの返信メールも、AI が下書きします。<br />

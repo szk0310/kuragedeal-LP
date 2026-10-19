@@ -4,7 +4,7 @@
 
       <!-- Header -->
       <div class="p-guide__head">
-        <img src="/kurage-on-white.png" alt="クラゲディール" class="p-guide__head-icon" />
+        <img :src="KURAGE_ICON" alt="クラゲディール" class="p-guide__head-icon" />
         <h1 class="p-guide__head-ttl">クラゲディール マニュアル</h1>
         <p class="p-guide__head-lead">
           クラゲディールの機能を、章ごとに引けるようにまとめたマニュアルです。<br />

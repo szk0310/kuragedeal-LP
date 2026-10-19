@@ -2,7 +2,7 @@
   <LpFrame main-id="ai-support">
     <!-- イントロ -->
     <section class="p-ai-hero">
-      <img src="/kurage-on-white.png" alt="クラゲくん" class="p-ai-hero__icon" />
+      <img :src="KURAGE_ICON" alt="クラゲくん" class="p-ai-hero__icon" />
       <div class="c-sec-ttl">
         <p class="c-sec-ttl__en" lang="en">AI Support</p>
         <h1 class="c-sec-ttl__ja">あなたが書くだけで、<br />クラゲくんが、ずっと支えてくれます。</h1>

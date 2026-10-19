@@ -22,7 +22,7 @@ const organizationLd = {
   name: 'クラゲディール',
   legalName: '株式会社shiro',
   url: 'https://kuragedeal.ai',
-  logo: 'https://kuragedeal.ai/kurage-on-white.png',
+  logo: KURAGE_LOGO_PNG,
   email: 'support@kuragedeal.ai',
   description: 'Slack だけで完結する AI 営業 CRM「クラゲディール」の提供元。株式会社shiro は Salesforce 認定コンサルティングパートナー。',
   sameAs: [

@@ -2,7 +2,7 @@
   <LpFrame main-id="contact">
     <div class="p-contact">
       <div class="c-sec-ttl">
-        <img src="/kurage-on-white.png" alt="クラゲディール" class="p-contact__head-icon" />
+        <img :src="KURAGE_ICON" alt="クラゲディール" class="p-contact__head-icon" />
         <h1 class="c-sec-ttl__ja">
           {{ isEnterprise ? '11 人以上のご相談' : 'お問い合わせ' }}
         </h1>
@@ -22,7 +22,7 @@
 
         <!-- Success state -->
         <div v-if="submitted" class="p-contact__success">
-          <img src="/kurage-smile.png" alt="クラゲディール" class="p-contact__success-icon kurage-float" />
+          <img :src="KURAGE_ICON" alt="クラゲディール" class="p-contact__success-icon kurage-float" />
           <p class="p-contact__success-ttl">送信完了しました！</p>
           <p class="p-contact__success-text">
             お問い合わせありがとうございます<br />
