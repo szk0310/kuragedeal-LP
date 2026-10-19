@@ -177,6 +177,21 @@ main section[id] {
 	width: calc(28 * var(--u));
 	flex-shrink: 0;
 }
+/* 2026-10-19・鈴木さん指摘: オレンジのボタン背景にオレンジのクラゲだと見えないため、
+   白い丸の上に載せる（他の色の組み合わせでも同じ考え方で対応すること）。 */
+.p-guide__flow-chip-icon {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: calc(28 * var(--u));
+	height: calc(28 * var(--u));
+	border-radius: 50%;
+	background: var(--color-white);
+	flex-shrink: 0;
+}
+.p-guide__flow-chip-icon img {
+	width: calc(20 * var(--u));
+}
 .p-guide__flow-chip--success {
 	background: #34c267;
 }

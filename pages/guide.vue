@@ -30,7 +30,7 @@
         </div>
         <div class="p-guide__overview-cell c-card--flat" style="border-radius: calc(18 * var(--u));">
           <p class="p-guide__overview-num">③</p>
-          <p class="p-guide__overview-label">慣れたら<br />ひとことで速く</p>
+          <p class="p-guide__overview-label">毎朝の<br />ブリーフィングで進める</p>
         </div>
       </div>
 
@@ -59,7 +59,7 @@
                 <div class="p-guide__flow-box">
                   <p class="p-guide__flow-label">🌐 このサイト</p>
                   <span class="p-guide__flow-chip">
-                    <img :src="KURAGE_ICON" alt="" /> Slack に追加
+                    <span class="p-guide__flow-chip-icon"><img :src="KURAGE_ICON" alt="" /></span> Slack に追加
                   </span>
                 </div>
                 <p class="p-guide__flow-arrow">↓</p>
@@ -113,7 +113,7 @@
       <section id="modes" class="p-guide__section">
         <h2 class="p-guide__section-ttl"><span class="c-step__num">2</span>クラゲを使う</h2>
         <p class="p-guide__section-lead">
-          基本は<strong>ボタンを押していくだけ</strong>。クラゲが毎回、次に押せるボタンを案内します。慣れてきたら、よく使うひとこと（TIPS）でも同じ画面を開けます（マニュアル12章）。
+          基本は<strong>ボタンを押していくだけ</strong>。クラゲが毎回、次に押せるボタンを案内します。
         </p>
 
         <div class="p-guide__cards">
@@ -196,25 +196,6 @@
           <div class="c-info"><span class="c-info__icon">🔁</span><p>どの画面にも次に押せるボタンがあるので、<strong>行き止まりになりません</strong>。最初に戻りたいときは <strong>「メニュー」</strong> と打てば、いつでもメニューが出ます。</p></div>
         </div>
 
-        <!-- よく使うひとこと（ボタンのショートカット） -->
-        <div style="margin-top: calc(60 * var(--u));">
-          <p class="p-guide__sub-ttl">⚡ よく使うひとこと（ボタンのショートカット）</p>
-          <p class="p-guide__sub-lead">決まった言葉を打つと、ボタンを押さずに同じ画面へ一気にジャンプできます。</p>
-          <div class="c-doc-table-wrap">
-            <table class="c-doc-table">
-              <thead>
-                <tr><th style="width:45%;">Slackで入力</th><th>動作</th></tr>
-              </thead>
-              <tbody>
-                <tr v-for="ex in quickPhrases" :key="ex.input">
-                  <td style="font-weight:700;">{{ ex.input }}</td>
-                  <td style="color: var(--color-gray-text);">{{ ex.action }}</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-
         <!-- 次の一手の並び方 -->
         <div class="c-card--flat" style="margin-top: calc(60 * var(--u)); border-radius: calc(20 * var(--u)); padding: calc(28 * var(--u)) calc(30 * var(--u));">
           <p class="p-guide__cmd-ttl">📋 「次の一手」の並び方</p>
@@ -238,6 +219,15 @@
             案件を深掘りしたいときは <code>/coach</code> でコーチングも受けられます。
           </p>
         </div>
+        <p class="p-guide__caption" style="margin-top: calc(24 * var(--u));">慣れてきたら、よく使うひとこと（TIPS）でも同じ画面を開けます（マニュアル12章）。</p>
+      </section>
+
+      <!-- ③ 毎朝のブリーフィングで進める -->
+      <section id="briefing" class="p-guide__section">
+        <h2 class="p-guide__section-ttl"><span class="c-step__num">3</span>毎朝のブリーフィングで進める</h2>
+        <p class="p-guide__section-lead">
+          毎朝9時に、今日やることが DM に届きます。夕方5時には一日の振り返り、月曜の朝には先週のまとめ・今週のスタートが届きます。届いたカードのボタン（［✅ 完了］［これにする］など）を押せば、そのまま次の一手に進めます。
+        </p>
       </section>
 
       <!-- 言葉の役割 -->
@@ -460,21 +450,6 @@ usePageSeo({
 const route = useRoute()
 const installed = computed(() => route.query.installed === '1')
 
-// マニュアル12章「よく使うひとこと一覧」を正本にする（内容はそちらと揃える）。
-const quickPhrases = [
-  { input: 'メニュー', action: 'メインメニューを出す' },
-  { input: '今やること', action: '次の一手の一覧を開く' },
-  { input: 'メモ一覧／最近のメモ／先週の活動を見せて／〇〇さんのメモ見せて', action: 'メモを見る' },
-  { input: '予定一覧', action: '予定を見る' },
-  { input: '〇〇のディール一覧／進行中のディール／停滞中のディール', action: 'ディールを見る' },
-  { input: '〇〇の次の一手', action: 'そのディールの次の一手を見る' },
-  { input: '〇〇さんを教えて／株式会社〇〇を教えて', action: '詳しく見る（一覧から選んでもOK）' },
-  { input: '株式会社〇〇を登録', action: '会社を登録' },
-  { input: '〇〇を受注に／〇〇を失注に', action: 'ディールのステージを受注・失注にする' },
-  { input: 'ステージを変えたい', action: 'ステージを変える' },
-  { input: 'コマンドを教えて', action: '操作の一覧を見る' },
-]
-
 const commandGroups = [
   { group: '情報を見る（一覧）', cmds: [
     { cmd: '/deal', title: 'ディール一覧・検索', desc: 'ディールの一覧と検索。進み具合の見立てと、次の一手のおすすめも出ます。' },
@@ -497,7 +472,6 @@ const autoFeatures = [
   { icon: '🎓', title: 'AIコーチング', desc: '「ABC商事はどう？」や /coach で、MEDDPICCに沿ってクラゲがやさしく問いかけます。' },
   { icon: '✉️', title: 'メール返信の代筆', desc: '顧客からの返信に下書きを用意。Slackでボタンを押すと、あなた本人のアドレスから送信されます。' },
   { icon: '📨', title: 'メール連携', desc: '顧客メールを転送すると、内容を読んで活動メモ・ディール確度に反映し、返信下書きまで届けます。' },
-  { icon: '☀️', title: '朝夕ブリーフィング', desc: '毎朝9時に「今日のフォーカス」、夕方17時に振り返りを、クラゲからお届けします。' },
   { icon: '📊', title: 'パイプライン分析', desc: 'Webダッシュボードで、チーム全体の状況をいつでも俯瞰できます。' },
 ]
 
