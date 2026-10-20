@@ -37,7 +37,7 @@ const rows = [
   { label: '販売業者', value: '株式会社shiro' },
   { label: '代表者', value: '鈴木隆弥' },
   { label: '所在地', value: '〒102-0071 東京都千代田区富士見1-3-10 CF1310 1F' },
-  { label: '電話番号', value: '03-6272-4119<br><span class="text-gray-400 text-xs">（受付時間：平日 10:00〜18:00）</span>' },
+  { label: '電話番号', value: '03-6272-4119<br><span class="text-gray-400 text-xs">（受付時間：平日 11:00〜17:00）</span>' },
   { label: 'メール', value: '<a href="mailto:support@kuragedeal.ai" class="text-kurage-600 underline">support@kuragedeal.ai</a>' },
   { label: 'サービス名', value: 'クラゲディール（Kurage Deal）' },
   { label: '販売価格', value: 'PERSONAL：月額¥2,980／年額¥29,800（基本人数1名）<br>TRIO：月額¥5,980／年額¥59,800（基本人数3名。4名目以降は1名ごとに月額+¥2,000／年額+¥20,000、追加できる人数の上限は7名まで）<br>TEAM：月額¥14,980／年額¥149,800（基本人数10名）<br>11名以上はお問い合わせください。<br><span class="text-gray-400 text-xs">上記はすべて税別です。決済時に消費税10%が加わります。年額は10か月分の料金です。PERSONAL・TEAMには追加できる人数の枠はありません。基本人数を超えるユーザーは管理者の承認により利用できますが、追加できる人数の上限（TRIOは7名）を超える場合は、承認した月の翌月末までの期間に限り利用を認め、その後は上位プランへの変更が必要です。</span>' },
