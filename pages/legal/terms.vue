@@ -109,7 +109,7 @@
           </thead>
           <tbody>
             <tr><td>PERSONAL</td><td>¥2,980</td><td>¥29,800</td><td>1名まで</td></tr>
-            <tr><td>TRIO</td><td>¥5,980（4名目から1名ごとに+¥2,000）</td><td>¥59,800（追加1名ごとに+¥20,000）</td><td>3名（7名まで追加可）</td></tr>
+            <tr><td>TRIO</td><td>¥5,980（4名目から1名ごとに+¥2,000）</td><td>¥59,800</td><td>3名（7名まで追加可）</td></tr>
             <tr><td>TEAM</td><td>¥14,980</td><td>¥149,800</td><td>10名まで</td></tr>
           </tbody>
         </table>

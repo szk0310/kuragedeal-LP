@@ -170,8 +170,8 @@
                 <img class="p-price__kurage" :src="KURAGE_ICON" alt="クラゲくん" />
                 <p class="p-price__catch">営業チーム本格スタート</p>
                 <p class="p-price__amount"><span lang="en">¥5,980</span>/ 月（税別）</p>
-                <p class="p-price__amount-sub">4人目から1人ごとに ¥2,000/月（税別）</p>
-                <p class="p-price__amount-annual">年額 ¥59,800（税別・追加1人ごとに ¥20,000）</p>
+                <p class="p-price__amount-sub">4人目から1人ごとに ¥2,000/月（税別・年額プランでも毎月のご請求）</p>
+                <p class="p-price__amount-annual">年額 ¥59,800（税別）</p>
                 <ul class="c-check-list c-check-list--yellow p-price__features">
                   <li>3名（7名まで追加可）</li>
                   <li>全機能</li>

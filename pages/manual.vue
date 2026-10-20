@@ -448,12 +448,12 @@
                 <thead><tr><th>プラン</th><th>月額</th><th>年額</th><th>人数</th></tr></thead>
                 <tbody>
                   <tr><td style="font-weight:700; white-space:nowrap;">PERSONAL</td><td>¥2,980</td><td>¥29,800</td><td style="color: var(--color-gray-text);">1名まで</td></tr>
-                  <tr><td style="font-weight:700; white-space:nowrap;">TRIO</td><td>¥5,980（4人目から+¥2,000）</td><td>¥59,800（追加1人+¥20,000）</td><td style="color: var(--color-gray-text);">3名（7名まで追加可）</td></tr>
+                  <tr><td style="font-weight:700; white-space:nowrap;">TRIO</td><td>¥5,980（4人目から+¥2,000）</td><td>¥59,800</td><td style="color: var(--color-gray-text);">3名（7名まで追加可）</td></tr>
                   <tr><td style="font-weight:700; white-space:nowrap;">TEAM</td><td>¥14,980</td><td>¥149,800</td><td style="color: var(--color-gray-text);">10名まで</td></tr>
                 </tbody>
               </table>
             </div>
-            <p class="p-guide__caption">11名以上はお問い合わせください。価格はすべて税別で、決済時に消費税10%が加わります。年額は10か月分の料金です。</p>
+            <p class="p-guide__caption">11名以上はお問い合わせください。価格はすべて税別で、決済時に消費税10%が加わります。年額は10か月分の料金です。TRIO の追加1人ごとの¥2,000は、年額プランでも毎月のご請求です。</p>
           </div>
 
           <div class="c-card">
