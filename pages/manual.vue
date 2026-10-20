@@ -457,6 +457,16 @@
           </div>
 
           <div class="c-card">
+            <p class="p-guide__cmd-ttl" style="margin-bottom: calc(14 * var(--u));">プランの変更</p>
+            <ul class="p-guide__list">
+              <li>管理者が Web の設定画面からいつでも変えられます。</li>
+              <li>上のプランへの変更と、月額から年額への変更は、すぐに切り替わり、残りの期間の差額を日割りでご請求します。</li>
+              <li>下のプランへの変更は次の請求日から、年額から月額への変更は次の更新日から切り替わります（それまでの期間の返金はありません）。</li>
+              <li>予約した変更は、切り替わる日まで設定画面から取り消せます。</li>
+            </ul>
+          </div>
+
+          <div class="c-card">
             <p class="p-guide__cmd-ttl" style="margin-bottom: calc(14 * var(--u));">人数の数え方と追加料金</p>
             <ul class="p-guide__list">
               <li>人数は、その月にクラゲを使った人（メッセージ・ボタン・コマンド）で数えます。朝のブリーフィングを受け取っただけの人は数えません。</li>
