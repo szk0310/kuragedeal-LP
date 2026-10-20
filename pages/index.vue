@@ -110,7 +110,7 @@
                 <p class="p-benefits__num" aria-hidden="true"><span class="p-benefits__num-big">02</span><span class="p-benefits__num-label">Features</span></p>
                 <div class="p-benefits__card">
                   <img class="p-benefits__img" src="/lp/img/benefit02.png" alt="チームで協力する様子" />
-                  <h3 class="p-benefits__ttl">ひとりなら月¥2,980、<br />3人のチームでも¥5,980</h3>
+                  <h3 class="p-benefits__ttl">ひとりなら月¥2,980、<br />3人のチームでも¥5,980（税別）</h3>
                   <p class="p-benefits__text">クラゲディールは、シンプルな 3 段階の料金体系。人数に合わせて、ぴったりのプランを選べます。</p>
                   <p class="p-benefits__box p-benefits__box--accent">
                     まずは<strong>14日間無料</strong>でお試しいただけます<br />（クレジットカード不要）。<br />Slack に追加するだけで、その日からご利用いただけます。
@@ -156,8 +156,8 @@
               <article class="p-price__plan">
                 <h3 class="p-price__name" lang="en">Personal</h3>
                 <p class="p-price__catch">まずはあなた1人から。</p>
-                <p class="p-price__amount"><span lang="en">¥2,980</span>/ 月</p>
-                <p class="p-price__amount-annual">年額 ¥29,800</p>
+                <p class="p-price__amount"><span lang="en">¥2,980</span>/ 月（税別）</p>
+                <p class="p-price__amount-annual">年額 ¥29,800（税別）</p>
                 <ul class="c-check-list c-check-list--yellow p-price__features">
                   <li>1名まで</li>
                   <li>全機能</li>
@@ -169,9 +169,9 @@
                 <p class="p-price__badge">おすすめ</p>
                 <img class="p-price__kurage" :src="KURAGE_ICON" alt="クラゲくん" />
                 <p class="p-price__catch">営業チーム本格スタート</p>
-                <p class="p-price__amount"><span lang="en">¥5,980</span>/ 月</p>
-                <p class="p-price__amount-sub">4人目から1人ごとに ¥2,000</p>
-                <p class="p-price__amount-annual">年額 ¥59,800（追加1人ごとに ¥20,000）</p>
+                <p class="p-price__amount"><span lang="en">¥5,980</span>/ 月（税別）</p>
+                <p class="p-price__amount-sub">4人目から1人ごとに ¥2,000/月（税別）</p>
+                <p class="p-price__amount-annual">年額 ¥59,800（税別・追加1人ごとに ¥20,000）</p>
                 <ul class="c-check-list c-check-list--yellow p-price__features">
                   <li>3名（7名まで追加可）</li>
                   <li>全機能</li>
@@ -182,8 +182,8 @@
               <article class="p-price__plan">
                 <h3 class="p-price__name" lang="en">Team</h3>
                 <p class="p-price__catch">チーム全員で使う</p>
-                <p class="p-price__amount"><span lang="en">¥14,980</span>/ 月</p>
-                <p class="p-price__amount-annual">年額 ¥149,800</p>
+                <p class="p-price__amount"><span lang="en">¥14,980</span>/ 月（税別）</p>
+                <p class="p-price__amount-annual">年額 ¥149,800（税別）</p>
                 <ul class="c-check-list c-check-list--yellow p-price__features">
                   <li>10名まで</li>
                   <li>全機能</li>
@@ -234,11 +234,11 @@
                   <tbody>
                     <tr>
                       <th scope="row">1人</th>
-                      <td><em>¥2,980</em>/月</td>
+                      <td><em>¥2,980</em>/月（税別）</td>
                     </tr>
                     <tr>
                       <th scope="row">3人</th>
-                      <td><em>¥5,980</em>/月</td>
+                      <td><em>¥5,980</em>/月（税別）</td>
                     </tr>
                   </tbody>
                 </table>
@@ -414,7 +414,7 @@ const faqs = [
   { q: '無料期間はどうなっていますか？', a: 'Slack に追加した日から14日間、すべての機能を無料で使えます。クレジットカードの入力は不要です。無料期間は1つのワークスペースにつき1回です。' },
   { q: '従来のSlack連携CRMとの違いは？', a: 'ほかの Slack 連携 CRM は、CRM を別に契約し、Slack は通知を受け取る場所として使います。クラゲディールは、記録・コーチング・メールの下書きまで、Slack の中だけで使えます。' },
   { q: '将来、別の CRM に移行できますか？', a: 'はい。クラゲディールのデータはいつでも CSV で書き出せます。組織が成長してより大規模な CRM が必要になった際、弊社は Salesforce 認定コンサルティングパートナーとして、移行先の選定からデータの引っ越しまでお手伝いします。' },
-  { q: '何人まで使えますか？', a: 'TRIO は3人から1人ずつ追加でき（1人 月¥2,000・7人まで）、8〜10人なら TEAM がお得です。11人以上はお問い合わせください。30 人を超える大規模チームでは、Salesforce 等の選択肢もご検討いただくことをお勧めしています。弊社は Salesforce 認定コンサルティングパートナーとして、最適な選択をご一緒に検討します。' },
+  { q: '何人まで使えますか？', a: 'TRIO は3人から1人ずつ追加でき（1人 月¥2,000（税別）・7人まで）、8〜10人なら TEAM がお得です。11人以上は、お問い合わせください。' },
   { q: '既存のSlackワークスペースに導入できますか？', a: 'はい。既存の Slack ワークスペースに「クラゲディールを追加」ボタン 1 つで完了します。新しいワークスペースを作る必要はありません。' },
   { q: 'インストールしたのに、サイドバーにアプリが出てきません', a: 'Slack 画面上部の検索窓（または Cmd / Ctrl + K）に「クラゲディール」（英字 kuragedeal でも可）と入力し、表示されたアプリを選んでください。クラゲディールとの DM が開き、サイドバーに常駐します。あとは、DM の［📋 メニュー］を押すだけです。はじめにクラゲくんからあいさつのメッセージが届きます。反映が遅いときは Slack を再読み込み（Cmd / Ctrl + R）してください。なお、ワークスペースへの追加（インストール）は管理者が 1 回行えば完了で、メンバーの個別インストールは不要です。' },
   { q: 'Slackを使っていない会社でも使えますか？', a: 'クラゲディールは Slack ワークスペースが前提です。Slack の無料プランでも導入できますので、まず Slack を導入していただくことをお勧めします。' },
@@ -438,7 +438,7 @@ usePageSeo({
   path: '/',
   title: 'クラゲディール — Slackだけで完結するAI営業CRM',
   description:
-    'Slack のボタンで、営業の記録が完了。AI が営業コーチとして毎朝ブリーフィングし、ディール確度・次の一手・メール下書きを支援します。ひとりから小さな営業チームまで。PERSONAL ¥2,980/月〜。14日間無料でお試しいただけます。',
+    'Slack のボタンで、営業の記録が完了。AI が営業コーチとして毎朝ブリーフィングし、ディール確度・次の一手・メール下書きを支援します。ひとりから小さな営業チームまで。PERSONAL ¥2,980/月（税別）〜。14日間無料でお試しいただけます。',
 })
 
 const softwareLd = {
