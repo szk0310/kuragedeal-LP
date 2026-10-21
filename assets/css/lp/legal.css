@@ -60,6 +60,19 @@
 .c-legal ol {
 	list-style: decimal;
 }
+/* E-252: 号（項の下の枝番）は項の番号と見分けられるよう「（1）（2）」表示にする */
+.c-legal ol ol {
+	list-style: none;
+	counter-reset: gou;
+}
+.c-legal ol ol > li {
+	counter-increment: gou;
+	padding-left: 0;
+}
+.c-legal ol ol > li::before {
+	content: "（" counter(gou) "）";
+	margin-right: calc(6 * var(--u));
+}
 .c-legal li {
 	padding-left: calc(6 * var(--u));
 }
