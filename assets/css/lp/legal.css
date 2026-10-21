@@ -57,21 +57,30 @@
 .c-legal ul {
 	list-style: disc;
 }
+/* display:flex の column を使っているため、ol/li のネイティブ list-style（マーカー）が
+   どのブラウザでも確実には出ない。項・号どちらもCSSカウンタで自前描画する。
+   オッパ指摘（2026-10-22）: 項の番号(1. 2. 3.)が全ブラウザで消えていた不具合の修正を兼ねる。 */
 .c-legal ol {
-	list-style: decimal;
+	list-style: none;
+	counter-reset: komoku;
+}
+.c-legal ol > li {
+	counter-increment: komoku;
+}
+.c-legal ol > li::before {
+	content: counter(komoku) ". ";
+	font-weight: 700;
 }
 /* E-252: 号（項の下の枝番）は項の番号と見分けられるよう「（1）（2）」表示にする */
 .c-legal ol ol {
-	list-style: none;
 	counter-reset: gou;
 }
 .c-legal ol ol > li {
 	counter-increment: gou;
-	padding-left: 0;
 }
 .c-legal ol ol > li::before {
-	content: "（" counter(gou) "）";
-	margin-right: calc(6 * var(--u));
+	content: "（" counter(gou) "） ";
+	font-weight: 400;
 }
 .c-legal li {
 	padding-left: calc(6 * var(--u));
