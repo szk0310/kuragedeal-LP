@@ -34,6 +34,8 @@
             <li><a href="/pains" @click="navOpen = false">お悩み解消</a></li>
             <li><a href="/ai-support" @click="navOpen = false">AIサポート</a></li>
             <li><a href="/manual" @click="navOpen = false">マニュアル</a></li>
+            <li><a href="/help" @click="navOpen = false">よくある質問</a></li>
+            <li><a href="/contact" @click="navOpen = false">お問い合わせ</a></li>
           </ul>
           <a class="c-btn" :href="installUrl" @click="onTrialClick">14日間無料で試す</a>
         </nav>
@@ -53,7 +55,7 @@
                 <li><a class="l-footer__note" href="https://note.com/kuragedeal/" target="_blank" rel="noopener" lang="en">note</a></li>
               </ul>
             </div>
-            <p class="l-footer__tagline">Slackだけで完結するAI営業CRM。<br />ひとりから、小さな営業チームまで。</p>
+            <p class="l-footer__tagline">Slackだけで完結するAI営業支援ツール。<br />ひとりから、小さな営業チームまで。</p>
             <p class="l-footer__require">※ご利用には Slack が必要です（無料プラン可）</p>
             <nav class="l-footer__nav" aria-label="フッターメニュー">
               <ul class="c-link-list">
@@ -63,6 +65,8 @@
                 <li><a href="/pains">お悩み解消</a></li>
                 <li><a href="/ai-support">AIサポート</a></li>
                 <li><a href="/manual">マニュアル</a></li>
+                <li><a href="/help">よくある質問</a></li>
+                <li><a href="/contact">お問い合わせ</a></li>
               </ul>
             </nav>
             <ul class="l-footer__sub">
