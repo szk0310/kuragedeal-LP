@@ -51,7 +51,7 @@
             </div>
             <div class="p-guide__step-grid p-guide__step-grid--2col">
               <div>
-                <p class="c-step__text">このサイトの<strong>［14日間無料で試す］ボタン</strong>から<strong>「Slack に追加」</strong>を押す → Slack の<strong>認可画面で「許可」</strong>→ インストール完了。完了すると、クラゲくんからあいさつの DM が届きます。</p>
+                <p class="c-step__text">このサイトの<strong>［14日間無料で試す］ボタン</strong>から<strong>「Slack に追加」</strong>を押す → Slack の<strong>認可画面で「許可する」</strong>→ インストール完了。完了すると、クラゲくんからあいさつの DM が届きます。</p>
                 <p class="p-guide__caption">※ チームで使う場合も、ワークスペースへの追加は管理者が1回だけ。メンバーの個別インストールは不要です。</p>
               </div>
               <!-- 流れの見え方（LP → 認可 → 完了） -->
@@ -80,7 +80,7 @@
               <p class="c-step__ttl" style="padding-top: calc(10 * var(--u));">サイドバーから「クラゲディール」を開く</p>
             </div>
             <div class="p-guide__step-grid p-guide__step-grid--2col">
-              <p class="c-step__text">Slack 左側の <strong>「アプリ」</strong>欄に <strong>クラゲディール</strong> が出ていれば、それをクリックするだけ。<strong>DM（あなた専用のチャット）</strong>が開きます。</p>
+              <p class="c-step__text">Slack 左側の <strong>「アプリ」欄</strong>（「エージェントとアプリ」と表示されることもあります）に <strong>クラゲディール</strong> が出ていれば、それをクリックするだけ。<strong>DM（あなた専用のチャット）</strong>が開きます。</p>
               <!-- サイドバーの見え方（モック） -->
               <div class="p-guide__sidebar-mock">
                 <p class="p-guide__sidebar-mock-label">エージェントとアプリ</p>
@@ -214,7 +214,7 @@
         <div class="c-info--accent" style="margin-top: calc(40 * var(--u)); display:block;">
           <p class="p-guide__cmd-ttl">💡 困ったら、そのままクラゲに聞いてください</p>
           <p class="c-step__text" style="margin-top: calc(10 * var(--u));">
-            わからないことは、そのままクラゲに聞いてください。<strong>具体的に聞く</strong>と、その場で答えます（例：<strong>「メモの消し方は？」</strong>「予定が出ないのはなぜ？」）。
+            <strong>具体的に聞く</strong>と、その場で答えます（例：<strong>「メモの消し方は？」</strong>「予定が出ないのはなぜ？」）。
             操作は<strong>［📋 メニュー］</strong>から。<strong>「使い方を教えて」</strong>と送ると、メニューとコマンドの一覧が出ます。
             案件を深掘りしたいときは <code>/coach</code> でコーチングも受けられます。
           </p>
@@ -277,9 +277,9 @@
 
         <div class="p-guide__cards" style="margin-top: calc(28 * var(--u));">
           <div class="c-info"><span class="c-info__icon">📋</span><p>細かいやることはメモに書けばクラゲが拾います。「今やること」で、期日の近い順に理由つきで並びます。</p></div>
-          <div class="c-info"><span class="c-info__icon">📅</span><p><strong>日付は2種類あります</strong>：「<strong>次の一手の期日</strong>」は、次の一手をいつやるか。「<strong>クローズ予定日</strong>」は、いつ受注しそうか（売上の見通しに使います）。</p></div>
+          <div class="c-info"><span class="c-info__icon">📅</span><p><strong>日付は2種類</strong>（上の表の「次の一手」「クローズ予定」を参照）あり、混ざらないよう分けています。</p></div>
           <div class="c-info"><span class="c-info__icon">👤</span><p><strong>個人のお客様</strong>：個人のお客様は会社なしで登録でき、「個人のお客様」と表示されます。検索は人・会社を横断するので迷子になりません。</p></div>
-          <div class="c-info"><span class="c-info__icon">🔁</span><p><strong>勝手に動かしません</strong>：動きの止まったディールは「停滞にしますか？」と確認します。ステージをクラゲが勝手に変えることはありません。</p></div>
+          <div class="c-info"><span class="c-info__icon">🔁</span><p><strong>勝手に動かしません</strong>：動きの止まったディールは「停滞にしますか？」と確認します。ステージをクラゲが勝手に変えることはありません（一方、ディール確度は動きが無いと日がたつごとに少しずつ下がります）。</p></div>
         </div>
       </section>
 
@@ -295,7 +295,7 @@
           </div>
           <p class="c-step__text" style="margin-top: calc(24 * var(--u));">
             クラゲディールの真価は、毎日少しずつ Slack に記録することで現れます。<br />
-            まず 1 週間、下の流れに沿って試してみてください。<strong>すべてボタンで進められます</strong>（迷ったら DM で「メニュー」と打つだけ）。
+            まず 1 週間、下の流れに沿って試してみてください。<strong>ほとんどボタンで進められます</strong>（一部は <code>/coach</code> などのコマンドを使います。迷ったら DM で「メニュー」と打つだけ）。
           </p>
           <p class="p-guide__note-strip" style="margin-top: calc(24 * var(--u));">
             🔰 はじめての方は、先に <a href="#setup">① インストール</a> と <a href="#modes">② ボタンの使い方</a> に目を通すとスムーズです。慣れてきたら「よく使うひとこと」のショートカットも試してみてください。
@@ -320,7 +320,7 @@
       <!-- 便利な機能とコマンド（リファレンス） -->
       <div class="p-guide__divider">
         <h2 class="p-guide__divider-ttl">便利な機能とコマンド</h2>
-        <p class="p-guide__divider-lead">ここからはマニュアルです。コマンド・自動機能・設定・メール連携機能などは、いつでもお使いいただけます。</p>
+        <p class="p-guide__divider-lead">ここからは、もう少し詳しい使い方です。コマンド・自動機能・設定・メール連携機能などは、いつでもお使いいただけます。</p>
       </div>
 
       <!-- スラッシュコマンド -->
@@ -353,7 +353,7 @@
           <div class="c-card p-guide__feature-card"><span class="p-guide__feature-icon">🧭</span><p class="c-step__text" style="margin-top:0;"><strong>よく使うひとこと</strong> — 「メニュー」「今やること」など、ボタンと同じ画面を開くショートカットの一覧。</p></div>
           <div class="c-card p-guide__feature-card"><span class="p-guide__feature-icon">📧</span><p class="c-step__text" style="margin-top:0;"><strong>AI返信支援</strong> — 顧客メールの返信下書きの ON / OFF。</p></div>
           <div class="c-card p-guide__feature-card"><span class="p-guide__feature-icon">📋</span><p class="c-step__text" style="margin-top:0;"><strong>営業方針</strong> — クラゲの提案トーンを指定（例：「押し売りしない・課題解決型」）。</p></div>
-          <div class="c-card p-guide__feature-card"><span class="p-guide__feature-icon">✉️</span><p class="c-step__text" style="margin-top:0;"><strong>送信元メールアドレス</strong> — 返信を送るときに使う、あなたのアドレス。</p></div>
+          <div class="c-card p-guide__feature-card"><span class="p-guide__feature-icon">✉️</span><p class="c-step__text" style="margin-top:0;"><strong>送信元メールアドレス</strong> — 返信を送るときに使う、会社の送信元アドレス（管理者が設定）。</p></div>
           <div class="c-card p-guide__feature-card"><span class="p-guide__feature-icon">📨</span><p class="c-step__text" style="margin-top:0;"><strong>メール連携（顧客メールの取り込み）</strong> — あなた専用の取り込みアドレスが表示されます（<strong>下に詳しい手順</strong>）。</p></div>
           <div class="c-card p-guide__feature-card"><span class="p-guide__feature-icon">🌐</span><p class="c-step__text" style="margin-top:0;"><strong>Webダッシュボード</strong> — 個人ログインキーの発行（下に手順）。</p></div>
           <div class="c-card p-guide__feature-card" style="grid-column: 1 / -1;"><span class="p-guide__feature-icon">🎓</span><p class="c-step__text" style="margin-top:0;"><strong>サンプルデータ</strong> — はじめは<strong>サンプルデータが入った状態</strong>で、一覧・ディール確度・次の一手を<strong>すぐ体験</strong>できます。準備ができたら<strong>「🧹 サンプルを削除」</strong>で片づけてください。ご自身のデータを登録すると、サンプルは自動で片づきます。削除したサンプルは元に戻せません。</p></div>
@@ -376,7 +376,7 @@
       <!-- Webダッシュボード -->
       <section class="p-guide__section">
         <p class="p-guide__sub-ttl">🌐 Web ダッシュボードにログインする</p>
-        <p class="p-guide__sub-lead">Slackの会話が自動でCRMに蓄積されます。全体を俯瞰したい時は Web ダッシュボードをご利用ください。次の3ステップでログインできます。</p>
+        <p class="p-guide__sub-lead">クラゲディールとの DM で書いたメモが、自動でたまります。全体を俯瞰したい時は Web ダッシュボードをご利用ください。次の3ステップでログインできます。</p>
         <div class="p-guide__cards">
           <div class="c-card c-step">
             <span class="c-step__num">1</span>
@@ -408,7 +408,7 @@
           </div>
           <div class="c-card c-step">
             <span class="c-step__num">3</span>
-            <p class="c-step__text" style="margin-top: calc(10 * var(--u));"><strong>Slack で返信を承認</strong><br />クラゲが <strong>返信の下書き</strong>を Slack の DM に届けます。<strong>「このまま送信／修正して送信／送らない／自分で対応」</strong>から選ぶだけ。承認すると、あなたの<strong>送信元アドレスから</strong>返信が送られます。</p>
+            <p class="c-step__text" style="margin-top: calc(10 * var(--u));"><strong>Slack で返信を承認</strong><br />クラゲが <strong>返信の下書き</strong>を Slack の DM に届けます。<strong>［👍 このまま送信］［✍️ 修正して送信］［❌ 送らない］［📞 自分で対応］</strong>から選ぶだけ。承認すると、あなたの<strong>送信元アドレスから</strong>返信が送られます。</p>
           </div>
         </div>
         <div class="c-info--accent" style="margin-top: calc(28 * var(--u)); font-size: calc(22 * var(--u));">
@@ -461,8 +461,8 @@ const commandGroups = [
     { cmd: '/usage', title: 'AI利用状況', desc: '今月の AI の利用状況とプランを確認できます。' },
   ]},
   { group: '設定・その他', cmds: [
-    { cmd: '/setting', title: '設定', desc: 'AI返信支援・営業ポリシー・ログインキー発行・サンプルデータなどの設定メニュー。' },
-    { cmd: '/kurage', title: 'フィードバック投稿', desc: '使ってみて感じたことを開発チームへ直接送れます。例: `/kurage 朝のブリーフィングが長く感じる`' },
+    { cmd: '/setting', title: '設定', desc: 'AI返信支援・営業方針・ログインキー発行・サンプルデータなどの設定メニュー。' },
+    { cmd: '/kurage', title: 'フィードバック投稿', desc: '使ってみて感じたことを開発チームへ直接送れます。例:「/kurage 朝のブリーフィングが長く感じる」' },
   ]},
 ]
 
@@ -472,7 +472,7 @@ const autoFeatures = [
   { icon: '🎓', title: 'AIコーチング', desc: '「ABC商事はどう？」や /coach で、MEDDPICCに沿ってクラゲがやさしく問いかけます。' },
   { icon: '✉️', title: 'メール返信の代筆', desc: '顧客からの返信に下書きを用意。Slackでボタンを押すと、あなた本人のアドレスから送信されます。' },
   { icon: '📨', title: 'メール連携', desc: '顧客メールを転送すると、内容を読んで活動メモ・ディール確度に反映し、返信下書きまで届けます。' },
-  { icon: '📊', title: 'パイプライン分析', desc: 'Webダッシュボードで、チーム全体の状況をいつでも俯瞰できます。' },
+  { icon: '📊', title: 'パイプライン分析', desc: 'Webダッシュボードで、（管理者は）チーム全体の状況をいつでも俯瞰できます。' },
 ]
 
 // 最初の1週間はボタン中心のパス。Day1 はサンプル（見本）でクラゲの動きを体験 → Day2 以降で自分のデータを入れる流れ。
@@ -482,7 +482,7 @@ const firstWeekPlan = [
     theme: '最初から入っているサンプルデータで動きを体験',
     tasks: [
       'サイドバーの「クラゲディール」を開く',
-      '最初から入っているサンプルデータで「📋 状況を見る」を押し、顧客・会社・ディールの一覧を眺める',
+      '最初から入っているサンプルデータで、メニューの「👤 顧客一覧」「🏢 会社一覧」「📊 ディール一覧」を押し、一覧を眺める',
       '「🎯 今やること」を押して、ディール確度やおすすめの出かたを体験する',
     ],
   },
@@ -491,25 +491,25 @@ const firstWeekPlan = [
     theme: '自分のデータを入れてみる',
     tasks: [
       'メニュー →「👤 顧客を登録」で、自分の顧客を 1 件登録',
-      'メニュー →「📊 ディールを登録」で、その顧客の案件を 1 件つくる',
-      'メニュー →「📝 活動をメモ」でその案件にメモ → AI が案件のディール確度に反映するのを見る',
+      'メニュー →「📊 ディールを登録」で、そのディールを 1 件つくる',
+      'メニュー →「📝 活動をメモ」でそのディールにメモ → AI がディール確度に反映するのを見る',
     ],
   },
   {
     label: 'Day 4-5',
     theme: 'AI コーチングと朝夕ブリーフィング',
     tasks: [
-      '`/coach` で AI コーチングを体験',
+      '/coach で AI コーチングを体験',
       '朝 9:00「今日のフォーカス」／夕 17:00 の振り返り通知を受け取る',
-      '`/setting` でログインキーを発行 → Web ダッシュボードにログイン',
+      '/setting でログインキーを発行 → Web ダッシュボードにログイン',
     ],
   },
   {
     label: 'Day 6-7',
     theme: 'サンプルを片づけて、チームに広げる',
     tasks: [
-      'メニュー →「📋 状況を見る」で、いまの顧客・会社・ディールの状況を見渡す',
-      '`/setting` →「🧹 サンプルを削除」で片づけて、自分のデータの記録を本格的に始める（削除したサンプルは元に戻せません）',
+      'メニューの「👤 顧客一覧」「🏢 会社一覧」「📊 ディール一覧」で、いまの状況を見渡す',
+      'サンプルが残っていたら、/setting →「🧹 サンプルを削除」で片づける（自分のデータを登録すると自動で片づくので、残っていなければ不要です。削除したサンプルは元に戻せません）',
       '同僚を 1 人さそう：その人が Slack で「クラゲ」を検索して「クラゲディール」を開くだけ（個別インストールは不要。開いた人それぞれに専用の DM ができます）',
     ],
   },

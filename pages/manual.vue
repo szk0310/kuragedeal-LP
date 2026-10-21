@@ -8,7 +8,7 @@
         <h1 class="p-guide__head-ttl">クラゲディール マニュアル</h1>
         <p class="p-guide__head-lead">
           クラゲディールの機能を、章ごとに引けるようにまとめたマニュアルです。<br />
-          操作はすべてボタンで進められます。慣れた方向けの近道（よく使うひとこと）は、12章に TIPS としてまとめています。初めての方は
+          操作はほとんどボタンで進められます（一部は /coach などのコマンドを使います）。慣れた方向けの近道（よく使うひとこと）は、12章に TIPS としてまとめています。初めての方は
           <NuxtLink to="/guide"><strong>「使い方ガイド」</strong></NuxtLink>
           からどうぞ。
         </p>
@@ -42,7 +42,7 @@
           <div class="c-card">
             <p class="p-guide__cmd-ttl" style="margin-bottom: calc(14 * var(--u));">インストール</p>
             <ol class="p-guide__list p-guide__list--num">
-              <li>このサイトの［14日間無料で試す］から、Slack の確認画面を開きます。</li>
+              <li>このサイトの［14日間無料で試す］から、Slack の許可の画面を開きます。</li>
               <li>［許可する］を押すと完了です。ワークスペースへの追加は、管理者が1回行えば十分です。メンバーが個別にインストールする必要はありません。</li>
               <li>追加した日から14日間は無料ですべての機能を使えます（クレジットカードは不要）。</li>
             </ol>
@@ -67,10 +67,10 @@
           </div>
 
           <div class="c-card">
-            <p class="p-guide__cmd-ttl" style="margin-bottom: calc(14 * var(--u));">見本データ</p>
+            <p class="p-guide__cmd-ttl" style="margin-bottom: calc(14 * var(--u));">サンプルデータ</p>
             <ul class="p-guide__list">
-              <li>はじめは「【サンプル】」付きの見本データが入っているので、一覧や「今やること」をすぐに試せます。</li>
-              <li>一通り試したら <code>/setting</code> の［🧹 サンプルを削除］で片づけ、ご自身のデータを入れていきます。ご自身のデータを登録すると、見本は自動で片づきます。見本とご自身のデータが同じ画面に混ざることはありません。</li>
+              <li>はじめは「【サンプル】」付きのサンプルデータが入っているので、一覧や「今やること」をすぐに試せます。</li>
+              <li>ご自身のデータを登録すると、サンプルは自動で片づきます。サンプルとご自身のデータが同じ画面に混ざることはありません。すぐ消したいときは <code>/setting</code> の［🧹 サンプルを削除］で片づけられます。</li>
             </ul>
           </div>
 
@@ -150,6 +150,7 @@
             <thead><tr><th>やりたいこと</th><th>ボタン</th></tr></thead>
             <tbody>
               <tr><td style="font-weight:700;">顧客を登録</td><td>［👤 顧客を登録］</td></tr>
+              <tr><td style="font-weight:700;">会社を登録</td><td>「株式会社〇〇を登録」と送る</td></tr>
               <tr><td style="font-weight:700;">詳しく見る</td><td>一覧から選ぶ</td></tr>
               <tr><td style="font-weight:700;">一覧を見る</td><td>［👤 顧客一覧］［🏢 会社一覧］</td></tr>
               <tr><td style="font-weight:700;">メール・電話・役職などを変える</td><td>詳細の［✏️ 編集］</td></tr>
@@ -163,7 +164,7 @@
             <li><strong>個人のお客様：</strong> 会社なしで登録でき、画面では「個人のお客様」と表示されます。</li>
             <li><strong>同じ名前の人：</strong> 候補には会社名などの手がかりが添えられます。</li>
             <li><strong>重複の確認：</strong> 同じ会社・同じ名前、または同じメールアドレスの人を登録しようとすると確認が出ます。照合するのは自分の担当のお客様だけです。</li>
-            <li><strong>削除：</strong> 顧客とディールは担当者か管理者が、会社は管理者だけが削除できます（会社を消すと、配下の顧客・ディール・メモも消えます）。削除は元に戻せません。前に確認が出ます。</li>
+            <li><strong>削除：</strong> 顧客とディールは担当者か管理者が、会社は管理者だけが削除できます（会社を消すと、配下の顧客・ディール・メモも消えます）。削除の前に確認が出ます。削除は元に戻せません。</li>
             <li>重複を「まとめる（統合）」機能はありません。片方を削除して整理してください。</li>
           </ul>
         </div>
@@ -192,7 +193,7 @@
             <table class="c-doc-table">
               <thead><tr><th>ステージ</th><th>意味</th></tr></thead>
               <tbody>
-                <tr><td style="font-weight:700; white-space:nowrap;">⏸️ 待機</td><td>まだ動き出していない案件。次の一手を決めると「アプローチ中」になります</td></tr>
+                <tr><td style="font-weight:700; white-space:nowrap;">⏸️ 待機</td><td>まだ動き出していない案件。メモを書くか次の一手を決めるとアプローチ中に進みます（これ以外は勝手に変えません）</td></tr>
                 <tr><td style="font-weight:700; white-space:nowrap;">🌱 アプローチ中</td><td>お客様と接点を作っている段階</td></tr>
                 <tr><td style="font-weight:700; white-space:nowrap;">🔥 進行中</td><td>提案や見積もりなど、話が動いている段階</td></tr>
                 <tr><td style="font-weight:700; white-space:nowrap;">💤 停滞中</td><td>しばらく動きが止まっている案件。クラゲくんが「停滞にしますか？」と確認してから変わります</td></tr>
@@ -258,17 +259,19 @@
           <div class="c-card">
             <p class="p-guide__cmd-ttl" style="margin-bottom: calc(14 * var(--u));">朝のブリーフィング（毎朝9時・DM）</p>
             <ul class="p-guide__list">
-              <li>進行中のディールの合計金額と、月の目標に対する割合</li>
+              <li>動いているディール（アプローチ中・進行中・停滞中）の合計金額と、月の目標に対する割合（月間目標は <code>/setting</code> で設定します）</li>
               <li>クローズ間近（ディール確度70%以上）</li>
               <li>要アクション（ディール確度50%未満）と、それぞれの次の一手のおすすめ</li>
-              <li>損切り候補：長く動きのないディール（活動がないものは作成日から数えます）。［継続］か［このディールを失注に］を選べます</li>
+              <li>見直し候補：長く動きのないディール（活動がないものは作成日から数えます）。［継続］か［このディールを失注に］を選べます</li>
               <li>使い始めの14日間は、冒頭に「はじめかた」</li>
             </ul>
+            <p class="p-guide__cmd-ttl" style="margin-top: calc(24 * var(--u)); margin-bottom: calc(14 * var(--u));">夕方の振り返り（毎日17時・DM）</p>
+            <p class="c-step__text" style="margin-top:0;">一日の振り返りが届きます。月曜の朝には、先週のまとめと今週のスタートも合わせて届きます。</p>
           </div>
 
           <div class="c-card">
             <p class="p-guide__cmd-ttl" style="margin-bottom: calc(10 * var(--u));">今やること</p>
-            <p class="c-step__text" style="margin-top:0; margin-bottom: calc(18 * var(--u));">［🎯 今やること］で、自分が担当する進行中のディールを次の順に並べます（各区分最大5件）。</p>
+            <p class="c-step__text" style="margin-top:0; margin-bottom: calc(18 * var(--u));">［🎯 今やること］で、自分が担当する動いているディール（アプローチ中・進行中・停滞中）を次の順に並べます（各区分最大5件）。</p>
             <ol class="p-guide__list p-guide__list--num" style="margin-bottom: calc(18 * var(--u));">
               <li>次の一手の期日を過ぎたもの</li>
               <li>期日が今日・明日のもの</li>
@@ -334,7 +337,7 @@
             <p class="p-guide__cmd-ttl" style="margin-bottom: calc(14 * var(--u));">返信の下書き</p>
             <ul class="p-guide__list">
               <li>取り込んだメールへの返信をクラゲくんが下書きし、Slack に届けます。</li>
-              <li>［このまま送信］［修正して送信］［送らない］［自分で対応］から選びます。送信すると、あなたの送信元アドレスからお客様に届きます。</li>
+              <li>［👍 このまま送信］［✍️ 修正して送信］［❌ 送らない］［📞 自分で対応］から選びます。送信すると、あなたの送信元アドレスからお客様に届きます。</li>
               <li>下書きを送れるのは、そのお客様の担当者と管理者だけです。担当者が決まっていないお客様の下書きは、管理者に届きます。</li>
               <li>送信元のメールアドレスは、管理者が <code>/setting</code> の「送信元メール」で設定します。</li>
             </ul>
@@ -350,14 +353,14 @@
           <div class="c-card">
             <p class="p-guide__cmd-ttl" style="margin-bottom: calc(10 * var(--u));">ログイン</p>
             <p class="c-step__text" style="margin-top:0;">
-              <code>/setting</code> の［🔑 発行する］で個人のログインキー（<code>kdu_…</code>）が届きます。ダッシュボードのログイン画面に貼ると、次回からは自動でサインインします。Slack のメニューやホームの［📊 ダッシュボード］からも開けます。
+              <code>/setting</code> の［🔑 発行する］で個人のログインキーが届きます。ダッシュボードのログイン画面に貼ると、次回からは自動でサインインします。Slack のメニューやホームの［📊 ダッシュボード］からも開けます。
             </p>
           </div>
 
           <div class="c-card">
             <p class="p-guide__cmd-ttl" style="margin-bottom: calc(14 * var(--u));">画面</p>
             <ul class="p-guide__list">
-              <li><strong>ダッシュボード：</strong> AI 推奨アクション（［詳細→］でディール詳細へ）、最近の活動、月別のディール内訳（直近12か月）、AI メール下書きの状況など。</li>
+              <li><strong>ダッシュボード：</strong> クラゲくんのおすすめ（［詳細→］でディール詳細へ）、最近の活動、月別のディール内訳（直近12か月）、AI メール下書きの状況など。</li>
               <li><strong>顧客・会社・ディールの一覧と詳細：</strong> 編集、削除（🗑）、ディール名の変更（✏️）。ステージの変更は Slack で行います。</li>
               <li><strong>CSV の書き出し（管理者）：</strong> 顧客・ディール・メモを書き出せます。個人のお客様の会社名は空欄になります。</li>
             </ul>
@@ -368,7 +371,7 @@
             <ul class="p-guide__list">
               <li>CSV（Excel で保存したものも可）で、会社・顧客・ディール（Salesforce などから書き出した CSV も使えます）をまとめて取り込めます。画面から見本の CSV をダウンロードできます。</li>
               <li>「担当者メール」の列にメンバーの Slack のプロフィールに登録したメールアドレスを入れると、その人の担当になります。空欄や一致しないときは、取り込んだ管理者の担当になり、結果画面に表示されます。</li>
-              <li>取り込む前に「新規 N 件／すでにあるもの M 件」を確認できます。途中でエラーがあれば、取り込みは丸ごと取り消されます。</li>
+              <li>取り込む前に「新規 12 件／すでにあるもの 3 件」のように件数を確認できます。途中でエラーがあれば、取り込みは丸ごと取り消されます。</li>
               <li>1回に取り込めるのは、種類ごとに1,000行までです。</li>
             </ul>
           </div>
@@ -419,7 +422,7 @@
           <p class="p-guide__cmd-ttl" style="margin-bottom: calc(14 * var(--u));">新しい人が使い始めたとき</p>
           <ul class="p-guide__list">
             <li>プランの基本人数の範囲内なら、すぐに使えます。管理者には「〇〇さんが使い始めました」と通知が届きます。</li>
-            <li>基本人数を超える人は、管理者が許可するまで使えません。本人には「利用には管理者の許可が必要です。依頼を送りました。」と案内が出て、管理者には［許可する］ボタン付きの通知が届きます。許可すると、本人に「ご利用が許可されました！」と届きます。</li>
+            <li>基本人数を超える人は、管理者が許可するまで使えません。本人には「利用には管理者の許可が必要です。依頼を送りました。」と案内が出て、管理者には「〇〇さんがクラゲの利用を使おうとしています」と［許可する］ボタン付きの通知が届きます。許可すると、本人に「ご利用が許可されました！」と届きます。</li>
             <li>追加料金がかかる場合は、［許可する］を押したときに金額の確認が出ます。</li>
             <li>無料期間中は、人数に関係なく誰でもすぐに使えます。基本人数を超えたときは、管理者にお知らせだけが届きます。</li>
             <li>退職した人の担当は、CSV の「担当者メール」の列で付け替えられます（<a href="#ch9">9章</a>）。</li>
@@ -436,7 +439,7 @@
             <p class="p-guide__cmd-ttl" style="margin-bottom: calc(14 * var(--u));"><code style="font-size: calc(24 * var(--u));">/setting</code> でできること</p>
             <ul class="p-guide__list">
               <li>プランの状況（無料期間の期限、契約中のプラン、解約予定の日）</li>
-              <li>メール連携（取り込みアドレス）、ログインキーの発行、見本データの片づけ、「はじめかた」の表示の切り替え</li>
+              <li>AI返信支援の ON / OFF、メール連携（取り込みアドレス）、ログインキーの発行、サンプルデータの片づけ、「はじめかた」の表示の切り替え</li>
               <li>（管理者）送信元メール、営業方針、AI の一時停止、解約</li>
             </ul>
           </div>
@@ -447,13 +450,13 @@
               <table class="c-doc-table" style="min-width: 560px;">
                 <thead><tr><th>プラン</th><th>月額</th><th>年額</th><th>人数</th></tr></thead>
                 <tbody>
-                  <tr><td style="font-weight:700; white-space:nowrap;">PERSONAL</td><td>¥2,980</td><td>¥29,800</td><td style="color: var(--color-gray-text);">1名まで</td></tr>
-                  <tr><td style="font-weight:700; white-space:nowrap;">TRIO</td><td>¥5,980（4人目から+¥2,000）</td><td>¥59,800</td><td style="color: var(--color-gray-text);">3名（7名まで追加可）</td></tr>
-                  <tr><td style="font-weight:700; white-space:nowrap;">TEAM</td><td>¥14,980</td><td>¥149,800</td><td style="color: var(--color-gray-text);">10名まで</td></tr>
+                  <tr><td style="font-weight:700; white-space:nowrap;">PERSONAL</td><td>¥2,980</td><td>¥29,800</td><td style="color: var(--color-gray-text);">1人まで</td></tr>
+                  <tr><td style="font-weight:700; white-space:nowrap;">TRIO</td><td>¥5,980（4人目から+¥2,000）</td><td>¥59,800</td><td style="color: var(--color-gray-text);">3人（7人まで追加可）</td></tr>
+                  <tr><td style="font-weight:700; white-space:nowrap;">TEAM</td><td>¥14,980</td><td>¥149,800</td><td style="color: var(--color-gray-text);">10人まで</td></tr>
                 </tbody>
               </table>
             </div>
-            <p class="p-guide__caption">11名以上はお問い合わせください。価格はすべて税別で、決済時に消費税10%が加わります。年額は10か月分の料金です。TRIO の追加1人ごとの¥2,000は、年額プランでも毎月のご請求です。</p>
+            <p class="p-guide__caption">11人以上はお問い合わせください。価格はすべて税別で、決済時に消費税10%が加わります。年額は10か月分の料金です。TRIO の追加1人ごとの¥2,000は、年額プランでも毎月のご請求です。</p>
           </div>
 
           <div class="c-card">
@@ -462,17 +465,17 @@
               <li>管理者が Web の設定画面からいつでも変えられます。</li>
               <li>上のプランへの変更と、月額から年額への変更は、すぐに切り替わり、残りの期間の差額を日割りでご請求します。</li>
               <li>下のプランへの変更は次の請求日から、年額から月額への変更は次の更新日から切り替わります（それまでの期間の返金はありません）。</li>
-              <li>予約した変更は、切り替わる日まで設定画面から取り消せます。</li>
+              <li>予約した変更は、切り替わる日まで設定画面の［予約を取り消す］から取り消せます。</li>
             </ul>
           </div>
 
           <div class="c-card">
             <p class="p-guide__cmd-ttl" style="margin-bottom: calc(14 * var(--u));">人数の数え方と追加料金</p>
             <ul class="p-guide__list">
-              <li>人数は、その月にクラゲを使った人（メッセージ・ボタン・コマンド）で数えます。朝のブリーフィングを受け取っただけの人は数えません。</li>
+              <li>人数は、その月にクラゲディールを使った人（メッセージ・ボタン・コマンド）で数えます。朝のブリーフィングを受け取っただけの人は数えません。</li>
               <li>基本人数分の料金は前払いです。TRIO の4〜7人目の追加分は、使った月の分を翌月に後払いでご請求します（日割りはありません）。</li>
               <li>基本人数を超えて使う人がいる場合、その人の利用には管理者の許可が必要です。許可するときに追加料金が表示されるので、知らないうちに増えることはありません。</li>
-              <li>追加できる人数の上限は TRIO のみ7人まで（PERSONAL・TEAM には追加の枠がありません）。この上限を超える場合は、許可した月の翌月末までの期間に限りご利用いただけます。それまでに上位プランへの変更などで人数を上限の範囲内に収めていただけない場合、新しく許可された人から順に利用が一時停止します（TRIO の4〜7人目はこの対象外で、料金を払う限り続けてお使いいただけます）。</li>
+              <li>追加できる人数の上限は TRIO のみ7人まで（PERSONAL・TEAM には追加の枠がありません）。この上限を超える場合は、許可した月の翌月末までの期間に限り、追加料金なし・無料でご利用いただけます。それまでに上位プランへの変更などで人数を上限の範囲内に収めていただけない場合、新しく許可された人から順に利用が一時停止します（TRIO の4〜7人目はこの対象外で、料金を払う限り続けてお使いいただけます）。</li>
               <li>解約する月に発生した追加人数分の料金は、請求しません。</li>
             </ul>
           </div>
@@ -481,6 +484,7 @@
             <p class="p-guide__cmd-ttl" style="margin-bottom: calc(14 * var(--u));">無料期間と契約</p>
             <ul class="p-guide__list">
               <li>Slack に追加した日から14日間は無料です（1つのワークスペースにつき1回）。無料期間中は人数の制限もありません。</li>
+              <li>有料プランへの申し込みは、管理者が <code>/setting</code> の［💳 プラン］から行います。</li>
               <li>無料期間が終わっても自動で課金はされません。有料プランに申し込まなければ利用が停止します。</li>
             </ul>
           </div>
@@ -506,7 +510,7 @@
           <ul class="p-guide__list">
             <li><strong>迷ったら：</strong> ［📋 メニュー］からボタンで進めてください。ひとことで呼び出せるのは、下の「よく使うひとこと」です。使い方が分からないときは「使い方を教えて」と聞けば、クラゲくんがその場で答えます。</li>
             <li><strong>手続きの途中で別のことをしたい：</strong> 途中でひとことを打つと「終わってから打ってください」と案内します。今の手続きを終えてからどうぞ。</li>
-            <li><strong>メモしたのに出ない：</strong> メモは、内容によって出る場所が変わります。（1）「来週火曜にMTG予定」のように先の約束を書いたメモは「予定」になり、［📅 予定一覧］と朝のブリーフィングに出ます。（2）「見積もりを出す」のようなやることは、1〜2分後に「今やること」の「📝 メモから拾ったやること」に出ます。（3）メモそのものは［📝 メモ一覧］と、顧客・ディールの詳細で見られます。どこにも見当たらないときは、担当の紐付けを確認してください。</li>
+            <li><strong>メモしたのに出ない：</strong> メモは、内容によって出る場所が変わります。（1）「来週火曜にMTG予定」のように先の約束を書いたメモは「予定」になり、［📅 予定一覧］と朝のブリーフィングに出ます。（2）「見積もりを出す」のようなやることは、1〜2分後に「今やること」の「📝 メモから拾ったやること」に出ます。（3）メモそのものは［📝 メモ一覧］と、顧客・ディールの詳細で見られます。どこにも見当たらないときは、担当の設定を確認してください。</li>
             <li><strong>画像を送った：</strong> 画像やファイルはまだ読めません。</li>
             <li><strong>要望を伝えたい：</strong> <code>/kurage</code> で開発チームに届きます。</li>
           </ul>
@@ -528,7 +532,8 @@
                 <tr><td style="font-weight:700; white-space:nowrap;">詳しく見る</td><td>「〇〇さんを教えて」「株式会社〇〇を教えて」</td><td style="color: var(--color-gray-text);">一覧から選ぶ</td></tr>
                 <tr><td style="font-weight:700; white-space:nowrap;">会社を登録</td><td>「株式会社〇〇を登録」</td><td style="color: var(--color-gray-text);">―</td></tr>
                 <tr><td style="font-weight:700; white-space:nowrap;">受注・失注</td><td>「〇〇を受注に」「〇〇を失注に」</td><td style="color: var(--color-gray-text);">―</td></tr>
-                <tr><td style="font-weight:700; white-space:nowrap;">ステージを変える</td><td>「ステージを変えたい」</td><td style="color: var(--color-gray-text);">―</td></tr>
+                <tr><td style="font-weight:700; white-space:nowrap;">ステージを変える</td><td>「ステージを変えたい」</td><td style="color: var(--color-gray-text);">ディール詳細の［ステージを変える］</td></tr>
+                <tr><td style="font-weight:700; white-space:nowrap;">担当で絞って見る</td><td>「私の担当の顧客リスト」「私の担当の会社リスト」</td><td style="color: var(--color-gray-text);">―</td></tr>
                 <tr><td style="font-weight:700; white-space:nowrap;">操作の一覧</td><td>「コマンドを教えて」</td><td style="color: var(--color-gray-text);">―</td></tr>
               </tbody>
             </table>

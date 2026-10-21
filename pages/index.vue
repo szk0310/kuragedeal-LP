@@ -63,9 +63,9 @@
             </div>
             <p class="c-lead">
               1人社長のフリーランスから、<br />
-              営業チーム10名規模の成長企業まで。<br />
-              「大手ベンダーのCRM/SFAは<br />
-              高すぎるし重すぎる。」<br />
+              営業チーム10人規模の成長企業まで。<br />
+              大企業向けの営業ツールは<br />
+              高すぎるし重すぎる。<br />
               そんな会社のために作りました。
             </p>
             <h3 class="p-teams__ribbon">このような会社にピッタリ！</h3>
@@ -76,7 +76,7 @@
               </li>
               <li>
                 <div class="p-teams__img"><img src="/lp/img/team02.png" alt="データを確認する営業担当" /></div>
-                <p>営業3人の人材会社。<br />CRMを導入したが誰も入力しない</p>
+                <p>営業3人の人材会社。<br />CRMを導入したが、<br />誰も入力しない</p>
               </li>
               <li>
                 <div class="p-teams__img"><img src="/lp/img/team03.png" alt="やることに追われる人" /></div>
@@ -97,7 +97,7 @@
             </div>
             <div class="p-benefits__list">
               <article class="p-benefits__item">
-                <p class="p-benefits__num" aria-hidden="true"><span class="p-benefits__num-big">01</span><span class="p-benefits__num-label">Features</span></p>
+                <p class="p-benefits__num" aria-hidden="true"><span class="p-benefits__num-big">01</span><span class="p-benefits__num-label">Reason</span></p>
                 <div class="p-benefits__card">
                   <img class="p-benefits__img" src="/lp/img/benefit01.png" alt="クラゲくんがメールを代筆" />
                   <h3 class="p-benefits__ttl">入力に時間を取られない</h3>
@@ -107,7 +107,7 @@
                 </div>
               </article>
               <article class="p-benefits__item p-benefits__item--reverse">
-                <p class="p-benefits__num" aria-hidden="true"><span class="p-benefits__num-big">02</span><span class="p-benefits__num-label">Features</span></p>
+                <p class="p-benefits__num" aria-hidden="true"><span class="p-benefits__num-big">02</span><span class="p-benefits__num-label">Reason</span></p>
                 <div class="p-benefits__card">
                   <img class="p-benefits__img" src="/lp/img/benefit02.png" alt="チームで協力する様子" />
                   <h3 class="p-benefits__ttl">ひとりなら月¥2,980、<br />3人のチームでも¥5,980（税別）</h3>
@@ -118,12 +118,12 @@
                 </div>
               </article>
               <article class="p-benefits__item">
-                <p class="p-benefits__num" aria-hidden="true"><span class="p-benefits__num-big">03</span><span class="p-benefits__num-label">Features</span></p>
+                <p class="p-benefits__num" aria-hidden="true"><span class="p-benefits__num-big">03</span><span class="p-benefits__num-label">Reason</span></p>
                 <div class="p-benefits__card">
                   <img class="p-benefits__img" src="/lp/img/benefit03.png" alt="クラゲくんのAIサポート" />
-                  <h3 class="p-benefits__ttl">専任の営業マンがいなくても、<br />しっかりサポート</h3>
+                  <h3 class="p-benefits__ttl">専任の営業担当がいなくても、<br />しっかりサポート</h3>
                   <p class="p-benefits__text">
-                    営業の型「MEDDPICC」に基づいて、クラゲくんが案件ごとに「決裁者と会えていますか？」「予算の根拠は？」「競合は把握していますか？」と、やさしく問いかけてくれます。経験豊富なマネジャーがいなくても、チーム全員に同じ質のコーチングが届きます。クラゲくんが、あなたの営業コーチになってくれます。
+                    営業の型「MEDDPICC」に基づいて、クラゲくんが案件ごとに「決裁者と会えていますか？」「予算の根拠は？」「競合は把握していますか？」と、やさしく問いかけてくれます。経験豊富なマネージャーがいなくても、チーム全員に同じ質のコーチングが届きます。クラゲくんが、あなたの営業コーチになってくれます。
                   </p>
                   <p class="p-benefits__box p-benefits__box--note">
                     ※ MEDDPICC（メドピック）＝ディールの抜け漏れを防ぐ営業フレームワーク。指標(Metrics)・決裁者(Economic Buyer)・選定基準(Decision Criteria)・購買プロセス(Decision
@@ -154,18 +154,18 @@
             <p class="c-lead">どのプランも、最初の14日間は無料で<br />すべての機能をお試しいただけます。<br />無料期間中は人数の制限もありません。</p>
             <div class="p-price__list">
               <article class="p-price__plan">
-                <h3 class="p-price__name" lang="en">Personal</h3>
+                <h3 class="p-price__name" lang="en">PERSONAL</h3>
                 <p class="p-price__catch">まずはあなた1人から。</p>
                 <p class="p-price__amount"><span lang="en">¥2,980</span>/ 月（税別）</p>
                 <p class="p-price__amount-annual">年額 ¥29,800（税別）</p>
                 <ul class="c-check-list c-check-list--yellow p-price__features">
-                  <li>1名まで</li>
+                  <li>1人まで</li>
                   <li>全機能</li>
                 </ul>
-                <p class="p-price__target">個人事業主、フリーランス、一人親方、1人営業窓口、営業担当1名で試したい会社</p>
+                <p class="p-price__target">個人事業主、フリーランス、一人親方、1人営業窓口、営業担当1人で試したい会社</p>
               </article>
               <article class="p-price__plan p-price__plan--popular">
-                <h3 class="p-price__name" lang="en">Trio</h3>
+                <h3 class="p-price__name" lang="en">TRIO</h3>
                 <p class="p-price__badge">おすすめ</p>
                 <img class="p-price__kurage" :src="KURAGE_ICON" alt="クラゲくん" />
                 <p class="p-price__catch">営業チーム本格スタート</p>
@@ -173,19 +173,19 @@
                 <p class="p-price__amount-sub">4人目から1人ごとに ¥2,000/月（税別・年額プランでも毎月のご請求）</p>
                 <p class="p-price__amount-annual">年額 ¥59,800（税別）</p>
                 <ul class="c-check-list c-check-list--yellow p-price__features">
-                  <li>3名（7名まで追加可）</li>
+                  <li>3人（7人まで追加可）</li>
                   <li>全機能</li>
                 </ul>
                 <p class="p-price__target">中小企業、小さな営業チーム</p>
                 <p class="p-price__note-small">マネージャーはチーム全員のディールを見られます。メンバーは自分の担当だけ。部下の進み具合を、聞いて回らずに把握できます。</p>
               </article>
               <article class="p-price__plan">
-                <h3 class="p-price__name" lang="en">Team</h3>
+                <h3 class="p-price__name" lang="en">TEAM</h3>
                 <p class="p-price__catch">チーム全員で使う</p>
                 <p class="p-price__amount"><span lang="en">¥14,980</span>/ 月（税別）</p>
                 <p class="p-price__amount-annual">年額 ¥149,800（税別）</p>
                 <ul class="c-check-list c-check-list--yellow p-price__features">
-                  <li>10名まで</li>
+                  <li>10人まで</li>
                   <li>全機能</li>
                 </ul>
                 <p class="p-price__target">8〜10人の営業チーム</p>
@@ -203,10 +203,11 @@
             </div>
             <div class="p-price__note">
               <ul>
-                <li>11名以上のチームはお問い合わせください。</li>
+                <li>11人以上のチームはお問い合わせください。</li>
                 <li>価格はすべて税別です。決済時に消費税10%が加わります。</li>
+                <li>AI機能の利用には月ごとの上限があります。上限に達した場合は、追加の利用枠（¥1,000単位）をその場で購入できます。</li>
                 <li>年額は10か月分の料金です（2か月分お得）。</li>
-                <li>人数は、その月にクラゲを使った人（メッセージ・ボタン・コマンド）で数えます。朝のブリーフィングを受け取っただけの人は数えません。</li>
+                <li>人数は、その月にクラゲディールを使った人（メッセージ・ボタン・コマンド）で数えます。朝のブリーフィングを受け取っただけの人は数えません。</li>
                 <li>TRIO の追加分（4〜7人目）は、使った月の分を翌月にご請求します。追加料金が発生する人は、管理者が許可してから使えるようになります。</li>
                 <li>基本人数は PERSONAL 1人・TRIO 3人・TEAM 10人です。追加できる人数の上限は TRIO のみ7人まで（PERSONAL・TEAM に追加の枠はありません）。上限を超える場合は、許可した月の翌月末までの期間に限りご利用いただけ、その後は上位プランへの変更が必要です。</li>
                 <li>無料期間のあとに有料プランへ申し込まない場合、利用は停止されます（自動で課金はされません）。</li>
@@ -310,10 +311,10 @@
               <li class="p-issue__item">
                 <div class="p-issue__fig">
                   <span class="p-issue__num" aria-hidden="true">03</span>
-                  <img src="/lp/img/issue03.png" alt="手が回らないマネジャー" />
+                  <img src="/lp/img/issue03.png" alt="手が回らないマネージャー" />
                 </div>
                 <div class="p-issue__body">
-                  <h3 class="p-issue__ttl">マネジャーが足りない</h3>
+                  <h3 class="p-issue__ttl">マネージャーが足りない</h3>
                   <p class="p-issue__text">1 人で全員は見られない。<br />良い問いかけを全員に<br />毎日は無理。</p>
                 </div>
               </li>
@@ -328,13 +329,13 @@
               <h2 class="c-sec-ttl__ja">クラゲディールが返信を代筆</h2>
             </div>
             <p class="c-lead">
-              営業マネジャーにとって、<br />
+              営業マネージャーにとって、<br />
               意外と時間を取られるのがメール返信。<br />
               クラゲディールなら返信業務の<br />
               負担を軽くします。
             </p>
             <div class="p-feature__problem">
-              <p>毎日5〜10通、1通5〜10分。<br />メール返信だけで、月30〜60時間。<br />その時間を、若手との対話や<br />新規開拓に使えたら…。</p>
+              <p>毎日5〜10通、1通5〜10分。<br />メール返信だけで、月8〜30時間。<br />その時間を、若手との対話や<br />新規開拓に使えたら…。</p>
               <img class="p-feature__man" src="/lp/img/feature-man.png" alt="疲れた様子の人" />
             </div>
             <div class="p-feature__solution">
@@ -353,11 +354,11 @@
                 </li>
                 <li>
                   <h4>Slackで確認、ワンクリックで送信</h4>
-                  <p>そのまま送る / 編集する / 送らない、をボタンで判断。</p>
+                  <p>［👍 このまま送信］［✍️ 修正して送信］［❌ 送らない］［📞 自分で対応］から選ぶだけ。</p>
                 </li>
                 <li>
                   <h4>自社アドレスから送信</h4>
-                  <p>お客様にはいつもどおり営業マネジャー本人からの返信に見えます。</p>
+                  <p>お客様にはいつもどおり営業マネージャー本人からの返信に見えます。</p>
                 </li>
               </ol>
               <p class="p-feature__result"><span>メールの返信が、ぐっと短い時間で済みます。</span></p>
@@ -417,27 +418,28 @@ const faqs = [
   { q: '何人まで使えますか？', a: 'TRIO は3人から1人ずつ追加でき（1人 月¥2,000（税別）・7人まで）、8〜10人なら TEAM がお得です。11人以上は、お問い合わせください。' },
   { q: '途中でプランを変えられますか？', a: 'はい、管理者が Web の設定画面からいつでも変えられます。上のプランや年額へはすぐに切り替わり、差額は日割りでご請求します。下のプランや月額へは、次の請求日（年額は次の更新日）から切り替わります。' },
   { q: '既存のSlackワークスペースに導入できますか？', a: 'はい。既存の Slack ワークスペースに「クラゲディールを追加」ボタン 1 つで完了します。新しいワークスペースを作る必要はありません。' },
-  { q: 'インストールしたのに、サイドバーにアプリが出てきません', a: 'Slack 画面上部の検索窓（または Cmd / Ctrl + K）に「クラゲディール」（英字 kuragedeal でも可）と入力し、表示されたアプリを選んでください。クラゲディールとの DM が開き、サイドバーに常駐します。あとは、DM の［📋 メニュー］を押すだけです。はじめにクラゲくんからあいさつのメッセージが届きます。反映が遅いときは Slack を再読み込み（Cmd / Ctrl + R）してください。なお、ワークスペースへの追加（インストール）は管理者が 1 回行えば完了で、メンバーの個別インストールは不要です。' },
+  { q: 'インストールしたのに、サイドバーにアプリが出てきません', a: 'Slack 画面上部の検索窓（または Cmd / Ctrl + K）に「クラゲディール」（英字 kuragedeal でも可）と入力し、表示されたアプリを選んでください。クラゲディールとの DM が開き、サイドバーに常駐します。はじめにクラゲくんからあいさつのメッセージが届きます。あとは、DM の［📋 メニュー］を押すだけです。反映が遅いときは Slack を再読み込み（Cmd / Ctrl + R）してください。なお、ワークスペースへの追加（インストール）は管理者が 1 回行えば完了で、メンバーの個別インストールは不要です。' },
   { q: 'Slackを使っていない会社でも使えますか？', a: 'クラゲディールは Slack ワークスペースが前提です。Slack の無料プランでも導入できますので、まず Slack を導入していただくことをお勧めします。' },
   { q: 'データのセキュリティは大丈夫ですか？', a: 'データは Google Cloud Platform 上で管理され、通信は SSL/TLS で暗号化されています。データは会社ごとに分けて保管され、ほかの会社からは見えません。お客様の営業データが AI の学習に使用されることはありません。' },
   { q: '他のメンバーに自分の営業データを見られませんか？', a: 'いいえ。クラゲディールは DM（クラゲディール App との個別チャット）で使う、あなた専用のプライベートな営業アシスタントです。あなたの入力もクラゲの回答も、ほかの人には見えません。さらにデータ自体も担当者ごとに分離されており、一般メンバーは自分が担当するディール・顧客のみ閲覧できます（マネージャーはチーム全体）。設定や契約の変更は管理者だけが行えます。' },
   { q: 'AI が提案するディール確度はどのように計算されますか？', a: '活動記録と MEDDPICC 情報（決裁者との接触 / 予算の根拠確認 / 競合の把握など）を AI が分析して更新します。/coach で情報を入力するたびに計算し直されます。最後の活動から日がたつほど、少しずつ下がります。' },
   { q: '解約はどうすればよいですか？', a: 'Web の設定画面の「解約する」か、Slack の /setting の「解約する」からいつでもできます（管理者のみ）。契約期間の終わりまで今のまま使え、その後利用が停止します。データは解約後30日間保管し、その間に再開すればそのまま引き継げます。年額を含め、途中解約の返金はありません。' },
   { q: '無料期間が終わったらどうなりますか？', a: '自動で課金されることはありません。有料プランに申し込まなければ利用が停止します。停止中も管理者は設定画面から申し込め、データの CSV 書き出しもできます。' },
-  { q: '使い方が分からないときは？', a: 'Slack のクラゲディールに「使い方を教えて」と聞けば、その場で答えます。' },
+  { q: '使い方が分からないときは？', a: 'Slack のクラゲディールに「使い方を教えて」と送ると、メニューとコマンドの一覧が出ます。具体的に聞けば、その場で答えます。' },
   { q: 'メモからやることを拾うとは？', a: '書いたメモの中から、あなたがこれからやること（「見積もりを出す」「資料を送る」など）をクラゲくんが拾い、「今やること」と顧客・ディールの詳細に並べます。相手がやることや、もう済んだことは拾いません。済んだら［✅ 済んだ］を押すだけです。' },
   { q: '今使っている顧客リストを移せますか？', a: '管理者が CSV ファイルで会社・顧客・ディールをまとめて取り込めます。見本の CSV をダウンロードして、その形に合わせてください。「担当者メール」の列にメンバーのメールアドレスを入れると、その人の担当になります。' },
   { q: '使い方を覚えられるか不安です', a: '使い始めの14日間は、毎朝のブリーフィングに「はじめかた」が届きます。迷ったら「使い方を教えて」と聞けば、クラゲくんがその場で答えます。' },
-  { q: '人数はどう数えますか？', a: 'その月にクラゲを使った人（メッセージを送った・ボタンを押した・コマンドを使った人）を数えます。朝のブリーフィングを受け取っただけの人は数えません。' },
+  { q: '人数はどう数えますか？', a: 'その月にクラゲディールを使った人（メッセージを送った・ボタンを押した・コマンドを使った人）を数えます。朝のブリーフィングを受け取っただけの人は数えません。' },
   { q: 'メンバーを増やすとどうなりますか？', a: 'プランの人数の範囲内なら、新しい人はすぐに使えます。超える人は、管理者が許可すると使えるようになります。許可するときに追加料金が表示されるので、知らないうちに料金が増えることはありません。' },
   { q: '追加分はいつ請求されますか？', a: '使った月の分を、翌月の請求に加えます。月の途中から使い始めても日割りにはせず、1人分として数えます。' },
   { q: '無料期間中は何人で試せますか？', a: '人数の制限はありません。チーム全員でお試しください。' },
+  { q: 'AIの利用に上限はありますか？', a: 'はい、月ごとに利用上限があります。上限に達すると、追加の利用枠（¥1,000単位）をその場で購入できます（Slack の /usage で現在の利用状況を確認できます）。' },
 ]
 
 // ── SEO / AIO メタ ───────────────────────────────────────
 usePageSeo({
   path: '/',
-  title: 'クラゲディール — Slackだけで完結するAI営業CRM',
+  title: 'クラゲディール — Slackだけで完結するAI営業支援ツール',
   description:
     'Slack のボタンで、営業の記録が完了。AI が営業コーチとして毎朝ブリーフィングし、ディール確度・次の一手・メール下書きを支援します。ひとりから小さな営業チームまで。PERSONAL ¥2,980/月（税別）〜。14日間無料でお試しいただけます。',
 })
@@ -450,11 +452,11 @@ const softwareLd = {
   operatingSystem: 'Slack',
   url: 'https://kuragedeal.ai',
   description:
-    'Slack のボタンで、営業の記録が完了する AI 営業 CRM。AI が MEDDPICC コーチング・ディール確度の算出・メール下書きを支援する。',
+    'Slack のボタンで、営業の記録が完了する AI 営業支援ツール。AI が MEDDPICC コーチング・ディール確度の算出・メール下書きを支援する。',
   offers: [
-    { '@type': 'Offer', name: 'PERSONAL', price: 2980, priceCurrency: 'JPY', description: '1名まで。14日間の無料トライアル付き。' },
-    { '@type': 'Offer', name: 'TRIO', price: 5980, priceCurrency: 'JPY', description: '3名まで（4名目から1名ごとに+¥2,000、7名まで）。14日間の無料トライアル付き。' },
-    { '@type': 'Offer', name: 'TEAM', price: 14980, priceCurrency: 'JPY', description: '10名まで。14日間の無料トライアル付き。' },
+    { '@type': 'Offer', name: 'PERSONAL', price: 2980, priceCurrency: 'JPY', description: '1人まで。14日間の無料トライアル付き。' },
+    { '@type': 'Offer', name: 'TRIO', price: 5980, priceCurrency: 'JPY', description: '3人まで（4人目から1人ごとに+¥2,000、7人まで）。14日間の無料トライアル付き。' },
+    { '@type': 'Offer', name: 'TEAM', price: 14980, priceCurrency: 'JPY', description: '10人まで。14日間の無料トライアル付き。' },
   ],
   publisher: { '@type': 'Organization', name: '株式会社shiro' },
 }

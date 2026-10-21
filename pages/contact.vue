@@ -4,12 +4,12 @@
       <div class="c-sec-ttl">
         <img :src="KURAGE_ICON" alt="クラゲディール" class="p-contact__head-icon" />
         <h1 class="c-sec-ttl__ja">
-          {{ isEnterprise ? '11 人以上のご相談' : 'お問い合わせ' }}
+          {{ isEnterprise ? '11人以上のご相談' : 'お問い合わせ' }}
         </h1>
       </div>
       <p class="c-lead" style="margin-top: calc(24 * var(--u));">
         <template v-if="isEnterprise">
-          11 人以上のチーム・カスタマイズが必要な企業向けの個別ご相談窓口です。<br />
+          11人以上のチーム・カスタマイズが必要な企業向けの個別ご相談窓口です。<br />
           数営業日以内に鈴木より直接ご連絡いたします。
         </template>
         <template v-else>
@@ -23,9 +23,9 @@
         <!-- Success state -->
         <div v-if="submitted" class="p-contact__success">
           <img :src="KURAGE_ICON" alt="クラゲディール" class="p-contact__success-icon kurage-float" />
-          <p class="p-contact__success-ttl">送信完了しました！</p>
+          <p class="p-contact__success-ttl">送信が完了しました。</p>
           <p class="p-contact__success-text">
-            お問い合わせありがとうございます<br />
+            お問い合わせありがとうございます。<br />
             <!-- E-231【不具合】: 11人以上のご相談以外（一般/取材/不具合報告）でも
                  一律「鈴木より」と個人名を出していた。種別に応じて出し分ける。 -->
             <template v-if="isEnterprise">数営業日以内に鈴木より直接ご連絡いたします。</template>
@@ -39,7 +39,7 @@
           <div class="c-form-group">
             <label class="c-form-label">お問い合わせ種別</label>
             <select v-model="form.subject" class="c-form-input">
-              <option value="enterprise">11 人以上のご相談</option>
+              <option value="enterprise">11人以上のご相談</option>
               <option value="general">一般的なお問い合わせ</option>
               <option value="press">取材・PR・パートナーシップ</option>
               <option value="bug">不具合報告</option>
@@ -48,8 +48,8 @@
 
           <div class="c-form-row c-form-row--2" style="margin-bottom: calc(36 * var(--u));">
             <div>
-              <label class="c-form-label">会社名 <span class="c-form-required">*</span></label>
-              <input v-model="form.company" type="text" required placeholder="株式会社〇〇" class="c-form-input" />
+              <label class="c-form-label">会社名 <span class="c-form-optional">（任意）</span></label>
+              <input v-model="form.company" type="text" placeholder="株式会社〇〇（個人のお客様は空欄で可）" class="c-form-input" />
             </div>
             <div>
               <label class="c-form-label">お名前 <span class="c-form-required">*</span></label>
@@ -113,7 +113,7 @@
           </button>
 
           <p class="c-form-note">
-            送信することで、プライバシーポリシーに同意したものとみなします。
+            送信することで、<NuxtLink to="/legal/privacy" style="text-decoration: underline;">プライバシーポリシー</NuxtLink>に同意したものとみなします。
           </p>
         </form>
 
@@ -147,7 +147,7 @@ usePageSeo({
   path: '/contact',
   title: 'お問い合わせ | クラゲディール',
   description:
-    'クラゲディール（株式会社shiro）へのお問い合わせ。11 人以上のご相談、一般的なご質問、取材のご依頼などを受け付けています。',
+    'クラゲディール（株式会社shiro）へのお問い合わせ。11人以上のご相談、一般的なご質問、取材のご依頼などを受け付けています。',
 })
 
 const route = useRoute()
@@ -270,7 +270,7 @@ async function submit() {
         currentCrm: form.currentCrm,
         message: enrichedMessage,
         // subject を明示的に送る → API 側で一般のお問い合わせとの分岐に使う。
-        // これにより /contact 経由の 11 人以上のご相談者に「Slack インストールリンク」が
+        // これにより /contact 経由の 11人以上のご相談者に「Slack インストールリンク」が
         // 誤送信される事故を防ぐ。
         subject: form.subject,
         turnstileToken,
