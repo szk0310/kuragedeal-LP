@@ -60,9 +60,6 @@ main section[id] {
 	margin-top: calc(28 * var(--u));
 }
 .p-guide__banner-actions .c-btn {
-	width: auto;
-	display: inline-flex;
-	padding: 0 calc(40 * var(--u));
 	margin-top: 0;
 }
 .p-guide__banner-secondary {
@@ -75,6 +72,24 @@ main section[id] {
 	.p-guide__banner-secondary:hover {
 		color: var(--color-accent);
 	}
+}
+
+/*
+ * ガイド導線(2026-10-29・オッパ指摘で追加): c-btn の ::before（区切り線）・
+ * ::after（矢印アイコン）は、文中に「↓」「→」を書くボタンと組み合わせると
+ * 矢印が二重になったり、幅可変のボタンで区切り線が文字や外側に浮く。
+ * c-btn 本体（他ページで使用）には手を入れず、この2つのボタンにだけ
+ * 装飾を外した控えめ版を適用する。
+ */
+.c-btn.c-btn--plain {
+	width: auto;
+	display: inline-flex;
+	justify-content: center;
+	padding: 0 calc(40 * var(--u));
+}
+.c-btn.c-btn--plain::before,
+.c-btn.c-btn--plain::after {
+	content: none;
 }
 
 /* 3ステップの全体像（①②③の小さなマス） */

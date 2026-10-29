@@ -10,7 +10,7 @@
           Slack を開く前に、このページの ①〜③ を見ておくと迷いません。
         </p>
         <div class="p-guide__banner-actions">
-          <a href="#setup" class="c-btn">①〜③を見る ↓</a>
+          <a href="#setup" class="c-btn c-btn--plain">①〜③を見る ↓</a>
           <a href="slack://open" class="p-guide__banner-secondary">Slackを開く →</a>
         </div>
       </div>
@@ -233,7 +233,7 @@
           毎朝9時に、今日やることが DM に届きます。夕方5時には一日の振り返り、月曜の朝には先週のまとめ・今週のスタートが届きます。届いたカードのボタン（［✅ 完了］［これにする］など）を押せば、そのまま次の一手に進めます。
         </p>
         <div style="margin-top: calc(40 * var(--u)); text-align: center;">
-          <a href="slack://open" class="c-btn">Slackを開いて始める →</a>
+          <a href="slack://open" class="c-btn c-btn--plain">Slackを開いて始める →</a>
         </div>
       </section>
 
