@@ -135,10 +135,22 @@
               <SlackBotLine name="クラゲディール" :bot-badge="true" time="9:00">
                 <p class="font-bold mb-2">メニュー　やりたいことを選んでください</p>
                 <div class="flex flex-col gap-2">
-                  <span class="block w-full text-center border border-gray-300 bg-white rounded-lg px-4 py-2.5 text-sm font-semibold text-gray-800">👤 顧客を登録</span>
-                  <span class="block w-full text-center border-2 border-kurage-400 bg-kurage-50 rounded-lg px-4 py-2.5 text-sm font-bold text-kurage-800">📝 活動をメモ</span>
-                  <span class="block w-full text-center border border-gray-300 bg-white rounded-lg px-4 py-2.5 text-sm font-semibold text-gray-800">📊 ディールを登録</span>
-                  <span class="block w-full text-center border border-gray-300 bg-white rounded-lg px-4 py-2.5 text-sm font-semibold text-gray-800">🎯 今やること</span>
+                  <div class="flex flex-wrap gap-2">
+                    <span class="border border-gray-300 bg-white rounded-lg px-3 py-1.5 text-sm font-semibold text-gray-800">👤 顧客を登録</span>
+                    <span class="border border-gray-300 bg-white rounded-lg px-3 py-1.5 text-sm font-semibold text-gray-800">📊 ディールを登録</span>
+                    <span class="border-2 border-kurage-400 bg-kurage-50 rounded-lg px-3 py-1.5 text-sm font-bold text-kurage-800">📝 活動をメモ</span>
+                  </div>
+                  <div class="flex flex-wrap gap-2">
+                    <span class="border border-gray-300 bg-white rounded-lg px-3 py-1.5 text-sm font-semibold text-gray-800">👤 顧客一覧</span>
+                    <span class="border border-gray-300 bg-white rounded-lg px-3 py-1.5 text-sm font-semibold text-gray-800">🏢 会社一覧</span>
+                    <span class="border border-gray-300 bg-white rounded-lg px-3 py-1.5 text-sm font-semibold text-gray-800">📊 ディール一覧</span>
+                    <span class="border border-gray-300 bg-white rounded-lg px-3 py-1.5 text-sm font-semibold text-gray-800">📅 予定一覧</span>
+                    <span class="border border-gray-300 bg-white rounded-lg px-3 py-1.5 text-sm font-semibold text-gray-800">📝 メモ一覧</span>
+                  </div>
+                  <div class="flex flex-wrap gap-2">
+                    <span class="border border-gray-300 bg-white rounded-lg px-3 py-1.5 text-sm font-semibold text-gray-800">🎯 今やること</span>
+                    <span class="border border-gray-300 bg-white rounded-lg px-3 py-1.5 text-sm font-semibold text-gray-800">🖥️ ダッシュボード</span>
+                  </div>
                 </div>
               </SlackBotLine>
               <SlackBotLine name="あなた" :is-user="true" time="9:00"><p class="text-gray-400">（「📝 活動をメモ」を押す）</p></SlackBotLine>
