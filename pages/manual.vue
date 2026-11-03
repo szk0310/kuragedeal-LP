@@ -391,7 +391,7 @@
               <tr><td style="font-weight:700;">見られる顧客・ディール</td><td>自分が担当のもの</td><td>チーム全員のもの</td></tr>
               <tr><td style="font-weight:700;">見られるメモ</td><td>自分のディールに付いたメモと、自分が書いたメモ</td><td>全員のメモ</td></tr>
               <tr><td style="font-weight:700;">メモから拾ったやること</td><td>自分のもの（済ませられるのは自分のものだけ）</td><td>詳細画面で全員分を見られる（済ませるのは書いた本人）</td></tr>
-              <tr><td style="font-weight:700;">設定（送信元メール・営業方針・AIの一時停止）</td><td style="color: var(--color-gray-text);">―</td><td>できる</td></tr>
+              <tr><td style="font-weight:700;">設定（AI返信支援の ON / OFF・営業方針・送信元メール）</td><td style="color: var(--color-gray-text);">―</td><td>できる</td></tr>
               <tr><td style="font-weight:700;">契約・解約、CSV の書き出しと取り込み、会社の削除</td><td style="color: var(--color-gray-text);">―</td><td>できる</td></tr>
             </tbody>
           </table>
@@ -441,8 +441,8 @@
             <p class="p-guide__cmd-ttl" style="margin-bottom: calc(14 * var(--u));"><code style="font-size: calc(24 * var(--u));">/setting</code> でできること</p>
             <ul class="p-guide__list">
               <li>プランの状況（無料期間の期限、契約中のプラン、解約予定の日）</li>
-              <li>AI返信支援の ON / OFF、メール連携（取り込みアドレス）、ログインキーの発行、サンプルデータの片づけ、「はじめかた」の表示の切り替え</li>
-              <li>（管理者）送信元メール、営業方針、AI の一時停止、解約</li>
+              <li>メール連携（取り込みアドレス）、ログインキーの発行、サンプルデータの片づけ、「はじめかた」の表示の切り替え</li>
+              <li>（管理者）AI返信支援の ON / OFF、営業方針、送信元メール、メンバー管理、解約</li>
             </ul>
           </div>
 

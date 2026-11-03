@@ -75,7 +75,7 @@ const commandGroups = [
     { cmd: '/usage', desc: 'AI利用状況・プラン確認' },
   ]},
   { group: '設定・その他', cmds: [
-    { cmd: '/setting', desc: 'ログインキー・メール連携・営業方針などの設定' },
+    { cmd: '/setting', desc: 'ログインキー・メール連携などの設定（営業方針などは管理者）' },
     { cmd: '/kurage', desc: '改善要望を開発チームに送る' },
   ]},
 ]
