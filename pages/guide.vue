@@ -360,7 +360,7 @@
           <div class="c-card p-guide__feature-card"><span class="p-guide__feature-icon">🧭</span><p class="c-step__text" style="margin-top:0;"><strong>よく使うひとこと</strong> — 「メニュー」「今やること」など、ボタンと同じ画面を開くショートカットの一覧。</p></div>
           <div class="c-card p-guide__feature-card"><span class="p-guide__feature-icon">📧</span><p class="c-step__text" style="margin-top:0;"><strong>AI返信支援</strong> — 顧客メールの返信下書きの ON / OFF。</p></div>
           <div class="c-card p-guide__feature-card"><span class="p-guide__feature-icon">📋</span><p class="c-step__text" style="margin-top:0;"><strong>営業方針</strong> — クラゲの提案トーンを指定（例：「押し売りしない・課題解決型」）。</p></div>
-          <div class="c-card p-guide__feature-card"><span class="p-guide__feature-icon">✉️</span><p class="c-step__text" style="margin-top:0;"><strong>送信元メールアドレス</strong> — 返信を送るときに使う、会社の送信元アドレス（管理者が設定）。</p></div>
+          <div class="c-card p-guide__feature-card"><span class="p-guide__feature-icon">✉️</span><p class="c-step__text" style="margin-top:0;"><strong>送信元メールアドレス</strong> — 返信を会社のアドレスから送りたいときに設定します。設定しなくても送れます。</p></div>
           <div class="c-card p-guide__feature-card"><span class="p-guide__feature-icon">📨</span><p class="c-step__text" style="margin-top:0;"><strong>メール連携（顧客メールの取り込み）</strong> — あなた専用の取り込みアドレスが表示されます（<strong>下に詳しい手順</strong>）。</p></div>
           <div class="c-card p-guide__feature-card"><span class="p-guide__feature-icon">🌐</span><p class="c-step__text" style="margin-top:0;"><strong>Webダッシュボード</strong> — 個人ログインキーの発行（下に手順）。</p></div>
           <div class="c-card p-guide__feature-card" style="grid-column: 1 / -1;"><span class="p-guide__feature-icon">🎓</span><p class="c-step__text" style="margin-top:0;"><strong>サンプルデータ</strong> — はじめは<strong>サンプルデータが入った状態</strong>で、一覧・ディール確度・次の一手を<strong>すぐ体験</strong>できます。準備ができたら<strong>「🧹 サンプルを削除」</strong>で片づけてください。ご自身のデータを登録すると、サンプルは自動で片づきます。削除したサンプルは元に戻せません。</p></div>
@@ -415,11 +415,11 @@
           </div>
           <div class="c-card c-step">
             <span class="c-step__num">3</span>
-            <p class="c-step__text" style="margin-top: calc(10 * var(--u));"><strong>Slack で返信を承認</strong><br />クラゲが <strong>返信の下書き</strong>を Slack の DM に届けます。<strong>［👍 このまま送信］［✍️ 修正して送信］［❌ 送らない］［📞 自分で対応］</strong>から選ぶだけ。承認すると、あなたの<strong>送信元アドレスから</strong>返信が送られます。</p>
+            <p class="c-step__text" style="margin-top: calc(10 * var(--u));"><strong>Slack で返信を承認</strong><br />クラゲが <strong>返信の下書き</strong>を Slack の DM に届けます。<strong>［👍 このまま送信］［✍️ 修正して送信］［❌ 送らない］［📞 自分で対応］</strong>から選ぶだけ。承認すると、<strong>あなたの名前で</strong>返信が送られます。お客様がそのまま返信すると、あなたのメールに届き、クラゲにも取り込まれます。</p>
           </div>
         </div>
         <div class="c-info--accent" style="margin-top: calc(28 * var(--u)); font-size: calc(22 * var(--u));">
-          <p><strong>事前に1つだけ：</strong> 送信元のメールアドレスは、管理者が <code>/setting</code> の「送信元メール」で設定します。<br /><strong>中身の無いメールには返信案を作りません：</strong> テスト送信や自動通知など実質的な問い合わせが無いメールは、返信の下書きは作りません（活動メモには記録されます）。</p>
+          <p><strong>差出人の表示：</strong> 「あなたの名前（会社名）via クラゲディール」と表示されます。送信元の設定をしなくても送れます。<br /><strong>会社のアドレスから送るとき：</strong> 管理者が <code>/setting</code> の「送信元メール」にアドレスを入れ、届いた確認メールで確認します。以後はそのアドレスから届きます。<br /><strong>中身の無いメールには返信案を作りません：</strong> テスト送信や自動通知など実質的な問い合わせが無いメールは、返信の下書きは作りません（活動メモには記録されます）。</p>
         </div>
       </section>
 
@@ -477,7 +477,7 @@ const autoFeatures = [
   { icon: '🧠', title: 'ディール確度の自動更新', desc: 'メモするたびに、AIが営業の型（MEDDPICC）に沿ってディール確度を計算し直します。' },
   { icon: '⚠️', title: '停滞検知', desc: '14日うごきのない案件は確度がそっと下がり、長期停滞も自動で通知。見落としに気づけます。' },
   { icon: '🎓', title: 'AIコーチング', desc: '「ABC商事はどう？」や /coach で、MEDDPICCに沿ってクラゲがやさしく問いかけます。' },
-  { icon: '✉️', title: 'メール返信の代筆', desc: '顧客からの返信に下書きを用意。Slackでボタンを押すと、あなた本人のアドレスから送信されます。' },
+  { icon: '✉️', title: 'メール返信の代筆', desc: '顧客からの返信に下書きを用意。Slackでボタンを押すと、あなたの名前で送信されます。' },
   { icon: '📨', title: 'メール連携', desc: '顧客メールを転送すると、内容を読んで活動メモ・ディール確度に反映し、返信下書きまで届けます。' },
   { icon: '📊', title: 'パイプライン分析', desc: 'Webダッシュボードで、（管理者は）チーム全体の状況をいつでも俯瞰できます。' },
 ]
