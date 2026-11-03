@@ -369,12 +369,12 @@
         <p class="p-guide__sub-ttl">⚙️ <code style="font-size: calc(28 * var(--u));">/setting</code> でできること</p>
         <p class="p-guide__sub-lead">Slackで <code>/setting</code> をチャット入力欄に入力して送信すると、設定メニューが開きます。おもな項目は次のとおりです。（管理者）の印がある項目は、管理者にだけ表示されます。</p>
         <div class="p-guide__feature-grid">
-          <div class="c-card p-guide__feature-card"><span class="p-guide__feature-icon">🧭</span><p class="c-step__text" style="margin-top:0;"><strong>よく使うひとこと</strong> — 「メニュー」「今やること」など、ボタンと同じ画面を開くショートカットの一覧。</p></div>
+          <div class="c-card p-guide__feature-card"><span class="p-guide__feature-icon">📨</span><p class="c-step__text" style="margin-top:0;"><strong>メール連携（顧客メールの取り込み）</strong> — あなた専用の取り込みアドレスが表示されます（<strong>下に詳しい手順</strong>）。</p></div>
+          <div class="c-card p-guide__feature-card"><span class="p-guide__feature-icon">🌐</span><p class="c-step__text" style="margin-top:0;"><strong>Webダッシュボード</strong> — 個人ログインキーの発行（下に手順）。</p></div>
+          <div class="c-card p-guide__feature-card"><span class="p-guide__feature-icon">🔔</span><p class="c-step__text" style="margin-top:0;"><strong>はじめかたの表示</strong> — 使い始めの案内を出すかどうかを、自分で切り替えます。</p></div>
           <div class="c-card p-guide__feature-card"><span class="p-guide__feature-icon">📧</span><p class="c-step__text" style="margin-top:0;"><strong>AI返信支援</strong>（管理者） — 顧客メールの返信下書きの ON / OFF。</p></div>
           <div class="c-card p-guide__feature-card"><span class="p-guide__feature-icon">📋</span><p class="c-step__text" style="margin-top:0;"><strong>営業方針</strong>（管理者） — クラゲの提案トーンを指定（例：「押し売りしない・課題解決型」）。</p></div>
           <div class="c-card p-guide__feature-card"><span class="p-guide__feature-icon">✉️</span><p class="c-step__text" style="margin-top:0;"><strong>送信元メールアドレス</strong>（管理者） — 返信を会社のアドレスから送りたいときに設定します。設定しなくても送れます。</p></div>
-          <div class="c-card p-guide__feature-card"><span class="p-guide__feature-icon">📨</span><p class="c-step__text" style="margin-top:0;"><strong>メール連携（顧客メールの取り込み）</strong> — あなた専用の取り込みアドレスが表示されます（<strong>下に詳しい手順</strong>）。</p></div>
-          <div class="c-card p-guide__feature-card"><span class="p-guide__feature-icon">🌐</span><p class="c-step__text" style="margin-top:0;"><strong>Webダッシュボード</strong> — 個人ログインキーの発行（下に手順）。</p></div>
           <div class="c-card p-guide__feature-card" style="grid-column: 1 / -1;"><span class="p-guide__feature-icon">🎓</span><p class="c-step__text" style="margin-top:0;"><strong>サンプルデータ</strong> — はじめは<strong>サンプルデータが入った状態</strong>で、一覧・ディール確度・次の一手を<strong>すぐ体験</strong>できます。準備ができたら<strong>「🧹 サンプルを削除」</strong>で片づけてください。ご自身のデータを登録すると、サンプルは自動で片づきます。削除したサンプルは元に戻せません。</p></div>
         </div>
       </section>
