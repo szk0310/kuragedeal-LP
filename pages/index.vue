@@ -126,8 +126,8 @@
                     営業の型「MEDDPICC」に基づいて、クラゲくんが案件ごとに「決裁者と会えていますか？」「予算の根拠は？」「競合は把握していますか？」と、やさしく問いかけてくれます。経験豊富なマネージャーがいなくても、チーム全員に同じ質のコーチングが届きます。クラゲくんが、あなたの営業コーチになってくれます。
                   </p>
                   <p class="p-benefits__box p-benefits__box--note">
-                    ※ MEDDPICC（メドピック）＝ディールの抜け漏れを防ぐ営業フレームワーク。指標(Metrics)・決裁者(Economic Buyer)・選定基準(Decision Criteria)・購買プロセス(Decision
-                    Process)・社内手続き(Paper Process)・課題(Identify Pain)・社内推進者(Champion)・競合(Competition)の8要素で案件を見立てます。
+                    ※ MEDDPICC（メドピック）＝ディールの抜け漏れを防ぐ営業フレームワーク。予算の根拠(Metrics)・決裁者(Economic Buyer)・選定基準(Decision Criteria)・購買プロセス(Decision
+                    Process)・契約・稟議の流れ(Paper Process)・課題・悩み(Identify Pain)・社内推進者(Champion)・競合(Competition)の8要素で案件を見立てます。
                   </p>
                 </div>
               </article>

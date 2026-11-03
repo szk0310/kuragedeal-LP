@@ -303,14 +303,14 @@
             <table class="c-doc-table">
               <thead><tr><th>要素</th><th>見るところ</th></tr></thead>
               <tbody>
-                <tr><td style="font-weight:700; white-space:nowrap;">Metrics（指標）</td><td>導入でどんな効果が数字で出るか</td></tr>
-                <tr><td style="font-weight:700; white-space:nowrap;">Economic Buyer（決裁者）</td><td>最終的にお金を出すと決める人に会えているか</td></tr>
-                <tr><td style="font-weight:700; white-space:nowrap;">Decision Criteria（選定基準）</td><td>何を基準に選ぶのか</td></tr>
-                <tr><td style="font-weight:700; white-space:nowrap;">Decision Process（購買プロセス）</td><td>どんな順番・日程で決まるのか</td></tr>
-                <tr><td style="font-weight:700; white-space:nowrap;">Paper Process（社内手続き）</td><td>稟議や契約の手続きに何が必要か</td></tr>
-                <tr><td style="font-weight:700; white-space:nowrap;">Identify Pain（課題）</td><td>お客様が本当に困っていることは何か</td></tr>
-                <tr><td style="font-weight:700; white-space:nowrap;">Champion（社内推進者）</td><td>お客様の社内で推してくれる人がいるか</td></tr>
-                <tr><td style="font-weight:700; white-space:nowrap;">Competition（競合）</td><td>ほかに検討されている選択肢は何か</td></tr>
+                <tr><td style="font-weight:700; white-space:nowrap;">予算の根拠（Metrics）</td><td>導入の効果を、金額などの数字で示せるか</td></tr>
+                <tr><td style="font-weight:700; white-space:nowrap;">決裁者（Economic Buyer）</td><td>最終的にお金を出すと決める人に会えているか</td></tr>
+                <tr><td style="font-weight:700; white-space:nowrap;">選定基準（Decision Criteria）</td><td>何を基準に選ぶのか</td></tr>
+                <tr><td style="font-weight:700; white-space:nowrap;">購買プロセス（Decision Process）</td><td>どんな順番・日程で決まるのか</td></tr>
+                <tr><td style="font-weight:700; white-space:nowrap;">契約・稟議の流れ（Paper Process）</td><td>稟議や契約の手続きに何が必要か</td></tr>
+                <tr><td style="font-weight:700; white-space:nowrap;">課題・悩み（Identify Pain）</td><td>お客様が本当に困っていることは何か</td></tr>
+                <tr><td style="font-weight:700; white-space:nowrap;">社内推進者（Champion）</td><td>お客様の社内で推してくれる人がいるか</td></tr>
+                <tr><td style="font-weight:700; white-space:nowrap;">競合（Competition）</td><td>ほかに検討されている選択肢は何か</td></tr>
               </tbody>
             </table>
           </div>
