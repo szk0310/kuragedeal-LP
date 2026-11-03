@@ -131,7 +131,7 @@
           <div>
             <p class="p-guide__cmd-group-label" style="margin-bottom: calc(20 * var(--u));">たとえば「活動をメモ」する流れ</p>
             <SlackMessageMock channel-name="💬 クラゲディール（DM）">
-              <SlackBotLine name="あなた" :is-user="true" time="9:00"><p class="text-gray-400">メニュー</p></SlackBotLine>
+              <SlackBotLine name="あなた" :is-user="true" time="9:00"><p class="text-gray-400">（「📋 メニュー」を押す）</p></SlackBotLine>
               <SlackBotLine name="クラゲディール" :bot-badge="true" time="9:00">
                 <p class="font-bold mb-2">メニュー　やりたいことを選んでください</p>
                 <div class="flex flex-col gap-2">
@@ -209,7 +209,7 @@
           <!-- 個人のお客様 -->
           <div class="c-info"><span class="c-info__icon">👤</span><p>個人のお客様（個人事業主・フリーランス等）は、<strong>会社なしで登録</strong>できます。一覧には「個人のお客様」と表示されます。</p></div>
           <!-- 行き止まりゼロ -->
-          <div class="c-info"><span class="c-info__icon">🔁</span><p>どの画面にも次に押せるボタンがあるので、<strong>行き止まりになりません</strong>。最初に戻りたいときは <strong>「メニュー」</strong> と打てば、いつでもメニューが出ます。</p></div>
+          <div class="c-info"><span class="c-info__icon">🔁</span><p>どの画面にも次に押せるボタンがあるので、<strong>行き止まりになりません</strong>。最初に戻りたいときは、返事の下にある <strong>［📋 メニュー］</strong> を押してください。いつでもメニューが出ます。</p></div>
         </div>
 
         <!-- 次の一手の並び方 -->
@@ -223,7 +223,7 @@
             <li>4. <strong>✍️ 次の一手がまだないもの</strong> — クラゲのおすすめから［これにする］、または［✍️ 自分で書く］で決められます</li>
             <li>5. <strong>＋ メモから拾ったやること</strong> — メモに書いた内容をAIが読み取り、見つかったやることをリストの最後に追加します</li>
           </ol>
-          <p class="p-guide__caption">DM で「今やること」と打つと、この順で表示されます。個別のディールを深掘りしたいときは <code>/coach</code> のAIコーチングをどうぞ。</p>
+          <p class="p-guide__caption">メニューの［🎯 今やること］を押すと、この順で表示されます。個別のディールを深掘りしたいときは <code>/coach</code> のAIコーチングをどうぞ。</p>
         </div>
 
         <!-- 困ったとき -->
@@ -314,10 +314,10 @@
           </div>
           <p class="c-step__text" style="margin-top: calc(24 * var(--u));">
             クラゲディールの真価は、毎日少しずつ Slack に記録することで現れます。<br />
-            まず 1 週間、下の流れに沿って試してみてください。<strong>ほとんどボタンで進められます</strong>（一部は <code>/coach</code> などのコマンドを使います。迷ったら DM で「メニュー」と打つだけ）。
+            まず 1 週間、下の流れに沿って試してみてください。<strong>ほとんどボタンで進められます</strong>（一部は <code>/coach</code> などのコマンドを使います。迷ったら［📋 メニュー］を押してください）。
           </p>
           <p class="p-guide__note-strip" style="margin-top: calc(24 * var(--u));">
-            🔰 はじめての方は、先に <a href="#setup">① インストール</a> と <a href="#modes">② ボタンの使い方</a> に目を通すとスムーズです。慣れてきたら「よく使うひとこと」のショートカットも試してみてください。
+            🔰 はじめての方は、先に <a href="#setup">① インストール</a> と <a href="#modes">② ボタンの使い方</a> に目を通すとスムーズです。慣れてきたら、<a href="/manual#ch12">マニュアル12章</a>の「よく使うひとこと」も使えます。
           </p>
 
           <div>
