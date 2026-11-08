@@ -192,7 +192,7 @@
             <table class="c-doc-table">
               <thead><tr><th>ステージ</th><th>意味</th></tr></thead>
               <tbody>
-                <tr><td style="font-weight:700; white-space:nowrap;">⏸️ 待機</td><td>まだ動き出していない案件。メモを書くか次の一手を決めるとアプローチ中に進みます（これ以外は勝手に変えません）</td></tr>
+                <tr><td style="font-weight:700; white-space:nowrap;">⏸️ 待機</td><td>まだ動き出していない案件。次の一手を決めるとアプローチ中に、メモを書くと進行中に進みます（これ以外は勝手に変えません）</td></tr>
                 <tr><td style="font-weight:700; white-space:nowrap;">🌱 アプローチ中</td><td>お客様と接点を作っている段階</td></tr>
                 <tr><td style="font-weight:700; white-space:nowrap;">🔥 進行中</td><td>提案や見積もりなど、話が動いている段階</td></tr>
                 <tr><td style="font-weight:700; white-space:nowrap;">💤 停滞中</td><td>しばらく動きが止まっている案件。クラゲくんが「停滞にしますか？」と確認してから変わります</td></tr>
