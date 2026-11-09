@@ -360,7 +360,7 @@
           <div class="c-card">
             <p class="p-guide__cmd-ttl" style="margin-bottom: calc(14 * var(--u));">画面</p>
             <ul class="p-guide__list">
-              <li><strong>ダッシュボード：</strong> クラゲくんのおすすめ（［詳細→］でディール詳細へ）、最近の活動、月別のディール内訳（直近12か月）、AI メール下書きの状況など。</li>
+              <li><strong>ダッシュボード：</strong> 最近の活動、月別のディール内訳（直近12か月）、AI メール下書きの状況など。</li>
               <li><strong>顧客・会社・ディールの一覧と詳細：</strong> 一覧から削除（🗑）できます。ディール詳細では、ディール名を変えられます（✏️）。管理者は、ディールの担当者も変えられます。</li>
               <li><strong>Slack で行うこと：</strong> 顧客・会社の編集は、Slack の［詳細］から行います。ステージの変更も Slack で行います。</li>
               <li><strong>CSV の書き出し（管理者）：</strong> 顧客・ディール・メモを書き出せます。個人のお客様の会社名は空欄になります。</li>
