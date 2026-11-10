@@ -10,7 +10,7 @@
               Slack があれば、特別なアプリはいりません。
             </p>
             <div class="p-mv__image">
-              <img src="/lp/img/mv-image.png" alt="Slackで働くチームとクラゲくん" />
+              <img src="/lp/img/mv-image.svg" alt="Slackで働くチームとクラゲくん" />
             </div>
             <a class="c-btn p-mv__btn" :href="installUrl" @click="onTrialClick">14日間無料で試す</a>
           </section>
@@ -71,19 +71,19 @@
             <h3 class="p-teams__ribbon">このような会社にピッタリ！</h3>
             <ul class="p-teams__list">
               <li>
-                <div class="p-teams__img"><img src="/lp/img/team01.png" alt="忙しく働く社長" /></div>
+                <div class="p-teams__img"><img src="/lp/img/team01.svg" alt="忙しく働く社長" /></div>
                 <p>社員5人のIT企業。<br />社長が営業も兼務。<br />ディール管理はスプレッドシートで<br />回しています</p>
               </li>
               <li>
-                <div class="p-teams__img"><img src="/lp/img/team02.png" alt="データを確認する営業担当" /></div>
+                <div class="p-teams__img"><img src="/lp/img/team02.svg" alt="データを確認する営業担当" /></div>
                 <p>営業3人の人材会社。<br />CRMを導入したが、<br />誰も入力しない</p>
               </li>
               <li>
-                <div class="p-teams__img"><img src="/lp/img/team03.png" alt="やることに追われる人" /></div>
+                <div class="p-teams__img"><img src="/lp/img/team03.svg" alt="やることに追われる人" /></div>
                 <p>6人のスタートアップ。<br />急成長でディールが増え、<br />フォロー漏れが出始めた</p>
               </li>
               <li>
-                <div class="p-teams__img"><img src="/lp/img/team04.png" alt="税理士" /></div>
+                <div class="p-teams__img"><img src="/lp/img/team04.svg" alt="税理士" /></div>
                 <p>一人社長の税理士。<br />クライアント20社の関係を<br />頭の中で管理している</p>
               </li>
             </ul>
@@ -99,7 +99,7 @@
               <article class="p-benefits__item">
                 <p class="p-benefits__num" aria-hidden="true"><span class="p-benefits__num-big">01</span><span class="p-benefits__num-label">Reason</span></p>
                 <div class="p-benefits__card">
-                  <img class="p-benefits__img" src="/lp/img/benefit01.png" alt="クラゲくんがメールを代筆" />
+                  <img class="p-benefits__img" src="/lp/img/benefit01.svg" alt="クラゲくんがメールを代筆" />
                   <h3 class="p-benefits__ttl">入力に時間を取られない</h3>
                   <p class="p-benefits__text">
                     忙しいスモールチームの、面倒な作業をもっとシンプルに。「ABC商事とディール、競合が一社」とメモするだけで、ディール確度や次の一手を自動で提案。さらに、ビジネスメールの返信もクラゲディールが代筆します。あなたは、最終確認するだけ。空いた時間を、お客様や自分のために使えます。
@@ -109,7 +109,7 @@
               <article class="p-benefits__item p-benefits__item--reverse">
                 <p class="p-benefits__num" aria-hidden="true"><span class="p-benefits__num-big">02</span><span class="p-benefits__num-label">Reason</span></p>
                 <div class="p-benefits__card">
-                  <img class="p-benefits__img" src="/lp/img/benefit02.png" alt="チームで協力する様子" />
+                  <img class="p-benefits__img" src="/lp/img/benefit02.svg" alt="チームで協力する様子" />
                   <h3 class="p-benefits__ttl">ひとりなら月¥2,980、<br />3人のチームでも¥5,980（税別）</h3>
                   <p class="p-benefits__text">クラゲディールは、シンプルな 3 段階の料金体系。人数に合わせて、ぴったりのプランを選べます。</p>
                   <p class="p-benefits__box p-benefits__box--accent">
@@ -120,7 +120,7 @@
               <article class="p-benefits__item">
                 <p class="p-benefits__num" aria-hidden="true"><span class="p-benefits__num-big">03</span><span class="p-benefits__num-label">Reason</span></p>
                 <div class="p-benefits__card">
-                  <img class="p-benefits__img" src="/lp/img/benefit03.png" alt="クラゲくんのAIサポート" />
+                  <img class="p-benefits__img" src="/lp/img/benefit03.svg" alt="クラゲくんのAIサポート" />
                   <h3 class="p-benefits__ttl">専任の営業担当がいなくても、<br />しっかりサポート</h3>
                   <p class="p-benefits__text">
                     営業の型「MEDDPICC」に基づいて、クラゲくんが案件ごとに「決裁者と会えていますか？」「予算の根拠は？」「競合は把握していますか？」と、やさしく問いかけてくれます。経験豊富なマネージャーがいなくても、チーム全員に同じ質のコーチングが届きます。クラゲくんが、あなたの営業コーチになってくれます。
@@ -301,7 +301,7 @@
               <li class="p-issue__item p-issue__item--reverse">
                 <div class="p-issue__fig">
                   <span class="p-issue__num" aria-hidden="true">02</span>
-                  <img src="/lp/img/issue02.png" alt="進捗を確認する人" />
+                  <img src="/lp/img/issue02.svg" alt="進捗を確認する人" />
                 </div>
                 <div class="p-issue__body">
                   <h3 class="p-issue__ttl">進捗が見えない</h3>
@@ -311,7 +311,7 @@
               <li class="p-issue__item">
                 <div class="p-issue__fig">
                   <span class="p-issue__num" aria-hidden="true">03</span>
-                  <img src="/lp/img/issue03.png" alt="手が回らないマネージャー" />
+                  <img src="/lp/img/issue03.svg" alt="手が回らないマネージャー" />
                 </div>
                 <div class="p-issue__body">
                   <h3 class="p-issue__ttl">マネージャーが足りない</h3>
@@ -336,7 +336,7 @@
             </p>
             <div class="p-feature__problem">
               <p>毎日5〜10通、1通5〜10分。<br />メール返信だけで、月8〜30時間。<br />その時間を、若手との対話や<br />新規開拓に使えたら…。</p>
-              <img class="p-feature__man" src="/lp/img/feature-man.png" alt="疲れた様子の人" />
+              <img class="p-feature__man" src="/lp/img/feature-man.svg" alt="疲れた様子の人" />
             </div>
             <div class="p-feature__solution">
               <h3 class="p-feature__head">クラゲディールならこうします！</h3>

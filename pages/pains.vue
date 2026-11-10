@@ -69,7 +69,7 @@
 
     <!-- あるある 2: 進捗が見えない -->
     <section class="p-pains__block p-pains__block--alt" id="pain2">
-      <img class="p-pains__fig" src="/lp/img/issue02.png" alt="" />
+      <img class="p-pains__fig" src="/lp/img/issue02.svg" alt="" />
       <p class="p-pains__label">あるある お悩み 2</p>
       <h2 class="p-pains__ttl">営業の進捗が、見えない。</h2>
 
@@ -199,7 +199,7 @@
 
     <!-- あるある 3: マネージャーが足りない -->
     <section class="p-pains__block" id="pain3">
-      <img class="p-pains__fig" src="/lp/img/issue03.png" alt="" />
+      <img class="p-pains__fig" src="/lp/img/issue03.svg" alt="" />
       <p class="p-pains__label">あるある お悩み 3</p>
       <h2 class="p-pains__ttl">営業マネージャーが、足りない。</h2>
 
