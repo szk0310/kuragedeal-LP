@@ -47,10 +47,10 @@
                 </div>
               </article>
             </div>
-            <p class="c-lead">
+            <p class="c-lead p-mode__memo">
               メモも、ボタン［📝 活動をメモ］から書くだけ。<br />
-              「田中さんと打ち合わせ。来週までに見積もりを出す」と書けば、<br />
-              クラゲくんが「見積もりを出す」を拾って、<br />
+              「田中さんと打ち合わせ。来週までに見積もりを出す」<br />
+              と書けば、クラゲくんが「見積もりを出す」を拾って、<br />
               そのまま「今やること」に並びます。
             </p>
           </section>
@@ -59,7 +59,7 @@
           <section class="p-teams c-arc" id="teams">
             <div class="c-sec-ttl">
               <p class="c-sec-ttl__en" lang="en">For small teams</p>
-              <h2 class="c-sec-ttl__ja">ひとりから、小さな営業チームまで<br />ゼロから設計したAIツール</h2>
+              <h2 class="c-sec-ttl__ja">ひとりから、営業チームまで<br />ゼロから設計したAIツール</h2>
             </div>
             <p class="c-lead">
               1人社長のフリーランスから、<br />

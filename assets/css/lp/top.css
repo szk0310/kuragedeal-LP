@@ -30,7 +30,7 @@ main section[id] {
 }
 .p-mv__read {
 	margin-top: calc(58 * var(--u));
-	padding-left: calc(47 * var(--u));
+	text-align: center;
 	font-size: calc(30 * var(--u));
 	line-height: calc(52.5 * var(--u));
 	white-space: nowrap;
@@ -120,6 +120,10 @@ main section[id] {
 }
 .p-mode__list + .c-lead {
 	margin-top: calc(50 * var(--u));
+}
+/* メモの例の段落：1行25字までを改行位置どおりに収める */
+.c-lead.p-mode__memo {
+	font-size: calc(25 * var(--u));
 }
 
 /*=============================================================
